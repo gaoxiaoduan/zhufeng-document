@@ -4,7 +4,7 @@
 ## 项目说明：
 本项目仅用于 **个人学习** 如有侵权，请联系作者删除
 
-##运行方式：
+## 运行方式：
 - 克隆仓库 `git clone https://github.com/gaoxiaoduan/zhufeng-document.git`
 - 进入项目文件夹 `cd zhufeng-document`
 - 安装依赖 `npm install`
