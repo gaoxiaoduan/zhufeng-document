@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+   
+                     
+
+                        
+<div class="warpper">
+    <div class="page-toc">
+        <ul><li><a href="#t01.初始化项目">1.初始化项目</a></li><li><a href="#t12.跑通路由">2.跑通路由</a><ul><li><a href="#t22.1 src\index.js">2.1 src\index.js</a></li><li><a href="#t32.2 Home.js">2.2 Home.js</a></li><li><a href="#t42.3 UserAdd.js">2.3 UserAdd.js</a></li><li><a href="#t52.4 UserList.js">2.4 UserList.js</a></li></ul></li><li><a href="#t63.实现keep-alive">3.实现keep-alive</a><ul><li><a href="#t73.1 src\index.js">3.1 src\index.js</a></li><li><a href="#t83.2 keepalive-react-component\index.js">3.2 keepalive-react-component\index.js</a></li><li><a href="#t93.3 cache-types.js">3.3 cache-types.js</a></li><li><a href="#t103.4 cacheReducer.js">3.4 cacheReducer.js</a></li><li><a href="#t113.5 CacheContext.js">3.5 CacheContext.js</a></li><li><a href="#t123.6 KeepAliveProvider.js">3.6 KeepAliveProvider.js</a></li><li><a href="#t133.7 withKeepAlive.js">3.7 withKeepAlive.js</a></li></ul></li><li><a href="#t144.保持滚动状态">4.保持滚动状态</a><ul><li><a href="#t154.1 src\index.js">4.1 src\index.js</a></li><li><a href="#t164.2 cacheReducer.js">4.2 cacheReducer.js</a></li><li><a href="#t174.3 KeepAliveProvider.js">4.3 KeepAliveProvider.js</a></li><li><a href="#t184.4 withKeepAlive.js">4.4 withKeepAlive.js</a></li></ul></li><li><a href="#t195.销毁缓存">5.销毁缓存</a><ul><li><a href="#t205.1 Home.js">5.1 Home.js</a></li><li><a href="#t215.2 cache-types.js">5.2 cache-types.js</a></li><li><a href="#t225.3 cacheReducer.js">5.3 cacheReducer.js</a></li><li><a href="#t235.4 KeepAliveProvider.js">5.4 KeepAliveProvider.js</a></li><li><a href="#t245.5 withKeepAlive.js">5.5 withKeepAlive.js</a></li></ul></li></ul>
+    </div>
+    <div class="content markdown-body">
+        <h2 id="t01.&#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;">1.&#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE; <a href="#t01.&#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;"> # </a></h2>
+<pre><code class="lang-js">create-react-app zhufeng-keepalive
+cd zhufeng-keepalive
+npm install react-router-dom keepalive-react-component --save
+npm start
+</code></pre>
+<h2 id="t12.&#x8DD1;&#x901A;&#x8DEF;&#x7531;">2.&#x8DD1;&#x901A;&#x8DEF;&#x7531; <a href="#t12.&#x8DD1;&#x901A;&#x8DEF;&#x7531;"> # </a></h2>
+<h3 id="t22.1 src\index.js">2.1 src\index.js <a href="#t22.1 src\index.js"> # </a></h3>
+<p>src\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+<span class="hljs-keyword">import</span> { BrowserRouter <span class="hljs-keyword">as</span> Router, Route, Link, Switch } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router-dom&apos;</span>
+<span class="hljs-keyword">import</span> Home <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./components/Home&apos;</span>;
+<span class="hljs-keyword">import</span> UserList <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./components/UserList&apos;</span>;
+<span class="hljs-keyword">import</span> UserAdd <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./components/UserAdd&apos;</span>;
+<span class="hljs-keyword">const</span> App = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Router</span>  &gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&quot;/&quot;</span>&gt;</span>&#x9996;&#x9875;<span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&quot;/list&quot;</span>&gt;</span>&#x7528;&#x6237;&#x5217;&#x8868;<span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&quot;/add&quot;</span>&gt;</span>&#x6DFB;&#x52A0;&#x7528;&#x6237;<span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Switch</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">{</span>&apos;/&apos;} <span class="hljs-attr">component</span>=<span class="hljs-string">{Home}</span> <span class="hljs-attr">exact</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">{</span>&apos;/<span class="hljs-attr">list</span>&apos;} <span class="hljs-attr">component</span>=<span class="hljs-string">{UserList}</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">{</span>&apos;/<span class="hljs-attr">add</span>&apos;} <span class="hljs-attr">component</span>=<span class="hljs-string">{UserAdd}</span> /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">Switch</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Router</span>&gt;</span></span>
+  )
+}
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">App</span>/&gt;</span></span>, <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;root&apos;</span>));
+</code></pre>
+<h3 id="t32.2 Home.js">2.2 Home.js <a href="#t32.2 Home.js"> # </a></h3>
+<p>src\components\Home.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">const</span> Home = <span class="hljs-function">(<span class="hljs-params">props</span>) =&gt;</span> {
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> &gt;</span>&#x91CD;&#x7F6E;UserAdd<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> &gt;</span>&#x91CD;&#x7F6E;UserList<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Home;
+</code></pre>
+<h3 id="t42.3 UserAdd.js">2.3 UserAdd.js <a href="#t42.3 UserAdd.js"> # </a></h3>
+<p>src\components\UserAdd.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">const</span> UserAdd = <span class="hljs-function"><span class="hljs-params">()</span>=&gt;</span>{
+    <span class="hljs-keyword">let</span> [number,setNumber]=React.useState(<span class="hljs-number">0</span>);
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+            &#x7528;&#x6237;&#x540D;:<span class="hljs-tag">&lt;<span class="hljs-name">input</span>/&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">hr</span>/&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span>=&gt;</span>setNumber(number=&gt;number+1)}&gt;{number}<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> UserAdd;
+</code></pre>
+<h3 id="t52.4 UserList.js">2.4 UserList.js <a href="#t52.4 UserList.js"> # </a></h3>
+<p>src\components\UserList.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> {Link} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router-dom&apos;</span>
+<span class="hljs-keyword">const</span> UserList = <span class="hljs-function">(<span class="hljs-params">props</span>)=&gt;</span>{
+    <span class="hljs-keyword">let</span> users = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>(<span class="hljs-number">100</span>).fill(<span class="hljs-number">0</span>);
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{height:</span>&apos;<span class="hljs-attr">200px</span>&apos;,<span class="hljs-attr">overflow:</span>&apos;<span class="hljs-attr">scroll</span>&apos;}}&gt;</span>
+            {
+                users.map((item,index)=&gt;(
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{index}</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">to</span>=<span class="hljs-string">{</span>`/<span class="hljs-attr">detail</span>/${<span class="hljs-attr">index</span>}`}&gt;</span>{index}<span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                ))
+            }
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></span>
+    )
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> UserList;
+</code></pre>
+<h2 id="t63.&#x5B9E;&#x73B0;keep-alive">3.&#x5B9E;&#x73B0;keep-alive <a href="#t63.&#x5B9E;&#x73B0;keep-alive"> # </a></h2>
+<h3 id="t73.1 src\index.js">3.1 src\index.js <a href="#t73.1 src\index.js"> # </a></h3>
+<p>src\index.js</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import ReactDOM from &apos;react-dom&apos;;
+import { BrowserRouter as Router, Route, Link, Switch } from &apos;react-router-dom&apos;
+import Home from &apos;./components/Home&apos;;
+import UserList from &apos;./components/UserList&apos;;
+import UserAdd from &apos;./components/UserAdd&apos;;
+<span class="hljs-addition">+import { KeepAliveProvider, withKeepAlive } from &apos;./keepalive-react-component&apos;;</span>
+<span class="hljs-addition">+let KeepAliveHome = withKeepAlive(Home, { cacheId: &apos;Home&apos;});</span>
+<span class="hljs-addition">+let KeepAliveUserList = withKeepAlive(UserList, { cacheId: &apos;UserList&apos;});</span>
+<span class="hljs-addition">+let KeepAliveUserAdd = withKeepAlive(UserAdd, { cacheId: &apos;UserAdd&apos; });</span>
+const App = () =&gt; {
+  return (
+    &lt;Router  &gt;
+<span class="hljs-addition">+     &lt;KeepAliveProvider&gt;</span>
+        &lt;ul&gt;
+          &lt;li&gt;&lt;Link to=&quot;/&quot;&gt;&#x9996;&#x9875;&lt;/Link&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;Link to=&quot;/list&quot;&gt;&#x7528;&#x6237;&#x5217;&#x8868;&lt;/Link&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;Link to=&quot;/add&quot;&gt;&#x6DFB;&#x52A0;&#x7528;&#x6237;&lt;/Link&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;Switch&gt;
+<span class="hljs-addition">+          &lt;Route path={&apos;/&apos;} component={KeepAliveHome} exact /&gt;</span>
+<span class="hljs-addition">+          &lt;Route path={&apos;/list&apos;} component={KeepAliveUserList} /&gt;</span>
+<span class="hljs-addition">+          &lt;Route path={&apos;/add&apos;} component={KeepAliveUserAdd} /&gt;</span>
+        &lt;/Switch&gt;
+<span class="hljs-addition">+     &lt;/KeepAliveProvider&gt;</span>
+    &lt;/Router&gt;
+  )
+}
+ReactDOM.render(&lt;App/&gt;, document.getElementById(&apos;root&apos;));
+</code></pre>
+<h3 id="t83.2 keepalive-react-component\index.js">3.2 keepalive-react-component\index.js <a href="#t83.2 keepalive-react-component\index.js"> # </a></h3>
+<p>src\keepalive-react-component\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> {<span class="hljs-keyword">default</span> <span class="hljs-keyword">as</span> KeepAliveProvider} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./KeepAliveProvider&apos;</span>;
+<span class="hljs-keyword">export</span> {<span class="hljs-keyword">default</span> <span class="hljs-keyword">as</span> withKeepAlive} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./withKeepAlive&apos;</span>;
+</code></pre>
+<h3 id="t93.3 cache-types.js">3.3 cache-types.js <a href="#t93.3 cache-types.js"> # </a></h3>
+<p>src\keepalive-react-component\cache-types.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> CREATE = <span class="hljs-string">&apos;CREATE&apos;</span>;        <span class="hljs-comment">//&#x521B;&#x5EFA;</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> CREATED = <span class="hljs-string">&apos;CREATED&apos;</span>;      <span class="hljs-comment">//&#x521B;&#x5EFA;&#x6210;&#x529F;</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> ACTIVE = <span class="hljs-string">&apos;ACTIVE&apos;</span>;        <span class="hljs-comment">//&#x6FC0;&#x6D3B;</span>
+</code></pre>
+<h3 id="t103.4 cacheReducer.js">3.4 cacheReducer.js <a href="#t103.4 cacheReducer.js"> # </a></h3>
+<p>src\keepalive-react-component\cacheReducer.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> *  <span class="hljs-keyword">as</span> cacheTypes <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./cache-types&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">cacheReducer</span>(<span class="hljs-params">cacheStates = {}, { type, payload }</span>) </span>{
+    <span class="hljs-keyword">switch</span> (type) {
+        <span class="hljs-keyword">case</span> cacheTypes.CREATE:
+            <span class="hljs-keyword">return</span> { ...cacheStates,
+                [payload.cacheId]: {
+                    <span class="hljs-attr">cacheId</span>:payload.cacheId,
+                    <span class="hljs-attr">element</span>:payload.element,
+                    <span class="hljs-attr">status</span>:cacheTypes.CREATE
+                } };
+        <span class="hljs-keyword">case</span> cacheTypes.CREATED:
+            <span class="hljs-keyword">return</span> { ...cacheStates,
+                [payload.cacheId]: {
+                    ...cacheStates[payload.cacheId],
+                    <span class="hljs-attr">doms</span>:payload.doms,
+                    <span class="hljs-attr">status</span>:cacheTypes.CREATED
+                } };   
+        <span class="hljs-keyword">case</span> cacheTypes.ACTIVE:
+            <span class="hljs-keyword">return</span> { ...cacheStates,
+                [payload.cacheId]: {
+                    ...cacheStates[payload.cacheId],
+                    <span class="hljs-attr">status</span>:cacheTypes.ACTIVE
+                } };                
+        <span class="hljs-keyword">default</span>:
+            <span class="hljs-keyword">return</span> cacheStates;
+    }
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> cacheReducer;
+</code></pre>
+<h3 id="t113.5 CacheContext.js">3.5 CacheContext.js <a href="#t113.5 CacheContext.js"> # </a></h3>
+<p>src\keepalive-react-component\CacheContext.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">const</span> CacheContext = React.createContext();
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> CacheContext;
+</code></pre>
+<h3 id="t123.6 KeepAliveProvider.js">3.6 KeepAliveProvider.js <a href="#t123.6 KeepAliveProvider.js"> # </a></h3>
+<p>src\keepalive-react-component\KeepAliveProvider.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { useReducer, useCallback } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react&quot;</span>;
+<span class="hljs-keyword">import</span> CacheContext <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./CacheContext&apos;</span>;
+<span class="hljs-keyword">import</span> cacheReducer <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./cacheReducer&apos;</span>;
+<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> cacheTypes <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./cache-types&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">KeepAliveProvider</span>(<span class="hljs-params">props</span>) </span>{
+    <span class="hljs-keyword">let</span> [cacheStates, dispatch] = useReducer(cacheReducer, {});
+    <span class="hljs-keyword">const</span> mount = useCallback(<span class="hljs-function">(<span class="hljs-params">{ cacheId, element }</span>) =&gt;</span> {
+        <span class="hljs-keyword">if</span>(!cacheStates[cacheId]){
+            dispatch({ <span class="hljs-attr">type</span>: cacheTypes.CREATE, <span class="hljs-attr">payload</span>: { cacheId, element } });
+        }
+    }, [cacheStates]);
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">CacheContext.Provider</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">mount</span>, <span class="hljs-attr">cacheStates</span>, <span class="hljs-attr">dispatch</span> }}&gt;</span>
+            {props.children}
+            {Object.values(cacheStates).map(({ cacheId, element }) =&gt; (
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span>
+                    <span class="hljs-attr">id</span>=<span class="hljs-string">{</span>`<span class="hljs-attr">cache_</span>${<span class="hljs-attr">cacheId</span>}`}
+                    <span class="hljs-attr">key</span>=<span class="hljs-string">{cacheId}</span>
+                    <span class="hljs-attr">ref</span>=<span class="hljs-string">{(dom)</span> =&gt;</span> {
+                        let cacheState = cacheStates[cacheId];
+                        if (dom &amp;&amp; (!cacheState.doms)) {
+                            let doms = Array.from(dom.childNodes);
+                            dispatch({ type: cacheTypes.CREATED, payload: { cacheId, doms } });
+                        }
+                    }}
+                &gt;{element}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            ))}
+        <span class="hljs-tag">&lt;/<span class="hljs-name">CacheContext.Provider</span>&gt;</span></span>
+    );
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> KeepAliveProvider;
+</code></pre>
+<h3 id="t133.7 withKeepAlive.js">3.7 withKeepAlive.js <a href="#t133.7 withKeepAlive.js"> # </a></h3>
+<p>src\keepalive-react-component\withKeepAlive.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { useContext, useRef,useEffect } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react&quot;</span>;
+<span class="hljs-keyword">import</span> CacheContext <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./CacheContext&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">withKeepAlive</span>(<span class="hljs-params">OldComponent, { cacheId = window.location.pathname }</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">props</span>) </span>{
+        <span class="hljs-keyword">const</span> {mount, cacheStates,dispatch } = useContext(CacheContext);
+        <span class="hljs-keyword">const</span> ref = useRef(<span class="hljs-literal">null</span>);
+        useEffect(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+            <span class="hljs-keyword">let</span> cacheState = cacheStates[cacheId];
+            <span class="hljs-keyword">if</span>(cacheState&amp;&amp;cacheState.doms){
+                 <span class="hljs-keyword">let</span> doms = cacheState.doms;
+                 doms.forEach(<span class="hljs-function"><span class="hljs-params">dom</span>=&gt;</span>ref.current.appendChild(dom));
+            }<span class="hljs-keyword">else</span>{
+                mount({ cacheId, <span class="hljs-attr">element</span>: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">OldComponent</span> {<span class="hljs-attr">...props</span>} <span class="hljs-attr">dispatch</span>=<span class="hljs-string">{dispatch}/</span>&gt;</span></span> })
+            }
+        }, [cacheStates, dispatch, mount, props]);
+        <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">{</span>`<span class="hljs-attr">keepalive_</span>${<span class="hljs-attr">cacheId</span>}`} <span class="hljs-attr">ref</span>=<span class="hljs-string">{ref}</span> /&gt;</span></span>;
+    }
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> withKeepAlive;
+</code></pre>
+<h2 id="t144.&#x4FDD;&#x6301;&#x6EDA;&#x52A8;&#x72B6;&#x6001;">4.&#x4FDD;&#x6301;&#x6EDA;&#x52A8;&#x72B6;&#x6001; <a href="#t144.&#x4FDD;&#x6301;&#x6EDA;&#x52A8;&#x72B6;&#x6001;"> # </a></h2>
+<h3 id="t154.1 src\index.js">4.1 src\index.js <a href="#t154.1 src\index.js"> # </a></h3>
+<p>src\index.js</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import ReactDOM from &apos;react-dom&apos;;
+import { BrowserRouter as Router, Route, Link, Switch } from &apos;react-router-dom&apos;
+import Home from &apos;./components/Home&apos;;
+import UserList from &apos;./components/UserList&apos;;
+import UserAdd from &apos;./components/UserAdd&apos;;
+import { KeepAliveProvider, withKeepAlive } from &apos;./keepalive-react-component&apos;;
+let KeepAliveHome = withKeepAlive(Home, { cacheId: &apos;Home&apos;});
+<span class="hljs-addition">+let KeepAliveUserList = withKeepAlive(UserList, { cacheId: &apos;UserList&apos;,scroll:true});</span>
+let KeepAliveUserAdd = withKeepAlive(UserAdd, { cacheId: &apos;UserAdd&apos; });
+const App = () =&gt; {
+  return (
+    &lt;Router  &gt;
+      &lt;KeepAliveProvider&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;Link to=&quot;/&quot;&gt;&#x9996;&#x9875;&lt;/Link&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;Link to=&quot;/list&quot;&gt;&#x7528;&#x6237;&#x5217;&#x8868;&lt;/Link&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;Link to=&quot;/add&quot;&gt;&#x6DFB;&#x52A0;&#x7528;&#x6237;&lt;/Link&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;Switch&gt;
+          &lt;Route path={&apos;/&apos;} component={KeepAliveHome} exact /&gt;
+          &lt;Route path={&apos;/list&apos;} component={KeepAliveUserList} /&gt;
+          &lt;Route path={&apos;/add&apos;} component={KeepAliveUserAdd} /&gt;
+        &lt;/Switch&gt;
+      &lt;/KeepAliveProvider&gt;
+    &lt;/Router&gt;
+  )
+}
+ReactDOM.render(&lt;App/&gt;, document.getElementById(&apos;root&apos;));
+</code></pre>
+<h3 id="t164.2 cacheReducer.js">4.2 cacheReducer.js <a href="#t164.2 cacheReducer.js"> # </a></h3>
+<p>src\keepalive-react-component\cacheReducer.js</p>
+<pre><code class="lang-diff">import *  as cacheTypes from &apos;./cache-types&apos;;
+function cacheReducer(cacheStates = {}, { type, payload }) {
+    switch (type) {
+        case cacheTypes.CREATE:
+            return { ...cacheStates,
+                [payload.cacheId]: {
+<span class="hljs-addition">+                   scrolls:{},</span>
+                    cacheId:payload.cacheId,
+                    element:payload.element,
+                    status:cacheTypes.CREATE
+                } };
+        case cacheTypes.CREATED:
+            return { ...cacheStates,
+                [payload.cacheId]: {
+                    ...cacheStates[payload.cacheId],
+                    doms:payload.doms,
+                    status:cacheTypes.CREATED
+                } };   
+        case cacheTypes.ACTIVE:
+            return { ...cacheStates,
+                [payload.cacheId]: {
+                    ...cacheStates[payload.cacheId],
+                    status:cacheTypes.ACTIVE
+                } };                
+        default:
+            return cacheStates;
+    }
+}
+export default cacheReducer;
+</code></pre>
+<h3 id="t174.3 KeepAliveProvider.js">4.3 KeepAliveProvider.js <a href="#t174.3 KeepAliveProvider.js"> # </a></h3>
+<p>src\keepalive-react-component\KeepAliveProvider.js</p>
+<pre><code class="lang-diff">import React, { useReducer, useCallback } from &quot;react&quot;;
+import CacheContext from &apos;./CacheContext&apos;;
+import cacheReducer from &apos;./cacheReducer&apos;;
+import * as cacheTypes from &apos;./cache-types&apos;;
+function KeepAliveProvider(props) {
+    let [cacheStates, dispatch] = useReducer(cacheReducer, {});
+    const mount = useCallback(({ cacheId, element }) =&gt; {
+        if(!cacheStates[cacheId]){
+            dispatch({ type: cacheTypes.CREATE, payload: { cacheId, element } });
+        }
+    }, [cacheStates]);
+<span class="hljs-addition">+   let handleScroll = useCallback((cacheId, {target}) =&gt; {</span>
+<span class="hljs-addition">+       if(cacheStates[cacheId]){</span>
+<span class="hljs-addition">+           let scrolls = cacheStates[cacheId].scrolls;</span>
+<span class="hljs-addition">+           scrolls[target] = target.scrollTop;</span>
+<span class="hljs-addition">+       }</span>
+<span class="hljs-addition">+   }, [cacheStates]);</span>
+    return (
+<span class="hljs-addition">+       &lt;CacheContext.Provider value={{ mount, cacheStates, dispatch,handleScroll }}&gt;</span>
+            {props.children}
+            {Object.values(cacheStates).map(({ cacheId, element }) =&gt; (
+                &lt;div
+                    id={`cache_${cacheId}`}
+                    key={cacheId}
+                    ref={(dom) =&gt; {
+                        let cacheState = cacheStates[cacheId];
+                        if (dom &amp;&amp; (!cacheState.doms)) {
+                            let doms = Array.from(dom.childNodes);
+                            dispatch({ type: cacheTypes.CREATED, payload: { cacheId, doms } });
+                        }
+                    }}
+                &gt;{element}&lt;/div&gt;
+            ))}
+        &lt;/CacheContext.Provider&gt;
+    );
+}
+export default KeepAliveProvider;
+</code></pre>
+<h3 id="t184.4 withKeepAlive.js">4.4 withKeepAlive.js <a href="#t184.4 withKeepAlive.js"> # </a></h3>
+<p>src\keepalive-react-component\withKeepAlive.js</p>
+<pre><code class="lang-diff">import React, { useContext, useRef,useEffect } from &quot;react&quot;;
+import CacheContext from &apos;./CacheContext&apos;;
+<span class="hljs-addition">+function withKeepAlive(OldComponent, { cacheId = window.location.pathname,scroll=false }) {</span>
+    return function (props) {
+<span class="hljs-addition">+       const {mount, cacheStates,dispatch,handleScroll } = useContext(CacheContext);</span>
+        const ref = useRef(null);
+<span class="hljs-addition">+       useEffect(()=&gt;{</span>
+<span class="hljs-addition">+           if(scroll){</span>
+<span class="hljs-addition">+               ref.current.addEventListener(&apos;scroll&apos;, handleScroll.bind(null, cacheId),true);</span>
+<span class="hljs-addition">+           }</span>
+<span class="hljs-addition">+       },[handleScroll]);</span>
+        useEffect(() =&gt; {
+            let cacheState = cacheStates[cacheId];
+            if(cacheState&amp;&amp;cacheState.doms){
+                let doms = cacheState.doms;
+                doms.forEach(dom=&gt;ref.current.appendChild(dom));
+<span class="hljs-addition">+               if(scroll){</span>
+<span class="hljs-addition">+                  doms.forEach(dom=&gt;{</span>
+<span class="hljs-addition">+                      if (cacheState.scrolls[dom])</span>
+<span class="hljs-addition">+                        dom.scrollTop = cacheState.scrolls[dom];</span>
+<span class="hljs-addition">+                  });</span>
+<span class="hljs-addition">+                 }</span>
+            }else{
+                mount({ cacheId, element: &lt;OldComponent {...props} dispatch={dispatch}/&gt; })
+            }
+        }, [cacheStates, dispatch, mount, props]);
+        return &lt;div id={`keepalive_${cacheId}`} ref={ref} /&gt;;
+    }
+}
+export default withKeepAlive;
+</code></pre>
+<h2 id="t195.&#x9500;&#x6BC1;&#x7F13;&#x5B58;">5.&#x9500;&#x6BC1;&#x7F13;&#x5B58; <a href="#t195.&#x9500;&#x6BC1;&#x7F13;&#x5B58;"> # </a></h2>
+<h3 id="t205.1 Home.js">5.1 Home.js <a href="#t205.1 Home.js"> # </a></h3>
+<p>src\components\Home.js</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+const Home = (props) =&gt; {
+    return (
+        &lt;div&gt;
+<span class="hljs-addition">+            &lt;button onClick={() =&gt; props.dispatch({ type: &apos;DESTROY&apos;, payload: { cacheId: &apos;UserAdd&apos; } })}&gt;&#x91CD;&#x7F6E;UserAdd&lt;/button&gt;</span>
+<span class="hljs-addition">+            &lt;button onClick={() =&gt; props.dispatch({ type: &apos;DESTROY&apos;, payload: { cacheId: &apos;UserList&apos; } })}&gt;&#x91CD;&#x7F6E;UserList&lt;/button&gt;</span>
+        &lt;/div&gt;
+    )
+}
+export default Home;
+</code></pre>
+<h3 id="t215.2 cache-types.js">5.2 cache-types.js <a href="#t215.2 cache-types.js"> # </a></h3>
+<p>src\keepalive-react-component\cache-types.js</p>
+<pre><code class="lang-diff">export const CREATE = &apos;CREATE&apos;;        //&#x521B;&#x5EFA;
+export const CREATED = &apos;CREATED&apos;;      //&#x521B;&#x5EFA;&#x6210;&#x529F;
+export const ACTIVE = &apos;ACTIVE&apos;;        //&#x6FC0;&#x6D3B;
+<span class="hljs-addition">+export const DESTROY = &apos;DESTROY&apos;;     //&#x9500;&#x6BC1;</span>
+</code></pre>
+<h3 id="t225.3 cacheReducer.js">5.3 cacheReducer.js <a href="#t225.3 cacheReducer.js"> # </a></h3>
+<p>src\keepalive-react-component\cacheReducer.js</p>
+<pre><code class="lang-diff">import *  as cacheTypes from &apos;./cache-types&apos;;
+function cacheReducer(cacheStates = {}, { type, payload }) {
+    switch (type) {
+        case cacheTypes.CREATE:
+            return { ...cacheStates,
+                [payload.cacheId]: {
+                    scrolls:{},
+                    cacheId:payload.cacheId,
+                    element:payload.element,
+                    status:cacheTypes.CREATE
+                } };
+        case cacheTypes.CREATED:
+            return { ...cacheStates,
+                [payload.cacheId]: {
+                    ...cacheStates[payload.cacheId],
+                    doms:payload.doms,
+                    status:cacheTypes.CREATED
+                } };   
+        case cacheTypes.ACTIVE:
+            return { ...cacheStates,
+                [payload.cacheId]: {
+                    ...cacheStates[payload.cacheId],
+                    status:cacheTypes.ACTIVE
+                } };           
+<span class="hljs-addition">+       case cacheTypes.DESTROY:</span>
+<span class="hljs-addition">+           return { ...cacheStates,</span>
+<span class="hljs-addition">+               [payload.cacheId]:{</span>
+<span class="hljs-addition">+                   ...cacheStates[payload.cacheId],</span>
+<span class="hljs-addition">+                   status:cacheTypes.DESTROY</span>
+<span class="hljs-addition">+               }};              </span>
+        default:
+            return cacheStates;
+    }
+}
+export default cacheReducer;
+</code></pre>
+<h3 id="t235.4 KeepAliveProvider.js">5.4 KeepAliveProvider.js <a href="#t235.4 KeepAliveProvider.js"> # </a></h3>
+<p>src\keepalive-react-component\KeepAliveProvider.js</p>
+<pre><code class="lang-diff">import React, { useReducer, useCallback } from &quot;react&quot;;
+import CacheContext from &apos;./CacheContext&apos;;
+import cacheReducer from &apos;./cacheReducer&apos;;
+import * as cacheTypes from &apos;./cache-types&apos;;
+function KeepAliveProvider(props) {
+    let [cacheStates, dispatch] = useReducer(cacheReducer, {});
+    const mount = useCallback(({ cacheId, element }) =&gt; {
+<span class="hljs-addition">+      if(cacheStates[cacheId]){</span>
+<span class="hljs-addition">+          let cacheState = cacheStates[cacheId];</span>
+<span class="hljs-addition">+          if(cacheState.status === cacheTypes.DESTROY){</span>
+<span class="hljs-addition">+              let doms = cacheState.doms;</span>
+<span class="hljs-addition">+              doms.forEach(dom=&gt;dom.parentNode.removeChild(dom));</span>
+<span class="hljs-addition">+              dispatch({ type: cacheTypes.CREATE, payload: { cacheId, element } });</span>
+<span class="hljs-addition">+          }</span>
+<span class="hljs-addition">+      }else{</span>
+           dispatch({ type: cacheTypes.CREATE, payload: { cacheId, element } });
+<span class="hljs-addition">+      }</span>
+    }, [cacheStates]);
+    let handleScroll = useCallback((cacheId, {target}) =&gt; {
+        if(cacheStates[cacheId]){
+            let scrolls = cacheStates[cacheId].scrolls;
+            scrolls[target] = target.scrollTop;
+        }
+    }, [cacheStates]);
+    return (
+        &lt;CacheContext.Provider value={{ mount, cacheStates, dispatch,handleScroll }}&gt;
+            {props.children}
+<span class="hljs-addition">+           {Object.values(cacheStates).filter(cacheState=&gt;cacheState.status!==cacheTypes.DESTROY).map(({ cacheId, element }) =&gt; (</span>
+                &lt;div
+                    id={`cache_${cacheId}`}
+                    key={cacheId}
+                    ref={(dom) =&gt; {
+                        let cacheState = cacheStates[cacheId];
+<span class="hljs-addition">+                       if (dom &amp;&amp; (!cacheState.doms || cacheState.status === cacheTypes.DESTROY) ) {</span>
+                            let doms = Array.from(dom.childNodes);
+                            dispatch({ type: cacheTypes.CREATED, payload: { cacheId, doms } });
+                        }
+                    }}
+                &gt;{element}&lt;/div&gt;
+            ))}
+        &lt;/CacheContext.Provider&gt;
+    );
+}
+export default KeepAliveProvider;
+</code></pre>
+<h3 id="t245.5 withKeepAlive.js">5.5 withKeepAlive.js <a href="#t245.5 withKeepAlive.js"> # </a></h3>
+<p>src\keepalive-react-component\withKeepAlive.js</p>
+<pre><code class="lang-diff">import React, { useContext, useRef,useEffect } from &quot;react&quot;;
+import CacheContext from &apos;./CacheContext&apos;;
+<span class="hljs-addition">+import * as cacheTypes from &apos;./cache-types&apos;;</span>
+function withKeepAlive(OldComponent, { cacheId = window.location.pathname,scroll=false }) {
+    return function (props) {
+        const {mount, cacheStates,dispatch,handleScroll } = useContext(CacheContext);
+        const ref = useRef(null);
+        useEffect(()=&gt;{
+            if(scroll){
+                ref.current.addEventListener(&apos;scroll&apos;, handleScroll.bind(null, cacheId),true);
+            }
+        },[handleScroll]);
+        useEffect(() =&gt; {
+            let cacheState = cacheStates[cacheId];
+<span class="hljs-addition">+           if(cacheState&amp;&amp;cacheState.doms &amp;&amp; cacheState.status !== cacheTypes.DESTROY){</span>
+                let doms = cacheState.doms;
+                doms.forEach(dom=&gt;ref.current.appendChild(dom));
+                if(scroll){
+                   doms.forEach(dom=&gt;{
+                       if (cacheState.scrolls[dom])
+                         dom.scrollTop = cacheState.scrolls[dom];
+                   });
+                  }
+            }else{
+                mount({ cacheId, element: &lt;OldComponent {...props} dispatch={dispatch}/&gt; })
+            }
+        }, [cacheStates, dispatch, mount, props]);
+        return &lt;div id={`keepalive_${cacheId}`} ref={ref} /&gt;;
+    }
+}
+export default withKeepAlive;
+</code></pre>
+
+    </div>
+</div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+    aria-labelledby="loginModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="loginModalLabel">请登录</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="username" class="control-label">姓名:</label>
+                        <input type="text" class="form-control" id="username" placeholder="珠峰架构VIP会员系统用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">密码:</label>
+                        <input type="text" class="form-control" id="password" placeholder="珠峰架构VIP会员系统密码">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                    data-dismiss="modal">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

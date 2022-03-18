@@ -1,0 +1,1817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+
+
+
+
+<div class="warpper">
+
+    <div class="page-toc">
+        <ul><li><a href="#t01. Generator">1. Generator</a><ul><li><a href="#t11.1 Generator">1.1 Generator</a></li><li><a href="#t21.3  throw">1.3  throw</a></li><li><a href="#t31.4 return">1.4 return</a></li><li><a href="#t41.5 co">1.5 co</a></li><li><a href="#t51.7 generator">1.7 generator</a><ul><li><a href="#t61.7.1 使用">1.7.1 使用</a></li><li><a href="#t71.7.2 实现">1.7.2 实现</a><ul><li><a href="#t81.7.2.1 generator.js">1.7.2.1 generator.js</a></li><li><a href="#t91.7.2.2 regeneratorRuntime.js">1.7.2.2 regeneratorRuntime.js</a></li></ul></li></ul></li></ul></li><li><a href="#t102. redux-saga实战">2. redux-saga实战</a><ul><li><a href="#t112.1 初始化项目">2.1 初始化项目</a></li><li><a href="#t122.2 实现计数器">2.2 实现计数器</a><ul><li><a href="#t132.2.1 action-types.js">2.2.1 action-types.js</a></li><li><a href="#t142.2.2 reducer.js">2.2.2 reducer.js</a></li><li><a href="#t152.2.3 store\index.js">2.2.3 store\index.js</a></li><li><a href="#t162.2.4 actions.js">2.2.4 actions.js</a></li><li><a href="#t172.2.5 Counter.js">2.2.5 Counter.js</a></li><li><a href="#t182.2.6 src\index.js">2.2.6 src\index.js</a></li></ul></li><li><a href="#t192.3 saga计数器">2.3 saga计数器</a><ul><li><a href="#t202.3.1 src\store\sagas.js">2.3.1 src\store\sagas.js</a></li><li><a href="#t212.3.2 action-types.js">2.3.2 action-types.js</a></li><li><a href="#t222.3.3 actions.js">2.3.3 actions.js</a></li><li><a href="#t232.3.4 src\store\index.js">2.3.4 src\store\index.js</a></li></ul></li></ul></li><li><a href="#t243 实现take和put">3 实现take和put</a><ul><li><a href="#t253.1 index.js">3.1 index.js</a></li><li><a href="#t263.2 middleware.js">3.2 middleware.js</a></li><li><a href="#t273.3 channel.js">3.3 channel.js</a></li><li><a href="#t283.4 runSaga.js">3.4 runSaga.js</a><ul><li><a href="#t293.5 effectTypes.js">3.5 effectTypes.js</a></li></ul></li><li><a href="#t303.6 effectRunnerMap.js">3.6 effectRunnerMap.js</a></li><li><a href="#t313.6 proc.js">3.6 proc.js</a></li><li><a href="#t323.7 effects.js">3.7 effects.js</a></li></ul></li><li><a href="#t334. 支持产出iterator">4. 支持产出iterator</a><ul><li><a href="#t344.1 sagas.js">4.1 sagas.js</a></li><li><a href="#t354.2 is.js">4.2 is.js</a></li><li><a href="#t364.3 proc.js">4.3 proc.js</a></li></ul></li><li><a href="#t375. 支持takeEvery">5. 支持takeEvery</a><ul><li><a href="#t385.1  sagas.js">5.1  sagas.js</a></li><li><a href="#t395.2 effectTypes.js">5.2 effectTypes.js</a></li><li><a href="#t405.3  effects.js">5.3  effects.js</a></li><li><a href="#t415.4 effectRunnerMap.js">5.4 effectRunnerMap.js</a></li></ul></li><li><a href="#t426 支持promise">6 支持promise</a><ul><li><a href="#t436.1  sagas.js">6.1  sagas.js</a></li><li><a href="#t446.2  is.js">6.2  is.js</a></li><li><a href="#t456.3 proc.js">6.3 proc.js</a></li></ul></li><li><a href="#t467.支持call">7.支持call</a><ul><li><a href="#t477.1  sagas.js">7.1  sagas.js</a></li><li><a href="#t487.3 effects.js">7.3 effects.js</a></li><li><a href="#t497.4 effectRunnerMap.js">7.4 effectRunnerMap.js</a></li></ul></li><li><a href="#t508 支持cps">8 支持cps</a><ul><li><a href="#t518.1  sagas.js">8.1  sagas.js</a></li><li><a href="#t528.2 is.js">8.2 is.js</a></li><li><a href="#t538.3 effectTypes.js">8.3 effectTypes.js</a></li><li><a href="#t548.4 effects.js">8.4 effects.js</a></li><li><a href="#t558.5 effectRunnerMap.js">8.5 effectRunnerMap.js</a></li></ul></li><li><a href="#t569.支持all">9.支持all</a><ul><li><a href="#t579.1  sagas.js">9.1  sagas.js</a></li><li><a href="#t589.2 effectTypes.js">9.2 effectTypes.js</a></li><li><a href="#t599.3 effects.js">9.3 effects.js</a></li><li><a href="#t609.4 utils.js">9.4 utils.js</a></li><li><a href="#t619.5 effectRunnerMap.js">9.5 effectRunnerMap.js</a></li></ul></li><li><a href="#t6210.支持cancel">10.支持cancel</a><ul><li><a href="#t6310.1  sagas.js">10.1  sagas.js</a></li><li><a href="#t6410.2 effectTypes.js">10.2 effectTypes.js</a></li><li><a href="#t6510.3 effects.js">10.3 effects.js</a></li><li><a href="#t6610.4 effectRunnerMap.js">10.4 effectRunnerMap.js</a></li><li><a href="#t6710.5 symbols.js">10.5 symbols.js</a></li><li><a href="#t6810.6 proc.js">10.6 proc.js</a></li><li><a href="#t6910.7 action-types.js">10.7 action-types.js</a></li><li><a href="#t7010.8 actions.js">10.8 actions.js</a></li><li><a href="#t7110.9 Counter.js">10.9 Counter.js</a></li></ul></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <h2 id="t01. Generator">1. Generator <a href="#t01. Generator"> # </a></h2>
+<h3 id="t11.1 Generator">1.1 Generator <a href="#t11.1 Generator"> # </a></h3>
+<ul>
+<li>Generator&#x662F;&#x751F;&#x6210;&#x5668;&#xFF0C;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x5982;&#x679C;&#x52A0;&#x4E86;*&#xFF0C;&#x4ED6;&#x5C31;&#x4F1A;&#x53D8;&#x6210;&#x4E00;&#x4E2A;<code>&#x751F;&#x6210;&#x5668;</code>&#x51FD;&#x6570;&#xFF0C;&#x4ED6;&#x7684;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;<code>&#x8FED;&#x4EE3;&#x5668;</code>&#x5BF9;&#x8C61;</li>
+<li>ES6&#x89C4;&#x8303;&#x4E2D;&#x89C4;&#x5B9A;&#x8FED;&#x4EE3;&#x5668;&#x5FC5;&#x987B;&#x6709;&#x4E00;&#x4E2A;next&#x65B9;&#x6CD5;&#xFF0C;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x5177;&#x6709;<code>done</code>&#x548C;<code>value</code>&#x4E24;&#x4E2A;&#x5C5E;&#x6027;<ul>
+<li><code>done</code>&#x8868;&#x793A;&#x5F53;&#x524D;&#x8FED;&#x4EE3;&#x5668;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x6267;&#x884C;&#x5B8C;&#xFF0C;&#x6267;&#x884C;&#x5B8C;&#x4E3A;true&#xFF0C;&#x5426;&#x5219;&#x4E3A;false</li>
+<li><code>value</code>&#x8868;&#x793A;&#x5F53;&#x524D;&#x6B65;&#x9AA4;&#x8FD4;&#x56DE;&#x7684;&#x503C;</li>
+</ul>
+</li>
+<li>&#x5F53;&#x8C03;&#x7528;&#x8FED;&#x4EE3;&#x5668;&#x7684;<code>next</code>&#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x4F1A;&#x7EE7;&#x7EED;&#x5F80;&#x4E0B;&#x6267;&#x884C;,&#x9047;&#x5230;<code>yield</code>&#x5173;&#x952E;&#x5B57;&#x90FD;&#x4F1A;&#x6682;&#x505C;&#x6267;&#x884C;,&#x5E76;&#x4F1A;&#x5C06;<code>yield</code>&#x540E;&#x9762;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x503C;&#x4F5C;&#x4E3A;&#x8FD4;&#x56DE;&#x5BF9;&#x8C61;&#x7684;<code>value</code></li>
+</ul>
+<p><img src="https://img.zhufengpeixun.com/generatororiginal.png" alt="generatororiginal"></p>
+<p><img src="https://img.zhufengpeixun.com/generatorexecflow.png" alt="generatorexecflow"></p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span>* <span class="hljs-title">generator</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">let</span> a = <span class="hljs-keyword">yield</span> <span class="hljs-number">1</span>;
+    <span class="hljs-built_in">console</span>.log(a);
+    <span class="hljs-keyword">let</span> b = <span class="hljs-keyword">yield</span> <span class="hljs-number">2</span>;
+    <span class="hljs-built_in">console</span>.log(b);
+    <span class="hljs-keyword">let</span> c = <span class="hljs-keyword">yield</span> <span class="hljs-number">3</span>;
+    <span class="hljs-built_in">console</span>.log(c);
+}
+
+<span class="hljs-keyword">let</span> iterator = generator();
+
+<span class="hljs-keyword">let</span> r1 = iterator.next();
+<span class="hljs-comment">/**
+ * &#x8FD4;&#x56DE;&#x503C;&#x662F; { value: 1, done: false }
+ * &#x6B64;&#x65F6;&#x5E76;&#x6CA1;&#x6709;&#x7ED9;&#x53D8;&#x91CF;a&#x8D4B;&#x503C;&#xFF0C;&#x8C03;&#x7528;&#x4E0B;&#x4E00;&#x4E2A;next&#x7684;&#x65F6;&#x5019;&#x624D;&#x4F1A;&#x7ED9;&#x53D8;&#x91CF;a&#x8D4B;&#x503C;
+ */</span>
+<span class="hljs-built_in">console</span>.log(r1);
+<span class="hljs-comment">/**
+ * &#x5148;&#x628A;&#x503C;valueA&#x8D4B;&#x503C;&#x7ED9;&#x53D8;&#x91CF;a,&#x5E76;&#x7EE7;&#x7EED;&#x5411;&#x4E0B;&#x6267;&#x884C;&#xFF0C;&#x9047;&#x5230;&#x7B2C;2&#x4E2A;yield&#x505C;&#x6B62;
+ */</span>
+<span class="hljs-keyword">let</span> r2 = iterator.next(<span class="hljs-string">&apos;aValue&apos;</span>);
+<span class="hljs-built_in">console</span>.log(r2);
+<span class="hljs-comment">/**
+ * &#x518D;&#x6B21;&#x8C03;&#x7528;next&#x65F6;&#x6CA1;&#x6709;&#x4F20;&#x53C2;&#xFF0C;&#x6240;&#x4EE5;b&#x7684;&#x503C;&#x4E3A;undefined
+ */</span>
+<span class="hljs-keyword">let</span> r3 = iterator.next(<span class="hljs-string">&apos;bValue&apos;</span>);
+<span class="hljs-built_in">console</span>.log(r3);
+<span class="hljs-comment">/**
+ * &#x518D;&#x6B21;&#x8C03;&#x7528;next&#x65F6;&#x6CA1;&#x6709;&#x4F20;&#x53C2;&#xFF0C;&#x6240;&#x4EE5;c&#x7684;&#x503C;&#x4E3A;undefined,&#x6267;&#x884C;&#x7ED3;&#x675F;&#xFF0C;done&#x4E3A;true
+ */</span>
+<span class="hljs-keyword">let</span> r4 = iterator.next(<span class="hljs-string">&apos;cValue&apos;</span>);
+<span class="hljs-built_in">console</span>.log(r4);
+</code></pre>
+<h3 id="t21.3  throw">1.3  throw <a href="#t21.3  throw"> # </a></h3>
+<ul>
+<li><code>throw</code>&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x5728;&#x51FD;&#x6570;&#x4F53;&#x5916;&#x90E8;&#x629B;&#x51FA;&#x9519;&#x8BEF;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x51FD;&#x6570;&#x91CC;&#x9762;&#x6355;&#x83B7;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span>* <span class="hljs-title">generator</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">try</span>{
+        <span class="hljs-keyword">let</span> a = <span class="hljs-keyword">yield</span> <span class="hljs-number">1</span>;
+        <span class="hljs-built_in">console</span>.log(a);
+        <span class="hljs-keyword">let</span> b = <span class="hljs-keyword">yield</span> <span class="hljs-number">2</span>;
+        <span class="hljs-built_in">console</span>.log(b);
+    }<span class="hljs-keyword">catch</span>(err){
+        <span class="hljs-built_in">console</span>.log(err);
+    }
+}
+
+<span class="hljs-keyword">let</span> iterator = generator();
+<span class="hljs-keyword">let</span> r1 = iterator.next();
+<span class="hljs-built_in">console</span>.log(r1);
+<span class="hljs-keyword">let</span> r2 =  iterator.throw(<span class="hljs-string">&apos;&#x51FA;&#x9519;&#x4E86;&apos;</span>);
+<span class="hljs-built_in">console</span>.log(r2);
+</code></pre>
+<h3 id="t31.4 return">1.4 return <a href="#t31.4 return"> # </a></h3>
+<ul>
+<li><code>throw</code>&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x7EC8;&#x6B62;&#x5F53;&#x524D;&#x8FED;&#x4EE3;&#x5668;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span>* <span class="hljs-title">generator</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">try</span>{
+        <span class="hljs-keyword">let</span> a = <span class="hljs-keyword">yield</span> <span class="hljs-number">1</span>;
+        <span class="hljs-built_in">console</span>.log(a);
+        <span class="hljs-keyword">let</span> b = <span class="hljs-keyword">yield</span> <span class="hljs-number">2</span>;
+        <span class="hljs-built_in">console</span>.log(b);
+    }<span class="hljs-keyword">catch</span>(err){
+        <span class="hljs-built_in">console</span>.log(err);
+    }
+}
+
+<span class="hljs-keyword">let</span> iterator = generator();
+<span class="hljs-keyword">let</span> r1 = iterator.next();
+<span class="hljs-built_in">console</span>.log(r1);
+<span class="hljs-keyword">let</span> r2 =  iterator.return();
+<span class="hljs-built_in">console</span>.log(r2);
+</code></pre>
+<h3 id="t41.5 co">1.5 co <a href="#t41.5 co"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">co</span>(<span class="hljs-params">generator</span>) </span>{
+    <span class="hljs-keyword">let</span> it = generator();
+    <span class="hljs-keyword">let</span> result;
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">next</span>(<span class="hljs-params">arg</span>) </span>{
+        result = it.next(arg);
+        <span class="hljs-keyword">if</span>(!result.done) 
+            next(result.value);
+    }
+    next();
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span>* <span class="hljs-title">generator</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">let</span> a = <span class="hljs-keyword">yield</span> <span class="hljs-number">1</span>;
+    <span class="hljs-built_in">console</span>.log(a);
+    <span class="hljs-keyword">let</span> b = <span class="hljs-keyword">yield</span> <span class="hljs-number">2</span>;
+    <span class="hljs-built_in">console</span>.log(b);
+    <span class="hljs-keyword">let</span> c = <span class="hljs-keyword">yield</span> <span class="hljs-number">3</span>;
+    <span class="hljs-built_in">console</span>.log(c);
+}
+co(generator);
+</code></pre>
+<h3 id="t51.7 generator">1.7 generator <a href="#t51.7 generator"> # </a></h3>
+<h4 id="t61.7.1 &#x4F7F;&#x7528;">1.7.1 &#x4F7F;&#x7528; <a href="#t61.7.1 &#x4F7F;&#x7528;"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span>* <span class="hljs-title">generator</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">let</span> a = <span class="hljs-keyword">yield</span> <span class="hljs-number">1</span>;
+    <span class="hljs-built_in">console</span>.log(a);
+    <span class="hljs-keyword">let</span> b = <span class="hljs-keyword">yield</span> <span class="hljs-number">2</span>;
+    <span class="hljs-built_in">console</span>.log(b);
+    <span class="hljs-keyword">let</span> c = <span class="hljs-keyword">yield</span> <span class="hljs-number">3</span>;
+    <span class="hljs-built_in">console</span>.log(c);
+}
+<span class="hljs-keyword">var</span> iterator = generator();
+<span class="hljs-built_in">console</span>.log(iterator.next());          <span class="hljs-comment">//{ value: 1, done: false }</span>
+<span class="hljs-built_in">console</span>.log(iterator.next(<span class="hljs-string">&apos;aValue&apos;</span>));  <span class="hljs-comment">//{ value: 2, done: false }</span>
+<span class="hljs-built_in">console</span>.log(iterator.next(<span class="hljs-string">&apos;bValue&apos;</span>));  <span class="hljs-comment">//{ value: 3, done: false }</span>
+<span class="hljs-built_in">console</span>.log(iterator.next(<span class="hljs-string">&apos;cValue&apos;</span>));  <span class="hljs-comment">//{ value: undefined, done: true }</span>
+</code></pre>
+<h4 id="t71.7.2 &#x5B9E;&#x73B0;">1.7.2 &#x5B9E;&#x73B0; <a href="#t71.7.2 &#x5B9E;&#x73B0;"> # </a></h4>
+<ul>
+<li><a href="https://babeljs.io/repl">repl</a></li>
+<li><a href="https://github.com/facebook/regenerator/blob/master/packages/regenerator-runtime/runtime.js">runtime.js</a></li>
+</ul>
+<h5 id="t81.7.2.1 generator.js">1.7.2.1 generator.js <a href="#t81.7.2.1 generator.js"> # </a></h5>
+<pre><code class="lang-js"><span class="hljs-comment">/* eslint-disable no-fallthrough */</span>
+<span class="hljs-keyword">let</span> regeneratorRuntime = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./regeneratorRuntime&apos;</span>);
+<span class="hljs-keyword">var</span> _marked = regeneratorRuntime.mark(generator);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">generator</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">var</span> a, b, c;
+  <span class="hljs-keyword">return</span> regeneratorRuntime.wrap(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">generator$</span>(<span class="hljs-params">_context</span>) </span>{
+    <span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>) {
+      <span class="hljs-keyword">switch</span> (_context.prev = _context.next) {
+        <span class="hljs-keyword">case</span> <span class="hljs-number">0</span>:
+          _context.next = <span class="hljs-number">2</span>;
+          <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+
+        <span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:
+          a = _context.sent;
+          <span class="hljs-built_in">console</span>.log(a);
+          _context.next = <span class="hljs-number">6</span>;
+          <span class="hljs-keyword">return</span> <span class="hljs-number">2</span>;
+
+        <span class="hljs-keyword">case</span> <span class="hljs-number">6</span>:
+          b = _context.sent;
+          <span class="hljs-built_in">console</span>.log(b);
+          _context.next = <span class="hljs-number">10</span>;
+          <span class="hljs-keyword">return</span> <span class="hljs-number">3</span>;
+
+        <span class="hljs-keyword">case</span> <span class="hljs-number">10</span>:
+          c = _context.sent;
+          <span class="hljs-built_in">console</span>.log(c);
+
+        <span class="hljs-keyword">case</span> <span class="hljs-number">12</span>:
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;end&quot;</span>:
+          <span class="hljs-keyword">return</span> _context.stop();
+        <span class="hljs-keyword">default</span>:
+      }
+    }
+  }, _marked);
+}
+<span class="hljs-keyword">var</span> iterator = generator();
+<span class="hljs-built_in">console</span>.log(iterator.next());          <span class="hljs-comment">//{ value: 1, done: false }</span>
+<span class="hljs-built_in">console</span>.log(iterator.next(<span class="hljs-string">&apos;aValue&apos;</span>));  <span class="hljs-comment">//{ value: 2, done: false }</span>
+<span class="hljs-built_in">console</span>.log(iterator.next(<span class="hljs-string">&apos;bValue&apos;</span>));  <span class="hljs-comment">//{ value: 3, done: false }</span>
+<span class="hljs-built_in">console</span>.log(iterator.next(<span class="hljs-string">&apos;cValue&apos;</span>));  <span class="hljs-comment">//{ value: undefined, done: true }</span>
+</code></pre>
+<h5 id="t91.7.2.2 regeneratorRuntime.js">1.7.2.2 regeneratorRuntime.js <a href="#t91.7.2.2 regeneratorRuntime.js"> # </a></h5>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Context</span> </span>{
+    next = <span class="hljs-number">0</span>;
+    done = <span class="hljs-literal">false</span>;
+    stop() {
+        <span class="hljs-keyword">this</span>.done = <span class="hljs-literal">true</span>;
+    }
+}
+exports.mark = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">genFun</span>) </span>{
+    <span class="hljs-keyword">return</span> genFun;
+};
+exports.wrap = <span class="hljs-function">(<span class="hljs-params">innerFn, outerFn</span>) =&gt;</span> {
+    <span class="hljs-keyword">let</span> generator = <span class="hljs-built_in">Object</span>.create(outerFn.prototype);
+    <span class="hljs-keyword">var</span> context = <span class="hljs-keyword">new</span> Context();
+    generator.next = <span class="hljs-function">(<span class="hljs-params">arg</span>) =&gt;</span> {
+        context.sent = arg;
+        <span class="hljs-keyword">let</span> value = innerFn(context);
+        <span class="hljs-keyword">return</span> {
+            value,
+            <span class="hljs-attr">done</span>: context.done
+        };
+    };
+    <span class="hljs-keyword">return</span> generator;
+}
+</code></pre>
+<h2 id="t102. redux-saga&#x5B9E;&#x6218;">2. redux-saga&#x5B9E;&#x6218; <a href="#t102. redux-saga&#x5B9E;&#x6218;"> # </a></h2>
+<h3 id="t112.1 &#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;">2.1 &#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE; <a href="#t112.1 &#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;"> # </a></h3>
+<pre><code class="lang-js">create-react-app zhufeng-redux-saga
+cd zhufeng-redux-saga
+cnpm i redux react-redux redux-saga -S
+</code></pre>
+<p><img src="https://img.zhufengpeixun.com/redux-saga-flow2.jpg" alt="redux-saga-flow2.jpg"></p>
+<p><img src="https://img.zhufengpeixun.com/react-redux-flow.jpg" alt="react-redux-flow.jpg"></p>
+<h3 id="t122.2 &#x5B9E;&#x73B0;&#x8BA1;&#x6570;&#x5668;">2.2 &#x5B9E;&#x73B0;&#x8BA1;&#x6570;&#x5668; <a href="#t122.2 &#x5B9E;&#x73B0;&#x8BA1;&#x6570;&#x5668;"> # </a></h3>
+<h4 id="t132.2.1 action-types.js">2.2.1 action-types.js <a href="#t132.2.1 action-types.js"> # </a></h4>
+<p>src\store\action-types.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> ADD=<span class="hljs-string">&apos;ADD&apos;</span>;
+</code></pre>
+<h4 id="t142.2.2 reducer.js">2.2.2 reducer.js <a href="#t142.2.2 reducer.js"> # </a></h4>
+<p>src\store\reducer.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> actionTypes <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./action-types&apos;</span>;
+<span class="hljs-keyword">const</span> reducer =  <span class="hljs-function">(<span class="hljs-params">state={number:<span class="hljs-number">0</span>},action</span>) =&gt;</span> {
+    <span class="hljs-keyword">switch</span>(action.type){
+        <span class="hljs-keyword">case</span> actionTypes.ADD:
+            <span class="hljs-keyword">return</span> {<span class="hljs-attr">number</span>: state.number+(action.payload || <span class="hljs-number">1</span>)};
+        <span class="hljs-keyword">default</span>:
+            <span class="hljs-keyword">return</span> state;
+    }
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> reducer;
+</code></pre>
+<h4 id="t152.2.3 store\index.js">2.2.3 store\index.js <a href="#t152.2.3 store\index.js"> # </a></h4>
+<p>src\store\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> {createStore} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;redux&apos;</span>;
+<span class="hljs-keyword">import</span> reducer <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./reducer&apos;</span>;
+<span class="hljs-keyword">let</span> store=(createStore)(reducer);
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> store;
+</code></pre>
+<h4 id="t162.2.4 actions.js">2.2.4 actions.js <a href="#t162.2.4 actions.js"> # </a></h4>
+<p>src\store\actions.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> actionTypes <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./action-types&apos;</span>;
+<span class="hljs-keyword">const</span> actions = {
+    add() {
+        <span class="hljs-keyword">return</span> {<span class="hljs-attr">type</span>:actionTypes.ADD}
+    }
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> actions;
+</code></pre>
+<h4 id="t172.2.5 Counter.js">2.2.5 Counter.js <a href="#t172.2.5 Counter.js"> # </a></h4>
+<p>src\components\Counter.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React,{Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+<span class="hljs-keyword">import</span> {connect} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-redux&apos;</span>;
+<span class="hljs-keyword">import</span> actions <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../store/actions&apos;</span>;
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Counter</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span></span>{
+    render() {
+        <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{this.props.number}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{this.props.add}</span>&gt;</span>+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+      )
+  }
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> connect(
+    <span class="hljs-function"><span class="hljs-params">state</span> =&gt;</span> state,
+    actions
+)(Counter);
+</code></pre>
+<h4 id="t182.2.6 src\index.js">2.2.6 src\index.js <a href="#t182.2.6 src\index.js"> # </a></h4>
+<p>src\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+<span class="hljs-keyword">import</span> Counter <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./components/Counter&apos;</span>;
+<span class="hljs-keyword">import</span> {Provider} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-redux&apos;</span>;
+<span class="hljs-keyword">import</span> store <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./store&apos;</span>;
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Provider</span> <span class="hljs-attr">store</span>=<span class="hljs-string">{store}</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Counter</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">Provider</span>&gt;</span></span>,<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&apos;#root&apos;</span>));
+</code></pre>
+<h3 id="t192.3 saga&#x8BA1;&#x6570;&#x5668;">2.3 saga&#x8BA1;&#x6570;&#x5668; <a href="#t192.3 saga&#x8BA1;&#x6570;&#x5668;"> # </a></h3>
+<h4 id="t202.3.1 src\store\sagas.js">2.3.1 src\store\sagas.js <a href="#t202.3.1 src\store\sagas.js"> # </a></h4>
+<p>src\store\sagas.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { put, take} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;redux-saga/effects&apos;</span>;
+<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> actionTypes <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./action-types&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span>* <span class="hljs-title">rootSaga</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">3</span>;i++){
+    <span class="hljs-keyword">yield</span> take(actionTypes.ASYNC_ADD);
+    <span class="hljs-keyword">yield</span> put({<span class="hljs-attr">type</span>:actionTypes.ADD});
+  } 
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x5DF2;&#x7ECF;&#x8FBE;&#x5230;&#x6700;&#x5927;&#x503C;&apos;</span>);
+}
+</code></pre>
+<h4 id="t212.3.2 action-types.js">2.3.2 action-types.js <a href="#t212.3.2 action-types.js"> # </a></h4>
+<p>src\store\action-types.js</p>
+<pre><code class="lang-diff">export const ADD=&apos;ADD&apos;;
+<span class="hljs-addition">+export const ASYNC_ADD=&apos;ASYNC_ADD&apos;;</span>
+</code></pre>
+<h4 id="t222.3.3 actions.js">2.3.3 actions.js <a href="#t222.3.3 actions.js"> # </a></h4>
+<p>src\store\actions.js</p>
+<pre><code class="lang-diff">import * as actionTypes from &apos;./action-types&apos;;
+const actions = {
+    add() {
+<span class="hljs-addition">+      return {type:actionTypes.ASYNC_ADD}</span>
+    }
+}
+export default actions;
+</code></pre>
+<h4 id="t232.3.4 src\store\index.js">2.3.4 src\store\index.js <a href="#t232.3.4 src\store\index.js"> # </a></h4>
+<p>src\store\index.js</p>
+<pre><code class="lang-diff"><span class="hljs-addition">+import {createStore,applyMiddleware} from &apos;redux&apos;;</span>
+import reducer from &apos;./reducer&apos;;
+<span class="hljs-addition">+import createSagaMiddleware from &apos;redux-saga&apos;;</span>
+<span class="hljs-addition">+import {rootSaga} from &apos;./sagas&apos;;</span>
+<span class="hljs-addition">+let sagaMiddleware=createSagaMiddleware();</span>
+<span class="hljs-addition">+let store=applyMiddleware(sagaMiddleware)(createStore)(reducer);</span>
+<span class="hljs-addition">+sagaMiddleware.run(rootSaga);</span>
+export default store;
+</code></pre>
+<h2 id="t243 &#x5B9E;&#x73B0;take&#x548C;put">3 &#x5B9E;&#x73B0;take&#x548C;put <a href="#t243 &#x5B9E;&#x73B0;take&#x548C;put"> # </a></h2>
+<ul>
+<li>take &#x76D1;&#x542C;action&#xFF0C;&#x6682;&#x505C;Generator&#xFF0C;&#x5339;&#x914D;&#x7684;action&#x88AB;&#x53D1;&#x8D77;&#x65F6;&#xFF0C;&#x6062;&#x590D;&#x6267;&#x884C;&#x3002;take&#x7ED3;&#x5408;fork&#xFF0C;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;takeEvery&#x548C;takeLatest&#x7684;&#x6548;&#x679C;</li>
+<li>put &#x76F8;&#x5F53;&#x4E8E;dispatch&#xFF0C;&#x5206;&#x53D1;&#x4E00;&#x4E2A;action</li>
+</ul>
+<h3 id="t253.1 index.js">3.1 index.js <a href="#t253.1 index.js"> # </a></h3>
+<ul>
+<li><a href="https://gitee.com/zhufengpeixun/redux-saga/blob/master/packages/core/src/index.js">index.js</a></li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> { <span class="hljs-keyword">default</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./middleware&apos;</span>;
+</code></pre>
+<h3 id="t263.2 middleware.js">3.2 middleware.js <a href="#t263.2 middleware.js"> # </a></h3>
+<ul>
+<li><a href="https://gitee.com/zhufengpeixun/redux-saga/blob/master/packages/core/src/internal/middleware.js">middleware.js</a></li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { stdChannel } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./channel&apos;</span>;
+<span class="hljs-keyword">import</span> { runSaga } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./runSaga&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sagaMiddlewareFactory</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> channel = stdChannel();
+
+  <span class="hljs-keyword">let</span> boundRunSaga;
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sagaMiddleware</span>(<span class="hljs-params">{ getState, dispatch }</span>) </span>{
+    boundRunSaga = runSaga.bind(<span class="hljs-literal">null</span>, {
+      channel,
+      dispatch,
+      getState,
+    })
+
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">next</span>) </span>{
+      <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">action</span>) </span>{
+        <span class="hljs-keyword">const</span> result = next(action);
+        channel.put(action);
+        <span class="hljs-keyword">return</span> result;
+      }
+    }
+  }
+
+  sagaMiddleware.run = <span class="hljs-function">(<span class="hljs-params">...args</span>) =&gt;</span> {
+    boundRunSaga(...args)
+  }
+
+  <span class="hljs-keyword">return</span> sagaMiddleware;
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> sagaMiddlewareFactory;
+</code></pre>
+<h3 id="t273.3 channel.js">3.3 channel.js <a href="#t273.3 channel.js"> # </a></h3>
+<ul>
+<li><a href="https://gitee.com/zhufengpeixun/redux-saga/blob/master/packages/core/src/internal/channel.js">channel.js</a></li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">stdChannel</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">let</span> currentTakers = [];
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">take</span>(<span class="hljs-params">cb, matcher</span>) </span>{
+    cb[<span class="hljs-string">&apos;MATCH&apos;</span>] = matcher;
+    cb.cancel = <span class="hljs-function"><span class="hljs-params">()</span>=&gt;</span>{
+      currentTakers = currentTakers.filter(<span class="hljs-function"><span class="hljs-params">item</span>=&gt;</span>item!==cb);
+    }
+    currentTakers.push(cb);
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">put</span>(<span class="hljs-params">input</span>) </span>{
+    <span class="hljs-keyword">const</span> takers = currentTakers;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>, len = takers.length; i &lt; len; i++) {
+      <span class="hljs-keyword">const</span> taker = takers[i]
+      <span class="hljs-keyword">if</span> (taker[<span class="hljs-string">&apos;MATCH&apos;</span>](input)) {
+        taker.cancel();
+        taker(input);
+      }
+    }
+  }
+
+  <span class="hljs-keyword">return</span> {
+    take,
+    put
+  }
+}
+</code></pre>
+<h3 id="t283.4 runSaga.js">3.4 runSaga.js <a href="#t283.4 runSaga.js"> # </a></h3>
+<ul>
+<li><a href="https://gitee.com/zhufengpeixun/redux-saga/blob/master/packages/core/src/internal/runSaga.js">runSaga.js</a></li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> proc <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./proc&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">runSaga</span>(<span class="hljs-params">
+  { channel, dispatch, getState },
+  saga,
+  ...args
+</span>) </span>{
+  <span class="hljs-keyword">const</span> iterator = saga(...args);
+
+  <span class="hljs-keyword">const</span> env = {
+    channel,
+    dispatch,
+    getState,
+  };
+
+  proc(env, iterator);
+}
+</code></pre>
+<h4 id="t293.5 effectTypes.js">3.5 effectTypes.js <a href="#t293.5 effectTypes.js"> # </a></h4>
+<p>src\redux-saga\effectTypes.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> TAKE = <span class="hljs-string">&apos;TAKE&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> PUT = <span class="hljs-string">&apos;PUT&apos;</span>;
+</code></pre>
+<h3 id="t303.6 effectRunnerMap.js">3.6 effectRunnerMap.js <a href="#t303.6 effectRunnerMap.js"> # </a></h3>
+<ul>
+<li><a href="https://gitee.com/zhufengpeixun/redux-saga/blob/master/packages/core/src/internal/effectRunnerMap.js">effectRunnerMap.js</a></li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> effectTypes <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./effectTypes&apos;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">runTakeEffect</span>(<span class="hljs-params">env, {pattern}, cb</span>) </span>{
+  <span class="hljs-keyword">const</span> matcher = <span class="hljs-function"><span class="hljs-params">input</span> =&gt;</span> input.type === pattern;
+  env.channel.take(cb, matcher);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">runPutEffect</span>(<span class="hljs-params">env, { action }, cb</span>) </span>{
+  <span class="hljs-keyword">const</span> result = env.dispatch(action);
+  cb(result);
+}
+
+<span class="hljs-keyword">const</span> effectRunnerMap = {
+  [effectTypes.TAKE]: runTakeEffect,
+  [effectTypes.PUT]: runPutEffect
+};
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> effectRunnerMap;
+
+
+</code></pre>
+<h3 id="t313.6 proc.js">3.6 proc.js <a href="#t313.6 proc.js"> # </a></h3>
+<ul>
+<li><a href="https://gitee.com/zhufengpeixun/redux-saga/blob/master/packages/core/src/internal/proc.js">proc.js</a></li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> effectRunnerMap <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./effectRunnerMap&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">proc</span>(<span class="hljs-params">env, iterator</span>) </span>{
+  next();
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">next</span>(<span class="hljs-params">arg, isErr</span>) </span>{
+    <span class="hljs-keyword">let</span> result;
+    <span class="hljs-keyword">if</span> (isErr) {
+      result = iterator.throw(arg);
+    } <span class="hljs-keyword">else</span> {
+      result = iterator.next(arg);
+    }
+    <span class="hljs-keyword">if</span> (!result.done) {
+      runEffect(result.value, next)
+    }
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">runEffect</span>(<span class="hljs-params">effect, next</span>) </span>{
+    <span class="hljs-keyword">if</span> (effect) {
+      <span class="hljs-keyword">const</span> effectRunner = effectRunnerMap[effect.type]
+      effectRunner(env, effect.payload, next,{runEffect});
+    } <span class="hljs-keyword">else</span> {
+      next();
+    }
+  }
+}
+</code></pre>
+<h3 id="t323.7 effects.js">3.7 effects.js <a href="#t323.7 effects.js"> # </a></h3>
+<ul>
+<li><a href="https://gitee.com/zhufengpeixun/redux-saga/blob/master/packages/core/src/effects.js">effects.js</a></li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> effectTypes <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./effectTypes&apos;</span>
+<span class="hljs-keyword">const</span> makeEffect = <span class="hljs-function">(<span class="hljs-params">type, payload</span>) =&gt;</span> ({
+  type,
+  payload
+})
+
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">take</span>(<span class="hljs-params">pattern</span>) </span>{
+  <span class="hljs-keyword">return</span> makeEffect(effectTypes.TAKE, { pattern })
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">put</span>(<span class="hljs-params">action</span>) </span>{
+  <span class="hljs-keyword">return</span> makeEffect(effectTypes.PUT, { action })
+}
+
+</code></pre>
+<h2 id="t334. &#x652F;&#x6301;&#x4EA7;&#x51FA;iterator">4. &#x652F;&#x6301;&#x4EA7;&#x51FA;iterator <a href="#t334. &#x652F;&#x6301;&#x4EA7;&#x51FA;iterator"> # </a></h2>
+<h3 id="t344.1 sagas.js">4.1 sagas.js <a href="#t344.1 sagas.js"> # </a></h3>
+<p>src\store\sagas.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { put, take} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;redux-saga/effects&apos;</span>;
+<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> actionTypes <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./action-types&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span>* <span class="hljs-title">add</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">yield</span> put({<span class="hljs-attr">type</span>:actionTypes.ADD});
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span>* <span class="hljs-title">rootSaga</span>(<span class="hljs-params"></span>) </span>{
+     <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">3</span>;i++){
+         <span class="hljs-keyword">yield</span> take(actionTypes.ASYNC_ADD);
+         <span class="hljs-keyword">yield</span> add();
+     } 
+     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x5DF2;&#x7ECF;&#x8FBE;&#x5230;&#x6700;&#x5927;&#x503C;&apos;</span>);
+}
+</code></pre>
+<h3 id="t354.2 is.js">4.2 is.js <a href="#t354.2 is.js"> # </a></h3>
+<p>src\redux-saga\is.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> func = <span class="hljs-function"><span class="hljs-params">f</span> =&gt;</span> <span class="hljs-keyword">typeof</span> f === <span class="hljs-string">&apos;function&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> iterator = <span class="hljs-function"><span class="hljs-params">it</span> =&gt;</span> it &amp;&amp; func(it.next) &amp;&amp; func(it.throw);
+</code></pre>
+<h3 id="t364.3 proc.js">4.3 proc.js <a href="#t364.3 proc.js"> # </a></h3>
+<p>src\redux-saga\proc.js</p>
+<pre><code class="lang-diff">import effectRunnerMap from &apos;./effectRunnerMap&apos;;
+<span class="hljs-addition">+import * as is  from &apos;./is&apos;;</span>
+<span class="hljs-addition">+export default function proc(env, iterator,cont) {</span>
+  next();
+  function next(arg, isErr) {
+    let result;
+    if (isErr) {
+      result = iterator.throw(arg);
+    } else {
+      result = iterator.next(arg);
+    }
+    if (!result.done) {
+      runEffect(result.value, next)
+<span class="hljs-addition">+    }else{</span>
+<span class="hljs-addition">+      cont&amp;&amp;cont(result.value);</span>
+<span class="hljs-addition">+    }</span>
+  }
+
+  function runEffect(effect, next) {
+<span class="hljs-addition">+    if(is.iterator(effect)){</span>
+<span class="hljs-addition">+      proc(env,effect,next);</span>
+<span class="hljs-addition">+    }else if (effect) {</span>
+      const effectRunner = effectRunnerMap[effect.type]
+<span class="hljs-addition">+     effectRunner(env, effect.payload, next,{runEffect});</span>
+    } else {
+      next();
+    }
+  }
+}
+</code></pre>
+<h2 id="t375. &#x652F;&#x6301;takeEvery">5. &#x652F;&#x6301;takeEvery <a href="#t375. &#x652F;&#x6301;takeEvery"> # </a></h2>
+<ul>
+<li>takeEvery &#x76D1;&#x542C;action&#xFF0C;&#x6BCF;&#x76D1;&#x542C;&#x5230;&#x4E00;&#x4E2A;action&#xFF0C;&#x5C31;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x64CD;&#x4F5C;</li>
+<li>fork &#x5F02;&#x6B65;&#x975E;&#x963B;&#x585E;&#x8C03;&#x7528;&#xFF0C;&#x65E0;&#x963B;&#x585E;&#x7684;&#x6267;&#x884C;fn&#xFF0C;&#x6267;&#x884C;fn&#x65F6;&#xFF0C;&#x4E0D;&#x4F1A;&#x6682;&#x505C;Generator</li>
+<li>&#x4E00;&#x4E2A; task &#x5C31;&#x50CF;&#x662F;&#x4E00;&#x4E2A;&#x5728;&#x540E;&#x53F0;&#x8FD0;&#x884C;&#x7684;&#x8FDB;&#x7A0B;&#xFF0C;&#x5728;&#x57FA;&#x4E8E;redux-saga&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x8FD0;&#x884C;&#x591A;&#x4E2A;task</li>
+</ul>
+<h3 id="t385.1  sagas.js">5.1  sagas.js <a href="#t385.1  sagas.js"> # </a></h3>
+<p>src\store\sagas.js</p>
+<pre><code class="lang-diff"><span class="hljs-addition">+import { put, takeEvery} from &apos;../redux-saga/effects&apos;;</span>
+//import { put, take} from &apos;redux-saga/effects&apos;;
+import * as actionTypes from &apos;./action-types&apos;;
+
+export function* add() {
+  yield put({type:actionTypes.ADD});
+}
+
+export function* rootSaga() {
+<span class="hljs-addition">+  yield takeEvery(actionTypes.ASYNC_ADD,add);</span>
+}
+</code></pre>
+<h3 id="t395.2 effectTypes.js">5.2 effectTypes.js <a href="#t395.2 effectTypes.js"> # </a></h3>
+<p>src\redux-saga\effectTypes.js</p>
+<pre><code class="lang-diff">export const TAKE = &apos;TAKE&apos;;
+export const PUT = &apos;PUT&apos;;
+<span class="hljs-addition">+export const FORK = &apos;FORK&apos;;</span>
+</code></pre>
+<h3 id="t405.3  effects.js">5.3  effects.js <a href="#t405.3  effects.js"> # </a></h3>
+<p>src\redux-saga\effects.js
+import * as effectTypes from &apos;./effectTypes&apos;</p>
+<pre><code class="lang-diff">const makeEffect = (type, payload) =&gt; ({
+  type,
+  payload
+})
+
+export function take(pattern) {
+  return makeEffect(effectTypes.TAKE, { pattern })
+}
+
+export function put(action) {
+  return makeEffect(effectTypes.PUT, { action })
+}
+
+<span class="hljs-addition">+export function fork(fn) {</span>
+<span class="hljs-addition">+  return makeEffect(effectTypes.FORK, { fn })</span>
+<span class="hljs-addition">+}</span>
+
+<span class="hljs-addition">+export function takeEvery(pattern, saga) {</span>
+<span class="hljs-addition">+  function* takeEveryHelper() {</span>
+<span class="hljs-addition">+    while (true) {</span>
+<span class="hljs-addition">+      yield take(pattern);</span>
+<span class="hljs-addition">+      yield fork(saga);</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+  }</span>
+<span class="hljs-addition">+</span>
+<span class="hljs-addition">+  return fork(takeEveryHelper);</span>
+<span class="hljs-addition">+}</span>
+</code></pre>
+<h3 id="t415.4 effectRunnerMap.js">5.4 effectRunnerMap.js <a href="#t415.4 effectRunnerMap.js"> # </a></h3>
+<p>src\redux-saga\effectRunnerMap.js</p>
+<pre><code class="lang-diff">import * as effectTypes from &apos;./effectTypes&apos;
+<span class="hljs-addition">+import proc from &quot;./proc&quot;;</span>
+function runTakeEffect(env, {pattern}, cb) {
+  const matcher = input =&gt; input.type <span class="hljs-comment">=== pattern;</span>
+  env.channel.take(cb, matcher);
+}
+
+function runPutEffect(env, { action }, cb) {
+  const result = env.dispatch(action);
+  cb(result);
+}
+
+<span class="hljs-addition">+function runForkEffect(env, { fn }, cb) {</span>
+<span class="hljs-addition">+  const taskIterator = fn();</span>
+<span class="hljs-addition">+  proc(env, taskIterator);</span>
+<span class="hljs-addition">+  cb();</span>
+<span class="hljs-addition">+}</span>
+
+const effectRunnerMap = {
+  [effectTypes.TAKE]: runTakeEffect,
+  [effectTypes.PUT]: runPutEffect,
+<span class="hljs-addition">+ [effectTypes.FORK]: runForkEffect</span>
+};
+
+export default effectRunnerMap;
+</code></pre>
+<h2 id="t426 &#x652F;&#x6301;promise">6 &#x652F;&#x6301;promise <a href="#t426 &#x652F;&#x6301;promise"> # </a></h2>
+<h3 id="t436.1  sagas.js">6.1  sagas.js <a href="#t436.1  sagas.js"> # </a></h3>
+<p>src\store\sagas.js</p>
+<pre><code class="lang-diff">import { put, takeEvery} from &apos;../redux-saga/effects&apos;;
+//import { put, takeEvery} from &apos;redux-saga/effects&apos;;
+import * as actionTypes from &apos;./action-types&apos;;
+<span class="hljs-addition">+const delay=ms =&gt; new Promise((resolve,reject) =&gt; {</span>
+<span class="hljs-addition">+  setTimeout(() =&gt; {</span>
+<span class="hljs-addition">+      resolve();</span>
+<span class="hljs-addition">+  },ms);</span>
+<span class="hljs-addition">+});</span>
+export function* add() {
+<span class="hljs-addition">+  yield delay(1000);</span>
+  yield put({type:actionTypes.ADD});
+}
+
+export function* rootSaga() {
+  yield takeEvery(actionTypes.ASYNC_ADD,add);
+}
+</code></pre>
+<h3 id="t446.2  is.js">6.2  is.js <a href="#t446.2  is.js"> # </a></h3>
+<p>src\redux-saga\is.js</p>
+<pre><code class="lang-diff">export const func = f =&gt; typeof f <span class="hljs-comment">=== &apos;function&apos;;</span>
+export const iterator = it =&gt; it &amp;&amp; func(it.next) &amp;&amp; func(it.throw);
+<span class="hljs-addition">+export const promise = p =&gt; p &amp;&amp; func(p.then);</span>
+</code></pre>
+<h3 id="t456.3 proc.js">6.3 proc.js <a href="#t456.3 proc.js"> # </a></h3>
+<p>src\redux-saga\proc.js</p>
+<pre><code class="lang-diff">import effectRunnerMap from &apos;./effectRunnerMap&apos;;
+<span class="hljs-addition">+import * as is from &apos;./is&apos;;</span>
+<span class="hljs-addition">+function resolvePromise(promise, cb) {</span>
+<span class="hljs-addition">+  promise.then(cb, function (error) {</span>
+<span class="hljs-addition">+    cb(error, true);</span>
+<span class="hljs-addition">+  });</span>
+<span class="hljs-addition">+}</span>
+export default function proc(env, iterator,cont) {
+  next();
+  function next(arg, isErr) {
+    let result;
+    if (isErr) {
+      result = iterator.throw(arg);
+    } else {
+      result = iterator.next(arg);
+    }
+    if (!result.done) {
+      runEffect(result.value, next)
+    }else{
+      cont&amp;&amp;cont(result.value);
+    }
+  }
+
+  function runEffect(effect, next) {
+<span class="hljs-addition">+    if (is.promise(effect)) {</span>
+<span class="hljs-addition">+      resolvePromise(effect, next);</span>
+<span class="hljs-addition">+    }else if(is.iterator(effect)){</span>
+      proc(env,effect,next);
+    }else if (effect) {
+      const effectRunner = effectRunnerMap[effect.type]
+      effectRunner(env, effect.payload, next,{runEffect});
+    } else {
+      next();
+    }
+  }
+}
+</code></pre>
+<h2 id="t467.&#x652F;&#x6301;call">7.&#x652F;&#x6301;call <a href="#t467.&#x652F;&#x6301;call"> # </a></h2>
+<ul>
+<li>&#x5F02;&#x6B65;&#x963B;&#x585E;&#x8C03;&#x7528;<h3 id="t477.1  sagas.js">7.1  sagas.js <a href="#t477.1  sagas.js"> # </a></h3>
+src\store\sagas.js
+<code>`</code>diff
++import { put, takeEvery,call} from &apos;../redux-saga/effects&apos;;
+//import { put, takeEvery,call} from &apos;redux-saga/effects&apos;;
+import * as actionTypes from &apos;./action-types&apos;;
+const delay=ms =&gt; new Promise((resolve,reject) =&gt; {
+setTimeout(() =&gt; {<pre><code>resolve();
+</code></pre>},ms);
+});
+export function* add() {</li>
+<li>yield call(delay,1000);
+yield put({type:actionTypes.ADD});
+}</li>
+</ul>
+<p>export function* rootSaga() {
+  yield takeEvery(actionTypes.ASYNC_ADD,add);
+}</p>
+<pre><code>
+### 7.2 effectTypes.js
+src\redux-saga\effectTypes.js
+```diff
+export const TAKE = &apos;TAKE&apos;;
+export const PUT = &apos;PUT&apos;;
+export const FORK = &apos;FORK&apos;;
++export const CALL = &apos;CALL&apos;;
+</code></pre><h3 id="t487.3 effects.js">7.3 effects.js <a href="#t487.3 effects.js"> # </a></h3>
+<p>src\redux-saga\effects.js</p>
+<pre><code class="lang-diff">const makeEffect = (type, payload) =&gt; ({
+  type,
+  payload
+})
+
+export function take(pattern) {
+  return makeEffect(effectTypes.TAKE, { pattern })
+}
+
+export function put(action) {
+  return makeEffect(effectTypes.PUT, { action })
+}
+
+export function fork(fn) {
+  return makeEffect(&apos;FORK&apos;, { fn })
+}
+
+export function takeEvery(pattern, saga) {
+  function* takeEveryHelper() {
+    while (true) {
+      yield take(pattern);
+      yield fork(saga);
+    }
+  }
+
+  return fork(takeEveryHelper);
+}
+
+<span class="hljs-addition">+export function call(fn, ...args) {</span>
+<span class="hljs-addition">+  return makeEffect(effectTypes.CALL, { fn, args })</span>
+<span class="hljs-addition">+}</span>
+</code></pre>
+<h3 id="t497.4 effectRunnerMap.js">7.4 effectRunnerMap.js <a href="#t497.4 effectRunnerMap.js"> # </a></h3>
+<p>src\redux-saga\effectRunnerMap.js</p>
+<pre><code class="lang-diff">import * as effectTypes from &apos;./effectTypes&apos;
+import proc from &quot;./proc&quot;;
+import * as is from &apos;./is&apos;;
+function runTakeEffect(env, {pattern}, cb) {
+  const matcher = input =&gt; input.type <span class="hljs-comment">=== pattern;</span>
+  env.channel.take(cb, matcher);
+}
+
+function runPutEffect(env, { action }, cb) {
+  const result = env.dispatch(action);
+  cb(result);
+}
+
+function runForkEffect(env, { fn }, cb) {
+  const taskIterator = fn();
+  proc(env, taskIterator);
+  cb();
+}
+
+<span class="hljs-addition">+function runCallEffect(env, { fn, args }, cb) {</span>
+<span class="hljs-addition">+  const result = fn.apply(null, args);</span>
+<span class="hljs-addition">+  if (is.promise(result)) {</span>
+<span class="hljs-addition">+    return result</span>
+<span class="hljs-addition">+      .then(data =&gt; cb(data))</span>
+<span class="hljs-addition">+      .catch(error =&gt; cb(error, true));</span>
+<span class="hljs-addition">+  }</span>
+<span class="hljs-addition">+  cb(result);</span>
+<span class="hljs-addition">+}</span>
+
+const effectRunnerMap = {
+  [effectTypes.TAKE]: runTakeEffect,
+  [effectTypes.PUT]: runPutEffect,
+  [effectTypes.FORK]: runForkEffect,
+<span class="hljs-addition">+ [effectTypes.CALL]: runCallEffect</span>
+};
+
+
+export default effectRunnerMap;
+</code></pre>
+<h2 id="t508 &#x652F;&#x6301;cps">8 &#x652F;&#x6301;cps <a href="#t508 &#x652F;&#x6301;cps"> # </a></h2>
+<h3 id="t518.1  sagas.js">8.1  sagas.js <a href="#t518.1  sagas.js"> # </a></h3>
+<p>src\store\sagas.js</p>
+<pre><code class="lang-diff"><span class="hljs-addition">+import { put, takeEvery,call,cps} from &apos;../redux-saga/effects&apos;;</span>
+//import { put, takeEvery,call,cps} from &apos;redux-saga/effects&apos;;
+import * as actionTypes from &apos;./action-types&apos;;
+const delay = (ms,callback)=&gt;{
+    setTimeout(() =&gt; {
+        callback(null,&apos;ok&apos;);
+    },ms);
+}
+export function* add() {
+<span class="hljs-addition">+  let data = yield cps(delay,1000);</span>
+<span class="hljs-addition">+  console.log(data);</span>
+  yield put({type:actionTypes.ADD});
+}
+
+export function* rootSaga() {
+  yield takeEvery(actionTypes.ASYNC_ADD,add);
+}
+</code></pre>
+<h3 id="t528.2 is.js">8.2 is.js <a href="#t528.2 is.js"> # </a></h3>
+<p>src\redux-saga\is.js</p>
+<pre><code class="lang-diff">export const func = f =&gt; typeof f <span class="hljs-comment">=== &apos;function&apos;;</span>
+export const iterator = it =&gt; it &amp;&amp; func(it.next) &amp;&amp; func(it.throw);
+export const promise = p =&gt; p &amp;&amp; func(p.then);
+<span class="hljs-addition">+export const undef = v =&gt; v === null || v === undefined</span>
+</code></pre>
+<h3 id="t538.3 effectTypes.js">8.3 effectTypes.js <a href="#t538.3 effectTypes.js"> # </a></h3>
+<p>src\redux-saga\effectTypes.js</p>
+<pre><code class="lang-diff">export const TAKE = &apos;TAKE&apos;;
+export const PUT = &apos;PUT&apos;;
+export const FORK = &apos;FORK&apos;;
+export const CALL = &apos;CALL&apos;;
+<span class="hljs-addition">+export const CPS = &apos;CPS&apos;;</span>
+</code></pre>
+<h3 id="t548.4 effects.js">8.4 effects.js <a href="#t548.4 effects.js"> # </a></h3>
+<p>src\redux-saga\effects.js</p>
+<pre><code class="lang-diff">import * as effectTypes from &apos;./effectTypes&apos;
+const makeEffect = (type, payload) =&gt; ({
+  type,
+  payload
+})
+
+export function take(pattern) {
+  return makeEffect(effectTypes.TAKE, { pattern })
+}
+
+export function put(action) {
+  return makeEffect(effectTypes.PUT, { action })
+}
+
+export function fork(fn) {
+  return makeEffect(effectTypes.FORK, { fn })
+}
+
+export function takeEvery(pattern, saga) {
+  function* takeEveryHelper() {
+    while (true) {
+      yield take(pattern);
+      yield fork(saga);
+    }
+  }
+
+  return fork(takeEveryHelper);
+}
+
+export function call(fn, ...args) {
+  return makeEffect(effectTypes.CALL, { fn, args })
+}
+<span class="hljs-addition">+export function cps(fn, ...args) {</span>
+<span class="hljs-addition">+  return makeEffect(effectTypes.CPS, { fn, args })</span>
+<span class="hljs-addition">+}</span>
+</code></pre>
+<h3 id="t558.5 effectRunnerMap.js">8.5 effectRunnerMap.js <a href="#t558.5 effectRunnerMap.js"> # </a></h3>
+<p>src\redux-saga\effectRunnerMap.js</p>
+<pre><code class="lang-diff">import * as effectTypes from &apos;./effectTypes&apos;
+import proc from &quot;./proc&quot;;
+import * as is  from &apos;./is&apos;;
+function runTakeEffect(env, {pattern}, cb) {
+  const matcher = input =&gt; input.type <span class="hljs-comment">=== pattern;</span>
+  env.channel.take(cb, matcher);
+}
+
+function runPutEffect(env, { action }, cb) {
+  const result = env.dispatch(action);
+  cb(result);
+}
+
+function runForkEffect(env, { fn }, cb) {
+  const taskIterator = fn();
+  proc(env, taskIterator);
+  cb();
+}
+
+function runCallEffect(env, { fn, args }, cb) {
+  const result = fn.apply(null, args);
+  if (is.promise(result)) {
+    return result
+      .then(data =&gt; cb(data))
+      .catch(error =&gt; cb(error, true));
+  }
+  cb(result);
+}
+
+<span class="hljs-addition">+function runCPSEffect(env, {context,fn,args}, cb) {</span>
+<span class="hljs-addition">+  const cpsCb = (err, res) =&gt; {</span>
+<span class="hljs-addition">+    if (is.undef(err)) {</span>
+<span class="hljs-addition">+      cb(res);</span>
+<span class="hljs-addition">+    } else {</span>
+<span class="hljs-addition">+      cb(err, true);</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+  }</span>
+<span class="hljs-addition">+  fn.apply(context, args.concat(cpsCb));</span>
+<span class="hljs-addition">+}</span>
+
+const effectRunnerMap = {
+  [effectTypes.TAKE]: runTakeEffect,
+  [effectTypes.PUT]: runPutEffect,
+  [effectTypes.FORK]: runForkEffect,
+  [effectTypes.CALL]: runCallEffect,
+<span class="hljs-addition">+ [effectTypes.CPS]: runCPSEffect</span>
+};
+
+export default effectRunnerMap;
+</code></pre>
+<h2 id="t569.&#x652F;&#x6301;all">9.&#x652F;&#x6301;all <a href="#t569.&#x652F;&#x6301;all"> # </a></h2>
+<ul>
+<li><code>all</code>&#x5408;&#x5E76;&#x591A;&#x4E2A;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;,&#x5F53;&#x67D0;&#x4E2A;&#x64CD;&#x4F5C;&#x5931;&#x8D25;&#x6216;&#x8005;&#x5168;&#x90E8;&#x64CD;&#x4F5C;&#x6210;&#x529F;&#x5219;&#x8FDB;&#x884C;&#x8FD4;&#x56DE;</li>
+<li><code>all</code>&#x4E2D;&#x7684;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#x662F;&#x5E76;&#x53D1;&#x4E5F;&#x662F;&#x540C;&#x6B65;,&#x4E0D;&#x7528;&#x7B49;&#x4E00;&#x4E2A;&#x7ED3;&#x675F;,&#x4E5F;&#x4E0D;&#x7528;&#x7B49;&#x53E6;&#x4E00;&#x4E2A;&#x5F00;&#x59CB;</li>
+</ul>
+<h3 id="t579.1  sagas.js">9.1  sagas.js <a href="#t579.1  sagas.js"> # </a></h3>
+<p>src\store\sagas.js</p>
+<pre><code class="lang-diff">import { put, takeEvery,call,cps,all,take} from &apos;../redux-saga/effects&apos;;
+//import { put, takeEvery,call,cps,all,take} from &apos;redux-saga/effects&apos;;
+import * as actionTypes from &apos;./action-types&apos;;
+
+<span class="hljs-addition">+export function* add1() {</span>
+<span class="hljs-addition">+  for (let i=0;i&lt;3;i++){</span>
+<span class="hljs-addition">+      yield take(actionTypes.ASYNC_ADD);</span>
+<span class="hljs-addition">+      yield put({type:actionTypes.ADD});</span>
+<span class="hljs-addition">+  }</span>
+<span class="hljs-addition">+  return &apos;add1&apos;;</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+export function* add2() {</span>
+<span class="hljs-addition">+  for (let i=0;i&lt;3;i++){</span>
+<span class="hljs-addition">+      yield take(actionTypes.ASYNC_ADD);</span>
+<span class="hljs-addition">+      yield put({type:actionTypes.ADD});</span>
+<span class="hljs-addition">+  }</span>
+<span class="hljs-addition">+  return &apos;add2&apos;;</span>
+<span class="hljs-addition">+}</span>
+
+export function* rootSaga() {
+<span class="hljs-addition">+  let result = yield all([add1(),add2()]);</span>
+<span class="hljs-addition">+  console.log(&apos;done&apos;,result);</span>
+}
+</code></pre>
+<h3 id="t589.2 effectTypes.js">9.2 effectTypes.js <a href="#t589.2 effectTypes.js"> # </a></h3>
+<p>src\redux-saga\effectTypes.js</p>
+<pre><code class="lang-diff">export const TAKE = &apos;TAKE&apos;;
+export const PUT = &apos;PUT&apos;;
+export const FORK = &apos;FORK&apos;;
+export const CALL = &apos;CALL&apos;;
+export const CPS = &apos;CPS&apos;;
+<span class="hljs-addition">+export const ALL = &apos;ALL&apos;;</span>
+</code></pre>
+<h3 id="t599.3 effects.js">9.3 effects.js <a href="#t599.3 effects.js"> # </a></h3>
+<p>src\redux-saga\effects.js</p>
+<pre><code class="lang-diff">import * as effectTypes from &apos;./effectTypes&apos;
+const makeEffect = (type, payload) =&gt; ({
+  type,
+  payload
+})
+
+export function take(pattern) {
+  return makeEffect(effectTypes.TAKE, { pattern })
+}
+
+export function put(action) {
+  return makeEffect(effectTypes.PUT, { action })
+}
+
+export function fork(fn) {
+  return makeEffect(effectTypes.FORK, { fn })
+}
+
+export function takeEvery(pattern, saga) {
+  function* takeEveryHelper() {
+    while (true) {
+      yield take(pattern);
+      yield fork(saga);
+    }
+  }
+
+  return fork(takeEveryHelper);
+}
+
+export function call(fn, ...args) {
+  return makeEffect(effectTypes.CALL, { fn, args })
+}
+export function cps(fn, ...args) {
+  return makeEffect(effectTypes.CPS, { fn, args })
+}
+<span class="hljs-addition">+export function all(effects) {</span>
+<span class="hljs-addition">+  return makeEffect(effectTypes.ALL, effects)</span>
+<span class="hljs-addition">+}</span>
+</code></pre>
+<h3 id="t609.4 utils.js">9.4 utils.js <a href="#t609.4 utils.js"> # </a></h3>
+<p>src\redux-saga\utils.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createAllStyleChildCallbacks</span>(<span class="hljs-params">shape, parentCallback</span>) </span>{
+    <span class="hljs-keyword">const</span> keys = <span class="hljs-built_in">Object</span>.keys(shape);
+    <span class="hljs-keyword">const</span> totalCount = keys.length;
+    <span class="hljs-keyword">let</span> completedCount = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">const</span> results = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>(totalCount);
+    <span class="hljs-keyword">const</span> childCallbacks = {}
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">checkEnd</span>(<span class="hljs-params"></span>) </span>{
+      <span class="hljs-keyword">if</span> (completedCount === totalCount) {
+        parentCallback(results)
+      }
+    }
+
+    keys.forEach(<span class="hljs-function"><span class="hljs-params">key</span> =&gt;</span> {
+      childCallbacks[key] = <span class="hljs-function">(<span class="hljs-params">res</span>) =&gt;</span> {
+        results[key] = res;
+        completedCount++
+        checkEnd()
+      }
+    })
+    <span class="hljs-keyword">return</span> childCallbacks
+  }
+</code></pre>
+<h3 id="t619.5 effectRunnerMap.js">9.5 effectRunnerMap.js <a href="#t619.5 effectRunnerMap.js"> # </a></h3>
+<p>src\redux-saga\effectRunnerMap.js</p>
+<pre><code class="lang-diff">import proc from &quot;./proc&quot;;
+import * as is  from &apos;./is&apos;;
+import * as effectTypes from &apos;./effectTypes&apos;
+import {createAllStyleChildCallbacks} from &apos;./utils&apos;;
+function runTakeEffect(env, {pattern}, cb) {
+  const matcher = input =&gt; input.type <span class="hljs-comment">=== pattern;</span>
+  env.channel.take(cb, matcher);
+}
+
+function runPutEffect(env, { action }, cb) {
+  const result = env.dispatch(action);
+  cb(result);
+}
+
+function runForkEffect(env, { fn }, cb) {
+  const taskIterator = fn();
+  proc(env, taskIterator);
+  cb();
+}
+
+function runCallEffect(env, { fn, args }, cb) {
+  const result = fn.apply(null, args);
+  if (is.promise(result)) {
+    return result
+      .then(data =&gt; cb(data))
+      .catch(error =&gt; cb(error, true));
+  }
+  cb(result);
+}
+
+function runCPSEffect(env, {context,fn,args}, cb) {
+  const cpsCb = (err, res) =&gt; {
+    if (is.undef(err)) {
+      cb(res);
+    } else {
+      cb(err, true);
+    }
+  }
+  fn.apply(context, args.concat(cpsCb));
+}
+
+<span class="hljs-addition">+function runAllEffect(env, effects, cb, { runEffect }) {</span>
+<span class="hljs-addition">+  const keys = Object.keys(effects);</span>
+<span class="hljs-addition">+  if (keys.length === 0) {</span>
+<span class="hljs-addition">+    cb([]);</span>
+<span class="hljs-addition">+    return;</span>
+<span class="hljs-addition">+  }</span>
+<span class="hljs-addition">+</span>
+<span class="hljs-addition">+  const childCallbacks = createAllStyleChildCallbacks(effects, cb);</span>
+<span class="hljs-addition">+  keys.forEach(key =&gt; {</span>
+<span class="hljs-addition">+    runEffect(effects[key], childCallbacks[key])</span>
+<span class="hljs-addition">+  })</span>
+<span class="hljs-addition">+}</span>
+
+const effectRunnerMap = {
+  [effectTypes.TAKE]: runTakeEffect,
+  [effectTypes.PUT]: runPutEffect,
+  [effectTypes.FORK]: runForkEffect,
+  [effectTypes.CALL]: runCallEffect,
+  [effectTypes.CPS]: runCPSEffect,
+<span class="hljs-addition">+  [effectTypes.ALL]: runAllEffect</span>
+};
+
+
+export default effectRunnerMap;
+</code></pre>
+<h2 id="t6210.&#x652F;&#x6301;cancel">10.&#x652F;&#x6301;cancel <a href="#t6210.&#x652F;&#x6301;cancel"> # </a></h2>
+<ul>
+<li>cancel &#x6307;&#x793A; middleware &#x53D6;&#x6D88;&#x4E4B;&#x524D;&#x7684; fork &#x4EFB;&#x52A1;&#xFF0C;cancel &#x662F;&#x4E00;&#x4E2A;&#x65E0;&#x963B;&#x585E; Effect</li>
+</ul>
+<h3 id="t6310.1  sagas.js">10.1  sagas.js <a href="#t6310.1  sagas.js"> # </a></h3>
+<p>src\store\sagas.js</p>
+<pre><code class="lang-diff"><span class="hljs-addition">+import { put, takeEvery,call,cps,all,take,cancel,fork,delay} from &apos;../redux-saga/effects&apos;;</span>
+//import { put, takeEvery,call,cps,all,take,delay,cancel,fork} from &apos;redux-saga/effects&apos;;
+import * as actionTypes from &apos;./action-types&apos;;
+<span class="hljs-addition">+export function* add() {</span>
+<span class="hljs-addition">+  while(true){</span>
+<span class="hljs-addition">+      yield delay(1000);</span>
+<span class="hljs-addition">+      yield put({type:actionTypes.ADD});</span>
+<span class="hljs-addition">+  }</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+export function* addWatcher() {</span>
+<span class="hljs-addition">+  const task = yield fork(add);</span>
+<span class="hljs-addition">+  yield take(actionTypes.STOP_ADD);</span>
+<span class="hljs-addition">+  yield cancel(task);</span>
+<span class="hljs-addition">+}</span>
+
+<span class="hljs-addition">+export function* rootSaga() {</span>
+<span class="hljs-addition">+  let result = yield addWatcher();</span>
+<span class="hljs-addition">+  console.log(&apos;done&apos;,result);</span>
+<span class="hljs-addition">+}</span>
+</code></pre>
+<h3 id="t6410.2 effectTypes.js">10.2 effectTypes.js <a href="#t6410.2 effectTypes.js"> # </a></h3>
+<p>src\redux-saga\effectTypes.js</p>
+<pre><code class="lang-diff">export const TAKE = &apos;TAKE&apos;;
+export const PUT = &apos;PUT&apos;;
+export const FORK = &apos;FORK&apos;;
+export const CALL = &apos;CALL&apos;;
+export const CPS = &apos;CPS&apos;;
+export const ALL = &apos;ALL&apos;;
+<span class="hljs-addition">+export const CANCEL = &apos;CANCEL&apos;;</span>
+</code></pre>
+<h3 id="t6510.3 effects.js">10.3 effects.js <a href="#t6510.3 effects.js"> # </a></h3>
+<p>src\redux-saga\effects.js</p>
+<pre><code class="lang-diff">import * as effectTypes from &apos;./effectTypes&apos;
+const makeEffect = (type, payload) =&gt; ({
+  type,
+  payload
+})
+
+export function take(pattern) {
+  return makeEffect(effectTypes.TAKE, { pattern })
+}
+
+export function put(action) {
+  return makeEffect(effectTypes.PUT, { action })
+}
+
+export function fork(fn) {
+  return makeEffect(effectTypes.FORK, { fn })
+}
+
+export function takeEvery(pattern, saga) {
+  function* takeEveryHelper() {
+    while (true) {
+      yield take(pattern);
+      yield fork(saga);
+    }
+  }
+
+  return fork(takeEveryHelper);
+}
+
+export function call(fn, ...args) {
+  return makeEffect(effectTypes.CALL, { fn, args })
+}
+export function cps(fn, ...args) {
+  return makeEffect(effectTypes.CPS, { fn, args })
+}
+export function all(effects) {
+  return makeEffect(effectTypes.ALL, effects)
+}
+
+<span class="hljs-addition">+export function cancel(task) {</span>
+<span class="hljs-addition">+  return makeEffect(effectTypes.CANCEL, task)</span>
+<span class="hljs-addition">+}</span>
+
+<span class="hljs-addition">+export default function delayP(ms, val = true) {</span>
+<span class="hljs-addition">+  const promise = new Promise(resolve =&gt; {</span>
+<span class="hljs-addition">+    setTimeout(resolve, ms, val);</span>
+<span class="hljs-addition">+  })</span>
+<span class="hljs-addition">+  return promise</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+export const delay = call.bind(null, delayP)</span>
+</code></pre>
+<h3 id="t6610.4 effectRunnerMap.js">10.4 effectRunnerMap.js <a href="#t6610.4 effectRunnerMap.js"> # </a></h3>
+<p>src\redux-saga\effectRunnerMap.js</p>
+<pre><code class="lang-diff">import proc from &quot;./proc&quot;;
+import * as is  from &apos;./is&apos;;
+import * as effectTypes from &apos;./effectTypes&apos;
+import {createAllStyleChildCallbacks} from &apos;./utils&apos;;
+function runTakeEffect(env, {pattern}, cb) {
+  const matcher = input =&gt; input.type <span class="hljs-comment">=== pattern;</span>
+  env.channel.take(cb, matcher);
+}
+
+function runPutEffect(env, { action }, cb) {
+  const result = env.dispatch(action);
+  cb(result);
+}
+
+function runForkEffect(env, { fn }, cb) {
+  const taskIterator = fn();
+<span class="hljs-addition">+  const task = proc(env, taskIterator);</span>
+<span class="hljs-addition">+  cb(task);</span>
+}
+
+function runCallEffect(env, { fn, args }, cb) {
+  const result = fn.apply(null, args);
+  if (is.promise(result)) {
+    return result
+      .then(data =&gt; cb(data))
+      .catch(error =&gt; cb(error, true));
+  }
+  cb(result);
+}
+
+function runCPSEffect(env, {context,fn,args}, cb) {
+  const cpsCb = (err, res) =&gt; {
+    if (is.undef(err)) {
+      cb(res);
+    } else {
+      cb(err, true);
+    }
+  }
+  fn.apply(context, args.concat(cpsCb));
+}
+
+function runAllEffect(env, effects, cb, { runEffect }) {
+  const keys = Object.keys(effects);
+  if (keys.length <span class="hljs-comment">=== 0) {</span>
+    cb([]);
+    return;
+  }
+
+  const childCallbacks = createAllStyleChildCallbacks(effects, cb);
+  keys.forEach(key =&gt; {
+    runEffect(effects[key], childCallbacks[key])
+  })
+}
+
+<span class="hljs-addition">+function runCancelEffect(env, task, cb) {</span>
+<span class="hljs-addition">+  task.cancel();</span>
+<span class="hljs-addition">+  cb();</span>
+<span class="hljs-addition">+}</span>
+
+const effectRunnerMap = {
+  [effectTypes.TAKE]: runTakeEffect,
+  [effectTypes.PUT]: runPutEffect,
+  [effectTypes.FORK]: runForkEffect,
+  [effectTypes.CALL]: runCallEffect,
+  [effectTypes.CPS]: runCPSEffect,
+  [effectTypes.ALL]: runAllEffect,
+<span class="hljs-addition">+ [effectTypes.CANCEL]: runCancelEffect</span>
+};
+
+
+export default effectRunnerMap;
+</code></pre>
+<h3 id="t6710.5 symbols.js">10.5 symbols.js <a href="#t6710.5 symbols.js"> # </a></h3>
+<p>src\redux-saga\symbols.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span>  TASK_CANCEL = <span class="hljs-built_in">Symbol</span>(<span class="hljs-string">&apos;TASK_CANCEL&apos;</span>);
+</code></pre>
+<h3 id="t6810.6 proc.js">10.6 proc.js <a href="#t6810.6 proc.js"> # </a></h3>
+<p>src\redux-saga\proc.js</p>
+<pre><code class="lang-diff">import effectRunnerMap from &apos;./effectRunnerMap&apos;;
+<span class="hljs-addition">+import {TASK_CANCEL} from &apos;./symbols&apos;;</span>
+import * as is  from &apos;./is&apos;;
+
+function resolvePromise(promise, cb) {
+  promise.then(cb, function (error) {
+    cb(error, true);
+  });
+}
+export default function proc(env, iterator,cont) {
+<span class="hljs-addition">+ let task = {cancel:()=&gt;next(TASK_CANCEL)};</span>
+  next();
+  function next(arg, isErr) {
+    let result;
+    if (isErr) {
+      result = iterator.throw(arg);
+<span class="hljs-addition">+    }else if(arg === TASK_CANCEL){</span>
+<span class="hljs-addition">+      result = iterator.return(arg);</span>
+<span class="hljs-addition">+    } else {</span>
+      result = iterator.next(arg);
+    }
+    if (!result.done) {
+      runEffect(result.value, next)
+    }else{
+      cont&amp;&amp;cont(result.value);
+    }
+  }
+
+  function runEffect(effect, next) {
+    if (is.promise(effect)) {
+      resolvePromise(effect, next);
+    }else if(is.iterator(effect)){
+      proc(env,effect,next);
+    }else if (effect) {
+      const effectRunner = effectRunnerMap[effect.type]
+      effectRunner(env, effect.payload, next,{runEffect});
+    } else {
+      next();
+    }
+  }
+<span class="hljs-addition">+  return task;</span>
+}
+</code></pre>
+<h3 id="t6910.7 action-types.js">10.7 action-types.js <a href="#t6910.7 action-types.js"> # </a></h3>
+<p>src\store\action-types.js</p>
+<pre><code class="lang-diff">export const ASYNC_ADD=&apos;ASYNC_ADD&apos;;
+export const ADD=&apos;ADD&apos;;
+<span class="hljs-addition">+export const STOP_ADD=&apos;STOP_ADD&apos;;</span>
+</code></pre>
+<h3 id="t7010.8 actions.js">10.8 actions.js <a href="#t7010.8 actions.js"> # </a></h3>
+<p>src\store\actions.js</p>
+<pre><code class="lang-diff">import * as actionTypes from &apos;./action-types&apos;;
+const actions = {
+    add() {
+        return {type:actionTypes.ASYNC_ADD}
+    },
+<span class="hljs-addition">+    stop() {</span>
+<span class="hljs-addition">+        return {type:actionTypes.STOP_ADD}</span>
+<span class="hljs-addition">+    }</span>
+}
+export default actions;
+</code></pre>
+<h3 id="t7110.9 Counter.js">10.9 Counter.js <a href="#t7110.9 Counter.js"> # </a></h3>
+<p>src\components\Counter.js</p>
+<pre><code class="lang-diff">import React,{Component} from &apos;react&apos;
+import {connect} from &apos;react-redux&apos;;
+import actions from &apos;../store/actions&apos;;
+class Counter extends Component{
+    render() {
+        return (
+            &lt;div&gt;
+                &lt;p&gt;{this.props.number}&lt;/p&gt;
+<span class="hljs-addition">+               &lt;button onClick={this.props.stop}&gt;stop&lt;/button&gt;</span>
+            &lt;/div&gt;
+      )
+  }
+}
+export default connect(
+    state =&gt; state,
+    actions
+)(Counter);
+</code></pre>
+
+        <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
+    </div>
+    
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

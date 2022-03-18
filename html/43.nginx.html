@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+
+
+
+
+<div class="warpper">
+
+    <div class="page-toc">
+        <ul><li><a href="#t01. nginx">1. nginx</a></li><li><a href="#t12. 学习环境">2. 学习环境</a><ul><li><a href="#t22.1 操作系统">2.1 操作系统</a></li><li><a href="#t32.2 环境确认">2.2 环境确认</a><ul><li><a href="#t42.2.1 关闭 iptables">2.2.1 关闭 iptables</a></li><li><a href="#t52.2.2 确认停用 selinux">2.2.2 确认停用 selinux</a></li><li><a href="#t62.2.3 安装依赖模块">2.2.3 安装依赖模块</a></li></ul></li></ul></li><li><a href="#t73. nginx的优势">3. nginx的优势</a></li><li><a href="#t84. nginx安装">4. nginx安装</a><ul><li><a href="#t94.1 版本分类">4.1 版本分类</a></li><li><a href="#t104.2 下载地址">4.2 下载地址</a></li><li><a href="#t114.3 CentOS下YUM安装">4.3 CentOS下YUM安装</a></li></ul></li><li><a href="#t125. 目录">5. 目录</a><ul><li><a href="#t135.1 安装目录">5.1 安装目录</a></li><li><a href="#t145.2 配置文件">5.2 配置文件</a></li></ul></li><li><a href="#t155.3 编译参数">5.3 编译参数</a><ul><li><a href="#t165.3.1 安装目录和路径">5.3.1 安装目录和路径</a></li><li><a href="#t175.3.2 执行对应模块时，nginx所保留的临时性文件">5.3.2 执行对应模块时，nginx所保留的临时性文件</a></li><li><a href="#t185.3.3 设置nginx进程启动的用户和用户组">5.3.3 设置nginx进程启动的用户和用户组</a></li><li><a href="#t195.3.4 设置额外的参数将被添加到CFLAGS变量">5.3.4 设置额外的参数将被添加到CFLAGS变量</a></li><li><a href="#t205.3.5 设置附加的参数，链接系统库">5.3.5 设置附加的参数，链接系统库</a></li><li><a href="#t215.3.6 其它参数">5.3.6 其它参数</a></li></ul></li><li><a href="#t225. 配置文件">5. 配置文件</a><ul><li><a href="#t235.1 全局和服务配置">5.1 全局和服务配置</a></li><li><a href="#t245.2 全局和服务配置">5.2 全局和服务配置</a></li></ul></li><li><a href="#t256. 启动和重新加载">6. 启动和重新加载</a></li><li><a href="#t267. 日志类型">7. 日志类型</a><ul><li><a href="#t277.1 日志类型">7.1 日志类型</a></li><li><a href="#t287.2 log_format">7.2 log_format</a></li><li><a href="#t297.3 HTTP请求变量">7.3 HTTP请求变量</a></li><li><a href="#t307.4 内置变量">7.4 内置变量</a></li></ul></li><li><a href="#t318. nginx实战">8. nginx实战</a><ul><li><a href="#t328.1 静态资源Web服务">8.1 静态资源Web服务</a></li><li><a href="#t338.2 CDN">8.2 CDN</a><ul><li><a href="#t348.2.1 配置语法">8.2.1 配置语法</a><ul><li><a href="#t358.2.1.1 sendfile">8.2.1.1 sendfile</a></li><li><a href="#t368.2.1.2 tcp_nopush">8.2.1.2 tcp_nopush</a></li><li><a href="#t378.2.1.2 tcp_nodelay">8.2.1.2 tcp_nodelay</a></li><li><a href="#t388.2.1.3 gzip">8.2.1.3 gzip</a></li><li><a href="#t398.2.1.4 gzip_comp_level">8.2.1.4 gzip_comp_level</a></li><li><a href="#t408.2.1.5 gzip_http_version">8.2.1.5 gzip_http_version</a></li><li><a href="#t418.2.1.6 http_gzip-static_module">8.2.1.6 http_gzip-static_module</a></li></ul></li></ul></li><li><a href="#t428.3 浏览器缓存">8.3 浏览器缓存</a><ul><li><a href="#t438.3.1 expires">8.3.1 expires</a></li></ul></li><li><a href="#t448.4 跨域">8.4 跨域</a></li><li><a href="#t458.5 防盗链">8.5 防盗链</a></li><li><a href="#t468.6 代理服务">8.6 代理服务</a><ul><li><a href="#t478.6.1 配置">8.6.1 配置</a></li><li><a href="#t488.6.2  反向代理">8.6.2  反向代理</a></li><li><a href="#t498.6.3 正向代理">8.6.3 正向代理</a></li></ul></li><li><a href="#t508.7 负载均衡">8.7 负载均衡</a><ul><li><a href="#t518.7.1 upstream">8.7.1 upstream</a></li><li><a href="#t528.7.2 后端服务器调试状态">8.7.2 后端服务器调试状态</a></li><li><a href="#t538.7.3 分配方式">8.7.3 分配方式</a></li></ul></li><li><a href="#t548.8 缓存">8.8 缓存</a></li></ul></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <h2 id="t01. nginx">1. nginx <a href="#t01. nginx"> # </a></h2>
+<p>nginx&#x662F;&#x4E00;&#x4E2A;&#x5F00;&#x6E90;&#x4E14;&#x9AD8;&#x6027;&#x80FD;&#x3001;&#x53EF;&#x9760;&#x7684;HTTP&#x4E2D;&#x95F4;&#x4EF6;&#x548C;&#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5668;</p>
+<h2 id="t12. &#x5B66;&#x4E60;&#x73AF;&#x5883;">2. &#x5B66;&#x4E60;&#x73AF;&#x5883; <a href="#t12. &#x5B66;&#x4E60;&#x73AF;&#x5883;"> # </a></h2>
+<h3 id="t22.1 &#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;">2.1 &#x64CD;&#x4F5C;&#x7CFB;&#x7EDF; <a href="#t22.1 &#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;"> # </a></h3>
+<p>CENTOS&gt;=7.0,&#x4F4D;&#x6570; X64
+CENTOS 7.2</p>
+<h3 id="t32.2 &#x73AF;&#x5883;&#x786E;&#x8BA4;">2.2 &#x73AF;&#x5883;&#x786E;&#x8BA4; <a href="#t32.2 &#x73AF;&#x5883;&#x786E;&#x8BA4;"> # </a></h3>
+<h4 id="t42.2.1 &#x5173;&#x95ED; iptables">2.2.1 &#x5173;&#x95ED; iptables <a href="#t42.2.1 &#x5173;&#x95ED; iptables"> # </a></h4>
+<p>iptables&#x547D;&#x4EE4;&#x662F;Linux&#x4E0A;&#x5E38;&#x7528;&#x7684;&#x9632;&#x706B;&#x5899;&#x8F6F;&#x4EF6;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x529F;&#x80FD;</th>
+<th style="text-align:left">&#x547D;&#x4EE4;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x505C;&#x6B62;&#x9632;&#x706B;&#x5899;</td>
+<td style="text-align:left">systemctl stop firewalld.service</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x6C38;&#x4E45;&#x5173;&#x95ED;&#x9632;&#x706B;&#x5899;</td>
+<td style="text-align:left">systemctl disable firewalld.service</td>
+</tr>
+</tbody>
+</table>
+<h4 id="t52.2.2 &#x786E;&#x8BA4;&#x505C;&#x7528; selinux">2.2.2 &#x786E;&#x8BA4;&#x505C;&#x7528; selinux <a href="#t52.2.2 &#x786E;&#x8BA4;&#x505C;&#x7528; selinux"> # </a></h4>
+<ul>
+<li>&#x5B89;&#x5168;&#x589E;&#x5F3A;&#x578B; Linux&#xFF08;Security-Enhanced Linux&#xFF09;&#x7B80;&#x79F0; SELinux&#xFF0C;&#x5B83;&#x662F;&#x4E00;&#x4E2A; Linux &#x5185;&#x6838;&#x6A21;&#x5757;&#xFF0C;&#x4E5F;&#x662F; Linux &#x7684;&#x4E00;&#x4E2A;&#x5B89;&#x5168;&#x5B50;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>SELinux &#x4E3B;&#x8981;&#x4F5C;&#x7528;&#x5C31;&#x662F;&#x6700;&#x5927;&#x9650;&#x5EA6;&#x5730;&#x51CF;&#x5C0F;&#x7CFB;&#x7EDF;&#x4E2D;&#x670D;&#x52A1;&#x8FDB;&#x7A0B;&#x53EF;&#x8BBF;&#x95EE;&#x7684;&#x8D44;&#x6E90;&#xFF08;&#x6700;&#x5C0F;&#x6743;&#x9650;&#x539F;&#x5219;&#xFF09;&#x3002;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x529F;&#x80FD;</th>
+<th style="text-align:left">&#x547D;&#x4EE4;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x68C0;&#x67E5;&#x72B6;&#x6001;</td>
+<td style="text-align:left">getenforce</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x68C0;&#x67E5;&#x72B6;&#x6001;</td>
+<td style="text-align:left">/usr/sbin/sestatus -v</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x4E34;&#x65F6;&#x5173;&#x95ED;</td>
+<td style="text-align:left">setenforce 0</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x6C38;&#x4E45;&#x5173;&#x95ED;</td>
+<td style="text-align:left">/etc/selinux/config   SELINUX=enforcing&#x6539;&#x4E3A;SELINUX=disabled</td>
+</tr>
+</tbody>
+</table>
+<h4 id="t62.2.3 &#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x6A21;&#x5757;">2.2.3 &#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x6A21;&#x5757; <a href="#t62.2.3 &#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x6A21;&#x5757;"> # </a></h4>
+<pre><code class="lang-js">yum  -y install gcc gcc-c++ autoconf pcre pcre-devel make automake
+yum  -y install wget httpd-tools vim
+</code></pre>
+<h2 id="t73. nginx&#x7684;&#x4F18;&#x52BF;">3. nginx&#x7684;&#x4F18;&#x52BF; <a href="#t73. nginx&#x7684;&#x4F18;&#x52BF;"> # </a></h2>
+<ul>
+<li>IO&#x591A;&#x8DEF;&#x590D;&#x7528; &#x591A;&#x4E2A;&#x63CF;&#x8FF0;&#x7B26;&#x7684;IO&#x64CD;&#x4F5C;&#x90FD;&#x80FD;&#x5728;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x91CC;&#x5E76;&#x53D1;&#x4EA4;&#x66FF;&#x987A;&#x5E8F;&#x5B8C;&#x6210;&#xFF0C;&#x590D;&#x7528;&#x7EBF;&#x7A0B;<ul>
+<li>select &#x7EBF;&#x6027;&#x904D;&#x5386;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#x5217;&#x8868; 1. &#x6548;&#x7387;&#x4F4E;&#x4E0B; 2.&#x6700;&#x591A;&#x53EA;&#x80FD;&#x6709;1024</li>
+<li>epoll &#x6BCF;&#x5F53;fd&#x5C31;&#x7EEA;&#xFF0C;&#x91C7;&#x7528;&#x7CFB;&#x7EDF;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5C06;fd&#x653E;&#x5165; 1.&#x6548;&#x7387;&#x9AD8; 2.&#x6CA1;&#x6709;1024&#x9650;&#x5236;</li>
+</ul>
+</li>
+<li>CPU&#x4EB2;&#x548C; &#x4E00;&#x79CD;&#x628A;CPU&#x6838;&#x5FC3;&#x548C;Nginx&#x5DE5;&#x4F5C;&#x8FDB;&#x7A0B;&#x7ED1;&#x5B9A;&#x65B9;&#x5F0F;&#xFF0C;&#x628A;&#x6BCF;&#x4E2A;worker&#x8FDB;&#x7A0B;&#x56FA;&#x5B9A;&#x5728;&#x4E00;&#x4E2A;CPU&#x4E0A;&#x6267;&#x884C;&#xFF0C;&#x51CF;&#x5C11;&#x5207;&#x6362;CPU&#x548C;&#x63D0;&#x4EA4;&#x7F13;&#x5B58;&#x547D;&#x4E2D;&#x7387;,&#x83B7;&#x5F97;&#x66F4;&#x597D;&#x7684;&#x6027;&#x80FD;&#x3002;</li>
+<li>sendfile &#x96F6;&#x62F7;&#x8D1D;&#x4F20;&#x8F93;&#x6A21;&#x5F0F; ![usercore]</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/usercore.jpg" alt="usercore"></p>
+<h2 id="t84. nginx&#x5B89;&#x88C5;">4. nginx&#x5B89;&#x88C5; <a href="#t84. nginx&#x5B89;&#x88C5;"> # </a></h2>
+<h3 id="t94.1 &#x7248;&#x672C;&#x5206;&#x7C7B;">4.1 &#x7248;&#x672C;&#x5206;&#x7C7B; <a href="#t94.1 &#x7248;&#x672C;&#x5206;&#x7C7B;"> # </a></h3>
+<ul>
+<li>Mainline version &#x5F00;&#x53D1;&#x7248;</li>
+<li>Stable version &#x7A33;&#x5B9A;&#x7248;</li>
+<li>Legacy versions &#x5386;&#x53F2;&#x7248;&#x672C;</li>
+</ul>
+<h3 id="t104.2 &#x4E0B;&#x8F7D;&#x5730;&#x5740;">4.2 &#x4E0B;&#x8F7D;&#x5730;&#x5740; <a href="#t104.2 &#x4E0B;&#x8F7D;&#x5730;&#x5740;"> # </a></h3>
+<ul>
+<li><a href="http://nginx.org/en/download.html">nginx</a></li>
+<li><a href="http://nginx.org/en/linux_packages.html#stable">linux_packages</a></li>
+</ul>
+<h3 id="t114.3 CentOS&#x4E0B;YUM&#x5B89;&#x88C5;">4.3 CentOS&#x4E0B;YUM&#x5B89;&#x88C5; <a href="#t114.3 CentOS&#x4E0B;YUM&#x5B89;&#x88C5;"> # </a></h3>
+<p>/etc/yum.repos.d/nginx.repo </p>
+<pre><code class="lang-js">[nginx]
+name=nginx repo
+baseurl=http:<span class="hljs-comment">//nginx.org/packages/centos/7/$basearch/</span>
+gpgcheck=<span class="hljs-number">0</span>
+enabled=<span class="hljs-number">1</span>
+</code></pre>
+<pre><code class="lang-js">yum install nginx -y
+nginx -v
+nginx -V
+</code></pre>
+<h2 id="t125. &#x76EE;&#x5F55;">5. &#x76EE;&#x5F55; <a href="#t125. &#x76EE;&#x5F55;"> # </a></h2>
+<h3 id="t135.1 &#x5B89;&#x88C5;&#x76EE;&#x5F55;">5.1 &#x5B89;&#x88C5;&#x76EE;&#x5F55; <a href="#t135.1 &#x5B89;&#x88C5;&#x76EE;&#x5F55;"> # </a></h3>
+<p>&#x67E5;&#x770B;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x548C;&#x76EE;&#x5F55;</p>
+<pre><code class="lang-js">rpm -ql nginx
+</code></pre>
+<h3 id="t145.2 &#x914D;&#x7F6E;&#x6587;&#x4EF6;">5.2 &#x914D;&#x7F6E;&#x6587;&#x4EF6; <a href="#t145.2 &#x914D;&#x7F6E;&#x6587;&#x4EF6;"> # </a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x8DEF;&#x5F84;</th>
+<th style="text-align:left">&#x7528;&#x9014;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x914D;&#x7F6E;&#x6587;&#x4EF6;</td>
+<td style="text-align:left">/etc/logrotate.d/nginx</td>
+<td style="text-align:left">&#x7528;&#x4E8E;logrotate&#x670D;&#x52A1;&#x7684;&#x65E5;&#x5FD7;&#x5207;&#x5272;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x914D;&#x7F6E;&#x6587;&#x4EF6;</td>
+<td style="text-align:left">/etc/nginx /etc/nginx/nginx.conf /etc/nginx/conf.d /etc/nginx/conf.d/default.conf</td>
+<td style="text-align:left">&#x4E3B;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x914D;&#x7F6E;&#x6587;&#x4EF6;</td>
+<td style="text-align:left">/etc/nginx/fastcgi_params /etc/nginx/scgi_params /etc/nginx/uwsgi_params</td>
+<td style="text-align:left">cgi&#x914D;&#x7F6E;,fastcgi&#x914D;&#x7F6E;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x914D;&#x7F6E;&#x6587;&#x4EF6;</td>
+<td style="text-align:left">/etc/nginx/koi-utf /etc/nginx/koi-win /etc/nginx/win-utf</td>
+<td style="text-align:left">&#x7F16;&#x7801;&#x8F6C;&#x6362;&#x6620;&#x5C04;&#x8F6C;&#x5316;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x914D;&#x7F6E;&#x6587;&#x4EF6;</td>
+<td style="text-align:left">/etc/nginx/mime.types</td>
+<td style="text-align:left">&#x8BBE;&#x7F6E;http&#x534F;&#x8BAE;&#x7684;Content-Type&#x4E0E;&#x6269;&#x5C55;&#x540D;&#x5BF9;&#x5E94;&#x5173;&#x7CFB;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x914D;&#x7F6E;&#x6587;&#x4EF6;</td>
+<td style="text-align:left">/usr/lib/systemd/system/nginx-debug.service /usr/lib/systemd/system/nginx.service /etc/sysconfig/nginx /etc/sysconfig/nginx-debug</td>
+<td style="text-align:left">&#x7528;&#x4E8E;&#x914D;&#x7F6E;&#x7CFB;&#x7EDF;&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;&#x7BA1;&#x7406;&#x5668;&#x7BA1;&#x7406;&#x65B9;&#x5F0F;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x914D;&#x7F6E;&#x6587;&#x4EF6;</td>
+<td style="text-align:left">/etc/nginx/modules /usr/lib64/nginx/modules</td>
+<td style="text-align:left">nginx&#x6A21;&#x5757;&#x76EE;&#x5F55;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x547D;&#x4EE4;</td>
+<td style="text-align:left">/usr/share/doc/nginx-1.14.0 /usr/share/doc/nginx-1.14.0/COPYRIGHT</td>
+<td style="text-align:left">nginx&#x7684;&#x624B;&#x518C;&#x548C;&#x5E2E;&#x52A9;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x76EE;&#x5F55;</td>
+<td style="text-align:left">/var/cache/nginx</td>
+<td style="text-align:left">nginx&#x7684;&#x7F13;&#x5B58;&#x76EE;&#x5F55;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x76EE;&#x5F55;</td>
+<td style="text-align:left">/var/log/nginx</td>
+<td style="text-align:left">nginx&#x7684;&#x65E5;&#x5FD7;&#x76EE;&#x5F55;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="t155.3 &#x7F16;&#x8BD1;&#x53C2;&#x6570;">5.3 &#x7F16;&#x8BD1;&#x53C2;&#x6570; <a href="#t155.3 &#x7F16;&#x8BD1;&#x53C2;&#x6570;"> # </a></h2>
+<h3 id="t165.3.1 &#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x548C;&#x8DEF;&#x5F84;">5.3.1 &#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x548C;&#x8DEF;&#x5F84; <a href="#t165.3.1 &#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x548C;&#x8DEF;&#x5F84;"> # </a></h3>
+<pre><code class="lang-js">--prefix=<span class="hljs-regexp">/etc/</span>nginx 
+--sbin-path=<span class="hljs-regexp">/usr/</span>sbin/nginx 
+--modules-path=<span class="hljs-regexp">/usr/</span>lib64/nginx/modules 
+--conf-path=<span class="hljs-regexp">/etc/</span>nginx/nginx.conf 
+--error-log-path=<span class="hljs-regexp">/var/</span>log/nginx/error.log 
+--http-log-path=<span class="hljs-regexp">/var/</span>log/nginx/access.log 
+--pid-path=<span class="hljs-regexp">/var/</span>run/nginx.pid 
+--lock-path=<span class="hljs-regexp">/var/</span>run/nginx.lock 
+</code></pre>
+<h3 id="t175.3.2 &#x6267;&#x884C;&#x5BF9;&#x5E94;&#x6A21;&#x5757;&#x65F6;&#xFF0C;nginx&#x6240;&#x4FDD;&#x7559;&#x7684;&#x4E34;&#x65F6;&#x6027;&#x6587;&#x4EF6;">5.3.2 &#x6267;&#x884C;&#x5BF9;&#x5E94;&#x6A21;&#x5757;&#x65F6;&#xFF0C;nginx&#x6240;&#x4FDD;&#x7559;&#x7684;&#x4E34;&#x65F6;&#x6027;&#x6587;&#x4EF6; <a href="#t175.3.2 &#x6267;&#x884C;&#x5BF9;&#x5E94;&#x6A21;&#x5757;&#x65F6;&#xFF0C;nginx&#x6240;&#x4FDD;&#x7559;&#x7684;&#x4E34;&#x65F6;&#x6027;&#x6587;&#x4EF6;"> # </a></h3>
+<pre><code class="lang-js">--http-client-body-temp-path=<span class="hljs-regexp">/var/</span>cache/nginx/client_temp 
+--http-proxy-temp-path=<span class="hljs-regexp">/var/</span>cache/nginx/proxy_temp 
+--http-fastcgi-temp-path=<span class="hljs-regexp">/var/</span>cache/nginx/fastcgi_temp 
+--http-uwsgi-temp-path=<span class="hljs-regexp">/var/</span>cache/nginx/uwsgi_temp 
+--http-scgi-temp-path=<span class="hljs-regexp">/var/</span>cache/nginx/scgi_temp 
+</code></pre>
+<h3 id="t185.3.3 &#x8BBE;&#x7F6E;nginx&#x8FDB;&#x7A0B;&#x542F;&#x52A8;&#x7684;&#x7528;&#x6237;&#x548C;&#x7528;&#x6237;&#x7EC4;">5.3.3 &#x8BBE;&#x7F6E;nginx&#x8FDB;&#x7A0B;&#x542F;&#x52A8;&#x7684;&#x7528;&#x6237;&#x548C;&#x7528;&#x6237;&#x7EC4; <a href="#t185.3.3 &#x8BBE;&#x7F6E;nginx&#x8FDB;&#x7A0B;&#x542F;&#x52A8;&#x7684;&#x7528;&#x6237;&#x548C;&#x7528;&#x6237;&#x7EC4;"> # </a></h3>
+<pre><code class="lang-js">--user=nginx 
+--group=nginx 
+</code></pre>
+<h3 id="t195.3.4 &#x8BBE;&#x7F6E;&#x989D;&#x5916;&#x7684;&#x53C2;&#x6570;&#x5C06;&#x88AB;&#x6DFB;&#x52A0;&#x5230;CFLAGS&#x53D8;&#x91CF;">5.3.4 &#x8BBE;&#x7F6E;&#x989D;&#x5916;&#x7684;&#x53C2;&#x6570;&#x5C06;&#x88AB;&#x6DFB;&#x52A0;&#x5230;CFLAGS&#x53D8;&#x91CF; <a href="#t195.3.4 &#x8BBE;&#x7F6E;&#x989D;&#x5916;&#x7684;&#x53C2;&#x6570;&#x5C06;&#x88AB;&#x6DFB;&#x52A0;&#x5230;CFLAGS&#x53D8;&#x91CF;"> # </a></h3>
+<pre><code class="lang-js">--with-cc-opt=&apos;-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong 
+</code></pre>
+<h3 id="t205.3.5 &#x8BBE;&#x7F6E;&#x9644;&#x52A0;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x94FE;&#x63A5;&#x7CFB;&#x7EDF;&#x5E93;">5.3.5 &#x8BBE;&#x7F6E;&#x9644;&#x52A0;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x94FE;&#x63A5;&#x7CFB;&#x7EDF;&#x5E93; <a href="#t205.3.5 &#x8BBE;&#x7F6E;&#x9644;&#x52A0;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x94FE;&#x63A5;&#x7CFB;&#x7EDF;&#x5E93;"> # </a></h3>
+<pre><code class="lang-js">--<span class="hljs-keyword">with</span>-ld-opt=<span class="hljs-string">&apos;-Wl,-z,relro -Wl,-z,now -pie&apos;</span>
+</code></pre>
+<h3 id="t215.3.6 &#x5176;&#x5B83;&#x53C2;&#x6570;">5.3.6 &#x5176;&#x5B83;&#x53C2;&#x6570; <a href="#t215.3.6 &#x5176;&#x5B83;&#x53C2;&#x6570;"> # </a></h3>
+<pre><code class="lang-js">--with-compat 
+--with-file-aio 
+--with-threads 
+--with-http_addition_module 
+--with-http_auth_request_module 
+--with-http_dav_module 
+--with-http_flv_module 
+--with-http_gunzip_module 
+--with-http_gzip_static_module 
+--with-http_mp4_module 
+--with-http_random_index_module 
+--with-http_realip_module 
+--with-http_secure_link_module 
+--with-http_slice_module 
+--with-http_ssl_module 
+--with-http_stub_status_module 
+--with-http_sub_module 
+--with-http_v2_module 
+--with-mail 
+--with-mail_ssl_module 
+--with-stream 
+--with-stream_realip_module 
+--with-stream_ssl_module 
+--with-stream_ssl_preread_module 
+--param=ssp-buffer-size=4 -grecord-gcc-switches -m64 -mtune=generic -fPIC&apos; 
+</code></pre>
+<h2 id="t225. &#x914D;&#x7F6E;&#x6587;&#x4EF6;">5. &#x914D;&#x7F6E;&#x6587;&#x4EF6; <a href="#t225. &#x914D;&#x7F6E;&#x6587;&#x4EF6;"> # </a></h2>
+<ul>
+<li>/etc/nginx/nginx.conf</li>
+<li>/etc/nginx/conf.d/*.conf /etc/nginx/conf.d/default.conf</li>
+</ul>
+<h3 id="t235.1 &#x5168;&#x5C40;&#x548C;&#x670D;&#x52A1;&#x914D;&#x7F6E;">5.1 &#x5168;&#x5C40;&#x548C;&#x670D;&#x52A1;&#x914D;&#x7F6E; <a href="#t235.1 &#x5168;&#x5C40;&#x548C;&#x670D;&#x52A1;&#x914D;&#x7F6E;"> # </a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5206;&#x7C7B;</th>
+<th style="text-align:left">&#x914D;&#x7F6E;&#x9879;</th>
+<th style="text-align:left">&#x4F5C;&#x7528;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x5168;&#x5C40;</td>
+<td style="text-align:left">user</td>
+<td style="text-align:left">&#x8BBE;&#x7F6E;nginx&#x670D;&#x52A1;&#x7684;&#x7CFB;&#x7EDF;&#x4F7F;&#x7528;&#x7528;&#x6237;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x5168;&#x5C40;</td>
+<td style="text-align:left">worker_processes</td>
+<td style="text-align:left">&#x5DE5;&#x4F5C;&#x8FDB;&#x7A0B;&#x6570;,&#x4E00;&#x822C;&#x548C;CPU&#x6570;&#x91CF;&#x76F8;&#x540C;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x5168;&#x5C40;</td>
+<td style="text-align:left">error_log</td>
+<td style="text-align:left">nginx&#x7684;&#x9519;&#x8BEF;&#x65E5;&#x5FD7;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x5168;&#x5C40;</td>
+<td style="text-align:left">pid</td>
+<td style="text-align:left">nginx&#x670D;&#x52A1;&#x542F;&#x52A8;&#x65F6;&#x7684;pid</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t245.2 &#x5168;&#x5C40;&#x548C;&#x670D;&#x52A1;&#x914D;&#x7F6E;">5.2 &#x5168;&#x5C40;&#x548C;&#x670D;&#x52A1;&#x914D;&#x7F6E; <a href="#t245.2 &#x5168;&#x5C40;&#x548C;&#x670D;&#x52A1;&#x914D;&#x7F6E;"> # </a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5206;&#x7C7B;</th>
+<th style="text-align:left">&#x914D;&#x7F6E;&#x9879;</th>
+<th style="text-align:left">&#x4F5C;&#x7528;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">events</td>
+<td style="text-align:left">worker_connections</td>
+<td style="text-align:left">&#x6BCF;&#x4E2A;&#x8FDB;&#x7A0B;&#x5141;&#x8BB8;&#x7684;&#x6700;&#x5927;&#x8FDE;&#x63A5;&#x6570; 10000</td>
+</tr>
+<tr>
+<td style="text-align:left">events</td>
+<td style="text-align:left">use</td>
+<td style="text-align:left">&#x6307;&#x5B9A;&#x4F7F;&#x7528;&#x54EA;&#x79CD;&#x6A21;&#x578B;&#xFF08;select/poll/epoll&#xFF09;,&#x5EFA;&#x8BAE;&#x8BA9;nginx&#x81EA;&#x52A8;&#x9009;&#x62E9;,linux&#x5185;&#x6838;2.6&#x4EE5;&#x4E0A;&#x4E00;&#x822C;&#x80FD;&#x4F7F;&#x7528;epoll&#xFF0C;&#x63D0;&#x9AD8;&#x6027;&#x80FD;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<p>/etc/nginx/nginx.conf</p>
+<pre><code class="lang-js">user  nginx;   &#x8BBE;&#x7F6E;nginx&#x670D;&#x52A1;&#x7684;&#x7CFB;&#x7EDF;&#x4F7F;&#x7528;&#x7528;&#x6237;  
+worker_processes  1;  &#x5DE5;&#x4F5C;&#x8FDB;&#x7A0B;&#x6570;,&#x4E00;&#x822C;&#x548C;CPU&#x6570;&#x91CF;&#x76F8;&#x540C; 
+
+error_log  /var/log/nginx/error.log warn;   nginx&#x7684;&#x9519;&#x8BEF;&#x65E5;&#x5FD7;  
+pid        /var/run/nginx.pid;   nginx&#x670D;&#x52A1;&#x542F;&#x52A8;&#x65F6;&#x7684;pid
+
+events {
+    worker_connections  1024;&#x6BCF;&#x4E2A;&#x8FDB;&#x7A0B;&#x5141;&#x8BB8;&#x7684;&#x6700;&#x5927;&#x8FDE;&#x63A5;&#x6570; 10000
+}
+
+http {
+    include       /etc/nginx/mime.types;//&#x6587;&#x4EF6;&#x540E;&#x7F00;&#x548C;&#x7C7B;&#x578B;&#x7C7B;&#x578B;&#x7684;&#x5BF9;&#x5E94;&#x5173;&#x7CFB;
+    default_type  application/octet-stream;//&#x9ED8;&#x8BA4;content-type
+
+    log_format  main  &apos;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &apos;
+                      &apos;$status $body_bytes_sent &quot;$http_referer&quot; &apos;
+                      &apos;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&apos;;  //&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;&#x683C;&#x5F0F;
+
+    access_log  /var/log/nginx/access.log  main;//&#x9ED8;&#x8BA4;&#x8BBF;&#x95EE;&#x65E5;&#x5FD7;
+
+    sendfile        on;//&#x542F;&#x7528;sendfile
+    #tcp_nopush     on;//&#x61D2;&#x53D1;&#x9001;
+
+    keepalive_timeout  65;//&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#x662F;65&#x79D2;
+
+    #gzip  on;gzip&#x538B;&#x7F29;
+
+    include /etc/nginx/conf.d/*.conf;//&#x5305;&#x542B;&#x7684;&#x5B50;&#x914D;&#x7F6E;&#x6587;&#x4EF6;
+}
+
+</code></pre>
+<p>default.conf</p>
+<pre><code class="lang-js">server {
+    listen       80;  //&#x76D1;&#x542C;&#x7684;&#x7AEF;&#x53E3;&#x53F7;
+    server_name  localhost;  //&#x7528;&#x57DF;&#x540D;&#x65B9;&#x5F0F;&#x8BBF;&#x95EE;&#x7684;&#x5730;&#x5740;
+
+    #charset koi8-r; //&#x7F16;&#x7801;
+    #access_log  /var/log/nginx/host.access.log  main;  //&#x8BBF;&#x95EE;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x548C;&#x540D;&#x79F0;
+
+    location / {
+        root   /usr/share/nginx/html;  //&#x9759;&#x6001;&#x6587;&#x4EF6;&#x6839;&#x76EE;&#x5F55;
+        index  index.html index.htm;  //&#x9996;&#x9875;&#x7684;&#x7D22;&#x5F15;&#x6587;&#x4EF6;
+    }
+
+    #error_page  404              /404.html;  //&#x6307;&#x5B9A;&#x9519;&#x8BEF;&#x9875;&#x9762;
+
+    # redirect server error pages to the static page /50x.html
+    # &#x628A;&#x540E;&#x53F0;&#x9519;&#x8BEF;&#x91CD;&#x5B9A;&#x5411;&#x5230;&#x9759;&#x6001;&#x7684;50x.html&#x9875;&#x9762;
+    error_page   500 502 503 504  /50x.html; 
+    location = /50x.html {
+        root   /usr/share/nginx/html;
+    }
+
+    # proxy the PHP scripts to Apache listening on 127.0.0.1:80
+    # &#x4EE3;&#x7406;PHP&#x811A;&#x672C;&#x5230;80&#x7AEF;&#x53E3;&#x4E0A;&#x7684;apache&#x670D;&#x52A1;&#x5668;
+    #location ~ \.php$ {
+    #    proxy_pass   http://127.0.0.1;
+    #}
+
+    # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+    # &#x628A;PHP&#x811A;&#x672C;9000&#x7AEF;&#x53E3;&#x4E0A;&#x76D1;&#x542C;&#x7684;FastCGI&#x670D;&#x52A1;
+    #location ~ \.php$ {
+    #    root           html;
+    #    fastcgi_pass   127.0.0.1:9000;
+    #    fastcgi_index  index.php;
+    #    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;
+    #    include        fastcgi_params;
+    #}
+
+    # deny access to .htaccess files, if Apache&apos;s document root
+    # concurs with nginx&apos;s one
+    # &#x4E0D;&#x5141;&#x8BB8;&#x8BBF;&#x95EE;.htaccess&#x6587;&#x4EF6;
+    #location ~ /\.ht {
+    #    deny  all;
+    #}
+}
+
+</code></pre>
+<h2 id="t256. &#x542F;&#x52A8;&#x548C;&#x91CD;&#x65B0;&#x52A0;&#x8F7D;">6. &#x542F;&#x52A8;&#x548C;&#x91CD;&#x65B0;&#x52A0;&#x8F7D; <a href="#t256. &#x542F;&#x52A8;&#x548C;&#x91CD;&#x65B0;&#x52A0;&#x8F7D;"> # </a></h2>
+<pre><code class="lang-js">systemctl restart nginx.service
+systemctl reload nginx.service
+nginx -s reload
+</code></pre>
+<h2 id="t267. &#x65E5;&#x5FD7;&#x7C7B;&#x578B;">7. &#x65E5;&#x5FD7;&#x7C7B;&#x578B; <a href="#t267. &#x65E5;&#x5FD7;&#x7C7B;&#x578B;"> # </a></h2>
+<h3 id="t277.1 &#x65E5;&#x5FD7;&#x7C7B;&#x578B;">7.1 &#x65E5;&#x5FD7;&#x7C7B;&#x578B; <a href="#t277.1 &#x65E5;&#x5FD7;&#x7C7B;&#x578B;"> # </a></h3>
+<ul>
+<li>access_.log &#x8BBF;&#x95EE;&#x65E5;&#x5FD7;</li>
+<li>error.log &#x9519;&#x8BEF;&#x65E5;&#x5FD7;</li>
+</ul>
+<h3 id="t287.2 log_format">7.2 log_format <a href="#t287.2 log_format"> # </a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x7528;&#x6CD5;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x8BED;&#x6CD5;</td>
+<td style="text-align:left">log_format name [escape=default[json] string]</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x9ED8;&#x8BA4;</td>
+<td style="text-align:left">log_format combined ...</td>
+</tr>
+<tr>
+<td style="text-align:left">Context</td>
+<td style="text-align:left">http</td>
+</tr>
+</tbody>
+</table>
+<p>&#x6848;&#x4F8B;</p>
+<pre><code class="lang-js"> log_format  main  <span class="hljs-string">&apos;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &apos;</span>
+                      <span class="hljs-string">&apos;$status $body_bytes_sent &quot;$http_referer&quot; &apos;</span>
+                      <span class="hljs-string">&apos;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&apos;</span>;
+
+ log_format  zfpx  <span class="hljs-string">&apos;$arg_name $http_referer sent_http_date&quot;&apos;</span>;
+ access_log  /<span class="hljs-keyword">var</span>/log/nginx/access.log  main;    
+
+ <span class="hljs-number">221.216</span><span class="hljs-number">.143</span><span class="hljs-number">.110</span> - - [<span class="hljs-number">09</span>/Jun/<span class="hljs-number">2018</span>:<span class="hljs-number">22</span>:<span class="hljs-number">41</span>:<span class="hljs-number">18</span> +<span class="hljs-number">0800</span>] <span class="hljs-string">&quot;GET / HTTP/1.1&quot;</span> <span class="hljs-number">200</span> <span class="hljs-number">612</span> <span class="hljs-string">&quot;-&quot;</span> <span class="hljs-string">&quot;Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36&quot;</span> <span class="hljs-string">&quot;-&quot;</span>
+</code></pre>
+<h3 id="t297.3 HTTP&#x8BF7;&#x6C42;&#x53D8;&#x91CF;">7.3 HTTP&#x8BF7;&#x6C42;&#x53D8;&#x91CF; <a href="#t297.3 HTTP&#x8BF7;&#x6C42;&#x53D8;&#x91CF;"> # </a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x540D;&#x79F0;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+<th style="text-align:left">&#x4F8B;&#x5B50;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">arg_PARAMETER</td>
+<td style="text-align:left">&#x8BF7;&#x6C42;&#x53C2;&#x6570;</td>
+<td style="text-align:left">$arg_name</td>
+</tr>
+<tr>
+<td style="text-align:left">http_HEADER</td>
+<td style="text-align:left">&#x8BF7;&#x6C42;&#x5934;</td>
+<td style="text-align:left">$http_referer</td>
+</tr>
+<tr>
+<td style="text-align:left">sent_http_HEADER</td>
+<td style="text-align:left">&#x54CD;&#x5E94;&#x5934;</td>
+<td style="text-align:left">sent_http_cookie</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t307.4 &#x5185;&#x7F6E;&#x53D8;&#x91CF;">7.4 &#x5185;&#x7F6E;&#x53D8;&#x91CF; <a href="#t307.4 &#x5185;&#x7F6E;&#x53D8;&#x91CF;"> # </a></h3>
+<p><a href="http://nginx.org/en/docs/http/ngx_http_log_module.html">ngx_http_log_module</a>
+<a href="http://nginx.org/en/docs/http/ngx_http_log_module.html#log_format">log_format</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x540D;&#x79F0;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">$remote_addr</td>
+<td style="text-align:left">&#x5BA2;&#x6237;&#x7AEF;&#x5730;&#x5740;</td>
+</tr>
+<tr>
+<td style="text-align:left">$remote_user</td>
+<td style="text-align:left">&#x5BA2;&#x6237;&#x7AEF;&#x7528;&#x6237;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td style="text-align:left">$time_local</td>
+<td style="text-align:left">&#x8BBF;&#x95EE;&#x65F6;&#x95F4;&#x548C;&#x65F6;&#x533A;</td>
+</tr>
+<tr>
+<td style="text-align:left">$request</td>
+<td style="text-align:left">&#x8BF7;&#x6C42;&#x7684;URI&#x548C;HTTP&#x534F;&#x8BAE;</td>
+</tr>
+<tr>
+<td style="text-align:left">$http_host</td>
+<td style="text-align:left">&#x8BF7;&#x6C42;&#x5730;&#x5740;&#xFF0C;&#x5373;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x4F60;&#x8F93;&#x5165;&#x7684;&#x5730;&#x5740;&#xFF08;IP&#x6216;&#x57DF;&#x540D;&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:left">$status</td>
+<td style="text-align:left">HTTP&#x8BF7;&#x6C42;&#x72B6;&#x6001;</td>
+</tr>
+<tr>
+<td style="text-align:left">$body_bytes_sent</td>
+<td style="text-align:left">&#x53D1;&#x9001;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x5927;&#x5C0F;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="t318. nginx&#x5B9E;&#x6218;">8. nginx&#x5B9E;&#x6218; <a href="#t318. nginx&#x5B9E;&#x6218;"> # </a></h2>
+<h3 id="t328.1 &#x9759;&#x6001;&#x8D44;&#x6E90;Web&#x670D;&#x52A1;">8.1 &#x9759;&#x6001;&#x8D44;&#x6E90;Web&#x670D;&#x52A1; <a href="#t328.1 &#x9759;&#x6001;&#x8D44;&#x6E90;Web&#x670D;&#x52A1;"> # </a></h3>
+<ul>
+<li>&#x9759;&#x6001;&#x8D44;&#x6E90;&#xFF1A;&#x4E00;&#x822C;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x5230;web&#x670D;&#x52A1;&#x5668;&#xFF0C;web&#x670D;&#x52A1;&#x5668;&#x4ECE;&#x5185;&#x5B58;&#x5728;&#x53D6;&#x5230;&#x76F8;&#x5E94;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x89E3;&#x6790;&#x5E76;&#x6E32;&#x67D3;&#x663E;&#x793A;&#x51FA;&#x6765;&#x3002;</li>
+<li>&#x52A8;&#x6001;&#x8D44;&#x6E90;&#xFF1A;&#x4E00;&#x822C;&#x5BA2;&#x6237;&#x7AEF;&#x8BF7;&#x6C42;&#x7684;&#x52A8;&#x6001;&#x8D44;&#x6E90;&#xFF0C;&#x5148;&#x5C06;&#x8BF7;&#x6C42;&#x4EA4;&#x4E8E;web&#x5BB9;&#x5668;&#xFF0C;web&#x5BB9;&#x5668;&#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x6570;&#x636E;&#x5E93;&#x5904;&#x7406;&#x6570;&#x636E;&#x4E4B;&#x540E;&#xFF0C;&#x5C06;&#x5185;&#x5BB9;&#x4EA4;&#x7ED9;web&#x670D;&#x52A1;&#x5668;&#xFF0C;web&#x670D;&#x52A1;&#x5668;&#x8FD4;&#x56DE;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;&#x89E3;&#x6790;&#x6E32;&#x67D3;&#x5904;&#x7406;&#x3002;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x79CD;&#x7C7B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x6D4F;&#x89C8;&#x5668;&#x6E32;&#x67D3;</td>
+<td style="text-align:left">HTML&#x3001;CSS&#x3001;JS</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x56FE;&#x7247;</td>
+<td style="text-align:left">JPEG&#x3001;GIF&#x3001;PNG</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x89C6;&#x9891;</td>
+<td style="text-align:left">FLV&#x3001;MPEG</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;</td>
+<td style="text-align:left">Word&#x3001;Excel</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t338.2 CDN">8.2 CDN <a href="#t338.2 CDN"> # </a></h3>
+<ul>
+<li>CDN&#x7684;&#x5168;&#x79F0;&#x662F;Content Delivery Network&#xFF0C;&#x5373;&#x5185;&#x5BB9;&#x5206;&#x53D1;&#x7F51;&#x7EDC;&#x3002;</li>
+<li>CDN&#x7CFB;&#x7EDF;&#x80FD;&#x591F;&#x5B9E;&#x65F6;&#x5730;&#x6839;&#x636E;&#x7F51;&#x7EDC;&#x6D41;&#x91CF;&#x548C;&#x5404;&#x8282;&#x70B9;&#x7684;&#x8FDE;&#x63A5;&#x3001;&#x8D1F;&#x8F7D;&#x72B6;&#x51B5;&#x4EE5;&#x53CA;&#x5230;&#x7528;&#x6237;&#x7684;&#x8DDD;&#x79BB;&#x548C;&#x54CD;&#x5E94;&#x65F6;&#x95F4;&#x7B49;&#x7EFC;&#x5408;&#x4FE1;&#x606F;&#x5C06;&#x7528;&#x6237;&#x7684;&#x8BF7;&#x6C42;&#x91CD;&#x65B0;&#x5BFC;&#x5411;&#x79BB;&#x7528;&#x6237;&#x6700;&#x8FD1;&#x7684;&#x670D;&#x52A1;&#x8282;&#x70B9;&#x4E0A;&#x3002;&#x5176;&#x76EE;&#x7684;&#x662F;&#x4F7F;&#x7528;&#x6237;&#x53EF;&#x5C31;&#x8FD1;&#x53D6;&#x5F97;&#x6240;&#x9700;&#x5185;&#x5BB9;&#xFF0C;&#x89E3;&#x51B3; Internet&#x7F51;&#x7EDC;&#x62E5;&#x6324;&#x7684;&#x72B6;&#x51B5;&#xFF0C;&#x63D0;&#x9AD8;&#x7528;&#x6237;&#x8BBF;&#x95EE;&#x7F51;&#x7AD9;&#x7684;&#x54CD;&#x5E94;&#x901F;&#x5EA6;&#x3002;</li>
+</ul>
+<p><a href="http://img.zhufengpeixun.cn/cdn.jpg">cdn</a> </p>
+<h4 id="t348.2.1 &#x914D;&#x7F6E;&#x8BED;&#x6CD5;">8.2.1 &#x914D;&#x7F6E;&#x8BED;&#x6CD5; <a href="#t348.2.1 &#x914D;&#x7F6E;&#x8BED;&#x6CD5;"> # </a></h4>
+<h5 id="t358.2.1.1 sendfile">8.2.1.1 sendfile <a href="#t358.2.1.1 sendfile"> # </a></h5>
+<p>&#x4E0D;&#x7ECF;&#x8FC7;&#x7528;&#x6237;&#x5185;&#x6838;&#x53D1;&#x9001;&#x6587;&#x4EF6;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x79CD;&#x7C7B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x8BED;&#x6CD5;</td>
+<td style="text-align:left">sendfile on / off</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x9ED8;&#x8BA4;</td>
+<td style="text-align:left">sendfile off;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x4E0A;&#x4E0B;&#x6587;</td>
+<td style="text-align:left">http,server,location,if in location</td>
+</tr>
+</tbody>
+</table>
+<h5 id="t368.2.1.2 tcp_nopush">8.2.1.2 tcp_nopush <a href="#t368.2.1.2 tcp_nopush"> # </a></h5>
+<p>&#x5728;sendfile&#x5F00;&#x542F;&#x7684;&#x60C5;&#x51B5; &#x4E0B;&#xFF0C;&#x63D0;&#x9AD8;&#x7F51;&#x7EDC;&#x5305;&#x7684;&#x4F20;&#x8F93;&#x6548;&#x7387;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x79CD;&#x7C7B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x8BED;&#x6CD5;</td>
+<td style="text-align:left">tcp_nopush on / off</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x9ED8;&#x8BA4;</td>
+<td style="text-align:left">tcp_nopush off;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x4E0A;&#x4E0B;&#x6587;</td>
+<td style="text-align:left">http,server,location</td>
+</tr>
+</tbody>
+</table>
+<h5 id="t378.2.1.2 tcp_nodelay">8.2.1.2 tcp_nodelay <a href="#t378.2.1.2 tcp_nodelay"> # </a></h5>
+<p>&#x5728;keepalive&#x8FDE;&#x63A5;&#x4E0B;&#xFF0C;&#x63D0;&#x9AD8;&#x7F51;&#x7EDC;&#x5305;&#x7684;&#x4F20;&#x8F93;&#x5B9E;&#x65F6;&#x6027;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x79CD;&#x7C7B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x8BED;&#x6CD5;</td>
+<td style="text-align:left">tcp_nodelay on / off</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x9ED8;&#x8BA4;</td>
+<td style="text-align:left">tcp_nodelay on;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x4E0A;&#x4E0B;&#x6587;</td>
+<td style="text-align:left">http,server,location</td>
+</tr>
+</tbody>
+</table>
+<h5 id="t388.2.1.3 gzip">8.2.1.3 gzip <a href="#t388.2.1.3 gzip"> # </a></h5>
+<p>&#x538B;&#x7F29;&#x6587;&#x4EF6;&#x53EF;&#x4EE5;&#x8282;&#x7EA6;&#x5E26;&#x5BBD;&#x548C;&#x63D0;&#x9AD8;&#x7F51;&#x7EDC;&#x4F20;&#x8F93;&#x6548;&#x7387;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x79CD;&#x7C7B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x8BED;&#x6CD5;</td>
+<td style="text-align:left">gzip on / off</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x9ED8;&#x8BA4;</td>
+<td style="text-align:left">gzip off;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x4E0A;&#x4E0B;&#x6587;</td>
+<td style="text-align:left">http,server,location</td>
+</tr>
+</tbody>
+</table>
+<h5 id="t398.2.1.4 gzip_comp_level">8.2.1.4 gzip_comp_level <a href="#t398.2.1.4 gzip_comp_level"> # </a></h5>
+<p>&#x538B;&#x7F29;&#x6BD4;&#x7387;&#x8D8A;&#x9AD8;&#xFF0C;&#x6587;&#x4EF6;&#x88AB;&#x538B;&#x7F29;&#x7684;&#x4F53;&#x79EF;&#x8D8A;&#x5C0F;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x79CD;&#x7C7B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x8BED;&#x6CD5;</td>
+<td style="text-align:left">gzip_comp_level level</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x9ED8;&#x8BA4;</td>
+<td style="text-align:left">gzip_comp_level 1;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x4E0A;&#x4E0B;&#x6587;</td>
+<td style="text-align:left">http,server,location</td>
+</tr>
+</tbody>
+</table>
+<h5 id="t408.2.1.5 gzip_http_version">8.2.1.5 gzip_http_version <a href="#t408.2.1.5 gzip_http_version"> # </a></h5>
+<p>&#x538B;&#x7F29;HTTP&#x7248;&#x672C;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x79CD;&#x7C7B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x8BED;&#x6CD5;</td>
+<td style="text-align:left">gzip_http_version 1.0/1.1</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x9ED8;&#x8BA4;</td>
+<td style="text-align:left">gzip_http_version 1.1;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x4E0A;&#x4E0B;&#x6587;</td>
+<td style="text-align:left">http,server,location</td>
+</tr>
+</tbody>
+</table>
+<h5 id="t418.2.1.6 http_gzip-static_module">8.2.1.6 http_gzip-static_module <a href="#t418.2.1.6 http_gzip-static_module"> # </a></h5>
+<p>&#x5148;&#x627E;&#x78C1;&#x76D8;&#x4E0A;&#x627E;&#x540C;&#x540D;&#x7684;<code>.gz</code>&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x662F;&#x5426;&#x5B58;&#x5728;,&#x8282;&#x7EA6;CPU&#x7684;&#x538B;&#x7F29;&#x65F6;&#x95F4;&#x548C;&#x6027;&#x80FD;&#x635F;&#x8017;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x79CD;&#x7C7B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x8BED;&#x6CD5;</td>
+<td style="text-align:left">gzip_static  on/off</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x9ED8;&#x8BA4;</td>
+<td style="text-align:left">gzip_static  off;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x4E0A;&#x4E0B;&#x6587;</td>
+<td style="text-align:left">http,server,location</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-js">location ~ .*\.(jpg|png|gif)$ {
+        gzip off;
+        gzip_http_version 1.1;
+       gzip_comp_level 3;
+       gzip_types image/jpeg image/png image/gif;
+        root /data/images;
+    }
+
+    location ~ .*\.(html|js|css)$ {
+        gzip on;
+        gzip_min_length 1k;
+        gzip_http_version 1.1;
+        gzip_comp_level 9;
+        gzip_types  text/css application/javascript;
+        root /data/html;
+    }
+
+    location ~ ^/download {
+        gzip_static on;
+        tcp_nopush on; 
+        root /data/download;
+    }
+</code></pre>
+<h3 id="t428.3 &#x6D4F;&#x89C8;&#x5668;&#x7F13;&#x5B58;">8.3 &#x6D4F;&#x89C8;&#x5668;&#x7F13;&#x5B58; <a href="#t428.3 &#x6D4F;&#x89C8;&#x5668;&#x7F13;&#x5B58;"> # </a></h3>
+<p>&#x6821;&#x9A8C;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x662F;&#x5426;&#x8FC7;&#x671F;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x79CD;&#x7C7B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x68C0;&#x9A8C;&#x662F;&#x5426;&#x8FC7;&#x671F;</td>
+<td style="text-align:left">Expires&#x3001;Cache-Control(max-age)</td>
+</tr>
+<tr>
+<td style="text-align:left">Etag</td>
+<td style="text-align:left">Etag</td>
+</tr>
+<tr>
+<td style="text-align:left">Last-Modified</td>
+<td style="text-align:left">Last-Modified</td>
+</tr>
+</tbody>
+</table>
+<h4 id="t438.3.1 expires">8.3.1 expires <a href="#t438.3.1 expires"> # </a></h4>
+<p>&#x6DFB;&#x52A0;Cache-Control&#x3001;Expires&#x5934;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x79CD;&#x7C7B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x8BED;&#x6CD5;</td>
+<td style="text-align:left">expires time</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x9ED8;&#x8BA4;</td>
+<td style="text-align:left">expires off;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x4E0A;&#x4E0B;&#x6587;</td>
+<td style="text-align:left">http,server,location</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-js">location ~ .*\.(jpg|png|gif)$ {
+        expires <span class="hljs-number">24</span>h;
+}
+</code></pre>
+<h3 id="t448.4 &#x8DE8;&#x57DF;">8.4 &#x8DE8;&#x57DF; <a href="#t448.4 &#x8DE8;&#x57DF;"> # </a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x79CD;&#x7C7B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x8BED;&#x6CD5;</td>
+<td style="text-align:left">add_header name value</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x9ED8;&#x8BA4;</td>
+<td style="text-align:left">add_header --;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x4E0A;&#x4E0B;&#x6587;</td>
+<td style="text-align:left">http,server,location</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-js">location ~ .*\.json$ {
+        add_header Access-Control-Allow-Origin http:<span class="hljs-comment">//localhost:3000;</span>
+        add_header Access-Control-Allow-Methods GET,POST,PUT,DELETE,OPTIONS;
+        root /data/json;
+    }
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> xhr = <span class="hljs-keyword">new</span> XMLHttpRequest();
+        xhr.open(<span class="hljs-string">&apos;GET&apos;</span>, <span class="hljs-string">&apos;http://47.104.184.134/users.json&apos;</span>, <span class="hljs-literal">true</span>);
+        xhr.onreadystatechange = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">if</span> (xhr.readyState == <span class="hljs-number">4</span> &amp;&amp; xhr.status == <span class="hljs-number">200</span>) {
+                <span class="hljs-built_in">console</span>.log(xhr.responseText);
+            }
+        }
+xhr.send();
+</code></pre>
+<h3 id="t458.5 &#x9632;&#x76D7;&#x94FE;">8.5 &#x9632;&#x76D7;&#x94FE; <a href="#t458.5 &#x9632;&#x76D7;&#x94FE;"> # </a></h3>
+<ul>
+<li>&#x9632;&#x6B62;&#x7F51;&#x7AD9;&#x8D44;&#x6E90;&#x88AB;&#x76D7;&#x7528;</li>
+<li>&#x4FDD;&#x8BC1;&#x4FE1;&#x606F;&#x5B89;&#x5168;</li>
+<li>&#x9632;&#x6B62;&#x6D41;&#x91CF;&#x8FC7;&#x91CF;</li>
+<li>&#x533A;&#x522B;&#x54EA;&#x4E9B;&#x8BF7;&#x6C42;&#x662F;&#x975E;&#x6B63;&#x5E38;&#x7684;&#x7528;&#x6237;&#x8BF7;&#x6C42;</li>
+<li>&#x4F7F;&#x7528;http_refer&#x9632;&#x76D7;&#x94FE;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x79CD;&#x7C7B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x8BED;&#x6CD5;</td>
+<td style="text-align:left">valid_referers none</td>
+<td>block</td>
+<td>server_names</td>
+<td>string...</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x9ED8;&#x8BA4;</td>
+<td style="text-align:left">-</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x4E0A;&#x4E0B;&#x6587;</td>
+<td style="text-align:left">server,location</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-diff">location ~ .*\.(jpg|png|gif)$ {
+        expires 1h;
+        gzip off;
+        gzip_http_version 1.1;
+        gzip_comp_level 3;
+        gzip_types image/jpeg image/png image/gif;
+<span class="hljs-addition">+        valid_referers none blocked 47.104.184.134;</span>
+<span class="hljs-addition">+        if ($invalid_referer) {</span>
+<span class="hljs-addition">+           return 403;</span>
+<span class="hljs-addition">+        }</span>
+        root /data/images;
+    }
+
+</code></pre>
+<h3 id="t468.6 &#x4EE3;&#x7406;&#x670D;&#x52A1;">8.6 &#x4EE3;&#x7406;&#x670D;&#x52A1; <a href="#t468.6 &#x4EE3;&#x7406;&#x670D;&#x52A1;"> # </a></h3>
+<h4 id="t478.6.1 &#x914D;&#x7F6E;">8.6.1 &#x914D;&#x7F6E; <a href="#t478.6.1 &#x914D;&#x7F6E;"> # </a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x79CD;&#x7C7B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x8BED;&#x6CD5;</td>
+<td style="text-align:left">proxy_pass URL</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x9ED8;&#x8BA4;</td>
+<td style="text-align:left">-</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x4E0A;&#x4E0B;&#x6587;</td>
+<td style="text-align:left">server,location</td>
+</tr>
+</tbody>
+</table>
+<h4 id="t488.6.2  &#x53CD;&#x5411;&#x4EE3;&#x7406;">8.6.2  &#x53CD;&#x5411;&#x4EE3;&#x7406; <a href="#t488.6.2  &#x53CD;&#x5411;&#x4EE3;&#x7406;"> # </a></h4>
+<p>&#x53CD;&#x5411;&#x4EE3;&#x7406;&#x7684;&#x5BF9;&#x8C61;&#x7684;&#x670D;&#x52A1;&#x7AEF;
+<img src="http://img.zhufengpeixun.cn/fanproxy.jpg" alt="fanproxy"></p>
+<pre><code class="lang-js">resolver 8.8.8.8;
+location ~ ^/api {
+      proxy_pass http://127.0.0.1:3000;
+}
+</code></pre>
+<h4 id="t498.6.3 &#x6B63;&#x5411;&#x4EE3;&#x7406;">8.6.3 &#x6B63;&#x5411;&#x4EE3;&#x7406; <a href="#t498.6.3 &#x6B63;&#x5411;&#x4EE3;&#x7406;"> # </a></h4>
+<p>&#x6B63;&#x5411;&#x4EE3;&#x7406;&#x7684;&#x5BF9;&#x8C61;&#x662F;&#x5BA2;&#x6237;&#x7AEF;
+<img src="http://img.zhufengpeixun.cn/positiveproxy.jpg" alt="positiveproxy"></p>
+<pre><code class="lang-js">location / {
+        proxy_pass http:<span class="hljs-comment">//$http_host$request_uri;</span>
+    }
+</code></pre>
+<h3 id="t508.7 &#x8D1F;&#x8F7D;&#x5747;&#x8861;">8.7 &#x8D1F;&#x8F7D;&#x5747;&#x8861; <a href="#t508.7 &#x8D1F;&#x8F7D;&#x5747;&#x8861;"> # </a></h3>
+<p><img src="http://img.zhufengpeixun.cn/nginxbalance.jpg" alt="nginxbalance"></p>
+<ul>
+<li>&#x4F7F;&#x7528;&#x96C6;&#x7FA4;&#x662F;&#x7F51;&#x7AD9;&#x89E3;&#x51B3;&#x9AD8;&#x5E76;&#x53D1;&#x3001;&#x6D77;&#x91CF;&#x6570;&#x636E;&#x95EE;&#x9898;&#x7684;&#x5E38;&#x7528;&#x624B;&#x6BB5;&#x3002;</li>
+<li>&#x5F53;&#x4E00;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x7684;&#x5904;&#x7406;&#x80FD;&#x529B;&#x3001;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x4E0D;&#x8DB3;&#x65F6;&#xFF0C;&#x4E0D;&#x8981;&#x4F01;&#x56FE;&#x53BB;&#x6362;&#x66F4;&#x5F3A;&#x5927;&#x7684;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5BF9;&#x5927;&#x578B;&#x7F51;&#x7AD9;&#x800C;&#x8A00;&#xFF0C;&#x4E0D;&#x7BA1;&#x591A;&#x4E48;&#x5F3A;&#x5927;&#x7684;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x90FD;&#x6EE1;&#x8DB3;&#x4E0D;&#x4E86;&#x7F51;&#x7AD9;&#x6301;&#x7EED;&#x589E;&#x957F;&#x7684;&#x4E1A;&#x52A1;&#x9700;&#x6C42;&#x3002;</li>
+<li>&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x66F4;&#x6070;&#x5F53;&#x7684;&#x505A;&#x6CD5;&#x662F;&#x589E;&#x52A0;&#x4E00;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x5206;&#x62C5;&#x539F;&#x6709;&#x670D;&#x52A1;&#x5668;&#x7684;&#x8BBF;&#x95EE;&#x53CA;&#x5B58;&#x50A8;&#x538B;&#x529B;&#x3002;&#x901A;&#x8FC7;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x8C03;&#x5EA6;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5C06;&#x6765;&#x81EA;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x8BBF;&#x95EE;&#x8BF7;&#x6C42;&#x5206;&#x53D1;&#x5230;&#x5E94;&#x7528;&#x670D;&#x52A1;&#x5668;&#x96C6;&#x7FA4;&#x4E2D;&#x7684;&#x4EFB;&#x4F55;&#x4E00;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x66F4;&#x591A;&#x7684;&#x7528;&#x6237;&#xFF0C;&#x5C31;&#x5728;&#x96C6;&#x7FA4;&#x4E2D;&#x52A0;&#x5165;&#x66F4;&#x591A;&#x7684;&#x5E94;&#x7528;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x4F7F;&#x5E94;&#x7528;&#x670D;&#x52A1;&#x5668;&#x7684;&#x8D1F;&#x8F7D;&#x538B;&#x529B;&#x4E0D;&#x518D;&#x6210;&#x4E3A;&#x6574;&#x4E2A;&#x7F51;&#x7AD9;&#x7684;&#x74F6;&#x9888;&#x3002;</li>
+</ul>
+<h4 id="t518.7.1 upstream">8.7.1 upstream <a href="#t518.7.1 upstream"> # </a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x79CD;&#x7C7B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x8BED;&#x6CD5;</td>
+<td style="text-align:left">upstream name {}</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x9ED8;&#x8BA4;</td>
+<td style="text-align:left">-</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x4E0A;&#x4E0B;&#x6587;</td>
+<td style="text-align:left">http</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-js">upstream zfpx {
+  ip_hash;
+  server localhost:<span class="hljs-number">3000</span>;
+  server localhost:<span class="hljs-number">4000</span>;
+  server localhost:<span class="hljs-number">5000</span>;
+}
+
+server {
+    location / {
+        proxy_pass http:<span class="hljs-comment">//zfpx;</span>
+    }
+</code></pre>
+<h4 id="t528.7.2 &#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#x8C03;&#x8BD5;&#x72B6;&#x6001;">8.7.2 &#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#x8C03;&#x8BD5;&#x72B6;&#x6001; <a href="#t528.7.2 &#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#x8C03;&#x8BD5;&#x72B6;&#x6001;"> # </a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x72B6;&#x6001;</th>
+<th style="text-align:left">&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">down</td>
+<td style="text-align:left">&#x4E0D;&#x53C2;&#x4E0E;&#x8D1F;&#x8F7D;&#x5747;&#x8861;</td>
+</tr>
+<tr>
+<td style="text-align:left">backup</td>
+<td style="text-align:left">&#x5907;&#x4EFD;&#x7684;&#x670D;&#x52A1;&#x5668;</td>
+</tr>
+<tr>
+<td style="text-align:left">max_fails</td>
+<td style="text-align:left">&#x5141;&#x8BB8;&#x8BF7;&#x6C42;&#x5931;&#x8D25;&#x7684;&#x6B21;&#x6570;</td>
+</tr>
+<tr>
+<td style="text-align:left">fail_timeout</td>
+<td style="text-align:left">&#x7ECF;&#x8FC7;max_fails&#x5931;&#x8D25;&#x540E;&#xFF0C;&#x670D;&#x52A1;&#x6682;&#x505C;&#x7684;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td style="text-align:left">max_conns</td>
+<td style="text-align:left">&#x9650;&#x5236;&#x6700;&#x5927;&#x7684;&#x63A5;&#x6536;&#x7684;&#x8FDE;&#x63A5;&#x6570;</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-js">upstream zfpx {
+  server localhost:<span class="hljs-number">3000</span> down;
+  server localhost:<span class="hljs-number">4000</span> backup;
+  server localhost:<span class="hljs-number">5000</span> max_fails=<span class="hljs-number">1</span> fail_timeout=<span class="hljs-number">10</span>s;
+}
+</code></pre>
+<h4 id="t538.7.3 &#x5206;&#x914D;&#x65B9;&#x5F0F;">8.7.3 &#x5206;&#x914D;&#x65B9;&#x5F0F; <a href="#t538.7.3 &#x5206;&#x914D;&#x65B9;&#x5F0F;"> # </a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x79CD;&#x7C7B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x8F6E;&#x8BE2;&#xFF08;&#x9ED8;&#x8BA4;&#xFF09;</td>
+<td style="text-align:left">&#x6BCF;&#x4E2A;&#x8BF7;&#x6C42;&#x6309;&#x65F6;&#x95F4;&#x987A;&#x5E8F;&#x9010;&#x4E00;&#x5206;&#x914D;&#x5230;&#x4E0D;&#x540C;&#x7684;&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5982;&#x679C;&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;down&#x6389;&#xFF0C;&#x80FD;&#x81EA;&#x52A8;&#x5254;&#x9664;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left">weight(&#x52A0;&#x6743;&#x8F6E;&#x8BE2;)</td>
+<td style="text-align:left">&#x6307;&#x5B9A;&#x8F6E;&#x8BE2;&#x51E0;&#x7387;&#xFF0C;weight&#x548C;&#x8BBF;&#x95EE;&#x6BD4;&#x7387;&#x6210;&#x6B63;&#x6BD4;&#xFF0C;&#x7528;&#x4E8E;&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#x6027;&#x80FD;&#x4E0D;&#x5747;&#x7684;&#x60C5;&#x51B5;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left">ip_hash</td>
+<td style="text-align:left">&#x6BCF;&#x4E2A;&#x8BF7;&#x6C42;&#x6309;&#x8BBF;&#x95EE;ip&#x7684;hash&#x7ED3;&#x679C;&#x5206;&#x914D;&#xFF0C;&#x8FD9;&#x6837;&#x6BCF;&#x4E2A;&#x8BBF;&#x5BA2;&#x56FA;&#x5B9A;&#x8BBF;&#x95EE;&#x4E00;&#x4E2A;&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;session&#x7684;&#x95EE;&#x9898;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left">url_hash&#xFF08;&#x7B2C;&#x4E09;&#x65B9;&#xFF09;</td>
+<td style="text-align:left">&#x6309;&#x8BBF;&#x95EE;&#x7684;URL&#x5730;&#x5740;&#x6765;&#x5206;&#x914D; &#x8BF7;&#x6C42;&#xFF0C;&#x6BCF;&#x4E2A;URL&#x90FD;&#x5B9A;&#x5411;&#x5230;&#x540C;&#x4E00;&#x4E2A;&#x540E;&#x7AEF; &#x670D;&#x52A1;&#x5668;&#x4E0A;(&#x7F13;&#x5B58;)</td>
+</tr>
+<tr>
+<td style="text-align:left">fair&#xFF08;&#x7B2C;&#x4E09;&#x65B9;&#xFF09;</td>
+<td style="text-align:left">&#x6309;&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5668;&#x7684;&#x54CD;&#x5E94;&#x65F6;&#x95F4;&#x6765;&#x5206;&#x914D;&#x8BF7;&#x6C42;&#xFF0C;&#x54CD;&#x5E94;&#x65F6;&#x95F4;&#x77ED;&#x7684;&#x4F18;&#x5148;&#x5206;&#x914D;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left">least_conn</td>
+<td style="text-align:left">&#x6700;&#x5C0F;&#x8FDE;&#x63A5;&#x6570;&#xFF0C;&#x54EA;&#x4E2A;&#x8FDE;&#x63A5;&#x5C11;&#x5C31;&#x5206;&#x7ED9;&#x8C01;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x81EA;&#x5B9A;&#x4E49;hash</td>
+<td style="text-align:left">hash&#x81EA;&#x5B9A;&#x4E49;key</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t548.8 &#x7F13;&#x5B58;">8.8 &#x7F13;&#x5B58; <a href="#t548.8 &#x7F13;&#x5B58;"> # </a></h3>
+<p>nginx&#x4EE3;&#x7406;&#x7F13;&#x5B58;</p>
+<p><a href="https://blog.csdn.net/dengjiexian123/article/details/53386586">proxy_cache</a></p>
+<pre><code class="lang-js">http{  
+    proxy_cache_path /data/nginx/tmp-test levels=<span class="hljs-number">1</span>:<span class="hljs-number">2</span> keys_zone=tmp-test:<span class="hljs-number">100</span>m inactive=<span class="hljs-number">7</span>d max_size=<span class="hljs-number">1000</span>g;  
+}  
+</code></pre>
+<ul>
+<li>proxy_cache_path &#x7F13;&#x5B58;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</li>
+<li>levels &#x8BBE;&#x7F6E;&#x7F13;&#x5B58;&#x6587;&#x4EF6;&#x76EE;&#x5F55;&#x5C42;&#x6B21;&#xFF1B;levels=1:2 &#x8868;&#x793A;&#x4E24;&#x7EA7;&#x76EE;&#x5F55;</li>
+<li>keys_zone &#x8BBE;&#x7F6E;&#x7F13;&#x5B58;&#x540D;&#x5B57;&#x548C;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x5927;&#x5C0F;</li>
+<li>inactive &#x5728;&#x6307;&#x5B9A;&#x65F6;&#x95F4;&#x5185;&#x6CA1;&#x4EBA;&#x8BBF;&#x95EE;&#x5219;&#x88AB;&#x5220;&#x9664;</li>
+<li>max_size &#x6700;&#x5927;&#x7F13;&#x5B58;&#x7A7A;&#x95F4;&#xFF0C;&#x5982;&#x679C;&#x7F13;&#x5B58;&#x7A7A;&#x95F4;&#x6EE1;&#xFF0C;&#x9ED8;&#x8BA4;&#x8986;&#x76D6;&#x6389;&#x7F13;&#x5B58;&#x65F6;&#x95F4;&#x6700;&#x957F;&#x7684;&#x8D44;&#x6E90;&#x3002;</li>
+</ul>
+<pre><code class="lang-js">location /tmp-test/ {  
+  proxy_cache tmp-test;  
+  proxy_cache_valid  <span class="hljs-number">200</span> <span class="hljs-number">206</span> <span class="hljs-number">304</span> <span class="hljs-number">301</span> <span class="hljs-number">302</span> <span class="hljs-number">10</span>d;  
+  proxy_cache_key $uri;  
+  proxy_set_header Host $host:$server_port;  
+  proxy_set_header X-Real-IP $remote_addr;  
+  proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;  
+  proxy_pass http:<span class="hljs-comment">//127.0.0.1:8081/media_store.php/tmp-test/;  </span>
+}
+</code></pre>
+<ul>
+<li>proxy_cache tmp-test &#x4F7F;&#x7528;&#x540D;&#x4E3A;tmp-test&#x7684;&#x5BF9;&#x5E94;&#x7F13;&#x5B58;&#x914D;&#x7F6E;</li>
+<li>proxy_cache_valid  200 206 304 301 302 10d; &#x5BF9;httpcode&#x4E3A;200&#x2026;&#x7684;&#x7F13;&#x5B58;10&#x5929;</li>
+<li>proxy_cache_key $uri  &#x5B9A;&#x4E49;&#x7F13;&#x5B58;&#x552F;&#x4E00;key,&#x901A;&#x8FC7;&#x552F;&#x4E00;key&#x6765;&#x8FDB;&#x884C;hash&#x5B58;&#x53D6;</li>
+<li>proxy_set_header  &#x81EA;&#x5B9A;&#x4E49;http header&#x5934;&#xFF0C;&#x7528;&#x4E8E;&#x53D1;&#x9001;&#x7ED9;&#x540E;&#x7AEF;&#x771F;&#x5B9E;&#x670D;&#x52A1;&#x5668;&#x3002;</li>
+<li>proxy_pass  &#x6307;&#x4EE3;&#x7406;&#x540E;&#x8F6C;&#x53D1;&#x7684;&#x8DEF;&#x5F84;&#xFF0C;&#x6CE8;&#x610F;&#x662F;&#x5426;&#x9700;&#x8981;&#x6700;&#x540E;&#x7684;/</li>
+</ul>
+
+        <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
+    </div>
+    
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,2640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+   
+                    
+
+                        
+<div class="warpper">
+    <div class="page-toc">
+        <ul><li><a href="#t01. React面试题">1. React面试题</a></li><li><a href="#t12.前置知识">2.前置知识</a><ul><li><a href="#t22.1 位操作">2.1 位操作</a><ul><li><a href="#t32.1.1 按位与(&)">2.1.1 按位与(&)</a></li><li><a href="#t42.1.2 按位或(|)">2.1.2 按位或(|)</a></li><li><a href="#t52.1.3 位操作">2.1.3 位操作</a></li></ul></li><li><a href="#t62.2 Fiber">2.2 Fiber</a><ul><li><a href="#t72.2.1 Fiber是一种数据结构">2.2.1 Fiber是一种数据结构</a></li><li><a href="#t82.2.2 Fiber树">2.2.2 Fiber树</a></li><li><a href="#t92.2.3  Fiber是一个执行单元">2.2.3  Fiber是一个执行单元</a></li></ul></li><li><a href="#t102.3 循环链表">2.3 循环链表</a></li></ul></li><li><a href="#t113.使用useReducer">3.使用useReducer</a><ul><li><a href="#t123.1 renderWithHooks">3.1 renderWithHooks</a></li><li><a href="#t133.2 hooks更新">3.2 hooks更新</a></li><li><a href="#t143.3 src\index.js">3.3 src\index.js</a></li></ul></li><li><a href="#t154.实现useReducer">4.实现useReducer</a><ul><li><a href="#t164.1 src\index.js">4.1 src\index.js</a></li><li><a href="#t174.2 ReactWorkTags.js">4.2 ReactWorkTags.js</a></li><li><a href="#t184.3 ReactFiberWorkLoop.js">4.3 ReactFiberWorkLoop.js</a></li><li><a href="#t194.4 ReactFiberBeginWork.js">4.4 ReactFiberBeginWork.js</a></li><li><a href="#t204.5 ReactFiberHooks.js">4.5 ReactFiberHooks.js</a></li></ul></li><li><a href="#t215.useReducer更新">5.useReducer更新</a><ul><li><a href="#t225.1 ReactFiberHooks.js">5.1 ReactFiberHooks.js</a></li><li><a href="#t235.2 ReactFiberWorkLoop.js">5.2 ReactFiberWorkLoop.js</a></li><li><a href="#t245.3 ReactFiberBeginWork.js">5.3 ReactFiberBeginWork.js</a></li></ul></li><li><a href="#t256.useState">6.useState</a><ul><li><a href="#t266.1 src\index.js">6.1 src\index.js</a></li><li><a href="#t276.2 src\ReactFiberHooks.js">6.2 src\ReactFiberHooks.js</a></li></ul></li><li><a href="#t287.useEffect">7.useEffect</a><ul><li><a href="#t297.1 src\index.js">7.1 src\index.js</a></li><li><a href="#t307.2 ReactFiberFlags.js">7.2 ReactFiberFlags.js</a></li><li><a href="#t317.3 ReactHookEffectTags.js">7.3 ReactHookEffectTags.js</a></li><li><a href="#t327.4 ReactFiberHooks.js">7.4 ReactFiberHooks.js</a></li><li><a href="#t337.5 ReactFiberWorkLoop.js">7.5 ReactFiberWorkLoop.js</a></li><li><a href="#t347.6 ReactFiberCommitWork.js">7.6 ReactFiberCommitWork.js</a></li></ul></li><li><a href="#t358.useLayoutEffect">8.useLayoutEffect</a><ul><li><a href="#t368.1.src\index.js">8.1.src\index.js</a></li><li><a href="#t378.2 src\ReactFiberHooks.js">8.2 src\ReactFiberHooks.js</a></li><li><a href="#t388.3 ReactFiberWorkLoop.js">8.3 ReactFiberWorkLoop.js</a></li><li><a href="#t398.4 ReactFiberCommitWork.js">8.4 ReactFiberCommitWork.js</a></li></ul></li><li><a href="#t409.useRef">9.useRef</a><ul><li><a href="#t419.1.src\index.js">9.1.src\index.js</a></li><li><a href="#t429.2 ReactFiberHooks.js">9.2 ReactFiberHooks.js</a></li></ul></li><li><a href="#t4310.useMemo">10.useMemo</a><ul><li><a href="#t4410.1.src\index.js">10.1.src\index.js</a></li><li><a href="#t4510.2 ReactFiberHooks.js">10.2 ReactFiberHooks.js</a></li></ul></li></ul>
+    </div>
+    <div class="content markdown-body">
+        <h2 id="t01. React&#x9762;&#x8BD5;&#x9898;">1. React&#x9762;&#x8BD5;&#x9898; <a href="#t01. React&#x9762;&#x8BD5;&#x9898;"> # </a></h2>
+<ul>
+<li>&#x4E3A;&#x4EC0;&#x4E48;&#x4E0D;&#x80FD;&#x5728;&#x6761;&#x4EF6;&#x548C;&#x5FAA;&#x73AF;&#x91CC;&#x4F7F;&#x7528;Hooks?</li>
+<li>&#x4E3A;&#x4EC0;&#x4E48;&#x4E0D;&#x80FD;&#x5728;&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#x5916;&#x90E8;&#x4F7F;&#x7528;Hooks?</li>
+<li>React Hooks&#x7684;&#x72B6;&#x6001;&#x4FDD;&#x5B58;&#x5728;&#x4E86;&#x54EA;&#x91CC;?</li>
+<li>&#x4E3A;&#x4EC0;&#x4E48;&#x4F20;&#x5165;&#x4E8C;&#x6B21;&#x76F8;&#x540C;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#x4E0D;&#x66F4;&#x65B0;?</li>
+<li>&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#x7684;useState&#x548C;&#x7C7B;&#x7EC4;&#x4EF6;&#x7684;setState&#x6709;&#x4EC0;&#x4E48;&#x533A;&#x522B;?</li>
+</ul>
+<h2 id="t12.&#x524D;&#x7F6E;&#x77E5;&#x8BC6;">2.&#x524D;&#x7F6E;&#x77E5;&#x8BC6; <a href="#t12.&#x524D;&#x7F6E;&#x77E5;&#x8BC6;"> # </a></h2>
+<h3 id="t22.1 &#x4F4D;&#x64CD;&#x4F5C;">2.1 &#x4F4D;&#x64CD;&#x4F5C; <a href="#t22.1 &#x4F4D;&#x64CD;&#x4F5C;"> # </a></h3>
+<h4 id="t32.1.1 &#x6309;&#x4F4D;&#x4E0E;(&amp;)">2.1.1 &#x6309;&#x4F4D;&#x4E0E;(&amp;) <a href="#t32.1.1 &#x6309;&#x4F4D;&#x4E0E;(&amp;)"> # </a></h4>
+<ul>
+<li>&#x4E24;&#x4E2A;&#x8F93;&#x5165;&#x6570;&#x7684;&#x540C;&#x4E00;&#x4F4D;&#x90FD;&#x4E3A;1&#x624D;&#x4E3A;1</li>
+</ul>
+<p><img src="https://img.zhufengpeixun.com/1b7c2037153ec6d34c1e06ad04c6943d" alt="bitand2"></p>
+<h4 id="t42.1.2 &#x6309;&#x4F4D;&#x6216;(|)">2.1.2 &#x6309;&#x4F4D;&#x6216;(|) <a href="#t42.1.2 &#x6309;&#x4F4D;&#x6216;(|)"> # </a></h4>
+<ul>
+<li>&#x4E24;&#x4E2A;&#x8F93;&#x5165;&#x6570;&#x7684;&#x540C;&#x4E00;&#x4F4D;&#x53EA;&#x8981;&#x6709;&#x4E00;&#x4E2A;&#x4E3A;1&#x5C31;&#x662F;1</li>
+</ul>
+<p><img src="https://img.zhufengpeixun.com/df9f40a961da150a9eb65bc42533f9cb" alt="bitor2"></p>
+<h4 id="t52.1.3 &#x4F4D;&#x64CD;&#x4F5C;">2.1.3 &#x4F4D;&#x64CD;&#x4F5C; <a href="#t52.1.3 &#x4F4D;&#x64CD;&#x4F5C;"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> NoFlags =    <span class="hljs-number">0b000</span>;<span class="hljs-comment">//&#x6CA1;&#x6709;Effect</span>
+<span class="hljs-keyword">const</span> HasEffect =  <span class="hljs-number">0b001</span>;<span class="hljs-comment">//&#x6709;Effect</span>
+<span class="hljs-keyword">const</span> Layout =     <span class="hljs-number">0b010</span>;<span class="hljs-comment">//useLayoutEffect</span>
+<span class="hljs-keyword">const</span> Passive =    <span class="hljs-number">0b100</span>;<span class="hljs-comment">//useEffect</span>
+
+<span class="hljs-keyword">let</span> layoutTag = HasEffect|Layout; <span class="hljs-comment">//0b011</span>
+<span class="hljs-keyword">if</span>((layoutTag &amp; Layout) !== NoFlags){
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;useLayoutEffect&apos;</span>);
+}
+<span class="hljs-keyword">let</span> tag = HasEffect|Passive; <span class="hljs-comment">//0b101</span>
+<span class="hljs-keyword">if</span>((tag &amp; Passive) !== NoFlags){
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;useEffect&apos;</span>);
+}
+</code></pre>
+<h3 id="t62.2 Fiber">2.2 Fiber <a href="#t62.2 Fiber"> # </a></h3>
+<p><img src="https://img.zhufengpeixun.com/a04c606956d8cc1341c7e5e2e40affec" alt="67a6025209e54ce64b9fc66d85285daf"></p>
+<h4 id="t72.2.1 Fiber&#x662F;&#x4E00;&#x79CD;&#x6570;&#x636E;&#x7ED3;&#x6784;">2.2.1 Fiber&#x662F;&#x4E00;&#x79CD;&#x6570;&#x636E;&#x7ED3;&#x6784; <a href="#t72.2.1 Fiber&#x662F;&#x4E00;&#x79CD;&#x6570;&#x636E;&#x7ED3;&#x6784;"> # </a></h4>
+<ul>
+<li>React&#x76EE;&#x524D;&#x7684;&#x505A;&#x6CD5;&#x662F;&#x4F7F;&#x7528;&#x94FE;&#x8868;, &#x6BCF;&#x4E2A;<code>VirtualDOM</code>&#x8282;&#x70B9;&#x5185;&#x90E8;&#x8868;&#x793A;&#x4E3A;&#x4E00;&#x4E2A;<code>Fiber</code></li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> virtualDOM = (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">key</span>=<span class="hljs-string">&quot;A&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">key</span>=<span class="hljs-string">&quot;B1&quot;</span>&gt;</span>B1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">key</span>=<span class="hljs-string">&quot;B2&quot;</span>&gt;</span>B2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+)
+</code></pre>
+<h4 id="t82.2.2 Fiber&#x6811;">2.2.2 Fiber&#x6811; <a href="#t82.2.2 Fiber&#x6811;"> # </a></h4>
+<ul>
+<li>current fiber&#x6811; &#x5F53;&#x6E32;&#x67D3;&#x5B8C;&#x6210;&#x540E;&#x4F1A;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;current Fiber&#x6811;</li>
+<li>workInProgress fiber&#x6811; &#x5728;render&#x9636;&#x6BB5;&#xFF0C;&#x4F1A;&#x57FA;&#x4E8E;current&#x6811;&#x521B;&#x5EFA;&#x65B0;&#x7684;workInProgress fiber&#x6811;,&#x66F4;&#x65B0;&#x5B8C;&#x6210;&#x540E;&#x4F1A;&#x628A;workInProgress fiber&#x6811;&#x8D4B;&#x7ED9;current fiber&#x6811;</li>
+<li>workInProgress fiber&#x6811;&#x7684;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x4F1A;&#x6709;&#x4E00;&#x4E2A;alternate&#x6307;&#x9488;&#x6307;&#x5411;current&#x6811;&#x5BF9;&#x5E94;&#x7684;fiber&#x8282;&#x70B9;</li>
+</ul>
+<h4 id="t92.2.3  Fiber&#x662F;&#x4E00;&#x4E2A;&#x6267;&#x884C;&#x5355;&#x5143;">2.2.3  Fiber&#x662F;&#x4E00;&#x4E2A;&#x6267;&#x884C;&#x5355;&#x5143; <a href="#t92.2.3  Fiber&#x662F;&#x4E00;&#x4E2A;&#x6267;&#x884C;&#x5355;&#x5143;"> # </a></h4>
+<ul>
+<li>Fiber&#x662F;&#x4E00;&#x4E2A;&#x6267;&#x884C;&#x5355;&#x5143;,&#x6BCF;&#x6B21;&#x6267;&#x884C;&#x5B8C;&#x4E00;&#x4E2A;&#x6267;&#x884C;&#x5355;&#x5143;, React &#x5C31;&#x4F1A;&#x68C0;&#x67E5;&#x73B0;&#x5728;&#x8FD8;&#x5269;&#x591A;&#x5C11;&#x65F6;&#x95F4;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x65F6;&#x95F4;&#x5C31;&#x5C06;&#x63A7;&#x5236;&#x6743;&#x8BA9;&#x51FA;&#x53BB;</li>
+</ul>
+<p><img src="https://img.zhufengpeixun.com/8bed037dfa35a83bad852c6f3afa18fe" alt="8bed037dfa35a83bad852c6f3afa18fe"></p>
+<h3 id="t102.3 &#x5FAA;&#x73AF;&#x94FE;&#x8868;">2.3 &#x5FAA;&#x73AF;&#x94FE;&#x8868; <a href="#t102.3 &#x5FAA;&#x73AF;&#x94FE;&#x8868;"> # </a></h3>
+<ul>
+<li>&#x5FAA;&#x73AF;&#x94FE;&#x8868;&#x662F;&#x53E6;&#x4E00;&#x79CD;&#x5F62;&#x5F0F;&#x7684;&#x94FE;&#x5F0F;&#x5B58;&#x50A8;&#x7ED3;&#x6784;</li>
+<li>&#x5B83;&#x7684;&#x7279;&#x70B9;&#x662F;&#x8868;&#x4E2D;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x7ED3;&#x70B9;&#x7684;&#x6307;&#x9488;&#x57DF;&#x6307;&#x5411;&#x5934;&#x7ED3;&#x70B9;&#xFF0C;&#x6574;&#x4E2A;&#x94FE;&#x8868;&#x5F62;&#x6210;&#x4E00;&#x4E2A;&#x73AF;</li>
+</ul>
+<p><img src="https://img.zhufengpeixun.com/09ac92e85389a9e3b7bfa5ec38ae8dda" alt="09ac92e85389a9e3b7bfa5ec38ae8dda"></p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">dispatchAction</span>(<span class="hljs-params">queue, action</span>) </span>{
+    <span class="hljs-keyword">const</span> update = { action, <span class="hljs-attr">next</span>: <span class="hljs-literal">null</span> };
+    <span class="hljs-keyword">const</span> pending = queue.pending;
+    <span class="hljs-keyword">if</span> (pending === <span class="hljs-literal">null</span>) {
+        update.next = update;
+    } <span class="hljs-keyword">else</span> {
+        update.next = pending.next;
+        pending.next = update;
+    }
+    queue.pending = update;
+}
+<span class="hljs-keyword">let</span> queue = { <span class="hljs-attr">pending</span>: <span class="hljs-literal">null</span> };
+dispatchAction(queue, <span class="hljs-string">&apos;action1&apos;</span>);
+dispatchAction(queue, <span class="hljs-string">&apos;action2&apos;</span>);
+dispatchAction(queue, <span class="hljs-string">&apos;action3&apos;</span>);
+<span class="hljs-keyword">const</span> pendingQueue = queue.pending;
+<span class="hljs-keyword">if</span> (pendingQueue !== <span class="hljs-literal">null</span>) {
+    <span class="hljs-keyword">const</span> first = pendingQueue.next;
+    <span class="hljs-keyword">let</span> update = first;
+    <span class="hljs-keyword">do</span> {
+        <span class="hljs-keyword">const</span> action = update.action;
+        <span class="hljs-built_in">console</span>.log(action);
+        update = update.next;
+    } <span class="hljs-keyword">while</span> (update !== <span class="hljs-literal">null</span> &amp;&amp; update !== first);
+}
+</code></pre>
+<h2 id="t113.&#x4F7F;&#x7528;useReducer">3.&#x4F7F;&#x7528;useReducer <a href="#t113.&#x4F7F;&#x7528;useReducer"> # </a></h2>
+<h3 id="t123.1 renderWithHooks">3.1 renderWithHooks <a href="#t123.1 renderWithHooks"> # </a></h3>
+<p><img src="https://img.zhufengpeixun.com/0de1b5f3093e22ee8d72c1cc9d201198" alt="205720261c942084b9cb45cc27367b17"></p>
+<h3 id="t133.2 hooks&#x66F4;&#x65B0;">3.2 hooks&#x66F4;&#x65B0; <a href="#t133.2 hooks&#x66F4;&#x65B0;"> # </a></h3>
+<p><img src="https://img.zhufengpeixun.com/6c42e509155f6a11f0d9884581ce0fe7" alt="6c42e509155f6a11f0d9884581ce0fe7"></p>
+<h3 id="t143.3 src\index.js">3.3 src\index.js <a href="#t143.3 src\index.js"> # </a></h3>
+<p>src\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+<span class="hljs-keyword">const</span> reducer = <span class="hljs-function">(<span class="hljs-params">state, action</span>) =&gt;</span> {
+  <span class="hljs-keyword">if</span> (action.type === <span class="hljs-string">&apos;add&apos;</span>)
+    <span class="hljs-keyword">return</span> state + <span class="hljs-number">1</span>;
+  <span class="hljs-keyword">else</span>
+    <span class="hljs-keyword">return</span> state;
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Counter</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> [number, setNumber] = useReducer(reducer, <span class="hljs-number">0</span>);
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> {setNumber({ type: &apos;add&apos; })}}&gt;{number}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  )
+}
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Counter</span>/&gt;</span></span>,<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;root&apos;</span>));
+</code></pre>
+<h2 id="t154.&#x5B9E;&#x73B0;useReducer">4.&#x5B9E;&#x73B0;useReducer <a href="#t154.&#x5B9E;&#x73B0;useReducer"> # </a></h2>
+<h3 id="t164.1 src\index.js">4.1 src\index.js <a href="#t164.1 src\index.js"> # </a></h3>
+<p>src\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { IndeterminateComponent } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./ReactWorkTags&apos;</span>;
+<span class="hljs-keyword">import</span> {render} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./ReactFiberWorkLoop&apos;</span>;
+<span class="hljs-keyword">import</span> {useReducer} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./ReactFiberHooks&apos;</span>
+<span class="hljs-keyword">const</span> reducer = <span class="hljs-function">(<span class="hljs-params">state, action</span>) =&gt;</span> {
+  <span class="hljs-keyword">if</span> (action.type === <span class="hljs-string">&apos;add&apos;</span>)
+    <span class="hljs-keyword">return</span> state + <span class="hljs-number">1</span>;
+  <span class="hljs-keyword">else</span>
+    <span class="hljs-keyword">return</span> state;
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Counter</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> [number, setNumber] = useReducer(reducer, <span class="hljs-number">0</span>);
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> {setNumber({ type: &apos;add&apos; })}}&gt;{number}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  )
+}
+<span class="hljs-keyword">let</span> workInProgress = {
+  <span class="hljs-attr">tag</span>:IndeterminateComponent,
+  <span class="hljs-attr">type</span>: Counter,
+  <span class="hljs-attr">alternate</span>:<span class="hljs-literal">null</span>
+}
+render(workInProgress);
+</code></pre>
+<h3 id="t174.2 ReactWorkTags.js">4.2 ReactWorkTags.js <a href="#t174.2 ReactWorkTags.js"> # </a></h3>
+<p>src\ReactWorkTags.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> FunctionComponent = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> ClassComponent = <span class="hljs-number">1</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> IndeterminateComponent = <span class="hljs-number">2</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> HostRoot = <span class="hljs-number">3</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> HostComponent = <span class="hljs-number">5</span>;
+</code></pre>
+<h3 id="t184.3 ReactFiberWorkLoop.js">4.3 ReactFiberWorkLoop.js <a href="#t184.3 ReactFiberWorkLoop.js"> # </a></h3>
+<p>src\ReactFiberWorkLoop.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> {beginWork} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./ReactFiberBeginWork&apos;</span>;
+<span class="hljs-keyword">let</span> workInProgress;
+
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">workLoop</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-keyword">while</span>(workInProgress){
+        workInProgress = performUnitOfWork(workInProgress);
+    }    
+}
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">performUnitOfWork</span>(<span class="hljs-params">unitOfWork</span>)</span>{
+    <span class="hljs-keyword">let</span> current = unitOfWork.alternate;
+    <span class="hljs-keyword">return</span> beginWork(current,unitOfWork);
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">render</span>(<span class="hljs-params">fiber</span>)</span>{
+    workInProgress=fiber;
+    workLoop();
+}
+</code></pre>
+<h3 id="t194.4 ReactFiberBeginWork.js">4.4 ReactFiberBeginWork.js <a href="#t194.4 ReactFiberBeginWork.js"> # </a></h3>
+<p>ReactFiberBeginWork.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { IndeterminateComponent,FunctionComponent,HostComponent} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./ReactWorkTags&apos;</span>;
+<span class="hljs-keyword">import</span> { renderWithHooks } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./ReactFiberHooks&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">beginWork</span>(<span class="hljs-params">current, workInProgress</span>) </span>{
+    <span class="hljs-keyword">switch</span> (workInProgress.tag) {
+        <span class="hljs-keyword">case</span> IndeterminateComponent: {
+            <span class="hljs-keyword">return</span> mountIndeterminateComponent(
+                current,
+                workInProgress,
+                workInProgress.type,
+            );
+        }
+        <span class="hljs-attr">default</span>:
+            <span class="hljs-keyword">break</span>;
+    }
+}
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">mountIndeterminateComponent</span>(<span class="hljs-params">_current, workInProgress, Component</span>) </span>{
+    <span class="hljs-keyword">let</span> value = renderWithHooks(_current,workInProgress,Component);
+    <span class="hljs-built_in">window</span>.counter = value;
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Counter&#x7684;render&#x7ED3;&#x679C; &apos;</span>, value.props.children);
+    workInProgress.tag = FunctionComponent;
+    reconcileChildren(<span class="hljs-literal">null</span>, workInProgress, value);
+    <span class="hljs-keyword">return</span> workInProgress.child;
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">reconcileChildren</span>(<span class="hljs-params">current, workInProgress, nextChildren</span>) </span>{
+    <span class="hljs-keyword">let</span> childFiber = {
+        <span class="hljs-attr">tag</span>: HostComponent,
+        <span class="hljs-attr">type</span>: nextChildren.type
+    };
+    workInProgress.child = childFiber;
+}
+</code></pre>
+<h3 id="t204.5 ReactFiberHooks.js">4.5 ReactFiberHooks.js <a href="#t204.5 ReactFiberHooks.js"> # </a></h3>
+<p>src\ReactFiberHooks.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> ReactCurrentDispatcher = {
+    <span class="hljs-attr">current</span>: <span class="hljs-literal">null</span>
+}
+<span class="hljs-keyword">let</span> currentlyRenderingFiber = <span class="hljs-literal">null</span>;
+<span class="hljs-keyword">let</span> workInProgressHook = <span class="hljs-literal">null</span>;
+
+<span class="hljs-keyword">const</span> HooksDispatcherOnMount = {
+    <span class="hljs-attr">useReducer</span>: mountReducer
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useReducer</span>(<span class="hljs-params">reducer, initialArg</span>) </span>{
+    <span class="hljs-keyword">return</span> ReactCurrentDispatcher.current.useReducer(reducer, initialArg);
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">renderWithHooks</span>(<span class="hljs-params">_current, workInProgress, Component</span>) </span>{
+    currentlyRenderingFiber = workInProgress;
+    ReactCurrentDispatcher.current = HooksDispatcherOnMount;
+    <span class="hljs-keyword">let</span> children = Component();
+    <span class="hljs-built_in">window</span>.counter = children;
+    currentlyRenderingFiber = <span class="hljs-literal">null</span>;
+    <span class="hljs-keyword">return</span> children;
+}
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">mountReducer</span>(<span class="hljs-params">reducer, initialArg</span>) </span>{
+    <span class="hljs-keyword">const</span> hook = mountWorkInProgressHook();
+    <span class="hljs-keyword">let</span> initialState = initialArg;
+    hook.memoizedState = initialState;
+    <span class="hljs-keyword">const</span> queue = (hook.queue = {<span class="hljs-attr">pending</span>: <span class="hljs-literal">null</span>, <span class="hljs-attr">lastRenderedReducer</span>: reducer, <span class="hljs-attr">lastRenderedState</span>: initialState});
+    <span class="hljs-keyword">const</span> dispatch = dispatchAction.bind(<span class="hljs-literal">null</span>,currentlyRenderingFiber,queue);
+    <span class="hljs-keyword">return</span> [hook.memoizedState, dispatch];
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">mountWorkInProgressHook</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> hook = {
+        <span class="hljs-attr">memoizedState</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">queue</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">next</span>: <span class="hljs-literal">null</span>,
+    };
+    <span class="hljs-keyword">if</span> (workInProgressHook === <span class="hljs-literal">null</span>) {
+        currentlyRenderingFiber.memoizedState = workInProgressHook = hook;
+    } <span class="hljs-keyword">else</span> {
+        workInProgressHook = workInProgressHook.next = hook;
+    }
+    <span class="hljs-keyword">return</span> workInProgressHook;
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">dispatchAction</span>(<span class="hljs-params">fiber, queue, action</span>) </span>{
+   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;dispatchAction&apos;</span>);
+}
+</code></pre>
+<h2 id="t215.useReducer&#x66F4;&#x65B0;">5.useReducer&#x66F4;&#x65B0; <a href="#t215.useReducer&#x66F4;&#x65B0;"> # </a></h2>
+<h3 id="t225.1 ReactFiberHooks.js">5.1 ReactFiberHooks.js <a href="#t225.1 ReactFiberHooks.js"> # </a></h3>
+<p>src\ReactFiberHooks.js</p>
+<pre><code class="lang-diff"><span class="hljs-addition">+import { scheduleUpdateOnFiber } from &apos;./ReactFiberWorkLoop&apos;;</span>
+let ReactCurrentDispatcher = {
+    current: null
+}
+let currentlyRenderingFiber = null;
+let workInProgressHook = null;
+<span class="hljs-addition">+let currentHook = null;</span>
+const HooksDispatcherOnMount = {
+    useReducer: mountReducer
+}
+<span class="hljs-addition">+const HooksDispatcherOnUpdate = {</span>
+<span class="hljs-addition">+    useReducer: updateReducer</span>
+<span class="hljs-addition">+}</span>
+export function useReducer(reducer, initialArg) {
+    return ReactCurrentDispatcher.current.useReducer(reducer, initialArg);
+}
+
+export function renderWithHooks(_current, workInProgress, Component) {
+    currentlyRenderingFiber = workInProgress;
+<span class="hljs-addition">+   workInProgress.memoizedState = null;</span>
+<span class="hljs-deletion">-   ReactCurrentDispatcher.current = HooksDispatcherOnMount;</span>
+<span class="hljs-addition">+   if (_current !== null) {</span>
+<span class="hljs-addition">+        ReactCurrentDispatcher.current = HooksDispatcherOnUpdate;</span>
+<span class="hljs-addition">+   } else {</span>
+<span class="hljs-addition">+        ReactCurrentDispatcher.current = HooksDispatcherOnMount;</span>
+<span class="hljs-addition">+   }</span>
+    let children = Component();
+    window.counter = children;
+    currentlyRenderingFiber = null;
+<span class="hljs-addition">+   currentHook = null;</span>
+<span class="hljs-addition">+   workInProgressHook = null;</span>
+    return children;
+}
+<span class="hljs-addition">+function updateReducer(reducer) {</span>
+<span class="hljs-addition">+    const hook = updateWorkInProgressHook();</span>
+<span class="hljs-addition">+    const queue = hook.queue;</span>
+<span class="hljs-addition">+    queue.lastRenderedReducer = reducer;</span>
+<span class="hljs-addition">+    const current = currentHook;</span>
+<span class="hljs-addition">+    const pendingQueue = queue.pending;</span>
+<span class="hljs-addition">+    if (pendingQueue !== null) {</span>
+<span class="hljs-addition">+        const first = pendingQueue.next;</span>
+<span class="hljs-addition">+        let newState = current.memoizedState;</span>
+<span class="hljs-addition">+        let update = first;</span>
+<span class="hljs-addition">+        do {</span>
+<span class="hljs-addition">+            const action = update.action;</span>
+<span class="hljs-addition">+            newState = reducer(newState, action);</span>
+<span class="hljs-addition">+            update = update.next;</span>
+<span class="hljs-addition">+        } while (update !== null &amp;&amp; update !== first);</span>
+<span class="hljs-addition">+        queue.pending = null;</span>
+<span class="hljs-addition">+        hook.memoizedState = newState;</span>
+<span class="hljs-addition">+        queue.lastRenderedState = newState;</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    const dispatch = dispatchAction.bind(null,currentlyRenderingFiber,queue);</span>
+<span class="hljs-addition">+    return [hook.memoizedState, dispatch];</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+function updateWorkInProgressHook() {</span>
+<span class="hljs-addition">+    let nextCurrentHook;</span>
+<span class="hljs-addition">+    if (currentHook === null) {</span>
+<span class="hljs-addition">+        const current = currentlyRenderingFiber.alternate;</span>
+<span class="hljs-addition">+        nextCurrentHook = current.memoizedState;</span>
+<span class="hljs-addition">+    } else {</span>
+<span class="hljs-addition">+        nextCurrentHook = currentHook.next;</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    currentHook = nextCurrentHook;</span>
+<span class="hljs-addition">+    const newHook = {</span>
+<span class="hljs-addition">+        memoizedState: currentHook.memoizedState,</span>
+<span class="hljs-addition">+        queue: currentHook.queue,</span>
+<span class="hljs-addition">+        next: null,</span>
+<span class="hljs-addition">+    };</span>
+<span class="hljs-addition">+    if (workInProgressHook === null) {</span>
+<span class="hljs-addition">+        currentlyRenderingFiber.memoizedState = workInProgressHook = newHook;</span>
+<span class="hljs-addition">+    } else {</span>
+<span class="hljs-addition">+        workInProgressHook = workInProgressHook.next = newHook;</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    return workInProgressHook;</span>
+<span class="hljs-addition">+}</span>
+export function mountReducer(reducer, initialArg) {
+    const hook = mountWorkInProgressHook();
+    let initialState = initialArg;
+    hook.memoizedState = initialState;
+    const queue = (hook.queue = {pending: null, lastRenderedReducer: reducer, lastRenderedState: initialState});
+    const dispatch = dispatchAction.bind(null,currentlyRenderingFiber,queue);
+    return [hook.memoizedState, dispatch];
+}
+
+export function mountWorkInProgressHook() {
+    const hook = {
+        memoizedState: null,
+        queue: null,
+        next: null,
+    };
+    if (workInProgressHook <span class="hljs-comment">=== null) {</span>
+        currentlyRenderingFiber.memoizedState = workInProgressHook = hook;
+    } else {
+        workInProgressHook = workInProgressHook.next = hook;
+    }
+    return workInProgressHook;
+}
+
+export function dispatchAction(fiber, queue, action) {
+<span class="hljs-addition">+  const update = { action, next: null };</span>
+<span class="hljs-addition">+  const pending = queue.pending;</span>
+<span class="hljs-addition">+  if (pending === null) {</span>
+<span class="hljs-addition">+      update.next = update;</span>
+<span class="hljs-addition">+  } else {</span>
+<span class="hljs-addition">+      update.next = pending.next;</span>
+<span class="hljs-addition">+      pending.next = update;</span>
+<span class="hljs-addition">+  }</span>
+<span class="hljs-addition">+  queue.pending = update;</span>
+<span class="hljs-addition">+  const lastRenderedReducer = queue.lastRenderedReducer;</span>
+<span class="hljs-addition">+  const currentState = queue.lastRenderedState;</span>
+<span class="hljs-addition">+  const eagerState = lastRenderedReducer(currentState, action);</span>
+<span class="hljs-addition">+  if (Object.is(eagerState, currentState)) {</span>
+<span class="hljs-addition">+      return</span>
+<span class="hljs-addition">+  }</span>
+<span class="hljs-addition">+  scheduleUpdateOnFiber(fiber);</span>
+}
+</code></pre>
+<h3 id="t235.2 ReactFiberWorkLoop.js">5.2 ReactFiberWorkLoop.js <a href="#t235.2 ReactFiberWorkLoop.js"> # </a></h3>
+<p>src\ReactFiberWorkLoop.js</p>
+<pre><code class="lang-diff">import { beginWork } from &apos;./ReactFiberBeginWork&apos;;
+let workInProgress;
+
+export function workLoop() {
+    while (workInProgress) {
+        workInProgress = performUnitOfWork(workInProgress);
+    }
+}
+export function performUnitOfWork(unitOfWork) {
+    let current = unitOfWork.alternate;
+    return beginWork(current, unitOfWork);
+}
+<span class="hljs-addition">+export function scheduleUpdateOnFiber(fiber) {</span>
+<span class="hljs-addition">+    let newFiber = {</span>
+<span class="hljs-addition">+        ...fiber,</span>
+<span class="hljs-addition">+        alternate: fiber</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    workInProgress = newFiber;</span>
+<span class="hljs-addition">+    workLoop();</span>
+}
+export function render(fiber) {
+    workInProgress = fiber;
+    workLoop();
+}
+</code></pre>
+<h3 id="t245.3 ReactFiberBeginWork.js">5.3 ReactFiberBeginWork.js <a href="#t245.3 ReactFiberBeginWork.js"> # </a></h3>
+<p>src\ReactFiberBeginWork.js</p>
+<pre><code class="lang-diff">import { IndeterminateComponent, FunctionComponent, HostComponent } from &apos;./ReactWorkTags&apos;;
+import { renderWithHooks } from &apos;./ReactFiberHooks&apos;;
+export function beginWork(current, workInProgress) {
+<span class="hljs-addition">+    if (current !== null) {</span>
+<span class="hljs-addition">+        switch (workInProgress.tag) {</span>
+<span class="hljs-addition">+            case FunctionComponent: {</span>
+<span class="hljs-addition">+                const Component = workInProgress.type;</span>
+<span class="hljs-addition">+                return updateFunctionComponent(</span>
+<span class="hljs-addition">+                    current,</span>
+<span class="hljs-addition">+                    workInProgress,</span>
+<span class="hljs-addition">+                    Component,</span>
+<span class="hljs-addition">+                );</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+            default:</span>
+<span class="hljs-addition">+                break;</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+    } else {</span>
+        switch (workInProgress.tag) {
+            case IndeterminateComponent: {
+                return mountIndeterminateComponent(
+                    current,
+                    workInProgress,
+                    workInProgress.type,
+                );
+            }
+            default:
+                break;
+        }
+    }
+}
+<span class="hljs-addition">+function updateFunctionComponent(current,workInProgress,Component){</span>
+<span class="hljs-addition">+    let nextChildren = renderWithHooks(current,workInProgress,Component);</span>
+<span class="hljs-addition">+    window.counter = nextChildren;</span>
+<span class="hljs-addition">+    console.log(&apos;Counter&#x7684;render&#x7ED3;&#x679C; &apos;, nextChildren.props.children);</span>
+<span class="hljs-addition">+    reconcileChildren(current, workInProgress, nextChildren);</span>
+<span class="hljs-addition">+    return workInProgress.child;</span>
+<span class="hljs-addition">+}</span>
+export function mountIndeterminateComponent(_current, workInProgress, Component) {
+    let value = renderWithHooks(_current, workInProgress, Component);
+    window.counter = value;
+    console.log(&apos;Counter&#x7684;render&#x7ED3;&#x679C; &apos;, value.props.children);
+    workInProgress.tag = FunctionComponent;
+    reconcileChildren(null, workInProgress, value);
+    return workInProgress.child;
+}
+function reconcileChildren(current, workInProgress, nextChildren) {
+    let childFiber = {
+        tag: HostComponent,
+        type: nextChildren.type
+    };
+    workInProgress.child = childFiber;
+}
+</code></pre>
+<h2 id="t256.useState">6.useState <a href="#t256.useState"> # </a></h2>
+<h3 id="t266.1 src\index.js">6.1 src\index.js <a href="#t266.1 src\index.js"> # </a></h3>
+<p>src\index.js</p>
+<pre><code class="lang-diff">import * as React from &apos;react&apos;;
+import { IndeterminateComponent } from &apos;./ReactWorkTags&apos;;
+import {render} from &apos;./ReactFiberWorkLoop&apos;;
+<span class="hljs-addition">+import {useReducer,useState} from &apos;./ReactFiberHooks&apos;</span>
+
+function Counter() {
+<span class="hljs-addition">+  const [number, setNumber] = useState(0);</span>
+  return (
+<span class="hljs-addition">+   &lt;div onClick={() =&gt; {setNumber(number+1)}}&gt;{number}&lt;/div&gt;</span>
+  )
+}
+let workInProgress = {
+  tag:IndeterminateComponent,
+  type: Counter,
+  alternate:null
+}
+render(workInProgress);
+</code></pre>
+<h3 id="t276.2 src\ReactFiberHooks.js">6.2 src\ReactFiberHooks.js <a href="#t276.2 src\ReactFiberHooks.js"> # </a></h3>
+<p>src\ReactFiberHooks.js</p>
+<pre><code class="lang-diff">import { scheduleUpdateOnFiber } from &apos;./ReactFiberWorkLoop&apos;;
+let ReactCurrentDispatcher = {
+    current: null
+}
+let currentlyRenderingFiber = null;
+let workInProgressHook = null;
+let currentHook = null;
+const HooksDispatcherOnMount = {
+    useReducer: mountReducer,
+<span class="hljs-addition">+   useState: mountState</span>
+}
+const HooksDispatcherOnUpdate = {
+    useReducer: updateReducer,
+<span class="hljs-addition">+   useState: updateState</span>
+}
+<span class="hljs-addition">+function mountState(initialState) {</span>
+<span class="hljs-addition">+    const hook = mountWorkInProgressHook();</span>
+<span class="hljs-addition">+    hook.memoizedState = initialState;</span>
+<span class="hljs-addition">+    const queue = (hook.queue = { pending: null,lastRenderedReducer: basicStateReducer, lastRenderedState: initialState });</span>
+<span class="hljs-addition">+    const dispatch = dispatchAction.bind(null, currentlyRenderingFiber, queue)</span>
+<span class="hljs-addition">+    return [hook.memoizedState, dispatch];</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+</span>
+<span class="hljs-addition">+function basicStateReducer(state, action) {</span>
+<span class="hljs-addition">+    return typeof action === &apos;function&apos; ? action(state) : action;</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+</span>
+<span class="hljs-addition">+function updateState(initialState) {</span>
+<span class="hljs-addition">+    return updateReducer(basicStateReducer, initialState);</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+</span>
+<span class="hljs-addition">+export function useState(initialState) {</span>
+<span class="hljs-addition">+    return ReactCurrentDispatcher.current.useState(initialState);</span>
+<span class="hljs-addition">+}</span>
+export function useReducer(reducer, initialArg) {
+    return ReactCurrentDispatcher.current.useReducer(reducer, initialArg);
+}
+
+export function renderWithHooks(_current, workInProgress, Component) {
+    currentlyRenderingFiber = workInProgress;
+    workInProgress.memoizedState = null;
+    if (_current !== null) {
+        ReactCurrentDispatcher.current = HooksDispatcherOnUpdate;
+    } else {
+        ReactCurrentDispatcher.current = HooksDispatcherOnMount;
+    }
+    let children = Component();
+    window.counter = children;
+    currentlyRenderingFiber = null;
+    currentHook = null;
+    workInProgressHook = null;
+    return children;
+}
+function updateReducer(reducer) {
+    const hook = updateWorkInProgressHook();
+    const queue = hook.queue;
+    queue.lastRenderedReducer = reducer;
+    const current = currentHook;
+    const pendingQueue = queue.pending;
+    if (pendingQueue !== null) {
+        const first = pendingQueue.next;
+        let newState = current.memoizedState;
+        let update = first;
+        do {
+            const action = update.action;
+            newState = reducer(newState, action);
+            update = update.next;
+        } while (update !== null &amp;&amp; update !== first);
+        queue.pending = null;
+        hook.memoizedState = newState;
+        queue.lastRenderedState = newState;
+    }
+    const dispatch = dispatchAction.bind(null,currentlyRenderingFiber,queue);
+    return [hook.memoizedState, dispatch];
+}
+function updateWorkInProgressHook() {
+    let nextCurrentHook;
+    if (currentHook <span class="hljs-comment">=== null) {</span>
+        const current = currentlyRenderingFiber.alternate;
+        nextCurrentHook = current.memoizedState;
+    } else {
+        nextCurrentHook = currentHook.next;
+    }
+    currentHook = nextCurrentHook;
+
+    const newHook = {
+        memoizedState: currentHook.memoizedState,
+        queue: currentHook.queue,
+        next: null,
+    };
+    if (workInProgressHook <span class="hljs-comment">=== null) {</span>
+        currentlyRenderingFiber.memoizedState = workInProgressHook = newHook;
+    } else {
+        workInProgressHook = workInProgressHook.next = newHook;
+    }
+    return workInProgressHook;
+}
+export function mountReducer(reducer, initialArg) {
+    const hook = mountWorkInProgressHook();
+    let initialState = initialArg;
+    hook.memoizedState = initialState;
+    const queue = (hook.queue = {pending: null, lastRenderedReducer: reducer, lastRenderedState: initialState});
+    const dispatch = dispatchAction.bind(null,currentlyRenderingFiber,queue);
+    return [hook.memoizedState, dispatch];
+}
+
+export function mountWorkInProgressHook() {
+    const hook = {
+        memoizedState: null,
+        queue: null,
+        next: null,
+    };
+    if (workInProgressHook <span class="hljs-comment">=== null) {</span>
+        currentlyRenderingFiber.memoizedState = workInProgressHook = hook;
+    } else {
+        workInProgressHook = workInProgressHook.next = hook;
+    }
+    return workInProgressHook;
+}
+
+export function dispatchAction(fiber, queue, action) {
+   const update = { action, next: null };
+   const pending = queue.pending;
+   if (pending <span class="hljs-comment">=== null) {</span>
+       update.next = update;
+   } else {
+       update.next = pending.next;
+       pending.next = update;
+   }
+   queue.pending = update;
+const lastRenderedReducer = queue.lastRenderedReducer;
+   const currentState = queue.lastRenderedState;
+   const eagerState = lastRenderedReducer(currentState, action);
+   if (Object.is(eagerState, currentState)) {
+       return
+   }
+   scheduleUpdateOnFiber(fiber);
+}
+</code></pre>
+<h2 id="t287.useEffect">7.useEffect <a href="#t287.useEffect"> # </a></h2>
+<ul>
+<li>React&#x5DE5;&#x4F5C;&#x7684;&#x4E09;&#x4E2A;&#x9636;&#x6BB5;<ul>
+<li>scheduler(&#x8C03;&#x5EA6;) &#x786E;&#x5B9A;&#x6700;&#x9AD8;&#x4F18;&#x7684;&#x4EFB;&#x52A1;&#x5E76;&#x8FDB;&#x5165;<code>reconciler</code></li>
+<li>reconciler(&#x534F;&#x8C03;) &#x627E;&#x51FA;&#x53D8;&#x5316;&#x7684;&#x5185;&#x5BB9;</li>
+<li>renderer(&#x6E32;&#x67D3;) &#x628A;&#x53D8;&#x5316;&#x7684;&#x5185;&#x5BB9;&#x66F4;&#x65B0;&#x5230;DOM&#x4E0A;<ul>
+<li>beforeMutation  &#x66F4;&#x65B0;DOM&#x524D;</li>
+<li>mutation &#x66F4;&#x65B0;DOM</li>
+<li>layout &#x66F4;&#x65B0;DOM&#x540E;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://img.zhufengpeixun.com/9e2ae1e1704713f21f5bf6d9ac6dc990" alt="9e2ae1e1704713f21f5bf6d9ac6dc990"></p>
+<p><img src="https://img.zhufengpeixun.com/5e3f17b04be8f6b223ddb55d0187acb4" alt="f7a2a93f0896e5f697793a2a4c7d4b58"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">fiberFlags</th>
+<th style="text-align:left">hookFlags</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">useEffect</td>
+<td style="text-align:left">UpdateEffect&#x6216;PassiveEffect</td>
+<td style="text-align:left">HookHasEffect&#x6216;HookPassive</td>
+</tr>
+<tr>
+<td style="text-align:left">useLayoutEffect</td>
+<td style="text-align:left">UpdateEffect</td>
+<td style="text-align:left">HookHasEffect&#x6216;HookLayout</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x9636;&#x6BB5;</th>
+<th style="text-align:left">useEffect</th>
+<th style="text-align:left">useLayoutEffect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">commitBeforeMutationEffects</td>
+<td style="text-align:left">&#x8C03;&#x5EA6;flushPassiveEffects</td>
+<td style="text-align:left">&#x65E0;</td>
+</tr>
+<tr>
+<td style="text-align:left">commitMutationEffects</td>
+<td style="text-align:left">&#x65E0;</td>
+<td style="text-align:left">&#x6267;&#x884C;destroy</td>
+</tr>
+<tr>
+<td style="text-align:left">commitLayoutEffects</td>
+<td style="text-align:left">&#x6CE8;&#x518C;destroy&#x3001;create</td>
+<td style="text-align:left">&#x6267;&#x884C;create</td>
+</tr>
+<tr>
+<td style="text-align:left">commit&#x5B8C;&#x6210;&#x540E;</td>
+<td style="text-align:left">&#x6267;&#x884C;flushPassiveEffects</td>
+<td style="text-align:left">&#x65E0;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t297.1 src\index.js">7.1 src\index.js <a href="#t297.1 src\index.js"> # </a></h3>
+<p>src\index.js</p>
+<pre><code class="lang-diff">import * as React from &apos;react&apos;;
+import { IndeterminateComponent } from &apos;./ReactWorkTags&apos;;
+import {render} from &apos;./ReactFiberWorkLoop&apos;;
+import {useReducer,useState,useEffect} from &apos;./ReactFiberHooks&apos;
+
+function Counter() {
+  const [number, setNumber] = useState(0);
+<span class="hljs-addition">+ useEffect(()=&gt;{</span>
+<span class="hljs-addition">+   console.log(&apos;useEffect1&apos;);</span>
+<span class="hljs-addition">+   return ()=&gt;{</span>
+<span class="hljs-addition">+     console.log(&apos;destroy useEffect1&apos;);</span>
+<span class="hljs-addition">+   }</span>
+<span class="hljs-addition">+ });</span>
+<span class="hljs-addition">+ useEffect(()=&gt;{</span>
+<span class="hljs-addition">+   console.log(&apos;useEffect2&apos;);</span>
+<span class="hljs-addition">+   return ()=&gt;{</span>
+<span class="hljs-addition">+     console.log(&apos;destroy useEffect2&apos;);</span>
+<span class="hljs-addition">+   }</span>
+<span class="hljs-addition">+ });</span>
+<span class="hljs-addition">+ useEffect(()=&gt;{</span>
+<span class="hljs-addition">+   console.log(&apos;useEffect3&apos;);</span>
+<span class="hljs-addition">+   return ()=&gt;{</span>
+<span class="hljs-addition">+     console.log(&apos;destroy useEffect3&apos;);</span>
+<span class="hljs-addition">+   }</span>
+  });
+  return (
+    &lt;div onClick={() =&gt; {setNumber(number+1)}}&gt;{number}&lt;/div&gt;
+  )
+}
+let workInProgress = {
+  tag:IndeterminateComponent,
+  type: Counter,
+  alternate:null,
+  updateQueue:null
+}
+render(workInProgress);
+</code></pre>
+<h3 id="t307.2 ReactFiberFlags.js">7.2 ReactFiberFlags.js <a href="#t307.2 ReactFiberFlags.js"> # </a></h3>
+<ul>
+<li>NoFlags &#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x526F;&#x4F5C;&#x7528;</li>
+<li>PerformedWork &#x6709;&#x5DE5;&#x4F5C;&#x8981;&#x505A;</li>
+<li>Update  &#x6709;<code>useLayoutEffect</code>&#x5BF9;&#x5E94;&#x526F;&#x4F5C;&#x7528;</li>
+<li>Passive &#x6709;<code>useEffect</code>&#x5BF9;&#x5E94;&#x7684;&#x526F;&#x4F5C;&#x7528;</li>
+</ul>
+<p>src\ReactFiberFlags.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> NoFlags = <span class="hljs-comment">/*                      */</span> <span class="hljs-number">0b000000000000000000</span>;<span class="hljs-comment">//0</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> PerformedWork = <span class="hljs-comment">/*                */</span> <span class="hljs-number">0b000000000000000001</span>;<span class="hljs-comment">//1</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> Update = <span class="hljs-comment">/*                       */</span> <span class="hljs-number">0b000000000000000100</span>;<span class="hljs-comment">//4</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> Passive = <span class="hljs-comment">/*                      */</span> <span class="hljs-number">0b000000001000000000</span>;<span class="hljs-comment">//512</span>
+</code></pre>
+<h3 id="t317.3 ReactHookEffectTags.js">7.3 ReactHookEffectTags.js <a href="#t317.3 ReactHookEffectTags.js"> # </a></h3>
+<ul>
+<li>NoFlags</li>
+<li>HasEffect &#x6709;effect</li>
+<li>Layout <code>useLayoutEffect</code>&#x521B;&#x5EFA;&#x7684;effect</li>
+<li>Passive <code>useEffect</code>&#x521B;&#x5EFA;&#x7684;effect</li>
+</ul>
+<p>src\ReactHookEffectTags.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> NoFlags = <span class="hljs-comment">/*  */</span> <span class="hljs-number">0b000</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> HasEffect = <span class="hljs-comment">/* */</span> <span class="hljs-number">0b001</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> Layout = <span class="hljs-comment">/*    */</span> <span class="hljs-number">0b010</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> Passive = <span class="hljs-comment">/*   */</span> <span class="hljs-number">0b100</span>;
+</code></pre>
+<h3 id="t327.4 ReactFiberHooks.js">7.4 ReactFiberHooks.js <a href="#t327.4 ReactFiberHooks.js"> # </a></h3>
+<p>src\ReactFiberHooks.js</p>
+<pre><code class="lang-diff">import { scheduleUpdateOnFiber } from &apos;./ReactFiberWorkLoop&apos;;
+<span class="hljs-addition">+import { Update as UpdateEffect, Passive as PassiveEffect } from &apos;./ReactFiberFlags&apos;;</span>
+<span class="hljs-addition">+import { HasEffect as HookHasEffect, Passive as HookPassive} from &apos;./ReactHookEffectTags&apos;;</span>
+let ReactCurrentDispatcher = {
+    current: null
+}
+let currentlyRenderingFiber = null;
+let workInProgressHook = null;
+let currentHook = null;
+const HooksDispatcherOnMount = {
+    useReducer: mountReducer,
+    useState: mountState,
+<span class="hljs-addition">+   useEffect: mountEffect</span>
+}
+const HooksDispatcherOnUpdate = {
+    useReducer: updateReducer,
+    useState: updateState,
+<span class="hljs-addition">+   useEffect: updateEffect</span>
+}
+<span class="hljs-addition">+export function mountEffect(create, deps) {</span>
+<span class="hljs-addition">+    return mountEffectImpl(</span>
+<span class="hljs-addition">+        UpdateEffect | PassiveEffect,</span>
+<span class="hljs-addition">+        HookPassive,</span>
+<span class="hljs-addition">+        create,</span>
+<span class="hljs-addition">+        deps</span>
+<span class="hljs-addition">+    );</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+function mountEffectImpl(fiberFlags, hookFlags, create, deps) {</span>
+<span class="hljs-addition">+    const hook = mountWorkInProgressHook();</span>
+<span class="hljs-addition">+    const nextDeps = deps === undefined ? null : deps;</span>
+<span class="hljs-addition">+    currentlyRenderingFiber.flags |= fiberFlags;</span>
+<span class="hljs-addition">+    hook.memoizedState = pushEffect(</span>
+<span class="hljs-addition">+        HookHasEffect | hookFlags,</span>
+<span class="hljs-addition">+        create,</span>
+<span class="hljs-addition">+        undefined,</span>
+<span class="hljs-addition">+        nextDeps,</span>
+<span class="hljs-addition">+    );</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+function pushEffect(tag, create, destroy, deps) {</span>
+<span class="hljs-addition">+    const effect = { tag, create, destroy, deps, next: null};</span>
+<span class="hljs-addition">+    let componentUpdateQueue = (currentlyRenderingFiber.updateQueue);</span>
+<span class="hljs-addition">+    if (componentUpdateQueue === null) {</span>
+<span class="hljs-addition">+        componentUpdateQueue = createFunctionComponentUpdateQueue();</span>
+<span class="hljs-addition">+        currentlyRenderingFiber.updateQueue = componentUpdateQueue;</span>
+<span class="hljs-addition">+        componentUpdateQueue.lastEffect = effect.next = effect;</span>
+<span class="hljs-addition">+    } else {</span>
+<span class="hljs-addition">+        const lastEffect = componentUpdateQueue.lastEffect;</span>
+<span class="hljs-addition">+        if (lastEffect === null) {</span>
+<span class="hljs-addition">+            componentUpdateQueue.lastEffect = effect.next = effect;</span>
+<span class="hljs-addition">+        } else {</span>
+<span class="hljs-addition">+            const firstEffect = lastEffect.next;</span>
+<span class="hljs-addition">+            lastEffect.next = effect;</span>
+<span class="hljs-addition">+            effect.next = firstEffect;</span>
+<span class="hljs-addition">+            componentUpdateQueue.lastEffect = effect;</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    return effect;</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+function createFunctionComponentUpdateQueue() {</span>
+<span class="hljs-addition">+    return {</span>
+<span class="hljs-addition">+        lastEffect: null,</span>
+<span class="hljs-addition">+    };</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+export function updateEffect(create, deps,) {</span>
+<span class="hljs-addition">+    return updateEffectImpl(</span>
+<span class="hljs-addition">+        PassiveEffect,</span>
+<span class="hljs-addition">+        HookPassive,</span>
+<span class="hljs-addition">+        create,</span>
+<span class="hljs-addition">+        deps,</span>
+<span class="hljs-addition">+    );</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+function updateEffectImpl(fiberFlags, hookFlags, create, deps) {</span>
+<span class="hljs-addition">+    const hook = updateWorkInProgressHook();</span>
+<span class="hljs-addition">+    const nextDeps = deps === undefined ? null : deps;</span>
+<span class="hljs-addition">+    let destroy = undefined;</span>
+<span class="hljs-addition">+    if (currentHook !== null) {</span>
+<span class="hljs-addition">+        const prevEffect = currentHook.memoizedState;</span>
+<span class="hljs-addition">+        destroy = prevEffect.destroy;</span>
+<span class="hljs-addition">+        if (nextDeps !== null) {</span>
+<span class="hljs-addition">+            const prevDeps = prevEffect.deps;</span>
+<span class="hljs-addition">+            if (areHookInputsEqual(nextDeps, prevDeps)) {</span>
+<span class="hljs-addition">+                pushEffect(hookFlags, create, destroy, nextDeps);</span>
+<span class="hljs-addition">+                return;</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    currentlyRenderingFiber.flags |= fiberFlags;</span>
+<span class="hljs-addition">+    hook.memoizedState = pushEffect(HookHasEffect | hookFlags, create, destroy, nextDeps)</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+function areHookInputsEqual(nextDeps, prevDeps) {</span>
+<span class="hljs-addition">+    if (prevDeps === null) {</span>
+<span class="hljs-addition">+        return false;</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    for (let i = 0; i &lt; prevDeps.length &amp;&amp; i &lt; nextDeps.length; i++) {</span>
+<span class="hljs-addition">+        if (Object.is(nextDeps[i], prevDeps[i])) {</span>
+<span class="hljs-addition">+            continue;</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+        return false;</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    return true;</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+function mountState(initialState) {</span>
+<span class="hljs-addition">+    const hook = mountWorkInProgressHook();</span>
+<span class="hljs-addition">+    hook.memoizedState = initialState;</span>
+<span class="hljs-addition">+    const queue = (hook.queue = { pending: null,lastRenderedReducer: basicStateReducer, lastRenderedState: initialState });</span>
+<span class="hljs-addition">+    const dispatch = dispatchAction.bind(null, currentlyRenderingFiber, queue)</span>
+<span class="hljs-addition">+    return [hook.memoizedState, dispatch];</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+export function useEffect(reducer, initialArg) {</span>
+<span class="hljs-addition">+    return ReactCurrentDispatcher.current.useEffect(reducer, initialArg);</span>
+<span class="hljs-addition">+}</span>
+function basicStateReducer(state, action) {
+    return typeof action <span class="hljs-comment">=== &apos;function&apos; ? action(state) : action;</span>
+}
+
+function updateState(initialState) {
+    return updateReducer(basicStateReducer, initialState);
+}
+
+export function useState(initialState) {
+    return ReactCurrentDispatcher.current.useState(initialState);
+}
+export function useReducer(reducer, initialArg) {
+    return ReactCurrentDispatcher.current.useReducer(reducer, initialArg);
+}
+
+export function renderWithHooks(_current, workInProgress, Component) {
+    currentlyRenderingFiber = workInProgress;
+    workInProgress.memoizedState = null;
+<span class="hljs-addition">+   workInProgress.updateQueue = null;</span>
+    if (_current !== null) {
+        ReactCurrentDispatcher.current = HooksDispatcherOnUpdate;
+    } else {
+        ReactCurrentDispatcher.current = HooksDispatcherOnMount;
+    }
+    let children = Component();
+    window.counter = children;
+    currentlyRenderingFiber = null;
+    currentHook = null;
+    workInProgressHook = null;
+    return children;
+}
+function updateReducer(reducer) {
+    const hook = updateWorkInProgressHook();
+    const queue = hook.queue;
+    queue.lastRenderedReducer = reducer;
+    const current = currentHook;;
+    const pendingQueue = queue.pending;
+    if (pendingQueue !== null) {
+        const first = pendingQueue.next;
+        let newState = current.memoizedState;
+        let update = first;
+        do {
+            const action = update.action;
+            newState = reducer(newState, action);
+            update = update.next;
+        } while (update !== null &amp;&amp; update !== first);
+        queue.pending = null;
+        hook.memoizedState = newState;
+        queue.lastRenderedState = newState;
+    }
+    const dispatch = dispatchAction.bind(null,currentlyRenderingFiber,queue);
+    return [hook.memoizedState, dispatch];
+}
+function updateWorkInProgressHook() {
+    let nextCurrentHook;
+    if (currentHook <span class="hljs-comment">=== null) {</span>
+        const current = currentlyRenderingFiber.alternate;
+        nextCurrentHook = current.memoizedState;
+    } else {
+        nextCurrentHook = currentHook.next;
+    }
+    currentHook = nextCurrentHook;
+
+    const newHook = {
+        memoizedState: currentHook.memoizedState,
+        queue: currentHook.queue,
+        next: null,
+    };
+    if (workInProgressHook <span class="hljs-comment">=== null) {</span>
+        currentlyRenderingFiber.memoizedState = workInProgressHook = newHook;
+    } else {
+        workInProgressHook = workInProgressHook.next = newHook;
+    }
+    return workInProgressHook;
+}
+export function mountReducer(reducer, initialArg) {
+    const hook = mountWorkInProgressHook();
+    let initialState = initialArg;
+    hook.memoizedState = initialState;
+    const queue = (hook.queue = {pending: null, lastRenderedReducer: reducer, lastRenderedState: initialState});
+    const dispatch = dispatchAction.bind(null,currentlyRenderingFiber,queue);
+    return [hook.memoizedState, dispatch];
+}
+
+export function mountWorkInProgressHook() {
+    const hook = {
+        memoizedState: null,
+        queue: null,
+        next: null,
+    };
+    if (workInProgressHook <span class="hljs-comment">=== null) {</span>
+        currentlyRenderingFiber.memoizedState = workInProgressHook = hook;
+    } else {
+        workInProgressHook = workInProgressHook.next = hook;
+    }
+    return workInProgressHook;
+}
+
+export function dispatchAction(fiber, queue, action) {
+   const update = { action, next: null };
+   const pending = queue.pending;
+   if (pending <span class="hljs-comment">=== null) {</span>
+       update.next = update;
+   } else {
+       update.next = pending.next;
+       pending.next = update;
+   }
+   queue.pending = update;
+      const lastRenderedReducer = queue.lastRenderedReducer;
+   const currentState = queue.lastRenderedState;
+   const eagerState = lastRenderedReducer(currentState, action);
+   if (Object.is(eagerState, currentState)) {
+       return
+   }
+   scheduleUpdateOnFiber(fiber);
+}
+</code></pre>
+<h3 id="t337.5 ReactFiberWorkLoop.js">7.5 ReactFiberWorkLoop.js <a href="#t337.5 ReactFiberWorkLoop.js"> # </a></h3>
+<p>src\ReactFiberWorkLoop.js</p>
+<pre><code class="lang-diff">import { beginWork } from &apos;./ReactFiberBeginWork&apos;;
+<span class="hljs-addition">+import {Update, Passive, NoFlags } from &apos;./ReactFiberFlags&apos;;</span>
+<span class="hljs-addition">+import { commitLifeCycles as commitLayoutEffectOnFiber } from &apos;./ReactFiberCommitWork&apos;;</span>
+let workInProgress;
+<span class="hljs-addition">+let finishedWork = null</span>
+<span class="hljs-addition">+let pendingPassiveHookEffectsMount = [];</span>
+<span class="hljs-addition">+let pendingPassiveHookEffectsUnmount = [];</span>
+export function workLoop() {
+    while (workInProgress) {
+        workInProgress = performUnitOfWork(workInProgress);
+    }
+<span class="hljs-addition">+   commitRoot();</span>
+}
+<span class="hljs-addition">+function commitRoot() {</span>
+<span class="hljs-addition">+    if (!finishedWork) return;</span>
+<span class="hljs-addition">+    commitBeforeMutationEffects();</span>
+<span class="hljs-addition">+    commitMutationEffects();</span>
+<span class="hljs-addition">+    commitLayoutEffects();</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+export function enqueuePendingPassiveHookEffectMount(fiber, effect,) {</span>
+<span class="hljs-addition">+    pendingPassiveHookEffectsMount.push(effect, fiber);</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+</span>
+<span class="hljs-addition">+export function enqueuePendingPassiveHookEffectUnmount(fiber, effect) {</span>
+<span class="hljs-addition">+    pendingPassiveHookEffectsUnmount.push(effect, fiber);</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+function commitLayoutEffects() {</span>
+<span class="hljs-addition">+    const flags = finishedWork.flags;</span>
+<span class="hljs-addition">+    if (flags &amp; Update) {</span>
+<span class="hljs-addition">+        const current = finishedWork.alternate;</span>
+<span class="hljs-addition">+        commitLayoutEffectOnFiber(finishedWork, current, finishedWork);</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+function commitMutationEffects() {</span>
+<span class="hljs-addition">+</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+</span>
+<span class="hljs-addition">+function commitBeforeMutationEffects() {</span>
+<span class="hljs-addition">+    const flags = finishedWork.flags;</span>
+<span class="hljs-addition">+    if ((flags &amp; Passive) !== NoFlags) {</span>
+<span class="hljs-addition">+        setTimeout(flushPassiveEffects);</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+function flushPassiveEffects() {</span>
+<span class="hljs-addition">+    const unmountEffects = pendingPassiveHookEffectsUnmount;</span>
+<span class="hljs-addition">+    pendingPassiveHookEffectsUnmount = [];</span>
+<span class="hljs-addition">+    for (let i = 0; i &lt; unmountEffects.length; i += 2) {</span>
+<span class="hljs-addition">+        const effect = unmountEffects[i];</span>
+<span class="hljs-addition">+        const destroy = effect.destroy;</span>
+<span class="hljs-addition">+        effect.destroy = undefined;</span>
+<span class="hljs-addition">+        if (typeof destroy === &apos;function&apos;) {</span>
+<span class="hljs-addition">+            destroy();</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+</span>
+<span class="hljs-addition">+    const mountEffects = pendingPassiveHookEffectsMount;</span>
+<span class="hljs-addition">+    pendingPassiveHookEffectsMount = [];</span>
+<span class="hljs-addition">+    for (let i = 0; i &lt; mountEffects.length; i += 2) {</span>
+<span class="hljs-addition">+        const effect = mountEffects[i]</span>
+<span class="hljs-addition">+        const create = effect.create;</span>
+<span class="hljs-addition">+        effect.destroy = create();</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+}</span>
+export function performUnitOfWork(unitOfWork) {
+    let current = unitOfWork.alternate;
+    return beginWork(current, unitOfWork);
+}
+export function scheduleUpdateOnFiber(fiber) {
+    let newFiber = {
+        ...fiber,
+        alternate: fiber
+    }
+<span class="hljs-addition">+   finishedWork = workInProgress = newFiber;</span>
+    workLoop();
+}
+export function render(fiber) {
+<span class="hljs-addition">+   finishedWork = workInProgress = fiber;</span>
+    workLoop();
+}
+</code></pre>
+<h3 id="t347.6 ReactFiberCommitWork.js">7.6 ReactFiberCommitWork.js <a href="#t347.6 ReactFiberCommitWork.js"> # </a></h3>
+<p>src\ReactFiberCommitWork.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { FunctionComponent } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./ReactWorkTags&apos;</span>;
+<span class="hljs-keyword">import</span> {
+    Layout <span class="hljs-keyword">as</span> HookLayout, HasEffect <span class="hljs-keyword">as</span> HookHasEffect,
+    Passive <span class="hljs-keyword">as</span> HookPassive, NoFlags <span class="hljs-keyword">as</span> NoHookEffect
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./ReactHookEffectTags&apos;</span>;
+<span class="hljs-keyword">import</span> {
+    enqueuePendingPassiveHookEffectMount,
+    enqueuePendingPassiveHookEffectUnmount,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./ReactFiberWorkLoop&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">commitLifeCycles</span>(<span class="hljs-params">finishedRoot, current, finishedWork</span>) </span>{
+    <span class="hljs-keyword">switch</span> (finishedWork.tag) {
+        <span class="hljs-keyword">case</span> FunctionComponent:
+            schedulePassiveEffects(finishedWork);
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">default</span>:
+            <span class="hljs-keyword">break</span>;
+    }
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">schedulePassiveEffects</span>(<span class="hljs-params">finishedWork</span>) </span>{
+    <span class="hljs-keyword">const</span> updateQueue = finishedWork.updateQueue;
+    <span class="hljs-keyword">const</span> lastEffect = updateQueue !== <span class="hljs-literal">null</span> ? updateQueue.lastEffect : <span class="hljs-literal">null</span>;
+    <span class="hljs-keyword">if</span> (lastEffect !== <span class="hljs-literal">null</span>) {
+        <span class="hljs-keyword">const</span> firstEffect = lastEffect.next;
+        <span class="hljs-keyword">let</span> effect = firstEffect;
+        <span class="hljs-keyword">do</span> {
+            <span class="hljs-keyword">const</span> { next, tag } = effect;
+            <span class="hljs-keyword">if</span> ((tag &amp; HookPassive) !== NoHookEffect &amp;&amp; (tag &amp; HookHasEffect) !== NoHookEffect) {
+                enqueuePendingPassiveHookEffectUnmount(finishedWork, effect);
+                enqueuePendingPassiveHookEffectMount(finishedWork, effect);
+            }
+            effect = next;
+        } <span class="hljs-keyword">while</span> (effect !== firstEffect);
+    }
+}
+</code></pre>
+<h2 id="t358.useLayoutEffect">8.useLayoutEffect <a href="#t358.useLayoutEffect"> # </a></h2>
+<p><img src="https://img.zhufengpeixun.com/92f53cdf5c22c78086bef8ba7c825502" alt="92f53cdf5c22c78086bef8ba7c825502"></p>
+<h3 id="t368.1.src\index.js">8.1.src\index.js <a href="#t368.1.src\index.js"> # </a></h3>
+<pre><code class="lang-diff">import * as React from &apos;react&apos;;
+import { IndeterminateComponent } from &apos;./ReactWorkTags&apos;;
+import {render} from &apos;./ReactFiberWorkLoop&apos;;
+<span class="hljs-addition">+import {useReducer,useState,useEffect,useLayoutEffect} from &apos;./ReactFiberHooks&apos;</span>
+
+function Counter() {
+  const [number, setNumber] = useState(0);
+  useEffect(()=&gt;{
+    console.log(&apos;useEffect1&apos;);
+    return ()=&gt;{
+      console.log(&apos;destroy useEffect1&apos;);
+    }
+  });
+<span class="hljs-addition">+ useLayoutEffect(()=&gt;{</span>
+<span class="hljs-addition">+   console.log(&apos;LayoutEffect2&apos;);</span>
+<span class="hljs-addition">+   return ()=&gt;{</span>
+<span class="hljs-addition">+     console.log(&apos;destroy LayoutEffect2&apos;);</span>
+<span class="hljs-addition">+   }</span>
+<span class="hljs-addition">+ });</span>
+  useEffect(()=&gt;{
+    console.log(&apos;useEffect3&apos;);
+    return ()=&gt;{
+      console.log(&apos;destroy useEffect3&apos;);
+    }
+  });
+  return (
+    &lt;div onClick={() =&gt; {setNumber(number+1)}}&gt;{number}&lt;/div&gt;
+  )
+}
+let workInProgress = {
+  tag:IndeterminateComponent,
+  type: Counter,
+  alternate:null,
+  updateQueue:null
+}
+render(workInProgress);
+</code></pre>
+<h3 id="t378.2 src\ReactFiberHooks.js">8.2 src\ReactFiberHooks.js <a href="#t378.2 src\ReactFiberHooks.js"> # </a></h3>
+<p>src\ReactFiberHooks.js</p>
+<pre><code class="lang-diff">import { scheduleUpdateOnFiber } from &apos;./ReactFiberWorkLoop&apos;;
+import { Update as UpdateEffect, Passive as PassiveEffect } from &apos;./ReactFiberFlags&apos;;
+<span class="hljs-addition">+import { HasEffect as HookHasEffect, Passive as HookPassive, Layout as HookLayout} from &apos;./ReactHookEffectTags&apos;;</span>
+let ReactCurrentDispatcher = {
+    current: null
+}
+let currentlyRenderingFiber = null;
+let workInProgressHook = null;
+let currentHook = null;
+const HooksDispatcherOnMount = {
+    useReducer: mountReducer,
+    useState: mountState,
+    useEffect: mountEffect,
+<span class="hljs-addition">+   useLayoutEffect: mountLayoutEffect,</span>
+}
+const HooksDispatcherOnUpdate = {
+    useReducer: updateReducer,
+    useState: updateState,
+    useEffect: updateEffect,
+<span class="hljs-addition">+   useLayoutEffect: updateLayoutEffect,</span>
+}
+<span class="hljs-addition">+export function useLayoutEffect(reducer, initialArg) {</span>
+<span class="hljs-addition">+    return ReactCurrentDispatcher.current.useLayoutEffect(reducer, initialArg);</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+function updateLayoutEffect(create, deps,) {</span>
+<span class="hljs-addition">+    return updateEffectImpl(UpdateEffect, HookLayout, create, deps);</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+function mountLayoutEffect(create, deps,) {</span>
+<span class="hljs-addition">+    return mountEffectImpl(UpdateEffect, HookLayout, create, deps);</span>
+<span class="hljs-addition">+}</span>
+export function mountEffect(create, deps) {
+    return mountEffectImpl(
+        UpdateEffect | PassiveEffect,
+        HookPassive,
+        create,
+        deps
+    );
+}
+function mountEffectImpl(fiberFlags, hookFlags, create, deps) {
+    const hook = mountWorkInProgressHook();
+    const nextDeps = deps <span class="hljs-comment">=== undefined ? null : deps;</span>
+    currentlyRenderingFiber.flags |= fiberFlags;
+    hook.memoizedState = pushEffect(
+        HookHasEffect | hookFlags,
+        create,
+        undefined,
+        nextDeps,
+    );
+}
+function pushEffect(tag, create, destroy, deps) {
+    const effect = { tag, create, destroy, deps, next: null};
+    let componentUpdateQueue = (currentlyRenderingFiber.updateQueue);
+    if (componentUpdateQueue <span class="hljs-comment">=== null) {</span>
+        componentUpdateQueue = createFunctionComponentUpdateQueue();
+        currentlyRenderingFiber.updateQueue = componentUpdateQueue;
+        componentUpdateQueue.lastEffect = effect.next = effect;
+    } else {
+        const lastEffect = componentUpdateQueue.lastEffect;
+        if (lastEffect <span class="hljs-comment">=== null) {</span>
+            componentUpdateQueue.lastEffect = effect.next = effect;
+        } else {
+            const firstEffect = lastEffect.next;
+            lastEffect.next = effect;
+            effect.next = firstEffect;
+            componentUpdateQueue.lastEffect = effect;
+        }
+    }
+    return effect;
+}
+function createFunctionComponentUpdateQueue() {
+    return {
+        lastEffect: null,
+    };
+}
+export function updateEffect(create, deps,) {
+    return updateEffectImpl(
+        PassiveEffect,
+        HookPassive,
+        create,
+        deps,
+    );
+}
+function updateEffectImpl(fiberFlags, hookFlags, create, deps) {
+    const hook = updateWorkInProgressHook();
+    const nextDeps = deps <span class="hljs-comment">=== undefined ? null : deps;</span>
+    let destroy = undefined;
+    if (currentHook !== null) {
+        const prevEffect = currentHook.memoizedState;
+        destroy = prevEffect.destroy;
+        if (nextDeps !== null) {
+            const prevDeps = prevEffect.deps;
+            if (areHookInputsEqual(nextDeps, prevDeps)) {
+                pushEffect(hookFlags, create, destroy, nextDeps);
+                return;
+            }
+        }
+    }
+    currentlyRenderingFiber.flags |= fiberFlags;
+    hook.memoizedState = pushEffect(HookHasEffect | hookFlags, create, destroy, nextDeps)
+}
+function areHookInputsEqual(nextDeps, prevDeps) {
+    if (prevDeps <span class="hljs-comment">=== null) {</span>
+        return false;
+    }
+    for (let i = 0; i &lt; prevDeps.length &amp;&amp; i &lt; nextDeps.length; i++) {
+        if (Object.is(nextDeps[i], prevDeps[i])) {
+            continue;
+        }
+        return false;
+    }
+    return true;
+}
+function mountState(initialState) {
+    const hook = mountWorkInProgressHook();
+    hook.memoizedState = initialState;
+    const queue = (hook.queue = { pending: null,lastRenderedReducer: basicStateReducer, lastRenderedState: initialState });
+    const dispatch = dispatchAction.bind(null, currentlyRenderingFiber, queue)
+    return [hook.memoizedState, dispatch];
+}
+
+function basicStateReducer(state, action) {
+    return typeof action <span class="hljs-comment">=== &apos;function&apos; ? action(state) : action;</span>
+}
+
+function updateState(initialState) {
+    return updateReducer(basicStateReducer, initialState);
+}
+export function useEffect(reducer, initialArg) {
+    return ReactCurrentDispatcher.current.useEffect(reducer, initialArg);
+}
+export function useState(initialState) {
+    return ReactCurrentDispatcher.current.useState(initialState);
+}
+export function useReducer(reducer, initialArg) {
+    return ReactCurrentDispatcher.current.useReducer(reducer, initialArg);
+}
+
+export function renderWithHooks(_current, workInProgress, Component) {
+    currentlyRenderingFiber = workInProgress;
+    workInProgress.memoizedState = null;
+    workInProgress.updateQueue = null;
+    if (_current !== null) {
+        ReactCurrentDispatcher.current = HooksDispatcherOnUpdate;
+    } else {
+        ReactCurrentDispatcher.current = HooksDispatcherOnMount;
+    }
+    let children = Component();
+    window.counter = children;
+    currentlyRenderingFiber = null;
+    currentHook = null;
+    workInProgressHook = null;
+    return children;
+}
+function updateReducer(reducer) {
+    const hook = updateWorkInProgressHook();
+    const queue = hook.queue;
+    queue.lastRenderedReducer = reducer;
+    const current = currentHook;
+    const pendingQueue = queue.pending;
+    if (pendingQueue !== null) {
+        const first = pendingQueue.next;
+        let newState = current.memoizedState;
+        let update = first;
+        do {
+            const action = update.action;
+            newState = reducer(newState, action);
+            update = update.next;
+        } while (update !== null &amp;&amp; update !== first);
+        queue.pending = null;
+        hook.memoizedState = newState;
+        queue.lastRenderedState = newState;
+    }
+    const dispatch = dispatchAction.bind(null,currentlyRenderingFiber,queue);
+    return [hook.memoizedState, dispatch];
+}
+function updateWorkInProgressHook() {
+    let nextCurrentHook;
+    if (currentHook <span class="hljs-comment">=== null) {</span>
+        const current = currentlyRenderingFiber.alternate;
+        nextCurrentHook = current.memoizedState;
+    } else {
+        nextCurrentHook = currentHook.next;
+    }
+    currentHook = nextCurrentHook;
+
+    const newHook = {
+        memoizedState: currentHook.memoizedState,
+        queue: currentHook.queue,
+        next: null,
+    };
+    if (workInProgressHook <span class="hljs-comment">=== null) {</span>
+        currentlyRenderingFiber.memoizedState = workInProgressHook = newHook;
+    } else {
+        workInProgressHook = workInProgressHook.next = newHook;
+    }
+    return workInProgressHook;
+}
+export function mountReducer(reducer, initialArg) {
+    const hook = mountWorkInProgressHook();
+    let initialState = initialArg;
+    hook.memoizedState = initialState;
+    const queue = (hook.queue = {pending: null, lastRenderedReducer: reducer, lastRenderedState: initialState});
+    const dispatch = dispatchAction.bind(null,currentlyRenderingFiber,queue);
+    return [hook.memoizedState, dispatch];
+}
+
+export function mountWorkInProgressHook() {
+    const hook = {
+        memoizedState: null,
+        queue: null,
+        next: null,
+    };
+    if (workInProgressHook <span class="hljs-comment">=== null) {</span>
+        currentlyRenderingFiber.memoizedState = workInProgressHook = hook;
+    } else {
+        workInProgressHook = workInProgressHook.next = hook;
+    }
+    return workInProgressHook;
+}
+
+export function dispatchAction(fiber, queue, action) {
+   const update = { action, next: null };
+   const pending = queue.pending;
+   if (pending <span class="hljs-comment">=== null) {</span>
+       update.next = update;
+   } else {
+       update.next = pending.next;
+       pending.next = update;
+   }
+   queue.pending = update;
+      const lastRenderedReducer = queue.lastRenderedReducer;
+   const currentState = queue.lastRenderedState;
+   const eagerState = lastRenderedReducer(currentState, action);
+   if (Object.is(eagerState, currentState)) {
+       return
+   }
+   scheduleUpdateOnFiber(fiber);
+}
+</code></pre>
+<h3 id="t388.3 ReactFiberWorkLoop.js">8.3 ReactFiberWorkLoop.js <a href="#t388.3 ReactFiberWorkLoop.js"> # </a></h3>
+<p>src\ReactFiberWorkLoop.js</p>
+<pre><code class="lang-diff">import { beginWork } from &apos;./ReactFiberBeginWork&apos;;
+import {Update, Passive, NoFlags } from &apos;./ReactFiberFlags&apos;;
+import { commitLifeCycles as commitLayoutEffectOnFiber } from &apos;./ReactFiberCommitWork&apos;;
+<span class="hljs-addition">+import { FunctionComponent } from &apos;./ReactWorkTags&apos;;</span>
+<span class="hljs-addition">+import { HasEffect as HookHasEffect, Layout as HookLayout } from &apos;./ReactHookEffectTags&apos;;</span>
+let workInProgress;
+let finishedWork = null
+let pendingPassiveHookEffectsMount = [];
+let pendingPassiveHookEffectsUnmount = [];
+export function workLoop() {
+    while (workInProgress) {
+        workInProgress = performUnitOfWork(workInProgress);
+    }
+    commitRoot();
+}
+function commitRoot() {
+    if (!finishedWork) return;
+    commitBeforeMutationEffects();
+<span class="hljs-addition">+   commitMutationEffects();</span>
+    commitLayoutEffects();
+}
+export function enqueuePendingPassiveHookEffectMount(fiber, effect,) {
+    pendingPassiveHookEffectsMount.push(effect, fiber);
+}
+
+export function enqueuePendingPassiveHookEffectUnmount(fiber, effect) {
+    pendingPassiveHookEffectsUnmount.push(effect, fiber);
+}
+function commitLayoutEffects() {
+    const flags = finishedWork.flags;
+    if (flags &amp; Update) {
+        const current = finishedWork.alternate;
+        commitLayoutEffectOnFiber(finishedWork, current, finishedWork);
+    }
+}
+<span class="hljs-addition">+function commitMutationEffects() {</span>
+<span class="hljs-addition">+    const flags = finishedWork.flags;</span>
+<span class="hljs-addition">+    const primaryFlags = flags &amp; (Update);</span>
+<span class="hljs-addition">+    switch (primaryFlags) {</span>
+<span class="hljs-addition">+        case Update: {</span>
+<span class="hljs-addition">+            const current = finishedWork.alternate;</span>
+<span class="hljs-addition">+            commitWork(current, finishedWork);</span>
+<span class="hljs-addition">+            break;</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+        default:</span>
+<span class="hljs-addition">+            break;</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+function commitWork(current, finishedWork) {</span>
+<span class="hljs-addition">+    switch (finishedWork.tag) {</span>
+<span class="hljs-addition">+        case FunctionComponent:</span>
+<span class="hljs-addition">+            commitHookEffectListUnmount(</span>
+<span class="hljs-addition">+                HookLayout | HookHasEffect,</span>
+<span class="hljs-addition">+                finishedWork</span>
+<span class="hljs-addition">+            );</span>
+<span class="hljs-addition">+            break;</span>
+<span class="hljs-addition">+        default:</span>
+<span class="hljs-addition">+            break;</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+function commitHookEffectListUnmount(tag, finishedWork) {</span>
+<span class="hljs-addition">+    const updateQueue = finishedWork.updateQueue;</span>
+<span class="hljs-addition">+    const lastEffect = updateQueue !== null ? updateQueue.lastEffect : null;</span>
+<span class="hljs-addition">+    if (lastEffect !== null) {</span>
+<span class="hljs-addition">+        const firstEffect = lastEffect.next;</span>
+<span class="hljs-addition">+        let effect = firstEffect;</span>
+<span class="hljs-addition">+        do {</span>
+<span class="hljs-addition">+            if ((effect.tag &amp; tag) === tag) {</span>
+<span class="hljs-addition">+                const destroy = effect.destroy;</span>
+<span class="hljs-addition">+                effect.destroy = undefined;</span>
+<span class="hljs-addition">+                if (destroy !== undefined) {</span>
+<span class="hljs-addition">+                    destroy();</span>
+<span class="hljs-addition">+                }</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+            effect = effect.next;</span>
+<span class="hljs-addition">+        } while (effect !== firstEffect);</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+}</span>
+function commitBeforeMutationEffects() {
+    const flags = finishedWork.flags;
+    if ((flags &amp; Passive) !== NoFlags) {
+        setTimeout(flushPassiveEffects);
+    }
+}
+function flushPassiveEffects() {
+    const unmountEffects = pendingPassiveHookEffectsUnmount;
+    pendingPassiveHookEffectsUnmount = [];
+    for (let i = 0; i &lt; unmountEffects.length; i += 2) {
+        const effect = unmountEffects[i];
+        const destroy = effect.destroy;
+        effect.destroy = undefined;
+        if (typeof destroy <span class="hljs-comment">=== &apos;function&apos;) {</span>
+            destroy();
+        }
+    }
+
+    const mountEffects = pendingPassiveHookEffectsMount;
+    pendingPassiveHookEffectsMount = [];
+    for (let i = 0; i &lt; mountEffects.length; i += 2) {
+        const effect = mountEffects[i]
+        const create = effect.create;
+        effect.destroy = create();
+    }
+}
+export function performUnitOfWork(unitOfWork) {
+    let current = unitOfWork.alternate;
+    return beginWork(current, unitOfWork);
+}
+export function scheduleUpdateOnFiber(fiber) {
+    let newFiber = {
+        ...fiber,
+        alternate: fiber
+    }
+    finishedWork = workInProgress = newFiber;
+    workLoop();
+}
+export function render(fiber) {
+    finishedWork = workInProgress = fiber;
+    workLoop();
+}
+</code></pre>
+<h3 id="t398.4 ReactFiberCommitWork.js">8.4 ReactFiberCommitWork.js <a href="#t398.4 ReactFiberCommitWork.js"> # </a></h3>
+<p>src\ReactFiberCommitWork.js</p>
+<pre><code class="lang-diff">
+import { FunctionComponent } from &apos;./ReactWorkTags&apos;;
+import {
+    Layout as HookLayout, HasEffect as HookHasEffect,
+    Passive as HookPassive, NoFlags as NoHookEffect
+} from &apos;./ReactHookEffectTags&apos;;
+import {
+    enqueuePendingPassiveHookEffectMount,
+    enqueuePendingPassiveHookEffectUnmount,
+} from &apos;./ReactFiberWorkLoop&apos;;
+export function commitLifeCycles(finishedRoot, current, finishedWork) {
+    switch (finishedWork.tag) {
+        case FunctionComponent:
+<span class="hljs-addition">+           commitHookEffectListMount(HookLayout | HookHasEffect, finishedWork);</span>
+            schedulePassiveEffects(finishedWork);
+            break;
+        default:
+            break;
+    }
+}
+<span class="hljs-addition">+function commitHookEffectListMount(tag, finishedWork) {</span>
+<span class="hljs-addition">+    const updateQueue = finishedWork.updateQueue;</span>
+<span class="hljs-addition">+    const lastEffect = updateQueue !== null ? updateQueue.lastEffect : null;</span>
+<span class="hljs-addition">+    if (lastEffect !== null) {</span>
+<span class="hljs-addition">+        const firstEffect = lastEffect.next;</span>
+<span class="hljs-addition">+        let effect = firstEffect;</span>
+<span class="hljs-addition">+        do {</span>
+<span class="hljs-addition">+            if ((effect.tag &amp; tag) === tag) {</span>
+<span class="hljs-addition">+                const create = effect.create;</span>
+<span class="hljs-addition">+                effect.destroy = create();</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+            effect = effect.next;</span>
+<span class="hljs-addition">+        } while (effect !== firstEffect);</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+}</span>
+function schedulePassiveEffects(finishedWork) {
+    const updateQueue = finishedWork.updateQueue;
+    const lastEffect = updateQueue !== null ? updateQueue.lastEffect : null;
+    if (lastEffect !== null) {
+        const firstEffect = lastEffect.next;
+        let effect = firstEffect;
+        do {
+            const { next, tag } = effect;
+            if ((tag &amp; HookPassive) !== NoHookEffect &amp;&amp; (tag &amp; HookHasEffect) !== NoHookEffect) {
+                enqueuePendingPassiveHookEffectUnmount(finishedWork, effect);
+                enqueuePendingPassiveHookEffectMount(finishedWork, effect);
+            }
+            effect = next;
+        } while (effect !== firstEffect);
+    }
+}
+</code></pre>
+<h2 id="t409.useRef">9.useRef <a href="#t409.useRef"> # </a></h2>
+<h3 id="t419.1.src\index.js">9.1.src\index.js <a href="#t419.1.src\index.js"> # </a></h3>
+<pre><code class="lang-diff">import * as React from &apos;react&apos;;
+import { IndeterminateComponent } from &apos;./ReactWorkTags&apos;;
+import {render} from &apos;./ReactFiberWorkLoop&apos;;
+<span class="hljs-addition">+import {useReducer,useState,useEffect,useLayoutEffect,useRef} from &apos;./ReactFiberHooks&apos;</span>
+
+function Counter() {
+  const [number, setNumber] = useState(0);
+<span class="hljs-addition">+ const numberRef = useRef();</span>
+  useEffect(()=&gt;{
+    console.log(&apos;useEffect1&apos;);
+<span class="hljs-addition">+   numberRef.current = number;</span>
+    setTimeout(()=&gt;{
+<span class="hljs-addition">+     console.log(numberRef.current);</span>
+    },3000) 
+  });
+  return (
+    &lt;div onClick={() =&gt; {setNumber(number+1)}}&gt;{number}&lt;/div&gt;
+  )
+}
+let workInProgress = {
+  tag:IndeterminateComponent,
+  type: Counter,
+  alternate:null,
+  updateQueue:null
+}
+render(workInProgress);
+</code></pre>
+<h3 id="t429.2 ReactFiberHooks.js">9.2 ReactFiberHooks.js <a href="#t429.2 ReactFiberHooks.js"> # </a></h3>
+<p>src\ReactFiberHooks.js</p>
+<pre><code class="lang-diff">import { scheduleUpdateOnFiber } from &apos;./ReactFiberWorkLoop&apos;;
+import { Update as UpdateEffect, Passive as PassiveEffect } from &apos;./ReactFiberFlags&apos;;
+import { HasEffect as HookHasEffect, Passive as HookPassive, Layout as HookLayout} from &apos;./ReactHookEffectTags&apos;;
+let ReactCurrentDispatcher = {
+    current: null
+}
+let currentlyRenderingFiber = null;
+let workInProgressHook = null;
+let currentHook = null;
+const HooksDispatcherOnMount = {
+    useReducer: mountReducer,
+    useState: mountState,
+    useEffect: mountEffect,
+    useLayoutEffect: mountLayoutEffect,
+<span class="hljs-addition">+   useRef: mountRef</span>
+}
+const HooksDispatcherOnUpdate = {
+    useReducer: updateReducer,
+    useState: updateState,
+    useEffect: updateEffect,
+    useLayoutEffect: updateLayoutEffect,
+<span class="hljs-addition">+   useRef: updateRef</span>
+}
+<span class="hljs-addition">+function updateRef(initialValue) {</span>
+<span class="hljs-addition">+    const hook = updateWorkInProgressHook()</span>
+<span class="hljs-addition">+    return hook.memoizedState</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+function mountRef(initialValue) {</span>
+<span class="hljs-addition">+    const hook = mountWorkInProgressHook();</span>
+<span class="hljs-addition">+    const ref = { current: initialValue };</span>
+<span class="hljs-addition">+    hook.memoizedState = ref;</span>
+<span class="hljs-addition">+    return ref;</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+export function useRef(initialValue) {</span>
+<span class="hljs-addition">+    return ReactCurrentDispatcher.current.useRef(initialValue);</span>
+<span class="hljs-addition">+}</span>
+export function useLayoutEffect(reducer, initialArg) {
+    return ReactCurrentDispatcher.current.useLayoutEffect(reducer, initialArg);
+}
+function updateLayoutEffect(create, deps,) {
+    return updateEffectImpl(UpdateEffect, HookLayout, create, deps);
+}
+function mountLayoutEffect(create, deps,) {
+    return mountEffectImpl(UpdateEffect, HookLayout, create, deps);
+}
+export function mountEffect(create, deps) {
+    return mountEffectImpl(
+        UpdateEffect | PassiveEffect,
+        HookPassive,
+        create,
+        deps
+    );
+}
+function mountEffectImpl(fiberFlags, hookFlags, create, deps) {
+    const hook = mountWorkInProgressHook();
+    const nextDeps = deps <span class="hljs-comment">=== undefined ? null : deps;</span>
+    currentlyRenderingFiber.flags |= fiberFlags;
+    hook.memoizedState = pushEffect(
+        HookHasEffect | hookFlags,
+        create,
+        undefined,
+        nextDeps,
+    );
+}
+function pushEffect(tag, create, destroy, deps) {
+    const effect = { tag, create, destroy, deps, next: null};
+    let componentUpdateQueue = (currentlyRenderingFiber.updateQueue);
+    if (componentUpdateQueue <span class="hljs-comment">=== null) {</span>
+        componentUpdateQueue = createFunctionComponentUpdateQueue();
+        currentlyRenderingFiber.updateQueue = componentUpdateQueue;
+        componentUpdateQueue.lastEffect = effect.next = effect;
+    } else {
+        const lastEffect = componentUpdateQueue.lastEffect;
+        if (lastEffect <span class="hljs-comment">=== null) {</span>
+            componentUpdateQueue.lastEffect = effect.next = effect;
+        } else {
+            const firstEffect = lastEffect.next;
+            lastEffect.next = effect;
+            effect.next = firstEffect;
+            componentUpdateQueue.lastEffect = effect;
+        }
+    }
+    return effect;
+}
+function createFunctionComponentUpdateQueue() {
+    return {
+        lastEffect: null,
+    };
+}
+export function updateEffect(create, deps,) {
+    return updateEffectImpl(
+        PassiveEffect,
+        HookPassive,
+        create,
+        deps,
+    );
+}
+function updateEffectImpl(fiberFlags, hookFlags, create, deps) {
+    const hook = updateWorkInProgressHook();
+    const nextDeps = deps <span class="hljs-comment">=== undefined ? null : deps;</span>
+    let destroy = undefined;
+    if (currentHook !== null) {
+        const prevEffect = currentHook.memoizedState;
+        destroy = prevEffect.destroy;
+        if (nextDeps !== null) {
+            const prevDeps = prevEffect.deps;
+            if (areHookInputsEqual(nextDeps, prevDeps)) {
+                pushEffect(hookFlags, create, destroy, nextDeps);
+                return;
+            }
+        }
+    }
+    currentlyRenderingFiber.flags |= fiberFlags;
+    hook.memoizedState = pushEffect(HookHasEffect | hookFlags, create, destroy, nextDeps)
+}
+function areHookInputsEqual(nextDeps, prevDeps) {
+    if (prevDeps <span class="hljs-comment">=== null) {</span>
+        return false;
+    }
+    for (let i = 0; i &lt; prevDeps.length &amp;&amp; i &lt; nextDeps.length; i++) {
+        if (Object.is(nextDeps[i], prevDeps[i])) {
+            continue;
+        }
+        return false;
+    }
+    return true;
+}
+function mountState(initialState) {
+    const hook = mountWorkInProgressHook();
+    hook.memoizedState = initialState;
+    const queue = (hook.queue = { pending: null ,lastRenderedReducer: basicStateReducer, lastRenderedState: initialState});
+    const dispatch = dispatchAction.bind(null, currentlyRenderingFiber, queue)
+    return [hook.memoizedState, dispatch];
+}
+
+function basicStateReducer(state, action) {
+    return typeof action <span class="hljs-comment">=== &apos;function&apos; ? action(state) : action;</span>
+}
+
+function updateState(initialState) {
+    return updateReducer(basicStateReducer, initialState);
+}
+export function useEffect(reducer, initialArg) {
+    return ReactCurrentDispatcher.current.useEffect(reducer, initialArg);
+}
+export function useState(initialState) {
+    return ReactCurrentDispatcher.current.useState(initialState);
+}
+export function useReducer(reducer, initialArg) {
+    return ReactCurrentDispatcher.current.useReducer(reducer, initialArg);
+}
+
+export function renderWithHooks(_current, workInProgress, Component) {
+    currentlyRenderingFiber = workInProgress;
+    workInProgress.memoizedState = null;
+    workInProgress.updateQueue = null;
+    if (_current !== null) {
+        ReactCurrentDispatcher.current = HooksDispatcherOnUpdate;
+    } else {
+        ReactCurrentDispatcher.current = HooksDispatcherOnMount;
+    }
+    let children = Component();
+    window.counter = children;
+    currentlyRenderingFiber = null;
+    currentHook = null;
+    workInProgressHook = null;
+    return children;
+}
+function updateReducer(reducer) {
+    const hook = updateWorkInProgressHook();
+    const queue = hook.queue;
+    queue.lastRenderedReducer = reducer;
+    const current = currentHook;
+    const pendingQueue = queue.pending;
+    if (pendingQueue !== null) {
+        const first = pendingQueue.next;
+        let newState = current.memoizedState;
+        let update = first;
+        do {
+            const action = update.action;
+            newState = reducer(newState, action);
+            update = update.next;
+        } while (update !== null &amp;&amp; update !== first);
+        queue.pending = null;
+        hook.memoizedState = newState;
+        queue.lastRenderedState = newState;
+    }
+    const dispatch = dispatchAction.bind(null,currentlyRenderingFiber,queue);
+    return [hook.memoizedState, dispatch];
+}
+function updateWorkInProgressHook() {
+    let nextCurrentHook;
+    if (currentHook <span class="hljs-comment">=== null) {</span>
+        const current = currentlyRenderingFiber.alternate;
+        nextCurrentHook = current.memoizedState;
+    } else {
+        nextCurrentHook = currentHook.next;
+    }
+    currentHook = nextCurrentHook;
+
+    const newHook = {
+        memoizedState: currentHook.memoizedState,
+        queue: currentHook.queue,
+        next: null,
+    };
+    if (workInProgressHook <span class="hljs-comment">=== null) {</span>
+        currentlyRenderingFiber.memoizedState = workInProgressHook = newHook;
+    } else {
+        workInProgressHook = workInProgressHook.next = newHook;
+    }
+    return workInProgressHook;
+}
+export function mountReducer(reducer, initialArg) {
+    const hook = mountWorkInProgressHook();
+    let initialState = initialArg;
+    hook.memoizedState = initialState;
+    const queue = (hook.queue = {pending: null, lastRenderedReducer: reducer, lastRenderedState: initialState});
+    const dispatch = dispatchAction.bind(null,currentlyRenderingFiber,queue);
+    return [hook.memoizedState, dispatch];
+}
+
+export function mountWorkInProgressHook() {
+    const hook = {
+        memoizedState: null,
+        queue: null,
+        next: null,
+    };
+    if (workInProgressHook <span class="hljs-comment">=== null) {</span>
+        currentlyRenderingFiber.memoizedState = workInProgressHook = hook;
+    } else {
+        workInProgressHook = workInProgressHook.next = hook;
+    }
+    return workInProgressHook;
+}
+
+export function dispatchAction(fiber, queue, action) {
+   const update = { action, next: null };
+   const pending = queue.pending;
+   if (pending <span class="hljs-comment">=== null) {</span>
+       update.next = update;
+   } else {
+       update.next = pending.next;
+       pending.next = update;
+   }
+   queue.pending = update;
+      const lastRenderedReducer = queue.lastRenderedReducer;
+   const currentState = queue.lastRenderedState;
+   const eagerState = lastRenderedReducer(currentState, action);
+   if (Object.is(eagerState, currentState)) {
+       return
+   }
+   scheduleUpdateOnFiber(fiber);
+}
+</code></pre>
+<h2 id="t4310.useMemo">10.useMemo <a href="#t4310.useMemo"> # </a></h2>
+<h3 id="t4410.1.src\index.js">10.1.src\index.js <a href="#t4410.1.src\index.js"> # </a></h3>
+<pre><code class="lang-diff">import * as React from &apos;react&apos;;
+import { IndeterminateComponent } from &apos;./ReactWorkTags&apos;;
+import {render} from &apos;./ReactFiberWorkLoop&apos;;
+<span class="hljs-addition">+import {useReducer,useState,useEffect,useLayoutEffect,useRef,useMemo} from &apos;./ReactFiberHooks&apos;</span>
+let lastData;
+<span class="hljs-addition">+function Counter() {</span>
+<span class="hljs-addition">+  const [number, setNumber] = useState(0);</span>
+<span class="hljs-addition">+  const [age, setAge] = useState(0);</span>
+<span class="hljs-addition">+  const data = useMemo(()=&gt;({age}),[age]);</span>
+<span class="hljs-addition">+  console.log(&quot;lastData === data&quot;,lastData === data);</span>
+<span class="hljs-addition">+  lastData = data;</span>
+<span class="hljs-addition">+  return (</span>
+<span class="hljs-addition">+    &lt;div onClick={() =&gt; {setNumber(number+1)}}&gt;{number}&lt;/div&gt;</span>
+<span class="hljs-addition">+  )</span>
+<span class="hljs-addition">+}</span>
+let workInProgress = {
+  tag:IndeterminateComponent,
+  type: Counter,
+  alternate:null,
+  updateQueue:null
+}
+render(workInProgress);
+</code></pre>
+<h3 id="t4510.2 ReactFiberHooks.js">10.2 ReactFiberHooks.js <a href="#t4510.2 ReactFiberHooks.js"> # </a></h3>
+<p>src\ReactFiberHooks.js</p>
+<pre><code class="lang-diff">import { scheduleUpdateOnFiber } from &apos;./ReactFiberWorkLoop&apos;;
+import { Update as UpdateEffect, Passive as PassiveEffect } from &apos;./ReactFiberFlags&apos;;
+import { HasEffect as HookHasEffect, Passive as HookPassive, Layout as HookLayout} from &apos;./ReactHookEffectTags&apos;;
+let ReactCurrentDispatcher = {
+    current: null
+}
+let currentlyRenderingFiber = null;
+let workInProgressHook = null;
+let currentHook = null;
+const HooksDispatcherOnMount = {
+    useReducer: mountReducer,
+    useState: mountState,
+    useEffect: mountEffect,
+    useLayoutEffect: mountLayoutEffect,
+    useRef: mountRef,
+<span class="hljs-addition">+   useMemo: mountMemo</span>
+}
+const HooksDispatcherOnUpdate = {
+    useReducer: updateReducer,
+    useState: updateState,
+    useEffect: updateEffect,
+    useLayoutEffect: updateLayoutEffect,
+    useRef: updateRef,
+<span class="hljs-addition">+   useMemo: updateMemo</span>
+}
+<span class="hljs-addition">+function mountMemo(nextCreate, deps) {</span>
+<span class="hljs-addition">+    const hook = mountWorkInProgressHook();</span>
+<span class="hljs-addition">+    const nextDeps = deps === undefined ? null : deps;</span>
+<span class="hljs-addition">+    const nextValue = nextCreate();</span>
+<span class="hljs-addition">+    hook.memoizedState = [nextValue, nextDeps];</span>
+<span class="hljs-addition">+    return nextValue;</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+function updateMemo(nextCreate,deps) {</span>
+<span class="hljs-addition">+    const hook = updateWorkInProgressHook();</span>
+<span class="hljs-addition">+    const nextDeps = deps === undefined ? null : deps;</span>
+<span class="hljs-addition">+    const prevState = hook.memoizedState;</span>
+<span class="hljs-addition">+    if (prevState !== null) {</span>
+<span class="hljs-addition">+        if (nextDeps !== null) {</span>
+<span class="hljs-addition">+            const prevDeps = prevState[1];</span>
+<span class="hljs-addition">+            if (areHookInputsEqual(nextDeps, prevDeps)) {</span>
+<span class="hljs-addition">+                return prevState[0];</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    const nextValue = nextCreate();</span>
+<span class="hljs-addition">+    hook.memoizedState = [nextValue, nextDeps];</span>
+<span class="hljs-addition">+    return nextValue;</span>
+<span class="hljs-addition">+}</span>
+function updateRef(initialValue) {
+    const hook = updateWorkInProgressHook()
+    return hook.memoizedState
+}
+function mountRef(initialValue) {
+    const hook = mountWorkInProgressHook();
+    const ref = { current: initialValue };
+    hook.memoizedState = ref;
+    return ref;
+}
+<span class="hljs-addition">+export function useMemo(nextCreate, deps) {</span>
+<span class="hljs-addition">+    return ReactCurrentDispatcher.current.useMemo(nextCreate, deps);</span>
+<span class="hljs-addition">+}</span>
+export function useRef(initialValue) {
+    return ReactCurrentDispatcher.current.useRef(initialValue);
+}
+export function useLayoutEffect(reducer, initialArg) {
+    return ReactCurrentDispatcher.current.useLayoutEffect(reducer, initialArg);
+}
+function updateLayoutEffect(create, deps,) {
+    return updateEffectImpl(UpdateEffect, HookLayout, create, deps);
+}
+function mountLayoutEffect(create, deps,) {
+    return mountEffectImpl(UpdateEffect, HookLayout, create, deps);
+}
+export function mountEffect(create, deps) {
+    return mountEffectImpl(
+        UpdateEffect | PassiveEffect,
+        HookPassive,
+        create,
+        deps
+    );
+}
+function mountEffectImpl(fiberFlags, hookFlags, create, deps) {
+    const hook = mountWorkInProgressHook();
+    const nextDeps = deps <span class="hljs-comment">=== undefined ? null : deps;</span>
+    currentlyRenderingFiber.flags |= fiberFlags;
+    hook.memoizedState = pushEffect(
+        HookHasEffect | hookFlags,
+        create,
+        undefined,
+        nextDeps,
+    );
+}
+function pushEffect(tag, create, destroy, deps) {
+    const effect = { tag, create, destroy, deps, next: null};
+    let componentUpdateQueue = (currentlyRenderingFiber.updateQueue);
+    if (componentUpdateQueue <span class="hljs-comment">=== null) {</span>
+        componentUpdateQueue = createFunctionComponentUpdateQueue();
+        currentlyRenderingFiber.updateQueue = componentUpdateQueue;
+        componentUpdateQueue.lastEffect = effect.next = effect;
+    } else {
+        const lastEffect = componentUpdateQueue.lastEffect;
+        if (lastEffect <span class="hljs-comment">=== null) {</span>
+            componentUpdateQueue.lastEffect = effect.next = effect;
+        } else {
+            const firstEffect = lastEffect.next;
+            lastEffect.next = effect;
+            effect.next = firstEffect;
+            componentUpdateQueue.lastEffect = effect;
+        }
+    }
+    return effect;
+}
+function createFunctionComponentUpdateQueue() {
+    return {
+        lastEffect: null,
+    };
+}
+export function updateEffect(create, deps,) {
+    return updateEffectImpl(
+        PassiveEffect,
+        HookPassive,
+        create,
+        deps,
+    );
+}
+function updateEffectImpl(fiberFlags, hookFlags, create, deps) {
+    const hook = updateWorkInProgressHook();
+    const nextDeps = deps <span class="hljs-comment">=== undefined ? null : deps;</span>
+    let destroy = undefined;
+    if (currentHook !== null) {
+        const prevEffect = currentHook.memoizedState;
+        destroy = prevEffect.destroy;
+        if (nextDeps !== null) {
+            const prevDeps = prevEffect.deps;
+            if (areHookInputsEqual(nextDeps, prevDeps)) {
+                pushEffect(hookFlags, create, destroy, nextDeps);
+                return;
+            }
+        }
+    }
+    currentlyRenderingFiber.flags |= fiberFlags;
+    hook.memoizedState = pushEffect(HookHasEffect | hookFlags, create, destroy, nextDeps)
+}
+function areHookInputsEqual(nextDeps, prevDeps) {
+    if (prevDeps <span class="hljs-comment">=== null) {</span>
+        return false;
+    }
+    for (let i = 0; i &lt; prevDeps.length &amp;&amp; i &lt; nextDeps.length; i++) {
+        if (Object.is(nextDeps[i], prevDeps[i])) {
+            continue;
+        }
+        return false;
+    }
+    return true;
+}
+function mountState(initialState) {
+    const hook = mountWorkInProgressHook();
+    hook.memoizedState = initialState;
+    const queue = (hook.queue = { pending: null,lastRenderedReducer: basicStateReducer, lastRenderedState: initialState });
+    const dispatch = dispatchAction.bind(null, currentlyRenderingFiber, queue)
+    return [hook.memoizedState, dispatch];
+}
+
+function basicStateReducer(state, action) {
+    return typeof action <span class="hljs-comment">=== &apos;function&apos; ? action(state) : action;</span>
+}
+
+function updateState(initialState) {
+    return updateReducer(basicStateReducer, initialState);
+}
+export function useEffect(reducer, initialArg) {
+    return ReactCurrentDispatcher.current.useEffect(reducer, initialArg);
+}
+export function useState(initialState) {
+    return ReactCurrentDispatcher.current.useState(initialState);
+}
+export function useReducer(reducer, initialArg) {
+    return ReactCurrentDispatcher.current.useReducer(reducer, initialArg);
+}
+
+export function renderWithHooks(_current, workInProgress, Component) {
+    currentlyRenderingFiber = workInProgress;
+    workInProgress.memoizedState = null;
+    workInProgress.updateQueue = null;
+    if (_current !== null) {
+        ReactCurrentDispatcher.current = HooksDispatcherOnUpdate;
+    } else {
+        ReactCurrentDispatcher.current = HooksDispatcherOnMount;
+    }
+    let children = Component();
+    window.counter = children;
+    currentlyRenderingFiber = null;
+    currentHook = null;
+    workInProgressHook = null;
+    return children;
+}
+function updateReducer(reducer) {
+    const hook = updateWorkInProgressHook();
+    const queue = hook.queue;
+    queue.lastRenderedReducer = reducer;
+    const current = currentHook;
+    const pendingQueue = queue.pending;
+    if (pendingQueue !== null) {
+        const first = pendingQueue.next;
+        let newState = current.memoizedState;
+        let update = first;
+        do {
+            const action = update.action;
+            newState = reducer(newState, action);
+            update = update.next;
+        } while (update !== null &amp;&amp; update !== first);
+        queue.pending = null;
+        hook.memoizedState = newState;
+        queue.lastRenderedState = newState;
+    }
+    const dispatch = dispatchAction.bind(null,currentlyRenderingFiber,queue);
+    return [hook.memoizedState, dispatch];
+}
+function updateWorkInProgressHook() {
+    let nextCurrentHook;
+    if (currentHook <span class="hljs-comment">=== null) {</span>
+        const current = currentlyRenderingFiber.alternate;
+        nextCurrentHook = current.memoizedState;
+    } else {
+        nextCurrentHook = currentHook.next;
+    }
+    currentHook = nextCurrentHook;
+
+    const newHook = {
+        memoizedState: currentHook.memoizedState,
+        queue: currentHook.queue,
+        next: null,
+    };
+    if (workInProgressHook <span class="hljs-comment">=== null) {</span>
+        currentlyRenderingFiber.memoizedState = workInProgressHook = newHook;
+    } else {
+        workInProgressHook = workInProgressHook.next = newHook;
+    }
+    return workInProgressHook;
+}
+export function mountReducer(reducer, initialArg) {
+    const hook = mountWorkInProgressHook();
+    let initialState = initialArg;
+    hook.memoizedState = initialState;
+    const queue = (hook.queue = {pending: null, lastRenderedReducer: reducer, lastRenderedState: initialState});
+    const dispatch = dispatchAction.bind(null,currentlyRenderingFiber,queue);
+    return [hook.memoizedState, dispatch];
+}
+
+export function mountWorkInProgressHook() {
+    const hook = {
+        memoizedState: null,
+        queue: null,
+        next: null,
+    };
+    if (workInProgressHook <span class="hljs-comment">=== null) {</span>
+        currentlyRenderingFiber.memoizedState = workInProgressHook = hook;
+    } else {
+        workInProgressHook = workInProgressHook.next = hook;
+    }
+    return workInProgressHook;
+}
+
+export function dispatchAction(fiber, queue, action) {
+   const update = { action, next: null };
+   const pending = queue.pending;
+   if (pending <span class="hljs-comment">=== null) {</span>
+       update.next = update;
+   } else {
+       update.next = pending.next;
+       pending.next = update;
+   }
+   queue.pending = update;
+   const lastRenderedReducer = queue.lastRenderedReducer;
+   const currentState = queue.lastRenderedState;
+   const eagerState = lastRenderedReducer(currentState, action);
+   if (Object.is(eagerState, currentState)) {
+       return
+   }
+   scheduleUpdateOnFiber(fiber);
+}
+</code></pre>
+
+    </div>
+</div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+    aria-labelledby="loginModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="loginModalLabel">请登录</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="username" class="control-label">姓名:</label>
+                        <input type="text" class="form-control" id="username" placeholder="珠峰架构VIP会员系统用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">密码:</label>
+                        <input type="text" class="form-control" id="password" placeholder="珠峰架构VIP会员系统密码">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                    data-dismiss="modal">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

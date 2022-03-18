@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+   
+                     
+
+                        
+<div class="warpper">
+    <div class="page-toc">
+        <ul><li><a href="#t01.websocket介绍">1.websocket介绍</a></li><li><a href="#t12. websocket实战">2. websocket实战</a><ul><li><a href="#t22.1 server.js">2.1 server.js</a></li><li><a href="#t32.2 client.js">2.2 client.js</a></li></ul></li><li><a href="#t43. websocket连接">3. websocket连接</a><ul><li><a href="#t53.1 客户端：申请协议升级">3.1 客户端：申请协议升级</a></li><li><a href="#t63.2 服务端：响应协议升级">3.2 服务端：响应协议升级</a></li><li><a href="#t73.3 Sec-WebSocket-Accept的计算">3.3 Sec-WebSocket-Accept的计算</a></li></ul></li><li><a href="#t84. 数据帧格式">4. 数据帧格式</a><ul><li><a href="#t94.1 bit和byte">4.1 bit和byte</a></li><li><a href="#t104.2 位运算符">4.2 位运算符</a><ul><li><a href="#t114.2.1 按位与(&)">4.2.1 按位与(&)</a></li><li><a href="#t124.2.2 按位或(|)">4.2.2 按位或(|)</a></li><li><a href="#t134.2.3 按位异或(^)">4.2.3 按位异或(^)</a></li></ul></li><li><a href="#t144.3 数据帧格式">4.3 数据帧格式</a></li><li><a href="#t154.4 Payload length">4.4 Payload length</a></li><li><a href="#t164.5 掩码算法">4.5 掩码算法</a></li></ul></li><li><a href="#t175. 实现websocket服务器">5. 实现websocket服务器</a></li></ul>
+    </div>
+    <div class="content markdown-body">
+        <h2 id="t01.websocket&#x4ECB;&#x7ECD;">1.websocket&#x4ECB;&#x7ECD; <a href="#t01.websocket&#x4ECB;&#x7ECD;"> # </a></h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API">WebSockets_API</a>&#x662F;HTML5&#x5F00;&#x59CB;&#x63D0;&#x4F9B;&#x7684;&#x4E00;&#x79CD;&#x6D4F;&#x89C8;&#x5668;&#x4E0E;&#x670D;&#x52A1;&#x5668;&#x8FDB;&#x884C;&#x5168;&#x53CC;&#x5DE5;&#x901A;&#x8BAF;&#x7684;&#x7F51;&#x7EDC;&#x6280;&#x672F;</li>
+<li>&#x901A;&#x4FD7;&#x5730;&#x8BB2;&#xFF1A;&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x670D;&#x52A1;&#x5668;&#x4FDD;&#x6709;&#x4E00;&#x4E2A;&#x6301;&#x4E45;&#x7684;&#x8FDE;&#x63A5;&#xFF0C;&#x4E24;&#x8FB9;&#x53EF;&#x4EE5;&#x5728;&#x4EFB;&#x610F;&#x65F6;&#x95F4;&#x5F00;&#x59CB;&#x53D1;&#x9001;&#x6570;&#x636E;</li>
+<li>HTML5&#x5F00;&#x59CB;&#x63D0;&#x4F9B;&#x7684;&#x4E00;&#x79CD;&#x6D4F;&#x89C8;&#x5668;&#x4E0E;&#x670D;&#x52A1;&#x5668;&#x8FDB;&#x884C;&#x5168;&#x53CC;&#x5DE5;&#x901A;&#x8BAF;&#x7684;&#x7F51;&#x7EDC;&#x6280;&#x672F;</li>
+<li>&#x5C5E;&#x4E8E;&#x5E94;&#x7528;&#x5C42;&#x534F;&#x8BAE;&#xFF0C;&#x5B83;&#x57FA;&#x4E8E;TCP&#x4F20;&#x8F93;&#x534F;&#x8BAE;&#xFF0C;&#x5E76;&#x590D;&#x7528;HTTP&#x7684;&#x63E1;&#x624B;&#x901A;&#x9053;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/httpwebsocket.png" style="width:50%"></p>
+<h2 id="t12. websocket&#x5B9E;&#x6218;">2. websocket&#x5B9E;&#x6218; <a href="#t12. websocket&#x5B9E;&#x6218;"> # </a></h2>
+<h3 id="t22.1 server.js">2.1 server.js <a href="#t22.1 server.js"> # </a></h3>
+<p>server.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> { Server } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;ws&apos;</span>);
+<span class="hljs-keyword">const</span> wss = <span class="hljs-keyword">new</span> Server({ <span class="hljs-attr">port</span>: <span class="hljs-number">8888</span> });
+wss.on(<span class="hljs-string">&apos;connection&apos;</span>, (socket) =&gt; {
+    socket.on(<span class="hljs-string">&apos;message&apos;</span>, (message) =&gt; {
+        socket.send(message);
+    });
+});
+</code></pre>
+<h3 id="t32.2 client.js">2.2 client.js <a href="#t32.2 client.js"> # </a></h3>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>websocket<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;text&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;send()&quot;</span>&gt;</span>&#x53D1;&#x9001;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript">
+        <span class="hljs-keyword">let</span> text = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;text&apos;</span>);
+        <span class="hljs-keyword">var</span> ws = <span class="hljs-keyword">new</span> WebSocket(<span class="hljs-string">&quot;ws://localhost:8888&quot;</span>);
+        ws.onopen = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            ws.send(<span class="hljs-string">&quot;server&quot;</span>);
+        };
+        ws.onmessage = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">event</span>) </span>{
+            <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;onmessage&apos;</span>, event.data);
+        };
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">send</span>(<span class="hljs-params"></span>) </span>{
+            ws.send(text.value);
+            text.value = <span class="hljs-string">&apos;&apos;</span>;
+        }
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h2 id="t43. websocket&#x8FDE;&#x63A5;">3. websocket&#x8FDE;&#x63A5; <a href="#t43. websocket&#x8FDE;&#x63A5;"> # </a></h2>
+<ul>
+<li>WebSocket&#x590D;&#x7528;&#x4E86;HTTP&#x7684;&#x63E1;&#x624B;&#x901A;&#x9053;</li>
+<li>&#x5177;&#x4F53;&#x6307;&#x7684;&#x662F;,&#x5BA2;&#x6237;&#x7AEF;&#x901A;&#x8FC7;HTTP&#x8BF7;&#x6C42;&#x4E0E;WebSocket&#x670D;&#x52A1;&#x7AEF;&#x534F;&#x5546;&#x5347;&#x7EA7;&#x534F;&#x8BAE;</li>
+<li>&#x534F;&#x8BAE;&#x5347;&#x7EA7;&#x5B8C;&#x6210;&#x540E;,&#x540E;&#x7EED;&#x7684;&#x6570;&#x636E;&#x4EA4;&#x6362;&#x5219;&#x9075;&#x7167;WebSocket&#x7684;&#x534F;&#x8BAE;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/websocketconnecting.jpg" style="width:50%"></p>
+<p><img src="http://img.zhufengpeixun.cn/websocketconnect.png" style="width:50%"></p>
+<p><img src="http://img.zhufengpeixun.cn/wiresharkws.png" style="width:50%"></p>
+<h3 id="t53.1 &#x5BA2;&#x6237;&#x7AEF;&#xFF1A;&#x7533;&#x8BF7;&#x534F;&#x8BAE;&#x5347;&#x7EA7;">3.1 &#x5BA2;&#x6237;&#x7AEF;&#xFF1A;&#x7533;&#x8BF7;&#x534F;&#x8BAE;&#x5347;&#x7EA7; <a href="#t53.1 &#x5BA2;&#x6237;&#x7AEF;&#xFF1A;&#x7533;&#x8BF7;&#x534F;&#x8BAE;&#x5347;&#x7EA7;"> # </a></h3>
+<ul>
+<li>&#x9996;&#x5148;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x8D77;&#x534F;&#x8BAE;&#x5347;&#x7EA7;&#x8BF7;&#x6C42;</li>
+<li>&#x8BF7;&#x6C42;&#x91C7;&#x7528;&#x7684;&#x662F;&#x6807;&#x51C6;&#x7684;HTTP&#x62A5;&#x6587;&#x683C;&#x5F0F;&#xFF0C;&#x4E14;&#x53EA;&#x652F;&#x6301;GET&#x65B9;&#x6CD5;</li>
+</ul>
+<pre><code class="lang-js">GET ws:<span class="hljs-comment">//localhost:8888/ HTTP/1.1</span>
+Host: localhost:<span class="hljs-number">8888</span>
+<span class="hljs-attr">Connection</span>: Upgrade
+<span class="hljs-attr">Upgrade</span>: websocket
+Sec-WebSocket-Version: <span class="hljs-number">13</span>
+Sec-WebSocket-Key: IHfMdf8a0aQXbwQO1pkGdA==
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Connection: Upgrade</td>
+<td style="text-align:left">&#x8868;&#x793A;&#x8981;&#x5347;&#x7EA7;&#x534F;&#x8BAE;</td>
+</tr>
+<tr>
+<td style="text-align:left">Upgrade: websocket</td>
+<td style="text-align:left">&#x8868;&#x793A;&#x8981;&#x5347;&#x7EA7;&#x5230;websocket&#x534F;&#x8BAE;</td>
+</tr>
+<tr>
+<td style="text-align:left">Sec-WebSocket-Version: 13</td>
+<td style="text-align:left">&#x8868;&#x793A;websocket&#x7684;&#x7248;&#x672C;</td>
+</tr>
+<tr>
+<td style="text-align:left">Sec-WebSocket-Key</td>
+<td style="text-align:left">&#x4E0E;&#x540E;&#x9762;&#x670D;&#x52A1;&#x7AEF;&#x54CD;&#x5E94;&#x9996;&#x90E8;&#x7684;Sec-WebSocket-Accept&#x662F;&#x914D;&#x5957;&#x7684;&#xFF0C;&#x63D0;&#x4F9B;&#x57FA;&#x672C;&#x7684;&#x9632;&#x62A4;&#xFF0C;&#x6BD4;&#x5982;&#x6076;&#x610F;&#x7684;&#x8FDE;&#x63A5;&#xFF0C;&#x6216;&#x8005;&#x65E0;&#x610F;&#x4E49;&#x7684;&#x8FDE;&#x63A5;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t63.2 &#x670D;&#x52A1;&#x7AEF;&#xFF1A;&#x54CD;&#x5E94;&#x534F;&#x8BAE;&#x5347;&#x7EA7;">3.2 &#x670D;&#x52A1;&#x7AEF;&#xFF1A;&#x54CD;&#x5E94;&#x534F;&#x8BAE;&#x5347;&#x7EA7; <a href="#t63.2 &#x670D;&#x52A1;&#x7AEF;&#xFF1A;&#x54CD;&#x5E94;&#x534F;&#x8BAE;&#x5347;&#x7EA7;"> # </a></h3>
+<ul>
+<li>&#x670D;&#x52A1;&#x7AEF;&#x8FD4;&#x56DE;&#x5185;&#x5BB9;&#x5982;&#x4E0B;<ul>
+<li>&#x72B6;&#x6001;&#x4EE3;&#x7801;101&#x8868;&#x793A;&#x534F;&#x8BAE;&#x5207;&#x6362;</li>
+</ul>
+</li>
+<li>&#x5230;&#x6B64;&#x5B8C;&#x6210;&#x534F;&#x8BAE;&#x5347;&#x7EA7;&#xFF0C;&#x540E;&#x7EED;&#x7684;&#x6570;&#x636E;&#x4EA4;&#x4E92;&#x90FD;&#x6309;&#x7167;&#x65B0;&#x7684;&#x534F;&#x8BAE;&#x6765;</li>
+</ul>
+<pre><code class="lang-js">HTTP/<span class="hljs-number">1.1</span> <span class="hljs-number">101</span> Switching Protocols
+<span class="hljs-attr">Upgrade</span>: websocket
+<span class="hljs-attr">Connection</span>: Upgrade
+Sec-WebSocket-Accept: aWAY+V/uyz5ILZEoWuWdxjnlb7E=
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Connection: Upgrade</td>
+<td style="text-align:left">&#x5347;&#x7EA7;&#x534F;&#x8BAE;</td>
+</tr>
+<tr>
+<td style="text-align:left">Upgrade: websocket</td>
+<td style="text-align:left">&#x5347;&#x7EA7;&#x5230;websocket&#x534F;&#x8BAE;</td>
+</tr>
+<tr>
+<td style="text-align:left">Sec-WebSocket-Accept</td>
+<td style="text-align:left">Accept&#x5B57;&#x7B26;&#x4E32;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t73.3 Sec-WebSocket-Accept&#x7684;&#x8BA1;&#x7B97;">3.3 Sec-WebSocket-Accept&#x7684;&#x8BA1;&#x7B97; <a href="#t73.3 Sec-WebSocket-Accept&#x7684;&#x8BA1;&#x7B97;"> # </a></h3>
+<ul>
+<li>Sec-WebSocket-Accept&#x6839;&#x636E;&#x5BA2;&#x6237;&#x7AEF;&#x8BF7;&#x6C42;&#x9996;&#x90E8;&#x7684;Sec-WebSocket-Key&#x8BA1;&#x7B97;&#x51FA;&#x6765;</li>
+<li>&#x8BA1;&#x7B97;&#x516C;&#x5F0F;&#x4E3A;&#xFF1A;<ul>
+<li>&#x5C06;Sec-WebSocket-Key&#x8DDF;258EAFA5-E914-47DA-95CA-C5AB0DC85B11&#x62FC;&#x63A5;</li>
+<li>&#x901A;&#x8FC7;SHA1&#x8BA1;&#x7B97;&#x51FA;&#x6458;&#x8981;&#xFF0C;&#x5E76;&#x8F6C;&#x6210;base64&#x5B57;&#x7B26;&#x4E32;</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> crypto = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;crypto&apos;</span>);
+<span class="hljs-keyword">const</span> CODE = <span class="hljs-string">&apos;258EAFA5-E914-47DA-95CA-C5AB0DC85B11&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">toAcceptKey</span>(<span class="hljs-params">wsKey</span>) </span>{
+    <span class="hljs-keyword">return</span> crypto.createHash(<span class="hljs-string">&apos;sha1&apos;</span>).update(wsKey + CODE).digest(<span class="hljs-string">&apos;base64&apos;</span>);;
+}
+<span class="hljs-keyword">const</span> webSocketKey = <span class="hljs-string">&apos;IHfMdf8a0aQXbwQO1pkGdA==&apos;</span>;
+<span class="hljs-built_in">console</span>.log(toAcceptKey(webSocketKey));<span class="hljs-comment">//aWAY+V/uyz5ILZEoWuWdxjnlb7E=</span>
+</code></pre>
+<h2 id="t84. &#x6570;&#x636E;&#x5E27;&#x683C;&#x5F0F;">4. &#x6570;&#x636E;&#x5E27;&#x683C;&#x5F0F; <a href="#t84. &#x6570;&#x636E;&#x5E27;&#x683C;&#x5F0F;"> # </a></h2>
+<ul>
+<li>WebSocket&#x5BA2;&#x6237;&#x7AEF;&#x3001;&#x670D;&#x52A1;&#x7AEF;&#x901A;&#x4FE1;&#x7684;&#x6700;&#x5C0F;&#x5355;&#x4F4D;&#x662F;<a href="https://tools.ietf.org/html/rfc6455#section-5.2">&#x5E27;</a>&#xFF0C;&#x7531;1&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5E27;&#x7EC4;&#x6210;&#x4E00;&#x6761;&#x5B8C;&#x6574;&#x7684;&#x6D88;&#x606F;&#xFF08;message&#xFF09;</li>
+<li>&#x53D1;&#x9001;&#x7AEF; &#x5C06;&#x6D88;&#x606F;&#x5207;&#x5272;&#x6210;&#x591A;&#x4E2A;&#x5E27;&#xFF0C;&#x5E76;&#x53D1;&#x9001;&#x7ED9;&#x670D;&#x52A1;&#x7AEF;</li>
+<li>&#x63A5;&#x6536;&#x7AEF; &#x63A5;&#x6536;&#x6D88;&#x606F;&#x5E27;&#xFF0C;&#x5E76;&#x5C06;&#x5173;&#x8054;&#x7684;&#x5E27;&#x91CD;&#x65B0;&#x7EC4;&#x88C5;&#x6210;&#x5B8C;&#x6574;&#x7684;&#x6D88;&#x606F;</li>
+</ul>
+<h3 id="t94.1 bit&#x548C;byte">4.1 bit&#x548C;byte <a href="#t94.1 bit&#x548C;byte"> # </a></h3>
+<ul>
+<li>&#x6BD4;&#x7279;&#x5C31;&#x662F;bit &#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x7CFB;&#x7EDF;&#x4E2D;,&#x6BCF;&#x4E2A;0&#x6216;1&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x4F4D;(bit),&#x4F4D;&#x662F;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x7684;&#x6700;&#x5C0F;&#x5355;&#x4F4D;</li>
+<li>&#x5176;&#x4E2D;8&#x4E2A;bit&#x5C31;&#x79F0;&#x4E3A;&#x4E00;&#x4E2A;&#x5B57;&#x8282;(Byte)</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/bitbyte.jpg" style="width:50%"></p>
+<h3 id="t104.2 &#x4F4D;&#x8FD0;&#x7B97;&#x7B26;">4.2 &#x4F4D;&#x8FD0;&#x7B97;&#x7B26; <a href="#t104.2 &#x4F4D;&#x8FD0;&#x7B97;&#x7B26;"> # </a></h3>
+<h4 id="t114.2.1 &#x6309;&#x4F4D;&#x4E0E;(&amp;)">4.2.1 &#x6309;&#x4F4D;&#x4E0E;(&amp;) <a href="#t114.2.1 &#x6309;&#x4F4D;&#x4E0E;(&amp;)"> # </a></h4>
+<ul>
+<li>&#x4E24;&#x4E2A;&#x8F93;&#x5165;&#x6570;&#x7684;&#x540C;&#x4E00;&#x4F4D;&#x90FD;&#x4E3A;1&#x624D;&#x4E3A;1</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/bitand2.png" style="width:50%"></p>
+<h4 id="t124.2.2 &#x6309;&#x4F4D;&#x6216;(|)">4.2.2 &#x6309;&#x4F4D;&#x6216;(|) <a href="#t124.2.2 &#x6309;&#x4F4D;&#x6216;(|)"> # </a></h4>
+<ul>
+<li>&#x4E24;&#x4E2A;&#x8F93;&#x5165;&#x6570;&#x7684;&#x540C;&#x4E00;&#x4F4D;&#x53EA;&#x8981;&#x6709;&#x4E00;&#x4E2A;&#x4E3A;1&#x5C31;&#x662F;1</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/bitor2.png" style="width:50%"></p>
+<h4 id="t134.2.3 &#x6309;&#x4F4D;&#x5F02;&#x6216;(^)">4.2.3 &#x6309;&#x4F4D;&#x5F02;&#x6216;(^) <a href="#t134.2.3 &#x6309;&#x4F4D;&#x5F02;&#x6216;(^)"> # </a></h4>
+<ul>
+<li>&#x4E24;&#x4E2A;&#x8F93;&#x5165;&#x6570;&#x7684;&#x540C;&#x4E00;&#x4F4D;&#x4E0D;&#x540C;&#x5C31;&#x662F;1,&#x5982;&#x679C;&#x76F8;&#x540C;&#x5C31;&#x8BBE;&#x4E3A;0</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/bitarrow2.png" style="width:50%"></p>
+<h3 id="t144.3 &#x6570;&#x636E;&#x5E27;&#x683C;&#x5F0F;">4.3 &#x6570;&#x636E;&#x5E27;&#x683C;&#x5F0F; <a href="#t144.3 &#x6570;&#x636E;&#x5E27;&#x683C;&#x5F0F;"> # </a></h3>
+<ul>
+<li>&#x5355;&#x4F4D;&#x662F;&#x6BD4;&#x7279; &#x6BD4;&#x5982;FIN&#x3001;RSV1&#x5404;&#x5360;&#x636E;1&#x6BD4;&#x7279;,opcode&#x5360;&#x636E;4&#x6BD4;&#x7279;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/websocketframe.jpg" style="width:50%"></p>
+<pre><code class="lang-js">  <span class="hljs-number">0</span>                   <span class="hljs-number">1</span>                   <span class="hljs-number">2</span>                   <span class="hljs-number">3</span>
+  <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span> <span class="hljs-number">6</span> <span class="hljs-number">7</span> <span class="hljs-number">8</span> <span class="hljs-number">9</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span> <span class="hljs-number">6</span> <span class="hljs-number">7</span> <span class="hljs-number">8</span> <span class="hljs-number">9</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span> <span class="hljs-number">4</span> <span class="hljs-number">5</span> <span class="hljs-number">6</span> <span class="hljs-number">7</span> <span class="hljs-number">8</span> <span class="hljs-number">9</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span>
+ +-+-+-+-+-------+-+-------------+-------------------------------+
+ |F|R|R|R| opcode|M| Payload len |    Extended payload length    |
+ |I|S|S|S|  (<span class="hljs-number">4</span>)  |A|     (<span class="hljs-number">7</span>)     |             (<span class="hljs-number">16</span>/<span class="hljs-number">64</span>)           |
+ |N|V|V|V|       |S|             |   (<span class="hljs-keyword">if</span> payload len==<span class="hljs-number">126</span>/<span class="hljs-number">127</span>)   |
+ | |<span class="hljs-number">1</span>|<span class="hljs-number">2</span>|<span class="hljs-number">3</span>|       |K|             |                               |
+ +-+-+-+-+-------+-+-------------+ - - - - - - - - - - - - - - - +
+ |     Extended payload length continued, <span class="hljs-keyword">if</span> payload len == <span class="hljs-number">127</span>  |
+ + - - - - - - - - - - - - - - - +-------------------------------+
+ |                               |Masking-key, <span class="hljs-keyword">if</span> MASK <span class="hljs-keyword">set</span> to 1  |
+ +-------------------------------+-------------------------------+
+ | Masking-key (continued)       |          Payload Data         |
+ +-------------------------------- - - - - - - - - - - - - - - - +
+ :                     Payload Data continued ...                :
+ + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+ |                     Payload Data continued ...                |
+ +---------------------------------------------------------------+
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">FIN</td>
+<td style="text-align:left">1&#x4E2A;&#x6BD4;&#x7279; &#x5982;&#x679C;&#x662F;1,&#x8868;&#x793A;&#x8FD9;&#x662F;&#x6D88;&#x606F;&#xFF08;message&#xFF09;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5206;&#x7247;&#xFF08;fragment&#xFF09;,&#x5982;&#x679C;&#x662F;0,&#x8868;&#x793A;&#x4E0D;&#x662F;&#x662F;&#x6D88;&#x606F;(message)&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5206;&#x7247;(fragment)</td>
+</tr>
+<tr>
+<td style="text-align:left">RSV1, RSV2, RSV3</td>
+<td style="text-align:left">&#x5404;&#x5360;1&#x4E2A;&#x6BD4;&#x7279;&#x3002;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x5168;&#x4E3A;0</td>
+</tr>
+<tr>
+<td style="text-align:left">Opcode</td>
+<td style="text-align:left">4&#x4E2A;&#x6BD4;&#x7279;,&#x64CD;&#x4F5C;&#x4EE3;&#x7801;</td>
+</tr>
+<tr>
+<td style="text-align:left">Mask</td>
+<td style="text-align:left">1&#x4E2A;&#x6BD4;&#x7279;&#x3002;&#x8868;&#x793A;&#x662F;&#x5426;&#x8981;&#x5BF9;&#x6570;&#x636E;&#x8F7D;&#x8377;&#x8FDB;&#x884C;&#x63A9;&#x7801;&#x64CD;&#x4F5C;,&#x4ECE;&#x5BA2;&#x6237;&#x7AEF;&#x5411;&#x670D;&#x52A1;&#x7AEF;&#x53D1;&#x9001;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x63A9;&#x7801;&#x64CD;&#x4F5C;&#xFF1B;&#x4ECE;&#x670D;&#x52A1;&#x7AEF;&#x5411;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x63A9;&#x7801;&#x64CD;&#x4F5C;,&#x5982;&#x679C;Mask&#x662F;1&#xFF0C;&#x90A3;&#x4E48;&#x5728;Masking-key&#x4E2D;&#x4F1A;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x63A9;&#x7801;&#x952E;(masking key),&#x5E76;&#x7528;&#x8FD9;&#x4E2A;&#x63A9;&#x7801;&#x952E;&#x6765;&#x5BF9;&#x6570;&#x636E;&#x8F7D;&#x8377;&#x8FDB;&#x884C;&#x53CD;&#x63A9;&#x7801;&#x3002;&#x6240;&#x6709;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x5230;&#x670D;&#x52A1;&#x7AEF;&#x7684;&#x6570;&#x636E;&#x5E27;&#xFF0C;Mask&#x90FD;&#x662F;1</td>
+</tr>
+<tr>
+<td style="text-align:left">Payload length</td>
+<td style="text-align:left">&#x6570;&#x636E;&#x8F7D;&#x8377;&#x7684;&#x957F;&#x5EA6;</td>
+</tr>
+<tr>
+<td style="text-align:left">Masking-key</td>
+<td style="text-align:left">0&#x6216;4&#x5B57;&#x8282;(32&#x4F4D;) &#x6240;&#x6709;&#x4ECE;&#x5BA2;&#x6237;&#x7AEF;&#x4F20;&#x9001;&#x5230;&#x670D;&#x52A1;&#x7AEF;&#x7684;&#x6570;&#x636E;&#x5E27;,&#x6570;&#x636E;&#x8F7D;&#x8377;&#x90FD;&#x8FDB;&#x884C;&#x4E86;&#x63A9;&#x7801;&#x64CD;&#x4F5C;,Mask&#x4E3A;1,&#x4E14;&#x643A;&#x5E26;&#x4E86;4&#x5B57;&#x8282;&#x7684;Masking-key&#x3002;&#x5982;&#x679C;Mask&#x4E3A;0,&#x5219;&#x6CA1;&#x6709;Masking-key&#x3002;&#x8F7D;&#x8377;&#x6570;&#x636E;&#x7684;&#x957F;&#x5EA6;&#xFF0C;&#x4E0D;&#x5305;&#x62EC;mask key&#x7684;&#x957F;&#x5EA6;</td>
+</tr>
+<tr>
+<td style="text-align:left">Payload data</td>
+<td style="text-align:left">&#x8F7D;&#x8377;&#x6570;&#x636E;</td>
+</tr>
+</tbody>
+</table>
+<p>Opcode</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">%x0</td>
+<td style="text-align:left">&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x5EF6;&#x7EED;&#x5E27;&#x3002;&#x5F53;Opcode&#x4E3A;0&#x65F6;&#xFF0C;&#x8868;&#x793A;&#x672C;&#x6B21;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x91C7;&#x7528;&#x4E86;&#x6570;&#x636E;&#x5206;&#x7247;&#xFF0C;&#x5F53;&#x524D;&#x6536;&#x5230;&#x7684;&#x6570;&#x636E;&#x5E27;&#x4E3A;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x5206;&#x7247;</td>
+</tr>
+<tr>
+<td style="text-align:left">%x1</td>
+<td style="text-align:left">&#x8868;&#x793A;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x6587;&#x672C;&#x5E27;</td>
+</tr>
+<tr>
+<td style="text-align:left">%x2</td>
+<td style="text-align:left">&#x8868;&#x793A;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x4E8C;&#x8FDB;&#x5236;&#x5E27;</td>
+</tr>
+<tr>
+<td style="text-align:left">%x3-7</td>
+<td style="text-align:left">&#x4FDD;&#x7559;&#x7684;&#x64CD;&#x4F5C;&#x4EE3;&#x7801;</td>
+</tr>
+<tr>
+<td style="text-align:left">%x8</td>
+<td style="text-align:left">&#x8868;&#x793A;&#x8FDE;&#x63A5;&#x65AD;&#x5F00;</td>
+</tr>
+<tr>
+<td style="text-align:left">%x9</td>
+<td style="text-align:left">&#x8868;&#x793A;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;ping&#x64CD;&#x4F5C;</td>
+</tr>
+<tr>
+<td style="text-align:left">%xA</td>
+<td style="text-align:left">&#x8868;&#x793A;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;pong&#x64CD;&#x4F5C;</td>
+</tr>
+<tr>
+<td style="text-align:left">%xB-F</td>
+<td style="text-align:left">&#x4FDD;&#x7559;&#x7684;&#x64CD;&#x4F5C;&#x4EE3;&#x7801;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t154.4 Payload length">4.4 Payload length <a href="#t154.4 Payload length"> # </a></h3>
+<ul>
+<li>Payload length&#xFF1A;&#x6570;&#x636E;&#x8F7D;&#x8377;&#x7684;&#x957F;&#x5EA6;&#xFF0C;&#x5355;&#x4F4D;&#x662F;&#x5B57;&#x8282;&#x3002;&#x4E3A;7&#x4F4D;&#xFF0C;&#x6216;7+16&#x4F4D;&#xFF0C;&#x6216;7+64&#x4F4D;<ul>
+<li>Payload length=x&#x4E3A;0~125&#xFF1A;&#x6570;&#x636E;&#x7684;&#x957F;&#x5EA6;&#x4E3A;x&#x5B57;&#x8282;&#x3002;</li>
+<li>Payload length=x&#x4E3A;126&#xFF1A;&#x540E;&#x7EED;2&#x4E2A;&#x5B57;&#x8282;&#x4EE3;&#x8868;&#x4E00;&#x4E2A;16&#x4F4D;&#x7684;&#x65E0;&#x7B26;&#x53F7;&#x6574;&#x6570;&#xFF0C;&#x8BE5;&#x65E0;&#x7B26;&#x53F7;&#x6574;&#x6570;&#x7684;&#x503C;&#x4E3A;&#x6570;&#x636E;&#x7684;&#x957F;&#x5EA6;</li>
+<li>Payload length=x&#x4E3A;127&#xFF1A;&#x540E;&#x7EED;8&#x4E2A;&#x5B57;&#x8282;&#x4EE3;&#x8868;&#x4E00;&#x4E2A;64&#x4F4D;&#x7684;&#x65E0;&#x7B26;&#x53F7;&#x6574;&#x6570;&#xFF08;&#x6700;&#x9AD8;&#x4F4D;&#x4E3A;0&#xFF09;&#xFF0C;&#x8BE5;&#x65E0;&#x7B26;&#x53F7;&#x6574;&#x6570;&#x7684;&#x503C;&#x4E3A;&#x6570;&#x636E;&#x7684;&#x957F;&#x5EA6;&#x3002; </li>
+<li>&#x5982;&#x679C;payload length&#x5360;&#x7528;&#x4E86;&#x591A;&#x4E2A;&#x5B57;&#x8282;&#x7684;&#x8BDD;&#xFF0C;payload length&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x8868;&#x8FBE;&#x91C7;&#x7528;&#x7F51;&#x7EDC;&#x5E8F;&#xFF08;big endian&#xFF0C;&#x91CD;&#x8981;&#x7684;&#x4F4D;&#x5728;&#x524D;)</li>
+</ul>
+</li>
+<li>readBigUInt64BE &#x7528;&#x6307;&#x5B9A;&#x7684;&#x5B57;&#x8282;&#x5E8F;[readBigInt64BE() &#x8BFB;&#x53D6;&#x4E3A;&#x5927;&#x7AEF;&#x5E8F;,readBigInt64LE() &#x8BFB;&#x53D6;&#x4E3A;&#x5C0F;&#x7AEF;&#x5E8F;]&#x4ECE; buf &#x4E2D;&#x6307;&#x5B9A;&#x7684; offset &#x8BFB;&#x53D6;&#x4E00;&#x4E2A;&#x6709;&#x7B26;&#x53F7;&#x7684; 64 &#x4F4D;&#x6574;&#x6570;&#x503C;</li>
+<li>Big-endian(&#x5927;&#x7AEF;&#x5E8F;) &#x9AD8;&#x4F4D;&#x5B57;&#x8282;&#x5728;&#x524D;</li>
+<li>Little-endian(&#x5C0F;&#x7AEF;&#x5E8F;) &#x4F4E;&#x4F4D;&#x5B57;&#x8282;&#x5728;&#x524D;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> buffer = Buffer.from([<span class="hljs-number">0b00000001</span>, <span class="hljs-number">0b00000000</span>]);
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Math</span>.pow(<span class="hljs-number">2</span>, <span class="hljs-number">8</span>));
+<span class="hljs-built_in">console</span>.log(buffer.readUInt16BE(<span class="hljs-number">0</span>));<span class="hljs-comment">// 00000001 00000000</span>
+<span class="hljs-built_in">console</span>.log(buffer.readUInt16LE(<span class="hljs-number">0</span>));<span class="hljs-comment">// 00000000 00000001</span>
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getLength</span>(<span class="hljs-params">buffer</span>) </span>{
+    <span class="hljs-keyword">const</span> byte = buffer.readUInt8(<span class="hljs-number">1</span>);
+    <span class="hljs-keyword">let</span> length = <span class="hljs-built_in">parseInt</span>(byte.toString(<span class="hljs-number">2</span>).substring(<span class="hljs-number">1</span>), <span class="hljs-number">2</span>);
+    <span class="hljs-keyword">if</span> (length === <span class="hljs-number">126</span>) {
+        length = buffer.readUInt16BE(<span class="hljs-number">2</span>);
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (length === <span class="hljs-number">127</span>) {
+        length = buffer.readBigUInt64BE(<span class="hljs-number">2</span>);
+    }
+    <span class="hljs-keyword">return</span> length;
+}
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">126.</span>.toString(<span class="hljs-number">2</span>));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-number">127.</span>.toString(<span class="hljs-number">2</span>));
+<span class="hljs-built_in">console</span>.log(getLength(Buffer.from([<span class="hljs-number">0b10000001</span>, <span class="hljs-number">0b10000001</span>])));
+<span class="hljs-built_in">console</span>.log(getLength(Buffer.from([<span class="hljs-number">0b10000001</span>, <span class="hljs-number">0b11111110</span>, <span class="hljs-number">0b00000000</span>, <span class="hljs-number">0b00000001</span>])));
+<span class="hljs-built_in">console</span>.log(getLength(Buffer.from([<span class="hljs-number">0b10000001</span>, <span class="hljs-number">0b11111111</span>, <span class="hljs-number">0b00000000</span>, <span class="hljs-number">0b00000000</span>, <span class="hljs-number">0b00000000</span>, <span class="hljs-number">0b00000000</span>, <span class="hljs-number">0b00000000</span>, <span class="hljs-number">0b00000000</span>, <span class="hljs-number">0b00000000</span>, <span class="hljs-number">0b00000001</span>])));
+</code></pre>
+<h3 id="t164.5 &#x63A9;&#x7801;&#x7B97;&#x6CD5;">4.5 &#x63A9;&#x7801;&#x7B97;&#x6CD5; <a href="#t164.5 &#x63A9;&#x7801;&#x7B97;&#x6CD5;"> # </a></h3>
+<ul>
+<li>&#x63A9;&#x7801;&#x952E;&#xFF08;Masking-key&#xFF09;&#x662F;&#x7531;&#x5BA2;&#x6237;&#x7AEF;&#x6311;&#x9009;&#x51FA;&#x6765;&#x7684;<code>32bit</code>&#x7684;&#x968F;&#x673A;&#x6570;,&#x63A9;&#x7801;&#x64CD;&#x4F5C;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x6570;&#x636E;&#x8F7D;&#x8377;&#x7684;&#x957F;&#x5EA6;</li>
+<li>&#x63A9;&#x7801;&#x548C;&#x53CD;&#x63A9;&#x7801;&#x64CD;&#x4F5C;&#x90FD;&#x91C7;&#x7528;&#x5982;&#x4E0B;&#x7B97;&#x6CD5;</li>
+<li>&#x5BF9;&#x7D22;&#x5F15;<code>i</code>&#x6A21;&#x4EE5;4&#x5F97;&#x5230;&#x7ED3;&#x679C;&#x5E76;&#x5BF9;&#x539F;&#x6765;&#x7684;&#x7D22;&#x5F15;&#x8FDB;&#x884C;&#x5F02;&#x6216;&#x64CD;&#x4F5C;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/maskkey.jpg" style="width:50%"></p>
+<p><img src="http://img.zhufengpeixun.cn/masknumber.jpg" style="width:50%"></p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">unmask</span>(<span class="hljs-params">buffer, mask</span>) </span>{
+    <span class="hljs-keyword">const</span> length = buffer.length;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; length; i++) {
+        buffer[i] ^= mask[i % <span class="hljs-number">4</span>];
+    }
+}
+
+<span class="hljs-keyword">let</span> mask = Buffer.from([<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>]);
+<span class="hljs-keyword">let</span> buffer = Buffer.from([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>]);
+unmask(buffer, mask);
+<span class="hljs-built_in">console</span>.log(buffer);
+</code></pre>
+<h2 id="t175. &#x5B9E;&#x73B0;websocket&#x670D;&#x52A1;&#x5668;">5. &#x5B9E;&#x73B0;websocket&#x670D;&#x52A1;&#x5668; <a href="#t175. &#x5B9E;&#x73B0;websocket&#x670D;&#x52A1;&#x5668;"> # </a></h2>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> net = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;net&apos;</span>);
+<span class="hljs-keyword">const</span> { EventEmitter } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;events&apos;</span>);
+<span class="hljs-keyword">const</span> crypto = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;crypto&apos;</span>);
+<span class="hljs-keyword">const</span> CODE = <span class="hljs-string">&apos;258EAFA5-E914-47DA-95CA-C5AB0DC85B11&apos;</span>;
+<span class="hljs-keyword">const</span> OP_CODES = {
+    <span class="hljs-attr">TEXT</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">BINARY</span>: <span class="hljs-number">2</span>
+};
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Server</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">EventEmitter</span> </span>{
+    <span class="hljs-keyword">constructor</span>(options) {
+        <span class="hljs-keyword">super</span>(options);
+        <span class="hljs-keyword">this</span>.options = options;
+        <span class="hljs-keyword">this</span>.server = net.createServer(<span class="hljs-keyword">this</span>.listener);
+        <span class="hljs-keyword">this</span>.server.listen(options.port);
+    }
+    listener = <span class="hljs-function">(<span class="hljs-params">socket</span>) =&gt;</span> {
+        socket.setKeepAlive(<span class="hljs-literal">true</span>);
+        socket.send = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">payload</span>) </span>{
+            <span class="hljs-keyword">let</span> _opcode;
+            <span class="hljs-keyword">if</span> (Buffer.isBuffer(payload)) {
+                _opcode = OP_CODES.BINARY;
+            } <span class="hljs-keyword">else</span> {
+                _opcode = OP_CODES.TEXT;
+                payload = Buffer.from(payload);
+            }
+            <span class="hljs-keyword">let</span> length = payload.length;
+            <span class="hljs-keyword">let</span> buffer = Buffer.alloc(<span class="hljs-number">2</span> + length);
+            buffer[<span class="hljs-number">0</span>] = <span class="hljs-number">0b10000000</span> | _opcode;
+            buffer[<span class="hljs-number">1</span>] = length;
+            payload.copy(buffer, <span class="hljs-number">2</span>);
+            socket.write(buffer);
+        }
+        socket.on(<span class="hljs-string">&apos;data&apos;</span>, (chunk) =&gt; {
+            <span class="hljs-keyword">if</span> (chunk.toString().match(<span class="hljs-regexp">/Upgrade: websocket/</span>)) {
+                <span class="hljs-keyword">this</span>.upgrade(socket, chunk.toString());
+            } <span class="hljs-keyword">else</span> {
+                <span class="hljs-keyword">this</span>.onmessage(socket, chunk);
+            }
+        });
+        <span class="hljs-keyword">this</span>.emit(<span class="hljs-string">&apos;connection&apos;</span>, socket);
+    }
+    onmessage = <span class="hljs-function">(<span class="hljs-params">socket, chunk</span>) =&gt;</span> {
+        <span class="hljs-keyword">let</span> FIN = (chunk[<span class="hljs-number">0</span>] &amp; <span class="hljs-number">0b10000000</span>) === <span class="hljs-number">0b10000000</span>;<span class="hljs-comment">//&#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;&#x7ED3;&#x675F;&#x4F4D;,&#x7B2C;&#x4E00;&#x4E2A;bit&#x662F;&#x4E0D;&#x662F;1</span>
+        <span class="hljs-keyword">let</span> opcode = chunk[<span class="hljs-number">0</span>] &amp; <span class="hljs-number">0b00001111</span>;<span class="hljs-comment">//&#x53D6;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x7684;&#x540E;&#x56DB;&#x4F4D;,&#x5F97;&#x5230;&#x7684;&#x4E00;&#x4E2A;&#x662F;&#x5341;&#x8FDB;&#x5236;&#x6570;</span>
+        <span class="hljs-keyword">let</span> masked = (chunk[<span class="hljs-number">1</span>] &amp; <span class="hljs-number">0b10000000</span>) === <span class="hljs-number">0b10000000</span>;<span class="hljs-comment">//&#x7B2C;&#x4E00;&#x4F4D;&#x662F;&#x5426;&#x662F;1</span>
+        <span class="hljs-keyword">let</span> payloadLength = chunk[<span class="hljs-number">1</span>] &amp; <span class="hljs-number">0b01111111</span>;<span class="hljs-comment">//&#x53D6;&#x5F97;&#x8D1F;&#x8F7D;&#x6570;&#x636E;&#x7684;&#x957F;&#x5EA6;</span>
+        <span class="hljs-keyword">let</span> payload;
+        <span class="hljs-keyword">if</span> (masked) {
+            <span class="hljs-keyword">let</span> masteringKey = chunk.slice(<span class="hljs-number">2</span>, <span class="hljs-number">6</span>);<span class="hljs-comment">//&#x63A9;&#x7801;</span>
+            payload = chunk.slice(<span class="hljs-number">6</span>);<span class="hljs-comment">//&#x8D1F;&#x8F7D;&#x6570;&#x636E;</span>
+            unmask(payload, masteringKey);<span class="hljs-comment">//&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x89E3;&#x7801;&#x5904;&#x7406;</span>
+        }
+        <span class="hljs-keyword">if</span> (FIN) {
+            <span class="hljs-keyword">switch</span> (opcode) {
+                <span class="hljs-keyword">case</span> OP_CODES.TEXT:
+                    socket.emit(<span class="hljs-string">&apos;message&apos;</span>, payload.toString());
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> OP_CODES.BINARY:
+                    socket.emit(<span class="hljs-string">&apos;message&apos;</span>, payload);
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">default</span>:
+                    <span class="hljs-keyword">break</span>;
+            }
+        }
+    }
+    upgrade = <span class="hljs-function">(<span class="hljs-params">socket, chunk</span>) =&gt;</span> {
+        <span class="hljs-keyword">let</span> rows = chunk.split(<span class="hljs-string">&apos;\r\n&apos;</span>);<span class="hljs-comment">//&#x6309;&#x5206;&#x5272;&#x7B26;&#x5206;&#x5F00;</span>
+        <span class="hljs-keyword">let</span> headers = toHeaders(rows.slice(<span class="hljs-number">1</span>, <span class="hljs-number">-2</span>));<span class="hljs-comment">//&#x53BB;&#x6389;&#x8BF7;&#x6C42;&#x884C;&#x548C;&#x5C3E;&#x90E8;&#x7684;&#x4E8C;&#x4E2A;&#x5206;&#x9694;&#x7B26;</span>
+        <span class="hljs-keyword">let</span> wsKey = headers[<span class="hljs-string">&apos;Sec-WebSocket-Key&apos;</span>];
+        <span class="hljs-keyword">let</span> acceptKey = toAcceptKey(wsKey);
+        <span class="hljs-keyword">let</span> response = [
+            <span class="hljs-string">&apos;HTTP/1.1 101 Switching Protocols&apos;</span>,
+            <span class="hljs-string">&apos;Upgrade: websocket&apos;</span>,
+            <span class="hljs-string">`Sec-WebSocket-Accept: <span class="hljs-subst">${acceptKey}</span>`</span>,
+            <span class="hljs-string">&apos;Connection: Upgrade&apos;</span>,
+            <span class="hljs-string">&apos;\r\n&apos;</span>
+        ].join(<span class="hljs-string">&apos;\r\n&apos;</span>);
+        socket.write(response);
+    }
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">toAcceptKey</span>(<span class="hljs-params">wsKey</span>) </span>{
+    <span class="hljs-keyword">return</span> crypto.createHash(<span class="hljs-string">&apos;sha1&apos;</span>).update(wsKey + CODE).digest(<span class="hljs-string">&apos;base64&apos;</span>);;
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">toHeaders</span>(<span class="hljs-params">rows</span>) </span>{
+    <span class="hljs-keyword">const</span> headers = {};
+    rows.forEach(<span class="hljs-function"><span class="hljs-params">row</span> =&gt;</span> {
+        <span class="hljs-keyword">let</span> [key, value] = row.split(<span class="hljs-string">&apos;: &apos;</span>);
+        headers[key] = value;
+    });
+    <span class="hljs-keyword">return</span> headers;
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">unmask</span>(<span class="hljs-params">buffer, mask</span>) </span>{
+    <span class="hljs-keyword">const</span> length = buffer.length;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; length; i++) {
+        buffer[i] ^= mask[i &amp; <span class="hljs-number">3</span>];
+    }
+}
+
+exports.Server = Server;
+</code></pre>
+
+    </div>
+</div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+    aria-labelledby="loginModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="loginModalLabel">请登录</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="username" class="control-label">姓名:</label>
+                        <input type="text" class="form-control" id="username" placeholder="珠峰架构VIP会员系统用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">密码:</label>
+                        <input type="text" class="form-control" id="password" placeholder="珠峰架构VIP会员系统密码">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                    data-dismiss="modal">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

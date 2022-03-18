@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+
+
+
+
+<div class="warpper">
+
+    <div class="page-toc">
+        <ul><li><a href="#t01.UmiJS">1.UmiJS</a></li><li><a href="#t12.安装">2.安装</a><ul><li><a href="#t22.1 目录约定">2.1 目录约定</a></li></ul></li><li><a href="#t33. 新建项目">3. 新建项目</a><ul><li><a href="#t43.1 新建项目目录">3.1 新建项目目录</a></li><li><a href="#t53.2 新建pages目录">3.2 新建pages目录</a></li><li><a href="#t63.3 新建页面">3.3 新建页面</a><ul><li><a href="#t73.3.1 Home组件">3.3.1 Home组件</a></li><li><a href="#t83.3.2 个人中心">3.3.2 个人中心</a></li><li><a href="#t93.3.3  启动服务器">3.3.3  启动服务器</a><ul><li><a href="#t103.3.3.1 启动配置">3.3.3.1 启动配置</a></li><li><a href="#t113.3.3.2 启动项目">3.3.3.2 启动项目</a></li><li><a href="#t123.3.3.3 部署发布">3.3.3.3 部署发布</a></li><li><a href="#t133.3.3.4 本地验证">3.3.3.4 本地验证</a></li><li><a href="#t143.3.3.5 测试">3.3.3.5 测试</a></li></ul></li></ul></li></ul></li><li><a href="#t154. 全局 layout">4. 全局 layout</a></li><li><a href="#t165. 用户管理">5. 用户管理</a><ul><li><a href="#t175.1 嵌套路由">5.1 嵌套路由</a></li><li><a href="#t185.2 user/list.js">5.2 user/list.js</a></li><li><a href="#t195.3 pages/user/add.js">5.3 pages/user/add.js</a></li><li><a href="#t205.3 动态路由">5.3 动态路由</a></li></ul></li><li><a href="#t216. 权限路由">6. 权限路由</a><ul><li><a href="#t226.1  profile.js">6.1  profile.js</a></li><li><a href="#t236.2 PrivateRoute.js">6.2 PrivateRoute.js</a></li><li><a href="#t246.3 pages/login.js">6.3 pages/login.js</a></li></ul></li><li><a href="#t257. umi dev">7. umi dev</a><ul><li><a href="#t267.1 安装依赖">7.1 安装依赖</a></li><li><a href="#t277.2 webpack.config.js">7.2 webpack.config.js</a></li><li><a href="#t287.3 index.html">7.3 index.html</a></li><li><a href="#t297.4 index.js">7.4 index.js</a></li><li><a href="#t307.5 src\router.js">7.5 src\router.js</a></li><li><a href="#t317.5 src\routes.config.js">7.5 src\routes.config.js</a></li></ul></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <h2 id="t01.UmiJS">1.UmiJS <a href="#t01.UmiJS"> # </a></h2>
+<ul>
+<li><a href="https://umijs.org/zh/guide/">UmiJS</a> &#x662F;&#x4E00;&#x4E2A;&#x7C7B; Next.JS &#x7684; react &#x5F00;&#x53D1;&#x6846;&#x67B6;&#x3002;</li>
+<li>&#x4ED6;&#x57FA;&#x4E8E;&#x4E00;&#x4E2A;&#x7EA6;&#x5B9A;&#xFF0C;&#x5373; pages &#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6587;&#x4EF6;&#x5373;&#x8DEF;&#x7531;&#xFF0C;&#x800C;&#x6587;&#x4EF6;&#x5219;&#x5BFC;&#x51FA; react &#x7EC4;&#x4EF6;</li>
+<li>&#x7136;&#x540E;&#x6253;&#x901A;&#x4ECE;&#x6E90;&#x7801;&#x5230;&#x4EA7;&#x7269;&#x7684;&#x6BCF;&#x4E2A;&#x9636;&#x6BB5;&#xFF0C;&#x5E76;&#x914D;&#x4EE5;&#x5B8C;&#x5584;&#x7684;&#x63D2;&#x4EF6;&#x4F53;&#x7CFB;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x80FD;&#x628A; umi &#x7684;&#x4EA7;&#x7269;&#x90E8;&#x7F72;&#x5230;&#x5404;&#x79CD;&#x573A;&#x666F;&#x91CC;&#x3002;</li>
+</ul>
+<p><img src="https://camo.githubusercontent.com/6814f490328a0f65734a4913525987a959fd6253/68747470733a2f2f7368697075736572636f6e74656e742e636f6d2f33616138333237306131363061333263313434366263346134323366613330332f506173746564253230496d616765253230322e706e67" alt="umiJS"></p>
+<h2 id="t12.&#x5B89;&#x88C5;">2.&#x5B89;&#x88C5; <a href="#t12.&#x5B89;&#x88C5;"> # </a></h2>
+<ul>
+<li><a href="https://github.com/umijs/umi">umi&#x6E90;&#x7801;</a></li>
+<li><a href="https://github.com/umijs/create-umi">create-umi</a></li>
+<li><a href="https://umijs.org/zh/plugin/umi-plugin-react.html">umi-plugin-react&#x6587;&#x6863;</a></li>
+<li><a href="https://github.com/umijs/umi/tree/master/packages/umi-plugin-react">umi-plugin-react&#x6E90;&#x7801;</a></li>
+<li><a href="https://github.com/umijs/umi/tree/master/packages/umi-plugin-dva">umi-plugin-dva</a></li>
+<li><a href="https://github.com/dvajs/dva/blob/master/packages/dva-immer/src/index.js">dva-immer</a></li>
+<li><a href="https://immerjs.github.io/immer/docs/introduction">immer</a></li>
+<li><a href="https://github.com/umijs/umi-blocks">umi-blocks</a></li>
+<li><a href="https://github.com/ant-design/pro-blocks">pro-blocks</a></li>
+</ul>
+<pre><code class="lang-js">cnpm install -g umi
+</code></pre>
+<h3 id="t22.1 &#x76EE;&#x5F55;&#x7EA6;&#x5B9A;">2.1 &#x76EE;&#x5F55;&#x7EA6;&#x5B9A; <a href="#t22.1 &#x76EE;&#x5F55;&#x7EA6;&#x5B9A;"> # </a></h3>
+<pre><code class="lang-js">.
+&#x251C;&#x2500;&#x2500; dist/                          <span class="hljs-comment">// &#x9ED8;&#x8BA4;&#x7684; build &#x8F93;&#x51FA;&#x76EE;&#x5F55;</span>
+&#x251C;&#x2500;&#x2500; mock/                          <span class="hljs-comment">// mock &#x6587;&#x4EF6;&#x6240;&#x5728;&#x76EE;&#x5F55;&#xFF0C;&#x57FA;&#x4E8E; express</span>
+&#x251C;&#x2500;&#x2500; config/
+    &#x251C;&#x2500;&#x2500; config.js                  <span class="hljs-comment">// umi &#x914D;&#x7F6E;&#xFF0C;&#x540C; .umirc.js&#xFF0C;&#x4E8C;&#x9009;&#x4E00;</span>
+&#x2514;&#x2500;&#x2500; src/                           <span class="hljs-comment">// &#x6E90;&#x7801;&#x76EE;&#x5F55;&#xFF0C;&#x53EF;&#x9009;</span>
+    &#x251C;&#x2500;&#x2500; layouts/index.js           <span class="hljs-comment">// &#x5168;&#x5C40;&#x5E03;&#x5C40;</span>
+    &#x251C;&#x2500;&#x2500; pages/                     <span class="hljs-comment">// &#x9875;&#x9762;&#x76EE;&#x5F55;&#xFF0C;&#x91CC;&#x9762;&#x7684;&#x6587;&#x4EF6;&#x5373;&#x8DEF;&#x7531;</span>
+        &#x251C;&#x2500;&#x2500; .umi/                  <span class="hljs-comment">// dev &#x4E34;&#x65F6;&#x76EE;&#x5F55;&#xFF0C;&#x9700;&#x6DFB;&#x52A0;&#x5230; .gitignore</span>
+        &#x251C;&#x2500;&#x2500; .umi-production/       <span class="hljs-comment">// build &#x4E34;&#x65F6;&#x76EE;&#x5F55;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x5220;&#x9664;</span>
+        &#x251C;&#x2500;&#x2500; <span class="hljs-built_in">document</span>.ejs           <span class="hljs-comment">// HTML &#x6A21;&#x677F;</span>
+        &#x251C;&#x2500;&#x2500; <span class="hljs-number">404.</span>js                 <span class="hljs-comment">// 404 &#x9875;&#x9762;</span>
+        &#x251C;&#x2500;&#x2500; page1.js               <span class="hljs-comment">// &#x9875;&#x9762; 1&#xFF0C;&#x4EFB;&#x610F;&#x547D;&#x540D;&#xFF0C;&#x5BFC;&#x51FA; react &#x7EC4;&#x4EF6;</span>
+        &#x251C;&#x2500;&#x2500; page1.test.js          <span class="hljs-comment">// &#x7528;&#x4F8B;&#x6587;&#x4EF6;&#xFF0C;umi test &#x4F1A;&#x5339;&#x914D;&#x6240;&#x6709; .test.js &#x548C; .e2e.js &#x7ED3;&#x5C3E;&#x7684;&#x6587;&#x4EF6;</span>
+        &#x2514;&#x2500;&#x2500; page2.js               <span class="hljs-comment">// &#x9875;&#x9762; 2&#xFF0C;&#x4EFB;&#x610F;&#x547D;&#x540D;</span>
+    &#x251C;&#x2500;&#x2500; global.css                 <span class="hljs-comment">// &#x7EA6;&#x5B9A;&#x7684;&#x5168;&#x5C40;&#x6837;&#x5F0F;&#x6587;&#x4EF6;&#xFF0C;&#x81EA;&#x52A8;&#x5F15;&#x5165;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x7528; global.less</span>
+    &#x251C;&#x2500;&#x2500; global.js                  <span class="hljs-comment">// &#x53EF;&#x4EE5;&#x5728;&#x8FD9;&#x91CC;&#x52A0;&#x5165; polyfill</span>
+&#x251C;&#x2500;&#x2500; .umirc.js                      <span class="hljs-comment">// umi &#x914D;&#x7F6E;&#xFF0C;&#x540C; config/config.js&#xFF0C;&#x4E8C;&#x9009;&#x4E00;</span>
+&#x251C;&#x2500;&#x2500; .env                           <span class="hljs-comment">// &#x73AF;&#x5883;&#x53D8;&#x91CF;</span>
+&#x2514;&#x2500;&#x2500; package.json
+</code></pre>
+<h2 id="t33. &#x65B0;&#x5EFA;&#x9879;&#x76EE;">3. &#x65B0;&#x5EFA;&#x9879;&#x76EE; <a href="#t33. &#x65B0;&#x5EFA;&#x9879;&#x76EE;"> # </a></h2>
+<h3 id="t43.1 &#x65B0;&#x5EFA;&#x9879;&#x76EE;&#x76EE;&#x5F55;">3.1 &#x65B0;&#x5EFA;&#x9879;&#x76EE;&#x76EE;&#x5F55; <a href="#t43.1 &#x65B0;&#x5EFA;&#x9879;&#x76EE;&#x76EE;&#x5F55;"> # </a></h3>
+<pre><code class="lang-js">mkdir zhufeng-umi
+cd zhufeng-umi
+cnpm init -y
+</code></pre>
+<h3 id="t53.2 &#x65B0;&#x5EFA;pages&#x76EE;&#x5F55;">3.2 &#x65B0;&#x5EFA;pages&#x76EE;&#x5F55; <a href="#t53.2 &#x65B0;&#x5EFA;pages&#x76EE;&#x5F55;"> # </a></h3>
+<pre><code class="lang-js">mkdir pages
+</code></pre>
+<h3 id="t63.3 &#x65B0;&#x5EFA;&#x9875;&#x9762;">3.3 &#x65B0;&#x5EFA;&#x9875;&#x9762; <a href="#t63.3 &#x65B0;&#x5EFA;&#x9875;&#x9762;"> # </a></h3>
+<ul>
+<li><a href="https://github.com/umijs/umi/blob/5f450307b47f79fdd5fc8904294fd1aea6709f8c/packages/umi-build-dev/src/plugins/commands/generate/index.js">generate</a></li>
+<li><a href="https://github.com/umijs/umi/blob/master/packages/umi/src/link.js">link.js</a></li>
+<li><a href="https://github.com/umijs/umi/blob/master/packages/umi/src/router.js">router.js</a></li>
+</ul>
+<h4 id="t73.3.1 Home&#x7EC4;&#x4EF6;">3.3.1 Home&#x7EC4;&#x4EF6; <a href="#t73.3.1 Home&#x7EC4;&#x4EF6;"> # </a></h4>
+<pre><code class="lang-js">umi g page index
+</code></pre>
+<p>pages\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+<span class="hljs-keyword">import</span> Link <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;umi/link&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">componentName</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+  render() {
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        &#x9996;&#x9875;
+        <span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&quot;/profile&quot;</span>&gt;</span>&#x4E2A;&#x4EBA;&#x4E2D;&#x5FC3;<span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+  }
+}
+</code></pre>
+<h4 id="t83.3.2 &#x4E2A;&#x4EBA;&#x4E2D;&#x5FC3;">3.3.2 &#x4E2A;&#x4EBA;&#x4E2D;&#x5FC3; <a href="#t83.3.2 &#x4E2A;&#x4EBA;&#x4E2D;&#x5FC3;"> # </a></h4>
+<pre><code class="lang-js">umi g page profile
+</code></pre>
+<p>pages\profile.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+<span class="hljs-keyword">import</span> router <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;umi/router&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">componentName</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+  render() {
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span>=&gt;</span>router.goBack()}&gt;&#x8FD4;&#x56DE;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        &#x4E2A;&#x4EBA;&#x4E2D;&#x5FC3;
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+  }
+}
+</code></pre>
+<h4 id="t93.3.3  &#x542F;&#x52A8;&#x670D;&#x52A1;&#x5668;">3.3.3  &#x542F;&#x52A8;&#x670D;&#x52A1;&#x5668; <a href="#t93.3.3  &#x542F;&#x52A8;&#x670D;&#x52A1;&#x5668;"> # </a></h4>
+<h5 id="t103.3.3.1 &#x542F;&#x52A8;&#x914D;&#x7F6E;">3.3.3.1 &#x542F;&#x52A8;&#x914D;&#x7F6E; <a href="#t103.3.3.1 &#x542F;&#x52A8;&#x914D;&#x7F6E;"> # </a></h5>
+<pre><code class="lang-json">  &quot;scripts&quot;: {
+    &quot;dev&quot;: &quot;umi dev&quot;,
+    &quot;build&quot;: &quot;umi build&quot;,
+    &quot;test&quot;: &quot;umi test&quot;,
+    &quot;serve&quot;: &quot;serve ./dist&quot;
+  }
+</code></pre>
+<h5 id="t113.3.3.2 &#x542F;&#x52A8;&#x9879;&#x76EE;">3.3.3.2 &#x542F;&#x52A8;&#x9879;&#x76EE; <a href="#t113.3.3.2 &#x542F;&#x52A8;&#x9879;&#x76EE;"> # </a></h5>
+<pre><code class="lang-js">npm run dev
+</code></pre>
+<h5 id="t123.3.3.3 &#x90E8;&#x7F72;&#x53D1;&#x5E03;">3.3.3.3 &#x90E8;&#x7F72;&#x53D1;&#x5E03; <a href="#t123.3.3.3 &#x90E8;&#x7F72;&#x53D1;&#x5E03;"> # </a></h5>
+<ul>
+<li><pre><code class="lang-js">npm run build
+</code></pre>
+</li>
+</ul>
+<h5 id="t133.3.3.4 &#x672C;&#x5730;&#x9A8C;&#x8BC1;">3.3.3.4 &#x672C;&#x5730;&#x9A8C;&#x8BC1; <a href="#t133.3.3.4 &#x672C;&#x5730;&#x9A8C;&#x8BC1;"> # </a></h5>
+<pre><code class="lang-js">npm run serve
+</code></pre>
+<h5 id="t143.3.3.5 &#x6D4B;&#x8BD5;">3.3.3.5 &#x6D4B;&#x8BD5; <a href="#t143.3.3.5 &#x6D4B;&#x8BD5;"> # </a></h5>
+<p>test\sum.test.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> assert = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;assert&apos;</span>);
+describe(<span class="hljs-string">&apos;sum&apos;</span>,()=&gt;{
+    it(<span class="hljs-string">&apos;1+1&apos;</span>,()=&gt;{
+        assert(<span class="hljs-number">1</span>+<span class="hljs-number">1</span>==<span class="hljs-number">2</span>);
+    });
+});
+</code></pre>
+<pre><code class="lang-js">npm run test
+</code></pre>
+<h2 id="t154. &#x5168;&#x5C40; layout">4. &#x5168;&#x5C40; layout <a href="#t154. &#x5168;&#x5C40; layout"> # </a></h2>
+<ul>
+<li><p>&#x7EA6;&#x5B9A; <code>src/layouts/index.js</code> &#x4E3A;&#x5168;&#x5C40;&#x8DEF;&#x7531;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; React &#x7EC4;&#x4EF6;&#xFF0C;&#x901A;&#x8FC7; <code>props.children</code> &#x6E32;&#x67D3;&#x5B50;&#x7EC4;&#x4EF6;&#x3002;</p>
+<pre><code class="lang-js">cnpm i bootstrap@<span class="hljs-number">3</span> -S
+</code></pre>
+<p>src/layouts/index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React,{Component,Fragment} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;bootstrap/dist/css/bootstrap.css&apos;</span>;
+<span class="hljs-keyword">import</span> Link <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;umi/link&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Layout</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span></span>{
+  render() {
+      <span class="hljs-keyword">return</span> (
+          <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Fragment</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;navbar navbar-default&quot;</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;container-fluid&quot;</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;navbar-header&quot;</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&quot;/&quot;</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;navbar-brand&quot;</span>&gt;</span>&#x73E0;&#x5CF0;&#x57F9;&#x8BAD;<span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span>
+                      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                          <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;nav navbar-nav&quot;</span>&gt;</span>
+                              <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;active&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&quot;/&quot;</span> &gt;</span>&#x9996;&#x9875;<span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                              <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&quot;/user&quot;</span> &gt;</span>&#x7528;&#x6237;&#x7BA1;&#x7406;<span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                              <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&quot;/profile&quot;</span>&gt;</span>&#x4E2A;&#x4EBA;&#x8BBE;&#x7F6E;<span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                          <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+                      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;container&quot;</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;col-md-12&quot;</span>&gt;</span>
+                          {this.props.children}
+                      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+          <span class="hljs-tag">&lt;/<span class="hljs-name">Fragment</span>&gt;</span></span>
+      )
+  }
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="t165. &#x7528;&#x6237;&#x7BA1;&#x7406;">5. &#x7528;&#x6237;&#x7BA1;&#x7406; <a href="#t165. &#x7528;&#x6237;&#x7BA1;&#x7406;"> # </a></h2>
+<h3 id="t175.1 &#x5D4C;&#x5957;&#x8DEF;&#x7531;">5.1 &#x5D4C;&#x5957;&#x8DEF;&#x7531; <a href="#t175.1 &#x5D4C;&#x5957;&#x8DEF;&#x7531;"> # </a></h3>
+<ul>
+<li>umi &#x91CC;&#x7EA6;&#x5B9A;&#x76EE;&#x5F55;&#x4E0B;&#x6709; _layout.js &#x65F6;&#x4F1A;&#x751F;&#x6210;&#x5D4C;&#x5957;&#x8DEF;&#x7531;&#xFF0C;&#x4EE5; _layout.js &#x4E3A;&#x8BE5;&#x76EE;&#x5F55;&#x7684; layout 
+pages/user/_layout.js</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React,{Component,Fragment} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> Link <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;umi/link&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">User</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span></span>{
+    render() {
+        <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;col-md-3&quot;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;nav nav-stack&quot;</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&quot;/user/list&quot;</span>&gt;</span>&#x7528;&#x6237;&#x5217;&#x8868;<span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&quot;/user/add&quot;</span>&gt;</span>&#x65B0;&#x589E;&#x7528;&#x6237;<span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;col-md-9&quot;</span>&gt;</span>
+                    {this.props.children}
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+        )
+    }
+}
+</code></pre>
+<h3 id="t185.2 user/list.js">5.2 user/list.js <a href="#t185.2 user/list.js"> # </a></h3>
+<p>/pages/user/list.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React,{Component,Fragment} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> Link <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;umi/link&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">List</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span></span>{
+    render() {
+        <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;list-group&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;list-group-item&quot;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&quot;/user/detail/1&quot;</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></span>
+        )
+    }
+}
+</code></pre>
+<h3 id="t195.3 pages/user/add.js">5.3 pages/user/add.js <a href="#t195.3 pages/user/add.js"> # </a></h3>
+<p>pages/user/add.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React,{Component,Fragment} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Add</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span></span>{
+    render() {
+        <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;form-horizontal&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;form-group&quot;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;control-label col-md-2&quot;</span>&gt;</span>&#x7528;&#x6237;&#x540D;<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;col-md-10&quot;</span>&gt;</span>
+                       <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;form-control&quot;</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;form-group&quot;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;col-md-10 col-offset-2&quot;</span>&gt;</span>
+                       <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;btn btn-primary&quot;</span>/&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></span>
+        )
+    }
+}
+</code></pre>
+<h3 id="t205.3 &#x52A8;&#x6001;&#x8DEF;&#x7531;">5.3 &#x52A8;&#x6001;&#x8DEF;&#x7531; <a href="#t205.3 &#x52A8;&#x6001;&#x8DEF;&#x7531;"> # </a></h3>
+<ul>
+<li>umi &#x91CC;&#x7EA6;&#x5B9A;&#xFF0C;&#x5E26; $ &#x524D;&#x7F00;&#x7684;&#x76EE;&#x5F55;&#x6216;&#x6587;&#x4EF6;&#x4E3A;&#x52A8;&#x6001;&#x8DEF;&#x7531;&#x3002;
+pages/user/detail/$id.js<pre><code class="lang-js"><span class="hljs-keyword">import</span> React,{Component,Fragment} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">List</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span></span>{
+  render() {
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.props);
+      <span class="hljs-keyword">return</span> (
+          <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;table table-bordered&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>&#x5B57;&#x6BB5;<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>&#x503C;<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">thead</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                      <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>&#x5F20;&#x4E09;<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span></span>
+      )
+  }
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="t216. &#x6743;&#x9650;&#x8DEF;&#x7531;">6. &#x6743;&#x9650;&#x8DEF;&#x7531; <a href="#t216. &#x6743;&#x9650;&#x8DEF;&#x7531;"> # </a></h2>
+<ul>
+<li>umi &#x7684;&#x6743;&#x9650;&#x8DEF;&#x7531;&#x662F;&#x901A;&#x8FC7;&#x914D;&#x7F6E;&#x8DEF;&#x7531;&#x7684; <code>Routes</code> &#x5C5E;&#x6027;&#x6765;&#x5B9E;&#x73B0;&#x3002;&#x7EA6;&#x5B9A;&#x5F0F;&#x7684;&#x901A;&#x8FC7; <code>yaml</code> &#x6CE8;&#x91CA;&#x6DFB;&#x52A0;&#xFF0C;&#x914D;&#x7F6E;&#x5F0F;&#x7684;&#x76F4;&#x63A5;&#x914D;&#x4E0A;&#x5373;&#x53EF;&#x3002;</li>
+<li><code>PrivateRoute.js</code> &#x7684;&#x4F4D;&#x7F6E;&#x662F;&#x76F8;&#x5BF9;&#x4E8E;&#x6839;&#x76EE;&#x5F55;&#x7684;</li>
+</ul>
+<h3 id="t226.1  profile.js">6.1  profile.js <a href="#t226.1  profile.js"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-comment">/**
+ * title: &#x4E2A;&#x4EBA;&#x4E2D;&#x5FC3;
+ * Routes:
+ *   - ./PrivateRoute.js
+ */</span>
+</code></pre>
+<h3 id="t236.2 PrivateRoute.js">6.2 PrivateRoute.js <a href="#t236.2 PrivateRoute.js"> # </a></h3>
+<p>PrivateRoute.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { Route ,Redirect} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router-dom&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> ({ render, ...others }) =&gt; {
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Route</span>
+    {<span class="hljs-attr">...others</span>}
+      <span class="hljs-attr">render</span>=<span class="hljs-string">{props</span> =&gt;</span> localStorage.getItem(&apos;login&apos;)?render(props):<span class="hljs-tag">&lt;<span class="hljs-name">Redirect</span> <span class="hljs-attr">to</span>=<span class="hljs-string">{{pathname:</span>&apos;/<span class="hljs-attr">login</span>&apos;,<span class="hljs-attr">state:</span>{<span class="hljs-attr">from:props.location.pathname</span>}}}/&gt;</span>
+    }
+  /&gt;</span>;
+}
+</code></pre>
+<h3 id="t246.3 pages/login.js">6.3 pages/login.js <a href="#t246.3 pages/login.js"> # </a></h3>
+<p>pages/login.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+<span class="hljs-keyword">import</span> Link <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;umi/link&apos;</span>;
+<span class="hljs-keyword">import</span> router <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;umi/router&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">componentName</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
+  login = <span class="hljs-function"><span class="hljs-params">()</span>=&gt;</span>{
+     localStorage.setItem(<span class="hljs-string">&apos;login&apos;</span>,<span class="hljs-string">&apos;true&apos;</span>);
+     <span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>.props.location.state&amp;&amp;<span class="hljs-keyword">this</span>.props.location.state.from){
+        router.push(<span class="hljs-keyword">this</span>.props.location.state.from);
+     }
+  } 
+  render() {
+    <span class="hljs-keyword">return</span> (
+     <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{this.login}</span>&gt;</span>&#x767B;&#x5F55;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
+    )
+  }
+}
+</code></pre>
+<h2 id="t257. umi dev">7. umi dev <a href="#t257. umi dev"> # </a></h2>
+<h3 id="t267.1 &#x5B89;&#x88C5;&#x4F9D;&#x8D56;">7.1 &#x5B89;&#x88C5;&#x4F9D;&#x8D56; <a href="#t267.1 &#x5B89;&#x88C5;&#x4F9D;&#x8D56;"> # </a></h3>
+<pre><code class="lang-js">cnpm i @babel/core @babel/plugin-proposal-<span class="hljs-class"><span class="hljs-keyword">class</span>-<span class="hljs-title">properties</span> @<span class="hljs-title">babel</span>/<span class="hljs-title">plugin</span>-<span class="hljs-title">proposal</span>-<span class="hljs-title">decorators</span> @<span class="hljs-title">babel</span>/<span class="hljs-title">preset</span>-<span class="hljs-title">env</span> @<span class="hljs-title">babel</span>/<span class="hljs-title">preset</span>-<span class="hljs-title">react</span> <span class="hljs-title">babel</span>-<span class="hljs-title">loader</span> <span class="hljs-title">css</span>-<span class="hljs-title">loader</span> <span class="hljs-title">file</span>-<span class="hljs-title">loader</span> <span class="hljs-title">html</span>-<span class="hljs-title">webpack</span>-<span class="hljs-title">plugin</span> <span class="hljs-title">react</span> <span class="hljs-title">react</span>-<span class="hljs-title">dom</span> <span class="hljs-title">react</span>-<span class="hljs-title">router</span>-<span class="hljs-title">dom</span> <span class="hljs-title">style</span>-<span class="hljs-title">loader</span> <span class="hljs-title">url</span>-<span class="hljs-title">loader</span> <span class="hljs-title">bootstrap</span>@3 <span class="hljs-title">webpack</span> <span class="hljs-title">webpack</span>-<span class="hljs-title">cli</span> <span class="hljs-title">webpack</span>-<span class="hljs-title">dev</span>-<span class="hljs-title">server</span> -<span class="hljs-title">S</span>
+</span></code></pre>
+<h3 id="t277.2 webpack.config.js">7.2 webpack.config.js <a href="#t277.2 webpack.config.js"> # </a></h3>
+<p>webpack.config.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;path&quot;</span>);
+<span class="hljs-keyword">const</span> htmlWebpackPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;html-webpack-plugin&apos;</span>);
+<span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-attr">context</span>: process.cwd(),
+  <span class="hljs-attr">entry</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,
+  <span class="hljs-attr">output</span>: {
+    <span class="hljs-attr">path</span>: path.resolve(__dirname, <span class="hljs-string">&quot;dist&quot;</span>),
+    <span class="hljs-attr">filename</span>: <span class="hljs-string">&quot;bundle.js&quot;</span>
+  },
+  <span class="hljs-attr">module</span>: {
+    <span class="hljs-attr">rules</span>: [
+      {
+        <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.js$/</span>,
+        <span class="hljs-attr">use</span>: {
+          <span class="hljs-attr">loader</span>: <span class="hljs-string">&quot;babel-loader&quot;</span>,
+          <span class="hljs-attr">options</span>: {
+            <span class="hljs-attr">presets</span>: [<span class="hljs-string">&quot;@babel/preset-env&quot;</span>,<span class="hljs-string">&quot;@babel/preset-react&quot;</span>],
+            <span class="hljs-attr">plugins</span>: [
+              [<span class="hljs-string">&quot;@babel/plugin-proposal-decorators&quot;</span>, { <span class="hljs-attr">legacy</span>: <span class="hljs-literal">true</span> }],
+              [<span class="hljs-string">&quot;@babel/plugin-proposal-class-properties&quot;</span>, { <span class="hljs-attr">loose</span>: <span class="hljs-literal">true</span> }]
+            ]
+          }
+        }
+      },
+      {
+          <span class="hljs-attr">test</span>:<span class="hljs-regexp">/\.css$/</span>,
+          <span class="hljs-attr">use</span>:[
+              <span class="hljs-string">&quot;style-loader&quot;</span>,<span class="hljs-string">&quot;css-loader&quot;</span>
+          ]
+      }
+    ]
+  },
+  <span class="hljs-attr">plugins</span>: [<span class="hljs-keyword">new</span> htmlWebpackPlugin({
+    <span class="hljs-attr">template</span>:<span class="hljs-string">&apos;./src/index.html&apos;</span>
+  })],
+  <span class="hljs-attr">devServer</span>: {
+      <span class="hljs-attr">contentBase</span>:path.resolve(<span class="hljs-string">&apos;dist&apos;</span>)
+  }
+};
+
+</code></pre>
+<h3 id="t287.3 index.html">7.3 index.html <a href="#t287.3 index.html"> # </a></h3>
+<pre><code class="lang-js">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="t297.4 index.js">7.4 index.js <a href="#t297.4 index.js"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+<span class="hljs-keyword">import</span> Router <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./router&apos;</span>;
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Router</span>/&gt;</span></span>,<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;root&apos;</span>));
+</code></pre>
+<h3 id="t307.5 src\router.js">7.5 src\router.js <a href="#t307.5 src\router.js"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react&quot;</span>;
+<span class="hljs-keyword">import</span> { HashRouter <span class="hljs-keyword">as</span> Router, Route } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react-router-dom&quot;</span>;
+<span class="hljs-keyword">let</span> routesConfig = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;./routesConfig&quot;</span>);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">renderRoutes</span>(<span class="hljs-params">routesConfig</span>) </span>{
+  <span class="hljs-keyword">return</span> routesConfig.map(<span class="hljs-function">(<span class="hljs-params">{ path, exact = <span class="hljs-literal">false</span>, routes, component: RouteComponent, Routes: PrivateRoute }, index</span>) =&gt;</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{index}</span> <span class="hljs-attr">path</span>=<span class="hljs-string">{path}</span> <span class="hljs-attr">exact</span>=<span class="hljs-string">{exact}</span> <span class="hljs-attr">render</span>=<span class="hljs-string">{</span>
+      <span class="hljs-attr">props</span> =&gt;</span> {
+        let render = props =&gt; (
+          <span class="hljs-tag">&lt;<span class="hljs-name">RouteComponent</span> {<span class="hljs-attr">...props</span>}&gt;</span>
+            {routes &amp;&amp; routes.length &gt; 0 &amp;&amp; renderRoutes(routes)}
+          <span class="hljs-tag">&lt;/<span class="hljs-name">RouteComponent</span>&gt;</span>
+        )
+        if (PrivateRoute) {
+          let privateRouteProps = { render, path, exact };
+          return <span class="hljs-tag">&lt;<span class="hljs-name">PrivateRoute</span> {<span class="hljs-attr">...privateRouteProps</span>} /&gt;</span>
+        } else {
+          return render(props);
+        }
+      }
+    } /&gt;</span>
+  ));
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> props =&gt; <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Router</span>&gt;</span>{renderRoutes(routesConfig)}<span class="hljs-tag">&lt;/<span class="hljs-name">Router</span>&gt;</span></span>;
+</code></pre>
+<h3 id="t317.5 src\routes.config.js">7.5 src\routes.config.js <a href="#t317.5 src\routes.config.js"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = [
+  {
+    <span class="hljs-string">&quot;path&quot;</span>: <span class="hljs-string">&quot;/&quot;</span>,
+    <span class="hljs-string">&quot;component&quot;</span>: <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../layouts/index.js&apos;</span>).default,
+    <span class="hljs-string">&quot;routes&quot;</span>: [
+      {
+        <span class="hljs-string">&quot;path&quot;</span>: <span class="hljs-string">&quot;/&quot;</span>,
+        <span class="hljs-string">&quot;exact&quot;</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-string">&quot;component&quot;</span>: <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../pages/index.js&apos;</span>).default
+      },
+      {
+        <span class="hljs-string">&quot;path&quot;</span>: <span class="hljs-string">&quot;/login&quot;</span>,
+        <span class="hljs-string">&quot;exact&quot;</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-string">&quot;component&quot;</span>: <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../pages/login.js&apos;</span>).default
+      },
+      {
+        <span class="hljs-string">&quot;path&quot;</span>: <span class="hljs-string">&quot;/profile&quot;</span>,
+        <span class="hljs-string">&quot;exact&quot;</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-string">&quot;component&quot;</span>: <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../pages/profile.js&apos;</span>).default,
+        <span class="hljs-string">&quot;Routes&quot;</span>: <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../PrivateRoute.js&apos;</span>).default
+      }
+    ]
+  }
+];
+</code></pre>
+
+        <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
+    </div>
+    
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

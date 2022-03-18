@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+   
+                     
+
+                        
+<div class="warpper">
+    <div class="page-toc">
+        <ul><li><a href="#t01.什么是GraphQL">1.什么是GraphQL</a></li><li><a href="#t12.创建后端项目">2.创建后端项目</a></li><li><a href="#t23. 实现商品分类接口">3. 实现商品分类接口</a><ul><li><a href="#t33.1 server.js">3.1 server.js</a></li><li><a href="#t43.2 schema.js">3.2 schema.js</a></li><li><a href="#t53.3 GraphiQL">3.3 GraphiQL</a></li></ul></li><li><a href="#t64. 实现商品接口">4. 实现商品接口</a><ul><li><a href="#t74.1 schema.js">4.1 schema.js</a></li></ul></li><li><a href="#t85. 添加商品">5. 添加商品</a><ul><li><a href="#t95.1 schema.js">5.1 schema.js</a></li></ul></li><li><a href="#t106. 使用mongodb数据库">6. 使用mongodb数据库</a><ul><li><a href="#t116.1 model.js">6.1 model.js</a></li><li><a href="#t126.2 schema.js">6.2 schema.js</a></li><li><a href="#t136.3 操作步骤">6.3 操作步骤</a></li></ul></li><li><a href="#t141.生成项目">1.生成项目</a></li><li><a href="#t152.安装依赖">2.安装依赖</a></li><li><a href="#t163.连接接口">3.连接接口</a><ul><li><a href="#t173.1 src\index.tsx">3.1 src\index.tsx</a></li></ul></li><li><a href="#t184.实现前台功能">4.实现前台功能</a><ul><li><a href="#t194.1 src\App.tsx">4.1 src\App.tsx</a></li><li><a href="#t204.2 src\App.tsx">4.2 src\App.tsx</a></li><li><a href="#t214.3 src\types.tsx">4.3 src\types.tsx</a></li><li><a href="#t224.4 src\query.tsx">4.4 src\query.tsx</a></li><li><a href="#t234.5 src\AddProduct.tsx">4.5 src\AddProduct.tsx</a></li><li><a href="#t244.6 ProductList.tsx">4.6 ProductList.tsx</a></li><li><a href="#t254.7 ProductDetail.tsx">4.7 ProductDetail.tsx</a></li></ul></li></ul>
+    </div>
+    <div class="content markdown-body">
+        <h2 id="t01.&#x4EC0;&#x4E48;&#x662F;GraphQL">1.&#x4EC0;&#x4E48;&#x662F;GraphQL <a href="#t01.&#x4EC0;&#x4E48;&#x662F;GraphQL"> # </a></h2>
+<ul>
+<li><a href="https://graphql.cn/">graphql</a> &#x65E2;&#x662F;&#x4E00;&#x79CD;&#x7528;&#x4E8E; API &#x7684;&#x67E5;&#x8BE2;&#x8BED;&#x8A00;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x6EE1;&#x8DB3;&#x4F60;&#x6570;&#x636E;&#x67E5;&#x8BE2;&#x7684;&#x8FD0;&#x884C;&#x65F6;</li>
+<li><code>GraphQL</code> &#x5BF9;&#x4F60;&#x7684; API &#x4E2D;&#x7684;&#x6570;&#x636E;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x5957;&#x6613;&#x4E8E;&#x7406;&#x89E3;&#x7684;&#x5B8C;&#x6574;&#x63CF;&#x8FF0;&#xFF0C;&#x4F7F;&#x5F97;&#x5BA2;&#x6237;&#x7AEF;&#x80FD;&#x591F;&#x51C6;&#x786E;&#x5730;&#x83B7;&#x5F97;&#x5B83;&#x9700;&#x8981;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x800C;&#x4E14;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x5197;&#x4F59;</li>
+<li>&#x8BF7;&#x6C42;&#x4F60;&#x6240;&#x8981;&#x7684;&#x6570;&#x636E;&#x4E0D;&#x591A;&#x4E0D;&#x5C11;</li>
+<li>&#x53EA;&#x7528;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#x83B7;&#x53D6;&#x591A;&#x4E2A;&#x8D44;&#x6E90;</li>
+</ul>
+<h2 id="t12.&#x521B;&#x5EFA;&#x540E;&#x7AEF;&#x9879;&#x76EE;">2.&#x521B;&#x5EFA;&#x540E;&#x7AEF;&#x9879;&#x76EE; <a href="#t12.&#x521B;&#x5EFA;&#x540E;&#x7AEF;&#x9879;&#x76EE;"> # </a></h2>
+<pre><code class="lang-js">mkdir server
+cd server 
+cnpm init -y
+cnpm i express graphql express-graphql mongoose  cors --save
+</code></pre>
+<h2 id="t23. &#x5B9E;&#x73B0;&#x5546;&#x54C1;&#x5206;&#x7C7B;&#x63A5;&#x53E3;">3. &#x5B9E;&#x73B0;&#x5546;&#x54C1;&#x5206;&#x7C7B;&#x63A5;&#x53E3; <a href="#t23. &#x5B9E;&#x73B0;&#x5546;&#x54C1;&#x5206;&#x7C7B;&#x63A5;&#x53E3;"> # </a></h2>
+<h3 id="t33.1 server.js">3.1 server.js <a href="#t33.1 server.js"> # </a></h3>
+<p>server.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express&apos;</span>);
+<span class="hljs-keyword">const</span> graphqlHTTP = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express-graphql&apos;</span>);
+<span class="hljs-keyword">const</span> schema = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./schema&apos;</span>);
+<span class="hljs-keyword">const</span> cors = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;cors&apos;</span>);
+<span class="hljs-keyword">const</span> app = express();
+app.use(cors({
+    <span class="hljs-attr">origin</span>: <span class="hljs-string">&apos;http://localhost:3000&apos;</span>,
+    <span class="hljs-attr">methods</span>: <span class="hljs-string">&quot;GET,PUT,POST,OPTIONS&quot;</span>
+}));
+app.use(<span class="hljs-string">&apos;/graphql&apos;</span>, graphqlHTTP({
+    schema,
+    <span class="hljs-attr">graphiql</span>: <span class="hljs-literal">true</span>
+}));
+app.listen(<span class="hljs-number">4000</span>, () =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;server started on 4000&apos;</span>);
+});
+</code></pre>
+<h3 id="t43.2 schema.js">3.2 schema.js <a href="#t43.2 schema.js"> # </a></h3>
+<ul>
+<li>&#x5B9A;&#x4E49;&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;,&#x7C7B;&#x578B;&#x7684;&#x6BCF;&#x4E2A;&#x5B57;&#x6BB5;&#x90FD;&#x5FC5;&#x987B;&#x662F;&#x5DF2;&#x5B9A;&#x4E49;&#x7684;&#x4E14;&#x6700;&#x7EC8;&#x90FD;&#x662F; GraphQL &#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x7C7B;&#x578B;&#x3002;</li>
+<li>&#x5B9A;&#x4E49;&#x6839;&#x7C7B;&#x578B;,&#x6BCF;&#x79CD;&#x6839;&#x7C7B;&#x578B;&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x51C6;&#x5907;&#x66B4;&#x9732;&#x7ED9;&#x670D;&#x52A1;&#x8C03;&#x7528;&#x65B9;&#x7684;&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;</li>
+<li>&#x5B9A;&#x4E49; Schema,&#x6BCF;&#x4E00;&#x4E2A; Schema &#x4E2D;&#x5141;&#x8BB8;&#x51FA;&#x73B0;&#x4E09;&#x79CD;&#x6839;&#x7C7B;&#x578B;&#xFF1A;query&#xFF0C;mutation&#xFF0C;subscription&#xFF0C;&#x5176;&#x4E2D;&#x81F3;&#x5C11;&#x8981;&#x6709; query</li>
+</ul>
+<p>schema.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> graphql = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;graphql&apos;</span>);
+<span class="hljs-keyword">const</span> { GraphQLObjectType,
+    GraphQLString,
+    GraphQLInt,
+    GraphQLSchema,
+    GraphQLList,
+    GraphQLNonNull
+} = graphql;
+<span class="hljs-keyword">const</span> categories = [
+    { <span class="hljs-attr">id</span>: <span class="hljs-string">&apos;1&apos;</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;&#x56FE;&#x4E66;&apos;</span> },
+    { <span class="hljs-attr">id</span>: <span class="hljs-string">&apos;2&apos;</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;&#x6570;&#x7801;&apos;</span> },
+    { <span class="hljs-attr">id</span>: <span class="hljs-string">&apos;3&apos;</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;&#x98DF;&#x54C1;&apos;</span> }
+]
+
+<span class="hljs-keyword">const</span> Category = <span class="hljs-keyword">new</span> GraphQLObjectType({
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;Category&apos;</span>,
+    <span class="hljs-attr">fields</span>: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> (
+        {
+            <span class="hljs-attr">id</span>: { <span class="hljs-attr">type</span>: GraphQLString },
+            <span class="hljs-attr">name</span>: { <span class="hljs-attr">type</span>: GraphQLString },
+        }
+    )
+});
+
+<span class="hljs-keyword">const</span> RootQuery = <span class="hljs-keyword">new</span> GraphQLObjectType({
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;RootQuery&apos;</span>,
+    <span class="hljs-attr">fields</span>: {
+        <span class="hljs-attr">getCategory</span>: {
+            <span class="hljs-attr">type</span>: Category,
+            <span class="hljs-attr">args</span>: {
+                <span class="hljs-attr">id</span>: {
+                    <span class="hljs-attr">type</span>: GraphQLString
+                }
+            },
+            resolve(parent, args) {
+                <span class="hljs-keyword">return</span> categories.find(<span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> item.id === args.id);
+            }
+        }
+    }
+});
+<span class="hljs-built_in">module</span>.exports = <span class="hljs-keyword">new</span> GraphQLSchema({
+    <span class="hljs-attr">query</span>: RootQuery
+})
+</code></pre>
+<h3 id="t53.3 GraphiQL">3.3 GraphiQL <a href="#t53.3 GraphiQL"> # </a></h3>
+<ul>
+<li><a href="https://github.com/graphql/graphiql">GraphiQL</a>is an in-browser tool for writing, validating, and testing GraphQL queries.</li>
+<li><p><a href="http://localhost:4000/graphql">&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;</a></p>
+</li>
+<li><p>&#x6BCF;&#x6B21;&#x8C03;&#x7528; <code>GraphQL</code> &#x670D;&#x52A1;,&#x9700;&#x8981;&#x660E;&#x786E;&#x6307;&#x5B9A;&#x8C03;&#x7528; <code>Schema</code> &#x4E2D;&#x7684;&#x54EA;&#x4E2A;&#x6839;&#x7C7B;&#x578B;(&#x9ED8;&#x8BA4;&#x662F; <code>query</code>)</p>
+</li>
+<li>&#x7136;&#x540E;&#x6307;&#x5B9A;&#x8FD9;&#x4E2A;&#x6839;&#x7C7B;&#x578B;&#x4E0B;&#x7684;&#x54EA;&#x51E0;&#x4E2A;&#x5B57;&#x6BB5;&#xFF08;&#x6BCF;&#x4E2A;&#x5B57;&#x6BB5;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;&#xFF09;&#xFF0C;&#x7136;&#x540E;&#x6307;&#x5B9A;&#x8FD9;&#x4E9B;&#x5B57;&#x6BB5;&#x4E2D;&#x7684;&#x90A3;&#x4E9B;&#x5B50;&#x5B57;&#x6BB5;&#x7684;&#x54EA;&#x51E0;&#x4E2A;&#x3002;&#x4E00;&#x76F4;&#x5230;&#x6240;&#x6709;&#x7684;&#x5B57;&#x6BB5;&#x90FD;&#x6CA1;&#x6709;&#x5B50;&#x5B57;&#x6BB5;&#x4E3A;&#x6B62;</li>
+<li>Schema &#x660E;&#x786E;&#x4E86;&#x670D;&#x52A1;&#x7AEF;&#x6709;&#x54EA;&#x4E9B;&#x5B57;&#x6BB5;(&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;)&#x53EF;&#x4EE5;&#x7528;&#xFF0C;&#x6BCF;&#x4E2A;&#x5B57;&#x6BB5;&#x7684;&#x7C7B;&#x578B;&#x548C;&#x5B50;&#x5B57;&#x6BB5;</li>
+<li>&#x6BCF;&#x6B21;&#x67E5;&#x8BE2;&#x65F6;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x5C31;&#x4F1A;&#x6839;&#x636E; <code>Schema</code> &#x9A8C;&#x8BC1;&#x5E76;&#x6267;&#x884C;&#x67E5;&#x8BE2;</li>
+</ul>
+<pre><code class="lang-js">     {
+       field(arg: <span class="hljs-string">&quot;value&quot;</span>) {
+         subField
+       }
+     }
+</code></pre>
+<pre><code class="lang-js">query{
+  getCategory(id: <span class="hljs-string">&quot;1&quot;</span>) {
+    id
+    name
+  }
+}
+</code></pre>
+<p><img src="http://img.zhufengpeixun.cn/getCategory.png" alt="getCategory"></p>
+<p><img src="http://img.zhufengpeixun.cn/getCategories.png" alt="getCategories"></p>
+<h2 id="t64. &#x5B9E;&#x73B0;&#x5546;&#x54C1;&#x63A5;&#x53E3;">4. &#x5B9E;&#x73B0;&#x5546;&#x54C1;&#x63A5;&#x53E3; <a href="#t64. &#x5B9E;&#x73B0;&#x5546;&#x54C1;&#x63A5;&#x53E3;"> # </a></h2>
+<h3 id="t74.1 schema.js">4.1 schema.js <a href="#t74.1 schema.js"> # </a></h3>
+<p>schema.js</p>
+<pre><code class="lang-diff">const graphql = require(&apos;graphql&apos;);
+const { GraphQLObjectType,
+    GraphQLString,
+    GraphQLSchema,
+    GraphQLList,
+} = graphql;
+const categories = [
+    { id: &apos;1&apos;, name: &apos;&#x56FE;&#x4E66;&apos; },
+    { id: &apos;2&apos;, name: &apos;&#x6570;&#x7801;&apos; },
+    { id: &apos;3&apos;, name: &apos;&#x98DF;&#x54C1;&apos; }
+]
+<span class="hljs-addition">+const products = [</span>
+<span class="hljs-addition">+    { id: &apos;1&apos;, name: &apos;&#x7EA2;&#x697C;&#x68A6;&apos;, category: &apos;1&apos; },</span>
+<span class="hljs-addition">+    { id: &apos;2&apos;, name: &apos;&#x897F;&#x6E38;&#x8BB0;&apos;, category: &apos;1&apos; },</span>
+<span class="hljs-addition">+    { id: &apos;3&apos;, name: &apos;&#x6C34;&#x6D52;&#x4F20;&apos;, category: &apos;1&apos; },</span>
+<span class="hljs-addition">+    { id: &apos;4&apos;, name: &apos;&#x4E09;&#x56FD;&#x6F14;&#x4E49;&apos;, category: &apos;1&apos; },</span>
+<span class="hljs-addition">+    { id: &apos;2&apos;, name: &apos;iPhone&apos;, category: &apos;2&apos; },</span>
+<span class="hljs-addition">+    { id: &apos;3&apos;, name: &apos;&apos;, category: &apos;3&apos; }</span>
+<span class="hljs-addition">+]</span>
+//&#x5B9A;&#x4E49;&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;
+//&#x7C7B;&#x578B;&#x7684;&#x6BCF;&#x4E2A;&#x5B57;&#x6BB5;&#x90FD;&#x5FC5;&#x987B;&#x662F;&#x5DF2;&#x5B9A;&#x4E49;&#x7684;&#x4E14;&#x6700;&#x7EC8;&#x90FD;&#x662F; GraphQL &#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x7C7B;&#x578B;&#x3002;
+const Category = new GraphQLObjectType({
+    name: &apos;Category&apos;,
+    fields: () =&gt; (
+        {
+            id: { type: GraphQLString },
+            name: { type: GraphQLString },
+<span class="hljs-addition">+            products: {</span>
+<span class="hljs-addition">+                type: new GraphQLList(Product),</span>
+<span class="hljs-addition">+                resolve(parent) {</span>
+<span class="hljs-addition">+                    return products.filter(item =&gt; item.category === parent.id);</span>
+<span class="hljs-addition">+                }</span>
+<span class="hljs-addition">+            }</span>
+        }
+    )
+});
+<span class="hljs-addition">+const Product = new GraphQLObjectType({</span>
+<span class="hljs-addition">+    name: &apos;Product&apos;,</span>
+<span class="hljs-addition">+    fields: () =&gt; (</span>
+<span class="hljs-addition">+        {</span>
+<span class="hljs-addition">+            id: { type: GraphQLString },</span>
+<span class="hljs-addition">+            name: { type: GraphQLString },</span>
+<span class="hljs-addition">+            category: {</span>
+<span class="hljs-addition">+                type: Category,</span>
+<span class="hljs-addition">+                resolve(parent) {</span>
+<span class="hljs-addition">+                    return categories.find(item =&gt; item.id === parent.category);</span>
+<span class="hljs-addition">+                }</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+    )</span>
+<span class="hljs-addition">+});</span>
+
+const RootQuery = new GraphQLObjectType({
+    name: &apos;RootQuery&apos;,
+    fields: {
+        getCategory: {
+            type: Category,
+            args: {
+                id: {
+                    type: GraphQLString
+                }
+            },
+            resolve(parent, args) {
+                return categories.find(item =&gt; item.id <span class="hljs-comment">=== args.id);</span>
+            }
+        },
+        getCategories: {
+            type: new GraphQLList(Category),
+            args: {
+
+            },
+            resolve(parent, args) {
+                return categories;
+            }
+        },
+<span class="hljs-addition">+        getProduct: {</span>
+<span class="hljs-addition">+            type: Product,</span>
+<span class="hljs-addition">+            args: {</span>
+<span class="hljs-addition">+                id: {</span>
+<span class="hljs-addition">+                    type: GraphQLString</span>
+<span class="hljs-addition">+                }</span>
+<span class="hljs-addition">+            },</span>
+<span class="hljs-addition">+            resolve(parent, args) {</span>
+<span class="hljs-addition">+                return products.find(item =&gt; item.id === args.id);</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+        },</span>
+<span class="hljs-addition">+        getProducts: {</span>
+<span class="hljs-addition">+            type: new GraphQLList(Product),</span>
+<span class="hljs-addition">+            args: {},</span>
+<span class="hljs-addition">+            resolve(parent, args) {</span>
+<span class="hljs-addition">+                return categories;</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+        }</span>
+    }
+});
+//&#x5B9A;&#x4E49; Schema,&#x6BCF;&#x4E00;&#x4E2A; Schema &#x4E2D;&#x5141;&#x8BB8;&#x51FA;&#x73B0;&#x4E09;&#x79CD;&#x6839;&#x7C7B;&#x578B;&#xFF1A;query&#xFF0C;mutation&#xFF0C;subscription&#xFF0C;&#x5176;&#x4E2D;&#x81F3;&#x5C11;&#x8981;&#x6709; query
+module.exports = new GraphQLSchema({
+    query: RootQuery
+})
+</code></pre>
+<h2 id="t85. &#x6DFB;&#x52A0;&#x5546;&#x54C1;">5. &#x6DFB;&#x52A0;&#x5546;&#x54C1; <a href="#t85. &#x6DFB;&#x52A0;&#x5546;&#x54C1;"> # </a></h2>
+<h3 id="t95.1 schema.js">5.1 schema.js <a href="#t95.1 schema.js"> # </a></h3>
+<p>schema.js</p>
+<pre><code class="lang-diff">const graphql = require(&apos;graphql&apos;);
+const {
+    GraphQLObjectType,
+    GraphQLString,
+    GraphQLSchema,
+    GraphQLList,
+    GraphQLNonNull
+} = graphql;
+const categories = [
+    { id: &apos;1&apos;, name: &apos;&#x56FE;&#x4E66;&apos; },
+    { id: &apos;2&apos;, name: &apos;&#x6570;&#x7801;&apos; },
+    { id: &apos;3&apos;, name: &apos;&#x98DF;&#x54C1;&apos; }
+]
+<span class="hljs-addition">+const products = [</span>
+<span class="hljs-addition">+    { id: &apos;1&apos;, name: &apos;&#x7EA2;&#x697C;&#x68A6;&apos;, category: &apos;1&apos; },</span>
+<span class="hljs-addition">+    { id: &apos;2&apos;, name: &apos;&#x897F;&#x6E38;&#x8BB0;&apos;, category: &apos;1&apos; },</span>
+<span class="hljs-addition">+    { id: &apos;3&apos;, name: &apos;&#x6C34;&#x6D52;&#x4F20;&apos;, category: &apos;1&apos; },</span>
+<span class="hljs-addition">+    { id: &apos;4&apos;, name: &apos;&#x4E09;&#x56FD;&#x6F14;&#x4E49;&apos;, category: &apos;1&apos; },</span>
+<span class="hljs-addition">+    { id: &apos;2&apos;, name: &apos;iPhone&apos;, category: &apos;2&apos; },</span>
+<span class="hljs-addition">+    { id: &apos;3&apos;, name: &apos;&apos;, category: &apos;3&apos; }</span>
+<span class="hljs-addition">+]</span>
+//&#x5B9A;&#x4E49;&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;
+//&#x7C7B;&#x578B;&#x7684;&#x6BCF;&#x4E2A;&#x5B57;&#x6BB5;&#x90FD;&#x5FC5;&#x987B;&#x662F;&#x5DF2;&#x5B9A;&#x4E49;&#x7684;&#x4E14;&#x6700;&#x7EC8;&#x90FD;&#x662F; GraphQL &#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x7C7B;&#x578B;&#x3002;
+const Category = new GraphQLObjectType({
+    name: &apos;Category&apos;,
+    fields: () =&gt; (+
+        {
+            id: { type: GraphQLString },
+            name: { type: GraphQLString },
+            products: {
+                type: new GraphQLList(Product),
+                resolve(parent) {
+                    return products.filter(item =&gt; item.category <span class="hljs-comment">=== parent.id);</span>
+                }
+            }
+        }
+    )
+});
+<span class="hljs-addition">+const Product = new GraphQLObjectType({</span>
+<span class="hljs-addition">+    name: &apos;Product&apos;,</span>
+<span class="hljs-addition">+    fields: () =&gt; (</span>
+<span class="hljs-addition">+        {</span>
+<span class="hljs-addition">+            id: { type: GraphQLString },</span>
+<span class="hljs-addition">+            name: { type: GraphQLString },</span>
+<span class="hljs-addition">+            category: {</span>
+<span class="hljs-addition">+                type: Category,</span>
+<span class="hljs-addition">+                resolve(parent) {</span>
+<span class="hljs-addition">+                    return categories.find(item =&gt; item.id === parent.category);</span>
+<span class="hljs-addition">+                }</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+    )</span>
+<span class="hljs-addition">+});</span>
+
+const RootQuery = new GraphQLObjectType({
+    name: &apos;RootQuery&apos;,
+    fields: {
+        getCategory: {
+            type: Category,
+            args: {
+                id: {
+                    type: GraphQLString
+                }
+            },
+            resolve(parent, args) {
+                return categories.find(item =&gt; item.id <span class="hljs-comment">=== args.id);</span>
+            }
+        },
+        getCategories: {
+            type: new GraphQLList(Category),
+            args: {
+
+            },
+            resolve(parent, args) {
+                return categories;
+            }
+        },
+        getProduct: {
+            type: Product,
+            args: {
+                id: {
+                    type: GraphQLString
+                }
+            },
+            resolve(parent, args) {
+                return products.find(item =&gt; item.id <span class="hljs-comment">=== args.id);</span>
+            }
+        },
+        getProducts: {
+            type: new GraphQLList(Product),
+            args: {
+
+            },
+            resolve(parent, args) {
+                return categories;
+            }
+        }
+    }
+});
+<span class="hljs-addition">+const RootMutation = new GraphQLObjectType({</span>
+<span class="hljs-addition">+    name: &apos;RootMutation&apos;,</span>
+<span class="hljs-addition">+    fields: {</span>
+<span class="hljs-addition">+        addCategory: {</span>
+<span class="hljs-addition">+            type: Category,</span>
+<span class="hljs-addition">+            args: {</span>
+<span class="hljs-addition">+                name: { type: new GraphQLNonNull(GraphQLString) }</span>
+<span class="hljs-addition">+            },</span>
+<span class="hljs-addition">+            resolve(parent, args) {</span>
+<span class="hljs-addition">+                args.id = categories.length + 1 + &apos;&apos;;</span>
+<span class="hljs-addition">+                categories.push(args);</span>
+<span class="hljs-addition">+                return args;</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+        },</span>
+<span class="hljs-addition">+        addProduct: {</span>
+<span class="hljs-addition">+            type: Product,</span>
+<span class="hljs-addition">+            args: {</span>
+<span class="hljs-addition">+                name: { type: new GraphQLNonNull(GraphQLString) },</span>
+<span class="hljs-addition">+                category: { type: new GraphQLNonNull(GraphQLString) }</span>
+<span class="hljs-addition">+            },</span>
+<span class="hljs-addition">+            resolve(parent, args) {</span>
+<span class="hljs-addition">+                args.id = products.length + 1 + &apos;&apos;;</span>
+<span class="hljs-addition">+                products.push(args);</span>
+<span class="hljs-addition">+                return args;</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+        }</span>
+    }
+});
+//&#x5B9A;&#x4E49; Schema,&#x6BCF;&#x4E00;&#x4E2A; Schema &#x4E2D;&#x5141;&#x8BB8;&#x51FA;&#x73B0;&#x4E09;&#x79CD;&#x6839;&#x7C7B;&#x578B;&#xFF1A;query&#xFF0C;mutation&#xFF0C;subscription&#xFF0C;&#x5176;&#x4E2D;&#x81F3;&#x5C11;&#x8981;&#x6709; query
+module.exports = new GraphQLSchema({
+    query: RootQuery,
+<span class="hljs-addition">+    mutation: RootMutation</span>
+})
+</code></pre>
+<p><img src="http://img.zhufengpeixun.cn/addProduct.png" alt="addProduct"></p>
+<h2 id="t106. &#x4F7F;&#x7528;mongodb&#x6570;&#x636E;&#x5E93;">6. &#x4F7F;&#x7528;mongodb&#x6570;&#x636E;&#x5E93; <a href="#t106. &#x4F7F;&#x7528;mongodb&#x6570;&#x636E;&#x5E93;"> # </a></h2>
+<h3 id="t116.1 model.js">6.1 model.js <a href="#t116.1 model.js"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> mongoose = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;mongoose&apos;</span>);
+<span class="hljs-keyword">const</span> ObjectId = mongoose.Schema.Types.ObjectId;
+<span class="hljs-keyword">const</span> Schema = mongoose.Schema;
+<span class="hljs-keyword">const</span> conn = mongoose.createConnection(<span class="hljs-string">`mongodb://localhost/graphql`</span>, {
+    <span class="hljs-attr">useNewUrlParser</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">useUnifiedTopology</span>: <span class="hljs-literal">true</span>
+});
+conn.on(<span class="hljs-string">&apos;open&apos;</span>, () =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x6210;&#x529F;&apos;</span>));
+conn.on(<span class="hljs-string">&apos;error&apos;</span>, (error) =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x5931;&#x8D25;&apos;</span>, error));
+
+<span class="hljs-keyword">const</span> CategorySchema = <span class="hljs-keyword">new</span> Schema({
+    <span class="hljs-attr">name</span>: <span class="hljs-built_in">String</span>
+});
+<span class="hljs-keyword">const</span> CategoryModel = conn.model(<span class="hljs-string">&apos;Category&apos;</span>, CategorySchema);
+<span class="hljs-keyword">const</span> ProductSchema = <span class="hljs-keyword">new</span> Schema({
+    <span class="hljs-attr">name</span>: <span class="hljs-built_in">String</span>,
+    <span class="hljs-attr">category</span>: {
+        <span class="hljs-attr">type</span>: ObjectId,
+        <span class="hljs-attr">ref</span>: <span class="hljs-string">&apos;Category&apos;</span>
+    }
+});
+<span class="hljs-keyword">const</span> ProductModel = conn.model(<span class="hljs-string">&apos;Product&apos;</span>, ProductSchema);
+<span class="hljs-built_in">module</span>.exports = {
+    CategoryModel,
+    ProductModel
+}
+</code></pre>
+<h3 id="t126.2 schema.js">6.2 schema.js <a href="#t126.2 schema.js"> # </a></h3>
+<p>schema.js</p>
+<pre><code class="lang-diff">const graphql = require(&apos;graphql&apos;);
+<span class="hljs-addition">+const { CategoryModel, ProductModel } = require(&apos;./model&apos;);</span>
+const {
+    GraphQLObjectType,
+    GraphQLString,
+    GraphQLSchema,
+    GraphQLList,
+    GraphQLNonNull
+} = graphql;
+const categories = [
+    { id: &apos;1&apos;, name: &apos;&#x56FE;&#x4E66;&apos; },
+    { id: &apos;2&apos;, name: &apos;&#x6570;&#x7801;&apos; },
+    { id: &apos;3&apos;, name: &apos;&#x98DF;&#x54C1;&apos; }
+]
+const products = [
+    { id: &apos;1&apos;, name: &apos;&#x7EA2;&#x697C;&#x68A6;&apos;, category: &apos;1&apos; },
+    { id: &apos;2&apos;, name: &apos;&#x897F;&#x6E38;&#x8BB0;&apos;, category: &apos;1&apos; },
+    { id: &apos;3&apos;, name: &apos;&#x6C34;&#x6D52;&#x4F20;&apos;, category: &apos;1&apos; },
+    { id: &apos;4&apos;, name: &apos;&#x4E09;&#x56FD;&#x6F14;&#x4E49;&apos;, category: &apos;1&apos; },
+    { id: &apos;2&apos;, name: &apos;iPhone&apos;, category: &apos;2&apos; },
+    { id: &apos;3&apos;, name: &apos;&apos;, category: &apos;3&apos; }
+]
+//&#x5B9A;&#x4E49;&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;
+//&#x7C7B;&#x578B;&#x7684;&#x6BCF;&#x4E2A;&#x5B57;&#x6BB5;&#x90FD;&#x5FC5;&#x987B;&#x662F;&#x5DF2;&#x5B9A;&#x4E49;&#x7684;&#x4E14;&#x6700;&#x7EC8;&#x90FD;&#x662F; GraphQL &#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x7C7B;&#x578B;&#x3002;
+const Category = new GraphQLObjectType({
+    name: &apos;Category&apos;,
+    fields: () =&gt; (
+        {
+            id: { type: GraphQLString },
+            name: { type: GraphQLString },
+            products: {
+                type: new GraphQLList(Product),
+                resolve(parent) {
+                    //return products.filter(item =&gt; item.category <span class="hljs-comment">=== parent.id);</span>
+<span class="hljs-addition">+                    return ProductModel.find({ category: parent.id });</span>
+                }
+            }
+        }
+    )
+});
+const Product = new GraphQLObjectType({
+    name: &apos;Product&apos;,
+    fields: () =&gt; (
+        {
+            id: { type: GraphQLString },
+            name: { type: GraphQLString },
+            category: {
+                type: Category,
+                resolve(parent) {
+                    //return categories.find(item =&gt; item.id <span class="hljs-comment">=== parent.category);</span>
+<span class="hljs-addition">+                    return CategoryModel.findById(parent.category);</span>
+                }
+            }
+        }
+    )
+});
+
+const RootQuery = new GraphQLObjectType({
+    name: &apos;RootQuery&apos;,
+    fields: {
+        getCategory: {
+            type: Category,
+            args: {
+                id: {
+                    type: GraphQLString
+                }
+            },
+            resolve(parent, args) {
+                //return categories.find(item =&gt; item.id <span class="hljs-comment">=== args.id);</span>
+<span class="hljs-addition">+                return CategoryModel.findById(args.id);</span>
+            }
+        },
+        getCategories: {
+            type: new GraphQLList(Category),
+            args: {},
+            resolve(parent, args) {
+                //return categories;
+<span class="hljs-addition">+                return CategoryModel.find();</span>
+            }
+        },
+        getProduct: {
+            type: Product,
+            args: {
+                id: { type: GraphQLString }
+            },
+            resolve(parent, args) {
+                //return products.find(item =&gt; item.id <span class="hljs-comment">=== args.id);</span>
+<span class="hljs-addition">+                return ProductModel.findById(args.id);</span>
+            }
+        },
+        getProducts: {
+            type: new GraphQLList(Product),
+            args: {
+
+            },
+            resolve(parent, args) {
+                //return categories;
+<span class="hljs-addition">+                return ProductModel.find();</span>
+            }
+        }
+    }
+});
+const RootMutation = new GraphQLObjectType({
+    name: &apos;RootMutation&apos;,
+    fields: {
+        addCategory: {
+            type: Category,
+            args: {
+                name: { type: new GraphQLNonNull(GraphQLString) }
+            },
+            resolve(parent, args) {
+                /*
+                  args.id = categories.length + 1 + &apos;&apos;;
+                  categories.push(args);
+                  return args;
+                */
+<span class="hljs-addition">+                return CategoryModel.create(args);</span>
+            }
+        },
+        addProduct: {
+            type: Product,
+            args: {
+                name: { type: new GraphQLNonNull(GraphQLString) },
+                category: { type: new GraphQLNonNull(GraphQLString) }
+            },
+            resolve(parent, args) {
+                /* args.id = products.length + 1 + &apos;&apos;;
+                products.push(args);
+                return args; */
+<span class="hljs-addition">+                return ProductModel.create(args);</span>
+            }
+        }
+    }
+});
+//&#x5B9A;&#x4E49; Schema,&#x6BCF;&#x4E00;&#x4E2A; Schema &#x4E2D;&#x5141;&#x8BB8;&#x51FA;&#x73B0;&#x4E09;&#x79CD;&#x6839;&#x7C7B;&#x578B;&#xFF1A;query&#xFF0C;mutation&#xFF0C;subscription&#xFF0C;&#x5176;&#x4E2D;&#x81F3;&#x5C11;&#x8981;&#x6709; query
+module.exports = new GraphQLSchema({
+    query: RootQuery,
+    mutation: RootMutation
+})
+</code></pre>
+<h3 id="t136.3 &#x64CD;&#x4F5C;&#x6B65;&#x9AA4;">6.3 &#x64CD;&#x4F5C;&#x6B65;&#x9AA4; <a href="#t136.3 &#x64CD;&#x4F5C;&#x6B65;&#x9AA4;"> # </a></h3>
+<pre><code class="lang-js">mutation{
+  addCategory(name:<span class="hljs-string">&quot;&#x4E66;&#x7C4D;&quot;</span>){
+    id,
+    name
+  }
+}
+{
+  <span class="hljs-string">&quot;data&quot;</span>: {
+    <span class="hljs-string">&quot;addCategory&quot;</span>: {
+      <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;5dcfb188fe2d74a3543392ab&quot;</span>,
+      <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x4E66;&#x7C4D;&quot;</span>
+    }
+  }
+}
+mutation{
+  addCategory(name:<span class="hljs-string">&quot;&#x6570;&#x7801;&#x4EA7;&#x54C1;&quot;</span>){
+    id,
+    name
+  }
+}
+{
+  <span class="hljs-string">&quot;data&quot;</span>: {
+    <span class="hljs-string">&quot;addCategory&quot;</span>: {
+      <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;5dcfb1bdfe2d74a3543392ad&quot;</span>,
+      <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x6570;&#x7801;&#x4EA7;&#x54C1;&quot;</span>
+    }
+  }
+}
+mutation{
+  addCategory(name:<span class="hljs-string">&quot;&#x98DF;&#x54C1;&quot;</span>){
+    id,
+    name
+  }
+}
+{
+  <span class="hljs-string">&quot;data&quot;</span>: {
+    <span class="hljs-string">&quot;addCategory&quot;</span>: {
+      <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;5dcfb1c5fe2d74a3543392ae&quot;</span>,
+      <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x98DF;&#x54C1;&quot;</span>
+    }
+  }
+}
+
+
+{
+  getCategories {
+    id
+    name
+  }
+}
+
+{
+  <span class="hljs-string">&quot;data&quot;</span>: {
+    <span class="hljs-string">&quot;getCategories&quot;</span>: [
+      {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;5dcfb188fe2d74a3543392ab&quot;</span>,
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x4E66;&#x7C4D;&quot;</span>
+      },
+      {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;5dcfb1bdfe2d74a3543392ad&quot;</span>,
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x6570;&#x7801;&#x4EA7;&#x54C1;&quot;</span>
+      },
+      {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;5dcfb1c5fe2d74a3543392ae&quot;</span>,
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x98DF;&#x54C1;&quot;</span>
+      }
+    ]
+  }
+}
+
+
+mutation {
+  addProduct(name: <span class="hljs-string">&quot;&#x897F;&#x6E38;&#x8BB0;&quot;</span>, <span class="hljs-attr">category</span>: <span class="hljs-string">&quot;5dcfb188fe2d74a3543392ab&quot;</span>) {
+    id
+    name
+  }
+}
+
+{
+  <span class="hljs-string">&quot;data&quot;</span>: {
+    <span class="hljs-string">&quot;addProduct&quot;</span>: {
+      <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;5dcfb341b2f03ea4906dd913&quot;</span>,
+      <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x897F;&#x6E38;&#x8BB0;&quot;</span>
+    }
+  }
+}
+
+mutation {
+  addProduct(name: <span class="hljs-string">&quot;&#x7EA2;&#x697C;&#x68A6;&quot;</span>, <span class="hljs-attr">category</span>: <span class="hljs-string">&quot;5dcfb188fe2d74a3543392ab&quot;</span>) {
+    id
+    name
+  }
+}
+
+{
+  <span class="hljs-string">&quot;data&quot;</span>: {
+    <span class="hljs-string">&quot;addProduct&quot;</span>: {
+      <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;5dcfb354b2f03ea4906dd914&quot;</span>,
+      <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x7EA2;&#x697C;&#x68A6;&quot;</span>
+    }
+  }
+}
+
+mutation {
+  addProduct(name: <span class="hljs-string">&quot;&#x6C34;&#x6D52;&#x4F20;&quot;</span>, <span class="hljs-attr">category</span>: <span class="hljs-string">&quot;5dcfb188fe2d74a3543392ab&quot;</span>) {
+    id
+    name
+  }
+}
+
+{
+  <span class="hljs-string">&quot;data&quot;</span>: {
+    <span class="hljs-string">&quot;addProduct&quot;</span>: {
+      <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;5dcfb36cb2f03ea4906dd915&quot;</span>,
+      <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x6C34;&#x6D52;&#x4F20;&quot;</span>
+    }
+  }
+}
+
+mutation {
+  addProduct(name: <span class="hljs-string">&quot;&#x4E09;&#x56FD;&#x6F14;&#x4E49;&quot;</span>, <span class="hljs-attr">category</span>: <span class="hljs-string">&quot;5dcfb188fe2d74a3543392ab&quot;</span>) {
+    id
+    name
+  }
+}
+
+
+{
+  <span class="hljs-string">&quot;data&quot;</span>: {
+    <span class="hljs-string">&quot;addProduct&quot;</span>: {
+      <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;5dcfb37bb2f03ea4906dd916&quot;</span>,
+      <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x4E09;&#x56FD;&#x6F14;&#x4E49;&quot;</span>
+    }
+  }
+}
+
+mutation {
+  addProduct(name: <span class="hljs-string">&quot;iPhone&quot;</span>, <span class="hljs-attr">category</span>: <span class="hljs-string">&quot;5dcfb1bdfe2d74a3543392ad&quot;</span>) {
+    id
+    name
+  }
+}
+
+{
+  <span class="hljs-string">&quot;data&quot;</span>: {
+    <span class="hljs-string">&quot;addProduct&quot;</span>: {
+      <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;5dcfb393b2f03ea4906dd917&quot;</span>,
+      <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;iPhone&quot;</span>
+    }
+  }
+}
+
+
+mutation {
+  addProduct(name: <span class="hljs-string">&quot;&#x9762;&#x5305;&quot;</span>, <span class="hljs-attr">category</span>: <span class="hljs-string">&quot;5dcfb1c5fe2d74a3543392ae&quot;</span>) {
+    id
+    name
+  }
+}
+
+{
+  <span class="hljs-string">&quot;data&quot;</span>: {
+    <span class="hljs-string">&quot;addProduct&quot;</span>: {
+      <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;5dcfb3a7b2f03ea4906dd918&quot;</span>,
+      <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x9762;&#x5305;&quot;</span>
+    }
+  }
+}
+
+
+{
+  getProducts {
+    id
+    name
+  }
+}
+
+{
+  <span class="hljs-string">&quot;data&quot;</span>: {
+    <span class="hljs-string">&quot;getProducts&quot;</span>: [
+      {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;5dcfb341b2f03ea4906dd913&quot;</span>,
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x897F;&#x6E38;&#x8BB0;&quot;</span>
+      },
+      {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;5dcfb354b2f03ea4906dd914&quot;</span>,
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x7EA2;&#x697C;&#x68A6;&quot;</span>
+      },
+      {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;5dcfb36cb2f03ea4906dd915&quot;</span>,
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x6C34;&#x6D52;&#x4F20;&quot;</span>
+      },
+      {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;5dcfb37bb2f03ea4906dd916&quot;</span>,
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x4E09;&#x56FD;&#x6F14;&#x4E49;&quot;</span>
+      },
+      {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;5dcfb393b2f03ea4906dd917&quot;</span>,
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;iPhone&quot;</span>
+      },
+      {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;5dcfb3a7b2f03ea4906dd918&quot;</span>,
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x9762;&#x5305;&quot;</span>
+      }
+    ]
+  }
+}
+</code></pre>
+<h2 id="t141.&#x751F;&#x6210;&#x9879;&#x76EE;">1.&#x751F;&#x6210;&#x9879;&#x76EE; <a href="#t141.&#x751F;&#x6210;&#x9879;&#x76EE;"> # </a></h2>
+<p><img src="http://img.zhufengpeixun.cn/graphqlfront.png" alt="graphqlfront"></p>
+<pre><code class="lang-js">create-react-app client --typescript
+cd client
+cnpm start
+</code></pre>
+<h2 id="t152.&#x5B89;&#x88C5;&#x4F9D;&#x8D56;">2.&#x5B89;&#x88C5;&#x4F9D;&#x8D56; <a href="#t152.&#x5B89;&#x88C5;&#x4F9D;&#x8D56;"> # </a></h2>
+<ul>
+<li><a href="https://www.apollographql.com/docs/react/get-started/">get-started</a></li>
+</ul>
+<pre><code class="lang-js">cnpm install apollo-boost @apollo/react-hooks graphql --save
+cnpm i bootstrap@<span class="hljs-number">3</span> --save
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x6A21;&#x5757;&#x540D;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">apollo-boost</td>
+<td style="text-align:left">Package containing everything you need to set up Apollo Client</td>
+</tr>
+<tr>
+<td style="text-align:left">@apollo/react-hooks</td>
+<td style="text-align:left">React hooks based view layer integration</td>
+</tr>
+<tr>
+<td style="text-align:left">graphql</td>
+<td style="text-align:left">Also parses your GraphQL queries</td>
+</tr>
+</tbody>
+</table>
+<h2 id="t163.&#x8FDE;&#x63A5;&#x63A5;&#x53E3;">3.&#x8FDE;&#x63A5;&#x63A5;&#x53E3; <a href="#t163.&#x8FDE;&#x63A5;&#x63A5;&#x53E3;"> # </a></h2>
+<h3 id="t173.1 src\index.tsx">3.1 src\index.tsx <a href="#t173.1 src\index.tsx"> # </a></h3>
+<p>src\index.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+<span class="hljs-keyword">import</span> ApolloClient <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;apollo-boost&apos;</span>;
+<span class="hljs-keyword">import</span> { gql } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;apollo-boost&quot;</span>;
+<span class="hljs-keyword">const</span> client = <span class="hljs-keyword">new</span> ApolloClient({
+    <span class="hljs-attr">uri</span>: <span class="hljs-string">&apos;http://localhost:4000/graphql&apos;</span>,
+});
+
+client.query({
+    <span class="hljs-attr">query</span>: gql<span class="hljs-string">`
+      query{
+        getCategories {
+          id
+          name
+        }
+      }
+    `</span>
+}).then(<span class="hljs-function"><span class="hljs-params">result</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(result));
+</code></pre>
+<h2 id="t184.&#x5B9E;&#x73B0;&#x524D;&#x53F0;&#x529F;&#x80FD;">4.&#x5B9E;&#x73B0;&#x524D;&#x53F0;&#x529F;&#x80FD; <a href="#t184.&#x5B9E;&#x73B0;&#x524D;&#x53F0;&#x529F;&#x80FD;"> # </a></h2>
+<h3 id="t194.1 src\App.tsx">4.1 src\App.tsx <a href="#t194.1 src\App.tsx"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+<span class="hljs-keyword">import</span> ApolloClient <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;apollo-boost&apos;</span>;
+<span class="hljs-keyword">import</span> { ApolloProvider } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@apollo/react-hooks&apos;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;bootstrap/dist/css/bootstrap.css&apos;</span>;
+<span class="hljs-keyword">import</span> App <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./App&apos;</span>;
+<span class="hljs-keyword">const</span> client = <span class="hljs-keyword">new</span> ApolloClient({ <span class="hljs-attr">uri</span>: <span class="hljs-string">&apos;http://localhost:4000/graphql&apos;</span> });
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ApolloProvider</span> <span class="hljs-attr">client</span>=<span class="hljs-string">{client}</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">App</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ApolloProvider</span>&gt;</span></span>, <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;root&apos;</span>));
+</code></pre>
+<h3 id="t204.2 src\App.tsx">4.2 src\App.tsx <a href="#t204.2 src\App.tsx"> # </a></h3>
+<p>src\App.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { CATEGORIES_PRODUCTS } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./query&apos;</span>;
+<span class="hljs-keyword">import</span> { useQuery } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@apollo/react-hooks&apos;</span>;
+<span class="hljs-keyword">import</span> AddProduct <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./AddProduct&apos;</span>;
+<span class="hljs-keyword">import</span> ProductList <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./ProductList&apos;</span>;
+<span class="hljs-keyword">import</span> ProductDetail <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./ProductDetail&apos;</span>;
+<span class="hljs-keyword">import</span> { Product } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./types&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">App</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> [product, setProduct] = useState&lt;Product&gt;();
+    <span class="hljs-keyword">const</span> { loading, error, data } = useQuery(CATEGORIES_PRODUCTS);
+    <span class="hljs-keyword">if</span> (loading) {
+        <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x52A0;&#x8F7D;&#x4E2D;...<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>;
+    }
+    <span class="hljs-keyword">if</span> (error) {
+        <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x52A0;&#x8F7D;&#x9519;&#x8BEF;<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>;
+    }
+    <span class="hljs-keyword">let</span> { getCategories, getProducts } = data;
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;container&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;row&quot;</span> &gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;col-md-6&quot;</span> &gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;panel panel-default&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">padding:</span> <span class="hljs-attr">20</span> }}&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;panel-header&quot;</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">AddProduct</span> <span class="hljs-attr">getCategories</span>=<span class="hljs-string">{getCategories}</span> /&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;text-center&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">height:</span> &apos;<span class="hljs-attr">400px</span>&apos;, <span class="hljs-attr">overflow:</span> &apos;<span class="hljs-attr">scroll</span>&apos; }}&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">ProductList</span> <span class="hljs-attr">getProducts</span>=<span class="hljs-string">{getProducts}</span> <span class="hljs-attr">setProduct</span>=<span class="hljs-string">{setProduct}</span> /&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;col-md-6&quot;</span> &gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;panel panel-default&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">padding:</span> <span class="hljs-attr">20</span> }}&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;text-center&quot;</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">ProductDetail</span> <span class="hljs-attr">product</span>=<span class="hljs-string">{product}</span> /&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> App;
+</code></pre>
+<h3 id="t214.3 src\types.tsx">4.3 src\types.tsx <a href="#t214.3 src\types.tsx"> # </a></h3>
+<p>src\types.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> interface Category {
+    id?: string;
+    name?: string;
+}
+<span class="hljs-keyword">export</span> interface Product {
+    id?: string;
+    name?: string;
+    categoryId?: string;
+    category?: Category;
+}
+</code></pre>
+<h3 id="t224.4 src\query.tsx">4.4 src\query.tsx <a href="#t224.4 src\query.tsx"> # </a></h3>
+<p>src\query.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { gql } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;apollo-boost&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> CATEGORIES_PRODUCTS = gql<span class="hljs-string">`
+query{
+    getCategories {
+      id,
+      name,
+      products{
+        id,
+        name,
+      }
+    }
+    getProducts {
+      id
+      name,
+      category{
+        id,
+        name,
+        products{
+          id,
+          name,
+        }
+      }
+    }
+}
+`</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> CATEGORIES = gql<span class="hljs-string">`
+query{
+    getCategories {
+      id
+      name
+    }
+}
+`</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> PRODUCTS = gql<span class="hljs-string">`
+query{
+    getProducts {
+      id
+      name,
+      category{
+        id,
+        name
+      }
+    }
+}
+`</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> ADD_PRODUCT = gql<span class="hljs-string">`
+mutation($name:String!,$categoryId: String!){
+  addProduct(name: $name,category:$categoryId) {
+    id,
+    name,
+    category{
+      id,
+      name
+    }
+  }
+}
+`</span>;
+
+</code></pre>
+<h3 id="t234.5 src\AddProduct.tsx">4.5 src\AddProduct.tsx <a href="#t234.5 src\AddProduct.tsx"> # </a></h3>
+<p>src\AddProduct.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { Category, Product } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./types&apos;</span>;
+<span class="hljs-keyword">import</span> { PRODUCTS, ADD_PRODUCT } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./query&apos;</span>;
+<span class="hljs-keyword">import</span> { useMutation } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@apollo/react-hooks&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">AddProduct</span>(<span class="hljs-params">props: any</span>) </span>{
+    <span class="hljs-keyword">const</span> [product, setProduct] = useState&lt;Product&gt;({ <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;&apos;</span>, <span class="hljs-attr">categoryId</span>: props.getCategories[<span class="hljs-number">0</span>].id });
+    <span class="hljs-keyword">const</span> [addProduct] = useMutation(ADD_PRODUCT);
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleSubmit</span>(<span class="hljs-params">event: React.FormEvent&lt;HTMLFormElement&gt;</span>) </span>{
+        event.preventDefault();
+        addProduct({ <span class="hljs-attr">variables</span>: product, <span class="hljs-attr">refetchQueries</span>: [{ <span class="hljs-attr">query</span>: PRODUCTS }] });
+    }
+    <span class="hljs-keyword">return</span> (
+        &lt;form onSubmit={handleSubmit}&gt;
+            &lt;div className=&quot;form-group&quot;&gt;
+                &lt;label htmlFor=&quot;product_name&quot;&gt;&#x5546;&#x54C1;&#x540D;&#x79F0;&lt;/label&gt;
+                &lt;input onChange={(event: React.ChangeEvent&lt;HTMLInputElement&gt;) =&gt; setProduct({ ...product, name: event.target.value })}
+                    className=&quot;form-control&quot; id=&quot;product_name&quot; placeholder=&quot;&#x5546;&#x54C1;&#x540D;&#x79F0;&quot; /&gt;
+            &lt;/div&gt;
+            &lt;div className=&quot;form-group&quot;&gt;
+                &lt;label htmlFor=&quot;categoryId&quot;&gt;&#x5546;&#x54C1;&#x5206;&#x7C7B;&lt;/label&gt;
+                &lt;select onChange={(event: React.ChangeEvent&lt;HTMLSelectElement&gt;) =&gt; setProduct({ ...product, categoryId: event.target.value })}
+                    className=&quot;form-control&quot; id=&quot;categoryId&quot;&gt;
+                    &lt;option&gt;&#x8BF7;&#x9009;&#x62E9;&#x5206;&#x7C7B;&lt;/option&gt;
+                    {
+                        props.getCategories.map((category: Category) =&gt; {
+                            return (
+                                &lt;option key={category.id} value={category.id}&gt;{category.name}&lt;/option&gt;
+                            )
+                        })
+                    }
+                &lt;/select&gt;
+            &lt;/div&gt;
+            &lt;div className=&quot;form-group&quot;&gt;
+                &lt;input className=&quot;btn btn-primary&quot; type=&quot;submit&quot; /&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+    )
+}
+export default AddProduct;
+</code></pre>
+<h3 id="t244.6 ProductList.tsx">4.6 ProductList.tsx <a href="#t244.6 ProductList.tsx"> # </a></h3>
+<p>src\ProductList.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { Product } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./types&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ProductList</span>(<span class="hljs-params">props: any</span>) </span>{
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;table table-striped&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">caption</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;text-center&quot;</span>&gt;</span>&#x4EA7;&#x54C1;&#x5217;&#x8868;<span class="hljs-tag">&lt;/<span class="hljs-name">caption</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;active&quot;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>&#x540D;&#x79F0;<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>&#x5206;&#x7C7B;<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">thead</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
+                {
+                    props.getProducts.map((product: Product, index: number) =&gt; (
+                        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{product.id}</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> props.setProduct(product)}&gt;
+                            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>{product.name}<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>{product.category!.name}<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+                    ))
+                }
+            <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span></span>
+    )
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> ProductList;
+</code></pre>
+<h3 id="t254.7 ProductDetail.tsx">4.7 ProductDetail.tsx <a href="#t254.7 ProductDetail.tsx"> # </a></h3>
+<p>src\ProductDetail.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { Product } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./types&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ProductDetail</span>(<span class="hljs-params">props: any</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(props.product);
+
+    <span class="hljs-keyword">if</span> (!props.product)
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;list-group&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;list-group-item&quot;</span>&gt;</span>
+                ID:{props.product.id}
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;list-group-item&quot;</span>&gt;</span>
+                &#x540D;&#x79F0;:{props.product.name}
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;list-group-item&quot;</span>&gt;</span>
+                &#x5206;&#x7C7B;:{props.product.category.name}
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;list-group-item&quot;</span>&gt;</span>
+                &#x6B64;&#x5206;&#x7C7B;&#x4E0B;&#x6240;&#x6709;&#x4EA7;&#x54C1;:
+                <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;list-group&quot;</span>&gt;</span>
+                    {
+                        props.product.category.products.map((product: Product, index: number) =&gt; (
+                            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{product.id}</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;list-group-item&quot;</span>&gt;</span>{product.name}<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        ))
+                    }
+                <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></span>
+    )
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> ProductDetail;
+</code></pre>
+
+    </div>
+</div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+    aria-labelledby="loginModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="loginModalLabel">请登录</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="username" class="control-label">姓名:</label>
+                        <input type="text" class="form-control" id="username" placeholder="珠峰架构VIP会员系统用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">密码:</label>
+                        <input type="text" class="form-control" id="password" placeholder="珠峰架构VIP会员系统密码">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                    data-dismiss="modal">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

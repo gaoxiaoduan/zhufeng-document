@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+   
+                    
+
+                        
+<div class="warpper">
+    <div class="page-toc">
+        <ul><li><a href="#t01. Kubernetes介绍">1. Kubernetes介绍</a><ul><li><a href="#t11.1 Pod">1.1 Pod</a></li><li><a href="#t21.2 deployment">1.2 deployment</a></li><li><a href="#t31.3 Service">1.3 Service</a></li></ul></li><li><a href="#t42.部署">2.部署</a><ul><li><a href="#t52.1 编写配置文件">2.1 编写配置文件</a></li><li><a href="#t62.2 布署Pod">2.2 布署Pod</a></li><li><a href="#t72.3 Service">2.3 Service</a><ul><li><a href="#t82.3.1 配置文件">2.3.1 配置文件</a></li><li><a href="#t92.3.2 启动">2.3.2 启动</a></li></ul></li><li><a href="#t102.4 ingress">2.4 ingress</a></li></ul></li><li><a href="#t113.参考">3.参考</a><ul><li><a href="#t123.1 查看">3.1 查看</a></li><li><a href="#t133.2 发布镜像">3.2 发布镜像</a></li><li><a href="#t143.3  链接">3.3  链接</a></li></ul></li></ul>
+    </div>
+    <div class="content markdown-body">
+        <h2 id="t01. Kubernetes&#x4ECB;&#x7ECD;">1. Kubernetes&#x4ECB;&#x7ECD; <a href="#t01. Kubernetes&#x4ECB;&#x7ECD;"> # </a></h2>
+<ul>
+<li>Master&#x662F;&#x63A7;&#x5236;&#x8282;&#x70B9;,&#x8D1F;&#x8D23;&#x7F16;&#x6392;&#x3001;&#x7BA1;&#x7406;&#x3001;&#x8C03;&#x5EA6;&#x7528;&#x6237;&#x63D0;&#x4EA4;&#x7684;&#x4F5C;&#x4E1A;<ul>
+<li>&#x8D1F;&#x8D23;API&#x670D;&#x52A1;&#x7684;<code>kube-apiserver</code></li>
+<li>&#x8D1F;&#x8D23;&#x8C03;&#x5EA6;&#x7684;<code>kube-scheduler</code></li>
+<li>&#x8D1F;&#x8D23;&#x5BB9;&#x5668;&#x7F16;&#x6392;&#x7684;<code>kube-controller-manager</code></li>
+<li><code>kube-apiserver</code>&#x4F1A;&#x5904;&#x7406;&#x96C6;&#x7FA4;&#x7684;&#x6301;&#x4E45;&#x5316;&#x6570;&#x636E;&#x5E76;&#x4FDD;&#x5B58;&#x5728;<code>etcd</code>&#x4E2D;</li>
+</ul>
+</li>
+<li>Node&#x662F;&#x8BA1;&#x7B97;&#x8282;&#x70B9;<ul>
+<li>CRI(Container Runtime Interface)&#x7684;&#x8FDC;&#x7A0B;&#x8C03;&#x7528;&#x63A5;&#x53E3;&#xFF0C;&#x8FD9;&#x4E2A;&#x63A5;&#x53E3;&#x5B9A;&#x4E49;&#x4E86;&#x5BB9;&#x5668;&#x8FD0;&#x884C;&#x65F6;&#x7684;&#x5404;&#x9879;&#x6838;&#x5FC3;&#x64CD;&#x4F5C;</li>
+<li>OCI(Open Container Initiative) &#x5BB9;&#x5668;&#x8FD0;&#x884C;&#x65F6;&#x901A;&#x8FC7;OCI&#x540C;&#x5E95;&#x5C42;&#x7684;Linux&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;</li>
+<li>&#x8BBE;&#x5907;&#x63D2;&#x4EF6;&#x662F;&#x7528;&#x6765;&#x7BA1;&#x7406;&#x5BBF;&#x4E3B;&#x673A;&#x7269;&#x7406;&#x8BBE;&#x5907;&#x7684;&#x7EC4;&#x4EF6;</li>
+<li><a href="http://doc.oschina.net/grpc">gRPC</a>&#x662F;&#x53EF;&#x4EE5;&#x5728;&#x4EFB;&#x4F55;&#x73AF;&#x5883;&#x4E2D;&#x8FD0;&#x884C;&#x7684;&#x73B0;&#x4EE3;&#x5F00;&#x6E90;&#x9AD8;&#x6027;&#x80FD; RPC &#x6846;&#x67B6;</li>
+<li>RPC&#x662F;&#x6307;&#x8FDC;&#x7A0B;&#x8FC7;&#x7A0B;&#x8C03;&#x7528;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x4E24;&#x53F0;&#x670D;&#x52A1;&#x5668;A&#xFF0C;B&#xFF0C;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x90E8;&#x7F72;&#x5728;A&#x670D;&#x52A1;&#x5668;&#x4E0A;&#xFF0C;&#x60F3;&#x8981;&#x8C03;&#x7528;B&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x5E94;&#x7528;&#x63D0;&#x4F9B;&#x7684;&#x51FD;&#x6570;/&#x65B9;&#x6CD5;&#xFF0C;&#x7531;&#x4E8E;&#x4E0D;&#x5728;&#x4E00;&#x4E2A;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#xFF0C;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#xFF0C;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x7F51;&#x7EDC;&#x6765;&#x8868;&#x8FBE;&#x8C03;&#x7528;&#x7684;&#x8BED;&#x4E49;&#x548C;&#x4F20;&#x8FBE;&#x8C03;&#x7528;&#x7684;&#x6570;&#x636E;</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://img.zhufengpeixun.com/bc263d89a4e90ce3a0902a5181d3baef" alt="bc263d89a4e90ce3a0902a5181d3baef"></p>
+<p><img src="https://img.zhufengpeixun.com/6376f226526ca6957a3cd33a4fa9435a" alt="6376f226526ca6957a3cd33a4fa9435a"></p>
+<h3 id="t11.1 Pod">1.1 Pod <a href="#t11.1 Pod"> # </a></h3>
+<ul>
+<li>Pod &#x662F; K8S &#x4E2D;&#x6700;&#x5C0F;&#x7684;&#x53EF;&#x8C03;&#x5EA6;&#x5355;&#x5143;&#xFF08;&#x53EF;&#x64CD;&#x4F5C;/&#x53EF;&#x90E8;&#x7F72;&#x5355;&#x5143;&#xFF09;</li>
+<li>&#x5B83;&#x91CC;&#x9762;&#x53EF;&#x4EE5;&#x5305;&#x542B;1&#x4E2A;&#x6216;&#x8005;&#x591A;&#x4E2A; Docker &#x5BB9;&#x5668;</li>
+<li>&#x5728; Pod &#x5185;&#x7684;&#x6240;&#x6709; Docker &#x5BB9;&#x5668;&#xFF0C;&#x90FD;&#x4F1A;&#x5171;&#x4EAB;&#x540C;&#x4E00;&#x4E2A;&#x7F51;&#x7EDC;&#x3001;&#x5B58;&#x50A8;&#x5377;&#x3001;&#x7AEF;&#x53E3;&#x6620;&#x5C04;&#x89C4;&#x5219;</li>
+<li>&#x4E00;&#x4E2A; Pod &#x62E5;&#x6709;&#x4E00;&#x4E2A; IP,&#x4F46;&#x8FD9;&#x4E2A; IP &#x4F1A;&#x968F;&#x7740;Pod&#x7684;&#x91CD;&#x542F;&#xFF0C;&#x521B;&#x5EFA;&#xFF0C;&#x5220;&#x9664;&#x7B49;&#x8DDF;&#x7740;&#x6539;&#x53D8;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x56FA;&#x5B9A;&#x4E14;&#x4E0D;&#x5B8C;&#x5168;&#x53EF;&#x9760;,&#x8FD9;&#x4E5F;&#x5C31;&#x662F; Pod &#x7684; IP &#x6F02;&#x79FB;&#x95EE;&#x9898;&#x3002;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x7684; Service &#x53BB;&#x81EA;&#x52A8;&#x6620;&#x5C04;</li>
+<li>Pod &#x662F;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#x7EC4;&#xFF0C;&#x91CC;&#x9762;&#x6709;&#x5F88;&#x591A;&#x5BB9;&#x5668;&#xFF0C;&#x5BB9;&#x5668;&#x7EC4;&#x5185;&#x5171;&#x4EAB;&#x8D44;&#x6E90;</li>
+</ul>
+<p><img src="https://img.zhufengpeixun.com/b2c720b50cdea123123344b9c0325cd5" alt="pod"></p>
+<h3 id="t21.2 deployment">1.2 deployment <a href="#t21.2 deployment"> # </a></h3>
+<ul>
+<li>&#x5E0C;&#x671B;&#x6279;&#x91CF;&#x542F;&#x52A8;&#x548C;&#x7BA1;&#x7406;&#x591A;&#x4E2A;Pod&#x5B9E;&#x4F8B;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;deployment</li>
+</ul>
+<h3 id="t31.3 Service">1.3 Service <a href="#t31.3 Service"> # </a></h3>
+<ul>
+<li>&#x6709;&#x4E86;Pod&#x5B9E;&#x4F8B;&#x540E;&#x5C31;&#x9700;&#x8981;&#x4EE5;&#x56FA;&#x5B9A;&#x7684;IP&#x5730;&#x5740;&#x4EE5;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x7684;&#x65B9;&#x5F0F;&#x8BBF;&#x95EE;&#x591A;&#x4E2A;Pod&#x5B9E;&#x4F8B;&#xFF0C;&#x5C31;&#x6709;&#x4E86;Service</li>
+</ul>
+<h2 id="t42.&#x90E8;&#x7F72;">2.&#x90E8;&#x7F72; <a href="#t42.&#x90E8;&#x7F72;"> # </a></h2>
+<h3 id="t52.1 &#x7F16;&#x5199;&#x914D;&#x7F6E;&#x6587;&#x4EF6;">2.1 &#x7F16;&#x5199;&#x914D;&#x7F6E;&#x6587;&#x4EF6; <a href="#t52.1 &#x7F16;&#x5199;&#x914D;&#x7F6E;&#x6587;&#x4EF6;"> # </a></h3>
+<ul>
+<li>Kubernetes &#x6700;&#x6838;&#x5FC3;&#x7684;&#x8BBE;&#x8BA1;&#x7406;&#x5FF5;&#x5C31;&#x662F;&#x58F0;&#x660E;&#x5F0F; API</li>
+<li>&#x58F0;&#x660E;&#x5F0F; API&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x63CF;&#x8FF0;&#x5BB9;&#x5668;&#x5316;&#x4E1A;&#x52A1;&#x548C;&#x5BB9;&#x5668;&#x95F4;&#x5173;&#x7CFB;</li>
+<li><a href="https://matthewpalmer.net/kubernetes-app-developer/articles/kubernetes-apiversion-definition-guide.html">apiversion</a></li>
+</ul>
+<pre><code class="lang-js">mkdir deployment &amp;&amp; cd deployment
+vim deployment-user-v1.yaml
+</code></pre>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> <span class="hljs-string">apps/v1</span>  <span class="hljs-comment">#API &#x914D;&#x7F6E;&#x7248;&#x672C;</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">Deployment</span>     <span class="hljs-comment">#&#x8D44;&#x6E90;&#x7C7B;&#x578B;</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">user-v1</span>     <span class="hljs-comment">#&#x8D44;&#x6E90;&#x540D;&#x79F0;</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">selector:</span>
+    <span class="hljs-attr">matchLabels:</span>
+      <span class="hljs-attr">app:</span> <span class="hljs-string">user-v1</span> <span class="hljs-comment">#&#x544A;&#x8BC9;deployment&#x6839;&#x636E;&#x89C4;&#x5219;&#x5339;&#x914D;&#x76F8;&#x5E94;&#x7684;Pod&#x8FDB;&#x884C;&#x63A7;&#x5236;&#x548C;&#x7BA1;&#x7406;&#xFF0C;matchLabels&#x5B57;&#x6BB5;&#x5339;&#x914D;Pod&#x7684;label&#x503C;</span>
+  <span class="hljs-attr">replicas:</span> <span class="hljs-number">3</span> <span class="hljs-comment">#&#x58F0;&#x660E;&#x4E00;&#x4E2A; Pod,&#x526F;&#x672C;&#x7684;&#x6570;&#x91CF;</span>
+  <span class="hljs-attr">template:</span>
+    <span class="hljs-attr">metadata:</span>
+      <span class="hljs-attr">labels:</span>
+        <span class="hljs-attr">app:</span> <span class="hljs-string">user-v1</span> <span class="hljs-comment">#Pod&#x7684;&#x540D;&#x79F0;</span>
+    <span class="hljs-attr">spec:</span>   <span class="hljs-comment">#&#x7EC4;&#x5185;&#x521B;&#x5EFA;&#x7684; Pod &#x4FE1;&#x606F;</span>
+      <span class="hljs-attr">containers:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">nginx</span> <span class="hljs-comment">#&#x5BB9;&#x5668;&#x7684;&#x540D;&#x79F0;</span>
+        <span class="hljs-attr">image:</span> <span class="hljs-string">registry.cn-beijing.aliyuncs.com/zhangrenyang/nginx:user-v1</span> <span class="hljs-comment">#&#x4F7F;&#x7528;&#x54EA;&#x4E2A;&#x955C;&#x50CF;</span>
+        <span class="hljs-attr">ports:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">containerPort:</span> <span class="hljs-number">80</span> <span class="hljs-comment">#&#x5BB9;&#x5668;&#x5185;&#x6620;&#x5C04;&#x7684;&#x7AEF;&#x53E3;</span>
+</code></pre>
+<h3 id="t62.2 &#x5E03;&#x7F72;Pod">2.2 &#x5E03;&#x7F72;Pod <a href="#t62.2 &#x5E03;&#x7F72;Pod"> # </a></h3>
+<ul>
+<li><code>kubectl apply</code> &#x4EE3;&#x8868;&#x51C6;&#x5907;&#x5BF9;&#x8D44;&#x6E90;&#x8FDB;&#x884C;&#x914D;&#x7F6E;</li>
+<li>-f &#x7B49;&#x4E8E; --filename &#x540E;&#x9762;&#x53EF;&#x4EE5;&#x8DDF;&#x968F;&#x591A;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</li>
+</ul>
+<pre><code class="lang-js">kubectl apply -f deployment-user-v1.yaml
+deployment.apps/user-v1 created
+</code></pre>
+<ul>
+<li>&#x60F3;&#x67E5;&#x770B;&#x90E8;&#x7F72;&#x5B8C;&#x6BD5;&#x540E;&#x7684; Pod &#x8FD0;&#x884C;&#x72B6;&#x6001;&#xFF0C;&#x5F53;&#x72B6;&#x6001;&#x90FD;&#x662F; Running &#x65F6;&#xFF0C;&#x4EE3;&#x8868; Pod &#x8FD0;&#x884C;&#x6B63;&#x5E38;<ul>
+<li>name &#x662F; Pod&#x7684;&#x540D;&#x79F0;</li>
+<li>READY &#x4E3A;&#x5BB9;&#x5668;&#x72B6;&#x6001;&#xFF0C;&#x683C;&#x5F0F;&#x4E3A;&#x53EF;&#x7528;&#x5BB9;&#x5668;/&#x6240;&#x6709;&#x5BB9;&#x5668;&#x6570;&#x91CF;</li>
+<li>STATUS &#x4E3A; Pod &#x7684;&#x8FD0;&#x884C;&#x72B6;&#x6001;</li>
+<li>RESTARTS &#x4E3A;&#x91CD;&#x542F;&#x6570;&#x91CF;</li>
+<li>AGE &#x4E3A; Pod &#x8FD0;&#x884C;&#x65F6;&#x95F4;</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-js">kubectl <span class="hljs-keyword">get</span> pod
+NAME                        READY   STATUS    RESTARTS   AGE
+user-8445fbf8d7-6f6d7       0/1     ContainerCreating   0          13s
+user-8445fbf8d7-nggzv       0/1     ContainerCreating   0          13s
+user-8445fbf8d7-xfn52       0/1     ContainerCreating   0          13s
+</code></pre>
+<h3 id="t72.3 Service">2.3 Service <a href="#t72.3 Service"> # </a></h3>
+<ul>
+<li>deployment &#x662F;&#x65E0;&#x72B6;&#x6001;&#x7684;</li>
+<li>deployment &#x5E76;&#x4E0D;&#x4F1A;&#x5BF9; pod &#x8FDB;&#x884C;&#x7F51;&#x7EDC;&#x901A;&#x4FE1;&#x548C;&#x5206;&#x53D1;</li>
+<li>Pod &#x7684; IP &#x5728;&#x8FD0;&#x884C;&#x65F6;&#x8FD8;&#x4F1A;&#x7ECF;&#x5E38;&#x8FDB;&#x884C;&#x6F02;&#x79FB;&#x4E14;&#x4E0D;&#x56FA;&#x5B9A;</li>
+<li>&#x60F3;&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x9700;&#x8981;&#x4F7F;&#x7528; Service  &#x7EC4;&#x7EC7;&#x7EDF;&#x4E00;&#x7684; Pod &#x8BBF;&#x95EE;&#x5165;&#x53E3;</li>
+<li>&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;Service &#x6765;&#x8FDB;&#x884C;&#x7EDF;&#x4E00;&#x7EC4;&#x7EC7; Pod  &#x670D;&#x52A1;&#x8BBF;&#x95EE;</li>
+<li>&#x8D1F;&#x8D23;&#x81EA;&#x52A8;&#x8C03;&#x5EA6;&#x548C;&#x7EC4;&#x7EC7;deployment&#x4E2D; Pod &#x7684;&#x670D;&#x52A1;&#x8BBF;&#x95EE;&#xFF0C;&#x7531;&#x4E8E;&#x81EA;&#x52A8;&#x6620;&#x5C04; Pod &#x7684;IP&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x89E3;&#x51B3;&#x4E86; Pod &#x7684;IP&#x6F02;&#x79FB;&#x95EE;&#x9898;</li>
+</ul>
+<p><img src="https://img.zhufengpeixun.com/e98326ae235c5da3ee69e3e42981f424" alt="service"></p>
+<h4 id="t82.3.1 &#x914D;&#x7F6E;&#x6587;&#x4EF6;">2.3.1 &#x914D;&#x7F6E;&#x6587;&#x4EF6; <a href="#t82.3.1 &#x914D;&#x7F6E;&#x6587;&#x4EF6;"> # </a></h4>
+<ul>
+<li><a href="http://www.dockerone.com/article/4884">Kubernetes&#x7684;&#x4E09;&#x79CD;&#x5916;&#x90E8;&#x8BBF;&#x95EE;&#x65B9;&#x5F0F;</a></li>
+<li>NodePort&#x670D;&#x52A1;&#x662F;&#x5F15;&#x5BFC;&#x5916;&#x90E8;&#x6D41;&#x91CF;&#x5230;&#x4F60;&#x7684;&#x670D;&#x52A1;&#x7684;&#x6700;&#x539F;&#x59CB;&#x65B9;&#x5F0F;</li>
+<li>NodePort&#x5728;&#x6240;&#x6709;&#x8282;&#x70B9;&#x4E0A;&#x5F00;&#x653E;&#x4E00;&#x4E2A;&#x7279;&#x5B9A;&#x7AEF;&#x53E3;,&#x4EFB;&#x4F55;&#x53D1;&#x9001;&#x5230;&#x8BE5;&#x7AEF;&#x53E3;&#x7684;&#x6D41;&#x91CF;&#x90FD;&#x88AB;&#x8F6C;&#x53D1;&#x5230;&#x5BF9;&#x5E94;&#x670D;&#x52A1;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">protocol</td>
+<td style="text-align:left">&#x901A;&#x4FE1;&#x7C7B;&#x578B;&#xFF08;TCP/UDP&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:left">targetPort</td>
+<td style="text-align:left">&#x539F;&#x672C; Pod &#x5F00;&#x653E;&#x7684;&#x7AEF;&#x53E3;</td>
+</tr>
+<tr>
+<td style="text-align:left">port</td>
+<td style="text-align:left">Kubernetes&#x5BB9;&#x5668;&#x4E4B;&#x95F4;&#x4E92;&#x76F8;&#x8BBF;&#x95EE;&#x7684;&#x7AEF;&#x53E3;</td>
+</tr>
+<tr>
+<td style="text-align:left">type</td>
+<td style="text-align:left">NodePort&#xFF0C;Service&#x7684;&#x4E00;&#x79CD;&#x8BBF;&#x95EE;&#x65B9;&#x5F0F;</td>
+</tr>
+</tbody>
+</table>
+<p>user-service-v1.yaml</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> <span class="hljs-string">v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">Service</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">service-user-v1</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">selector:</span>
+    <span class="hljs-attr">app:</span> <span class="hljs-string">user-v1</span>
+  <span class="hljs-attr">ports:</span>
+  <span class="hljs-bullet">-</span> <span class="hljs-attr">protocol:</span> <span class="hljs-string">TCP</span>
+    <span class="hljs-attr">port:</span> <span class="hljs-number">80</span>
+    <span class="hljs-attr">targetPort:</span> <span class="hljs-number">80</span>
+  <span class="hljs-attr">type:</span> <span class="hljs-string">NodePort</span>
+</code></pre>
+<h4 id="t92.3.2 &#x542F;&#x52A8;">2.3.2 &#x542F;&#x52A8; <a href="#t92.3.2 &#x542F;&#x52A8;"> # </a></h4>
+<pre><code class="lang-js">kubectl apply -f user-service-v1.yaml
+service/service-user-v1 created
+</code></pre>
+<ul>
+<li>&#x67E5;&#x770B;&#x5F53;&#x524D;&#x7684;&#x670D;&#x52A1; </li>
+</ul>
+<pre><code class="lang-js">kubectl <span class="hljs-keyword">get</span> svc
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x5728;&#x4EFB;&#x4F55;&#x8282;&#x70B9;&#x4E0A;&#x8BBF;&#x95EE;</p>
+<pre><code class="lang-js">curl http:<span class="hljs-comment">//172.31.178.169:30859</span>
+curl http:<span class="hljs-comment">//172.31.178.170:30859</span>
+</code></pre>
+<h3 id="t102.4 ingress">2.4 ingress <a href="#t102.4 ingress"> # </a></h3>
+<ul>
+<li>&#x6211;&#x4EEC;&#x53EF;&#x80FD;&#x4F1A;&#x6839;&#x636E;&#x8BF7;&#x6C42;&#x8DEF;&#x5F84;&#x524D;&#x7F00;&#x7684;&#x5339;&#x914D;&#xFF0C;&#x6743;&#x91CD;&#xFF0C;&#x751A;&#x81F3;&#x6839;&#x636E; <code>cookie/header</code> &#x7684;&#x503C;&#x53BB;&#x8BBF;&#x95EE;&#x4E0D;&#x540C;&#x7684;&#x670D;&#x52A1;</li>
+<li>&#x4E3A;&#x4E86;&#x8FBE;&#x5230;&#x8FD9;&#x79CD;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;kubernetes&#x7684;&#x53E6;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;<code>ingress</code></li>
+<li>ingress-nginx &#x662F;&#x57FA;&#x4E8E; nginx &#x7684;&#x4E00;&#x4E2A; ingress &#x5B9E;&#x73B0;&#x3002;</li>
+<li>&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x6B63;&#x5219;&#x5339;&#x914D;&#x8DEF;&#x5F84;&#xFF0C;&#x6D41;&#x91CF;&#x8F6C;&#x53D1;&#xFF0C;&#x57FA;&#x4E8E; cookie header &#x5207;&#x5206;&#x6D41;&#x91CF;&#xFF08;&#x7070;&#x5EA6;&#x53D1;&#x5E03;&#xFF09;</li>
+</ul>
+<p><img src="https://img.zhufengpeixun.com/ec4038a49d0f6eb986be1e5144fc6e41" alt="ec4038a49d0f6eb986be1e5144fc6e41"></p>
+<pre><code class="lang-js">#wget https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.34.1/deploy/static/provider/baremetal/deploy.yaml
+wget https://img.zhufengpeixun.com/deploy.yaml
+</code></pre>
+<p>vi deploy.yaml d$</p>
+<pre><code class="lang-diff">  namespace: ingress-nginx
+spec:
+  type: NodePort
+  ports:
+    - name: http
+      port: 80
+      protocol: TCP
+      targetPort: http
+<span class="hljs-addition">+     nodePort: 31234</span>
+    - name: https
+      port: 443
+      protocol: TCP
+      targetPort: https
+<span class="hljs-addition">+     nodePort: 31235</span>
+
+<span class="hljs-addition">+ image: registry.cn-hangzhou.aliyuncs.com/bin_x/nginx-ingress:v0.34.1@sha256:80359bdf124d49264fabf136d2aecadac729b54f16618162194356d3c78ce2fe</span>
+</code></pre>
+<ul>
+<li><p>&#x914D;&#x7F6E;&#x751F;&#x6548;&#xFF0C;&#x62C9;&#x53D6;ingress&#x955C;&#x50CF;&#x5E76;&#x81EA;&#x52A8;&#x5E03;&#x7F72;ingress</p>
+<pre><code class="lang-js">kubectl apply -f deploy.yaml
+</code></pre>
+</li>
+<li><p>&#x67E5;&#x770B;pods&#x7684;&#x90E8;&#x7F72;&#x72B6;&#x6001;</p>
+<ul>
+<li>-n &#x6307;&#x5B9A;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x67E5;&#x8BE2;</li>
+<li>-l &#x6307;&#x5B9A;label&#x540D;&#x79F0;&#x67E5;&#x8BE2;</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-js">kubectl -n ingress-nginx <span class="hljs-keyword">get</span> svc
+NAME                                 TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                      AGE
+ingress-nginx-controller             NodePort    10.108.109.94   &lt;none&gt;        80:31234/TCP,443:31235/TCP   16m
+ingress-nginx-controller-admission   ClusterIP   10.106.43.59    &lt;none&gt;        443/TCP                      16m
+</code></pre>
+<pre><code class="lang-js">kubectl -n ingress-nginx <span class="hljs-keyword">get</span> svc
+NAME                                 TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                      AGE
+ingress-nginx-controller             NodePort    10.108.109.94   &lt;none&gt;        80:31234/TCP,443:31235/TCP   17m
+ingress-nginx-controller-admission   ClusterIP   10.106.43.59    &lt;none&gt;        443/TCP                      17m
+</code></pre>
+<ul>
+<li>ingress &#x670D;&#x52A1;&#x7684;&#x914D;&#x7F6E;&#x4E5F;&#x662F;&#x4F7F;&#x7528; yaml &#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x7BA1;&#x7406;</li>
+<li><a href="https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/">annotations</a> &#x662F; ingress &#x7684;&#x4E3B;&#x8981;&#x914D;&#x7F6E;&#x9879;&#x76EE;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x4FEE;&#x6539;&#x8FD9;&#x4E9B;&#x914D;&#x7F6E;&#x6765;&#x4FEE;&#x6539; ingress &#x7684;&#x884C;&#x4E3A;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4FEE;&#x6539;&#x8FD9;&#x4E9B;&#x914D;&#x7F6E;&#x6765;&#x5B9E;&#x73B0;&#x7070;&#x5EA6;&#x53D1;&#x5E03;&#xFF0C;&#x8DE8;&#x57DF;&#x8D44;&#x6E90;&#xFF0C;&#x751A;&#x81F3;&#x5C06; <a href="http://www.abc.com">www.abc.com</a> &#x91CD;&#x5B9A;&#x5411;&#x5230; abc.com</li>
+<li>rules &#x662F; ingress &#x914D;&#x7F6E;&#x8DEF;&#x5F84;&#x8F6C;&#x53D1;&#x89C4;&#x5219;&#x7684;&#x5730;&#x65B9;,&#x5F53;&#x6211;&#x4EEC;&#x53BB;&#x8BBF;&#x95EE; /front &#x65F6;&#xFF0C; ingress &#x5C31;&#x4F1A;&#x5E2E;&#x6211;&#x4EEC;&#x8C03;&#x5EA6;&#x5230; front-service-v1 &#x8FD9;&#x4E2A; service &#x4E0A;&#x9762;<ul>
+<li>path &#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x8DEF;&#x5F84;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</li>
+<li>backend &#x5219;&#x662F; k8s &#x7684; service &#x670D;&#x52A1;&#xFF0C; serviceName &#x662F;&#x670D;&#x52A1;&#x540D;&#x79F0;&#xFF0C; servicePort &#x662F;&#x670D;&#x52A1;&#x7AEF;&#x53E3;</li>
+</ul>
+</li>
+<li>backend &#x53EF;&#x4EE5;&#x7528;&#x6765;&#x7ED9; ingress &#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4;&#x8BBF;&#x95EE;&#x7684; Service &#x670D;&#x52A1;&#x3002;&#x5F53;&#x8BF7;&#x6C42;&#x4E0D;&#x5339;&#x914D; rules &#x4E2D;&#x4EFB;&#x4F55;&#x4E00;&#x6761;&#x89C4;&#x5219;&#x65F6;&#xFF0C;&#x5219;&#x4F1A;&#x53BB;&#x8D70; backend &#x4E2D;&#x7684;&#x914D;&#x7F6E;</li>
+</ul>
+<p>vi ingress.yaml</p>
+<pre><code class="lang-js">apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: nginx-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+  - http:
+      paths: 
+       - path: /user
+         backend:
+          serviceName: user-service-v1
+          servicePort: 80
+       - path: /pay
+         backend:
+          serviceName: pay-service-v1
+          servicePort: 80    
+  backend:
+     serviceName: user-service-v1
+     servicePort: 80
+</code></pre>
+<pre><code class="lang-js">kubectl apply -f ./ingress.yaml
+</code></pre>
+<pre><code class="lang-js">curl http:<span class="hljs-comment">//172.16.244.93:31234/user</span>
+curl http:<span class="hljs-comment">//172.16.244.94:31234/user</span>
+curl http:<span class="hljs-comment">//172.16.244.93:31234/pay</span>
+curl http:<span class="hljs-comment">//172.16.244.94:31234/pay</span>
+</code></pre>
+<pre><code class="lang-js">kubectl  describe   ingress
+</code></pre>
+<h2 id="t113.&#x53C2;&#x8003;">3.&#x53C2;&#x8003; <a href="#t113.&#x53C2;&#x8003;"> # </a></h2>
+<h3 id="t123.1 &#x67E5;&#x770B;">3.1 &#x67E5;&#x770B; <a href="#t123.1 &#x67E5;&#x770B;"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-comment">//&#x67E5;&#x770B;&#x5F53;&#x524D;&#x7684;deployment</span>
+kubectl <span class="hljs-keyword">get</span> deploy 
+//&#x5220;&#x9664;deploy &#x5220;&#x9664;&#x540E;ReplicateSet&#x548C;pod&#x4E5F;&#x6CA1;&#x6709;&#x4E86;
+kubectl delete deploy nginx
+
+//&#x67E5;&#x770B;Replication Controller
+kubectl <span class="hljs-keyword">get</span> rc
+//&#x5220;&#x9664;Replication Controller,&#x5220;&#x9664;&#x540E;Pod&#x4E5F;&#x6CA1;&#x6709;&#x4E86;
+kubectl delete rc mysql
+
+//&#x67E5;&#x770B;pod
+kubectl <span class="hljs-keyword">get</span> pod
+//&#x5220;&#x9664;pod
+kubectl delete pod mysql-77w7z
+
+//&#x67E5;&#x770B;&#x670D;&#x52A1;
+kubectl <span class="hljs-keyword">get</span> svc
+//&#x5220;&#x9664;&#x670D;&#x52A1;
+kubectl delete service nginx
+
+//&#x67E5;&#x770B;pod&#x8BE6;&#x60C5;
+kubectl describe pod fail-1034443984-jerry
+
+</code></pre>
+<h3 id="t133.2 &#x53D1;&#x5E03;&#x955C;&#x50CF;">3.2 &#x53D1;&#x5E03;&#x955C;&#x50CF; <a href="#t133.2 &#x53D1;&#x5E03;&#x955C;&#x50CF;"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-comment">//&#x767B;&#x5F55;&#x963F;&#x91CC;&#x4E91;Docker Registry</span>
+sudo docker login --username=hongqishiq@<span class="hljs-number">126.</span>com registry.cn-beijing.aliyuncs.com
+<span class="hljs-comment">//&#x4ECE;Registry&#x4E2D;&#x62C9;&#x53D6;&#x955C;&#x50CF;</span>
+docker pull registry.cn-beijing.aliyuncs.com/zhangrenyang/zhangrenyang:[&#x955C;&#x50CF;&#x7248;&#x672C;&#x53F7;]
+<span class="hljs-comment">//&#x5C06;&#x955C;&#x50CF;&#x63A8;&#x9001;&#x5230;Registry</span>
+docker login --username=hongqishiq@<span class="hljs-number">126.</span>com registry.cn-beijing.aliyuncs.com
+docker tag [ImageId] registry.cn-beijing.aliyuncs.com/zhangrenyang/zhangrenyang:[&#x955C;&#x50CF;&#x7248;&#x672C;&#x53F7;]
+docker push registry.cn-beijing.aliyuncs.com/zhangrenyang/zhangrenyang:[&#x955C;&#x50CF;&#x7248;&#x672C;&#x53F7;]
+</code></pre>
+<pre><code class="lang-js">docker login --username=hongqishiq@<span class="hljs-number">126.</span>com registry.cn-beijing.aliyuncs.com
+docker run -d -p <span class="hljs-number">8080</span>:<span class="hljs-number">80</span> nginx
+docker exec -it <span class="hljs-number">6764</span>db063e37  bash
+/usr/share/nginx/html
+docker container commit -m<span class="hljs-string">&quot;nginx-user-v1&quot;</span> -a<span class="hljs-string">&quot;zhangrenyang&quot;</span> <span class="hljs-number">6764</span>db063e37  registry.cn-beijing.aliyuncs.com/zhangrenyang/nginx:user-v1
+docker container commit -m<span class="hljs-string">&quot;nginx-user-v2&quot;</span> -a<span class="hljs-string">&quot;zhangrenyang&quot;</span> <span class="hljs-number">6764</span>db063e37  registry.cn-beijing.aliyuncs.com/zhangrenyang/nginx:user-v2
+docker container commit -m<span class="hljs-string">&quot;nginx-pay-v1&quot;</span> -a<span class="hljs-string">&quot;zhangrenyang&quot;</span> <span class="hljs-number">6764</span>db063e37  registry.cn-beijing.aliyuncs.com/zhangrenyang/nginx:pay-v1
+docker push registry.cn-beijing.aliyuncs.com/zhangrenyang/http-probe:<span class="hljs-number">1.0</span><span class="hljs-number">.0</span>
+</code></pre>
+<h3 id="t143.3  &#x94FE;&#x63A5;">3.3  &#x94FE;&#x63A5; <a href="#t143.3  &#x94FE;&#x63A5;"> # </a></h3>
+<ul>
+<li><a href="http://docs.kubernetes.org.cn/">Kubernetes&#x4E2D;&#x6587;&#x793E;&#x533A;</a></li>
+<li><a href="http://docs.kubernetes.org.cn/783.html#i">kubectl Cheat Sheet</a></li>
+<li><a href="https://kubernetes.io/docs/reference/kubectl/cheatsheet/">kubernetes.cheatsheet</a></li>
+<li><a href="https://kubernetes.io/zh/docs/concepts/overview/working-with-objects/namespaces/">namespaces</a>Kubernetes &#x652F;&#x6301;&#x591A;&#x4E2A;&#x865A;&#x62DF;&#x96C6;&#x7FA4;&#xFF0C;&#x5B83;&#x4EEC;&#x5E95;&#x5C42;&#x4F9D;&#x8D56;&#x4E8E;&#x540C;&#x4E00;&#x4E2A;&#x7269;&#x7406;&#x96C6;&#x7FA4;&#x3002; &#x8FD9;&#x4E9B;&#x865A;&#x62DF;&#x96C6;&#x7FA4;&#x88AB;&#x79F0;&#x4E3A;&#x547D;&#x540D;&#x7A7A;&#x95F4;</li>
+</ul>
+<pre><code class="lang-js">kubectl <span class="hljs-keyword">get</span> ns
+</code></pre>
+
+    </div>
+</div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+    aria-labelledby="loginModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="loginModalLabel">请登录</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="username" class="control-label">姓名:</label>
+                        <input type="text" class="form-control" id="username" placeholder="珠峰架构VIP会员系统用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">密码:</label>
+                        <input type="text" class="form-control" id="password" placeholder="珠峰架构VIP会员系统密码">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                    data-dismiss="modal">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

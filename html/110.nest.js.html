@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+
+
+
+
+<div class="warpper">
+
+    <div class="page-toc">
+        <ul><li><a href="#t01. Reflect">1. Reflect</a><ul><li><a href="#t11.1 Reflect">1.1 Reflect</a></li><li><a href="#t21.2 Reflect Metadata">1.2 Reflect Metadata</a><ul><li><a href="#t31.2.1 defineMetadata">1.2.1 defineMetadata</a></li><li><a href="#t41.2.2 decorator">1.2.2 decorator</a></li></ul></li><li><a href="#t51.2  tsconfig.json">1.2  tsconfig.json</a><ul><li><a href="#t61.2.1 tsconfig.json">1.2.1 tsconfig.json</a></li><li><a href="#t71.2.2 tsconfig.build.json">1.2.2 tsconfig.build.json</a></li></ul></li></ul></li><li><a href="#t82. IOC和DI">2. IOC和DI</a><ul><li><a href="#t92.1 创建电脑">2.1 创建电脑</a></li><li><a href="#t102.2  可以传递零件">2.2  可以传递零件</a></li><li><a href="#t112.3 Ioc和DI">2.3 Ioc和DI</a><ul><li><a href="#t122.3.1 IoC(Inversion of Control)">2.3.1 IoC(Inversion of Control)</a></li><li><a href="#t132.3.2 DI(Dependency Injection)">2.3.2 DI(Dependency Injection)</a></li></ul></li></ul></li><li><a href="#t143. Nest.js">3. Nest.js</a><ul><li><a href="#t153.1 安装依赖">3.1 安装依赖</a></li><li><a href="#t163.2 实现应用">3.2 实现应用</a><ul><li><a href="#t173.2.1 main.ts">3.2.1 main.ts</a></li><li><a href="#t183.2.2 app.module.ts">3.2.2 app.module.ts</a></li><li><a href="#t193.2.3 app.controller.ts">3.2.3 app.controller.ts</a></li><li><a href="#t203.2.4 package.json">3.2.4 package.json</a></li></ul></li><li><a href="#t213.3 依赖注入">3.3 依赖注入</a><ul><li><a href="#t223.3.1 src\main.ts">3.3.1 src\main.ts</a></li><li><a href="#t233.3.2 app.controller.ts">3.3.2 app.controller.ts</a></li><li><a href="#t243.3.3 src\app.service.ts">3.3.3 src\app.service.ts</a></li><li><a href="#t253.3.4 logger.service.ts">3.3.4 logger.service.ts</a></li></ul></li></ul></li><li><a href="#t264. IOC">4. IOC</a><ul><li><a href="#t274.1 注册Provider">4.1 注册Provider</a><ul><li><a href="#t284.1 type.ts">4.1 type.ts</a></li><li><a href="#t294.2 Container.ts">4.2 Container.ts</a></li><li><a href="#t304.3 provider.ts">4.3 provider.ts</a></li><li><a href="#t314.4 index.ts">4.4 index.ts</a></li><li><a href="#t324.5 ioc\index.spec.ts">4.5 ioc\index.spec.ts</a></li></ul></li><li><a href="#t334.2  装饰器">4.2  装饰器</a><ul><li><a href="#t344.2.1 Injectable">4.2.1 Injectable</a></li><li><a href="#t354.2.2 Inject">4.2.2 Inject</a></li><li><a href="#t364.2.3 实现">4.2.3 实现</a><ul><li><a href="#t374.2.3.1 Injectable.ts">4.2.3.1 Injectable.ts</a></li><li><a href="#t384.2.3.2 Inject.ts">4.2.3.2 Inject.ts</a></li></ul></li></ul></li><li><a href="#t394.3 实现 inject">4.3 实现 inject</a><ul><li><a href="#t404.3.1 Container.ts">4.3.1 Container.ts</a></li></ul></li><li><a href="#t414.4 __metadata">4.4 __metadata</a><ul><li><a href="#t424.4.1  装饰器">4.4.1  装饰器</a></li><li><a href="#t434.4.2  params\index.ts">4.4.2  params\index.ts</a></li><li><a href="#t444.4.2  params\index.js">4.4.2  params\index.js</a></li><li><a href="#t454.4.3  params\imp.js">4.4.3  params\imp.js</a></li></ul></li><li><a href="#t464.5 实现注入">4.5 实现注入</a><ul><li><a href="#t474.5.1 Container.ts">4.5.1 Container.ts</a></li><li><a href="#t484.5.2 ioc\provider.ts">4.5.2 ioc\provider.ts</a></li><li><a href="#t494.5.3 Inject.ts">4.5.3 Inject.ts</a></li><li><a href="#t504.5.4 Injectable.ts">4.5.4 Injectable.ts</a></li></ul></li><li><a href="#t514.6 index.spec.ts">4.6 index.spec.ts</a></li></ul></li><li><a href="#t525. debugger">5. debugger</a></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <h2 id="t01. Reflect">1. Reflect <a href="#t01. Reflect"> # </a></h2>
+<h3 id="t11.1 Reflect">1.1 Reflect <a href="#t11.1 Reflect"> # </a></h3>
+<ul>
+<li>Reflect&#x5BF9;&#x8C61;&#x4E0E;Proxy&#x5BF9;&#x8C61;&#x4E00;&#x6837;&#xFF0C;&#x4E5F;&#x662F; ES6 &#x4E3A;&#x4E86;&#x64CD;&#x4F5C;&#x5BF9;&#x8C61;&#x800C;&#x63D0;&#x4F9B;&#x7684;&#x65B0; API</li>
+<li>JS &#x7684;&#x88C5;&#x9970;&#x5668;&#x66F4;&#x591A;&#x7684;&#x662F;&#x5B58;&#x5728;&#x4E8E;&#x5BF9;&#x51FD;&#x6570;&#x6216;&#x8005;&#x5C5E;&#x6027;&#x8FDB;&#x884C;&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;&#xFF0C;&#x6BD4;&#x5982;&#x4FEE;&#x6539;&#x4ED6;&#x4EEC;&#x7684;&#x503C;&#xFF0C;&#x4EE3;&#x7406;&#x53D8;&#x91CF;&#xFF0C;&#x81EA;&#x52A8;&#x7ED1;&#x5B9A; this &#x7B49;&#x7B49;&#x529F;&#x80FD;</li>
+<li>&#x4F46;&#x662F;&#x5374;&#x65E0;&#x6CD5;&#x5B9E;&#x73B0;&#x901A;&#x8FC7;&#x53CD;&#x5C04;&#x6765;&#x83B7;&#x53D6;&#x7A76;&#x7ADF;&#x6709;&#x54EA;&#x4E9B;&#x88C5;&#x9970;&#x5668;&#x6DFB;&#x52A0;&#x5230;&#x8FD9;&#x4E2A;&#x7C7B;/&#x65B9;&#x6CD5;&#x4E0A;,&#x4E8E;&#x662F; Reflect Metadata &#x5E94;&#x8FD0;&#x800C;&#x751F;</li>
+</ul>
+<h3 id="t21.2 Reflect Metadata">1.2 Reflect Metadata <a href="#t21.2 Reflect Metadata"> # </a></h3>
+<ul>
+<li><code>Reflect Metadata</code>&#x7B80;&#x5355;&#x6765;&#x8BF4;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x88C5;&#x9970;&#x5668;&#x6765;&#x7ED9;&#x7C7B;&#x6DFB;&#x52A0;&#x4E00;&#x4E9B;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x4FE1;&#x606F;</li>
+<li>&#x7136;&#x540E;&#x901A;&#x8FC7;&#x53CD;&#x5C04;&#x5C06;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#x63D0;&#x53D6;&#x51FA;&#x6765;</li>
+</ul>
+<h4 id="t31.2.1 defineMetadata">1.2.1 defineMetadata <a href="#t31.2.1 defineMetadata"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-comment">// define metadata on an object or property</span>
+<span class="hljs-built_in">Reflect</span>.defineMetadata(metadataKey, metadataValue, target);
+<span class="hljs-built_in">Reflect</span>.defineMetadata(metadataKey, metadataValue, target, propertyKey);
+
+<span class="hljs-comment">// get metadata value of a metadata key on the prototype chain of an object or property</span>
+<span class="hljs-keyword">let</span> result = <span class="hljs-built_in">Reflect</span>.getMetadata(metadataKey, target);
+<span class="hljs-keyword">let</span> result = <span class="hljs-built_in">Reflect</span>.getMetadata(metadataKey, target, propertyKey);
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> target = {};
+<span class="hljs-built_in">Reflect</span>.defineMetadata(<span class="hljs-string">&quot;name&quot;</span>, <span class="hljs-string">&quot;zhufeng&quot;</span>, target);
+<span class="hljs-built_in">Reflect</span>.defineMetadata(<span class="hljs-string">&quot;name&quot;</span>, <span class="hljs-string">&quot;world&quot;</span>, target, <span class="hljs-string">&apos;hello&apos;</span>);
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Reflect</span>.getOwnMetadata(<span class="hljs-string">&quot;name&quot;</span>, target));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Reflect</span>.getOwnMetadata(<span class="hljs-string">&quot;name&quot;</span>, target, <span class="hljs-string">&quot;hello&quot;</span>));
+</code></pre>
+<h4 id="t41.2.2 decorator">1.2.2 decorator <a href="#t41.2.2 decorator"> # </a></h4>
+<ul>
+<li>&#x6240;&#x6709;&#x7684;&#x5BF9;&#x7C7B;&#x7684;&#x4FEE;&#x9970;&#xFF0C;&#x90FD;&#x662F;&#x5B9A;&#x4E49;&#x5728;&#x7C7B;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x4E0A;&#x9762;&#x7684;</li>
+<li>&#x800C;&#x6240;&#x6709;&#x7684;&#x5BF9;&#x7C7B;&#x7684;&#x5C5E;&#x6027;&#x6216;&#x8005;&#x65B9;&#x6CD5;&#x7684;&#x4FEE;&#x9970;&#xFF0C;&#x90FD;&#x662F;&#x5B9A;&#x4E49;&#x5728;&#x7C7B;&#x7684;&#x539F;&#x578B;&#x4E0A;&#x9762;&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x4EE5;&#x5C5E;&#x6027;&#x6216;&#x8005;&#x65B9;&#x6CD5;&#x7684; key &#x4F5C;&#x4E3A; property</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-comment">// apply metadata via a decorator to a constructor</span>
+@<span class="hljs-built_in">Reflect</span>.metadata(metadataKey, metadataValue)
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">C</span> </span>{
+  <span class="hljs-comment">// apply metadata via a decorator to a method (property)</span>
+  @<span class="hljs-built_in">Reflect</span>.metadata(metadataKey, metadataValue)
+  method() {}
+}
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> <span class="hljs-string">&apos;reflect-metadata&apos;</span>;
+<span class="hljs-keyword">let</span> target = {};
+<span class="hljs-built_in">Reflect</span>.defineMetadata(<span class="hljs-string">&apos;name&apos;</span>,<span class="hljs-string">&apos;zhufeng&apos;</span>,target);
+<span class="hljs-built_in">Reflect</span>.defineMetadata(<span class="hljs-string">&apos;name&apos;</span>, <span class="hljs-string">&apos;world&apos;</span>, target,<span class="hljs-string">&apos;hello&apos;</span>);
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Reflect</span>.getOwnMetadata(<span class="hljs-string">&apos;name&apos;</span>,target));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Reflect</span>.getOwnMetadata(<span class="hljs-string">&apos;name&apos;</span>, target, <span class="hljs-string">&apos;hello&apos;</span>));
+<span class="hljs-built_in">console</span>.dir(target);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">classMetadata</span>(<span class="hljs-params">key,value</span>)</span>{
+     <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">target</span>)</span>{
+         <span class="hljs-built_in">Reflect</span>.defineMetadata(key, value, target);
+     }
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">methodMetadata</span>(<span class="hljs-params">key, value</span>) </span>{
+    <span class="hljs-comment">//target&#x7C7B;&#x7684;&#x539F;&#x578B;</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">target,propertyName</span>) </span>{
+        <span class="hljs-comment">//Person.prototype.hello.name=world</span>
+        <span class="hljs-built_in">Reflect</span>.defineMetadata(key, value, target, propertyName);
+    }
+}
+<span class="hljs-comment">//decorator</span>
+<span class="hljs-comment">//&#x7ED9;&#x7C7B;&#x672C;&#x8EAB;&#x589E;&#x52A0;&#x5143;&#x6570;&#x636E;</span>
+<span class="hljs-comment">//@Reflect.metadata(&apos;name&apos;,&apos;Person&apos;)</span>
+@classMetadata(<span class="hljs-string">&apos;name&apos;</span>, <span class="hljs-string">&apos;Person&apos;</span>)
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span></span>{
+    <span class="hljs-comment">//&#x7ED9;&#x7C7B;&#x7684;&#x539F;&#x578B;&#x589E;&#x52A0;&#x5143;&#x6570;&#x636E;</span>
+  <span class="hljs-comment">//@Reflect.metadata(&apos;name&apos;, &apos;world&apos;)</span>
+   @methodMetadata(<span class="hljs-string">&apos;name&apos;</span>, <span class="hljs-string">&apos;world&apos;</span>)
+   hello():string{ <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;world&apos;</span>}
+}
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Reflect</span>.getMetadata(<span class="hljs-string">&apos;name&apos;</span>, Person));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Reflect</span>.getMetadata(<span class="hljs-string">&apos;name&apos;</span>, <span class="hljs-keyword">new</span> Person(),<span class="hljs-string">&apos;hello&apos;</span>));
+
+</code></pre>
+<h3 id="t51.2  tsconfig.json">1.2  tsconfig.json <a href="#t51.2  tsconfig.json"> # </a></h3>
+<h4 id="t61.2.1 tsconfig.json">1.2.1 tsconfig.json <a href="#t61.2.1 tsconfig.json"> # </a></h4>
+<pre><code class="lang-json">{
+  <span class="hljs-attr">&quot;compilerOptions&quot;</span>: {
+    <span class="hljs-attr">&quot;module&quot;</span>: <span class="hljs-string">&quot;commonjs&quot;</span>,
+    <span class="hljs-attr">&quot;declaration&quot;</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">&quot;removeComments&quot;</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">&quot;emitDecoratorMetadata&quot;</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">&quot;experimentalDecorators&quot;</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">&quot;target&quot;</span>: <span class="hljs-string">&quot;es2017&quot;</span>,
+    <span class="hljs-attr">&quot;sourceMap&quot;</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">&quot;outDir&quot;</span>: <span class="hljs-string">&quot;./dist&quot;</span>,
+    <span class="hljs-attr">&quot;baseUrl&quot;</span>: <span class="hljs-string">&quot;./&quot;</span>,
+    <span class="hljs-attr">&quot;incremental&quot;</span>: <span class="hljs-literal">true</span>
+  },
+  <span class="hljs-attr">&quot;exclude&quot;</span>: [
+    <span class="hljs-string">&quot;node_modules&quot;</span>,
+    <span class="hljs-string">&quot;dist&quot;</span>
+  ]
+}
+</code></pre>
+<h4 id="t71.2.2 tsconfig.build.json">1.2.2 tsconfig.build.json <a href="#t71.2.2 tsconfig.build.json"> # </a></h4>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">&quot;extends&quot;</span>: <span class="hljs-string">&quot;./tsconfig.json&quot;</span>,
+    <span class="hljs-attr">&quot;exclude&quot;</span>: [
+        <span class="hljs-string">&quot;node_modules&quot;</span>,
+        <span class="hljs-string">&quot;test&quot;</span>,
+        <span class="hljs-string">&quot;dist&quot;</span>,
+        <span class="hljs-string">&quot;**/*spec.ts&quot;</span>
+    ]
+}
+</code></pre>
+<h2 id="t82. IOC&#x548C;DI">2. IOC&#x548C;DI <a href="#t82. IOC&#x548C;DI"> # </a></h2>
+<h3 id="t92.1 &#x521B;&#x5EFA;&#x7535;&#x8111;">2.1 &#x521B;&#x5EFA;&#x7535;&#x8111; <a href="#t92.1 &#x521B;&#x5EFA;&#x7535;&#x8111;"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> interface Monitor{}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Monitor27inch</span> <span class="hljs-title">implements</span> <span class="hljs-title">Monitor</span></span>{}
+interface Host{}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">LegendHost</span> <span class="hljs-title">implements</span> <span class="hljs-title">Host</span> </span>{ }
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Computer</span></span>{
+    <span class="hljs-attr">monitor</span>:Monitor;
+    host:Host;
+    <span class="hljs-keyword">constructor</span>(){
+        <span class="hljs-keyword">this</span>.monitor = <span class="hljs-keyword">new</span> Monitor27inch();
+        <span class="hljs-keyword">this</span>.host = <span class="hljs-keyword">new</span> LegendHost();
+    }
+    startup(){
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x7EC4;&#x88C5;&#x597D;&#x4E86;,&#x53EF;&#x4EE5;&#x5F00;&#x673A;&#x4E86;&apos;</span>);
+    }
+}
+<span class="hljs-keyword">let</span> computer = <span class="hljs-keyword">new</span> Computer();
+computer.startup();
+</code></pre>
+<ul>
+<li>&#x95EE;&#x9898;<ul>
+<li>&#x65E0;&#x6CD5;&#x4F20;&#x9012;&#x4E0D;&#x540C;&#x7684;&#x96F6;&#x4EF6;&#x5B9E;&#x4F8B;</li>
+<li>&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x624B;&#x5DE5;&#x521B;&#x5EFA;&#x96F6;&#x4EF6;&#x5B9E;&#x4F8B;</li>
+</ul>
+</li>
+</ul>
+<h3 id="t102.2  &#x53EF;&#x4EE5;&#x4F20;&#x9012;&#x96F6;&#x4EF6;">2.2  &#x53EF;&#x4EE5;&#x4F20;&#x9012;&#x96F6;&#x4EF6; <a href="#t102.2  &#x53EF;&#x4EE5;&#x4F20;&#x9012;&#x96F6;&#x4EF6;"> # </a></h3>
+<pre><code class="lang-diff">interface Monitor{}
+class Monitor27inch implements Monitor{}
+interface Host{}
+class LegendHost implements Host { }
+export class Computer{
+    monitor:Monitor;
+    host:Host;
+    constructor(monitor, host){
+        this.monitor = monitor;
+        this.host = host;
+    }
+    startup(){
+        console.log(&apos;&#x7EC4;&#x88C5;&#x597D;&#x4E86;,&#x53EF;&#x4EE5;&#x5F00;&#x673A;&#x4E86;&apos;);
+    }
+}
+<span class="hljs-addition">+let monitor = new Monitor27inch();</span>
+<span class="hljs-addition">+let host = new LegendHost();</span>
+<span class="hljs-addition">+let computer = new Computer(monitor, host);</span>
+computer.startup();
+</code></pre>
+<h3 id="t112.3 Ioc&#x548C;DI">2.3 Ioc&#x548C;DI <a href="#t112.3 Ioc&#x548C;DI"> # </a></h3>
+<h4 id="t122.3.1 IoC(Inversion of Control)">2.3.1 IoC(Inversion of Control) <a href="#t122.3.1 IoC(Inversion of Control)"> # </a></h4>
+<ul>
+<li>IoC(Inversion of Control)&#x5373;<code>&#x63A7;&#x5236;&#x53CD;&#x8F6C;</code>&#x3002;&#x5728;&#x5F00;&#x53D1;&#x4E2D;&#xFF0C; IoC &#x610F;&#x5473;&#x7740;&#x4F60;&#x8BBE;&#x8BA1;&#x597D;&#x7684;&#x5BF9;&#x8C61;&#x4EA4;&#x7ED9;&#x5BB9;&#x5668;&#x63A7;&#x5236;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4F7F;&#x7528;&#x4F20;&#x7EDF;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5728;&#x5BF9;&#x8C61;&#x5185;&#x90E8;&#x76F4;&#x63A5;&#x63A7;&#x5236;</li>
+<li>&#x8C01;&#x63A7;&#x5236;&#x8C01;&#xFF0C;&#x63A7;&#x5236;&#x4EC0;&#x4E48;&#xFF0C;&#x4E3A;&#x4F55;&#x662F;&#x53CD;&#x8F6C;&#xFF0C;&#x54EA;&#x4E9B;&#x65B9;&#x9762;&#x53CD;&#x8F6C;&#x4E86;<ul>
+<li>&#x8C01;&#x63A7;&#x5236;&#x8C01;&#xFF0C;&#x63A7;&#x5236;&#x4EC0;&#x4E48;&#xFF1A;&#x5728;&#x4F20;&#x7EDF;&#x7684;&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x76F4;&#x63A5;&#x5728;&#x5BF9;&#x8C61;&#x5185;&#x90E8;&#x901A;&#x8FC7; new &#x7684;&#x65B9;&#x5F0F;&#x521B;&#x5EFA;&#x5BF9;&#x8C61;&#xFF0C;&#x662F;&#x7A0B;&#x5E8F;&#x4E3B;&#x52A8;&#x521B;&#x5EFA;&#x4F9D;&#x8D56;&#x5BF9;&#x8C61;&#xFF1B; &#x800C; IoC &#x662F;&#x6709;&#x4E13;&#x95E8;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#x6765;&#x521B;&#x5EFA;&#x8FD9;&#x4E9B;&#x5BF9;&#x8C61;&#xFF0C;&#x5373;&#x7531; IoC &#x5BB9;&#x5668;&#x63A7;&#x5236;&#x5BF9;&#x8C61;&#x7684;&#x521B;&#x5EFA;,&#x8C01;&#x63A7;&#x5236;&#x8C01;&#xFF1F;&#x5F53;&#x7136;&#x662F; IoC &#x5BB9;&#x5668;&#x63A7;&#x5236;&#x4E86;&#x5BF9;&#x8C61;&#xFF1B;&#x63A7;&#x5236;&#x4EC0;&#x4E48;&#xFF1F;&#x4E3B;&#x8981;&#x662F;&#x63A7;&#x5236;&#x5916;&#x90E8;&#x8D44;&#x6E90;(&#x4F9D;&#x8D56;&#x5BF9;&#x8C61;)&#x83B7;&#x53D6;</li>
+<li>&#x4E3A;&#x4F55;&#x662F;&#x53CD;&#x8F6C;&#x4E86;&#xFF0C;&#x54EA;&#x4E9B;&#x65B9;&#x9762;&#x53CD;&#x8F6C;&#x4E86;&#xFF1A;&#x6709;&#x53CD;&#x8F6C;&#x5C31;&#x6709;&#x6B63;&#x8F6C;&#xFF0C;&#x4F20;&#x7EDF;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x662F;&#x7531;&#x6211;&#x4EEC;&#x81EA;&#x5DF1;&#x5728;&#x7A0B;&#x5E8F;&#x4E2D;&#x4E3B;&#x52A8;&#x63A7;&#x5236;&#x53BB;&#x83B7;&#x53D6;&#x4F9D;&#x8D56;&#x5BF9;&#x8C61;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x6B63;&#x8F6C;&#xFF1B; &#x800C;&#x53CD;&#x8F6C;&#x5219;&#x662F;&#x7531;&#x5BB9;&#x5668;&#x6765;&#x5E2E;&#x5FD9;&#x521B;&#x5EFA;&#x53CA;&#x6CE8;&#x5165;&#x4F9D;&#x8D56;&#x5BF9;&#x8C61;,&#x4E3A;&#x4F55;&#x662F;&#x53CD;&#x8F6C;&#xFF1F;&#x56E0;&#x4E3A;&#x7531;&#x5BB9;&#x5668;&#x5E2E;&#x6211;&#x4EEC;&#x67E5;&#x627E;&#x53CA;&#x6CE8;&#x5165;&#x4F9D;&#x8D56;&#x5BF9;&#x8C61;&#xFF0C;&#x5BF9;&#x8C61;&#x53EA;&#x662F;&#x88AB;&#x52A8;&#x7684;&#x63A5;&#x53D7;&#x4F9D;&#x8D56;&#x5BF9;&#x8C61;&#xFF0C;&#x6240;&#x4EE5;&#x662F;&#x53CD;&#x8F6C;&#x4E86;&#xFF1B;&#x54EA;&#x4E9B;&#x65B9;&#x9762;&#x53CD;&#x8F6C;&#x4E86;&#xFF1F;&#x4F9D;&#x8D56;&#x5BF9;&#x8C61;&#x7684;&#x83B7;&#x53D6;&#x88AB;&#x53CD;&#x8F6C;&#x4E86;</li>
+</ul>
+</li>
+<li>IoC&#x662F;&#x4E00;&#x79CD;&#x601D;&#x60F3;&#xFF0C;&#x662F;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7F16;&#x7A0B;&#x4E2D;&#x7684;&#x4E00;&#x79CD;&#x8BBE;&#x8BA1;&#x539F;&#x5219;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x51CF;&#x4F4E;&#x8BA1;&#x7B97;&#x673A;&#x4EE3;&#x7801;&#x4E4B;&#x95F4;&#x7684;&#x8026;&#x5408;&#x5EA6;</li>
+<li>&#x4F20;&#x7EDF;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x90FD;&#x662F;&#x7531;&#x6211;&#x4EEC;&#x5728;&#x7C7B;&#x5185;&#x90E8;&#x4E3B;&#x52A8;&#x521B;&#x5EFA;&#x4F9D;&#x8D56;&#x5BF9;&#x8C61;&#xFF0C;&#x4ECE;&#x800C;&#x5BFC;&#x81F4;&#x7C7B;&#x4E0E;&#x7C7B;&#x4E4B;&#x95F4;&#x9AD8;&#x8026;&#x5408;&#xFF0C;&#x96BE;&#x4E8E;&#x6D4B;&#x8BD5;&#xFF1B; &#x6709;&#x4E86; IoC &#x5BB9;&#x5668;&#x540E;&#xFF0C;&#x628A;&#x521B;&#x5EFA;&#x548C;&#x67E5;&#x627E;&#x4F9D;&#x8D56;&#x5BF9;&#x8C61;&#x7684;&#x63A7;&#x5236;&#x6743;&#x4EA4;&#x7ED9;&#x4E86;&#x5BB9;&#x5668;&#xFF0C;&#x7531;&#x5BB9;&#x5668;&#x6CE8;&#x5165;&#x7EC4;&#x5408;&#x5BF9;&#x8C61;&#xFF0C;&#x6240;&#x4EE5;&#x5BF9;&#x8C61;&#x4E4B;&#x95F4;&#x662F;&#x677E;&#x6563;&#x8026;&#x5408;&#x3002; &#x8FD9;&#x6837;&#x4E5F;&#x4FBF;&#x4E8E;&#x6D4B;&#x8BD5;&#xFF0C;&#x5229;&#x4E8E;&#x529F;&#x80FD;&#x590D;&#x7528;&#xFF0C;&#x66F4;&#x91CD;&#x8981;&#x7684;&#x662F;&#x4F7F;&#x5F97;&#x7A0B;&#x5E8F;&#x7684;&#x6574;&#x4E2A;&#x4F53;&#x7CFB;&#x7ED3;&#x6784;&#x53D8;&#x5F97;&#x975E;&#x5E38;&#x7075;&#x6D3B;</li>
+<li>&#x5176;&#x5B9E; IoC &#x5BF9;&#x7F16;&#x7A0B;&#x5E26;&#x6765;&#x7684;&#x6700;&#x5927;&#x6539;&#x53D8;&#x4E0D;&#x662F;&#x4ECE;&#x4EE3;&#x7801;&#x4E0A;&#xFF0C;&#x800C;&#x662F;&#x601D;&#x60F3;&#x4E0A;&#xFF0C;&#x53D1;&#x751F;&#x4E86;&#x4E3B;&#x4ECE;&#x6362;&#x4F4D;&#x7684;&#x53D8;&#x5316;&#x3002;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x672C;&#x6765;&#x662F;&#x8001;&#x5927;&#xFF0C;&#x8981;&#x83B7;&#x53D6;&#x4EC0;&#x4E48;&#x8D44;&#x6E90;&#x90FD;&#x662F;&#x4E3B;&#x52A8;&#x51FA;&#x51FB;&#xFF0C;&#x4F46;&#x5728; IoC &#x601D;&#x60F3;&#x4E2D;&#xFF0C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5C31;&#x53D8;&#x6210;&#x88AB;&#x52A8;&#x4E86;&#xFF0C;&#x88AB;&#x52A8;&#x7684;&#x7B49;&#x5F85; IoC &#x5BB9;&#x5668;&#x6765;&#x521B;&#x5EFA;&#x5E76;&#x6CE8;&#x5165;&#x5B83;&#x6240;&#x9700;&#x7684;&#x8D44;&#x6E90;&#x4E86;</li>
+</ul>
+<h4 id="t132.3.2 DI(Dependency Injection)">2.3.2 DI(Dependency Injection) <a href="#t132.3.2 DI(Dependency Injection)"> # </a></h4>
+<ul>
+<li>&#x5BF9;&#x4E8E;&#x63A7;&#x5236;&#x53CD;&#x8F6C;&#x6765;&#x8BF4;&#xFF0C;&#x5176;&#x4E2D;&#x6700;&#x5E38;&#x89C1;&#x7684;&#x65B9;&#x5F0F;&#x53EB;&#x505A; &#x4F9D;&#x8D56;&#x6CE8;&#x5165;&#xFF0C;&#x7B80;&#x79F0;&#x4E3A; DI&#xFF08;Dependency Injection&#xFF09;</li>
+<li>&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x7684;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x7531;&#x5BB9;&#x5668;&#x5728;&#x8FD0;&#x884C;&#x671F;&#x51B3;&#x5B9A;&#xFF0C;&#x5F62;&#x8C61;&#x7684;&#x8BF4;&#xFF0C;&#x5373;&#x7531;&#x5BB9;&#x5668;&#x52A8;&#x6001;&#x7684;&#x5C06;&#x67D0;&#x4E2A;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x6CE8;&#x5165;&#x5230;&#x7EC4;&#x4EF6;&#x4E4B;&#x4E2D;</li>
+<li>&#x901A;&#x8FC7;&#x4F9D;&#x8D56;&#x6CE8;&#x5165;&#x673A;&#x5236;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x7B80;&#x5355;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x800C;&#x65E0;&#x9700;&#x4EFB;&#x4F55;&#x4EE3;&#x7801;&#x5C31;&#x53EF;&#x6307;&#x5B9A;&#x76EE;&#x6807;&#x9700;&#x8981;&#x7684;&#x8D44;&#x6E90;&#xFF0C;&#x5B8C;&#x6210;&#x81EA;&#x8EAB;&#x7684;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#xFF0C;&#x800C;&#x4E0D;&#x9700;&#x8981;&#x5173;&#x5FC3;&#x5177;&#x4F53;&#x7684;&#x8D44;&#x6E90;&#x6765;&#x81EA;&#x4F55;&#x5904;&#xFF0C;&#x7531;&#x8C01;&#x5B9E;&#x73B0;</li>
+<li>&#x7406;&#x89E3; DI &#x7684;&#x5173;&#x952E;&#x662F; <code>&#x8C01;&#x4F9D;&#x8D56;&#x4E86;&#x8C01;&#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;&#x9700;&#x8981;&#x4F9D;&#x8D56;&#xFF0C;&#x8C01;&#x6CE8;&#x5165;&#x4E86;&#x8C01;&#xFF0C;&#x6CE8;&#x5165;&#x4E86;&#x4EC0;&#x4E48;</code>&#x3000;<ul>
+<li>&#x8C01;&#x4F9D;&#x8D56;&#x4E86;&#x8C01;&#xFF1A;&#x5F53;&#x7136;&#x662F;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4F9D;&#x8D56; IoC &#x5BB9;&#x5668;</li>
+<li>&#x4E3A;&#x4EC0;&#x4E48;&#x9700;&#x8981;&#x4F9D;&#x8D56;&#xFF1A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x9700;&#x8981; IoC &#x5BB9;&#x5668;&#x6765;&#x63D0;&#x4F9B;&#x5BF9;&#x8C61;&#x9700;&#x8981;&#x7684;&#x5916;&#x90E8;&#x8D44;&#x6E90;&#xFF08;&#x5305;&#x62EC;&#x5BF9;&#x8C61;&#x3001;&#x8D44;&#x6E90;&#x3001;&#x5E38;&#x91CF;&#x6570;&#x636E;&#xFF09;</li>
+<li>&#x8C01;&#x6CE8;&#x5165;&#x8C01;&#xFF1A;&#x5F88;&#x660E;&#x663E;&#x662F; IoC &#x5BB9;&#x5668;&#x6CE8;&#x5165;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4F9D;&#x8D56;&#x7684;&#x5BF9;&#x8C61;&#xFF1B;</li>
+<li>&#x6CE8;&#x5165;&#x4E86;&#x4EC0;&#x4E48;&#xFF1A;&#x6CE8;&#x5165;&#x67D0;&#x4E2A;&#x5BF9;&#x8C61;&#x6240;&#x9700;&#x7684;&#x5916;&#x90E8;&#x8D44;&#x6E90;&#xFF08;&#x5305;&#x62EC;&#x5BF9;&#x8C61;&#x3001;&#x8D44;&#x6E90;&#x3001;&#x5E38;&#x91CF;&#x6570;&#x636E;&#xFF09;</li>
+</ul>
+</li>
+<li>IoC &#x548C; DI &#x662F;&#x540C;&#x4E00;&#x4E2A;&#x6982;&#x5FF5;&#x7684;&#x4E0D;&#x540C;&#x89D2;&#x5EA6;&#x63CF;&#x8FF0;,&#x4F9D;&#x8D56;&#x6CE8;&#x5165;&#x660E;&#x786E;&#x63CF;&#x8FF0;&#x4E86;&#x88AB;&#x6CE8;&#x5165;&#x5BF9;&#x8C61;&#x4F9D;&#x8D56; IoC &#x5BB9;&#x5668;&#x914D;&#x7F6E;&#x4F9D;&#x8D56;&#x5BF9;&#x8C61;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/ioctdi.jpg" alt="ioctdi"></p>
+<h2 id="t143. Nest.js">3. Nest.js <a href="#t143. Nest.js"> # </a></h2>
+<ul>
+<li>NestJS &#x662F;&#x6784;&#x5EFA;&#x9AD8;&#x6548;&#xFF0C;&#x53EF;&#x6269;&#x5C55;&#x7684; Node.js Web &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x6846;&#x67B6;</li>
+<li>&#x5B83;&#x4F7F;&#x7528;&#x73B0;&#x4EE3;&#x7684; JavaScript &#x6216; TypeScript&#xFF08;&#x4FDD;&#x7559;&#x4E0E;&#x7EAF; JavaScript &#x7684;&#x517C;&#x5BB9;&#x6027;&#xFF09;&#xFF0C;&#x5E76;&#x7ED3;&#x5408; OOP&#xFF08;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7F16;&#x7A0B;&#xFF09;&#xFF0C;FP&#xFF08;&#x51FD;&#x6570;&#x5F0F;&#x7F16;&#x7A0B;&#xFF09;&#x548C;FRP&#xFF08;&#x51FD;&#x6570;&#x54CD;&#x5E94;&#x5F0F;&#x7F16;&#x7A0B;&#xFF09;&#x7684;&#x5143;&#x7D20;</li>
+<li>NestJS &#x65E8;&#x5728;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x5F00;&#x7BB1;&#x5373;&#x7528;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4F53;&#x7CFB;&#x7ED3;&#x6784;&#xFF0C;&#x5141;&#x8BB8;&#x8F7B;&#x677E;&#x521B;&#x5EFA;&#x9AD8;&#x5EA6;&#x53EF;&#x6D4B;&#x8BD5;&#xFF0C;&#x53EF;&#x6269;&#x5C55;&#xFF0C;&#x677E;&#x6563;&#x8026;&#x5408;&#x4E14;&#x6613;&#x4E8E;&#x7EF4;&#x62A4;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;</li>
+</ul>
+<h3 id="t153.1 &#x5B89;&#x88C5;&#x4F9D;&#x8D56;">3.1 &#x5B89;&#x88C5;&#x4F9D;&#x8D56; <a href="#t153.1 &#x5B89;&#x88C5;&#x4F9D;&#x8D56;"> # </a></h3>
+<pre><code class="lang-js">cnpm i @nestjs/core @nestjs/common @nestjs/platform-express rxjs reflect-metadata -D
+</code></pre>
+<h3 id="t163.2 &#x5B9E;&#x73B0;&#x5E94;&#x7528;">3.2 &#x5B9E;&#x73B0;&#x5E94;&#x7528; <a href="#t163.2 &#x5B9E;&#x73B0;&#x5E94;&#x7528;"> # </a></h3>
+<h4 id="t173.2.1 main.ts">3.2.1 main.ts <a href="#t173.2.1 main.ts"> # </a></h4>
+<p>src\main.ts</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { NestFactory } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@nestjs/core&apos;</span>;
+<span class="hljs-keyword">import</span> { AppModule } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./app.module&apos;</span>;
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">bootstrap</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> app = <span class="hljs-keyword">await</span> NestFactory.create(AppModule);
+  <span class="hljs-keyword">await</span> app.listen(<span class="hljs-number">3000</span>);
+}
+bootstrap();
+</code></pre>
+<h4 id="t183.2.2 app.module.ts">3.2.2 app.module.ts <a href="#t183.2.2 app.module.ts"> # </a></h4>
+<p>src\app.module.ts</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { Module } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@nestjs/common&apos;</span>;
+<span class="hljs-keyword">import</span> { AppController } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;./app.controller&quot;</span>;
+@Module({
+  <span class="hljs-attr">controllers</span>: [AppController]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AppModule</span> </span>{}
+</code></pre>
+<h4 id="t193.2.3 app.controller.ts">3.2.3 app.controller.ts <a href="#t193.2.3 app.controller.ts"> # </a></h4>
+<p>src\app.controller.ts</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { Get, Controller } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;@nestjs/common&quot;</span>;
+
+@Controller(<span class="hljs-string">&apos;/&apos;</span>)
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AppController</span> </span>{
+  @Get(<span class="hljs-string">&apos;/hello&apos;</span>)
+  hello() {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;hello&apos;</span>;
+  }
+}
+</code></pre>
+<h4 id="t203.2.4 package.json">3.2.4 package.json <a href="#t203.2.4 package.json"> # </a></h4>
+<pre><code class="lang-json">  &quot;scripts&quot;: {
+    &quot;start:dev&quot;: &quot;nest start --watch&quot;
+  },
+</code></pre>
+<h3 id="t213.3 &#x4F9D;&#x8D56;&#x6CE8;&#x5165;">3.3 &#x4F9D;&#x8D56;&#x6CE8;&#x5165; <a href="#t213.3 &#x4F9D;&#x8D56;&#x6CE8;&#x5165;"> # </a></h3>
+<h4 id="t223.3.1 src\main.ts">3.3.1 src\main.ts <a href="#t223.3.1 src\main.ts"> # </a></h4>
+<pre><code class="lang-diff">import { Module } from &apos;@nestjs/common&apos;;
+import { AppController } from &quot;./app.controller&quot;;
+<span class="hljs-addition">+import { AppService } from &quot;./app.service&quot;;</span>
+<span class="hljs-addition">+import { UseClassLoggerService, UseValueLoggerService, UseValueLoggerServiceStringToken, UseFactoryLoggerService } from &quot;./logger.service&quot;;</span>
+
+@Module({
+  controllers: [AppController],
+<span class="hljs-addition">+  providers: [</span>
+    AppService,
+<span class="hljs-addition">+    {</span>
+<span class="hljs-addition">+      provide: UseClassLoggerService,</span>
+<span class="hljs-addition">+      useClass: UseClassLoggerService</span>
+<span class="hljs-addition">+    },</span>
+<span class="hljs-addition">+    {</span>
+<span class="hljs-addition">+      provide: UseValueLoggerService,</span>
+<span class="hljs-addition">+      useValue: new UseValueLoggerService()</span>
+<span class="hljs-addition">+    },</span>
+<span class="hljs-addition">+    {</span>
+<span class="hljs-addition">+      provide: &apos;StringToken&apos;,</span>
+<span class="hljs-addition">+      useValue: new UseValueLoggerServiceStringToken()</span>
+<span class="hljs-addition">+    },</span>
+<span class="hljs-addition">+    {</span>
+<span class="hljs-addition">+      provide: &apos;FactoryToken&apos;,</span>
+<span class="hljs-addition">+      useFactory: () =&gt; new UseFactoryLoggerService()</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+  ]</span>
+<span class="hljs-addition">+})</span>
+export class AppModule {}
+</code></pre>
+<h4 id="t233.3.2 app.controller.ts">3.3.2 app.controller.ts <a href="#t233.3.2 app.controller.ts"> # </a></h4>
+<p>src\app.controller.ts</p>
+<pre><code class="lang-diff">import { Get, Controller,Inject } from &quot;@nestjs/common&quot;;
+import { AppService } from &quot;./app.service&quot;;
+<span class="hljs-addition">+import { UseClassLoggerService, UseValueLoggerService, UseFactoryLoggerService, UseValueLoggerServiceStringToken } from &quot;./logger.service&quot;;</span>
+@Controller(&apos;/&apos;)
+export class AppController {
+  constructor(
+<span class="hljs-addition">+    private readonly appService: AppService,</span>
+<span class="hljs-addition">+    private readonly useClassLoggerService: UseClassLoggerService,</span>
+<span class="hljs-addition">+    private readonly useValueLoggerService: UseValueLoggerService,</span>
+<span class="hljs-addition">+    @Inject(&quot;StringToken&quot;) private readonly useValueLoggerServiceStringToken: UseValueLoggerServiceStringToken,</span>
+<span class="hljs-addition">+    @Inject(&quot;FactoryToken&quot;)  private readonly useFactoryLoggerService: UseFactoryLoggerService</span>
+<span class="hljs-addition">+    ) { }</span>
+  @Get(&apos;/hello&apos;)
+  hello() {
+<span class="hljs-addition">+    this.useClassLoggerService.log(&apos;useClassLoggerService&apos;);</span>
+<span class="hljs-addition">+    this.useValueLoggerService.log(&apos;useValueLoggerService&apos;);</span>
+<span class="hljs-addition">+    this.useValueLoggerServiceStringToken.log(&apos;StringToken&apos;);</span>
+<span class="hljs-addition">+    this.useFactoryLoggerService.log(&apos;FactoryToken&apos;);</span>
+    return this.appService.getHello();
+  }
+}
+</code></pre>
+<h4 id="t243.3.3 src\app.service.ts">3.3.3 src\app.service.ts <a href="#t243.3.3 src\app.service.ts"> # </a></h4>
+<p>src\app.service.ts</p>
+<pre><code class="lang-diff">import { Injectable } from &quot;@nestjs/common&quot;;
+<span class="hljs-addition">+import { UseClassLoggerService } from &quot;./logger.service&quot;;</span>
+@Injectable()
+export class AppService {
+<span class="hljs-addition">+  constructor(private readonly useClassLoggerService: UseClassLoggerService,){}</span>
+  getHello(): string {
+<span class="hljs-addition">+    this.useClassLoggerService.log(&apos;getHello&apos;);</span>
+    return &quot;Hello&quot;;
+  }
+}
+</code></pre>
+<h4 id="t253.3.4 logger.service.ts">3.3.4 logger.service.ts <a href="#t253.3.4 logger.service.ts"> # </a></h4>
+<p>src\app.logger.ts</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { Injectable } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;@nestjs/common&quot;</span>;
+
+@Injectable()
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UseClassLoggerService</span> </span>{
+  <span class="hljs-keyword">constructor</span>(){
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x521B;&#x5EFA; UseClassLoggerService&apos;</span>);
+  }
+  log(message:string) {
+   <span class="hljs-built_in">console</span>.log(message);
+  }
+}
+
+
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UseValueLoggerService</span> </span>{
+  log(message: string) {
+    <span class="hljs-built_in">console</span>.log(message);
+  } 
+}
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UseValueLoggerServiceStringToken</span> </span>{
+  log(message: string) {
+    <span class="hljs-built_in">console</span>.log(message);
+  }
+}
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UseFactoryLoggerService</span> </span>{
+  log(message: string) {
+    <span class="hljs-built_in">console</span>.log(message);
+  }
+}
+</code></pre>
+<p><img src="http://img.zhufengpeixun.cn/inversejs.jpg" alt="inversejs"></p>
+<h2 id="t264. IOC">4. IOC <a href="#t264. IOC"> # </a></h2>
+<h3 id="t274.1 &#x6CE8;&#x518C;Provider">4.1 &#x6CE8;&#x518C;Provider <a href="#t274.1 &#x6CE8;&#x518C;Provider"> # </a></h3>
+<h4 id="t284.1 type.ts">4.1 type.ts <a href="#t284.1 type.ts"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> interface Type&lt;T&gt;{
+    <span class="hljs-keyword">new</span>(...args: any[]): T;
+}
+<span class="hljs-comment">//class Person{}</span>
+<span class="hljs-comment">//let t:Type&lt;Person&gt; = Person;s</span>
+</code></pre>
+<h4 id="t294.2 Container.ts">4.2 Container.ts <a href="#t294.2 Container.ts"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> {Provider,Token} <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;./provider&quot;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Container</span> </span>{
+    public providers = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>&lt;Token&lt;any&gt;, Provider&lt;any&gt;&gt;();
+    addProvider&lt;T&gt;(provider: Provider&lt;T&gt;) {
+        <span class="hljs-keyword">this</span>.providers.set(provider.provide, provider);
+    }
+}
+</code></pre>
+<h4 id="t304.3 provider.ts">4.3 provider.ts <a href="#t304.3 provider.ts"> # </a></h4>
+<p>provider.ts</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { Type } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;./type&quot;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">InjectionToken</span> </span>{
+    <span class="hljs-keyword">constructor</span>(public injectionIdentifier: string) { }
+}
+<span class="hljs-comment">//Token &#x7C7B;&#x578B;&#x662F;&#x4E00;&#x4E2A;&#x8054;&#x5408;&#x7C7B;&#x578B;&#xFF0C;&#x65E2;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x7C7B;&#x578B;&#x4E5F;&#x53EF;&#x4EE5;&#x662F; InjectionToken &#x7C7B;&#x578B;</span>
+<span class="hljs-keyword">export</span> type Token&lt;T&gt; = Type&lt;T&gt; | InjectionToken;
+
+<span class="hljs-keyword">export</span> interface BaseProvider&lt;T&gt; {
+    <span class="hljs-attr">provide</span>: Token&lt;T&gt;;
+}
+
+<span class="hljs-keyword">export</span> interface ClassProvider&lt;T&gt; extends BaseProvider&lt;T&gt; {
+    <span class="hljs-attr">provide</span>: Token&lt;T&gt;;
+    useClass: Type&lt;T&gt;;
+}
+
+<span class="hljs-keyword">export</span> interface ValueProvider&lt;T&gt; extends BaseProvider&lt;T&gt; {
+    <span class="hljs-attr">provide</span>: Token&lt;T&gt;;
+    useValue: T;
+}
+
+<span class="hljs-keyword">export</span> interface FactoryProvider&lt;T&gt; extends BaseProvider&lt;T&gt; {
+    <span class="hljs-attr">provide</span>: Token&lt;T&gt;;
+    useFactory: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> T;
+}
+
+<span class="hljs-keyword">export</span> type Provider&lt;T&gt; =
+    | ClassProvider&lt;T&gt;
+    | ValueProvider&lt;T&gt;
+    | FactoryProvider&lt;T&gt;;    
+</code></pre>
+<h4 id="t314.4 index.ts">4.4 index.ts <a href="#t314.4 index.ts"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> * <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;./container&quot;</span>;
+</code></pre>
+<h4 id="t324.5 ioc\index.spec.ts">4.5 ioc\index.spec.ts <a href="#t324.5 ioc\index.spec.ts"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> {Container} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./&apos;</span>;
+<span class="hljs-keyword">let</span> container = <span class="hljs-keyword">new</span> Container();
+<span class="hljs-keyword">const</span> point = { <span class="hljs-attr">x</span>: <span class="hljs-number">100</span>,<span class="hljs-attr">y</span>:<span class="hljs-number">100</span> };
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BasicClass</span> </span>{ }
+<span class="hljs-comment">// &#x6CE8;&#x518C;ClassProvider</span>
+container.addProvider({ <span class="hljs-attr">provide</span>: BasicClass, <span class="hljs-attr">useClass</span>: BasicClass });
+<span class="hljs-comment">// &#x6CE8;&#x518C;ValueProvider</span>
+container.addProvider({ <span class="hljs-attr">provide</span>: BasicClass, <span class="hljs-attr">useValue</span>: point });
+<span class="hljs-comment">// &#x6CE8;&#x518C;FactoryProvider</span>
+container.addProvider({ <span class="hljs-attr">provide</span>: BasicClass, <span class="hljs-attr">useFactory</span>: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> point });
+<span class="hljs-built_in">console</span>.log(container.providers);
+</code></pre>
+<h3 id="t334.2  &#x88C5;&#x9970;&#x5668;">4.2  &#x88C5;&#x9970;&#x5668; <a href="#t334.2  &#x88C5;&#x9970;&#x5668;"> # </a></h3>
+<h4 id="t344.2.1 Injectable">4.2.1 Injectable <a href="#t344.2.1 Injectable"> # </a></h4>
+<ul>
+<li>Injectable &#x88C5;&#x9970;&#x5668;&#x7528;&#x4E8E;&#x8868;&#x793A;&#x6B64;&#x7C7B;&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x6CE8;&#x5165;&#x5176;&#x4F9D;&#x8D56;&#x9879;&#xFF0C;&#x8BE5;&#x88C5;&#x9970;&#x5668;&#x5C5E;&#x4E8E;&#x7C7B;&#x88C5;&#x9970;&#x5668;</li>
+<li>&#x7C7B;&#x88C5;&#x9970;&#x5668;&#x987E;&#x540D;&#x601D;&#x4E49;&#xFF0C;&#x5C31;&#x662F;&#x7528;&#x6765;&#x88C5;&#x9970;&#x7C7B;&#x7684;&#x3002;&#x5B83;&#x63A5;&#x6536;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;target: TFunction&#xFF0C;&#x8868;&#x793A;&#x88AB;&#x88C5;&#x9970;&#x7684;&#x7C7B;</li>
+</ul>
+<pre><code class="lang-js">declare type ClassDecorator = <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">TFunction</span> <span class="hljs-attr">extends</span> <span class="hljs-attr">Function</span>&gt;</span>(target: TFunction) =&gt; TFunction;
+</span></code></pre>
+<h4 id="t354.2.2 Inject">4.2.2 Inject <a href="#t354.2.2 Inject"> # </a></h4>
+<ul>
+<li><code>Inject</code>&#x88C5;&#x9970;&#x5668;&#x5C5E;&#x4E8E;&#x53C2;&#x6570;&#x88C5;&#x9970;&#x5668;</li>
+<li>&#x53C2;&#x6570;&#x88C5;&#x9970;&#x5668;&#x987E;&#x540D;&#x601D;&#x4E49;&#xFF0C;&#x662F;&#x7528;&#x6765;&#x88C5;&#x9970;&#x51FD;&#x6570;&#x53C2;&#x6570;&#xFF0C;&#x5B83;&#x63A5;&#x6536;&#x4E09;&#x4E2A;&#x53C2;&#x6570;<ul>
+<li>target: Object &#x2014;&#x2014; &#x88AB;&#x88C5;&#x9970;&#x7684;&#x7C7B;</li>
+<li>propertyKey: string | symbol &#x2014;&#x2014; &#x65B9;&#x6CD5;&#x540D;</li>
+<li>parameterIndex: number &#x2014;&#x2014; &#x65B9;&#x6CD5;&#x4E2D;&#x53C2;&#x6570;&#x7684;&#x7D22;&#x5F15;&#x503C;</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-js">declare type ParameterDecorator = (target: <span class="hljs-built_in">Object</span>, 
+  <span class="hljs-attr">propertyKey</span>: string | symbol, <span class="hljs-attr">parameterIndex</span>: number ) =&gt; <span class="hljs-keyword">void</span>
+</code></pre>
+<h4 id="t364.2.3 &#x5B9E;&#x73B0;">4.2.3 &#x5B9E;&#x73B0; <a href="#t364.2.3 &#x5B9E;&#x73B0;"> # </a></h4>
+<h5 id="t374.2.3.1 Injectable.ts">4.2.3.1 Injectable.ts <a href="#t374.2.3.1 Injectable.ts"> # </a></h5>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> <span class="hljs-string">&quot;reflect-metadata&quot;</span>;
+<span class="hljs-keyword">const</span> INJECTABLE_METADATA_KEY = <span class="hljs-built_in">Symbol</span>(<span class="hljs-string">&quot;INJECTABLE_KEY&quot;</span>);
+
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Injectable</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">target: any</span>) </span>{
+        <span class="hljs-built_in">Reflect</span>.defineMetadata(INJECTABLE_METADATA_KEY, <span class="hljs-literal">true</span>, target);
+        <span class="hljs-keyword">return</span> target;
+    };
+}
+</code></pre>
+<h5 id="t384.2.3.2 Inject.ts">4.2.3.2 Inject.ts <a href="#t384.2.3.2 Inject.ts"> # </a></h5>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> <span class="hljs-string">&apos;reflect-metadata&apos;</span>;
+<span class="hljs-keyword">import</span> { Token } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./provider&apos;</span>;
+
+<span class="hljs-keyword">const</span> INJECT_METADATA_KEY = <span class="hljs-built_in">Symbol</span>(<span class="hljs-string">&apos;INJECT_KEY&apos;</span>);
+
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Inject</span>(<span class="hljs-params">token: Token&lt;any&gt;</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">target: any, _: string | symbol, index: number</span>) </span>{
+        <span class="hljs-built_in">Reflect</span>.defineMetadata(INJECT_METADATA_KEY, token, target, <span class="hljs-string">`index-<span class="hljs-subst">${index}</span>`</span>);
+        <span class="hljs-keyword">return</span> target;
+    };
+}
+</code></pre>
+<h3 id="t394.3 &#x5B9E;&#x73B0; inject">4.3 &#x5B9E;&#x73B0; inject <a href="#t394.3 &#x5B9E;&#x73B0; inject"> # </a></h3>
+<ul>
+<li>inject &#x65B9;&#x6CD5;&#x6240;&#x5B9E;&#x73B0;&#x7684;&#x529F;&#x80FD;&#x5C31;&#x662F;&#x6839;&#x636E; Token &#x83B7;&#x53D6;&#x4E0E;&#x4E4B;&#x5BF9;&#x5E94;&#x7684;&#x5BF9;&#x8C61;</li>
+</ul>
+<h4 id="t404.3.1 Container.ts">4.3.1 Container.ts <a href="#t404.3.1 Container.ts"> # </a></h4>
+<pre><code class="lang-diff">import {
+    Provider, Token, InjectionToken,
+    ClassProvider, ValueProvider,FactoryProvider,
+    isClassProvider, isValueProvider,isFactoryProvider} from &quot;./provider&quot;;
+import { Type } from &quot;./type&quot;;    
+export class Container {
+    public providers = new Map&lt;Token&lt;any&gt;, Provider&lt;any&gt;&gt;();
+    addProvider&lt;T&gt;(provider: Provider&lt;T&gt;) {
+        this.providers.set(provider.provide, provider);
+    }
+    inject&lt;T&gt;(type: Token&lt;T&gt;): T {
+        let provider = this.providers.get(type);
+        return this.injectWithProvider(type, provider);
+    }
+    private injectWithProvider&lt;T&gt;(type: Token&lt;T&gt;, provider?: Provider&lt;T&gt;): T {
+        if (isClassProvider(provider)) {
+            //TODO
+        } else if (isValueProvider(provider)) {
+            return this.injectValue(provider as ValueProvider&lt;T&gt;);
+        } else if (isFactoryProvider(provider)){
+            return this.injectFactory(provider as FactoryProvider&lt;T&gt;);
+        }
+    }
+    private injectValue&lt;T&gt;(valueProvider: ValueProvider&lt;T&gt;): T {
+        return valueProvider.useValue;
+    }
+    private injectFactory&lt;T&gt;(valueProvider: FactoryProvider&lt;T&gt;): T {
+        return valueProvider.useFactory();
+    }
+}
+</code></pre>
+<h3 id="t414.4 __metadata">4.4 __metadata <a href="#t414.4 __metadata"> # </a></h3>
+<ul>
+<li>__decorate:&#x6267;&#x884C;&#x88C5;&#x9970;&#x5668;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x88AB;&#x6267;&#x884C;&#x7684;&#x88C5;&#x9970;&#x5668;&#x5206;&#x4E3A;&#x56DB;&#x7C7B;&#xFF0C;&#x7C7B;&#x88C5;&#x9970;&#x5668;&#x3001;&#x53C2;&#x6570;&#x88C5;&#x9970;&#x5668;&#x3001;&#x65B9;&#x6CD5;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x8FD8;&#x6709;&#x4E00;&#x7C7B;&#x7279;&#x6B8A;&#x7684;&#x88C5;&#x9970;&#x5668;&#x662F;ts&#x7F16;&#x8BD1;&#x9009;&#x9879;<code>emitDecoratorMetadata</code>&#x751F;&#x6210;&#x7684;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x7528;&#x6765;&#x5B9A;&#x4E49;&#x4E00;&#x4E9B;&#x7279;&#x6B8A;&#x5143;&#x6570;&#x636E;design:paramtypes&#x7B49;&#xFF0C;&#x8FD9;&#x4E9B;&#x7279;&#x6B8A;&#x5143;&#x6570;&#x636E;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x7F16;&#x8BD1;&#x4E4B;&#x524D;&#x7684;&#x7C7B;&#x578B;&#x4FE1;&#x606F;<ul>
+<li>&#x53C2;&#x6570;&#x7C7B;&#x578B;&#x5143;&#x6570;&#x636E;&#x4F7F;&#x7528;&#x5143;&#x6570;&#x636E;&#x952E;&quot;design:type&quot;</li>
+<li>&#x53C2;&#x6570;&#x7C7B;&#x578B;&#x5143;&#x6570;&#x636E;&#x4F7F;&#x7528;&#x5143;&#x6570;&#x636E;&#x952E;&quot;design:paramtypes&quot;</li>
+<li>&#x8FD4;&#x56DE;&#x503C;&#x7C7B;&#x578B;&#x5143;&#x6570;&#x636E;&#x4F7F;&#x7528;&#x5143;&#x6570;&#x636E;&#x952E;&quot;design:returntype&quot;</li>
+</ul>
+</li>
+<li>__metadata: &#x7C7B;&#x88C5;&#x9970;&#x5668;&#x5DE5;&#x5382;&#xFF0C;&#x83B7;&#x53D6;&#x7684;&#x88C5;&#x9970;&#x5668;&#x4F1A;&#x5C06;&#x6307;&#x5B9A;&#x952E;&#x503C;&#x5BF9;&#x4E0E;&#x7C7B;&#x5173;&#x8054;&#x8D77;&#x6765;</li>
+<li>__param: &#x53C2;&#x6570;&#x88C5;&#x9970;&#x5668;&#x5DE5;&#x5382;&#xFF0C;&#x6839;&#x636E;&#x53C2;&#x6570;&#x4E0B;&#x6807;&#x3001;&#x53C2;&#x6570;&#x88C5;&#x9970;&#x5668;&#x3001;&#x83B7;&#x53D6;&#x6700;&#x7EC8;&#x7684;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x5E76;&#x4E14;&#x5C06;&#x53C2;&#x6570;&#x4E0B;&#x6807;&#x4F20;&#x9012;&#x7ED9;&#x88C5;&#x9970;&#x5668;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/decoratorflow.png" alt="decoratorflow"></p>
+<pre><code class="lang-js">tsc params/index.ts --experimentalDecorators --emitDecoratorMetadata --target es5
+</code></pre>
+<h4 id="t424.4.1  &#x88C5;&#x9970;&#x5668;">4.4.1  &#x88C5;&#x9970;&#x5668; <a href="#t424.4.1  &#x88C5;&#x9970;&#x5668;"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-comment">/**
+ * &#x7C7B;&#x88C5;&#x9970;&#x5668;
+ * <span class="hljs-doctag">@param </span>constructor &#x7C7B;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">classDecorator</span>(<span class="hljs-params">constructor: Function</span>) </span>{}
+<span class="hljs-comment">/**
+ * &#x5C5E;&#x6027;&#x88C5;&#x9970;&#x5668;
+ * <span class="hljs-doctag">@param </span>target &#x9759;&#x6001;&#x6210;&#x5458;&#x6765;&#x8BF4;&#x662F;&#x7C7B;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#xFF0C;&#x5BF9;&#x4E8E;&#x5B9E;&#x4F8B;&#x6210;&#x5458;&#x662F;&#x7C7B;&#x7684;&#x539F;&#x578B;&#x5BF9;&#x8C61;
+ * <span class="hljs-doctag">@param </span>property  &#x5C5E;&#x6027;&#x7684;&#x540D;&#x79F0;
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">propertyDecorator</span>(<span class="hljs-params">target: any, property: string</span>) </span>{}
+<span class="hljs-comment">/**
+ * &#x65B9;&#x6CD5;&#x88C5;&#x9970;&#x5668;
+ * <span class="hljs-doctag">@param </span>target &#x9759;&#x6001;&#x6210;&#x5458;&#x6765;&#x8BF4;&#x662F;&#x7C7B;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#xFF0C;&#x5BF9;&#x4E8E;&#x5B9E;&#x4F8B;&#x6210;&#x5458;&#x662F;&#x7C7B;&#x7684;&#x539F;&#x578B;&#x5BF9;&#x8C61;
+ * <span class="hljs-doctag">@param </span>property &#x65B9;&#x6CD5;&#x7684;&#x540D;&#x79F0;
+ * <span class="hljs-doctag">@param </span>descriptor &#x65B9;&#x6CD5;&#x63CF;&#x8FF0;&#x7B26;
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">methodDecorator</span>(<span class="hljs-params">target: any, property: string, descriptor: PropertyDescriptor</span>) </span>{ }
+<span class="hljs-comment">/**
+ * &#x53C2;&#x6570;&#x88C5;&#x9970;&#x5668;
+ * <span class="hljs-doctag">@param </span>target &#x9759;&#x6001;&#x6210;&#x5458;&#x662F;&#x7C7B;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;,&#x5B9E;&#x4F8B;&#x6210;&#x5458;&#x662F;&#x7C7B;&#x7684;&#x539F;&#x578B;&#x5BF9;&#x8C61;
+ * <span class="hljs-doctag">@param </span>methodName &#x65B9;&#x6CD5;&#x540D;
+ * <span class="hljs-doctag">@param </span>paramsIndex &#x53C2;&#x6570;&#x5728;&#x51FD;&#x6570;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x7D22;&#x5F15;
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">paramDecorator</span>(<span class="hljs-params">target: any, methodName: string, paramsIndex: number</span>) </span>{ }
+</code></pre>
+<h4 id="t434.4.2  params\index.ts">4.4.2  params\index.ts <a href="#t434.4.2  params\index.ts"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> <span class="hljs-string">&apos;reflect-metadata&apos;</span>;
+interface Type&lt;T&gt; {
+    <span class="hljs-keyword">new</span>(...args: any[]): T;
+}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">InjectionToken</span> </span>{
+    <span class="hljs-keyword">constructor</span>(public injectionIdentifier: string) { }
+}
+type Token&lt;T&gt; = Type&lt;T&gt; | InjectionToken;
+
+<span class="hljs-keyword">const</span> INJECT_METADATA_KEY = <span class="hljs-string">&apos;INJECT_KEY&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Inject</span>(<span class="hljs-params">token: Token&lt;any&gt;</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">target: any, _propertyName: string | symbol, index: number</span>) </span>{
+        <span class="hljs-built_in">Reflect</span>.defineMetadata(INJECT_METADATA_KEY, token, target, <span class="hljs-string">`index-<span class="hljs-subst">${index}</span>`</span>);
+        <span class="hljs-keyword">return</span> target;
+    };
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Car</span> </span>{ }
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">LoggerService</span> </span>{ }
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Wife</span> </span>{
+    <span class="hljs-keyword">constructor</span>(
+        private car: Car,
+        @Inject(new InjectionToken(&apos;Logger&apos;)) private loggerService:LoggerService
+    ) { }
+}
+<span class="hljs-built_in">console</span>.log(Wife);
+</code></pre>
+<h4 id="t444.4.2  params\index.js">4.4.2  params\index.js <a href="#t444.4.2  params\index.js"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-meta">&quot;use strict&quot;</span>;
+<span class="hljs-keyword">var</span> __decorate = (<span class="hljs-keyword">this</span> &amp;&amp; <span class="hljs-keyword">this</span>.__decorate) || <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">decorators, target, key, desc</span>) </span>{
+    <span class="hljs-keyword">var</span> c = <span class="hljs-built_in">arguments</span>.length, r = c &lt; <span class="hljs-number">3</span> ? target : desc === <span class="hljs-literal">null</span> ? desc = <span class="hljs-built_in">Object</span>.getOwnPropertyDescriptor(target, key) : desc, d;
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">Reflect</span> === <span class="hljs-string">&quot;object&quot;</span> &amp;&amp; <span class="hljs-keyword">typeof</span> <span class="hljs-built_in">Reflect</span>.decorate === <span class="hljs-string">&quot;function&quot;</span>) r = <span class="hljs-built_in">Reflect</span>.decorate(decorators, target, key, desc);
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = decorators.length - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) <span class="hljs-keyword">if</span> (d = decorators[i]) r = (c &lt; <span class="hljs-number">3</span> ? d(r) : c &gt; <span class="hljs-number">3</span> ? d(target, key, r) : d(target, key)) || r;
+    <span class="hljs-keyword">return</span> c &gt; <span class="hljs-number">3</span> &amp;&amp; r &amp;&amp; <span class="hljs-built_in">Object</span>.defineProperty(target, key, r), r;
+};
+<span class="hljs-keyword">var</span> __metadata = (<span class="hljs-keyword">this</span> &amp;&amp; <span class="hljs-keyword">this</span>.__metadata) || <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">k, v</span>) </span>{
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">Reflect</span> === <span class="hljs-string">&quot;object&quot;</span> &amp;&amp; <span class="hljs-keyword">typeof</span> <span class="hljs-built_in">Reflect</span>.metadata === <span class="hljs-string">&quot;function&quot;</span>) <span class="hljs-keyword">return</span> <span class="hljs-built_in">Reflect</span>.metadata(k, v);
+};
+<span class="hljs-keyword">var</span> __param = (<span class="hljs-keyword">this</span> &amp;&amp; <span class="hljs-keyword">this</span>.__param) || <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">paramIndex, decorator</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">target, key</span>) </span>{ decorator(target, key, paramIndex); }
+};
+<span class="hljs-built_in">Object</span>.defineProperty(exports, <span class="hljs-string">&quot;__esModule&quot;</span>, { <span class="hljs-attr">value</span>: <span class="hljs-literal">true</span> });
+<span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;reflect-metadata&quot;</span>);
+<span class="hljs-keyword">var</span> InjectionToken = <span class="hljs-comment">/** @class */</span> (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">InjectionToken</span>(<span class="hljs-params">injectionIdentifier</span>) </span>{
+        <span class="hljs-keyword">this</span>.injectionIdentifier = injectionIdentifier;
+    }
+    <span class="hljs-keyword">return</span> InjectionToken;
+}());
+<span class="hljs-keyword">var</span> INJECT_METADATA_KEY = <span class="hljs-string">&apos;INJECT_KEY&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Inject</span>(<span class="hljs-params">token</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">target, _propertyName, index</span>) </span>{
+        <span class="hljs-built_in">Reflect</span>.defineMetadata(INJECT_METADATA_KEY, token, target, <span class="hljs-string">&quot;index-&quot;</span> + index);
+        <span class="hljs-keyword">return</span> target;
+    };
+}
+<span class="hljs-keyword">var</span> Car = <span class="hljs-comment">/** @class */</span> (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Car</span>(<span class="hljs-params"></span>) </span>{
+    }
+    <span class="hljs-keyword">return</span> Car;
+}());
+<span class="hljs-keyword">var</span> LoggerService = <span class="hljs-comment">/** @class */</span> (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">LoggerService</span>(<span class="hljs-params"></span>) </span>{
+    }
+    <span class="hljs-keyword">return</span> LoggerService;
+}());
+<span class="hljs-keyword">var</span> Wife = <span class="hljs-comment">/** @class */</span> (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Wife</span>(<span class="hljs-params">car, loggerService</span>) </span>{
+        <span class="hljs-keyword">this</span>.car = car;
+        <span class="hljs-keyword">this</span>.loggerService = loggerService;
+    }
+    Wife = __decorate([
+        __param(<span class="hljs-number">1</span>, Inject(<span class="hljs-keyword">new</span> InjectionToken(<span class="hljs-string">&apos;Logger&apos;</span>))),
+        __metadata(<span class="hljs-string">&quot;design:paramtypes&quot;</span>, [Car,
+            LoggerService])
+    ], Wife);
+    <span class="hljs-keyword">return</span> Wife;
+}());
+<span class="hljs-built_in">console</span>.log(Wife);
+</code></pre>
+<h4 id="t454.4.3  params\imp.js">4.4.3  params\imp.js <a href="#t454.4.3  params\imp.js"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-meta">&quot;use strict&quot;</span>;
+<span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;reflect-metadata&quot;</span>);
+<span class="hljs-comment">/**
+ * &#x88C5;&#x9970;&#x5668;&#x6267;&#x884C;&#x5668;
+ * @param {*} decorators &#x88C5;&#x9970;&#x5668;&#x6570;&#x7EC4;
+ * @param {*} target &#x88C5;&#x9970;&#x5668;&#x76EE;&#x6807;
+ * @param {*} key &#x5143;&#x6570;&#x636E;&#x952E;
+ * @param {*} desc &#x65B9;&#x6CD5;&#x7684;&#x63CF;&#x8FF0;&#x7B26;
+ */</span>
+<span class="hljs-keyword">var</span> __decorate = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">decorators, target, key, desc</span>) </span>{
+    <span class="hljs-comment">/*&#x83B7;&#x53D6;&#x53C2;&#x6570;&#x957F;&#x5EA6;&#xFF0C;&#x5F53;&#x53C2;&#x6570;&#x957F;&#x5EA6;&#x5C0F;&#x4E8E;3,&#x8BF4;&#x660E;&#x76EE;&#x6807;&#x5C31;&#x662F;target&#xFF0C;&#x5426;&#x5219;&#x76EE;&#x6807;&#x4E3A;&#x65B9;&#x6CD5;&#x63CF;&#x8FF0;&#x7B26;
+        &#x63CF;&#x8FF0;&#x7B26;&#x4E0D;&#x5B58;&#x5728;&#x65F6;&#xFF0C;&#x901A;&#x8FC7;key&#x4ECE;target&#x83B7;&#x53D6;&#xFF0C;&#x5373;&#x8BA4;&#x4E3A;key&#x662F;&#x65B9;&#x6CD5;&#x540D; */</span>
+    <span class="hljs-keyword">var</span> argsLength = <span class="hljs-built_in">arguments</span>.length,
+        decoratorTarget =
+            argsLength &lt; <span class="hljs-number">3</span>
+                ? target
+                : desc === <span class="hljs-literal">null</span>
+                    ? (desc = <span class="hljs-built_in">Object</span>.getOwnPropertyDescriptor(target, key))
+                    : desc;
+    <span class="hljs-comment">/* &#x5982;&#x679C;Reflect&#x7684;decorate&#x65B9;&#x6CD5;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4E3A;&#x76EE;&#x6807;&#x8C03;&#x7528;&#x88C5;&#x9970;&#x5668;&#x65B9;&#x6CD5;&#x6570;&#x7EC4;&#xFF0C;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5728;reflect-metadata&#x5305;&#x4E2D;&#x5B9E;&#x73B0; */</span>
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">Reflect</span> === <span class="hljs-string">&quot;object&quot;</span> &amp;&amp; <span class="hljs-keyword">typeof</span> <span class="hljs-built_in">Reflect</span>.decorate === <span class="hljs-string">&quot;function&quot;</span>)
+      decoratorTarget = <span class="hljs-built_in">Reflect</span>.decorate(decorators, target, key, desc);
+    <span class="hljs-comment">/*
+    &#x5982;&#x679C;Reflect.decorate&#x65B9;&#x6CD5;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x624B;&#x52A8;&#x8C03;&#x7528;&#x88C5;&#x9970;&#x65B9;&#x6CD5;&#xFF0C;&#x6CE8;&#x610F;&#x662F;&#x5012;&#x5E8F;&#x8C03;&#x7528;
+    &#x5982;&#x679C;&#x53C2;&#x6570;&#x957F;&#x5EA6;&#x5C0F;&#x4E8E;3&#x8BF4;&#x660E;&#x662F;&#x7C7B;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x76F4;&#x63A5;&#x5C06;&#x7C7B;&#x4F20;&#x9012;&#x7ED9;&#x88C5;&#x9970;&#x5668;&#x65B9;&#x6CD5;
+    &#x5982;&#x679C;&#x53C2;&#x6570;&#x957F;&#x5EA6;&#x7B49;&#x4E8E;3&#x8BF4;&#x660E;&#x662F;&#x7C7B;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x4F46;&#x662F;key&#x53C2;&#x6570;&#x5B58;&#x5728;&#xFF0C;&#x4E0E;&#x7C7B;&#x4E00;&#x540C;&#x4F20;&#x9012;&#x7ED9;&#x88C5;&#x9970;&#x5668;&#x65B9;&#x6CD5;
+    &#x5982;&#x679C;&#x53C2;&#x6570;&#x957F;&#x5EA6;&#x5927;&#x4E8E;3&#x8BF4;&#x660E;&#x662F;&#x65B9;&#x6CD5;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x5C06;&#x7C7B;&#x3001;key&#x3001;&#x65B9;&#x6CD5;&#x63CF;&#x8FF0;&#x7B26;&#x4F20;&#x9012;&#x7ED9;&#x88C5;&#x9970;&#x5668;&#x65B9;&#x6CD5;
+    &#x540C;&#x65F6;&#x83B7;&#x53D6;&#x88C5;&#x9970;&#x5668;&#x65B9;&#x6CD5;&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#x7684;target&#x7ED9;decoratorTarget&#xFF0C;&#x5982;&#x679C;&#x88C5;&#x9970;&#x5668;&#x65B9;&#x6CD5;&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x5219;&#x4F7F;&#x7528;&#x4E4B;&#x524D;&#x7684;decoratorTarget */</span> 
+    <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = decorators.length - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) {
+        <span class="hljs-keyword">let</span> decorator = decorators[i];
+        <span class="hljs-keyword">if</span> (decorator) {
+          decoratorTarget =
+            (argsLength &lt; <span class="hljs-number">3</span>
+              ? decorator(decoratorTarget)
+              : argsLength &gt; <span class="hljs-number">3</span>
+              ? decorator(target, key, decoratorTarget)
+              : decorator(target, key)) || decoratorTarget;
+        }
+      }
+    }
+    <span class="hljs-comment">/* &#x8FD4;&#x56DE;decoratorTarget&#xFF0C;&#x53C2;&#x6570;&#x5C0F;&#x4E8E;3&#x65F6;&#x4E3A;&#x7C7B;&#x5BF9;&#x8C61;&#xFF0C;&#x53C2;&#x6570;&#x5927;&#x4E8E;3&#x65F6;&#x4E3A;&#x65B9;&#x6CD5;&#x63CF;&#x8FF0;&#x7B26;,&#x5F53;&#x4E3A;&#x63CF;&#x8FF0;&#x7B26;&#x65F6;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x5C06;&#x5176;&#x5B9A;&#x4E49;&#x5230;target&#x4E0A; */</span>
+    <span class="hljs-keyword">return</span> (
+      argsLength &gt; <span class="hljs-number">3</span> &amp;&amp;
+        decoratorTarget &amp;&amp;
+        <span class="hljs-built_in">Object</span>.defineProperty(target, key, decoratorTarget),
+      decoratorTarget
+    );
+}
+
+<span class="hljs-comment">/**
+ *  &#x88C5;&#x9970;&#x5668;&#x5DE5;&#x5382;&#xFF0C;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x5728;&#x7C7B;&#x4E0A;&#x5B9A;&#x4E49;&#x6307;&#x5B9A;&#x952E;&#x503C;&#x5BF9;&#x7684;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x4E00;&#x822C;&#x7528;&#x6765;&#x5B9A;&#x4E49;emitDecoratorMetadata
+ * <span class="hljs-doctag">@param <span class="hljs-type">{*}</span> </span>k &#x5C5E;&#x6027;&#x540D;
+ * <span class="hljs-doctag">@param <span class="hljs-type">{*}</span> </span>v &#x5C5E;&#x6027;&#x503C;
+ */</span>
+<span class="hljs-keyword">var</span> __metadata = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">k, v</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Reflect</span>.metadata(k, v);
+};
+
+<span class="hljs-comment">/**
+ * &#x53C2;&#x6570;&#x88C5;&#x9970;&#x5668;&#x5DE5;&#x5382;&#xFF0C;&#x7528;&#x6765;&#x83B7;&#x53D6;&#x53C2;&#x6570;&#x88C5;&#x9970;&#x5668;
+ * @param {*} paramIndex  &#x53C2;&#x6570;&#x4E0B;&#x6807;
+ * @param {*} decorator &#x88C5;&#x9970;&#x5668;
+ * @param {*} target &#x88C5;&#x9970;&#x7684;&#x76EE;&#x6807;&#x4E3A;&#x7C7B;
+ * @param {*} key &#x5C5E;&#x6027;&#x540D;
+*/</span>
+<span class="hljs-keyword">var</span> __param = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">paramIndex, decorator</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">target, key</span>) </span>{
+        decorator(target, key, paramIndex);
+    };
+};
+
+<span class="hljs-keyword">var</span> InjectionToken = (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">InjectionToken</span>(<span class="hljs-params">injectionIdentifier</span>) </span>{
+        <span class="hljs-keyword">this</span>.injectionIdentifier = injectionIdentifier;
+    }
+    <span class="hljs-keyword">return</span> InjectionToken;
+})();
+<span class="hljs-keyword">var</span> INJECT_METADATA_KEY = <span class="hljs-string">&quot;INJECT_KEY&quot;</span>;
+<span class="hljs-comment">/**
+ * &#x8FD4;&#x56DE; token&#x88C5;&#x9970;&#x5668;
+ * @param {*} token &#x6807;&#x8BC6;&#x7B26; 
+ * @param {*} target &#x88C5;&#x9970;&#x7684;&#x76EE;&#x6807;
+ * @param {*} _propertyName &#x5C5E;&#x6027;&#x540D;
+ * @param {*} index &#x7D22;&#x5F15;
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Inject</span>(<span class="hljs-params">token</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">target, _propertyName, index</span>) </span>{
+        <span class="hljs-built_in">Reflect</span>.defineMetadata(INJECT_METADATA_KEY,token,target,<span class="hljs-string">&quot;index-&quot;</span> + index);
+        <span class="hljs-keyword">return</span> target;
+    };
+}
+<span class="hljs-keyword">var</span> Car = (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Car</span>(<span class="hljs-params"></span>) </span>{ }
+    <span class="hljs-keyword">return</span> Car;
+})();
+<span class="hljs-keyword">var</span> LoggerService = (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">LoggerService</span>(<span class="hljs-params"></span>) </span>{ }
+    <span class="hljs-keyword">return</span> LoggerService;
+})();
+<span class="hljs-keyword">var</span> Wife = (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Wife</span>(<span class="hljs-params">car, loggerService</span>) </span>{
+        <span class="hljs-keyword">this</span>.car = car;
+        <span class="hljs-keyword">this</span>.loggerService = loggerService;
+    }
+    Wife = __decorate(
+        [
+            __param(<span class="hljs-number">1</span>, Inject(<span class="hljs-keyword">new</span> InjectionToken(<span class="hljs-string">&quot;Logger&quot;</span>))),
+            __metadata(<span class="hljs-string">&quot;design:paramtypes&quot;</span>, [Car, LoggerService]),
+        ],
+        Wife
+    );
+    <span class="hljs-keyword">return</span> Wife;
+})();
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Reflect</span>.getMetadata(INJECT_METADATA_KEY, Wife, <span class="hljs-string">&quot;index-1&quot;</span>));
+<span class="hljs-built_in">console</span>.log(Wife);
+
+</code></pre>
+<h3 id="t464.5 &#x5B9E;&#x73B0;&#x6CE8;&#x5165;">4.5 &#x5B9E;&#x73B0;&#x6CE8;&#x5165; <a href="#t464.5 &#x5B9E;&#x73B0;&#x6CE8;&#x5165;"> # </a></h3>
+<h4 id="t474.5.1 Container.ts">4.5.1 Container.ts <a href="#t474.5.1 Container.ts"> # </a></h4>
+<pre><code class="lang-diff">import {
+    Provider, Token, InjectionToken,
+    ClassProvider, ValueProvider,FactoryProvider,
+<span class="hljs-addition">+    isClassProvider, isValueProvider,isFactoryProvider} from &quot;./provider&quot;;</span>
+<span class="hljs-addition">+import { getInjectionToken, } from &quot;./inject&quot;;    </span>
+<span class="hljs-addition">+import { Type } from &quot;./type&quot;;    </span>
+<span class="hljs-addition">+type InjectableParam = Type&lt;any&gt;;</span>
+<span class="hljs-addition">+const REFLECT_PARAMS = &quot;design:paramtypes&quot;;    </span>
+export class Container {
+    public providers = new Map&lt;Token&lt;any&gt;, Provider&lt;any&gt;&gt;();
+    addProvider&lt;T&gt;(provider: Provider&lt;T&gt;) {
+        this.providers.set(provider.provide, provider);
+    }
+<span class="hljs-addition">+    inject&lt;T&gt;(type: Token&lt;T&gt;): T {</span>
+<span class="hljs-addition">+        let provider = this.providers.get(type);</span>
+<span class="hljs-addition">+        return this.injectWithProvider(type, provider);</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    private injectWithProvider&lt;T&gt;(type: Token&lt;T&gt;, provider?: Provider&lt;T&gt;): T {</span>
+<span class="hljs-addition">+        if (provider === undefined) {</span>
+<span class="hljs-addition">+            throw new Error(`No provider for type ${this.getTokenName(type)}`);</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+        if (isClassProvider(provider)) {</span>
+<span class="hljs-addition">+            return this.injectClass(provider as ClassProvider&lt;T&gt;);</span>
+<span class="hljs-addition">+        } else if (isValueProvider(provider)) {</span>
+<span class="hljs-addition">+            return this.injectValue(provider as ValueProvider&lt;T&gt;);</span>
+<span class="hljs-addition">+        } else if (isFactoryProvider(provider)){</span>
+<span class="hljs-addition">+            return this.injectFactory(provider as FactoryProvider&lt;T&gt;);</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    private injectValue&lt;T&gt;(valueProvider: ValueProvider&lt;T&gt;): T {</span>
+<span class="hljs-addition">+        return valueProvider.useValue;</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    private injectFactory&lt;T&gt;(valueProvider: FactoryProvider&lt;T&gt;): T {</span>
+<span class="hljs-addition">+        return valueProvider.useFactory();</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    private injectClass&lt;T&gt;(classProvider: ClassProvider&lt;T&gt;): T {</span>
+<span class="hljs-addition">+        const target = classProvider.useClass;</span>
+<span class="hljs-addition">+        const params = this.getInjectedParams(target);</span>
+<span class="hljs-addition">+        return Reflect.construct(target, params);</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    private getInjectedParams&lt;T&gt;(target: Type&lt;T&gt;) {</span>
+<span class="hljs-addition">+        const argTypes = Reflect.getMetadata(REFLECT_PARAMS, target) as (</span>
+<span class="hljs-addition">+            | InjectableParam</span>
+<span class="hljs-addition">+            | undefined)[];</span>
+<span class="hljs-addition">+        if (argTypes === undefined) {</span>
+<span class="hljs-addition">+            return [];</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+        return argTypes.map((argType, index) =&gt; {</span>
+<span class="hljs-addition">+            const overrideToken = getInjectionToken(target, index);</span>
+<span class="hljs-addition">+            const actualToken = overrideToken === undefined ? argType : overrideToken;</span>
+<span class="hljs-addition">+            let provider = this.providers.get(actualToken);</span>
+<span class="hljs-addition">+            return this.injectWithProvider(actualToken, provider);</span>
+<span class="hljs-addition">+        });</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    private getTokenName&lt;T&gt;(token: Token&lt;T&gt;) {</span>
+<span class="hljs-addition">+        return token instanceof InjectionToken</span>
+<span class="hljs-addition">+            ? token.injectionIdentifier</span>
+<span class="hljs-addition">+            : token.name;</span>
+<span class="hljs-addition">+    }</span>
+}
+</code></pre>
+<h4 id="t484.5.2 ioc\provider.ts">4.5.2 ioc\provider.ts <a href="#t484.5.2 ioc\provider.ts"> # </a></h4>
+<pre><code class="lang-diff">import { Type } from &quot;./type&quot;;
+export class InjectionToken {
+    constructor(public injectionIdentifier: string) { }
+}
+//Token &#x7C7B;&#x578B;&#x662F;&#x4E00;&#x4E2A;&#x8054;&#x5408;&#x7C7B;&#x578B;&#xFF0C;&#x65E2;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x7C7B;&#x578B;&#x4E5F;&#x53EF;&#x4EE5;&#x662F; InjectionToken &#x7C7B;&#x578B;
+export type Token&lt;T&gt; = Type&lt;T&gt; | InjectionToken;
+
+export interface BaseProvider&lt;T&gt; {
+    provide: Token&lt;T&gt;;
+}
+
+export interface ClassProvider&lt;T&gt; extends BaseProvider&lt;T&gt; {
+    provide: Token&lt;T&gt;;
+    useClass: Type&lt;T&gt;;
+}
+
+export interface ValueProvider&lt;T&gt; extends BaseProvider&lt;T&gt; {
+    provide: Token&lt;T&gt;;
+    useValue: T;
+}
+
+export interface FactoryProvider&lt;T&gt; extends BaseProvider&lt;T&gt; {
+    provide: Token&lt;T&gt;;
+    useFactory: () =&gt; T;
+}
+
+export type Provider&lt;T&gt; =
+    | ClassProvider&lt;T&gt;
+    | ValueProvider&lt;T&gt;
+    | FactoryProvider&lt;T&gt;;
+
+<span class="hljs-addition">+export function isClassProvider&lt;T&gt;(</span>
+<span class="hljs-addition">+    provider: BaseProvider&lt;T&gt;</span>
+<span class="hljs-addition">+): provider is ClassProvider&lt;T&gt; {</span>
+<span class="hljs-addition">+    return (provider as any).useClass !== undefined;</span>
+<span class="hljs-addition">+}</span>
+
+<span class="hljs-addition">+export function isValueProvider&lt;T&gt;(</span>
+<span class="hljs-addition">+    provider: BaseProvider&lt;T&gt;</span>
+<span class="hljs-addition">+): provider is ValueProvider&lt;T&gt; {</span>
+<span class="hljs-addition">+    return (provider as any).useValue !== undefined;</span>
+<span class="hljs-addition">+}</span>
+
+<span class="hljs-addition">+export function isFactoryProvider&lt;T&gt;(</span>
+<span class="hljs-addition">+    provider: BaseProvider&lt;T&gt;</span>
+<span class="hljs-addition">+): provider is FactoryProvider&lt;T&gt; {</span>
+<span class="hljs-addition">+    return (provider as any).useFactory !== undefined;</span>
+<span class="hljs-addition">+}    </span>
+</code></pre>
+<h4 id="t494.5.3 Inject.ts">4.5.3 Inject.ts <a href="#t494.5.3 Inject.ts"> # </a></h4>
+<p>ioc\Inject.ts</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> <span class="hljs-string">&apos;reflect-metadata&apos;</span>;
+<span class="hljs-keyword">import</span> { Token } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./provider&apos;</span>;
+
+<span class="hljs-keyword">const</span> INJECT_METADATA_KEY = <span class="hljs-built_in">Symbol</span>(<span class="hljs-string">&apos;INJECT_KEY&apos;</span>);
+
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Inject</span>(<span class="hljs-params">token: Token&lt;any&gt;</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">target: any, _: string | symbol, index: number</span>) </span>{
+        <span class="hljs-built_in">Reflect</span>.defineMetadata(INJECT_METADATA_KEY, token, target, <span class="hljs-string">`index-<span class="hljs-subst">${index}</span>`</span>);
+        <span class="hljs-keyword">return</span> target;
+    };
+}
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getInjectionToken</span>(<span class="hljs-params">target: any, index: number</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Reflect</span>.getMetadata(INJECT_METADATA_KEY, target, <span class="hljs-string">`index-<span class="hljs-subst">${index}</span>`</span>) <span class="hljs-keyword">as</span>
+        | Token&lt;any&gt;
+        | <span class="hljs-literal">undefined</span>;
+}
+</code></pre>
+<h4 id="t504.5.4 Injectable.ts">4.5.4 Injectable.ts <a href="#t504.5.4 Injectable.ts"> # </a></h4>
+<p>ioc\Injectable.ts</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> <span class="hljs-string">&quot;reflect-metadata&quot;</span>;
+<span class="hljs-keyword">const</span> INJECTABLE_METADATA_KEY = <span class="hljs-built_in">Symbol</span>(<span class="hljs-string">&quot;INJECTABLE_KEY&quot;</span>);
+
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Injectable</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">target: any</span>) </span>{
+        <span class="hljs-built_in">Reflect</span>.defineMetadata(INJECTABLE_METADATA_KEY, <span class="hljs-literal">true</span>, target);
+        <span class="hljs-keyword">return</span> target;
+    };
+}
+</code></pre>
+<h3 id="t514.6 index.spec.ts">4.6 index.spec.ts <a href="#t514.6 index.spec.ts"> # </a></h3>
+<ul>
+<li>&#x6D4B;&#x8BD5;&#x4E00;&#x4E0B;&#x6CE8;&#x91CA;&#x662F;&#x5426;&#x6B63;&#x786E;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { Container } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;./container&quot;</span>;
+<span class="hljs-keyword">import</span> { Injectable } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;./injectable&quot;</span>;
+<span class="hljs-keyword">import</span> { Inject } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;./inject&quot;</span>;
+<span class="hljs-keyword">import</span> { InjectionToken } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;./provider&quot;</span>;
+
+<span class="hljs-keyword">const</span> HouseStringToken = <span class="hljs-keyword">new</span> InjectionToken(<span class="hljs-string">&quot;House&quot;</span>);
+
+@Injectable()
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Car</span> </span>{ }
+
+@Injectable()
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">House</span> </span>{ }
+
+@Injectable()
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Wife</span> </span>{
+    <span class="hljs-keyword">constructor</span>(
+        private car: Car,
+        @Inject(HouseStringToken) private house: House
+    ) { }
+}
+
+<span class="hljs-keyword">const</span> container = <span class="hljs-keyword">new</span> Container();
+
+container.addProvider({
+    <span class="hljs-attr">provide</span>: HouseStringToken,
+    <span class="hljs-attr">useValue</span>: <span class="hljs-keyword">new</span> House(),
+});
+
+container.addProvider({ <span class="hljs-attr">provide</span>: Car, <span class="hljs-attr">useClass</span>: Car });
+container.addProvider({ <span class="hljs-attr">provide</span>: Wife, <span class="hljs-attr">useClass</span>: Wife });
+<span class="hljs-keyword">const</span> wife = container.inject(Wife);
+<span class="hljs-built_in">console</span>.dir(wife);
+</code></pre>
+<h2 id="t525. debugger">5. debugger <a href="#t525. debugger"> # </a></h2>
+<pre><code class="lang-js">cnpm i ts-node typescript reflect-metadata -D
+</code></pre>
+<p>.vscode\launch.json</p>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">&quot;version&quot;</span>: <span class="hljs-string">&quot;0.2.0&quot;</span>,
+    <span class="hljs-attr">&quot;configurations&quot;</span>: [
+        {
+            <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Debug ts&quot;</span>,
+            <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;node&quot;</span>,
+            <span class="hljs-attr">&quot;request&quot;</span>: <span class="hljs-string">&quot;launch&quot;</span>,
+            <span class="hljs-attr">&quot;runtimeArgs&quot;</span>: [
+                <span class="hljs-string">&quot;-r&quot;</span>,
+                <span class="hljs-string">&quot;ts-node/register&quot;</span>
+            ], <span class="hljs-comment">//&#x6838;&#x5FC3;</span>
+            <span class="hljs-attr">&quot;args&quot;</span>: [
+                <span class="hljs-string">&quot;${relativeFile}&quot;</span>
+            ]
+        }
+    ]
+}
+</code></pre>
+
+        <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
+    </div>
+    
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

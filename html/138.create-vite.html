@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+
+                        
+<div class="warpper">
+    <div class="page-toc">
+        <ul><li><a href="#t01.create-vite">1.create-vite</a><ul><li><a href="#t11.1 create-vite简介">1.1 create-vite简介</a></li><li><a href="#t21.2 使用">1.2 使用</a></li><li><a href="#t31.3 create-vite源码调试">1.3 create-vite源码调试</a></li><li><a href="#t41.4 create-vite功能">1.4 create-vite功能</a></li></ul></li><li><a href="#t52.初始化项目">2.初始化项目</a><ul><li><a href="#t62.1 lerna初始化">2.1 lerna初始化</a></li><li><a href="#t72.2 使用yarn workspace">2.2 使用yarn workspace</a><ul><li><a href="#t82.2.1 lerna.json">2.2.1 lerna.json</a></li><li><a href="#t92.2.2 package.json">2.2.2 package.json</a></li></ul></li><li><a href="#t102.3 创建子包">2.3 创建子包</a></li><li><a href="#t112.4 安装依赖">2.4 安装依赖</a><ul><li><a href="#t122.4.1 config\package.json">2.4.1 config\package.json</a></li><li><a href="#t132.4.2  create\package.json">2.4.2  create\package.json</a></li><li><a href="#t142.4.3 utils\package.json">2.4.3 utils\package.json</a></li><li><a href="#t152.4.4 vite2\package.json">2.4.4 vite2\package.json</a></li><li><a href="#t162.4.5 publishConfig">2.4.5 publishConfig</a></li></ul></li><li><a href="#t172.5 配置命令">2.5 配置命令</a><ul><li><a href="#t182.5.1 package.json">2.5.1 package.json</a></li><li><a href="#t192.5.2  index.js">2.5.2  index.js</a></li><li><a href="#t202.5.3 link">2.5.3 link</a></li></ul></li></ul></li><li><a href="#t213.实现配置命令">3.实现配置命令</a><ul><li><a href="#t223.1 安装依赖">3.1 安装依赖</a></li><li><a href="#t233.2 settings\index.js">3.2 settings\index.js</a></li><li><a href="#t243.3 config.js">3.3 config.js</a></li><li><a href="#t253.4 executeNodeScript.js">3.4 executeNodeScript.js</a></li><li><a href="#t263.5 log.js">3.5 log.js</a></li><li><a href="#t273.6 utils\index.js">3.6 utils\index.js</a></li><li><a href="#t283.7 packages\config\command.js">3.7 packages\config\command.js</a></li><li><a href="#t293.8 config\index.js">3.8 config\index.js</a></li><li><a href="#t303.9 vite2\index.js">3.9 vite2\index.js</a></li></ul></li><li><a href="#t314.实现创建命令">4.实现创建命令</a><ul><li><a href="#t324.1 create\command.js">4.1 create\command.js</a></li><li><a href="#t334.2 create\index.js">4.2 create\index.js</a></li><li><a href="#t344.3 vite2\index.js">4.3 vite2\index.js</a></li></ul></li><li><a href="#t355.创建项目目录">5.创建项目目录</a><ul><li><a href="#t365.1 安装">5.1 安装</a></li><li><a href="#t375.2 create\index.js">5.2 create\index.js</a></li></ul></li><li><a href="#t386.下载模板">6.下载模板</a><ul><li><a href="#t396.1 安装">6.1 安装</a></li><li><a href="#t406.2 settings\index.js">6.2 settings\index.js</a></li><li><a href="#t416.3 utils\request.js">6.3 utils\request.js</a></li><li><a href="#t426.4 withLoading.js">6.4 withLoading.js</a></li><li><a href="#t436.5 packages\utils\index.js">6.5 packages\utils\index.js</a></li><li><a href="#t446.6 create\index.js">6.6 create\index.js</a></li></ul></li><li><a href="#t457.渲染模板">7.渲染模板</a><ul><li><a href="#t467.1 安装">7.1 安装</a></li><li><a href="#t477.2 packages\settings\index.js">7.2 packages\settings\index.js</a></li><li><a href="#t487.3 packages\create\index.js">7.3 packages\create\index.js</a></li></ul></li><li><a href="#t498.发布">8.发布</a><ul><li><a href="#t508.1 创建组织">8.1 创建组织</a></li><li><a href="#t518.2 发布">8.2 发布</a></li></ul></li><li><a href="#t529.参考">9.参考</a><ul><li><a href="#t539.1 lerna">9.1 lerna</a></li><li><a href="#t549.2 yarn">9.2 yarn</a></li><li><a href="#t559.2  yarn workspace">9.2  yarn workspace</a></li><li><a href="#t569.3 yargs">9.3 yargs</a></li><li><a href="#t579.4 node -e">9.4 node -e</a></li><li><a href="#t589.5 clone">9.5 clone</a></li></ul></li></ul>
+    </div>
+    <div class="content markdown-body">
+        <h2 id="t01.create-vite">1.create-vite <a href="#t01.create-vite"> # </a></h2>
+<h3 id="t11.1 create-vite&#x7B80;&#x4ECB;">1.1 create-vite&#x7B80;&#x4ECB; <a href="#t11.1 create-vite&#x7B80;&#x4ECB;"> # </a></h3>
+<ul>
+<li><a href="https://cn.vitejs.dev/guide/#scaffolding-your-first-vite-project">vite&#x5B98;&#x7F51;</a></li>
+<li><a href="https://www.npmjs.com/package/create-vite">create-vite&#x5305;</a></li>
+<li><a href="https://github.com/vitejs/vite/tree/main/packages/create-vite">create-vite&#x6E90;&#x7801;</a></li>
+</ul>
+<h3 id="t21.2 &#x4F7F;&#x7528;">1.2 &#x4F7F;&#x7528; <a href="#t21.2 &#x4F7F;&#x7528;"> # </a></h3>
+<pre><code class="lang-js">npm init vite
+Need to install the following packages:
+  create-vite
+Ok to proceed? (y) y
+&#x221A; Project name: ... vite-project
+&#x221A; Select a framework: &#xBB; react
+&#x221A; Select a variant: &#xBB; react
+
+Scaffolding project <span class="hljs-keyword">in</span> C:\aprepare\t1\vite-project...
+
+Done. Now run:
+
+  cd vite-project
+  npm install
+  npm run dev
+</code></pre>
+<h3 id="t31.3 create-vite&#x6E90;&#x7801;&#x8C03;&#x8BD5;">1.3 create-vite&#x6E90;&#x7801;&#x8C03;&#x8BD5; <a href="#t31.3 create-vite&#x6E90;&#x7801;&#x8C03;&#x8BD5;"> # </a></h3>
+<ul>
+<li><a href="https://www.npmjs.com/package/minimist">minimist</a>&#x89E3;&#x6790;&#x53C2;&#x6570;&#x9009;&#x9879;,&#x7C7B;&#x4F3C;&#x7684;&#x8FD8;&#x6709;<a href="https://www.npmjs.com/package/yargs">yargs</a>&#x548C;<a href="https://www.npmjs.com/package/commander">commander</a></li>
+<li><a href="https://www.npmjs.com/package/kolorist">kolorist</a>&#x5728;&#x63A7;&#x5236;&#x53F0;&#x6253;&#x5370;&#x989C;&#x8272;,&#x7C7B;&#x4F3C;&#x7684;&#x8FD8;&#x6709;<a href="https://www.npmjs.com/package/chalk">chalk</a></li>
+<li><a href="https://www.npmjs.com/package/prompts">prompts</a>&#x4EA4;&#x4E92;&#x5F0F;&#x547D;&#x4EE4;&#x884C;&#xFF0C;&#x7C7B;&#x4F3C;&#x8FD8;&#x6709;<a href="https://www.npmjs.com/package/inquirer">inquirer</a></li>
+</ul>
+<pre><code class="lang-js">git clone https:<span class="hljs-comment">//github.com/vitejs/vite.git</span>
+cd vite
+yarn install
+packages\create-vite\index.js
+</code></pre>
+<p>.vscode\launch.json</p>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">&quot;version&quot;</span>: <span class="hljs-string">&quot;0.2.0&quot;</span>,
+    <span class="hljs-attr">&quot;configurations&quot;</span>: [
+        {
+            <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;pwa-node&quot;</span>,
+            <span class="hljs-attr">&quot;request&quot;</span>: <span class="hljs-string">&quot;launch&quot;</span>,
+            <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Launch Program&quot;</span>,
+            <span class="hljs-attr">&quot;skipFiles&quot;</span>: [
+                <span class="hljs-string">&quot;&lt;node_internals&gt;/**&quot;</span>
+            ],
+            <span class="hljs-attr">&quot;program&quot;</span>: <span class="hljs-string">&quot;${workspaceFolder}\\packages\\create-vite\\index.js&quot;</span>,
+            <span class="hljs-attr">&quot;args&quot;</span>: [<span class="hljs-string">&quot;create&quot;</span>,<span class="hljs-string">&quot;vite-project&quot;</span>]
+        }
+    ]
+}
+</code></pre>
+<h3 id="t41.4 create-vite&#x529F;&#x80FD;">1.4 create-vite&#x529F;&#x80FD; <a href="#t41.4 create-vite&#x529F;&#x80FD;"> # </a></h3>
+<ul>
+<li>[&#x221A;] &#x652F;&#x6301;&#x53C2;&#x6570;&#x89E3;&#x6790;</li>
+<li>[&#x221A;] &#x652F;&#x6301;&#x81EA;&#x5B9A;&#x4E49;&#x9879;&#x76EE;&#x540D;</li>
+<li>[&#x221A;] &#x652F;&#x6301;&#x7A7A;&#x76EE;&#x5F55;&#x68C0;&#x67E5; </li>
+<li>[&#x221A;] &#x652F;&#x6301;&#x9759;&#x6001;&#x9879;&#x76EE;&#x6A21;&#x677F;</li>
+<li>[&#xD7;] &#x4E0D;&#x652F;&#x6301;lerna <a href="https://github.com/lerna/lerna">lerna</a></li>
+<li>[&#xD7;] &#x4E0D;&#x652F;&#x6301;&#x6587;&#x4EF6;&#x5F02;&#x6B65;&#x5199;&#x5165; <a href="https://github.com/facebook/create-react-app">create-react-app</a></li>
+<li>[&#xD7;] &#x4E0D;&#x652F;&#x6301;&#x591A;&#x8FDB;&#x7A0B;&#x6267;&#x884C;&#x547D;&#x4EE4; <a href="https://github.com/facebook/create-react-app">create-react-app</a></li>
+<li>[&#xD7;] &#x4E0D;&#x652F;&#x6301;&#x6267;&#x884C;&#x52A8;&#x6001;<code>node</code>&#x547D;&#x4EE4; <a href="https://github.com/facebook/create-react-app">create-react-app</a></li>
+<li>[&#xD7;] &#x4E0D;&#x652F;&#x6301;&#x81EA;&#x52A8;&#x5B89;&#x88C5;&#x4F9D;&#x8D56; <a href="https://github.com/facebook/create-react-app">create-react-app</a></li>
+<li>[&#xD7;] &#x4E0D;&#x652F;&#x6301;&#x81EA;&#x52A8;&#x542F;&#x52A8;&#x670D;&#x52A1; <a href="https://github.com/facebook/create-react-app">create-react-app</a></li>
+<li>[&#xD7;] &#x4E0D;&#x652F;&#x6301;&#x53C2;&#x6570;&#x914D;&#x7F6E; <a href="https://github.com/yarnpkg/yarn">yarn</a></li>
+<li>[&#xD7;] &#x4E0D;&#x652F;&#x6301;<code>gitub</code>&#x548C;<code>gitee</code>&#x4ED3;&#x5E93;&#x52A8;&#x6001;&#x8BFB;&#x53D6;</li>
+<li>[&#xD7;] &#x4E0D;&#x652F;&#x6301;&#x6A21;&#x677F;&#x6807;&#x7B7E;&#x9009;&#x62E9;</li>
+<li>[&#xD7;] &#x4E0D;&#x652F;&#x6301;&#x52A8;&#x6001;&#x6A21;&#x677F;&#x6E32;&#x67D3; </li>
+<li>[&#xD7;] &#x4E0D;&#x652F;&#x6301;&#x63D2;&#x4EF6;&#x5316;&#x914D;&#x7F6E;&#x6280;&#x672F;&#x6808; <a href="https://github.com/vuejs/vue-cli">vue-cli</a></li>
+</ul>
+<h2 id="t52.&#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;">2.&#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE; <a href="#t52.&#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;"> # </a></h2>
+<h3 id="t62.1 lerna&#x521D;&#x59CB;&#x5316;">2.1 lerna&#x521D;&#x59CB;&#x5316; <a href="#t62.1 lerna&#x521D;&#x59CB;&#x5316;"> # </a></h3>
+<pre><code class="lang-js">mkdir vite2
+cd vite2
+lerna init
+</code></pre>
+<h3 id="t72.2 &#x4F7F;&#x7528;yarn workspace">2.2 &#x4F7F;&#x7528;yarn workspace <a href="#t72.2 &#x4F7F;&#x7528;yarn workspace"> # </a></h3>
+<ul>
+<li>&#x5F00;&#x53D1;&#x591A;&#x4E2A;&#x4E92;&#x76F8;&#x4F9D;&#x8D56;&#x7684;package&#x65F6;&#xFF0C;workspace&#x4F1A;&#x81EA;&#x52A8;&#x5BF9;package&#x7684;&#x5F15;&#x7528;&#x8BBE;&#x7F6E;&#x8F6F;&#x94FE;&#x63A5;(symlink),&#x6BD4;yarn link&#x66F4;&#x52A0;&#x65B9;&#x4FBF;&#xFF0C;&#x4E14;&#x94FE;&#x63A5;&#x4EC5;&#x5C40;&#x9650;&#x5728;&#x5F53;&#x524D;workspace&#x4E2D;&#xFF0C;&#x4E0D;&#x4F1A;&#x5BF9;&#x6574;&#x4E2A;&#x7CFB;&#x7EDF;&#x9020;&#x6210;&#x5F71;&#x54CD;</li>
+<li>&#x6240;&#x6709;package&#x7684;&#x4F9D;&#x8D56;&#x4F1A;&#x5B89;&#x88C5;&#x5728;&#x6839;&#x76EE;&#x5F55;&#x7684;<code>node_modules</code>&#x4E0B;&#xFF0C;&#x8282;&#x7701;&#x78C1;&#x76D8;&#x7A7A;&#x95F4;&#xFF0C;&#x4E14;&#x7ED9;&#x4E86;yarn&#x66F4;&#x5927;&#x7684;&#x4F9D;&#x8D56;&#x4F18;&#x5316;&#x7A7A;&#x95F4;</li>
+<li>Yarn workspace&#x53EA;&#x4F1A;&#x5728;&#x6839;&#x76EE;&#x5F55;&#x5B89;&#x88C5;&#x4E00;&#x4E2A;node_modules&#xFF0C;&#x8FD9;&#x6709;&#x5229;&#x4E8E;&#x63D0;&#x5347;&#x4F9D;&#x8D56;&#x7684;&#x5B89;&#x88C5;&#x6548;&#x7387;&#x548C;&#x4E0D;&#x540C;package&#x95F4;&#x7684;&#x7248;&#x672C;&#x590D;&#x7528;&#x3002;&#x800C;Lerna&#x9ED8;&#x8BA4;&#x4F1A;&#x8FDB;&#x5230;&#x6BCF;&#x4E00;&#x4E2A;package&#x4E2D;&#x8FD0;&#x884C;yarn/npm install&#xFF0C;&#x5E76;&#x5728;&#x6BCF;&#x4E2A;package&#x4E2D;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;node_modules</li>
+<li>yarn&#x5B98;&#x65B9;&#x63A8;&#x8350;&#x7684;&#x65B9;&#x6848;&#xFF0C;&#x662F;&#x96C6;&#x6210;yarn workspace&#x548C;lerna,&#x4F7F;&#x7528;yarn workspace&#x6765;&#x7BA1;&#x7406;&#x4F9D;&#x8D56;&#xFF0C;&#x4F7F;&#x7528;lerna&#x6765;&#x7BA1;&#x7406;npm&#x5305;&#x7684;&#x7248;&#x672C;&#x53D1;&#x5E03;</li>
+</ul>
+<h4 id="t82.2.1 lerna.json">2.2.1 lerna.json <a href="#t82.2.1 lerna.json"> # </a></h4>
+<pre><code class="lang-diff">{
+  &quot;packages&quot;: [
+    &quot;packages/*&quot;
+  ],
+  &quot;version&quot;: &quot;0.0.0&quot;,
+<span class="hljs-addition">+ &quot;npmClient&quot;: &quot;yarn&quot;,</span>
+<span class="hljs-addition">+ &quot;useWorkspaces&quot;: true</span>
+}
+</code></pre>
+<h4 id="t92.2.2 package.json">2.2.2 package.json <a href="#t92.2.2 package.json"> # </a></h4>
+<pre><code class="lang-diff">{
+  &quot;name&quot;: &quot;root&quot;,
+  &quot;private&quot;: true,
+  &quot;devDependencies&quot;: {
+    &quot;lerna&quot;: &quot;^4.0.0&quot;
+  },
+<span class="hljs-addition">+  &quot;workspaces&quot;: [</span>
+<span class="hljs-addition">+    &quot;packages/*&quot;</span>
+<span class="hljs-addition">+ ]  </span>
+}
+
+</code></pre>
+<h3 id="t102.3 &#x521B;&#x5EFA;&#x5B50;&#x5305;">2.3 &#x521B;&#x5EFA;&#x5B50;&#x5305; <a href="#t102.3 &#x521B;&#x5EFA;&#x5B50;&#x5305;"> # </a></h3>
+<pre><code class="lang-js">lerna create @vite2/config -y <span class="hljs-comment">//&#x914D;&#x7F6E;&#x9879;</span>
+lerna create @vite2/create -y <span class="hljs-comment">//&#x521B;&#x5EFA;&#x9879;&#x76EE;</span>
+lerna create vite2 -y  <span class="hljs-comment">//&#x6838;&#x5FC3;&#x547D;&#x4EE4;</span>
+lerna create @vite2/settings -y  <span class="hljs-comment">//&#x5E38;&#x91CF;&#x5B9A;&#x4E49;</span>
+lerna create @vite2/utils -y <span class="hljs-comment">//&#x5DE5;&#x5177;&#x65B9;&#x6CD5;</span>
+</code></pre>
+<h3 id="t112.4 &#x5B89;&#x88C5;&#x4F9D;&#x8D56;">2.4 &#x5B89;&#x88C5;&#x4F9D;&#x8D56; <a href="#t112.4 &#x5B89;&#x88C5;&#x4F9D;&#x8D56;"> # </a></h3>
+<ul>
+<li><a href="https://www.npmjs.com/package/axios">axios</a> &#x8BF7;&#x6C42;&#x63A5;&#x53E3;</li>
+<li><a href="https://www.npmjs.com/package/cross-spawn">cross-spawn</a> &#x5F00;&#x542F;&#x5B50;&#x8FDB;&#x7A0B;</li>
+<li><a href="https://www.npmjs.com/package/userhome">userhome</a> &#x83B7;&#x53D6;&#x7528;&#x6237;&#x4E3B;&#x76EE;&#x5F55;</li>
+<li><a href="https://www.npmjs.com/package/chalk">chalk</a> &#x63A7;&#x5236;&#x53F0;&#x6253;&#x5370;&#x5F69;&#x8272;&#x6587;&#x5B57;</li>
+<li><a href="https://www.npmjs.com/package/ejs">ejs</a> &#x6A21;&#x677F;&#x6E32;&#x67D3;</li>
+<li><a href="https://www.npmjs.com/package/execa">execa</a> &#x901A;&#x8FC7;&#x5B50;&#x8FDB;&#x7A0B;&#x6267;&#x884C;&#x547D;&#x4EE4;</li>
+<li><a href="https://www.npmjs.com/package/glob">glob</a> &#x6309;&#x6A21;&#x5F0F;&#x5339;&#x914D;&#x6587;&#x4EF6;</li>
+<li><a href="https://www.npmjs.com/package/inquirer">inquirer</a> &#x4EA4;&#x4E92;&#x5F0F;&#x547D;&#x4EE4;&#x884C;&#x9009;&#x62E9;</li>
+<li><a href="vite2">vite2</a> &#x6838;&#x5FC3;&#x547D;&#x4EE4;</li>
+<li><a href="@vite2/settings">@vite2/settings</a> &#x5E38;&#x91CF;&#x914D;&#x7F6E;</li>
+<li><a href="@vite2/utils">@vite2/utils</a> &#x5E2E;&#x52A9;&#x65B9;&#x6CD5;</li>
+<li><a href="@vite2/config">@vite2/config</a> &#x914D;&#x7F6E;&#x53C2;&#x6570;</li>
+<li><a href="@vite2/create">@vite2/create</a> &#x521B;&#x5EFA;&#x9879;&#x76EE;</li>
+</ul>
+<h4 id="t122.4.1 config\package.json">2.4.1 config\package.json <a href="#t122.4.1 config\package.json"> # </a></h4>
+<p>packages\config\package.json</p>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">&quot;dependencies&quot;</span>: {
+    <span class="hljs-attr">&quot;@vite2/settings&quot;</span>: <span class="hljs-string">&quot;^0.0.0&quot;</span>,
+    <span class="hljs-attr">&quot;@vite2/utils&quot;</span>: <span class="hljs-string">&quot;^0.0.0&quot;</span>,
+    <span class="hljs-attr">&quot;fs-extra&quot;</span>: <span class="hljs-string">&quot;^10.0.0&quot;</span>,
+    <span class="hljs-attr">&quot;userhome&quot;</span>: <span class="hljs-string">&quot;^1.0.0&quot;</span>
+   }
+}
+</code></pre>
+<h4 id="t132.4.2  create\package.json">2.4.2  create\package.json <a href="#t132.4.2  create\package.json"> # </a></h4>
+<p>packages\create\package.json</p>
+<pre><code class="lang-json">{
+  <span class="hljs-attr">&quot;dependencies&quot;</span>: {
+    <span class="hljs-attr">&quot;@vite2/settings&quot;</span>: <span class="hljs-string">&quot;^0.0.0&quot;</span>,
+    <span class="hljs-attr">&quot;@vite2/utils&quot;</span>: <span class="hljs-string">&quot;^0.0.0&quot;</span>,
+    <span class="hljs-attr">&quot;chalk&quot;</span>: <span class="hljs-string">&quot;^4.1.2&quot;</span>,
+    <span class="hljs-attr">&quot;clone-git-repo&quot;</span>: <span class="hljs-string">&quot;^0.0.2&quot;</span>,
+    <span class="hljs-attr">&quot;ejs&quot;</span>: <span class="hljs-string">&quot;^3.1.6&quot;</span>,
+    <span class="hljs-attr">&quot;execa&quot;</span>: <span class="hljs-string">&quot;^5.1.1&quot;</span>,
+    <span class="hljs-attr">&quot;fs-extra&quot;</span>: <span class="hljs-string">&quot;^10.0.0&quot;</span>,
+    <span class="hljs-attr">&quot;glob&quot;</span>: <span class="hljs-string">&quot;^7.1.7&quot;</span>,
+    <span class="hljs-attr">&quot;inquirer&quot;</span>: <span class="hljs-string">&quot;^8.1.2&quot;</span>
+  },
+}
+</code></pre>
+<h4 id="t142.4.3 utils\package.json">2.4.3 utils\package.json <a href="#t142.4.3 utils\package.json"> # </a></h4>
+<p>packages\utils\package.json</p>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">&quot;dependencies&quot;</span>: {
+    <span class="hljs-attr">&quot;@vite2/settings&quot;</span>: <span class="hljs-string">&quot;^0.0.0&quot;</span>,
+    <span class="hljs-attr">&quot;axios&quot;</span>: <span class="hljs-string">&quot;^0.21.2&quot;</span>,
+    <span class="hljs-attr">&quot;cross-spawn&quot;</span>: <span class="hljs-string">&quot;^7.0.3&quot;</span>,
+    <span class="hljs-attr">&quot;userhome&quot;</span>: <span class="hljs-string">&quot;^1.0.0&quot;</span>
+  },
+}
+</code></pre>
+<h4 id="t152.4.4 vite2\package.json">2.4.4 vite2\package.json <a href="#t152.4.4 vite2\package.json"> # </a></h4>
+<p>packages\vite2\package.json</p>
+<pre><code class="lang-json">{
+  <span class="hljs-attr">&quot;dependencies&quot;</span>: {
+    <span class="hljs-attr">&quot;@vite2/config&quot;</span>: <span class="hljs-string">&quot;^0.0.0&quot;</span>,
+    <span class="hljs-attr">&quot;@vite2/create&quot;</span>: <span class="hljs-string">&quot;^0.0.0&quot;</span>
+  }
+}
+</code></pre>
+<h4 id="t162.4.5 publishConfig">2.4.5 publishConfig <a href="#t162.4.5 publishConfig"> # </a></h4>
+<pre><code class="lang-json">{
+  <span class="hljs-attr">&quot;publishConfig&quot;</span>: {
+    <span class="hljs-attr">&quot;access&quot;</span>: <span class="hljs-string">&quot;public&quot;</span>,
+    <span class="hljs-attr">&quot;registry&quot;</span>: <span class="hljs-string">&quot;http://registry.npmjs.org&quot;</span>
+  }
+}
+</code></pre>
+<p><img src="https://upload-markdown-images.oss-cn-beijing.aliyuncs.com/vite41_1630771189288.jpg" alt="vite2"></p>
+<h3 id="t172.5 &#x914D;&#x7F6E;&#x547D;&#x4EE4;">2.5 &#x914D;&#x7F6E;&#x547D;&#x4EE4; <a href="#t172.5 &#x914D;&#x7F6E;&#x547D;&#x4EE4;"> # </a></h3>
+<h4 id="t182.5.1 package.json">2.5.1 package.json <a href="#t182.5.1 package.json"> # </a></h4>
+<p>packages\vite2\package.json</p>
+<pre><code class="lang-diff">{
+  &quot;name&quot;: &quot;vite2&quot;,
+  &quot;version&quot;: &quot;0.0.0&quot;,
+  &quot;dependencies&quot;: {
+    &quot;@vite2/config&quot;:&quot;^0.0.0&quot;,
+    &quot;@vite2/create&quot;:&quot;^0.0.0&quot;
+  },
+<span class="hljs-addition">+ &quot;bin&quot;:{</span>
+<span class="hljs-addition">+   &quot;vite2&quot;: &quot;index.js&quot;</span>
+<span class="hljs-addition">+ }</span>
+}
+</code></pre>
+<h4 id="t192.5.2  index.js">2.5.2  index.js <a href="#t192.5.2  index.js"> # </a></h4>
+<p>packages\vite2\index.js</p>
+<pre><code class="lang-js"><span class="hljs-meta">#!/usr/bin/env node</span>
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params"></span>) </span>{
+   <span class="hljs-keyword">let</span> argv = process.argv.slice(<span class="hljs-number">2</span>);
+   <span class="hljs-built_in">console</span>.log(argv);
+}
+
+main().catch(<span class="hljs-function">(<span class="hljs-params">err</span>) =&gt;</span> {
+    <span class="hljs-built_in">console</span>.error(err);
+});
+
+</code></pre>
+<h4 id="t202.5.3 link">2.5.3 link <a href="#t202.5.3 link"> # </a></h4>
+<ul>
+<li>&#x4E00;&#x5B9A;&#x8981;&#x5148;&#x6DFB;&#x52A0;<code>#!/usr/bin/env node</code>&#x518D;link,&#x5426;&#x5219;&#x4F1A;&#x7528;&#x6587;&#x672C;&#x7F16;&#x8F91;&#x5668;&#x6253;&#x5F00;</li>
+<li>&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x53EF;&#x4EE5;<code>vite2\packages\vite2</code>&#x76EE;&#x5F55;&#x4E2D;&#x6267;&#x884C;<code>yarn unlink</code>&#xFF0C;&#x518D;&#x91CD;&#x65B0;link</li>
+</ul>
+<pre><code class="lang-js">yarn link
+yarn global bin 
+<span class="hljs-attr">C</span>:\Users\zhangrenyang\AppData\Local\Yarn\bin
+<span class="hljs-attr">C</span>:\Users\zhangrenyang\AppData\Local\Yarn\Data\link\vite2
+npm bin -g
+<span class="hljs-attr">C</span>:\Users\zhangrenyang\AppData\Roaming\npm
+vite2 create vite-project
+</code></pre>
+<h2 id="t213.&#x5B9E;&#x73B0;&#x914D;&#x7F6E;&#x547D;&#x4EE4;">3.&#x5B9E;&#x73B0;&#x914D;&#x7F6E;&#x547D;&#x4EE4; <a href="#t213.&#x5B9E;&#x73B0;&#x914D;&#x7F6E;&#x547D;&#x4EE4;"> # </a></h2>
+<h3 id="t223.1 &#x5B89;&#x88C5;&#x4F9D;&#x8D56;">3.1 &#x5B89;&#x88C5;&#x4F9D;&#x8D56; <a href="#t223.1 &#x5B89;&#x88C5;&#x4F9D;&#x8D56;"> # </a></h3>
+<pre><code class="lang-js">yarn workspace @vite2/config  add userhome fs-extra
+yarn workspace @vite2/utils  add cross-spawn userhome fs-extra
+</code></pre>
+<h3 id="t233.2 settings\index.js">3.2 settings\index.js <a href="#t233.2 settings\index.js"> # </a></h3>
+<p>packages\settings\index.js</p>
+<pre><code class="lang-js"><span class="hljs-comment">//&#x6267;&#x884C;&#x547D;&#x4EE4;&#x811A;&#x672C;</span>
+exports.COMMAND_SOURCE = <span class="hljs-string">`
+const args = JSON.parse(process.argv[1]);
+const factory = require(&apos;.&apos;);
+factory(args);
+`</span>
+<span class="hljs-comment">//&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x540D;&#x79F0;</span>
+exports.RC_NAME = <span class="hljs-string">&quot;.vite3rc&quot;</span>;
+</code></pre>
+<h3 id="t243.3 config.js">3.3 config.js <a href="#t243.3 config.js"> # </a></h3>
+<p>packages\utils\config.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> userhome = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;userhome&quot;</span>);
+<span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;fs-extra&quot;</span>);
+<span class="hljs-keyword">const</span> { RC_NAME } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;@vite5/settings&quot;</span>);
+<span class="hljs-keyword">const</span> configPath = userhome(RC_NAME);
+<span class="hljs-keyword">let</span> config = {};
+<span class="hljs-keyword">if</span> (fs.existsSync(configPath)) {
+  config = fs.readJSONSync(configPath);
+}
+config.configPath=configPath;
+<span class="hljs-built_in">module</span>.exports = config;
+</code></pre>
+<h3 id="t253.4 executeNodeScript.js">3.4 executeNodeScript.js <a href="#t253.4 executeNodeScript.js"> # </a></h3>
+<p>packages\utils\executeNodeScript.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> spawn = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;cross-spawn&quot;</span>);
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">executeNodeScript</span>(<span class="hljs-params">{ cwd }, source, args</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve</span>) =&gt;</span> {
+      <span class="hljs-keyword">const</span> childProcess = spawn(
+        process.execPath,
+        [<span class="hljs-string">&quot;-e&quot;</span>, source, <span class="hljs-string">&quot;--&quot;</span>, <span class="hljs-built_in">JSON</span>.stringify(args)],
+        { cwd, <span class="hljs-attr">stdio</span>: <span class="hljs-string">&quot;inherit&quot;</span> }
+      );
+      childProcess.on(<span class="hljs-string">&quot;close&quot;</span>, resolve);
+    });
+}
+<span class="hljs-built_in">module</span>.exports = executeNodeScript;
+</code></pre>
+<h3 id="t263.5 log.js">3.5 log.js <a href="#t263.5 log.js"> # </a></h3>
+<p>packages\utils\log.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> log = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;npmlog&apos;</span>);
+log.heading = <span class="hljs-string">&apos;vite2&apos;</span>;
+<span class="hljs-built_in">module</span>.exports = log;
+</code></pre>
+<h3 id="t273.6 utils\index.js">3.6 utils\index.js <a href="#t273.6 utils\index.js"> # </a></h3>
+<p>packages\utils\index.js</p>
+<pre><code class="lang-js">exports.log = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./log&apos;</span>);
+exports.executeNodeScript = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./executeNodeScript&apos;</span>);
+exports.config = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./config&apos;</span>);
+</code></pre>
+<h3 id="t283.7 packages\config\command.js">3.7 packages\config\command.js <a href="#t283.7 packages\config\command.js"> # </a></h3>
+<p>packages\config\command.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> {executeNodeScript} = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@vite2/utils&apos;</span>);
+<span class="hljs-keyword">const</span> {COMMAND_SOURCE} = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@vite2/settings&apos;</span>);
+<span class="hljs-keyword">const</span> command = {
+  <span class="hljs-attr">command</span>: <span class="hljs-string">&quot;config [key] [value]&quot;</span>,
+  <span class="hljs-attr">describe</span>: <span class="hljs-string">&quot;&#x8BBE;&#x7F6E;&#x6216;&#x67E5;&#x770B;&#x914D;&#x7F6E;&#x9879;,&#x6BD4;&#x5982;GIT_TYPE&#x8BBE;&#x7F6E;&#x4ED3;&#x5E93;&#x7C7B;&#x578B;&#xFF0C;ORG_NAME&#x8BBE;&#x7F6E;&#x7EC4;&#x7EC7;&#x540D;&quot;</span>,
+  <span class="hljs-attr">builder</span>: <span class="hljs-function">(<span class="hljs-params">yargs</span>) =&gt;</span> {},
+  <span class="hljs-attr">handler</span>:<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">argv</span>)</span>{
+    <span class="hljs-keyword">await</span> executeNodeScript({ <span class="hljs-attr">cwd</span>: __dirname }, COMMAND_SOURCE,argv);
+  },
+};
+<span class="hljs-built_in">module</span>.exports = command;
+</code></pre>
+<h3 id="t293.8 config\index.js">3.8 config\index.js <a href="#t293.8 config\index.js"> # </a></h3>
+<p>packages\config\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;fs-extra&quot;</span>);
+<span class="hljs-keyword">const</span> { log ,config} = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;@vite2/utils&quot;</span>);
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">factory</span>(<span class="hljs-params">argv</span>) </span>{
+  <span class="hljs-keyword">const</span> { key, value } = argv;
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;config&apos;</span>,config);
+  <span class="hljs-keyword">if</span> (key &amp;&amp; value) {
+    config[key] = value;
+    <span class="hljs-keyword">await</span> fs.writeJSON(config.configPath, config, { <span class="hljs-attr">spaces</span>: <span class="hljs-number">2</span> });
+    log.info(<span class="hljs-string">&quot;vite3&quot;</span>,<span class="hljs-string">&quot;(%s=%s)&#x914D;&#x7F6E;&#x6210;&#x529F;&#x4FDD;&#x5B58;&#x81F3;%s&quot;</span>, key, value, config.configPath);
+  }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(key){
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;%s=%s&apos;</span>,key, config[key]);
+  }<span class="hljs-keyword">else</span>{
+    <span class="hljs-built_in">console</span>.log(config);
+  }
+}
+<span class="hljs-built_in">module</span>.exports = factory;
+</code></pre>
+<h3 id="t303.9 vite2\index.js">3.9 vite2\index.js <a href="#t303.9 vite2\index.js"> # </a></h3>
+<p>packages\vite2\index.js</p>
+<pre><code class="lang-diff">#!/usr/bin/env node
+const yargs = require(&quot;yargs/yargs&quot;);
+const configCmd = require(&quot;@vite2/config/command&quot;);
+async function main() {
+    const cli = yargs();
+    cli
+    .usage(`Usage: vite2 &lt;command&gt; [options]`)
+    .demandCommand(1, &quot;&#x81F3;&#x5C11;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&quot;)
+    .strict() 
+    .recommendCommands()
+<span class="hljs-addition">+   .command(configCmd)</span>
+    .parse(process.argv.slice(2));
+}
+
+main().catch((err) =&gt; {
+    console.error(err);
+});
+</code></pre>
+<h2 id="t314.&#x5B9E;&#x73B0;&#x521B;&#x5EFA;&#x547D;&#x4EE4;">4.&#x5B9E;&#x73B0;&#x521B;&#x5EFA;&#x547D;&#x4EE4; <a href="#t314.&#x5B9E;&#x73B0;&#x521B;&#x5EFA;&#x547D;&#x4EE4;"> # </a></h2>
+<h3 id="t324.1 create\command.js">4.1 create\command.js <a href="#t324.1 create\command.js"> # </a></h3>
+<p>packages\create\command.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> {COMMAND_SOURCE} = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@vite2/settings&apos;</span>);
+<span class="hljs-keyword">const</span> {executeNodeScript} = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@vite2/utils&apos;</span>);
+<span class="hljs-keyword">const</span> command = {
+  <span class="hljs-attr">command</span>: <span class="hljs-string">&quot;create &lt;name&gt;&quot;</span>,
+  <span class="hljs-attr">describe</span>: <span class="hljs-string">&quot;&#x521B;&#x5EFA;&#x9879;&#x76EE;&quot;</span>,
+  <span class="hljs-attr">builder</span>: <span class="hljs-function">(<span class="hljs-params">yargs</span>) =&gt;</span> {
+    yargs.positional(<span class="hljs-string">&quot;name&quot;</span>, {
+      <span class="hljs-attr">type</span>: <span class="hljs-string">&quot;string&quot;</span>,
+      <span class="hljs-attr">describe</span>: <span class="hljs-string">&quot;&#x9879;&#x76EE;&#x540D;&#x79F0;&quot;</span>,
+    });
+  },
+  <span class="hljs-attr">handler</span>:<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">argv</span>)</span>{
+    <span class="hljs-keyword">let</span> args = {<span class="hljs-attr">name</span>:argv.name,<span class="hljs-attr">cwd</span>:process.cwd()};
+    <span class="hljs-keyword">await</span> executeNodeScript({ <span class="hljs-attr">cwd</span>: __dirname }, COMMAND_SOURCE,args);
+  }
+};
+<span class="hljs-built_in">module</span>.exports = command;
+</code></pre>
+<h3 id="t334.2 create\index.js">4.2 create\index.js <a href="#t334.2 create\index.js"> # </a></h3>
+<p>packages\create\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">factory</span>(<span class="hljs-params">argv</span>) </span>{
+ <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;create&apos;</span>,argv);
+}
+<span class="hljs-built_in">module</span>.exports = factory;
+</code></pre>
+<h3 id="t344.3 vite2\index.js">4.3 vite2\index.js <a href="#t344.3 vite2\index.js"> # </a></h3>
+<p>packages\vite2\index.js</p>
+<pre><code class="lang-diff">#!/usr/bin/env node
+const yargs = require(&quot;yargs/yargs&quot;);
+const configCmd = require(&quot;@vite2/config/command&quot;);
+<span class="hljs-addition">+const createCmd = require(&quot;@vite2/create/command&quot;);</span>
+async function main() {
+    const cli = yargs();
+    cli
+    .usage(`Usage: vite2 &lt;command&gt; [options]`)
+    .demandCommand(1, &quot;&#x81F3;&#x5C11;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&quot;)
+    .strict() 
+    .recommendCommands()
+    .command(configCmd)
+<span class="hljs-addition">+   .command(createCmd)</span>
+    .parse(process.argv.slice(2));
+}
+main().catch((err) =&gt; {
+    console.error(err);
+});
+</code></pre>
+<h2 id="t355.&#x521B;&#x5EFA;&#x9879;&#x76EE;&#x76EE;&#x5F55;">5.&#x521B;&#x5EFA;&#x9879;&#x76EE;&#x76EE;&#x5F55; <a href="#t355.&#x521B;&#x5EFA;&#x9879;&#x76EE;&#x76EE;&#x5F55;"> # </a></h2>
+<h3 id="t365.1 &#x5B89;&#x88C5;">5.1 &#x5B89;&#x88C5; <a href="#t365.1 &#x5B89;&#x88C5;"> # </a></h3>
+<pre><code class="lang-js">yarn workspace @vite2/create  add chalk fs-extra inquirer
+</code></pre>
+<h3 id="t375.2 create\index.js">5.2 create\index.js <a href="#t375.2 create\index.js"> # </a></h3>
+<p>packages\create\index.js</p>
+<pre><code class="lang-diff"><span class="hljs-addition">+const path = require(&quot;path&quot;);</span>
+<span class="hljs-addition">+const { red } = require(&quot;chalk&quot;);</span>
+<span class="hljs-addition">+const { prompt } = require(&quot;inquirer&quot;);</span>
+<span class="hljs-addition">+const fs = require(&quot;fs-extra&quot;);</span>
+<span class="hljs-addition">+const {config, log } = require(&quot;@vite2/utils&quot;);</span>
+async function factory(argv) {
+<span class="hljs-addition">+    const { cwd, name } = argv;</span>
+<span class="hljs-addition">+    process.chdir(cwd);//&#x5207;&#x6362;&#x4E3A;&#x5F53;&#x524D;&#x547D;&#x4EE4;&#x6267;&#x884C;&#x7684;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;</span>
+<span class="hljs-addition">+    const { ORG_NAME } = config;</span>
+<span class="hljs-addition">+    if (!ORG_NAME) {</span>
+<span class="hljs-addition">+        throw new Error(red(&quot;X&quot;) + &quot; &#x5C1A;&#x672A;&#x914D;&#x7F6E;&#x7EC4;&#x7EC7;&#x540D;&#x79F0;!&quot;);</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    const targetDir = path.join(process.cwd(), name);</span>
+<span class="hljs-addition">+    log.info(&quot;vite2&quot;, &quot;&#x521B;&#x5EFA;&#x7684;&#x9879;&#x76EE;&#x76EE;&#x5F55;&#x4E3A;%s&quot;, targetDir);</span>
+<span class="hljs-addition">+    try {</span>
+<span class="hljs-addition">+        await fs.access(targetDir);</span>
+<span class="hljs-addition">+        const files = await fs.readdir(targetDir);</span>
+<span class="hljs-addition">+        if (files.length &gt; 0) {</span>
+<span class="hljs-addition">+            const { overwrite } = await prompt({</span>
+<span class="hljs-addition">+                type: &quot;confirm&quot;,</span>
+<span class="hljs-addition">+                name: &quot;overwrite&quot;,</span>
+<span class="hljs-addition">+                message: `&#x76EE;&#x6807;&#x76EE;&#x5F55;&#x975E;&#x7A7A;&#xFF0C;&#x662F;&#x5426;&#x8981;&#x79FB;&#x9664;&#x5B58;&#x5728;&#x7684;&#x6587;&#x4EF6;&#x5E76;&#x7EE7;&#x7EED;?`,</span>
+<span class="hljs-addition">+            });</span>
+<span class="hljs-addition">+            if (overwrite) {</span>
+<span class="hljs-addition">+                await fs.emptyDir(targetDir);</span>
+<span class="hljs-addition">+            } else {</span>
+<span class="hljs-addition">+                throw new Error(red(&quot;X&quot;) + &quot; &#x64CD;&#x4F5C;&#x88AB;&#x53D6;&#x6D88;&quot;);</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+    } catch (error) {</span>
+<span class="hljs-addition">+        await fs.mkdirp(targetDir);</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    log.info(&quot;vite3&quot;, &quot;%s&#x76EE;&#x5F55;&#x5DF2;&#x7ECF;&#x51C6;&#x5907;&#x5C31;&#x7EEA;&quot;, targetDir);</span>
+}
+module.exports = factory;
+</code></pre>
+<h2 id="t386.&#x4E0B;&#x8F7D;&#x6A21;&#x677F;">6.&#x4E0B;&#x8F7D;&#x6A21;&#x677F; <a href="#t386.&#x4E0B;&#x8F7D;&#x6A21;&#x677F;"> # </a></h2>
+<ul>
+<li><a href="https://docs.github.com/en/rest/overview/resources-in-the-rest-api">github api</a></li>
+<li><a href="https://gitee.com/api/v5/swagger">gitee api</a></li>
+</ul>
+<h3 id="t396.1 &#x5B89;&#x88C5;">6.1 &#x5B89;&#x88C5; <a href="#t396.1 &#x5B89;&#x88C5;"> # </a></h3>
+<ul>
+<li><a href="https://www.npmjs.com/package/clone-git-repo">clone-git-repo</a>&#x4E0B;&#x8F7D;&#x4ED3;&#x5E93;(GitHub, GitLab, Bitbucket,Gitee) <pre><code class="lang-js">yarn workspace @vite2/create  add clone-git-repo
+yarn workspace @vite2/utils  add  axios
+</code></pre>
+</li>
+</ul>
+<h3 id="t406.2 settings\index.js">6.2 settings\index.js <a href="#t406.2 settings\index.js"> # </a></h3>
+<p>packages\settings\index.js</p>
+<pre><code class="lang-diff">//&#x6267;&#x884C;&#x547D;&#x4EE4;&#x811A;&#x672C;
+exports.COMMAND_SOURCE = `
+const args = JSON.parse(process.argv[1]);
+const factory = require(&apos;.&apos;);
+factory(args);
+`
+<span class="hljs-addition">+//&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x540D;&#x79F0;</span>
+<span class="hljs-addition">+exports.RC_NAME = &quot;.vite3rc&quot;;</span>
+<span class="hljs-addition">+//&#x7EC4;&#x7EC7;&#x7684;&#x540D;&#x79F0;</span>
+<span class="hljs-addition">+exports.ORG_NAME = &quot;ORG_NAME&quot;;</span>
+<span class="hljs-addition">+//git&#x4ED3;&#x5E93;&#x7C7B;&#x578B;</span>
+<span class="hljs-addition">+exports.GIT_TYPE = &quot;GIT_TYPE&quot;;</span>
+<span class="hljs-addition">+//&#x6A21;&#x677F;&#x5B58;&#x653E;&#x540D;&#x79F0;</span>
+<span class="hljs-addition">+exports.TEMPLATES = &quot;.vite3_templates&quot;;</span>
+</code></pre>
+<h3 id="t416.3 utils\request.js">6.3 utils\request.js <a href="#t416.3 utils\request.js"> # </a></h3>
+<p>packages\utils\request.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> axios = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;axios&quot;</span>);
+<span class="hljs-keyword">const</span> { GIT_TYPE } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;./config&quot;</span>);
+<span class="hljs-keyword">const</span> GITEE = <span class="hljs-string">&quot;https://gitee.com/api/v5&quot;</span>;
+<span class="hljs-keyword">const</span> GITHUB = <span class="hljs-string">&quot;https://api.github.com&quot;</span>;
+
+<span class="hljs-keyword">const</span> BASE_URL = GIT_TYPE === <span class="hljs-string">&quot;gitee&quot;</span> ? GITEE : GITHUB;
+<span class="hljs-keyword">const</span> request = axios.create({
+    <span class="hljs-attr">baseURL</span>: BASE_URL,
+    <span class="hljs-attr">timeout</span>: <span class="hljs-number">5000</span>,
+});
+
+request.interceptors.response.use(
+    <span class="hljs-function">(<span class="hljs-params">response</span>) =&gt;</span> {
+        <span class="hljs-keyword">return</span> response.data;
+    },
+    (error) =&gt; {
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">Promise</span>.reject(error);
+    }
+);
+<span class="hljs-built_in">module</span>.exports = request;
+</code></pre>
+<h3 id="t426.4 withLoading.js">6.4 withLoading.js <a href="#t426.4 withLoading.js"> # </a></h3>
+<p>packages\utils\withLoading.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">withLoading</span>(<span class="hljs-params">message, fn, ...args</span>) </span>{
+  <span class="hljs-keyword">const</span> ora = <span class="hljs-keyword">await</span> <span class="hljs-keyword">import</span>(<span class="hljs-string">&quot;ora&quot;</span>);
+  <span class="hljs-keyword">const</span> spinner = ora.default(message);
+  spinner.start();
+  <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> fn(...args);
+  spinner.succeed();
+  <span class="hljs-keyword">return</span> result;
+}
+<span class="hljs-built_in">module</span>.exports = withLoading;
+</code></pre>
+<h3 id="t436.5 packages\utils\index.js">6.5 packages\utils\index.js <a href="#t436.5 packages\utils\index.js"> # </a></h3>
+<p>packages\utils\index.js</p>
+<pre><code class="lang-diff">exports.log = require(&apos;./log&apos;);
+exports.executeNodeScript = require(&apos;./executeNodeScript&apos;);
+exports.config = require(&apos;./config&apos;);
+<span class="hljs-addition">+exports.withLoading = require(&apos;./withLoading&apos;);</span>
+<span class="hljs-addition">+exports.request = require(&apos;./request&apos;);</span>
+</code></pre>
+<h3 id="t446.6 create\index.js">6.6 create\index.js <a href="#t446.6 create\index.js"> # </a></h3>
+<p>packages\create\index.js</p>
+<pre><code class="lang-diff">const path = require(&quot;path&quot;);
+<span class="hljs-addition">+const { promisify } = require(&quot;util&quot;);</span>
+const { red } = require(&quot;chalk&quot;);
+const fs = require(&quot;fs-extra&quot;);
+<span class="hljs-addition">+const { prompt } = require(&quot;inquirer&quot;);</span>
+<span class="hljs-addition">+const userhome = require(&quot;userhome&quot;);</span>
+<span class="hljs-addition">+const clone = promisify(require(&apos;clone-git-repo&apos;));</span>
+<span class="hljs-addition">+const { TEMPLATES } = require(&quot;@vite2/settings&quot;);</span>
+<span class="hljs-addition">+const { config, log,withLoading, request} = require(&quot;@vite2/utils&quot;);</span>
+async function factory(argv) {
+    const { cwd, name } = argv;
+    process.chdir(cwd);//&#x5207;&#x6362;&#x4E3A;&#x5F53;&#x524D;&#x547D;&#x4EE4;&#x6267;&#x884C;&#x7684;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;
+<span class="hljs-addition">+   const { GIT_TYPE,ORG_NAME } = config;</span>
+    if (!ORG_NAME) {
+        throw new Error(red(&quot;X&quot;) + &quot; &#x5C1A;&#x672A;&#x914D;&#x7F6E;&#x7EC4;&#x7EC7;&#x540D;&#x79F0;!&quot;);
+    }
+    const targetDir = path.join(process.cwd(), name);
+    log.info(&quot;vite2&quot;, &quot;&#x521B;&#x5EFA;&#x7684;&#x9879;&#x76EE;&#x76EE;&#x5F55;&#x4E3A;%s&quot;, targetDir);
+    try {
+        await fs.access(targetDir);
+        const files = await fs.readdir(targetDir);
+        if (files.length &gt; 0) {
+            const { overwrite } = await prompt({
+                type: &quot;confirm&quot;,
+                name: &quot;overwrite&quot;,
+                message: `&#x76EE;&#x6807;&#x76EE;&#x5F55;&#x975E;&#x7A7A;&#xFF0C;&#x662F;&#x5426;&#x8981;&#x79FB;&#x9664;&#x5B58;&#x5728;&#x7684;&#x6587;&#x4EF6;&#x5E76;&#x7EE7;&#x7EED;?`,
+            });
+            if (overwrite) {
+                await fs.emptyDir(targetDir);
+            } else {
+                throw new Error(red(&quot;X&quot;) + &quot; &#x64CD;&#x4F5C;&#x88AB;&#x53D6;&#x6D88;&quot;);
+            }
+        }
+    } catch (error) {
+        await fs.mkdirp(targetDir);
+    }
+    log.info(&quot;vite3&quot;, &quot;%s&#x76EE;&#x5F55;&#x5DF2;&#x7ECF;&#x51C6;&#x5907;&#x5C31;&#x7EEA;&quot;, targetDir);
+<span class="hljs-addition">+    let repos = await withLoading(&quot;&#x8BFB;&#x53D6;&#x6A21;&#x677F;&#x5217;&#x8868;&quot;, async () =&gt;</span>
+<span class="hljs-addition">+        request.get(`/orgs/${ORG_NAME}/repos`)</span>
+<span class="hljs-addition">+    );</span>
+<span class="hljs-addition">+    let { repo } = await prompt({</span>
+<span class="hljs-addition">+        name: &quot;repo&quot;,</span>
+<span class="hljs-addition">+        type: &quot;list&quot;,</span>
+<span class="hljs-addition">+        message: &quot;&#x8BF7;&#x9009;&#x62E9;&#x6A21;&#x677F;&quot;,</span>
+<span class="hljs-addition">+        choices: repos.map((repo) =&gt; repo.name)</span>
+<span class="hljs-addition">+    });</span>
+<span class="hljs-addition">+    let tags = await withLoading(&quot;&#x8BFB;&#x53D6;&#x6807;&#x7B7E;&#x5217;&#x8868;&quot;, async () =&gt;</span>
+<span class="hljs-addition">+        request.get(`/repos/${ORG_NAME}/${repo}/tags`)</span>
+<span class="hljs-addition">+    );</span>
+<span class="hljs-addition">+    let { tag } = await prompt({</span>
+<span class="hljs-addition">+        name: &quot;tag&quot;,</span>
+<span class="hljs-addition">+        type: &quot;list&quot;,</span>
+<span class="hljs-addition">+        message: &quot;&#x8BF7;&#x9009;&#x62E9;&#x7248;&#x672C;&quot;,</span>
+<span class="hljs-addition">+        choices: tags,</span>
+<span class="hljs-addition">+    });</span>
+<span class="hljs-addition">+    let repository = GIT_TYPE + `:${ORG_NAME}/${repo}`;</span>
+<span class="hljs-addition">+    if(tag)repository+=`#${tag}`;</span>
+<span class="hljs-addition">+    const downloadDirectory = userhome(TEMPLATES);</span>
+<span class="hljs-addition">+    const repoDirectory = `${downloadDirectory}/${repo}/${tag}`;</span>
+<span class="hljs-addition">+    log.info(&quot;vite3&quot;, &quot;&#x51C6;&#x5907;&#x4E0B;&#x8F7D;&#x6A21;&#x677F;&#x5230;%s&quot;, repoDirectory);</span>
+<span class="hljs-addition">+    try {</span>
+<span class="hljs-addition">+        await fs.access(repoDirectory);</span>
+<span class="hljs-addition">+    } catch (error) {</span>
+<span class="hljs-addition">+        log.info(&quot;vite2&quot;, &quot;&#x4ECE;&#x4ED3;&#x5E93;&#x4E0B;&#x8F7D;%s&quot;, repository);</span>
+<span class="hljs-addition">+        await clone(repository,repoDirectory, {clone:true});</span>
+<span class="hljs-addition">+    }</span>
+}
+module.exports = factory;
+</code></pre>
+<h2 id="t457.&#x6E32;&#x67D3;&#x6A21;&#x677F;">7.&#x6E32;&#x67D3;&#x6A21;&#x677F; <a href="#t457.&#x6E32;&#x67D3;&#x6A21;&#x677F;"> # </a></h2>
+<h3 id="t467.1 &#x5B89;&#x88C5;">7.1 &#x5B89;&#x88C5; <a href="#t467.1 &#x5B89;&#x88C5;"> # </a></h3>
+<pre><code class="lang-js">yarn workspace @vite2/create  add ejs glob execa
+</code></pre>
+<p>ask.json</p>
+<pre><code class="lang-json">[
+    {
+        <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;projectName&quot;</span>,
+        <span class="hljs-attr">&quot;type&quot;</span>:<span class="hljs-string">&quot;text&quot;</span>,
+        <span class="hljs-attr">&quot;message&quot;</span>:<span class="hljs-string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x9879;&#x76EE;&#x540D;&#x79F0;&quot;</span>
+    },
+    {
+        <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;projectVersion&quot;</span>,
+        <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;text&quot;</span>,
+        <span class="hljs-attr">&quot;message&quot;</span>: <span class="hljs-string">&quot;&#x8BF7;&#x8F93;&#x5165;&#x9879;&#x76EE;&#x7248;&#x672C;&quot;</span>
+    }
+]
+</code></pre>
+<h3 id="t477.2 packages\settings\index.js">7.2 packages\settings\index.js <a href="#t477.2 packages\settings\index.js"> # </a></h3>
+<p>packages\settings\index.js</p>
+<pre><code class="lang-diff">//&#x6267;&#x884C;&#x547D;&#x4EE4;&#x811A;&#x672C;
+exports.COMMAND_SOURCE = `
+const args = JSON.parse(process.argv[1]);
+const factory = require(&apos;.&apos;);
+factory(args);
+`
+//&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x540D;&#x79F0;
+exports.RC_NAME = &quot;.vite3rc&quot;;
+//&#x7EC4;&#x7EC7;&#x7684;&#x540D;&#x79F0;
+exports.ORG_NAME = &quot;ORG_NAME&quot;;
+//git&#x4ED3;&#x5E93;&#x7C7B;&#x578B;
+exports.GIT_TYPE = &quot;GIT_TYPE&quot;;
+//&#x6A21;&#x677F;&#x5B58;&#x653E;&#x540D;&#x79F0;
+exports.TEMPLATES = &quot;.vite3_templates&quot;;
+<span class="hljs-addition">+//&#x91CD;&#x547D;&#x540D;&#x6587;&#x4EF6;&#x914D;&#x7F6E;</span>
+<span class="hljs-addition">+exports.RENAME_FILES = {</span>
+<span class="hljs-addition">+    _gitignore: &apos;.gitignore&apos;</span>
+<span class="hljs-addition">+}</span>
+</code></pre>
+<h3 id="t487.3 packages\create\index.js">7.3 packages\create\index.js <a href="#t487.3 packages\create\index.js"> # </a></h3>
+<p>packages\create\index.js</p>
+<pre><code class="lang-diff">const path = require(&quot;path&quot;);
+const { promisify } = require(&quot;util&quot;);
+const { red } = require(&quot;chalk&quot;);
+const fs = require(&quot;fs-extra&quot;);
+const { prompt } = require(&quot;inquirer&quot;);
+const userhome = require(&quot;userhome&quot;);
+const clone = promisify(require(&apos;clone-git-repo&apos;));
+<span class="hljs-addition">+const glob = promisify(require(&quot;glob&quot;));</span>
+<span class="hljs-addition">+const { render } = require(&quot;ejs&quot;);</span>
+<span class="hljs-addition">+const execa = require(&quot;execa&quot;);</span>
+<span class="hljs-addition">+const { TEMPLATES,RENAME_FILES } = require(&quot;@vite2/settings&quot;);</span>
+const { config, log, withLoading, request } = require(&quot;@vite2/utils&quot;);
+async function factory(argv) {
+    const { cwd, name } = argv;
+    process.chdir(cwd);//&#x5207;&#x6362;&#x4E3A;&#x5F53;&#x524D;&#x547D;&#x4EE4;&#x6267;&#x884C;&#x7684;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;
+    const { GIT_TYPE, ORG_NAME } = config;
+    if (!ORG_NAME) {
+        throw new Error(red(&quot;X&quot;) + &quot; &#x5C1A;&#x672A;&#x914D;&#x7F6E;&#x7EC4;&#x7EC7;&#x540D;&#x79F0;!&quot;);
+    }
+    const targetDir = path.join(process.cwd(), name);
+    log.info(&quot;vite2&quot;, &quot;&#x521B;&#x5EFA;&#x7684;&#x9879;&#x76EE;&#x76EE;&#x5F55;&#x4E3A;%s&quot;, targetDir);
+    try {
+        await fs.access(targetDir);
+        const files = await fs.readdir(targetDir);
+        if (files.length &gt; 0) {
+            const { overwrite } = await prompt({
+                type: &quot;confirm&quot;,
+                name: &quot;overwrite&quot;,
+                message: `&#x76EE;&#x6807;&#x76EE;&#x5F55;&#x975E;&#x7A7A;&#xFF0C;&#x662F;&#x5426;&#x8981;&#x79FB;&#x9664;&#x5B58;&#x5728;&#x7684;&#x6587;&#x4EF6;&#x5E76;&#x7EE7;&#x7EED;?`,
+            });
+            if (overwrite) {
+                await fs.emptyDir(targetDir);
+            } else {
+                throw new Error(red(&quot;X&quot;) + &quot; &#x64CD;&#x4F5C;&#x88AB;&#x53D6;&#x6D88;&quot;);
+            }
+        }
+    } catch (error) {
+        await fs.mkdirp(targetDir);
+    }
+    log.info(&quot;vite3&quot;, &quot;%s&#x76EE;&#x5F55;&#x5DF2;&#x7ECF;&#x51C6;&#x5907;&#x5C31;&#x7EEA;&quot;, targetDir);
+    let repos = await withLoading(&quot;&#x8BFB;&#x53D6;&#x6A21;&#x677F;&#x5217;&#x8868;&quot;, async () =&gt;
+        request.get(`/orgs/${ORG_NAME}/repos`)
+    );
+    let { repo } = await prompt({
+        name: &quot;repo&quot;,
+        type: &quot;list&quot;,
+        message: &quot;&#x8BF7;&#x9009;&#x62E9;&#x6A21;&#x677F;&quot;,
+        choices: repos.map((repo) =&gt; repo.name)
+    });
+    let tags = await withLoading(&quot;&#x8BFB;&#x53D6;&#x6807;&#x7B7E;&#x5217;&#x8868;&quot;, async () =&gt;
+        request.get(`/repos/${ORG_NAME}/${repo}/tags`)
+    );
+    let { tag } = await prompt({
+        name: &quot;tag&quot;,
+        type: &quot;list&quot;,
+        message: &quot;&#x8BF7;&#x9009;&#x62E9;&#x7248;&#x672C;&quot;,
+        choices: tags,
+    });
+    let repository = GIT_TYPE + `:${ORG_NAME}/${repo}`;
+    if (tag) repository += `#${tag}`;
+    const downloadDirectory = userhome(TEMPLATES);
+    const repoDirectory = `${downloadDirectory}/${repo}/${tag}`;
+    log.info(&quot;vite3&quot;, &quot;&#x51C6;&#x5907;&#x4E0B;&#x8F7D;&#x6A21;&#x677F;&#x5230;%s&quot;, repoDirectory);
+    try {
+        await fs.access(repoDirectory);
+    } catch (error) {
+        log.info(&quot;vite2&quot;, &quot;&#x4ECE;&#x4ED3;&#x5E93;&#x4E0B;&#x8F7D;%s&quot;, repository);
+        await clone(repository, repoDirectory, { clone: true });
+    }
+<span class="hljs-addition">+    let ask = path.join(repoDirectory, &quot;ask.json&quot;);</span>
+<span class="hljs-addition">+    if (fs.existsSync(ask)) {</span>
+<span class="hljs-addition">+        const askOptions = await fs.readJSON(ask);</span>
+<span class="hljs-addition">+        const result = await prompt(askOptions);</span>
+<span class="hljs-addition">+        const files = await glob(`**/*`, {</span>
+<span class="hljs-addition">+            cwd: repoDirectory,</span>
+<span class="hljs-addition">+            ignore: [&apos;ask.json&apos;],</span>
+<span class="hljs-addition">+            nodir: true</span>
+<span class="hljs-addition">+        });</span>
+<span class="hljs-addition">+        await Promise.all(files.map(file =&gt; new Promise(async function (resolve) {</span>
+<span class="hljs-addition">+            let content = await fs.readFile(path.join(repoDirectory, file), &apos;utf8&apos;);</span>
+<span class="hljs-addition">+            let renderContent = await render(content, result);</span>
+<span class="hljs-addition">+            let targetName = RENAME_FILES[file] || file;</span>
+<span class="hljs-addition">+            let targetFile = path.join(targetDir, targetName);</span>
+<span class="hljs-addition">+            await fs.ensureDir(path.dirname(targetFile));</span>
+<span class="hljs-addition">+            await fs.writeFile(targetFile, renderContent, &apos;utf8&apos;);</span>
+<span class="hljs-addition">+            resolve();</span>
+<span class="hljs-addition">+        })));</span>
+<span class="hljs-addition">+    } else {</span>
+<span class="hljs-addition">+        await fs.copy(repoDirectory, targetDir);</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    process.chdir(targetDir);</span>
+<span class="hljs-addition">+    log.info(&quot;vite3&quot;, &quot;&#x5728;%s&#x521D;&#x59CB;&#x5316; Git &#x4ED3;&#x5E93;&quot;, targetDir);</span>
+<span class="hljs-addition">+    await execa(&quot;git&quot;, [&quot;init&quot;], { stdio: &quot;inherit&quot; });</span>
+<span class="hljs-addition">+    log.info(&quot;vite3&quot;, &quot;&#x5728;%s&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&quot;, targetDir);</span>
+<span class="hljs-addition">+    await execa(&quot;npm&quot;, [&quot;install&quot;], { stdio: &quot;inherit&quot; });</span>
+<span class="hljs-addition">+    log.info(&quot;vite3&quot;, &quot;&#x542F;&#x52A8;&#x670D;&#x52A1;&quot;);</span>
+<span class="hljs-addition">+    await execa(&quot;node&quot;, [&quot;./node_modules/esbuild/install.js&quot;], {</span>
+<span class="hljs-addition">+        stdio: &quot;inherit&quot;,</span>
+<span class="hljs-addition">+    });</span>
+<span class="hljs-addition">+    await execa(&quot;npm&quot;, [&quot;run&quot;, &quot;dev&quot;], { stdio: &quot;inherit&quot; });</span>
+}
+module.exports = factory;
+</code></pre>
+<h2 id="t498.&#x53D1;&#x5E03;">8.&#x53D1;&#x5E03; <a href="#t498.&#x53D1;&#x5E03;"> # </a></h2>
+<h3 id="t508.1 &#x521B;&#x5EFA;&#x7EC4;&#x7EC7;">8.1 &#x521B;&#x5EFA;&#x7EC4;&#x7EC7; <a href="#t508.1 &#x521B;&#x5EFA;&#x7EC4;&#x7EC7;"> # </a></h3>
+<ul>
+<li><a href="https://www.npmjs.com/org/create">create</a></li>
+</ul>
+<h3 id="t518.2 &#x53D1;&#x5E03;">8.2 &#x53D1;&#x5E03; <a href="#t518.2 &#x53D1;&#x5E03;"> # </a></h3>
+<p>package.json</p>
+<pre><code class="lang-js">{
+  <span class="hljs-string">&quot;publishConfig&quot;</span>: {
+    <span class="hljs-string">&quot;access&quot;</span>: <span class="hljs-string">&quot;public&quot;</span>,
+    <span class="hljs-string">&quot;registry&quot;</span>: <span class="hljs-string">&quot;http://registry.npmjs.org&quot;</span>
+  }
+}
+</code></pre>
+<pre><code class="lang-js">npm whoami
+npm login
+zhangrenyang2000
+lerna publish
+</code></pre>
+<h2 id="t529.&#x53C2;&#x8003;">9.&#x53C2;&#x8003; <a href="#t529.&#x53C2;&#x8003;"> # </a></h2>
+<h3 id="t539.1 lerna">9.1 lerna <a href="#t539.1 lerna"> # </a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x547D;&#x4EE4;</th>
+<th style="text-align:left">&#x529F;&#x80FD;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">lerna bootstrap</td>
+<td style="text-align:left">&#x5B89;&#x88C5;&#x4F9D;&#x8D56;</td>
+</tr>
+<tr>
+<td style="text-align:left">lerna clean</td>
+<td style="text-align:left">&#x5220;&#x9664;&#x5404;&#x4E2A;&#x5305;&#x4E0B;&#x7684;node_modules</td>
+</tr>
+<tr>
+<td style="text-align:left">lerna init</td>
+<td style="text-align:left">&#x521B;&#x5EFA;&#x65B0;&#x7684;lerna&#x5E93;</td>
+</tr>
+<tr>
+<td style="text-align:left">lerna list</td>
+<td style="text-align:left">&#x67E5;&#x770B;&#x672C;&#x5730;&#x5305;&#x5217;&#x8868;</td>
+</tr>
+<tr>
+<td style="text-align:left">lerna changed</td>
+<td style="text-align:left">&#x663E;&#x793A;&#x81EA;&#x4E0A;&#x6B21;release tag&#x4EE5;&#x6765;&#x6709;&#x4FEE;&#x6539;&#x7684;&#x5305;&#xFF0C; &#x9009;&#x9879;&#x901A; list</td>
+</tr>
+<tr>
+<td style="text-align:left">lerna diff</td>
+<td style="text-align:left">&#x663E;&#x793A;&#x81EA;&#x4E0A;&#x6B21;release tag&#x4EE5;&#x6765;&#x6709;&#x4FEE;&#x6539;&#x7684;&#x5305;&#x7684;&#x5DEE;&#x5F02;&#xFF0C; &#x6267;&#x884C; git diff</td>
+</tr>
+<tr>
+<td style="text-align:left">lerna exec</td>
+<td style="text-align:left">&#x5728;&#x6BCF;&#x4E2A;&#x5305;&#x76EE;&#x5F55;&#x4E0B;&#x6267;&#x884C;&#x4EFB;&#x610F;&#x547D;&#x4EE4;</td>
+</tr>
+<tr>
+<td style="text-align:left">lerna run</td>
+<td style="text-align:left">&#x6267;&#x884C;&#x6BCF;&#x4E2A;&#x5305;package.json&#x4E2D;&#x7684;&#x811A;&#x672C;&#x547D;&#x4EE4;</td>
+</tr>
+<tr>
+<td style="text-align:left">lerna add</td>
+<td style="text-align:left">&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x5305;&#x7684;&#x7248;&#x672C;&#x4E3A;&#x5404;&#x4E2A;&#x5305;&#x7684;&#x4F9D;&#x8D56;</td>
+</tr>
+<tr>
+<td style="text-align:left">lerna import</td>
+<td style="text-align:left">&#x5F15;&#x5165;package</td>
+</tr>
+<tr>
+<td style="text-align:left">lerna link</td>
+<td style="text-align:left">&#x94FE;&#x63A5;&#x4E92;&#x76F8;&#x5F15;&#x7528;&#x7684;&#x5E93;</td>
+</tr>
+<tr>
+<td style="text-align:left">lerna create</td>
+<td style="text-align:left">&#x65B0;&#x5EFA;package</td>
+</tr>
+<tr>
+<td style="text-align:left">lerna publish</td>
+<td style="text-align:left">&#x53D1;&#x5E03;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t549.2 yarn">9.2 yarn <a href="#t549.2 yarn"> # </a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x547D;&#x4EE4;</th>
+<th style="text-align:left">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">yarn -v</td>
+<td style="text-align:left">&#x67E5;&#x770B;yarn&#x7248;&#x672C;</td>
+</tr>
+<tr>
+<td style="text-align:left">yarn config list</td>
+<td style="text-align:left">&#x67E5;&#x770B;yarn&#x7684;&#x6240;&#x6709;&#x914D;&#x7F6E;</td>
+</tr>
+<tr>
+<td style="text-align:left">yarn config set registry <a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org/</a></td>
+<td style="text-align:left">&#x4FEE;&#x6539;yarn&#x7684;&#x6E90;&#x955C;&#x50CF;&#x4E3A;&#x6DD8;&#x5B9D;&#x6E90;</td>
+</tr>
+<tr>
+<td style="text-align:left">yarn config set global-folder &quot;D:\RTE\Yarn\global&quot;</td>
+<td style="text-align:left">&#x4FEE;&#x6539;&#x5168;&#x5C40;&#x5B89;&#x88C5;&#x76EE;&#x5F55;, &#x5148;&#x521B;&#x5EFA;&#x597D;&#x76EE;&#x5F55;(global), &#x6211;&#x653E;&#x5728;&#x4E86;Yarn&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x4E0B;(D:\RTE\Yarn\global)</td>
+</tr>
+<tr>
+<td style="text-align:left">yarn config set prefix &quot;D:\RTE\Yarn\global\&quot;</td>
+<td style="text-align:left">&#x4FEE;&#x6539;&#x5168;&#x5C40;&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x7684;bin&#x76EE;&#x5F55;&#x4F4D;&#x7F6E;</td>
+</tr>
+<tr>
+<td style="text-align:left">yarn config set cache-folder &quot;D:\RTE\Yarn\cache&quot;</td>
+<td style="text-align:left">&#x4FEE;&#x6539;&#x5168;&#x5C40;&#x7F13;&#x5B58;&#x76EE;&#x5F55;, &#x5148;&#x521B;&#x5EFA;&#x597D;&#x76EE;&#x5F55;(cache), &#x548C;global&#x653E;&#x5728;&#x540C;&#x4E00;&#x5C42;&#x76EE;&#x5F55;&#x4E0B;</td>
+</tr>
+<tr>
+<td style="text-align:left">yarn config list</td>
+<td style="text-align:left">&#x67E5;&#x770B;&#x6240;&#x6709;&#x914D;&#x7F6E;</td>
+</tr>
+<tr>
+<td style="text-align:left">yarn global bin</td>
+<td style="text-align:left">&#x67E5;&#x770B;&#x5F53;&#x524D;yarn&#x7684;bin&#x7684;&#x4F4D;&#x7F6E;</td>
+</tr>
+<tr>
+<td style="text-align:left">yarn global dir</td>
+<td style="text-align:left">&#x67E5;&#x770B;&#x5F53;&#x524D;yarn&#x7684;&#x5168;&#x5C40;&#x5B89;&#x88C5;&#x4F4D;&#x7F6E;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t559.2  yarn workspace">9.2  yarn workspace <a href="#t559.2  yarn workspace"> # </a></h3>
+<ul>
+<li><a href="https://yarn.bootcss.com/docs/">yarn&#x5B98;&#x7F51;</a></li>
+<li>yarn add &lt;package...&gt; [--ignore-workspace-root-check/-W]</li>
+<li>yarn add &lt;package...&gt; [--dev/-D]</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x4F5C;&#x7528;</th>
+<th style="text-align:left">&#x547D;&#x4EE4;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x67E5;&#x770B;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#x4FE1;&#x606F;</td>
+<td style="text-align:left">yarn workspaces info</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x7ED9;&#x6240;&#x6709;&#x7684;&#x7A7A;&#x95F4;&#x6DFB;&#x52A0;&#x4F9D;&#x8D56;</td>
+<td style="text-align:left">yarn workspaces run add lodash</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x7ED9;&#x6839;&#x7A7A;&#x95F4;&#x6DFB;&#x52A0;&#x4F9D;&#x8D56;</td>
+<td style="text-align:left">yarn add -W -D typescript jest</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x7ED9;&#x67D0;&#x4E2A;&#x9879;&#x76EE;&#x6DFB;&#x52A0;&#x4F9D;&#x8D56;</td>
+<td style="text-align:left">yarn workspace create-react-app3 add commander</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x5220;&#x9664;&#x6240;&#x6709;&#x7684; node_modules</td>
+<td style="text-align:left">lerna clean &#x7B49;&#x4E8E; yarn workspaces run clean</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x5B89;&#x88C5;&#x548C;link&#x6240;&#x6709;&#x7684;&#x540D;</td>
+<td style="text-align:left">yarn install &#x7B49;&#x4E8E; lerna bootstrap --npm-client yarn --use-workspaces</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x91CD;&#x65B0;&#x83B7;&#x53D6;&#x6240;&#x6709;&#x7684; node_modules</td>
+<td style="text-align:left">yarn install --force</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x67E5;&#x770B;&#x7F13;&#x5B58;&#x76EE;&#x5F55;</td>
+<td style="text-align:left">yarn cache dir</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x6E05;&#x9664;&#x672C;&#x5730;&#x7F13;&#x5B58;</td>
+<td style="text-align:left">yarn cache clean</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x5728;&#x6240;&#x6709;package&#x4E2D;&#x8FD0;&#x884C;&#x6307;&#x5B9A;&#x7684;&#x547D;&#x4EE4;</td>
+<td style="text-align:left">yarn workspaces run <command></td>
+</tr>
+</tbody>
+</table>
+<h3 id="t569.3 yargs">9.3 yargs <a href="#t569.3 yargs"> # </a></h3>
+<ul>
+<li><a href="https://www.npmjs.com/package/yargs">yargs</a>&#x5E2E;&#x52A9;&#x4F60;&#x6784;&#x5EFA;&#x4EA4;&#x4E92;&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;&#xFF0C;&#x53EF;&#x4EE5;&#x89E3;&#x6790;&#x53C2;&#x6570;&#x751F;&#x6210;&#x4F18;&#x96C5;&#x7684;&#x7528;&#x6237;&#x754C;&#x9762;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> yargs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;yargs/yargs&quot;</span>);
+<span class="hljs-keyword">const</span> cli = yargs();
+cli
+    .usage(<span class="hljs-string">`Usage: vite2 &lt;command&gt; [options]`</span>)
+    .demandCommand(<span class="hljs-number">1</span>, <span class="hljs-string">&quot;&#x81F3;&#x5C11;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&quot;</span>)
+    .strict()
+    .recommendCommands()
+    .command({
+        <span class="hljs-attr">command</span>: <span class="hljs-string">&quot;create &lt;name&gt;&quot;</span>,
+        <span class="hljs-attr">describe</span>: <span class="hljs-string">&quot;&#x521B;&#x5EFA;&#x9879;&#x76EE;&quot;</span>,
+        <span class="hljs-attr">builder</span>: <span class="hljs-function">(<span class="hljs-params">yargs</span>) =&gt;</span> {
+            yargs.positional(<span class="hljs-string">&quot;name&quot;</span>, {
+                <span class="hljs-attr">type</span>: <span class="hljs-string">&quot;string&quot;</span>,
+                <span class="hljs-attr">describe</span>: <span class="hljs-string">&quot;&#x9879;&#x76EE;&#x540D;&#x79F0;&quot;</span>,
+            });
+        },
+        <span class="hljs-attr">handler</span>: <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">argv</span>) </span>{
+           <span class="hljs-built_in">console</span>.log(argv);
+           <span class="hljs-comment">//{ _: [ &apos;create&apos; ], &apos;$0&apos;: &apos;doc\\1.yargs.js&apos;, name: &apos;p1&apos; }</span>
+        }
+    })
+    .parse(process.argv.slice(<span class="hljs-number">2</span>));
+
+</code></pre>
+<h3 id="t579.4 node -e">9.4 node -e <a href="#t579.4 node -e"> # </a></h3>
+<ul>
+<li><a href="https://nodejs.org/api/cli.html#cli_e_eval_script">node -e</a>&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x6267;&#x884C;&#x4E00;&#x6BB5;js&#x811A;&#x672C;&#x5E76;&#x8F93;&#x5165;</li>
+<li>-e, --eval &quot;script&quot;</li>
+<li>&#x8BBE;&#x7F6E;<code>stdion: &apos;inherit&apos;</code>,&#x5F53;&#x6267;&#x884C;&#x4EE3;&#x7801;&#x65F6;,&#x5B50;&#x8FDB;&#x7A0B;&#x5C06;&#x4F1A;&#x7EE7;&#x627F;&#x4E3B;&#x8FDB;&#x7A0B;&#x7684;stdin&#x3001;stdout&#x548C;stderr</li>
+</ul>
+<pre><code class="lang-js">node -e <span class="hljs-string">&quot;console.log(process.argv)&quot;</span> -- a b
+node -e <span class="hljs-string">&quot;console.log(JSON.parse(process.argv[1]))&quot;</span> -- <span class="hljs-string">&quot;{\&quot;name\&quot;:\&quot;zhufeng\&quot;}&quot;</span>
+node -e <span class="hljs-string">&quot;console.log(process.cwd())&quot;</span>
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> spawn = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;cross-spawn&quot;</span>);
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">executeNodeScript</span>(<span class="hljs-params">{ cwd }, source, args</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve</span>) =&gt;</span> {
+      <span class="hljs-keyword">const</span> childProcess = spawn(
+        process.execPath,
+        [<span class="hljs-string">&quot;-e&quot;</span>, source, <span class="hljs-string">&quot;--&quot;</span>, <span class="hljs-built_in">JSON</span>.stringify(args)],
+        { cwd, <span class="hljs-attr">stdio</span>: <span class="hljs-string">&quot;inherit&quot;</span> }
+      );
+      childProcess.on(<span class="hljs-string">&quot;close&quot;</span>, resolve);
+    });
+}
+<span class="hljs-built_in">module</span>.exports = executeNodeScript;
+</code></pre>
+<h3 id="t589.5 clone">9.5 clone <a href="#t589.5 clone"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> clone = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;clone-git-repo&apos;</span>);
+<span class="hljs-keyword">let</span> repository = <span class="hljs-string">&apos;gitee:zhufengtemplate/template-react#v1.0&apos;</span>;
+clone(repository,<span class="hljs-string">&apos;./output&apos;</span>, {<span class="hljs-attr">clone</span>:<span class="hljs-literal">true</span>},<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(err);
+})
+</code></pre>
+
+    </div>
+</div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+    aria-labelledby="loginModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="loginModalLabel">请登录</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="username" class="control-label">姓名:</label>
+                        <input type="text" class="form-control" id="username" placeholder="珠峰架构VIP会员系统用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">密码:</label>
+                        <input type="text" class="form-control" id="password" placeholder="珠峰架构VIP会员系统密码">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                    data-dismiss="modal">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+let zhufengjiagou = localStorage.getItem('zhufengjiagou');
+const host = 'http://login.zhufengpeixun.com';
+if(zhufengjiagou){
+  fetch(host+'/check',{method:"GET",mode: 'cors',
+　　headers: {'Content-Type': 'application/json', authorization: `Bearer ${zhufengjiagou}`}}).then(response => response.json()).then(res => {
+    if(res.success){
+     
+    }else{
+      $('#loginModal').modal('show')
+    }
+  }) 
+}else{
+   $('#loginModal').modal('show')
+}
+
+$('#loginModal').on('hidden.bs.modal', function (event) {
+  var modal = $(this)
+  let username = modal.find('.modal-body #username').val();
+  let password = modal.find('.modal-body #password').val();
+  fetch(host+'/login',{method:"POST",mode: 'cors',
+　　headers: {'Content-Type': 'application/json'},
+　　body:JSON.stringify({username,password})}).then(response => response.json()).then(res => {
+  console.log(res);
+    if(res.success){
+      localStorage.setItem('zhufengjiagou',res.zhufengjiagou);
+    }else{
+      window.location.href = 'http://www.zhufengpeixun.cn';
+    }
+  })
+})
+</script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

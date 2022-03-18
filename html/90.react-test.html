@@ -1,0 +1,1830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+   
+                     
+
+                        
+<div class="warpper">
+    <div class="page-toc">
+        <ul><li><a href="#t01.为什么需要测试">1.为什么需要测试</a><ul><li><a href="#t11.1 创建项目">1.1 创建项目</a></li><li><a href="#t21.2 手工测试">1.2 手工测试</a></li><li><a href="#t31.3 断言">1.3 断言</a></li><li><a href="#t41.4 测试框架">1.4 测试框架</a></li></ul></li><li><a href="#t55.Jest">5.Jest</a><ul><li><a href="#t65.1 安装">5.1 安装</a></li><li><a href="#t75.2 初体验">5.2 初体验</a></li><li><a href="#t85.3 测试覆盖率">5.3 测试覆盖率</a></li><li><a href="#t95.4 配置">5.4 配置</a><ul><li><a href="#t105.4.1 生成配置文件">5.4.1 生成配置文件</a></li><li><a href="#t115.4.2 babel.config.js">5.4.2 babel.config.js</a></li><li><a href="#t125.4.3 jest.config.js">5.4.3 jest.config.js</a></li><li><a href="#t135.4.4 tsconfig.json">5.4.4 tsconfig.json</a></li></ul></li><li><a href="#t145.5 Matchers">5.5 Matchers</a><ul><li><a href="#t155.5.1 matches.tsx">5.5.1 matches.tsx</a></li></ul></li><li><a href="#t165.6 测试DOM">5.6 测试DOM</a><ul><li><a href="#t175.6.1 src\domUtils.tsx">5.6.1 src\domUtils.tsx</a></li><li><a href="#t185.6.2 tests\domUtils.tsx">5.6.2 tests\domUtils.tsx</a></li></ul></li><li><a href="#t195.7 异步请求">5.7 异步请求</a><ul><li><a href="#t205.7.1 src\api.tsx">5.7.1 src\api.tsx</a></li><li><a href="#t215.7.2 tests\api.tsx">5.7.2 tests\api.tsx</a></li></ul></li><li><a href="#t225.8 钩子函数">5.8 钩子函数</a></li><li><a href="#t235.9 mock">5.9 mock</a><ul><li><a href="#t245.9.1 src\mock.tsx">5.9.1 src\mock.tsx</a></li><li><a href="#t255.9.2 tests\mock.tsx">5.9.2 tests\mock.tsx</a></li></ul></li></ul></li><li><a href="#t266. TDD(Test-Driven-Development)">6. TDD(Test-Driven-Development)</a><ul><li><a href="#t276.1 创建项目">6.1 创建项目</a></li><li><a href="#t286.2 环境准备">6.2 环境准备</a><ul><li><a href="#t296.2.1 src\react-app-env.d.ts">6.2.1 src\react-app-env.d.ts</a></li><li><a href="#t306.2.2 src\setupTests.ts">6.2.2 src\setupTests.ts</a></li><li><a href="#t316.2.3 tsconfig.json">6.2.3 tsconfig.json</a></li></ul></li><li><a href="#t326.3 Message.tsx">6.3 Message.tsx</a><ul><li><a href="#t336.3.1 测试用例">6.3.1 测试用例</a></li><li><a href="#t346.3.2 重构实现">6.3.2 重构实现</a></li></ul></li><li><a href="#t356.4 MessageList.tsx">6.4 MessageList.tsx</a><ul><li><a href="#t366.4.1 测试用例">6.4.1 测试用例</a></li><li><a href="#t376.4.2 重构实现">6.4.2 重构实现</a></li></ul></li><li><a href="#t386.5 MessageForm.tsx">6.5 MessageForm.tsx</a><ul><li><a href="#t396.5.1 测试用例">6.5.1 测试用例</a></li><li><a href="#t406.5.2 重构实现">6.5.2 重构实现</a></li></ul></li><li><a href="#t416.6 MessageApp.tsx">6.6 MessageApp.tsx</a><ul><li><a href="#t426.6.1 测试用例">6.6.1 测试用例</a></li><li><a href="#t436.5.2 重构实现">6.5.2 重构实现</a></li></ul></li></ul></li><li><a href="#t447. BDD(Behavior Driven Development)">7. BDD(Behavior Driven Development)</a><ul><li><a href="#t457.1 创建项目">7.1 创建项目</a></li><li><a href="#t467.2 环境准备">7.2 环境准备</a><ul><li><a href="#t477.2.1 src\react-app-env.d.ts">7.2.1 src\react-app-env.d.ts</a></li><li><a href="#t487.2.2 src\setupTests.ts">7.2.2 src\setupTests.ts</a></li><li><a href="#t497.2.3 tsconfig.json">7.2.3 tsconfig.json</a></li></ul></li><li><a href="#t507.3 开发功能">7.3 开发功能</a><ul><li><a href="#t517.3.1 index.tsx">7.3.1 index.tsx</a></li><li><a href="#t527.3.2 containers\App.tsx">7.3.2 containers\App.tsx</a></li><li><a href="#t537.3.3 components\Counter1.tsx">7.3.3 components\Counter1.tsx</a></li><li><a href="#t547.3.4 components\Counter2.tsx">7.3.4 components\Counter2.tsx</a></li><li><a href="#t557.3.5 components\Header.tsx">7.3.5 components\Header.tsx</a></li><li><a href="#t567.3.6 store\index.tsx">7.3.6 store\index.tsx</a></li><li><a href="#t577.3.7 store\action-types.tsx">7.3.7 store\action-types.tsx</a></li><li><a href="#t587.3.8 store\reducers\index.tsx">7.3.8 store\reducers\index.tsx</a></li><li><a href="#t597.3.9 store\reducers\counter1.tsx">7.3.9 store\reducers\counter1.tsx</a></li><li><a href="#t607.3.10 store\reducers\counter2.tsx">7.3.10 store\reducers\counter2.tsx</a></li><li><a href="#t617.3.11 store\actions\counter1.tsx">7.3.11 store\actions\counter1.tsx</a></li><li><a href="#t627.3.12 store\actions\counter2.tsx">7.3.12 store\actions\counter2.tsx</a></li><li><a href="#t637.3.13 index.html">7.3.13 index.html</a></li></ul></li><li><a href="#t647.4 编写测试用例">7.4 编写测试用例</a><ul><li><a href="#t657.4.1 reducers\counter1.spec.tsx">7.4.1 reducers\counter1.spec.tsx</a></li><li><a href="#t667.4.2 actions\counter1.spec.tsx">7.4.2 actions\counter1.spec.tsx</a></li><li><a href="#t677.4.3 store\store.spec.ts">7.4.3 store\store.spec.ts</a></li><li><a href="#t687.4.4 tests\containers\Counter1.tsx">7.4.4 tests\containers\Counter1.tsx</a></li><li><a href="#t697.4.5 tests\containers\App.tsx">7.4.5 tests\containers\App.tsx</a></li></ul></li></ul></li><li><a href="#t708. UI测试">8. UI测试</a><ul><li><a href="#t718.1 puppeteer">8.1 puppeteer</a></li><li><a href="#t728.2 jest-puppeteer">8.2 jest-puppeteer</a><ul><li><a href="#t738.2.1 jest.config.js">8.2.1 jest.config.js</a></li><li><a href="#t748.2.2 CounterApp.ts">8.2.2 CounterApp.ts</a></li></ul></li></ul></li><li><a href="#t759.参考">9.参考</a><ul><li><a href="#t769.1 jest">9.1 jest</a></li><li><a href="#t779.2 enzyme">9.2 enzyme</a></li><li><a href="#t789.3 puppeteer">9.3 puppeteer</a></li><li><a href="#t799.4 glob">9.4 glob</a><ul><li><a href="#t809.4.1 glob规则">9.4.1 glob规则</a></li><li><a href="#t819.4.2 glob示例">9.4.2 glob示例</a></li></ul></li></ul></li></ul>
+    </div>
+    <div class="content markdown-body">
+        <h2 id="t01.&#x4E3A;&#x4EC0;&#x4E48;&#x9700;&#x8981;&#x6D4B;&#x8BD5;">1.&#x4E3A;&#x4EC0;&#x4E48;&#x9700;&#x8981;&#x6D4B;&#x8BD5; <a href="#t01.&#x4E3A;&#x4EC0;&#x4E48;&#x9700;&#x8981;&#x6D4B;&#x8BD5;"> # </a></h2>
+<ul>
+<li>&#x8F6F;&#x4EF6;&#x6D4B;&#x8BD5;&#x662F;&#x4E00;&#x79CD;&#x5B9E;&#x9645;&#x8F93;&#x51FA;&#x4E0E;&#x9884;&#x671F;&#x8F93;&#x51FA;&#x4E4B;&#x95F4;&#x7684;&#x5BA1;&#x6838;&#x6216;&#x8005;&#x6BD4;&#x8F83;&#x8FC7;&#x7A0B;</li>
+<li>&#x6D4B;&#x8BD5;&#x53EF;&#x4EE5;&#x5C3D;&#x65E9;&#x53D1;&#x73B0;<code>BUG</code></li>
+<li>&#x6D4B;&#x8BD5;&#x53EF;&#x4EE5;&#x63D0;&#x9AD8;&#x4EE3;&#x7801;&#x8D28;&#x91CF; </li>
+<li>&#x6D4B;&#x8BD5;&#x53EF;&#x4EE5;&#x8BA9;&#x6211;&#x4EEC;&#x81EA;&#x4FE1;&#x5730;&#x91CD;&#x6784;</li>
+</ul>
+<h3 id="t11.1 &#x521B;&#x5EFA;&#x9879;&#x76EE;">1.1 &#x521B;&#x5EFA;&#x9879;&#x76EE; <a href="#t11.1 &#x521B;&#x5EFA;&#x9879;&#x76EE;"> # </a></h3>
+<pre><code class="lang-js">mkdir zhufeng_test
+cd zhufeng_test
+npm init -y
+mkdir src
+</code></pre>
+<h3 id="t21.2 &#x624B;&#x5DE5;&#x6D4B;&#x8BD5;">1.2 &#x624B;&#x5DE5;&#x6D4B;&#x8BD5; <a href="#t21.2 &#x624B;&#x5DE5;&#x6D4B;&#x8BD5;"> # </a></h3>
+<p>src\math.js</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params">a, b</span>) </span>{
+    <span class="hljs-keyword">return</span> a + b;
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">minus</span>(<span class="hljs-params">a, b</span>) </span>{
+    <span class="hljs-keyword">return</span> a - b;
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">multiply</span>(<span class="hljs-params">a, b</span>) </span>{
+    <span class="hljs-keyword">return</span> a * b;
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">divide</span>(<span class="hljs-params">a, b</span>) </span>{
+    <span class="hljs-keyword">return</span> a / b;
+}
+
+<span class="hljs-built_in">console</span>.log(add(<span class="hljs-number">4</span>, <span class="hljs-number">2</span>));
+<span class="hljs-built_in">console</span>.log(minus(<span class="hljs-number">4</span>, <span class="hljs-number">2</span>));
+<span class="hljs-built_in">console</span>.log(multiply(<span class="hljs-number">4</span>, <span class="hljs-number">2</span>));
+<span class="hljs-built_in">console</span>.log(divide(<span class="hljs-number">4</span>, <span class="hljs-number">2</span>));
+</code></pre>
+<h3 id="t31.3 &#x65AD;&#x8A00;">1.3 &#x65AD;&#x8A00; <a href="#t31.3 &#x65AD;&#x8A00;"> # </a></h3>
+<ul>
+<li>&#x8868;&#x8FBE;&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;&#x4EBA;&#x5458;&#x5BF9;&#x4E8E;&#x7CFB;&#x7EDF;&#x5E94;&#x8FBE;&#x72B6;&#x6001;&#x7684;&#x4E00;&#x79CD;&#x9884;&#x671F;</li>
+<li>&#x65AD;&#x8A00;&#x662F;&#x6D4B;&#x8BD5;&#x7684;&#x6838;&#x5FC3;,&#x5F88;&#x591A;&#x8BED;&#x8A00;&#x90FD;&#x5185;&#x7F6E;&#x4E86;&#x65AD;&#x8A00;&#x63A5;&#x53E3;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params">a, b</span>) </span>{
+    <span class="hljs-keyword">return</span> a + b;
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">minus</span>(<span class="hljs-params">a, b</span>) </span>{
+    <span class="hljs-keyword">return</span> a - b;
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">multiply</span>(<span class="hljs-params">a, b</span>) </span>{
+    <span class="hljs-keyword">return</span> a * b;
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">divide</span>(<span class="hljs-params">a, b</span>) </span>{
+    <span class="hljs-keyword">return</span> a / b;
+}
+
+<span class="hljs-built_in">console</span>.assert(add(<span class="hljs-number">4</span>, <span class="hljs-number">2</span>) == <span class="hljs-number">6</span>, <span class="hljs-literal">true</span>);
+<span class="hljs-built_in">console</span>.assert(minus(<span class="hljs-number">4</span>, <span class="hljs-number">2</span>) == <span class="hljs-number">2</span>, <span class="hljs-literal">true</span>);
+<span class="hljs-built_in">console</span>.assert(multiply(<span class="hljs-number">4</span>, <span class="hljs-number">2</span>) == <span class="hljs-number">8</span>, <span class="hljs-literal">true</span>);
+<span class="hljs-built_in">console</span>.assert(divide(<span class="hljs-number">4</span>, <span class="hljs-number">2</span>) == <span class="hljs-number">2</span>, <span class="hljs-literal">true</span>);
+</code></pre>
+<h3 id="t41.4 &#x6D4B;&#x8BD5;&#x6846;&#x67B6;">1.4 &#x6D4B;&#x8BD5;&#x6846;&#x67B6; <a href="#t41.4 &#x6D4B;&#x8BD5;&#x6846;&#x67B6;"> # </a></h3>
+<ul>
+<li>&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x53EF;&#x7528;&#x6765;&#x6D4B;&#x8BD5;&#x7A0B;&#x5E8F;&#x662F;&#x5426;&#x6B63;&#x786E;&#x5DE5;&#x4F5C;</li>
+<li>&#x901A;&#x5E38;&#x628A;&#x4E00;&#x7EC4;&#x76F8;&#x5173;&#x7684;&#x6D4B;&#x8BD5;&#x79F0;&#x4E3A;&#x4E00;&#x4E2A;&#x6D4B;&#x8BD5;&#x5957;&#x4EF6;(test suite)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x624B;&#x5DE5;&#x65AD;&#x8A00;</th>
+<th style="text-align:left">&#x6D4B;&#x8BD5;&#x6846;&#x67B6;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x6C61;&#x67D3;&#x6E90;&#x4EE3;&#x7801;</td>
+<td style="text-align:left">&#x53EF;&#x80FD;&#x5206;&#x79BB;&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#x548C;&#x6E90;&#x4EE3;&#x7801;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x6563;&#x843D;&#x5728;&#x5404;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;</td>
+<td style="text-align:left">&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x96C6;&#x4E2D;&#x5B58;&#x653E;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x6CA1;&#x6709;&#x529E;&#x6CD5;&#x6301;&#x4E45;&#x5316;&#x4FDD;&#x5B58;</td>
+<td style="text-align:left">&#x653E;&#x7F6E;&#x5230;&#x5355;&#x72EC;&#x7684;&#x6587;&#x4EF6;&#x4E2D;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x624B;&#x52A8;&#x6267;&#x884C;&#x548C;&#x5BF9;&#x6BD4;&#x9EBB;&#x70E6;&#x4E0D;&#x81EA;&#x52A8;</td>
+<td style="text-align:left">&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x8FD0;&#x884C;&#x3001;&#x663E;&#x793A;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;</td>
+</tr>
+</tbody>
+</table>
+<p>math.js</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params">a, b</span>) </span>{
+    <span class="hljs-keyword">return</span> a + b;
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">minus</span>(<span class="hljs-params">a, b</span>) </span>{
+    <span class="hljs-keyword">return</span> a - b;
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">multiply</span>(<span class="hljs-params">a, b</span>) </span>{
+    <span class="hljs-keyword">return</span> a * b;
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">divide</span>(<span class="hljs-params">a, b</span>) </span>{
+    <span class="hljs-keyword">return</span> a / b;
+}
+
+<span class="hljs-built_in">module</span>.exports = {
+    add,
+    minus,
+    multiply,
+    divide
+}
+</code></pre>
+<p>math.test.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> { add, minus, multiply, divide } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./math&apos;</span>);
+describe(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5;add&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    test(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5;1+1&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        assert(add(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>) == <span class="hljs-number">2</span>, <span class="hljs-string">&apos;1+1&#x6CA1;&#x6709;&#x7B49;&#x4E8E;2&apos;</span>);
+    });
+    test(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5;2+2&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        assert(add(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>) == <span class="hljs-number">4</span>, <span class="hljs-string">&apos;2+2&#x6CA1;&#x6709;&#x7B49;&#x4E8E;4&apos;</span>);
+    });
+});
+describe(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5;minus&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    test(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5;1+1&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        assert(minus(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>) == <span class="hljs-number">0</span>, <span class="hljs-string">&apos;1-1&#x6CA1;&#x6709;&#x7B49;&#x4E8E;0&apos;</span>);
+    });
+    test(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5;2+2&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        assert(minus(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>) == <span class="hljs-number">0</span>, <span class="hljs-string">&apos;2-2&#x6CA1;&#x6709;&#x7B49;&#x4E8E;0&apos;</span>);
+    });
+});
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">describe</span>(<span class="hljs-params">message, testSuite</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5;&#x5957;&#x4EF6;&apos;</span>, message);
+    testSuite();
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">test</span>(<span class="hljs-params">message, testCase</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&apos;</span>, message);
+    testCase();
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">assert</span>(<span class="hljs-params">assertion, message</span>) </span>{
+    <span class="hljs-keyword">if</span> (!assertion) {
+        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(message);
+    }
+}
+<span class="hljs-comment">/**
+ * 1. &#x4ECE;&#x6E90;&#x4EE3;&#x7801;&#x4E2D;&#x62BD;&#x79BB;
+ * 2. &#x6574;&#x4F53;&#x8BBE;&#x8BA1;&#x548C;&#x6392;&#x5217;
+ * 3. &#x653E;&#x7F6E;&#x5230;&#x5355;&#x72EC;&#x7684;&#x6587;&#x4EF6;&#x4E2D;
+ * 4. &#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x8FD0;&#x884C;&#x3001;&#x663E;&#x793A;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;
+ */</span>
+</code></pre>
+<h2 id="t55.Jest">5.Jest <a href="#t55.Jest"> # </a></h2>
+<ul>
+<li><a href="https://jestjs.io/docs/zh-Hans/getting-started">jest</a>&#x7531;Facebook&#x51FA;&#x54C1;,&#x975E;&#x5E38;&#x9002;&#x5408;React&#x6D4B;&#x8BD5;</li>
+<li>&#x96F6;&#x914D;&#x7F6E;</li>
+<li>&#x5185;&#x7F6E;&#x4EE3;&#x7801;&#x8986;&#x76D6;&#x7387;</li>
+<li>&#x5F3A;&#x5927;&#x7684;Mocks</li>
+</ul>
+<h3 id="t65.1 &#x5B89;&#x88C5;">5.1 &#x5B89;&#x88C5; <a href="#t65.1 &#x5B89;&#x88C5;"> # </a></h3>
+<pre><code class="lang-js">cnpm install --save-dev jest
+</code></pre>
+<h3 id="t75.2 &#x521D;&#x4F53;&#x9A8C;">5.2 &#x521D;&#x4F53;&#x9A8C; <a href="#t75.2 &#x521D;&#x4F53;&#x9A8C;"> # </a></h3>
+<p>src\math.spec.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> { add, minus, multiply, divide } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./math&apos;</span>);
+describe(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5;add&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    test(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5;1+1&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        expect(add(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>)).toBe(<span class="hljs-number">2</span>);
+    });
+    test(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5;2+2&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        expect(add(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>)).toBe(<span class="hljs-number">4</span>);
+    });
+});
+describe(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5;minus&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    test(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5;1-1&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        expect(minus(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>)).toBe(<span class="hljs-number">0</span>);
+    });
+    test(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5;2-2&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        expect(minus(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>)).toBe(<span class="hljs-number">0</span>);
+    });
+});
+</code></pre>
+<p>package.json</p>
+<pre><code class="lang-diff">  &quot;scripts&quot;: {
+<span class="hljs-addition">+    &quot;test&quot;: &quot;jest  --watchAll&quot;</span>
+  }
+</code></pre>
+<pre><code class="lang-js">npm  test
+</code></pre>
+<p><img src="http://img.zhufengpeixun.cn/jestresult.png" alt="jestresult"></p>
+<h3 id="t85.3 &#x6D4B;&#x8BD5;&#x8986;&#x76D6;&#x7387;">5.3 &#x6D4B;&#x8BD5;&#x8986;&#x76D6;&#x7387; <a href="#t85.3 &#x6D4B;&#x8BD5;&#x8986;&#x76D6;&#x7387;"> # </a></h3>
+<ul>
+<li>&#x4EE3;&#x7801;&#x8986;&#x76D6;&#x7387;&#x662F;&#x8F6F;&#x4EF6;&#x6D4B;&#x8BD5;&#x4E2D;&#x7684;&#x4E00;&#x79CD;&#x5EA6;&#x91CF;,&#x63CF;&#x8FF0;&#x7A0B;&#x5E8F;&#x4E2D;&#x6E90;&#x4EE3;&#x7801;&#x88AB;&#x6D4B;&#x8BD5;&#x7684;&#x6BD4;&#x4F8B;&#x548C;&#x7A0B;&#x5EA6;,&#x6240;&#x5F97;&#x6BD4;&#x4F8B;&#x79F0;&#x4E3A;&#x4EE3;&#x7801;&#x8986;&#x76D6;&#x7387;</li>
+<li>&#x5C3D;&#x91CF;&#x7A77;&#x5C3D;</li>
+<li>&#x529E;&#x754C;&#x8003;&#x8651;&#x5B8C;&#x6574;</li>
+<li>&#x7B80;&#x5355;</li>
+<li>&#x72EC;&#x7ACB;</li>
+<li>&#x91CD;&#x590D;&#x6267;&#x884C;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">line coverage</td>
+<td style="text-align:left">&#x884C;&#x8986;&#x76D6;&#x7387;</td>
+</tr>
+<tr>
+<td style="text-align:left">function coverage</td>
+<td style="text-align:left">&#x51FD;&#x6570;&#x8986;&#x76D6;&#x7387;</td>
+</tr>
+<tr>
+<td style="text-align:left">branch coverage</td>
+<td style="text-align:left">&#x5206;&#x652F;&#x8986;&#x76D6;&#x7387;</td>
+</tr>
+<tr>
+<td style="text-align:left">statement coverage</td>
+<td style="text-align:left">&#x8BED;&#x53E5;&#x8986;&#x76D6;&#x7387;</td>
+</tr>
+</tbody>
+</table>
+<p>package.json</p>
+<pre><code class="lang-diff">  &quot;scripts&quot;: {
+     &quot;test&quot;: &quot;jest&quot;,
+<span class="hljs-addition">+    &quot;coverage&quot;: &quot;jest --coverage&quot;</span>
+  },
+</code></pre>
+<pre><code class="lang-js">npx jest --coverage
+npm run coverage
+</code></pre>
+<p><img src="http://img.zhufengpeixun.cn/coveragefirst.png" alt="coveragefirst">
+<img src="http://img.zhufengpeixun.cn/coveragesecond.png" alt="coveragesecond"></p>
+<h3 id="t95.4 &#x914D;&#x7F6E;">5.4 &#x914D;&#x7F6E; <a href="#t95.4 &#x914D;&#x7F6E;"> # </a></h3>
+<ul>
+<li>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x914D;&#x7F6E;&#x6587;&#x4EF6;<a href="https://jestjs.io/docs/zh-Hans/configuration#defaults">configuration</a>&#x5BF9;Jest&#x8FDB;&#x884C;&#x914D;&#x7F6E;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/jestconfig.png" alt="jestconfig"></p>
+<h4 id="t105.4.1 &#x751F;&#x6210;&#x914D;&#x7F6E;&#x6587;&#x4EF6;">5.4.1 &#x751F;&#x6210;&#x914D;&#x7F6E;&#x6587;&#x4EF6; <a href="#t105.4.1 &#x751F;&#x6210;&#x914D;&#x7F6E;&#x6587;&#x4EF6;"> # </a></h4>
+<ul>
+<li>&#x652F;&#x6301;&#x6D4B;&#x8BD5;<code>ts</code>&#x548C;<code>jsx</code></li>
+</ul>
+<pre><code class="lang-js">jest --init
+yarn add --dev babel-jest  @types/jest @babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript typescript
+</code></pre>
+<h4 id="t115.4.2 babel.config.js">5.4.2 babel.config.js <a href="#t115.4.2 babel.config.js"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
+    <span class="hljs-attr">presets</span>: [
+        [
+            <span class="hljs-string">&apos;@babel/preset-env&apos;</span>,
+            {
+                <span class="hljs-attr">targets</span>: {
+                    <span class="hljs-attr">node</span>: <span class="hljs-string">&apos;current&apos;</span>,
+                }
+            }
+        ],
+        <span class="hljs-string">&apos;@babel/preset-typescript&apos;</span>,
+        <span class="hljs-string">&apos;@babel/preset-react&apos;</span>
+    ],
+};
+</code></pre>
+<h4 id="t125.4.3 jest.config.js">5.4.3 jest.config.js <a href="#t125.4.3 jest.config.js"> # </a></h4>
+<ul>
+<li><a href="https://github.com/jsdom/jsdom">jsdom</a>&#x662F;web&#x6807;&#x51C6;&#x7684;&#x7EAF;JS&#x5B9E;&#x73B0;</li>
+</ul>
+<p>jest.config.js&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;</p>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
+    <span class="hljs-attr">testMatch</span>: [<span class="hljs-string">&quot;**/__tests__/**/*.[jt]s?(x)&quot;</span>,<span class="hljs-string">&quot;**/?(*.)+(spec|test).[tj]s?(x)&quot;</span>],
+    <span class="hljs-attr">testRegex</span>: [],
+    <span class="hljs-attr">testEnvironment</span>:<span class="hljs-string">&apos;jsdom&apos;</span>,
+    <span class="hljs-attr">rootDir</span>:<span class="hljs-literal">null</span>,<span class="hljs-comment">//&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&lt;rootDir&gt;&#x5F15;&#x7528;</span>
+    <span class="hljs-attr">moduleFileExtensions</span>:[<span class="hljs-string">&quot;js&quot;</span>,<span class="hljs-string">&quot;json&quot;</span>,<span class="hljs-string">&quot;jsx&quot;</span>,<span class="hljs-string">&quot;ts&quot;</span>,<span class="hljs-string">&quot;tsx&quot;</span>,<span class="hljs-string">&quot;node&quot;</span>],
+    <span class="hljs-attr">clearMocks</span>:<span class="hljs-literal">true</span>
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x9009;&#x9879;</th>
+<th style="text-align:left">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">testMatch</td>
+<td style="text-align:left">&#x7528;&#x6765;&#x68C0;&#x6D4B;&#x6D4B;&#x8BD5;&#x6587;&#x4EF6;&#x7684;glob&#x6A21;&#x5F0F;</td>
+</tr>
+<tr>
+<td style="text-align:left">testRegex</td>
+<td style="text-align:left">&#x7528;&#x6765;&#x68C0;&#x6D4B;&#x6D4B;&#x8BD5;&#x6587;&#x4EF6;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x6216;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x6570;&#x7EC4;</td>
+</tr>
+<tr>
+<td style="text-align:left">testEnvironment</td>
+<td style="text-align:left">&#x7528;&#x6765;&#x8DD1;&#x6D4B;&#x8BD5;&#x7684;&#x6D4B;&#x8BD5;&#x73AF;&#x5883;,&#x53EF;&#x4EE5;&#x9009;&#x62E9;<code>jsdom</code>&#x6216;<code>node</code></td>
+</tr>
+<tr>
+<td style="text-align:left">rootDir</td>
+<td style="text-align:left">Jest&#x7528;&#x6765;&#x63CF;&#x8FF0;&#x6D4B;&#x8BD5;&#x6587;&#x4EF6;&#x6216;&#x6A21;&#x5757;&#x7684;&#x6839;&#x76EE;&#x5F55;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;<code>package.json</code>&#x6240;&#x5728;&#x7684;&#x76EE;&#x5F55;</td>
+</tr>
+<tr>
+<td style="text-align:left">moduleFileExtensions</td>
+<td style="text-align:left">&#x4F7F;&#x7528;&#x7684;&#x6A21;&#x5757;&#x7684;&#x6587;&#x4EF6;&#x6269;&#x5C55;&#x540D;&#x6570;&#x7EC4;</td>
+</tr>
+<tr>
+<td style="text-align:left">clearMocks</td>
+<td style="text-align:left">&#x5728;&#x6BCF;&#x4E00;&#x6B21;&#x6D4B;&#x8BD5;&#x65F6;&#x81EA;&#x52A8;&#x6E05;&#x9664;mock&#x8C03;&#x7528;&#x548C;&#x5B9E;&#x4F8B;</td>
+</tr>
+<tr>
+<td style="text-align:left">coverageDirectory</td>
+<td style="text-align:left">&#x8F93;&#x51FA;&#x4EE3;&#x7801;&#x8986;&#x76D6;&#x7387;&#x7684;&#x76EE;&#x5F55;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="t135.4.4 tsconfig.json">5.4.4 tsconfig.json <a href="#t135.4.4 tsconfig.json"> # </a></h4>
+<pre><code class="lang-js">tsx --init
+</code></pre>
+<p>tsconfig.json</p>
+<pre><code class="lang-diff">{
+  &quot;compilerOptions&quot;: {
+<span class="hljs-addition">+   &quot;target&quot;: &quot;ES2015&quot;, </span>
+    &quot;module&quot;: &quot;commonjs&quot;, 
+<span class="hljs-addition">+    &quot;jsx&quot;: &quot;preserve&quot;, </span>
+<span class="hljs-addition">+    &quot;strict&quot;: false, </span>
+<span class="hljs-addition">+    &quot;noImplicitAny&quot;: false,</span>
+<span class="hljs-addition">+    &quot;strictNullChecks&quot;: false, </span>
+    &quot;esModuleInterop&quot;: true
+  }
+}
+</code></pre>
+<h3 id="t145.5 Matchers">5.5 Matchers <a href="#t145.5 Matchers"> # </a></h3>
+<ul>
+<li>Jest&#x4F7F;&#x7528;<a href="https://jestjs.io/docs/zh-Hans/using-matchers">&#x5339;&#x914D;&#x5668;</a>&#x8BA9;&#x4F60;&#x53EF;&#x4EE5;&#x7528;&#x5404;&#x79CD;&#x65B9;&#x5F0F;&#x6D4B;&#x8BD5;&#x4F60;&#x7684;&#x4EE3;&#x7801;</li>
+<li><a href="https://jestjs.io/docs/zh-Hans/expect">&#x5B8C;&#x6574;&#x7684;&#x5339;&#x914D;&#x5668;API</a></li>
+<li><code>Matchers</code>&#x4E5F;&#x53EF;&#x4EE5;&#x79F0;&#x4E4B;&#x4E3A;&#x65AD;&#x8A00;&#x5E93;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/allmatchers.png" alt="allmatchers"></p>
+<h4 id="t155.5.1 matches.tsx">5.5.1 matches.tsx <a href="#t155.5.1 matches.tsx"> # </a></h4>
+<p><strong>tests</strong>\matches.tsx</p>
+<pre><code class="lang-js">declare <span class="hljs-keyword">var</span> expect;
+it(<span class="hljs-string">&apos;matchers&apos;</span>, () =&gt; {
+    expect(<span class="hljs-number">1</span>).toEqual(<span class="hljs-number">1</span>);
+    expect([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]).toEqual([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]);
+    expect(<span class="hljs-literal">null</span>).toBeNull();
+    expect([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]).toContain(<span class="hljs-number">1</span>);
+    expect({ <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;zhufeng&apos;</span> }).toHaveProperty(<span class="hljs-string">&apos;name&apos;</span>);
+    expect(<span class="hljs-string">&apos;123&apos;</span>).toContain(<span class="hljs-string">&apos;2&apos;</span>);
+    expect(<span class="hljs-string">&apos;123&apos;</span>).toMatch(<span class="hljs-regexp">/^\d+$/</span>);
+    expect([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]).not.toContain(<span class="hljs-number">4</span>);
+});
+</code></pre>
+<h3 id="t165.6 &#x6D4B;&#x8BD5;DOM">5.6 &#x6D4B;&#x8BD5;DOM <a href="#t165.6 &#x6D4B;&#x8BD5;DOM"> # </a></h3>
+<ul>
+<li>Jest&#x91CC;&#x9762;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x64CD;&#x4F5C;DOM,&#x662F;&#x56E0;&#x4E3A;&#x5185;&#x7F6E;&#x4E86;<a href="https://github.com/jsdom/jsdom">jsdom</a></li>
+<li>jsdom&#x662F;&#x4E00;&#x5957;&#x6A21;&#x62DF;&#x7684;DOM&#x73AF;&#x5883;,&#x53EF;&#x4EE5;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E0A;&#x8FD0;&#x884C;</li>
+<li>&#x53EF;&#x4EE5;&#x4FEE;&#x6539;<code>jest.config.js</code>,&#x8BBE;&#x7F6E; <code>testEnvironment: &quot;jsdom&quot;</code></li>
+</ul>
+<h4 id="t175.6.1 src\domUtils.tsx">5.6.1 src\domUtils.tsx <a href="#t175.6.1 src\domUtils.tsx"> # </a></h4>
+<p>src\domUtils.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">remove</span>(<span class="hljs-params">node</span>) </span>{
+    node.parentNode.removeChild(node);
+}
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">on</span>(<span class="hljs-params">node, type, handler</span>) </span>{
+    node.addEventListener(type, handler);
+}
+</code></pre>
+<h4 id="t185.6.2 tests\domUtils.tsx">5.6.2 tests\domUtils.tsx <a href="#t185.6.2 tests\domUtils.tsx"> # </a></h4>
+<p><strong>tests</strong>\domUtils.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { remove, on } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../src/domUtils&apos;</span>;
+declare <span class="hljs-keyword">var</span> describe;
+declare <span class="hljs-keyword">var</span> test;
+declare <span class="hljs-keyword">var</span> expect;
+describe(<span class="hljs-string">&apos;domUtils&apos;</span>, () =&gt; {
+    test(<span class="hljs-string">&apos;remove&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">document</span>.body.innerHTML = (
+            <span class="hljs-string">`
+            &lt;div id=&quot;parent&quot;&gt;
+              &lt;div id=&quot;child&quot;&gt;&#x513F;&#x5B50;&lt;/div&gt;
+            &lt;/div&gt;
+            `</span>
+        );
+        <span class="hljs-keyword">let</span> parent = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;parent&apos;</span>);
+        expect(parent.nodeName.toLocaleLowerCase()).toBe(<span class="hljs-string">&apos;div&apos;</span>);
+        <span class="hljs-keyword">const</span> child = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;child&apos;</span>);
+        expect(child.nodeName.toLocaleLowerCase()).toBe(<span class="hljs-string">&apos;div&apos;</span>);
+        remove(child);
+        expect(<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;child&apos;</span>)).toBeNull();
+    });
+    test(<span class="hljs-string">&apos;on&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">document</span>.body.innerHTML = <span class="hljs-string">&apos;&lt;div id=&quot;container&quot;&gt;&lt;button id=&quot;clickMe&quot;&gt;click&lt;/button&gt;&lt;/div&gt;&apos;</span>;
+        <span class="hljs-keyword">let</span> clickMe = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;clickMe&apos;</span>);
+        on(clickMe, <span class="hljs-string">&apos;click&apos;</span>, () =&gt; {
+            clickMe.innerHTML = <span class="hljs-string">&apos;clicked&apos;</span>;
+        });
+        clickMe.click();
+        expect(clickMe.innerHTML).toBe(<span class="hljs-string">&apos;clicked&apos;</span>);
+    });
+})
+</code></pre>
+<h3 id="t195.7 &#x5F02;&#x6B65;&#x8BF7;&#x6C42;">5.7 &#x5F02;&#x6B65;&#x8BF7;&#x6C42; <a href="#t195.7 &#x5F02;&#x6B65;&#x8BF7;&#x6C42;"> # </a></h3>
+<ul>
+<li><a href="https://jestjs.io/docs/zh-Hans/asynchronous">asynchronous</a><h4 id="t205.7.1 src\api.tsx">5.7.1 src\api.tsx <a href="#t205.7.1 src\api.tsx"> # </a></h4>
+src\api.tsx<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> callCallback = <span class="hljs-function">(<span class="hljs-params">onSuccess</span>) =&gt;</span> {
+  setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+      onSuccess({ <span class="hljs-attr">code</span>: <span class="hljs-number">0</span> });
+  }, <span class="hljs-number">3000</span>);
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> callPromise = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">resolve</span>) </span>{
+      setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+          resolve({ <span class="hljs-attr">code</span>: <span class="hljs-number">0</span> });
+      }, <span class="hljs-number">3000</span>);
+  });
+}
+</code></pre>
+</li>
+</ul>
+<h4 id="t215.7.2 tests\api.tsx">5.7.2 tests\api.tsx <a href="#t215.7.2 tests\api.tsx"> # </a></h4>
+<p><strong>tests</strong>\api.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { callCallback, callPromise } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../src/api&apos;</span>;
+declare <span class="hljs-keyword">var</span> describe;
+declare <span class="hljs-keyword">var</span> it;
+declare <span class="hljs-keyword">var</span> expect;
+describe(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5;&#x5F02;&#x6B65;&#x63A5;&#x53E3;&apos;</span>, () =&gt; {
+    it(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5; callCallback&apos;</span>, (done) =&gt; {
+        callCallback(<span class="hljs-function"><span class="hljs-params">result</span> =&gt;</span> {
+            expect(result.code).toBe(<span class="hljs-number">0</span>);
+            done();
+        });
+    });
+    it(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5; callPromise&apos;</span>, () =&gt; {
+        <span class="hljs-keyword">return</span> callPromise().then(<span class="hljs-function">(<span class="hljs-params">result: any</span>) =&gt;</span> {
+            expect(result.code).toBe(<span class="hljs-number">0</span>);
+        });
+    });
+    it(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5; callAsync&apos;</span>, <span class="hljs-keyword">async</span> () =&gt; {
+        <span class="hljs-keyword">let</span> result: any = <span class="hljs-keyword">await</span> callPromise();
+        expect(result.code).toBe(<span class="hljs-number">0</span>);
+    });
+    it(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5; resolves&apos;</span>, <span class="hljs-keyword">async</span> () =&gt; {
+        expect(callPromise()).resolves.toMatch({ <span class="hljs-attr">code</span>: <span class="hljs-number">0</span> });
+    });
+});
+</code></pre>
+<h3 id="t225.8 &#x94A9;&#x5B50;&#x51FD;&#x6570;">5.8 &#x94A9;&#x5B50;&#x51FD;&#x6570; <a href="#t225.8 &#x94A9;&#x5B50;&#x51FD;&#x6570;"> # </a></h3>
+<ul>
+<li><a href="https://jestjs.io/docs/en/api#afterallfn-timeout">&#x94A9;&#x5B50;&#x51FD;&#x6570;</a>&#x5BF9;&#x4E0D;&#x540C;&#x6D4B;&#x8BD5;&#x6267;&#x884C;&#x9636;&#x6BB5;&#x63D0;&#x4F9B;&#x4E86;&#x5BF9;&#x5E94;&#x7684;&#x56DE;&#x8C03;&#x63A5;&#x53E3;</li>
+<li>beforeAll &#x5728;&#x6240;&#x6709;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x6267;&#x884C;&#x4E4B;&#x524D;&#x6267;&#x884C;</li>
+<li>beforeEach &#x6BCF;&#x4E2A;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x6267;&#x884C;&#x524D;&#x6267;&#x884C;</li>
+<li>afterEach &#x6BCF;&#x4E2A;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x6267;&#x884C;&#x7ED3;&#x675F;&#x65F6;</li>
+<li>afterAll &#x7B49;&#x6240;&#x6709;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x90FD;&#x6267;&#x884C;&#x4E4B;&#x540E;&#x6267;&#x884C;</li>
+<li><a href="https://jestjs.io/docs/en/api#testonlyname-fn-timeout">only</a>&#x7684;&#x610F;&#x601D;&#x662F;&#x53EA;&#x8C03;&#x7528;&#x7279;&#x5B9A;&#x7684;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> counter = <span class="hljs-number">0</span>;
+declare <span class="hljs-keyword">var</span> describe;
+declare <span class="hljs-keyword">var</span> beforeAll;
+declare <span class="hljs-keyword">var</span> beforeEach;
+declare <span class="hljs-keyword">var</span> afterEach;
+declare <span class="hljs-keyword">var</span> afterAll;
+declare <span class="hljs-keyword">var</span> test;
+describe(<span class="hljs-string">&apos;counter&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&apos;</span>, () =&gt; {
+    beforeAll(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;BeforeAll&apos;</span>); counter++;
+    })
+
+    beforeEach(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;BeforeEach&apos;</span>); counter++;
+    })
+
+    afterEach(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;AfterEach&apos;</span>); counter++;
+    })
+
+    afterAll(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;AfterAll&apos;</span>); counter++;
+        <span class="hljs-built_in">console</span>.log(counter);
+    })
+
+    describe(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&apos;</span>, () =&gt; {
+        test(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;1&apos;</span>, () =&gt; {
+            <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;1&apos;</span>); counter++;
+        });
+        test(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;2&apos;</span>, () =&gt; {
+            <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;2&apos;</span>); counter++;
+        });
+    });
+});
+</code></pre>
+<h3 id="t235.9 mock">5.9 mock <a href="#t235.9 mock"> # </a></h3>
+<ul>
+<li><a href="https://jestjs.io/docs/zh-Hans/mock-functions">mock-functions</a>&#x53EF;&#x4EE5;&#x64E6;&#x9664;&#x51FD;&#x6570;&#x7684;&#x5B9E;&#x9645;&#x5B9E;&#x73B0;&#x6765;&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;</li>
+<li>&#x4F7F;&#x7528;<code>mock function</code>&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x51FD;&#x6570;&#x7684;&#x8C03;&#x7528;&#x6B21;&#x6570;&#x4EE5;&#x53CA;&#x5165;&#x53C2;&#x7684;&#x60C5;&#x51B5;</li>
+<li>&#x539F;&#x751F;&#x7684;&#x5B9A;&#x65F6;&#x5668;&#x51FD;&#x6570;&#x5E76;&#x4E0D;&#x662F;&#x5F88;&#x65B9;&#x4FBF;&#x6D4B;&#x8BD5;,&#x6211;&#x4EEC;&#x901A;&#x8FC7;<a href="https://jestjs.io/docs/zh-Hans/timer-mocks">jest.useFakeTimers()</a>&#x6765;&#x6A21;&#x62DF;&#x5B9A;&#x65F6;&#x5668;&#x51FD;&#x6570;</li>
+</ul>
+<h4 id="t245.9.1 src\mock.tsx">5.9.1 src\mock.tsx <a href="#t245.9.1 src\mock.tsx"> # </a></h4>
+<p>src\mock.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> axios <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;axios&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">exec</span>(<span class="hljs-params">callback</span>) </span>{
+    callback(<span class="hljs-string">&apos;123&apos;</span>);
+    callback(<span class="hljs-string">&apos;456&apos;</span>);
+}
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createInstance</span>(<span class="hljs-params">ClassName</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> ClassName();
+}
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getData</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> axios.get(<span class="hljs-string">&apos;/api/users&apos;</span>);
+}
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">delay</span>(<span class="hljs-params">callback, ms</span>) </span>{
+    setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+        callback(ms);
+    }, ms);
+}
+</code></pre>
+<h4 id="t255.9.2 tests\mock.tsx">5.9.2 tests\mock.tsx <a href="#t255.9.2 tests\mock.tsx"> # </a></h4>
+<p><strong>tests</strong>\mock.tsx</p>
+<pre><code class="lang-js">jest.mock(<span class="hljs-string">&apos;axios&apos;</span>);
+<span class="hljs-keyword">import</span> { exec, createInstance, getData, delay } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../src/mock&apos;</span>;
+<span class="hljs-keyword">import</span> axios <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;axios&apos;</span>;
+declare <span class="hljs-keyword">var</span> jest;
+declare <span class="hljs-keyword">var</span> expect;
+test(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5;exec&apos;</span>, () =&gt; {
+    <span class="hljs-comment">//let callback = jest.fn(() =&gt; Math.random());</span>
+    <span class="hljs-keyword">let</span> callback = jest.fn();
+    callback.mockReturnValueOnce(<span class="hljs-string">&apos;abc&apos;</span>);
+    callback.mockReturnValueOnce(<span class="hljs-string">&apos;def&apos;</span>);
+    exec(callback);
+    expect(callback).toBeCalled();
+    expect(callback).toBeCalledTimes(<span class="hljs-number">2</span>);
+    expect(callback).toBeCalledWith(<span class="hljs-string">&apos;123&apos;</span>);
+});
+test(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5;createInstance&apos;</span>, () =&gt; {
+    <span class="hljs-comment">//let callback = jest.fn(() =&gt; Math.random());</span>
+    <span class="hljs-keyword">let</span> callback = jest.fn(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">this: any</span>) </span>{
+        <span class="hljs-keyword">this</span>.name = <span class="hljs-string">&apos;zhufeng&apos;</span>;
+    });
+    createInstance(callback);
+});
+
+test(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5;getData&apos;</span>, <span class="hljs-keyword">async</span> () =&gt; {
+    (axios.get <span class="hljs-keyword">as</span> any).mockResolvedValue({ <span class="hljs-attr">data</span>: { <span class="hljs-attr">code</span>: <span class="hljs-number">0</span> } });
+    <span class="hljs-keyword">let</span> result = <span class="hljs-keyword">await</span> getData();
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;result&apos;</span>, result);
+    expect(result.data).toEqual({ <span class="hljs-attr">code</span>: <span class="hljs-number">0</span> });
+});
+jest.useFakeTimers();
+test(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5;delay&apos;</span>, (done) =&gt; {
+    delay(<span class="hljs-function">(<span class="hljs-params">result</span>) =&gt;</span> {
+        expect(result).toBe(<span class="hljs-number">1000</span>);
+        done();
+    }, <span class="hljs-number">1000</span>);
+    jest.runAllTimers();
+});
+</code></pre>
+<h2 id="t266. TDD(Test-Driven-Development)">6. TDD(Test-Driven-Development) <a href="#t266. TDD(Test-Driven-Development)"> # </a></h2>
+<ul>
+<li>&#x6D4B;&#x8BD5;&#x9A71;&#x52A8;&#x5F00;&#x53D1;&#x6A21;&#x5F0F;  &#x9700;&#x6C42;&#x5206;&#x6790;-&gt;&#x62C6;&#x5206;&#x6A21;&#x5757;-&gt;&#x7F16;&#x5199;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;-&gt;&#x7F16;&#x5199;&#x4EE3;&#x7801;&#x901A;&#x8FC7;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;-&gt;&#x91CD;&#x6784;-&gt;&#x53D1;&#x5E03;</li>
+<li>&#x91CD;&#x6784;&#x65F6;&#x53EF;&#x4EE5;&#x51CF;&#x5C11;BUG&#x3001;&#x63D0;&#x9AD8;&#x4EE3;&#x7801;&#x8D28;&#x91CF;&#x3001;&#x63D0;&#x9AD8;&#x53EF;&#x7EF4;&#x62A4;&#x6027;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/tddimage.jpg" alt="tddimage"></p>
+<h3 id="t276.1 &#x521B;&#x5EFA;&#x9879;&#x76EE;">6.1 &#x521B;&#x5EFA;&#x9879;&#x76EE; <a href="#t276.1 &#x521B;&#x5EFA;&#x9879;&#x76EE;"> # </a></h3>
+<p><img src="http://img.zhufengpeixun.cn/messagelist.png" alt="messagelist"></p>
+<p><a href="http://img.zhufengpeixun.cn/msg.html">&#x9879;&#x76EE;&#x9884;&#x89C8;</a></p>
+<pre><code class="lang-js">create-react-app  zhufeng_message_app --typescript
+cd zhufeng_message_app
+cnpm install --save-dev enzyme @types/enzyme enzyme-adapter-react<span class="hljs-number">-16</span> @types/enzyme-adapter-react<span class="hljs-number">-16</span> -D
+yarn start
+</code></pre>
+<h3 id="t286.2 &#x73AF;&#x5883;&#x51C6;&#x5907;">6.2 &#x73AF;&#x5883;&#x51C6;&#x5907; <a href="#t286.2 &#x73AF;&#x5883;&#x51C6;&#x5907;"> # </a></h3>
+<h4 id="t296.2.1 src\react-app-env.d.ts">6.2.1 src\react-app-env.d.ts <a href="#t296.2.1 src\react-app-env.d.ts"> # </a></h4>
+<p>src\react-app-env.d.ts</p>
+<pre><code class="lang-js"><span class="hljs-comment">/// &lt;reference types=&quot;react-scripts&quot; /&gt;</span>
+</code></pre>
+<h4 id="t306.2.2 src\setupTests.ts">6.2.2 src\setupTests.ts <a href="#t306.2.2 src\setupTests.ts"> # </a></h4>
+<p>src\setupTests.ts</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> <span class="hljs-string">&apos;@testing-library/jest-dom/extend-expect&apos;</span>;
+<span class="hljs-keyword">import</span> Enzyme <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;enzyme&apos;</span>;
+<span class="hljs-keyword">import</span> Adaptor <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;enzyme-adapter-react-16&apos;</span>;
+Enzyme.configure({ <span class="hljs-attr">adapter</span>: <span class="hljs-keyword">new</span> Adaptor() });
+</code></pre>
+<h4 id="t316.2.3 tsconfig.json">6.2.3 tsconfig.json <a href="#t316.2.3 tsconfig.json"> # </a></h4>
+<p>tsconfig.json</p>
+<pre><code class="lang-diff">{
+  &quot;compilerOptions&quot;: {
+    &quot;jsx&quot;: &quot;react&quot;,
+<span class="hljs-addition">+    &quot;noImplicitAny&quot;: false</span>
+  }
+}
+</code></pre>
+<h3 id="t326.3 Message.tsx">6.3 Message.tsx <a href="#t326.3 Message.tsx"> # </a></h3>
+<ul>
+<li><a href="https://airbnb.io/enzyme/docs/api/shallow.html">shallow</a></li>
+<li><a href="https://airbnb.io/enzyme/docs/api/mount.html">mount</a></li>
+<li><a href="http://npm.taobao.org/package/expect-enzyme">expect-enzyme</a></li>
+</ul>
+<h4 id="t336.3.1 &#x6D4B;&#x8BD5;&#x7528;&#x4F8B;">6.3.1 &#x6D4B;&#x8BD5;&#x7528;&#x4F8B; <a href="#t336.3.1 &#x6D4B;&#x8BD5;&#x7528;&#x4F8B;"> # </a></h4>
+<p>src__tests__\components\Message.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> Message <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../components/Message&apos;</span>;
+<span class="hljs-keyword">import</span> { shallow } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;enzyme&apos;</span>;
+describe(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5;Message&apos;</span>, () =&gt; {
+    test(<span class="hljs-string">&apos;&#x5E94;&#x8BE5;&#x6E32;&#x67D3;&#x51FA;&#x6765;&#x4E00;&#x4E2A;li,&#x7C7B;&#x540D;list-group-item,&#x5185;&#x5BB9;&#x662F;zhufeng&apos;</span>, () =&gt; {
+        <span class="hljs-keyword">let</span> message = { <span class="hljs-attr">id</span>: <span class="hljs-string">&apos;1&apos;</span>, <span class="hljs-attr">content</span>: <span class="hljs-string">&apos;zhufeng&apos;</span> };
+        <span class="hljs-keyword">const</span> wrapper = shallow(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Message</span> <span class="hljs-attr">message</span>=<span class="hljs-string">{message}</span> /&gt;</span></span>);
+        <span class="hljs-keyword">const</span> li = wrapper.find(<span class="hljs-string">`li`</span>);
+        expect(li).toHaveLength(<span class="hljs-number">1</span>);
+        expect(li.prop(<span class="hljs-string">&apos;className&apos;</span>)).toBe(<span class="hljs-string">&apos;list-group-item&apos;</span>);
+        expect(li.prop(<span class="hljs-string">&apos;children&apos;</span>)).toContain(<span class="hljs-string">&apos;zhufeng&apos;</span>);
+    });
+});
+</code></pre>
+<h4 id="t346.3.2 &#x91CD;&#x6784;&#x5B9E;&#x73B0;">6.3.2 &#x91CD;&#x6784;&#x5B9E;&#x73B0; <a href="#t346.3.2 &#x91CD;&#x6784;&#x5B9E;&#x73B0;"> # </a></h4>
+<p>src\components\Message.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">props</span>) </span>{
+    <span class="hljs-keyword">let</span> { content } = props.message;
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;list-group-item&quot;</span> &gt;</span>{content}<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span></span>
+    )
+}
+</code></pre>
+<h3 id="t356.4 MessageList.tsx">6.4 MessageList.tsx <a href="#t356.4 MessageList.tsx"> # </a></h3>
+<h4 id="t366.4.1 &#x6D4B;&#x8BD5;&#x7528;&#x4F8B;">6.4.1 &#x6D4B;&#x8BD5;&#x7528;&#x4F8B; <a href="#t366.4.1 &#x6D4B;&#x8BD5;&#x7528;&#x4F8B;"> # </a></h4>
+<p>src__tests__\components\MessageList.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> MessageList <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../components/MessageList&apos;</span>;
+<span class="hljs-keyword">import</span> { mount } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;enzyme&apos;</span>;
+describe(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5;MessageList&apos;</span>, () =&gt; {
+  test(<span class="hljs-string">&apos;&#x4F20;&#x5165;2&#x4E2A;&#x7559;&#x8A00;,&#x5E94;&#x8BE5;&#x6E32;&#x67D3;&#x51FA;&#x6765;2&#x4E2A;li&apos;</span>, () =&gt; {
+    <span class="hljs-keyword">let</span> messages = [{ <span class="hljs-attr">id</span>: <span class="hljs-string">&apos;1&apos;</span>, <span class="hljs-attr">content</span>: <span class="hljs-string">&apos;zhufeng&apos;</span> }, { <span class="hljs-attr">id</span>: <span class="hljs-string">&apos;2&apos;</span>, <span class="hljs-attr">content</span>: <span class="hljs-string">&apos;jiagou&apos;</span> }];
+    <span class="hljs-keyword">const</span> wrapper = mount(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">MessageList</span> <span class="hljs-attr">messages</span>=<span class="hljs-string">{messages}</span> /&gt;</span></span>);
+    <span class="hljs-keyword">const</span> listItems = wrapper.find(<span class="hljs-string">`li`</span>);
+    expect(listItems).toHaveLength(<span class="hljs-number">2</span>);
+    expect(listItems.at(<span class="hljs-number">0</span>).text()).toContain(<span class="hljs-string">&apos;zhufeng&apos;</span>);
+    expect(listItems.at(<span class="hljs-number">1</span>).text()).toContain(<span class="hljs-string">&apos;jiagou&apos;</span>);
+  });
+});
+</code></pre>
+<h4 id="t376.4.2 &#x91CD;&#x6784;&#x5B9E;&#x73B0;">6.4.2 &#x91CD;&#x6784;&#x5B9E;&#x73B0; <a href="#t376.4.2 &#x91CD;&#x6784;&#x5B9E;&#x73B0;"> # </a></h4>
+<p>src\components\MessageList.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> Message <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./Message&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">props</span>) </span>{
+    <span class="hljs-keyword">let</span> messages = props.messages;
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;list-group&quot;</span>&gt;</span>
+            {
+                messages.map((message) =&gt; (
+                    <span class="hljs-tag">&lt;<span class="hljs-name">Message</span> <span class="hljs-attr">message</span>=<span class="hljs-string">{message}</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{message.id}</span> /&gt;</span>
+                ))
+            }
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></span>
+    )
+}
+</code></pre>
+<h3 id="t386.5 MessageForm.tsx">6.5 MessageForm.tsx <a href="#t386.5 MessageForm.tsx"> # </a></h3>
+<h4 id="t396.5.1 &#x6D4B;&#x8BD5;&#x7528;&#x4F8B;">6.5.1 &#x6D4B;&#x8BD5;&#x7528;&#x4F8B; <a href="#t396.5.1 &#x6D4B;&#x8BD5;&#x7528;&#x4F8B;"> # </a></h4>
+<p>src__tests__\components\MessageForm.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> MessageForm <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../components/MessageForm&apos;</span>;
+<span class="hljs-keyword">import</span> { shallow, mount } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;enzyme&apos;</span>;
+describe(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5;MessageForm&apos;</span>, () =&gt; {
+    test(<span class="hljs-string">&apos;&#x5E94;&#x8BE5;&#x6E32;&#x67D3;&#x51FA;&#x6765;&#x4E00;&#x4E2A;&#x8868;&#x5355;,&#x8868;&#x5355;&#x91CC;&#x6709;input&#x548C;button&apos;</span>, () =&gt; {
+        <span class="hljs-keyword">let</span> addMessage = jest.fn();
+        <span class="hljs-keyword">const</span> wrapper = shallow(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">MessageForm</span> <span class="hljs-attr">addMessage</span>=<span class="hljs-string">{addMessage}</span> /&gt;</span></span>);
+        <span class="hljs-keyword">const</span> form = wrapper.find(<span class="hljs-string">`form`</span>);
+        <span class="hljs-keyword">const</span> input = wrapper.find(<span class="hljs-string">`input`</span>);
+        <span class="hljs-keyword">const</span> button = wrapper.find(<span class="hljs-string">`button`</span>);
+        expect(form).toHaveLength(<span class="hljs-number">1</span>);
+        expect(input).toHaveLength(<span class="hljs-number">1</span>);
+        expect(button).toHaveLength(<span class="hljs-number">1</span>);
+    });
+    test(<span class="hljs-string">&apos;&#x5728;&#x8F93;&#x5165;&#x6846;&#x91CC;&#x8F93;&#x5165;&#x5185;&#x5BB9;,&#x5982;&#x679C;&#x5185;&#x5BB9;&#x4E3A;&#x7A7A;&#x70B9;&#x51FB;&#x63D0;&#x4EA4;&#x6309;&#x94AE;&#x4E0D;&#x4F1A;&#x6DFB;&#x52A0;&#x7559;&#x8A00;&apos;</span>, () =&gt; {
+        <span class="hljs-keyword">let</span> addMessage = jest.fn();
+        <span class="hljs-keyword">const</span> wrapper = mount(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">MessageForm</span> <span class="hljs-attr">addMessage</span>=<span class="hljs-string">{addMessage}</span> /&gt;</span></span>);
+        <span class="hljs-keyword">const</span> input = wrapper.find(<span class="hljs-string">`input`</span>);
+        <span class="hljs-keyword">const</span> button = wrapper.find(<span class="hljs-string">`button`</span>);
+        <span class="hljs-keyword">const</span> newValue = <span class="hljs-string">&apos;&apos;</span>;
+        input.simulate(<span class="hljs-string">&apos;change&apos;</span>, { <span class="hljs-attr">target</span>: { <span class="hljs-attr">value</span>: newValue } });
+        button.simulate(<span class="hljs-string">&apos;click&apos;</span>);
+        expect(addMessage).not.toHaveBeenCalled();
+    });
+    test(<span class="hljs-string">&apos;&#x5728;&#x8F93;&#x5165;&#x6846;&#x91CC;&#x8F93;&#x5165;&#x5185;&#x5BB9;,&#x5982;&#x679C;&#x5185;&#x5BB9;&#x4E0D;&#x4E3A;&#x7A7A;&#x70B9;&#x51FB;&#x63D0;&#x4EA4;&#x6309;&#x94AE;&#x4F1A;&#x6DFB;&#x52A0;&#x7559;&#x8A00;&apos;</span>, () =&gt; {
+        <span class="hljs-keyword">let</span> addMessage = jest.fn();
+        <span class="hljs-keyword">const</span> wrapper = mount(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">MessageForm</span> <span class="hljs-attr">addMessage</span>=<span class="hljs-string">{addMessage}</span> /&gt;</span></span>);
+        <span class="hljs-keyword">const</span> input = wrapper.find(<span class="hljs-string">`input`</span>);
+        <span class="hljs-keyword">const</span> button = wrapper.find(<span class="hljs-string">`button`</span>);
+        <span class="hljs-keyword">const</span> newValue = <span class="hljs-string">&apos;&#x65B0;&#x7559;&#x8A00;&apos;</span>;
+        input.simulate(<span class="hljs-string">&apos;change&apos;</span>, { <span class="hljs-attr">target</span>: { <span class="hljs-attr">value</span>: newValue } });
+        button.simulate(<span class="hljs-string">&apos;click&apos;</span>);
+        expect(addMessage).toHaveBeenLastCalledWith(newValue)
+    });
+});
+</code></pre>
+<h4 id="t406.5.2 &#x91CD;&#x6784;&#x5B9E;&#x73B0;">6.5.2 &#x91CD;&#x6784;&#x5B9E;&#x73B0; <a href="#t406.5.2 &#x91CD;&#x6784;&#x5B9E;&#x73B0;"> # </a></h4>
+<p>src\components\MessageForm.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { useState, useCallback } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">props</span>) </span>{
+    <span class="hljs-keyword">let</span> [content, setContent] = useState(<span class="hljs-string">&apos;&apos;</span>);
+    <span class="hljs-keyword">const</span> handleSubmit = useCallback(<span class="hljs-function">(<span class="hljs-params">event</span>) =&gt;</span> {
+        event.preventDefault();
+        <span class="hljs-keyword">if</span> (content) {
+            props.addMessage(content);
+            setContent(<span class="hljs-string">&apos;&apos;</span>);
+        }
+    }, [content])
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;form-group&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>
+                    <span class="hljs-attr">value</span>=<span class="hljs-string">{content}</span>
+                    <span class="hljs-attr">onChange</span>=<span class="hljs-string">{event</span> =&gt;</span> setContent(event.target.value)}
+                    className=&quot;form-control&quot;
+                    placeholder=&quot;&#x8BF7;&#x8F93;&#x5165;&#x5185;&#x5BB9;&quot;
+                /&gt;
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;form-group&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;btn btn-primary&quot;</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{handleSubmit}</span>&gt;</span>
+                    &#x53D1;&#x8868;
+            <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></span>
+    )
+}
+</code></pre>
+<h3 id="t416.6 MessageApp.tsx">6.6 MessageApp.tsx <a href="#t416.6 MessageApp.tsx"> # </a></h3>
+<p>src__tests__\components\MessageApp.tsx</p>
+<h4 id="t426.6.1 &#x6D4B;&#x8BD5;&#x7528;&#x4F8B;">6.6.1 &#x6D4B;&#x8BD5;&#x7528;&#x4F8B; <a href="#t426.6.1 &#x6D4B;&#x8BD5;&#x7528;&#x4F8B;"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> MessageApp <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../components/MessageApp&apos;</span>;
+<span class="hljs-keyword">import</span> MessageList <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../components/MessageList&apos;</span>;
+<span class="hljs-keyword">import</span> MessageForm <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../components/MessageForm&apos;</span>;
+<span class="hljs-keyword">import</span> { mount } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;enzyme&apos;</span>;
+describe(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5;MessageApp&apos;</span>, () =&gt; {
+    test(<span class="hljs-string">&apos;&#x5E94;&#x8BE5;&#x6E32;&#x67D3;&#x51FA;&#x6765;&#x4E00;&#x4E2A;&#x9762;&#x677F;&apos;</span>, () =&gt; {
+        <span class="hljs-keyword">const</span> wrapper = mount(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">MessageApp</span> /&gt;</span></span>);
+        <span class="hljs-keyword">const</span> container = wrapper.find(<span class="hljs-string">`.container`</span>);
+        <span class="hljs-keyword">const</span> panel = wrapper.find(<span class="hljs-string">`.panel.panel-default`</span>);
+        <span class="hljs-keyword">const</span> panelHeading = wrapper.find(<span class="hljs-string">`.panel-heading`</span>);
+        <span class="hljs-keyword">const</span> panelBody = wrapper.find(<span class="hljs-string">`.panel-body`</span>);
+        <span class="hljs-keyword">const</span> panelFooter = wrapper.find(<span class="hljs-string">`.panel-footer`</span>);
+        expect(container).toHaveLength(<span class="hljs-number">1</span>);
+        expect(panel).toHaveLength(<span class="hljs-number">1</span>);
+        expect(panelHeading).toHaveLength(<span class="hljs-number">1</span>);
+        expect(panelBody).toHaveLength(<span class="hljs-number">1</span>);
+        expect(panelFooter).toHaveLength(<span class="hljs-number">1</span>);
+    });
+    test(<span class="hljs-string">&apos;&#x9ED8;&#x8BA4;&#x72B6;&#x6001;&#x662F;&#x7A7A;&#x6570;&#x7EC4;&apos;</span>, () =&gt; {
+        <span class="hljs-keyword">const</span> wrapper = mount(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">MessageApp</span> /&gt;</span></span>);
+        expect(wrapper.state()).toMatchObject({ <span class="hljs-attr">messages</span>: [] });
+    });
+    test(<span class="hljs-string">&apos;MessageList&#x7EC4;&#x4EF6;&#x5B58;&#x5728;&#xFF0C;&#x5E76;&#x4E14;&#x7ED9;MessageList&#x4F20;&#x9012;messages&#x5C5E;&#x6027;&apos;</span>, () =&gt; {
+        <span class="hljs-keyword">const</span> wrapper = mount(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">MessageApp</span> /&gt;</span></span>);
+        <span class="hljs-keyword">const</span> messageList = wrapper.find(MessageList);
+        expect(messageList.prop(<span class="hljs-string">&apos;messages&apos;</span>)).toBe((wrapper.instance() <span class="hljs-keyword">as</span> MessageApp).state.messages);
+    });
+    test(<span class="hljs-string">&apos;MessageForm&#x7EC4;&#x4EF6;&#x5B58;&#x5728;&#xFF0C;&#x5E76;&#x4E14;&#x7ED9;MessageForm&#x4F20;&#x9012;addMessage&#x5C5E;&#x6027;&apos;</span>, () =&gt; {
+        <span class="hljs-keyword">const</span> wrapper = mount(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">MessageApp</span> /&gt;</span></span>);
+        <span class="hljs-keyword">const</span> messageForm = wrapper.find(MessageForm);
+        expect(messageForm.prop(<span class="hljs-string">&apos;addMessage&apos;</span>)).toBe((wrapper.instance() <span class="hljs-keyword">as</span> MessageApp).addMessage);
+    });
+    test(<span class="hljs-string">&apos;&#x70B9;&#x51FB;&#x63D0;&#x4EA4;&#x6309;&#x94AE;&#x6DFB;&#x52A0;&#x6761;&#x76EE;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5E94;&#x8BE5;&#x53EF;&#x4EE5;&#x6539;&#x53D8;&#x5728;MessageApp&#x7684;state&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x6761;&#x76EE;&apos;</span>, () =&gt; {
+        <span class="hljs-keyword">let</span> wrapper = mount(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">MessageApp</span> /&gt;</span></span>);
+        <span class="hljs-keyword">let</span> messageList = wrapper.find(MessageList);
+        <span class="hljs-keyword">let</span> messageForm = wrapper.find(MessageForm);
+        expect(wrapper.state(<span class="hljs-string">&apos;messages&apos;</span>)).toHaveLength(<span class="hljs-number">0</span>);
+        <span class="hljs-keyword">let</span> content = <span class="hljs-string">&apos;&#x6211;&#x60F3;&#x4F60;&apos;</span>;
+        <span class="hljs-keyword">const</span> input = messageForm.find(<span class="hljs-string">`input`</span>);
+        <span class="hljs-keyword">const</span> button = messageForm.find(<span class="hljs-string">`button`</span>);
+        input.simulate(<span class="hljs-string">&apos;change&apos;</span>, { <span class="hljs-attr">target</span>: { <span class="hljs-attr">value</span>: content } });
+        button.simulate(<span class="hljs-string">&apos;click&apos;</span>);
+        expect(wrapper.state(<span class="hljs-string">&apos;messages&apos;</span>)).toHaveLength(<span class="hljs-number">1</span>);
+        <span class="hljs-keyword">let</span> newMessages = [{ <span class="hljs-attr">id</span>: expect.any(<span class="hljs-built_in">String</span>), content }]
+        expect(wrapper.state(<span class="hljs-string">&apos;messages&apos;</span>)).toEqual(newMessages);
+        messageList = wrapper.find(MessageList);
+        expect(messageList.prop(<span class="hljs-string">&apos;messages&apos;</span>)).toEqual(newMessages);
+    });
+});
+</code></pre>
+<h4 id="t436.5.2 &#x91CD;&#x6784;&#x5B9E;&#x73B0;">6.5.2 &#x91CD;&#x6784;&#x5B9E;&#x73B0; <a href="#t436.5.2 &#x91CD;&#x6784;&#x5B9E;&#x73B0;"> # </a></h4>
+<p>src\components\MessageApp.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> MessageList <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./MessageList&apos;</span>;
+<span class="hljs-keyword">import</span> MessageForm <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./MessageForm&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MessageApp</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+    state = { <span class="hljs-attr">messages</span>: [] }
+    addMessage = <span class="hljs-function">(<span class="hljs-params">content: string</span>) =&gt;</span> {
+        <span class="hljs-keyword">let</span> newMessage = { <span class="hljs-attr">id</span>: <span class="hljs-built_in">Date</span>.now() + <span class="hljs-string">&apos;&apos;</span>, content };
+        <span class="hljs-keyword">this</span>.setState({ <span class="hljs-attr">messages</span>: [...this.state.messages, newMessage] });
+    }
+    render() {
+        <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;container&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">marginTop:</span> <span class="hljs-attr">50</span> }}&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;col-md-8 col-md-offset-2&quot;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;panel panel-default&quot;</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;panel-heading&quot;</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">textAlign:</span> &apos;<span class="hljs-attr">center</span>&apos; }}&gt;</span>&#x73E0;&#x5CF0;&#x7559;&#x8A00;&#x7248;<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;panel-body&quot;</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">MessageList</span> <span class="hljs-attr">messages</span>=<span class="hljs-string">{this.state.messages}</span> /&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;panel-footer&quot;</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">MessageForm</span> <span class="hljs-attr">addMessage</span>=<span class="hljs-string">{this.addMessage}</span> /&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+        )
+    }
+}
+</code></pre>
+<h2 id="t447. BDD(Behavior Driven Development)">7. BDD(Behavior Driven Development) <a href="#t447. BDD(Behavior Driven Development)"> # </a></h2>
+<ul>
+<li>BDD(Behavior Driven Development)&#x884C;&#x4E3A;&#x9A71;&#x52A8;&#x5F00;&#x53D1;&#x662F;&#x4E00;&#x79CD;&#x654F;&#x6377;&#x8F6F;&#x4EF6;&#x5F00;&#x53D1;&#x7684;&#x6280;&#x672F;&#xFF0C;&#x5B83;&#x9F13;&#x52B1;&#x8F6F;&#x4EF6;&#x9879;&#x76EE;&#x4E2D;&#x7684;&#x5F00;&#x53D1;&#x8005;&#x3001;QA&#x548C;&#x975E;&#x6280;&#x672F;&#x4EBA;&#x5458;&#x6216;&#x5546;&#x4E1A;&#x53C2;&#x4E0E;&#x8005;&#x4E4B;&#x95F4;&#x7684;&#x534F;&#x4F5C;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/bddbehavior.png" alt="bddbehavior"></p>
+<h3 id="t457.1 &#x521B;&#x5EFA;&#x9879;&#x76EE;">7.1 &#x521B;&#x5EFA;&#x9879;&#x76EE; <a href="#t457.1 &#x521B;&#x5EFA;&#x9879;&#x76EE;"> # </a></h3>
+<p><a href="http://img.zhufengpeixun.cn/counter.html">&#x9879;&#x76EE;&#x9884;&#x89C8;</a></p>
+<pre><code class="lang-js">create-react-app  zhufeng_message_app --typescript
+cd zhufeng_message_app
+cnpm install --save-dev enzyme @types/enzyme enzyme-adapter-react<span class="hljs-number">-16</span> @types/enzyme-adapter-react<span class="hljs-number">-16</span> -D
+yarn start
+</code></pre>
+<h3 id="t467.2 &#x73AF;&#x5883;&#x51C6;&#x5907;">7.2 &#x73AF;&#x5883;&#x51C6;&#x5907; <a href="#t467.2 &#x73AF;&#x5883;&#x51C6;&#x5907;"> # </a></h3>
+<h4 id="t477.2.1 src\react-app-env.d.ts">7.2.1 src\react-app-env.d.ts <a href="#t477.2.1 src\react-app-env.d.ts"> # </a></h4>
+<p>src\react-app-env.d.ts</p>
+<pre><code class="lang-js"><span class="hljs-comment">/// &lt;reference types=&quot;react-scripts&quot; /&gt;</span>
+</code></pre>
+<h4 id="t487.2.2 src\setupTests.ts">7.2.2 src\setupTests.ts <a href="#t487.2.2 src\setupTests.ts"> # </a></h4>
+<p>src\setupTests.ts</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> <span class="hljs-string">&apos;@testing-library/jest-dom/extend-expect&apos;</span>;
+<span class="hljs-keyword">import</span> Enzyme <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;enzyme&apos;</span>;
+<span class="hljs-keyword">import</span> Adaptor <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;enzyme-adapter-react-16&apos;</span>;
+Enzyme.configure({ <span class="hljs-attr">adapter</span>: <span class="hljs-keyword">new</span> Adaptor() });
+</code></pre>
+<h4 id="t497.2.3 tsconfig.json">7.2.3 tsconfig.json <a href="#t497.2.3 tsconfig.json"> # </a></h4>
+<p>tsconfig.json</p>
+<pre><code class="lang-diff">{
+  &quot;compilerOptions&quot;: {
+    &quot;jsx&quot;: &quot;react&quot;,
+<span class="hljs-addition">+    &quot;noImplicitAny&quot;: false</span>
+  }
+}
+</code></pre>
+<h3 id="t507.3 &#x5F00;&#x53D1;&#x529F;&#x80FD;">7.3 &#x5F00;&#x53D1;&#x529F;&#x80FD; <a href="#t507.3 &#x5F00;&#x53D1;&#x529F;&#x80FD;"> # </a></h3>
+<h4 id="t517.3.1 index.tsx">7.3.1 index.tsx <a href="#t517.3.1 index.tsx"> # </a></h4>
+<p>src\index.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+<span class="hljs-keyword">import</span> App <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./containers/App&apos;</span>;
+ReactDOM.render(
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">App</span> /&gt;</span></span>
+    , <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;root&apos;</span>));
+</code></pre>
+<h4 id="t527.3.2 containers\App.tsx">7.3.2 containers\App.tsx <a href="#t527.3.2 containers\App.tsx"> # </a></h4>
+<p>src\containers\App.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> Counter1 <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../components/Counter1&apos;</span>;
+<span class="hljs-keyword">import</span> Counter2 <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../components/Counter2&apos;</span>;
+<span class="hljs-keyword">import</span> store <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../store&apos;</span>;
+<span class="hljs-keyword">import</span> { Provider } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-redux&apos;</span>;
+<span class="hljs-keyword">import</span> { BrowserRouter <span class="hljs-keyword">as</span> Router, Route, Link } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router-dom&apos;</span>;
+<span class="hljs-keyword">import</span> Header <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../components/Header&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">props</span>) </span>{
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Provider</span> <span class="hljs-attr">store</span>=<span class="hljs-string">{store}</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">Router</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">Header</span> /&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&quot;/counter1&quot;</span> <span class="hljs-attr">component</span>=<span class="hljs-string">{Counter1}</span> /&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&quot;/counter2&quot;</span> <span class="hljs-attr">component</span>=<span class="hljs-string">{Counter2}</span> /&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">Router</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">Provider</span>&gt;</span></span>
+    )
+}
+</code></pre>
+<h4 id="t537.3.3 components\Counter1.tsx">7.3.3 components\Counter1.tsx <a href="#t537.3.3 components\Counter1.tsx"> # </a></h4>
+<p>src\components\Counter1.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> actions <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../store/actions/counter1&apos;</span>;
+<span class="hljs-keyword">import</span> { connect } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-redux&apos;</span>;
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Counter1</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span>&lt;<span class="hljs-title">any</span>&gt; </span>{
+    render() {
+        <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Counter1:{this.props.number}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;counter1-increment&quot;</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{this.props.increment1}</span>&gt;</span>+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;counter1-decrement&quot;</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{this.props.decrement1}</span>&gt;</span>-<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+        )
+    }
+}
+
+<span class="hljs-keyword">let</span> mapStateToProps = <span class="hljs-function"><span class="hljs-params">state</span> =&gt;</span> state.counter1
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> connect(
+    mapStateToProps,
+    actions
+)(Counter1)
+</code></pre>
+<h4 id="t547.3.4 components\Counter2.tsx">7.3.4 components\Counter2.tsx <a href="#t547.3.4 components\Counter2.tsx"> # </a></h4>
+<p>src\components\Counter2.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> actions <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../store/actions/counter2&apos;</span>;
+<span class="hljs-keyword">import</span> { connect } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-redux&apos;</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Counter2</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span>&lt;<span class="hljs-title">any</span>&gt; </span>{
+    render() {
+        <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Counter2:{this.props.number}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;counter2-increment&quot;</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{this.props.increment2}</span>&gt;</span>+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;counter2-decrement&quot;</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{this.props.decrement2}</span>&gt;</span>-<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+        )
+    }
+}
+
+<span class="hljs-keyword">let</span> mapStateToProps = <span class="hljs-function"><span class="hljs-params">state</span> =&gt;</span> state.counter2
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> connect(
+    mapStateToProps,
+    actions
+)(Counter2)
+</code></pre>
+<h4 id="t557.3.5 components\Header.tsx">7.3.5 components\Header.tsx <a href="#t557.3.5 components\Header.tsx"> # </a></h4>
+<p>src\components\Header.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { withRouter } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router-dom&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Header</span>(<span class="hljs-params">props</span>) </span>{
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;counter1&quot;</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> props.history.push(&apos;/counter1&apos;)}&gt;counter1<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;counter2&quot;</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> props.history.push(&apos;/counter2&apos;)}&gt;counter2<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></span>
+    )
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> withRouter(Header);
+</code></pre>
+<h4 id="t567.3.6 store\index.tsx">7.3.6 store\index.tsx <a href="#t567.3.6 store\index.tsx"> # </a></h4>
+<p>src\store\index.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { createStore } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;redux&apos;</span>;
+<span class="hljs-keyword">import</span> combinedReducer <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./reducers&apos;</span>;
+<span class="hljs-keyword">const</span> store = createStore(combinedReducer);
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> store;
+</code></pre>
+<h4 id="t577.3.7 store\action-types.tsx">7.3.7 store\action-types.tsx <a href="#t577.3.7 store\action-types.tsx"> # </a></h4>
+<p>src\store\action-types.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> INCREMENT1 = <span class="hljs-string">&apos;INCREMENT1&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> DECREMENT1 = <span class="hljs-string">&apos;DECREMENT1&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> INCREMENT2 = <span class="hljs-string">&apos;INCREMENT2&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> DECREMENT2 = <span class="hljs-string">&apos;DECREMENT2&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> RESET = <span class="hljs-string">&apos;RESET&apos;</span>;
+</code></pre>
+<h4 id="t587.3.8 store\reducers\index.tsx">7.3.8 store\reducers\index.tsx <a href="#t587.3.8 store\reducers\index.tsx"> # </a></h4>
+<p>src\store\reducers\index.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> counter1 <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./counter1&apos;</span>;
+<span class="hljs-keyword">import</span> counter2 <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./counter2&apos;</span>;
+<span class="hljs-keyword">import</span> { combineReducers } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;redux&apos;</span>;
+<span class="hljs-keyword">let</span> reducers = {
+    counter1,
+    counter2
+}
+<span class="hljs-keyword">let</span> combinedReducer = combineReducers(reducers);
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> combinedReducer;
+</code></pre>
+<h4 id="t597.3.9 store\reducers\counter1.tsx">7.3.9 store\reducers\counter1.tsx <a href="#t597.3.9 store\reducers\counter1.tsx"> # </a></h4>
+<p>src\store\reducers\counter1.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> types <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../action-types&apos;</span>;
+<span class="hljs-keyword">let</span> initialState = { <span class="hljs-attr">number</span>: <span class="hljs-number">0</span> }
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">state = initialState, action</span>) </span>{
+    <span class="hljs-keyword">switch</span> (action.type) {
+        <span class="hljs-keyword">case</span> types.INCREMENT1:
+            <span class="hljs-keyword">return</span> { <span class="hljs-attr">number</span>: state.number + <span class="hljs-number">1</span> };
+        <span class="hljs-keyword">case</span> types.DECREMENT1:
+            <span class="hljs-keyword">return</span> { <span class="hljs-attr">number</span>: state.number - <span class="hljs-number">1</span> };
+        <span class="hljs-keyword">case</span> types.RESET:
+            <span class="hljs-keyword">return</span> initialState;
+        <span class="hljs-keyword">default</span>:
+            <span class="hljs-keyword">return</span> state;
+    }
+}
+</code></pre>
+<h4 id="t607.3.10 store\reducers\counter2.tsx">7.3.10 store\reducers\counter2.tsx <a href="#t607.3.10 store\reducers\counter2.tsx"> # </a></h4>
+<p>src\store\reducers\counter2.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> types <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../action-types&apos;</span>;
+<span class="hljs-keyword">let</span> initialState = { <span class="hljs-attr">number</span>: <span class="hljs-number">0</span> }
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">state = initialState, action</span>) </span>{
+    <span class="hljs-keyword">switch</span> (action.type) {
+        <span class="hljs-keyword">case</span> types.INCREMENT2:
+            <span class="hljs-keyword">return</span> { <span class="hljs-attr">number</span>: state.number + <span class="hljs-number">1</span> };
+        <span class="hljs-keyword">case</span> types.DECREMENT2:
+            <span class="hljs-keyword">return</span> { <span class="hljs-attr">number</span>: state.number - <span class="hljs-number">1</span> };
+        <span class="hljs-keyword">case</span> types.RESET:
+            <span class="hljs-keyword">return</span> initialState;
+        <span class="hljs-keyword">default</span>:
+            <span class="hljs-keyword">return</span> state;
+    }
+}
+</code></pre>
+<h4 id="t617.3.11 store\actions\counter1.tsx">7.3.11 store\actions\counter1.tsx <a href="#t617.3.11 store\actions\counter1.tsx"> # </a></h4>
+<p>src\store\actions\counter1.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> types <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../action-types&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    increment1() {
+        <span class="hljs-keyword">return</span> { <span class="hljs-attr">type</span>: types.INCREMENT1 };
+    },
+    decrement1() {
+        <span class="hljs-keyword">return</span> { <span class="hljs-attr">type</span>: types.DECREMENT1 };
+    }
+}
+</code></pre>
+<h4 id="t627.3.12 store\actions\counter2.tsx">7.3.12 store\actions\counter2.tsx <a href="#t627.3.12 store\actions\counter2.tsx"> # </a></h4>
+<p>src\store\actions\counter2.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> types <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../action-types&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    increment2() {
+        <span class="hljs-keyword">return</span> { <span class="hljs-attr">type</span>: types.INCREMENT2 };
+    },
+    decrement2() {
+        <span class="hljs-keyword">return</span> { <span class="hljs-attr">type</span>: types.DECREMENT2 };
+    }
+}
+</code></pre>
+<h4 id="t637.3.13 index.html">7.3.13 index.html <a href="#t637.3.13 index.html"> # </a></h4>
+<pre><code class="lang-diff">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot; /&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;
+  &lt;meta name=&quot;theme-color&quot; content=&quot;#000000&quot; /&gt;
+<span class="hljs-addition">+  &lt;title&gt;CounterApp&lt;/title&gt;</span>
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<h3 id="t647.4 &#x7F16;&#x5199;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;">7.4 &#x7F16;&#x5199;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B; <a href="#t647.4 &#x7F16;&#x5199;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;"> # </a></h3>
+<h4 id="t657.4.1 reducers\counter1.spec.tsx">7.4.1 reducers\counter1.spec.tsx <a href="#t657.4.1 reducers\counter1.spec.tsx"> # </a></h4>
+<p>src\store\reducers\counter1.spec.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> counter1 <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./counter1&apos;</span>;
+<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> types <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../action-types&apos;</span>;
+
+describe(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5;counter1&apos;</span>, () =&gt; {
+    it(<span class="hljs-string">&apos;counter1&#x5B58;&#x5728;&apos;</span>, () =&gt; {
+        expect(counter1).toBeTruthy();
+    })
+
+    it(<span class="hljs-string">&apos;&#x83B7;&#x53D6;&#x9ED8;&#x8BA4;&#x503C;&apos;</span>, () =&gt; {
+        expect(counter1(<span class="hljs-literal">undefined</span>, { <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;@@REDUX/INIT&apos;</span> })).toEqual({ <span class="hljs-attr">number</span>: <span class="hljs-number">0</span> });
+    })
+
+    it(<span class="hljs-string">&apos;INCREMENT1&#x53EF;&#x4EE5;&#x8BA9;number&#x52A0;1&apos;</span>, () =&gt; {
+        expect(counter1({ <span class="hljs-attr">number</span>: <span class="hljs-number">0</span> }, { <span class="hljs-attr">type</span>: types.INCREMENT1 })).toEqual({ <span class="hljs-attr">number</span>: <span class="hljs-number">1</span> });
+    })
+    it(<span class="hljs-string">&apos;DECREMENT1&#x53EF;&#x4EE5;&#x8BA9;number&#x52A0;1&apos;</span>, () =&gt; {
+        expect(counter1({ <span class="hljs-attr">number</span>: <span class="hljs-number">0</span> }, { <span class="hljs-attr">type</span>: types.DECREMENT1 })).toEqual({ <span class="hljs-attr">number</span>: <span class="hljs-number">-1</span> });
+    })
+})
+</code></pre>
+<h4 id="t667.4.2 actions\counter1.spec.tsx">7.4.2 actions\counter1.spec.tsx <a href="#t667.4.2 actions\counter1.spec.tsx"> # </a></h4>
+<p>src\store\actions\counter1.spec.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> actions <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./counter1&apos;</span>;
+<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> types <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../action-types&apos;</span>;
+describe(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5;counter1&apos;</span>, () =&gt; {
+    it(<span class="hljs-string">&apos;counter1&#x5B58;&#x5728;&apos;</span>, () =&gt; {
+        expect(actions.increment1).toBeTruthy();
+    })
+    it(<span class="hljs-string">&apos;counter1&#x8FD4;&#x56DE;&#x503C;&#x662F;{ type: types.INCREMENT1 }&apos;</span>, () =&gt; {
+        <span class="hljs-keyword">let</span> mockCounter1 = jest.fn(actions.increment1);
+        mockCounter1();
+        expect(mockCounter1).toHaveReturnedWith({ <span class="hljs-attr">type</span>: types.INCREMENT1 });
+    })
+})
+</code></pre>
+<h4 id="t677.4.3 store\store.spec.ts">7.4.3 store\store.spec.ts <a href="#t677.4.3 store\store.spec.ts"> # </a></h4>
+<p>src\store\store.spec.ts</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> store <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./&apos;</span>;
+<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> types <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./action-types&apos;</span>;
+describe(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5;store&apos;</span>, () =&gt; {
+    beforeEach(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+        store.dispatch({ <span class="hljs-attr">type</span>: types.RESET });
+    });
+    it(<span class="hljs-string">&apos;store&#x5B58;&#x5728;&apos;</span>, () =&gt; {
+        expect(store).toBeTruthy();
+    })
+    it(<span class="hljs-string">&apos;store&#x5E94;&#x8BE5;&#x6709;&#x9ED8;&#x8BA4;&#x7684;&#x72B6;&#x6001;&apos;</span>, () =&gt; {
+        expect(store.getState()).toMatchObject({
+            <span class="hljs-attr">counter1</span>: { <span class="hljs-attr">number</span>: <span class="hljs-number">0</span> },
+            <span class="hljs-attr">counter2</span>: { <span class="hljs-attr">number</span>: <span class="hljs-number">0</span> }
+        });
+    })
+    it(<span class="hljs-string">&apos;&#x6D3E;&#x53D1;INCREMENT1&#x52A8;&#x4F5C;&#x540E;&#x540E;&#x4ED3;&#x5E93;counter1&#x72B6;&#x6001;&#x5E94;&#x8BE5;&#x53D8;&#x4E3A;{ number: 1 }&apos;</span>, () =&gt; {
+        store.dispatch({ <span class="hljs-attr">type</span>: types.INCREMENT1 });
+        expect(store.getState()).toMatchObject({
+            <span class="hljs-attr">counter1</span>: { <span class="hljs-attr">number</span>: <span class="hljs-number">1</span> },
+            <span class="hljs-attr">counter2</span>: { <span class="hljs-attr">number</span>: <span class="hljs-number">0</span> }
+        });
+    })
+    it(<span class="hljs-string">&apos;&#x6D3E;&#x53D1;DECREMENT1&#x52A8;&#x4F5C;&#x540E;&#x540E;&#x4ED3;&#x5E93;counter1&#x72B6;&#x6001;&#x5E94;&#x8BE5;&#x53D8;&#x4E3A;{ number: -1 }&apos;</span>, () =&gt; {
+        store.dispatch({ <span class="hljs-attr">type</span>: types.DECREMENT1 });
+        expect(store.getState()).toMatchObject({
+            <span class="hljs-attr">counter1</span>: { <span class="hljs-attr">number</span>: <span class="hljs-number">-1</span> },
+            <span class="hljs-attr">counter2</span>: { <span class="hljs-attr">number</span>: <span class="hljs-number">0</span> }
+        });
+    })
+})
+</code></pre>
+<h4 id="t687.4.4 tests\containers\Counter1.tsx">7.4.4 tests\containers\Counter1.tsx <a href="#t687.4.4 tests\containers\Counter1.tsx"> # </a></h4>
+<p>src__tests__\containers\Counter1.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> Counter1 <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../components/Counter1&apos;</span>;
+<span class="hljs-keyword">import</span> { shallow, mount, render } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;enzyme&apos;</span>;
+<span class="hljs-keyword">import</span> { Link } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router-dom&apos;</span>;
+<span class="hljs-keyword">import</span> store <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../store&apos;</span>;
+<span class="hljs-keyword">import</span> { Provider } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-redux&apos;</span>;
+describe(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5;Counter1&apos;</span>, () =&gt; {
+    test(<span class="hljs-string">`&#x6211;&#x60F3;&#x8981;&#x663E;&#x793A;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#xFF0C;&#x70B9;+&#x53D8;&#x6210;1&#xFF0C;&#x518D;&#x70B9;-&#x53D8;&#x6210;0`</span>, () =&gt; {
+        <span class="hljs-keyword">let</span> wrapper = mount(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Provider</span> <span class="hljs-attr">store</span>=<span class="hljs-string">{store}</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">Counter1</span> /&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">Provider</span> &gt;</span>);
+        let p = wrapper.find(&apos;p&apos;);
+        expect(p).toHaveLength(1);
+        expect(p.text()).toContain(&apos;0&apos;);
+
+        let button = wrapper.find(&apos;button&apos;);
+        expect(button).toHaveLength(2);
+
+        button.at(0).simulate(&apos;click&apos;);
+        p = wrapper.find(&apos;p&apos;);
+        expect(p.text()).toContain(&apos;1&apos;);
+
+        button.at(1).simulate(&apos;click&apos;);
+        p = wrapper.find(&apos;p&apos;);
+        expect(p.text()).toContain(&apos;0&apos;);
+    });
+});
+</span></code></pre>
+<h4 id="t697.4.5 tests\containers\App.tsx">7.4.5 tests\containers\App.tsx <a href="#t697.4.5 tests\containers\App.tsx"> # </a></h4>
+<p>src__tests__\containers\App.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> App <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../containers/App&apos;</span>;
+<span class="hljs-keyword">import</span> { shallow, mount, render } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;enzyme&apos;</span>;
+<span class="hljs-keyword">import</span> { Link } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router-dom&apos;</span>;
+describe(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5;App&apos;</span>, () =&gt; {
+    test(<span class="hljs-string">`&#x6D4B;&#x8BD5;App`</span>, () =&gt; {
+        <span class="hljs-keyword">let</span> wrapper = mount(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">App</span> <span class="hljs-attr">history</span>=<span class="hljs-string">{history}</span> /&gt;</span></span>);
+        <span class="hljs-keyword">let</span> p = wrapper.find(<span class="hljs-string">&apos;p&apos;</span>);
+        expect(p).toHaveLength(<span class="hljs-number">0</span>);
+        <span class="hljs-keyword">let</span> button = wrapper.find(<span class="hljs-string">&apos;button&apos;</span>);
+        button.at(<span class="hljs-number">0</span>).simulate(<span class="hljs-string">&apos;click&apos;</span>);
+        p = wrapper.find(<span class="hljs-string">&apos;p&apos;</span>);
+        expect(p.text()).toContain(<span class="hljs-string">&apos;Counter1&apos;</span>);
+        button.at(<span class="hljs-number">1</span>).simulate(<span class="hljs-string">&apos;click&apos;</span>);
+        p = wrapper.find(<span class="hljs-string">&apos;p&apos;</span>);
+        expect(p.text()).toContain(<span class="hljs-string">&apos;Counter2&apos;</span>);
+    });
+});
+</code></pre>
+<h2 id="t708. UI&#x6D4B;&#x8BD5;">8. UI&#x6D4B;&#x8BD5; <a href="#t708. UI&#x6D4B;&#x8BD5;"> # </a></h2>
+<ul>
+<li>&#x7528;puppeteer&#x505A;&#x96C6;&#x6210;&#x6D4B;&#x8BD5;&#x7684;&#x65F6;&#x5019;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x662F;&#x771F;&#x6B63;&#x5728;&#x771F;&#x5B9E;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x4E0A;&#x6267;&#x884C;&#x7684;</li>
+</ul>
+<h3 id="t718.1 puppeteer">8.1 puppeteer <a href="#t718.1 puppeteer"> # </a></h3>
+<ul>
+<li>&#x4F7F;&#x7528;puppeteer&#x63A7;&#x5236;chromium</li>
+<li>puppeteer&#x662F;Chrome&#x56E2;&#x961F;&#x5F00;&#x53D1;&#x7684;&#x4E00;&#x4E2A;node&#x5E93;</li>
+<li>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;api&#x6765;&#x63A7;&#x5236;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x884C;&#x4E3A;&#xFF0C;&#x6BD4;&#x5982;&#x70B9;&#x51FB;&#xFF0C;&#x8DF3;&#x8F6C;&#xFF0C;&#x5237;&#x65B0;&#xFF0C;&#x5728;&#x63A7;&#x5236;&#x53F0;&#x6267;&#x884C;js&#x811A;&#x672C;&#x7B49;&#x7B49;</li>
+<li>&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x5DE5;&#x5177;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x5199;&#x722C;&#x866B;&#xFF0C;&#x81EA;&#x52A8;&#x7B7E;&#x5230;&#xFF0C;&#x7F51;&#x9875;&#x622A;&#x56FE;&#xFF0C;&#x751F;&#x6210;pdf&#xFF0C;&#x81EA;&#x52A8;&#x5316;&#x6D4B;&#x8BD5;&#x7B49;</li>
+</ul>
+<pre><code class="lang-js">cnpm install --save-dev jest-puppeteer puppeteer jest
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> puppeteer = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;puppeteer&apos;</span>);
+<span class="hljs-keyword">const</span> delay = <span class="hljs-function">(<span class="hljs-params">ms</span>) =&gt;</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">resolve</span>) </span>{
+    setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+        resolve();
+    }, ms);
+});
+<span class="hljs-function">(<span class="hljs-params"><span class="hljs-keyword">async</span> (</span>) =&gt;</span> {
+    <span class="hljs-keyword">const</span> browser = <span class="hljs-keyword">await</span> puppeteer.launch({ <span class="hljs-attr">headless</span>: <span class="hljs-literal">false</span> });
+    <span class="hljs-keyword">const</span> page = <span class="hljs-keyword">await</span> browser.newPage();
+    <span class="hljs-keyword">await</span> page.goto(<span class="hljs-string">&apos;http://localhost:3000&apos;</span>);
+    <span class="hljs-keyword">await</span> page.click(<span class="hljs-string">&apos;button[id=&quot;counter1&quot;]&apos;</span>);
+    <span class="hljs-keyword">await</span> delay(<span class="hljs-number">1000</span>);
+    <span class="hljs-keyword">await</span> page.click(<span class="hljs-string">&apos;button[id=&quot;counter1-increment&quot;]&apos;</span>);
+    <span class="hljs-keyword">await</span> delay(<span class="hljs-number">1000</span>);
+    <span class="hljs-keyword">await</span> page.click(<span class="hljs-string">&apos;button[id=&quot;counter2&quot;]&apos;</span>);
+    <span class="hljs-keyword">await</span> delay(<span class="hljs-number">1000</span>);
+    <span class="hljs-keyword">await</span> page.click(<span class="hljs-string">&apos;button[id=&quot;counter2-decrement&quot;]&apos;</span>);
+    <span class="hljs-keyword">await</span> browser.close();
+})();
+</code></pre>
+<h3 id="t728.2 jest-puppeteer">8.2 jest-puppeteer <a href="#t728.2 jest-puppeteer"> # </a></h3>
+<ul>
+<li><a href="https://github.com/smooth-code/jest-puppeteer">jest-puppeteer</a></li>
+<li>&#x5207;&#x8BB0;&#x5220;&#x9664;<code>testEnvironment</code>&#x914D;&#x7F6E;</li>
+</ul>
+<h4 id="t738.2.1 jest.config.js">8.2.1 jest.config.js <a href="#t738.2.1 jest.config.js"> # </a></h4>
+<pre><code class="lang-diff">{
+<span class="hljs-addition">+  &quot;preset&quot;: &quot;jest-puppeteer&quot;</span>
+}
+</code></pre>
+<h4 id="t748.2.2 CounterApp.ts">8.2.2 CounterApp.ts <a href="#t748.2.2 CounterApp.ts"> # </a></h4>
+<pre><code class="lang-js">declare <span class="hljs-keyword">var</span> beforeAll;
+declare <span class="hljs-keyword">var</span> page;
+describe(<span class="hljs-string">&apos;&#x6D4B;&#x8BD5;CounterApp&apos;</span>, () =&gt; {
+    beforeAll(<span class="hljs-keyword">async</span> () =&gt; {
+        <span class="hljs-keyword">await</span> page.goto(<span class="hljs-string">&apos;http://localhost:3000/&apos;</span>);
+    });
+
+    it(<span class="hljs-string">&apos;&#x6807;&#x9898;&#x662F;CounterApp&apos;</span>, <span class="hljs-keyword">async</span> () =&gt; {
+        <span class="hljs-keyword">await</span> expect(page.title()).resolves.toMatch(<span class="hljs-string">&apos;CounterApp&apos;</span>);
+    });
+
+    it(<span class="hljs-string">&apos;&#x70B9;&#x51FB;&#x7B2C;&#x4E00;&#x4E2A;button&#x4F1A;&#x8DF3;&#x8F6C;&#x5230;/counter1&apos;</span>, <span class="hljs-keyword">async</span> () =&gt; {
+        <span class="hljs-keyword">await</span> page.click(<span class="hljs-string">&apos;button[id=&quot;counter1&quot;]&apos;</span>);
+        <span class="hljs-keyword">let</span> text = <span class="hljs-keyword">await</span> page.$<span class="hljs-built_in">eval</span>(<span class="hljs-string">&apos;p&apos;</span>, el =&gt; el.innerText);
+        expect(text).toBe(<span class="hljs-string">&apos;Counter1:0&apos;</span>);
+        <span class="hljs-keyword">await</span> page.click(<span class="hljs-string">&apos;button[id=&quot;counter2&quot;]&apos;</span>);
+        text = <span class="hljs-keyword">await</span> page.$<span class="hljs-built_in">eval</span>(<span class="hljs-string">&apos;p&apos;</span>, el =&gt; el.innerText);
+        expect(text).toBe(<span class="hljs-string">&apos;Counter2:0&apos;</span>);
+    });
+});
+</code></pre>
+<h2 id="t759.&#x53C2;&#x8003;">9.&#x53C2;&#x8003; <a href="#t759.&#x53C2;&#x8003;"> # </a></h2>
+<h3 id="t769.1 jest">9.1 jest <a href="#t769.1 jest"> # </a></h3>
+<ul>
+<li><a href="https://jestjs.io/docs/zh-Hans/using-matchers">jest matchers</a></li>
+<li><a href="https://jestjs.io/docs/zh-Hans/expect#expectanything">jest&#x65AD;&#x8A00;</a></li>
+<li><a href="https://jestjs.io/docs/zh-Hans/asynchronous">jest&#x5F02;&#x6B65;</a></li>
+</ul>
+<h3 id="t779.2 enzyme">9.2 enzyme <a href="#t779.2 enzyme"> # </a></h3>
+<ul>
+<li><a href="https://airbnb.io/enzyme">enzyme</a></li>
+<li><a href="https://airbnb.io/enzyme/docs/api/shallow.html">shallow</a></li>
+<li><a href="https://airbnb.io/enzyme/docs/api/mount.html">mount</a></li>
+<li><a href="http://npm.taobao.org/package/expect-enzyme">expect-enzyme</a></li>
+<li><a href="https://airbnb.io/enzyme/docs/api/selector.html">selector</a></li>
+</ul>
+<h3 id="t789.3 puppeteer">9.3 puppeteer <a href="#t789.3 puppeteer"> # </a></h3>
+<ul>
+<li><a href="https://github.com/puppeteer/puppeteer/blob/master/docs/api.md">puppeteer api</a></li>
+<li><a href="https://github.com/smooth-code/jest-puppeteer">jest-puppeteer</a></li>
+<li><a href="https://github.com/smooth-code/jest-puppeteer/blob/master/packages/expect-puppeteer/README.md#api">expect-puppeteer</a></li>
+<li><a href="https://zhaoqize.github.io/puppeteer-api-zh_CN/#/">puppeteer-api-zh_CN</a></li>
+</ul>
+<h3 id="t799.4 glob">9.4 glob <a href="#t799.4 glob"> # </a></h3>
+<ul>
+<li><code>glob</code>&#x8FD4;&#x56DE;&#x5339;&#x914D;&#x6307;&#x5B9A;&#x6A21;&#x5F0F;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x6216;&#x76EE;&#x5F55;<h4 id="t809.4.1 glob&#x89C4;&#x5219;">9.4.1 glob&#x89C4;&#x5219; <a href="#t809.4.1 glob&#x89C4;&#x5219;"> # </a></h4>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5339;&#x914D;&#x7B26;</th>
+<th style="text-align:left">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x661F;</td>
+<td style="text-align:left">&#x5339;&#x914D;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x4E2D;&#x7684;0&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5B57;&#x7B26;&#xFF0C;&#x4F46;&#x4E0D;&#x4F1A;&#x5339;&#x914D;&#x8DEF;&#x5F84;&#x5206;&#x9694;&#x7B26;</td>
+</tr>
+<tr>
+<td style="text-align:left">**</td>
+<td style="text-align:left">&#x5339;&#x914D;&#x8DEF;&#x5F84;&#x4E2D;&#x7684;0&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x76EE;&#x5F55;&#x53CA;&#x5176;&#x5B50;&#x76EE;&#x5F55;</td>
+</tr>
+<tr>
+<td style="text-align:left">[...]</td>
+<td style="text-align:left">&#x5339;&#x914D;&#x65B9;&#x62EC;&#x53F7;&#x4E2D;&#x51FA;&#x73B0;&#x7684;&#x5B57;&#x7B26;&#x4E2D;&#x7684;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#xFF0C;&#x5F53;&#x65B9;&#x62EC;&#x53F7;&#x4E2D;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E3A;^&#x6216;!&#x65F6;&#xFF0C;&#x5219;&#x8868;&#x793A;&#x4E0D;&#x5339;&#x914D;&#x65B9;&#x62EC;&#x53F7;&#x4E2D;&#x51FA;&#x73B0;&#x7684;&#x5176;&#x4ED6;&#x5B57;&#x7B26;&#x4E2D;&#x7684;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;</td>
+</tr>
+<tr>
+<td style="text-align:left">!(pattern pattern pattern)</td>
+<td style="text-align:left">&#x5339;&#x914D;&#x4EFB;&#x4F55;&#x4E0E;&#x62EC;&#x53F7;&#x4E2D;&#x7ED9;&#x5B9A;&#x7684;&#x4EFB;&#x4E00;&#x6A21;&#x5F0F;&#x90FD;&#x4E0D;&#x5339;&#x914D;&#x7684;</td>
+</tr>
+<tr>
+<td style="text-align:left">?(pattern pattern pattern)</td>
+<td style="text-align:left">&#x5339;&#x914D;&#x62EC;&#x53F7;&#x4E2D;&#x7ED9;&#x5B9A;&#x7684;&#x4EFB;&#x4E00;&#x6A21;&#x5F0F;0&#x6B21;&#x6216;1&#x6B21;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;js&#x6B63;&#x5219;&#x4E2D;&#x7684;?</td>
+</tr>
+<tr>
+<td style="text-align:left">+(pattern pattern pattern)</td>
+<td style="text-align:left">&#x5339;&#x914D;&#x62EC;&#x53F7;&#x4E2D;&#x7ED9;&#x5B9A;&#x7684;&#x4EFB;&#x4E00;&#x6A21;&#x5F0F;&#x81F3;&#x5C11;1&#x6B21;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;js&#x6B63;&#x5219;&#x4E2D;&#x7684;+</td>
+</tr>
+<tr>
+<td style="text-align:left">(pattern pattern pattern)</td>
+<td style="text-align:left">&#x5339;&#x914D;&#x62EC;&#x53F7;&#x4E2D;&#x7ED9;&#x5B9A;&#x7684;&#x4EFB;&#x4E00;&#x6A21;&#x5F0F;0&#x6B21;&#x6216;&#x591A;&#x6B21;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;js&#x6B63;&#x5219;&#x4E2D;&#x7684; *</td>
+</tr>
+<tr>
+<td style="text-align:left">@(pattern pattern pattern)</td>
+<td style="text-align:left">&#x5339;&#x914D;&#x62EC;&#x53F7;&#x4E2D;&#x7ED9;&#x5B9A;&#x7684;&#x4EFB;&#x4E00;&#x6A21;&#x5F0F;1&#x6B21;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;js&#x6B63;&#x5219;&#x4E2D;&#x7684;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="t819.4.2 glob&#x793A;&#x4F8B;">9.4.2 glob&#x793A;&#x4F8B; <a href="#t819.4.2 glob&#x793A;&#x4F8B;"> # </a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">glob</th>
+<th style="text-align:left">&#x5339;&#x914D;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">*</td>
+<td style="text-align:left">&#x80FD;&#x5339;&#x914D; a.js,x.y,abc,abc/,&#x4F46;&#x4E0D;&#x80FD;&#x5339;&#x914D;a/b.js</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"><em>.</em></td>
+<td style="text-align:left">a.js,style.css,a.b,x.y</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>/</em>/*.js</td>
+<td style="text-align:left">&#x80FD;&#x5339;&#x914D; a/b/c.js,x/y/z.js,&#x4E0D;&#x80FD;&#x5339;&#x914D;a/b.js,a/b/c/d.js</td>
+</tr>
+<tr>
+<td style="text-align:left">**</td>
+<td style="text-align:left">&#x80FD;&#x5339;&#x914D; abc,a/b.js,a/b/c.js,x/y/z,x/y/z/a.b,&#x80FD;&#x7528;&#x6765;&#x5339;&#x914D;&#x6240;&#x6709;&#x7684;&#x76EE;&#x5F55;&#x548C;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td style="text-align:left">a/**/z</td>
+<td style="text-align:left">&#x80FD;&#x5339;&#x914D; a/z,a/b/z,a/b/c/z,a/d/g/h/j/k/z</td>
+</tr>
+<tr>
+<td style="text-align:left">a/**b/z</td>
+<td style="text-align:left">&#x80FD;&#x5339;&#x914D; a/b/z,a/sb/z,&#x4F46;&#x4E0D;&#x80FD;&#x5339;&#x914D;a/x/sb/z,&#x56E0;&#x4E3A;&#x53EA;&#x6709;&#x5355;**&#x5355;&#x72EC;&#x51FA;&#x73B0;&#x624D;&#x80FD;&#x5339;&#x914D;&#x591A;&#x7EA7;&#x76EE;&#x5F55;</td>
+</tr>
+<tr>
+<td style="text-align:left">?.js</td>
+<td style="text-align:left">&#x80FD;&#x5339;&#x914D; a.js,b.js,c.js</td>
+</tr>
+<tr>
+<td style="text-align:left">a??</td>
+<td style="text-align:left">&#x80FD;&#x5339;&#x914D; a.b,abc,&#x4F46;&#x4E0D;&#x80FD;&#x5339;&#x914D;ab/,&#x56E0;&#x4E3A;&#x5B83;&#x4E0D;&#x4F1A;&#x5339;&#x914D;&#x8DEF;&#x5F84;&#x5206;&#x9694;&#x7B26;</td>
+</tr>
+<tr>
+<td style="text-align:left">[xyz].js</td>
+<td style="text-align:left">&#x53EA;&#x80FD;&#x5339;&#x914D; x.js,y.js,z.js,&#x4E0D;&#x4F1A;&#x5339;&#x914D;xy.js,xyz.js&#x7B49;,&#x6574;&#x4E2A;&#x4E2D;&#x62EC;&#x53F7;&#x53EA;&#x4EE3;&#x8868;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">[^xyz].js</td>
+<td style="text-align:left">&#x80FD;&#x5339;&#x914D; a.js,b.js,c.js&#x7B49;,&#x4E0D;&#x80FD;&#x5339;&#x914D;x.js,y.js,z.js</td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+</div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+    aria-labelledby="loginModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="loginModalLabel">请登录</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="username" class="control-label">姓名:</label>
+                        <input type="text" class="form-control" id="username" placeholder="珠峰架构VIP会员系统用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">密码:</label>
+                        <input type="text" class="form-control" id="password" placeholder="珠峰架构VIP会员系统密码">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                    data-dismiss="modal">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

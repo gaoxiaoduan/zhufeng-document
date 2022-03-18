@@ -1,0 +1,1899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+   
+                    
+
+                        
+<div class="warpper">
+    <div class="page-toc">
+        <ul><li><a href="#t01. 什么是同构">1. 什么是同构</a></li><li><a href="#t12.Next.js">2.Next.js</a></li><li><a href="#t23.项目初始化">3.项目初始化</a><ul><li><a href="#t33.1 创建项目">3.1 创建项目</a></li><li><a href="#t43.2 添加脚本">3.2 添加脚本</a></li><li><a href="#t53.3 访问服务">3.3 访问服务</a><ul><li><a href="#t63.3.1 index.js">3.3.1 index.js</a></li><li><a href="#t73.3.2 访问">3.3.2 访问</a></li></ul></li></ul></li><li><a href="#t84.跑通路由和样式">4.跑通路由和样式</a><ul><li><a href="#t94.1 知识点">4.1 知识点</a></li><li><a href="#t104.2 pages_app.js">4.2 pages_app.js</a></li><li><a href="#t114.3 pages_app.module.css">4.3 pages_app.module.css</a></li><li><a href="#t124.4 global.css">4.4 global.css</a></li><li><a href="#t134.5 pages\index.js">4.5 pages\index.js</a></li><li><a href="#t144.6 pages\user.js">4.6 pages\user.js</a></li><li><a href="#t154.7 pages\profile.js">4.7 pages\profile.js</a></li></ul></li><li><a href="#t165.二级路由">5.二级路由</a><ul><li><a href="#t175.1 知识点">5.1 知识点</a></li><li><a href="#t185.2 执行顺序">5.2 执行顺序</a><ul><li><a href="#t195.2.1 后台顺序">5.2.1 后台顺序</a></li><li><a href="#t205.2.2 前台顺序">5.2.2 前台顺序</a></li><li><a href="#t215.2.3 pages_app.js">5.2.3 pages_app.js</a></li><li><a href="#t225.2.4 user\index.js">5.2.4 user\index.js</a></li><li><a href="#t235.2.5 user\list.js">5.2.5 user\list.js</a></li><li><a href="#t245.2.6 user\add.js">5.2.6 user\add.js</a></li><li><a href="#t255.2.7 user\detail[id].js">5.2.7 user\detail[id].js</a></li></ul></li></ul></li><li><a href="#t266.调用接口">6.调用接口</a><ul><li><a href="#t276.1 utils\axios.js">6.1 utils\axios.js</a></li><li><a href="#t286.2 pages\user\add.js">6.2 pages\user\add.js</a></li><li><a href="#t296.3 user\list.js">6.3 user\list.js</a></li><li><a href="#t306.4 [id].js">6.4 [id].js</a></li></ul></li><li><a href="#t317.懒加载">7.懒加载</a><ul><li><a href="#t327.1 知识点">7.1 知识点</a></li><li><a href="#t337.2 pages\user\detail[id].js">7.2 pages\user\detail[id].js</a></li><li><a href="#t347.3 components\UserInfo.js">7.3 components\UserInfo.js</a></li></ul></li><li><a href="#t358.用户登录">8.用户登录</a><ul><li><a href="#t368.1 pages_app.js">8.1 pages_app.js</a></li><li><a href="#t378.2 pages\login.js">8.2 pages\login.js</a></li></ul></li><li><a href="#t389.集成redux">9.集成redux</a><ul><li><a href="#t399.1 安装依赖">9.1 安装依赖</a></li><li><a href="#t409.2 pages_app.js">9.2 pages_app.js</a></li><li><a href="#t419.3 store\action-types.js">9.3 store\action-types.js</a></li><li><a href="#t429.4 store\reducer.js">9.4 store\reducer.js</a></li><li><a href="#t439.5 store\index.js">9.5 store\index.js</a></li></ul></li><li><a href="#t4410.loading效果">10.loading效果</a><ul><li><a href="#t4511.1 pages_app.js">11.1 pages_app.js</a></li></ul></li><li><a href="#t4611.受保护路由">11.受保护路由</a><ul><li><a href="#t4711.1 pages\profile.js">11.1 pages\profile.js</a></li></ul></li><li><a href="#t4812.自定义Document">12.自定义Document</a><ul><li><a href="#t4912.1 pages_document.js">12.1 pages_document.js</a></li><li><a href="#t5013.2 pages\index.js">13.2 pages\index.js</a></li></ul></li><li><a href="#t5113. 新版初始化函数">13. 新版初始化函数</a><ul><li><a href="#t5213.1 pages\user.js">13.1 pages\user.js</a></li><li><a href="#t5313.2 pages\user\list.js">13.2 pages\user\list.js</a></li><li><a href="#t5413.3 pages\user\detail[id].js">13.3 pages\user\detail[id].js</a></li></ul></li><li><a href="#t5514. 布署">14. 布署</a><ul><li><a href="#t5614.1 直接布署">14.1 直接布署</a></li><li><a href="#t5714.2 集成express布署">14.2 集成express布署</a><ul><li><a href="#t5814.2.1 start.js">14.2.1 start.js</a></li><li><a href="#t5914.2.2 config.js">14.2.2 config.js</a></li><li><a href="#t6014.2.3 model.js">14.2.3 model.js</a></li></ul></li></ul></li><li><a href="#t6113.服务端">13.服务端</a><ul><li><a href="#t6213.1  安装">13.1  安装</a></li><li><a href="#t6313.2 接口文档">13.2 接口文档</a><ul><li><a href="#t6413.2.1 注册">13.2.1 注册</a><ul><li><a href="#t6513.2.1.1 接口地址">13.2.1.1 接口地址</a></li><li><a href="#t6613.2.1.2 参数">13.2.1.2 参数</a></li></ul></li><li><a href="#t67JSON请求体参数">JSON请求体参数</a><ul><li><a href="#t6813.2.1.3 返回值">13.2.1.3 返回值</a></li><li><a href="#t6913.2.1.4 返回结果">13.2.1.4 返回结果</a></li></ul></li><li><a href="#t7013.2.2 登录">13.2.2 登录</a><ul><li><a href="#t7113.2.2.1 接口地址">13.2.2.1 接口地址</a></li><li><a href="#t7213.2.2.2 参数">13.2.2.2 参数</a></li></ul></li><li><a href="#t73JSON请求体参数">JSON请求体参数</a><ul><li><a href="#t7413.2.2.3 返回值">13.2.2.3 返回值</a></li><li><a href="#t7513.2.2.4 返回结果">13.2.2.4 返回结果</a></li></ul></li><li><a href="#t7613.2.3 查看当前登录的用户信息">13.2.3 查看当前登录的用户信息</a><ul><li><a href="#t7713.2.3.1 接口地址">13.2.3.1 接口地址</a></li><li><a href="#t7813.2.3.2 参数">13.2.3.2 参数</a></li><li><a href="#t7913.2.3.3 返回值">13.2.3.3 返回值</a></li><li><a href="#t8013.2.3.4 返回结果">13.2.3.4 返回结果</a></li></ul></li><li><a href="#t8113.2.4 查看用户列表">13.2.4 查看用户列表</a><ul><li><a href="#t8213.2.4.1 接口地址">13.2.4.1 接口地址</a></li><li><a href="#t8313.2.4.2 参数">13.2.4.2 参数</a></li><li><a href="#t8413.2.4.3 返回值">13.2.4.3 返回值</a></li><li><a href="#t8513.2.4.4 返回结果">13.2.4.4 返回结果</a></li></ul></li><li><a href="#t8613.2.5 查看某个用户信息">13.2.5 查看某个用户信息</a><ul><li><a href="#t8713.2.5.1 接口地址">13.2.5.1 接口地址</a></li><li><a href="#t8813.2.5.2 参数">13.2.5.2 参数</a></li><li><a href="#t8913.2.5.3 返回值">13.2.5.3 返回值</a></li><li><a href="#t9013.2.5.4 返回结果">13.2.5.4 返回结果</a></li></ul></li></ul></li><li><a href="#t9113.1 api\index.js">13.1 api\index.js</a></li><li><a href="#t9213.2 api\config.js">13.2 api\config.js</a></li><li><a href="#t9313.3 server\model.js">13.3 server\model.js</a></li></ul></li></ul>
+    </div>
+    <div class="content markdown-body">
+        <h2 id="t01. &#x4EC0;&#x4E48;&#x662F;&#x540C;&#x6784;">1. &#x4EC0;&#x4E48;&#x662F;&#x540C;&#x6784; <a href="#t01. &#x4EC0;&#x4E48;&#x662F;&#x540C;&#x6784;"> # </a></h2>
+<ul>
+<li>&#x540C;&#x6784;&#x7684;&#x9879;&#x76EE;&#x652F;&#x6301;&#x5BA2;&#x6237;&#x7AEF;&#x6E32;&#x67D3;&#x548C;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x6E32;&#x67D3;</li>
+<li>&#x5BA2;&#x6237;&#x7AEF;&#x6E32;&#x67D3;&#x7F3A;&#x70B9;<ul>
+<li>&#x9996;&#x5C4F;&#x901F;&#x5EA6;&#x52A0;&#x8F7D;&#x6162;</li>
+<li>&#x4E0D;&#x652F;&#x6301;SEO&#x548C;&#x641C;&#x7D22;&#x5F15;&#x64CE;&#x4F18;&#x5316;</li>
+<li>&#x9996;&#x9875;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x8BF7;&#x6C42;&#x521D;&#x59CB;&#x5316;&#x6570;&#x636E;</li>
+</ul>
+</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/renderflow.png" alt="renderflow"></p>
+<h2 id="t12.Next.js">2.Next.js <a href="#t12.Next.js"> # </a></h2>
+<ul>
+<li><a href="https://nextjs.org/docs">Next.js&#x82F1;&#x6587;&#x6587;&#x6863;</a>,<a href="https://nextjs.frontendx.cn/docs/">Next.js&#x4E2D;&#x6587;&#x6587;&#x6863;</a> &#x662F;&#x4E00;&#x4E2A;&#x8F7B;&#x91CF;&#x7EA7;&#x7684; React &#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;&#x5E94;&#x7528;&#x6846;&#x67B6;</li>
+<li>&#x9ED8;&#x8BA4;&#x652F;&#x6301;&#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;</li>
+<li>&#x81EA;&#x52A8;&#x6839;&#x636E;&#x9875;&#x9762;&#x8FDB;&#x884C;&#x4EE3;&#x7801;&#x5206;&#x5272;</li>
+<li>&#x57FA;&#x4E8E;&#x9875;&#x9762;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x8DEF;&#x7531;&#x65B9;&#x6848;</li>
+<li>&#x57FA;&#x4E8E; Webpack &#x7684;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#xFF0C;&#x652F;&#x6301;&#x70ED;&#x6A21;&#x5757;&#x66FF;&#x6362;</li>
+<li>&#x53EF;&#x4EE5;&#x8DDF;<code>Koa</code>&#x6216;&#x8005;&#x5176;&#x5B83;<code>Node.js</code>&#x670D;&#x52A1;&#x5668;&#x8FDB;&#x884C;&#x96C6;&#x6210;</li>
+<li>&#x652F;&#x6301; Babel &#x548C; Webpack &#x7684;&#x914D;&#x7F6E;&#x9879;&#x5B9A;&#x5236;</li>
+<li>&#x9759;&#x6001;&#x6587;&#x4EF6;&#x670D;&#x52A1; public</li>
+</ul>
+<h2 id="t23.&#x9879;&#x76EE;&#x521D;&#x59CB;&#x5316;">3.&#x9879;&#x76EE;&#x521D;&#x59CB;&#x5316; <a href="#t23.&#x9879;&#x76EE;&#x521D;&#x59CB;&#x5316;"> # </a></h2>
+<h3 id="t33.1 &#x521B;&#x5EFA;&#x9879;&#x76EE;">3.1 &#x521B;&#x5EFA;&#x9879;&#x76EE; <a href="#t33.1 &#x521B;&#x5EFA;&#x9879;&#x76EE;"> # </a></h3>
+<pre><code class="lang-js">mkdir zhufengnextjs
+cd zhufengnextjs
+npm init -y
+yarn add --dev react  react-dom  next axios redux react-redux express  body-parser  cors express-session connect-mongo mongoose koa koa-router
+mkdir pages
+</code></pre>
+<h3 id="t43.2 &#x6DFB;&#x52A0;&#x811A;&#x672C;">3.2 &#x6DFB;&#x52A0;&#x811A;&#x672C; <a href="#t43.2 &#x6DFB;&#x52A0;&#x811A;&#x672C;"> # </a></h3>
+<p>package.json</p>
+<pre><code class="lang-json">{
+  <span class="hljs-attr">&quot;scripts&quot;</span>: {
+    <span class="hljs-attr">&quot;dev&quot;</span>: <span class="hljs-string">&quot;next dev&quot;</span>,
+    <span class="hljs-attr">&quot;build&quot;</span>: <span class="hljs-string">&quot;next build&quot;</span>,
+    <span class="hljs-attr">&quot;start&quot;</span>: <span class="hljs-string">&quot;next start&quot;</span>
+  }
+}
+</code></pre>
+<p><a href="https://github.com/zeit/next.js/blob/canary/.gitignore">.gitignore</a></p>
+<h3 id="t53.3 &#x8BBF;&#x95EE;&#x670D;&#x52A1;">3.3 &#x8BBF;&#x95EE;&#x670D;&#x52A1; <a href="#t53.3 &#x8BBF;&#x95EE;&#x670D;&#x52A1;"> # </a></h3>
+<ul>
+<li>&#x4EE5; ./pages&#x4F5C;&#x4E3A;&#x670D;&#x52A1;&#x7AEF;&#x7684;&#x6E32;&#x67D3;&#x548C;&#x7D22;&#x5F15;&#x7684;&#x6839;&#x76EE;&#x5F55;</li>
+<li><ul>
+<li>pages &#x662F; next.js &#x4E2D;&#x975E;&#x5E38;&#x91CD;&#x8981;&#x7684;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;&#xFF0C;&#x5176;&#x4E2D;&#x6BCF;&#x4E00;&#x4E2A; js &#x6587;&#x4EF6;&#x5C31;&#x4EE3;&#x8868;&#x4E00;&#x4E2A;&#x9875;&#x9762;&#xFF0C;&#x4F46;&#x662F;&#x6709;&#x4E24;&#x4E2A;&#x4F8B;&#x5916;&#xFF0C;<code>_app.js</code> &#x548C; <code>_document.js</code></li>
+</ul>
+</li>
+<li>next.js&#x4F1A;&#x5C06;pages&#x4E0B;&#x7684;js&#x6587;&#x4EF6;&#x6839;&#x636E;&#x5176;&#x8DEF;&#x5F84;&#x540D;&#x548C;&#x6587;&#x4EF6;&#x540D;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x5BF9;&#x5E94;&#x7684;&#x8DEF;&#x7531;</li>
+<li><code>pages</code>&#x7EC4;&#x4EF6;&#x4EE3;&#x7801;&#x81EA;&#x52A8;&#x5206;&#x5272;</li>
+<li>next.js&#x9879;&#x76EE;&#x8FD0;&#x884C;&#x4E4B;&#x540E;&#x4F1A;&#x81EA;&#x52A8;&#x751F;&#x6210;<code>.next</code>&#x76EE;&#x5F55;</li>
+</ul>
+<h4 id="t63.3.1 index.js">3.3.1 index.js <a href="#t63.3.1 index.js"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+}
+</code></pre>
+<h4 id="t73.3.2 &#x8BBF;&#x95EE;">3.3.2 &#x8BBF;&#x95EE; <a href="#t73.3.2 &#x8BBF;&#x95EE;"> # </a></h4>
+<pre><code class="lang-js">curl http:<span class="hljs-comment">//localhost:3000/</span>
+</code></pre>
+<h2 id="t84.&#x8DD1;&#x901A;&#x8DEF;&#x7531;&#x548C;&#x6837;&#x5F0F;">4.&#x8DD1;&#x901A;&#x8DEF;&#x7531;&#x548C;&#x6837;&#x5F0F; <a href="#t84.&#x8DD1;&#x901A;&#x8DEF;&#x7531;&#x548C;&#x6837;&#x5F0F;"> # </a></h2>
+<h3 id="t94.1 &#x77E5;&#x8BC6;&#x70B9;">4.1 &#x77E5;&#x8BC6;&#x70B9; <a href="#t94.1 &#x77E5;&#x8BC6;&#x70B9;"> # </a></h3>
+<ul>
+<li>&#x7ED1;&#x5B9A; <code>styled-jsx</code> &#x6765;&#x751F;&#x6210;&#x72EC;&#x7ACB;&#x4F5C;&#x7528;&#x57DF;&#x7684; <code>CSS</code></li>
+<li>&#x5982;&#x4F55;&#x652F;&#x6301;&#x672C;&#x5730;&#x548C;&#x5168;&#x5C40;<code>css</code></li>
+<li>&#x8DEF;&#x7531;&#x7684;&#x4F7F;&#x7528;&#x548C;&#x4E24;&#x79CD;&#x8DF3;&#x8F6C;&#x8DEF;&#x5F84;&#x7684;&#x65B9;&#x6CD5;</li>
+</ul>
+<h3 id="t104.2 pages_app.js">4.2 pages_app.js <a href="#t104.2 pages_app.js"> # </a></h3>
+<ul>
+<li><code>App</code>&#x7EC4;&#x4EF6;&#x662F;&#x6BCF;&#x4E2A;&#x9875;&#x9762;&#x7684;&#x6839;&#x7EC4;&#x4EF6;&#xFF0C;&#x9875;&#x9762;&#x5207;&#x6362;&#x65F6; App &#x4E0D;&#x4F1A;&#x9500;&#x6BC1;&#xFF0C;&#x4F46;&#x662F;&#x91CC;&#x9762;&#x7684;&#x9875;&#x9762;&#x7EC4;&#x4EF6;&#x4F1A;&#x9500;&#x6BC1;&#xFF0C;&#x56E0;&#x6B64;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x8FD9;&#x4E2A;&#x6765;&#x8BBE;&#x7F6E;&#x5168;&#x5C40;&#x5C5E;&#x6027;&#x548C;&#x6837;&#x5F0F;</li>
+<li>&#x5168;&#x5C40; css &#x53EA;&#x80FD;&#x5199;&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x62A5;&#x9519;<ul>
+<li>&#x5F53;&#x9875;&#x9762;&#x53D8;&#x5316;&#x65F6;&#x4FDD;&#x6301;&#x9875;&#x9762;&#x5E03;&#x5C40;</li>
+<li>&#x5F53;&#x8DEF;&#x7531;&#x53D8;&#x5316;&#x65F6;&#x4FDD;&#x6301;&#x9875;&#x9762;&#x72B6;&#x6001;</li>
+<li>&#x6CE8;&#x5165;&#x989D;&#x5916;&#x6570;&#x636E;&#x5230;&#x9875;&#x9762;&#x91CC;</li>
+</ul>
+</li>
+</ul>
+<p>pages_app.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> App, { Container } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;next/app&apos;</span>;
+<span class="hljs-keyword">import</span> Link <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;next/link&apos;</span>;
+<span class="hljs-keyword">import</span> _appStyle <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./_app.module.css&apos;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;../styles/global.css&apos;</span>;
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">LayoutApp</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">App</span></span>{
+    render() {
+        <span class="hljs-keyword">let</span> { Component } = <span class="hljs-keyword">this</span>.props;
+        <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">jsx</span>&gt;</span>
+                     {
+                     `li{
+                         display:inline-block;
+                         margin-left:10px;
+                         line-height:31px;
+                       }`
+                     }
+                <span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;/images/jglogo.png&quot;</span> <span class="hljs-attr">className</span>=<span class="hljs-string">{_appStyle.logo}/</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>&#x9996;&#x9875;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/user&quot;</span> &gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>&#x7528;&#x6237;&#x7BA1;&#x7406;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/profile&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>&#x4E2A;&#x4EBA;&#x4E2D;&#x5FC3;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">Component</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">textAlign:</span> &apos;<span class="hljs-attr">center</span>&apos; }} &gt;</span>@copyright &#x73E0;&#x5CF0;&#x67B6;&#x6784;<span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+        )
+    }
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> LayoutApp;
+</code></pre>
+<h3 id="t114.3 pages_app.module.css">4.3 pages_app.module.css <a href="#t114.3 pages_app.module.css"> # </a></h3>
+<p>pages_app.module.css</p>
+<pre><code class="lang-css"><span class="hljs-selector-class">.logo</span>{
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">120px</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">31px</span>;
+    <span class="hljs-attribute">float</span>: left;
+}
+</code></pre>
+<h3 id="t124.4 global.css">4.4 global.css <a href="#t124.4 global.css"> # </a></h3>
+<p>styles\global.css</p>
+<pre><code class="lang-css"><span class="hljs-selector-tag">html</span>,
+<span class="hljs-selector-tag">body</span> {
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+}
+</code></pre>
+<h3 id="t134.5 pages\index.js">4.5 pages\index.js <a href="#t134.5 pages\index.js"> # </a></h3>
+<p>pages\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+}
+</code></pre>
+<h3 id="t144.6 pages\user.js">4.6 pages\user.js <a href="#t144.6 pages\user.js"> # </a></h3>
+<p>pages\user.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> Link <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;next/link&apos;</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>User<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/&quot;</span>&gt;</span>&#x9996;&#x9875;<span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+}
+</code></pre>
+<h3 id="t154.7 pages\profile.js">4.7 pages\profile.js <a href="#t154.7 pages\profile.js"> # </a></h3>
+<p>pages\profile.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> router <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;next/router&apos;</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>User<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> router.back()}&gt;&#x8FD4;&#x56DE;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+}
+</code></pre>
+<h2 id="t165.&#x4E8C;&#x7EA7;&#x8DEF;&#x7531;">5.&#x4E8C;&#x7EA7;&#x8DEF;&#x7531; <a href="#t165.&#x4E8C;&#x7EA7;&#x8DEF;&#x7531;"> # </a></h2>
+<h3 id="t175.1 &#x77E5;&#x8BC6;&#x70B9;">5.1 &#x77E5;&#x8BC6;&#x70B9; <a href="#t175.1 &#x77E5;&#x8BC6;&#x70B9;"> # </a></h3>
+<ul>
+<li>&#x652F;&#x6301;&#x4E8C;&#x7EA7;&#x8DEF;&#x7531;</li>
+<li>&#x5B9E;&#x73B0;&#x4E8C;&#x7EA7;&#x5E03;&#x5C40;&#x7EC4;&#x4EF6;</li>
+<li>&#x8DEF;&#x7531;&#x8DF3;&#x8F6C;&#x4F20;&#x9012;&#x53C2;&#x6570;</li>
+<li>&#x9875;&#x9762;&#x7EC4;&#x4EF6;&#x901A;&#x8FC7;<code>getInitialProps</code>&#x83B7;&#x53D6;&#x6570;&#x636E;</li>
+</ul>
+<h3 id="t185.2 &#x6267;&#x884C;&#x987A;&#x5E8F;">5.2 &#x6267;&#x884C;&#x987A;&#x5E8F; <a href="#t185.2 &#x6267;&#x884C;&#x987A;&#x5E8F;"> # </a></h3>
+<h4 id="t195.2.1 &#x540E;&#x53F0;&#x987A;&#x5E8F;">5.2.1 &#x540E;&#x53F0;&#x987A;&#x5E8F; <a href="#t195.2.1 &#x540E;&#x53F0;&#x987A;&#x5E8F;"> # </a></h4>
+<ul>
+<li>LayoutApp getInitialProps</li>
+<li>UseList getInitialProps</li>
+<li>LayoutApp constructor</li>
+<li>UseList constructor<h4 id="t205.2.2 &#x524D;&#x53F0;&#x987A;&#x5E8F;">5.2.2 &#x524D;&#x53F0;&#x987A;&#x5E8F; <a href="#t205.2.2 &#x524D;&#x53F0;&#x987A;&#x5E8F;"> # </a></h4>
+</li>
+<li>&#x521D;&#x6B21;&#x6E32;&#x67D3;<ul>
+<li>LayoutApp constructor</li>
+<li>UseList constructor</li>
+</ul>
+</li>
+<li>&#x8DEF;&#x7531;&#x5207;&#x6362;<ul>
+<li>LayoutApp getInitialProps</li>
+<li>UseList getInitialProps</li>
+<li>UseList constructor</li>
+</ul>
+</li>
+</ul>
+<h4 id="t215.2.3 pages_app.js">5.2.3 pages_app.js <a href="#t215.2.3 pages_app.js"> # </a></h4>
+<p>pages_app.js</p>
+<pre><code class="lang-diff">import App from &apos;next/app&apos;;
+import Link from &apos;next/link&apos;;
+import _appStyle from &apos;./_app.module.css&apos;;
+import &apos;../styles/global.css&apos;;
+class LayoutApp extends App{
+<span class="hljs-addition">+   static async getInitialProps({ Component, ctx }) {</span>
+<span class="hljs-addition">+       let pageProps = {};</span>
+<span class="hljs-addition">+       if (Component.getInitialProps)</span>
+<span class="hljs-addition">+           pageProps = await Component.getInitialProps(ctx);</span>
+<span class="hljs-addition">+       return { pageProps };</span>
+<span class="hljs-addition">+   }</span>
+    render() {
+<span class="hljs-addition">+       let { Component,pageProps } = this.props;</span>
+        return (
+            &lt;div&gt;
+                &lt;style jsx&gt;
+                     {
+                     `li{
+                         display:inline-block;
+                         margin-left:10px;
+                         line-height:31px;
+                       }`
+                     }
+                &lt;/style&gt;
+                &lt;div&gt;
+                    &lt;header&gt;
+                        &lt;img src=&quot;/images/jglogo.png&quot; className={_appStyle.logo}/&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;&lt;Link href=&quot;/&quot;&gt;&lt;a&gt;&#x9996;&#x9875;&lt;/a&gt;&lt;/Link&gt;&lt;/li&gt;
+<span class="hljs-addition">+                           &lt;li&gt;&lt;Link href=&quot;/user/list&quot; &gt;&lt;a&gt;&#x7528;&#x6237;&#x7BA1;&#x7406;&lt;/a&gt;&lt;/Link&gt;&lt;/li&gt;</span>
+                            &lt;li&gt;&lt;Link href=&quot;/profile&quot;&gt;&lt;a&gt;&#x4E2A;&#x4EBA;&#x4E2D;&#x5FC3;&lt;/a&gt;&lt;/Link&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/header&gt;
+<span class="hljs-addition">+                   &lt;Component {...pageProps} /&gt;</span>
+                    &lt;footer style={{ textAlign: &apos;center&apos; }} &gt;@copyright &#x73E0;&#x5CF0;&#x67B6;&#x6784;&lt;/footer&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        )
+    }
+}
+export default LayoutApp;
+</code></pre>
+<h4 id="t225.2.4 user\index.js">5.2.4 user\index.js <a href="#t225.2.4 user\index.js"> # </a></h4>
+<p>pages\user\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> Link <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;next/link&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">UserLayout</span>(<span class="hljs-params">props</span>) </span>{
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                 <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/user/list&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>&#x7528;&#x6237;&#x5217;&#x8868;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/user/add&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span>&gt;</span>&#x6DFB;&#x52A0;&#x7528;&#x6237;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                 <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+                 <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                   {props.children}
+                 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> UserLayout;
+</code></pre>
+<h4 id="t235.2.5 user\list.js">5.2.5 user\list.js <a href="#t235.2.5 user\list.js"> # </a></h4>
+<p>pages\user\list.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> Link <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;next/link&apos;</span>;
+<span class="hljs-keyword">import</span> UserLayout <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">UseList</span>(<span class="hljs-params">props</span>) </span>{
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">UserLayout</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+                {
+                    props.list.map((user)=&gt;(
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{user.id}</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">{</span>`/<span class="hljs-attr">user</span>/<span class="hljs-attr">detail</span>/${<span class="hljs-attr">user.id</span>}`}&gt;</span>{user.name}<span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    ))
+                }
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">UserLayout</span>&gt;</span></span>
+    )
+}
+UseList.getInitialProps = <span class="hljs-keyword">async</span> (ctx) =&gt; {
+    <span class="hljs-keyword">let</span> list = [{ <span class="hljs-attr">id</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;&#x5F20;&#x4E09;&apos;</span>}, { <span class="hljs-attr">id</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;&#x674E;&#x56DB;&apos;</span>}];
+    <span class="hljs-keyword">return</span> { list };
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> UseList;
+</code></pre>
+<h4 id="t245.2.6 user\add.js">5.2.6 user\add.js <a href="#t245.2.6 user\add.js"> # </a></h4>
+<p>pages\user\add.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> Link <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;next/link&apos;</span>;
+<span class="hljs-keyword">import</span> UserLayout <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./&apos;</span>;
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">UserAdd</span>(<span class="hljs-params">props</span>) </span>{
+    <span class="hljs-keyword">let</span> nameRef = React.useRef();
+    <span class="hljs-keyword">let</span> passwordRef = React.useRef();
+    <span class="hljs-keyword">let</span> handleSubmit  = <span class="hljs-function">(<span class="hljs-params">event</span>)=&gt;</span>{
+        event.preventDefault();
+        <span class="hljs-keyword">let</span> user = {<span class="hljs-attr">name</span>:nameRef.current.value,<span class="hljs-attr">password</span>:passwordRef.current.value};
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x6DFB;&#x52A0;&apos;</span>,user);
+    }
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">UserLayout</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">onSubmit</span>=<span class="hljs-string">{handleSubmit}</span>&gt;</span>
+                &#x7528;&#x6237;&#x540D;:<span class="hljs-tag">&lt;<span class="hljs-name">input</span>  <span class="hljs-attr">ref</span>=<span class="hljs-string">{nameRef}/</span>&gt;</span>
+                &#x5BC6;&#x7801;:<span class="hljs-tag">&lt;<span class="hljs-name">input</span>  <span class="hljs-attr">ref</span>=<span class="hljs-string">{passwordRef}/</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span>&gt;</span>&#x6DFB;&#x52A0;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">UserLayout</span>&gt;</span></span>
+    )
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> UserAdd;
+</code></pre>
+<h4 id="t255.2.7 user\detail[id].js">5.2.7 user\detail[id].js <a href="#t255.2.7 user\detail[id].js"> # </a></h4>
+<p>pages\user\detail[id].js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> UserLayout <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">UserDetail</span>(<span class="hljs-params">props</span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">UserLayout</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>ID:{props.user.id}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">UserLayout</span>&gt;</span></span>
+  )
+}
+UserDetail.getInitialProps = <span class="hljs-keyword">async</span> (ctx) =&gt; {
+  <span class="hljs-keyword">return</span> { <span class="hljs-attr">user</span>:{<span class="hljs-attr">id</span>:ctx.query.id}};
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> UserDetail;
+</code></pre>
+<h2 id="t266.&#x8C03;&#x7528;&#x63A5;&#x53E3;">6.&#x8C03;&#x7528;&#x63A5;&#x53E3; <a href="#t266.&#x8C03;&#x7528;&#x63A5;&#x53E3;"> # </a></h2>
+<ul>
+<li>&#x5F53;&#x670D;&#x52A1;&#x6E32;&#x67D3;&#x65F6;,<code>getInitialProps</code>&#x5C06;&#x4F1A;&#x628A;&#x6570;&#x636E;&#x5E8F;&#x5217;&#x5316;&#xFF0C;&#x5C31;&#x50CF;<code>JSON.stringify</code></li>
+<li>&#x6240;&#x4EE5;&#x786E;&#x4FDD;<code>getInitialProps</code>&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x666E;&#x901A; <code>JS</code> &#x5BF9;&#x8C61;&#xFF0C;&#x800C;&#x4E0D;&#x662F;Date, Map &#x6216; Set&#x7C7B;&#x578B;</li>
+<li>&#x5F53;&#x9875;&#x9762;&#x521D;&#x59CB;&#x5316;&#x52A0;&#x8F7D;&#x65F6;,<code>getInitialProps</code>&#x53EA;&#x4F1A;&#x52A0;&#x8F7D;&#x5728;&#x670D;&#x52A1;&#x7AEF;&#x3002;&#x53EA;&#x6709;&#x5F53;&#x8DEF;&#x7531;&#x8DF3;&#x8F6C;&#xFF08;Link&#x7EC4;&#x4EF6;&#x8DF3;&#x8F6C;&#x6216; API &#x65B9;&#x6CD5;&#x8DF3;&#x8F6C;&#xFF09;&#x65F6;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x624D;&#x4F1A;&#x6267;&#x884C;<code>getInitialProps</code></li>
+<li><code>getInitialProps</code>&#x5C06;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x5728;&#x5B50;&#x7EC4;&#x4EF6;&#x4E2D;&#x3002;&#x53EA;&#x80FD;&#x4F7F;&#x7528;&#x5728;<code>pages</code>&#x9875;&#x9762;&#x4E2D;</li>
+</ul>
+<h3 id="t276.1 utils\axios.js">6.1 utils\axios.js <a href="#t276.1 utils\axios.js"> # </a></h3>
+<p>utils\axios.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> axios <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;axios&apos;</span>;
+axios.defaults.withCredentials = <span class="hljs-literal">true</span>
+<span class="hljs-keyword">const</span> instance = axios.create({
+    <span class="hljs-attr">baseURL</span>: <span class="hljs-string">&apos;http://localhost:4000&apos;</span>
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> instance;
+</code></pre>
+<h3 id="t286.2 pages\user\add.js">6.2 pages\user\add.js <a href="#t286.2 pages\user\add.js"> # </a></h3>
+<p>pages\user\add.js</p>
+<pre><code class="lang-diff">import Link from &apos;next/link&apos;;
+import UserLayout from &apos;./&apos;;
+import React from &apos;react&apos;;
+<span class="hljs-addition">+import axios from &apos;../../utils/axios&apos;;</span>
+<span class="hljs-addition">+import router from &apos;next/router&apos;</span>
+function UserAdd() {
+    let nameRef = React.useRef();
+    let passwordRef = React.useRef();
+    let handleSubmit  = async (event)=&gt;{
+        event.preventDefault();
+        let user = {name:nameRef.current.value,password:passwordRef.current.value};
+<span class="hljs-addition">+        let response = await axios.post(&apos;/api/register&apos;, user).then(res=&gt;res.data);</span>
+<span class="hljs-addition">+        if (response.success) {</span>
+<span class="hljs-addition">+            router.push(&apos;/user/list&apos;);</span>
+<span class="hljs-addition">+        } else {</span>
+<span class="hljs-addition">+            alert(&apos;&#x6DFB;&#x52A0;&#x7528;&#x6237;&#x5931;&#x8D25;&apos;);</span>
+<span class="hljs-addition">+        }</span>
+    }
+    return (
+        &lt;UserLayout&gt;
+            &lt;form onSubmit={handleSubmit}&gt;
+                &#x7528;&#x6237;&#x540D;:&lt;input  ref={nameRef}/&gt;
+                &#x5BC6;&#x7801;:&lt;input  ref={passwordRef}/&gt;
+                &lt;button type=&quot;submit&quot;&gt;&#x6DFB;&#x52A0;&lt;/button&gt;
+            &lt;/form&gt;
+        &lt;/UserLayout&gt;
+    )
+}
+
+export default UserAdd;
+</code></pre>
+<h3 id="t296.3 user\list.js">6.3 user\list.js <a href="#t296.3 user\list.js"> # </a></h3>
+<p>pages\user\list.js</p>
+<pre><code class="lang-diff">import Link from &apos;next/link&apos;;
+import UserLayout from &apos;./&apos;;
+<span class="hljs-addition">+import axios from &apos;../../utils/axios&apos;;</span>
+function UseList(props) {
+    return (
+        &lt;UserLayout&gt;
+            &lt;ul&gt;
+                {
+                    props.list.map((user)=&gt;(
+                        &lt;li key={user.id}&gt;
+                            &lt;Link href={`/user/detail/${user.id}`}&gt;{user.name}&lt;/Link&gt;
+                        &lt;/li&gt;
+                    ))
+                }
+            &lt;/ul&gt;
+        &lt;/UserLayout&gt;
+    )
+}
+UseList.getInitialProps = async (ctx) =&gt; {
+<span class="hljs-addition">+   let response = await axios({ url: &apos;/api/users&apos;, method: &apos;GET&apos; }).then(res=&gt;res.data);</span>
+<span class="hljs-addition">+   return { list:response.data };</span>
+}
+export default UseList;
+</code></pre>
+<h3 id="t306.4 [id].js">6.4 [id].js <a href="#t306.4 [id].js"> # </a></h3>
+<p>pages\user\detail[id].js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> UserLayout <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../&apos;</span>;
+<span class="hljs-keyword">import</span> axios <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../../utils/axios&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">UserDetail</span>(<span class="hljs-params">props</span>) </span>{
+  <span class="hljs-keyword">let</span> {user} = props;
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">UserLayout</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>ID:{user.id}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>ID:{user.name}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">UserLayout</span>&gt;</span></span>
+  )
+}
+UserDetail.getInitialProps = <span class="hljs-keyword">async</span> (ctx) =&gt; {
+  <span class="hljs-keyword">let</span> response = <span class="hljs-keyword">await</span> axios({ <span class="hljs-attr">url</span>: <span class="hljs-string">`/api/users/<span class="hljs-subst">${ctx.query.id}</span>`</span>, <span class="hljs-attr">method</span>: <span class="hljs-string">&apos;GET&apos;</span> }).then(<span class="hljs-function"><span class="hljs-params">res</span>=&gt;</span>res.data);
+  <span class="hljs-keyword">return</span> { <span class="hljs-attr">user</span>: response.data };
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> UserDetail;
+</code></pre>
+<h2 id="t317.&#x61D2;&#x52A0;&#x8F7D;">7.&#x61D2;&#x52A0;&#x8F7D; <a href="#t317.&#x61D2;&#x52A0;&#x8F7D;"> # </a></h2>
+<h3 id="t327.1 &#x77E5;&#x8BC6;&#x70B9;">7.1 &#x77E5;&#x8BC6;&#x70B9; <a href="#t327.1 &#x77E5;&#x8BC6;&#x70B9;"> # </a></h3>
+<ul>
+<li>&#x7EC4;&#x4EF6;&#x61D2;&#x52A0;&#x8F7D;</li>
+<li>&#x6A21;&#x5757;&#x61D2;&#x52A0;&#x8F7D;</li>
+</ul>
+<h3 id="t337.2 pages\user\detail[id].js">7.2 pages\user\detail[id].js <a href="#t337.2 pages\user\detail[id].js"> # </a></h3>
+<p>pages\user\detail[id].js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> UserLayout <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../&apos;</span>;
+<span class="hljs-keyword">import</span> axios <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../../utils/axios&apos;</span>;
+<span class="hljs-keyword">import</span> dynamic <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;next/dynamic&apos;</span>;
+<span class="hljs-keyword">const</span> UserInfo = dynamic(<span class="hljs-keyword">import</span>(<span class="hljs-string">&apos;../../../components/UserInfo&apos;</span>))
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">UserDetail</span>(<span class="hljs-params">props</span>) </span>{
+  <span class="hljs-keyword">let</span> {user} = props;
+  <span class="hljs-keyword">let</span> [show, setShow] = React.useState(<span class="hljs-literal">false</span>);
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">UserLayout</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>ID:{user.id}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> setShow(!show)}&gt;&#x663E;&#x793A;/&#x9690;&#x85CF;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      {
+        show &amp;&amp; <span class="hljs-tag">&lt;<span class="hljs-name">UserInfo</span> <span class="hljs-attr">user</span>=<span class="hljs-string">{user}</span> /&gt;</span>
+      }
+    <span class="hljs-tag">&lt;/<span class="hljs-name">UserLayout</span>&gt;</span></span>
+  )
+}
+UserDetail.getInitialProps = <span class="hljs-keyword">async</span> (ctx) =&gt; {
+  <span class="hljs-keyword">let</span> response = <span class="hljs-keyword">await</span> axios({ <span class="hljs-attr">url</span>: <span class="hljs-string">`/api/users/<span class="hljs-subst">${ctx.query.id}</span>`</span>, <span class="hljs-attr">method</span>: <span class="hljs-string">&apos;GET&apos;</span> }).then(<span class="hljs-function"><span class="hljs-params">res</span>=&gt;</span>res.data);
+  <span class="hljs-keyword">return</span> { <span class="hljs-attr">user</span>: response.data };
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> UserDetail;
+</code></pre>
+<h3 id="t347.3 components\UserInfo.js">7.3 components\UserInfo.js <a href="#t347.3 components\UserInfo.js"> # </a></h3>
+<p>components\UserInfo.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">UserInfo</span>(<span class="hljs-params">props</span>) </span>{
+    <span class="hljs-keyword">let</span> {user} = props;
+    <span class="hljs-keyword">let</span> [created, setCreated] = React.useState(props.user.created);
+    <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">changeFormat</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">let</span> moment = <span class="hljs-keyword">await</span> <span class="hljs-keyword">import</span>(<span class="hljs-string">&apos;moment&apos;</span>);
+        setCreated(moment.default(user.created).fromNow());
+    }
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x7528;&#x6237;&#x540D;:{user.name}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>&#x521B;&#x5EFA;&#x65F6;&#x95F4;:{created}<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{changeFormat}</span>&gt;</span>&#x5207;&#x6362;&#x4E3A;&#x76F8;&#x5BF9;&#x65F6;&#x95F4;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> UserInfo;
+</code></pre>
+<h2 id="t358.&#x7528;&#x6237;&#x767B;&#x5F55;">8.&#x7528;&#x6237;&#x767B;&#x5F55; <a href="#t358.&#x7528;&#x6237;&#x767B;&#x5F55;"> # </a></h2>
+<h3 id="t368.1 pages_app.js">8.1 pages_app.js <a href="#t368.1 pages_app.js"> # </a></h3>
+<p>pages_app.js</p>
+<pre><code class="lang-diff">    &lt;ul&gt;
+        &lt;li&gt;&lt;Link href=&quot;/&quot;&gt;&lt;a&gt;&#x9996;&#x9875;&lt;/a&gt;&lt;/Link&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;Link href=&quot;/user/list&quot; &gt;&lt;a&gt;&#x7528;&#x6237;&#x7BA1;&#x7406;&lt;/a&gt;&lt;/Link&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;Link href=&quot;/profile&quot;&gt;&lt;a&gt;&#x4E2A;&#x4EBA;&#x4E2D;&#x5FC3;&lt;/a&gt;&lt;/Link&gt;&lt;/li&gt;
+<span class="hljs-addition">+       &lt;li&gt;&lt;Link href=&quot;/login&quot;&gt;&#x767B;&#x5F55;&lt;/Link&gt;&lt;/li&gt;</span>
+    &lt;/ul&gt;
+</code></pre>
+<h3 id="t378.2 pages\login.js">8.2 pages\login.js <a href="#t378.2 pages\login.js"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> axios <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../utils/axios&apos;</span>;
+<span class="hljs-keyword">import</span> router <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;next/router&apos;</span>;
+<span class="hljs-keyword">import</span> {connect} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-redux&apos;</span>;
+<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> types <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../store/action-types&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Login</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">let</span> nameRef = React.useRef();
+    <span class="hljs-keyword">let</span> passwordRef = React.useRef();
+    <span class="hljs-keyword">let</span> handleSubmit  = <span class="hljs-keyword">async</span> (event)=&gt;{
+        event.preventDefault();
+        <span class="hljs-keyword">let</span> user = {<span class="hljs-attr">name</span>:nameRef.current.value,<span class="hljs-attr">password</span>:passwordRef.current.value};
+        <span class="hljs-keyword">let</span> response = <span class="hljs-keyword">await</span> axios.post(<span class="hljs-string">&apos;/api/login&apos;</span>, user).then(<span class="hljs-function"><span class="hljs-params">res</span>=&gt;</span>res.data);
+        <span class="hljs-keyword">if</span> (response.success) {
+             props.dispatch({<span class="hljs-attr">type</span>:types.SET_USER_INFO,<span class="hljs-attr">payload</span>:response.data});
+            router.push(<span class="hljs-string">&apos;/&apos;</span>);
+        } <span class="hljs-keyword">else</span> {
+            alert(<span class="hljs-string">&apos;&#x767B;&#x5F55;&#x5931;&#x8D25;&apos;</span>);
+        }
+    }
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">onSubmit</span>=<span class="hljs-string">{handleSubmit}</span>&gt;</span>
+                &#x7528;&#x6237;&#x540D;:<span class="hljs-tag">&lt;<span class="hljs-name">input</span>  <span class="hljs-attr">ref</span>=<span class="hljs-string">{nameRef}/</span>&gt;</span>
+                &#x5BC6;&#x7801;:<span class="hljs-tag">&lt;<span class="hljs-name">input</span>  <span class="hljs-attr">ref</span>=<span class="hljs-string">{passwordRef}/</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span>&gt;</span>&#x767B;&#x5F55;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></span>
+    )
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> connect(<span class="hljs-function"><span class="hljs-params">state</span>=&gt;</span>state)(Login);
+</code></pre>
+<h2 id="t389.&#x96C6;&#x6210;redux">9.&#x96C6;&#x6210;redux <a href="#t389.&#x96C6;&#x6210;redux"> # </a></h2>
+<ul>
+<li>&#x521D;&#x6B21;&#x6E32;&#x67D3;&#x7684;&#x6267;&#x884C;&#x987A;&#x5E8F;&#x662F; <ul>
+<li>&#x540E;&#x53F0;  LayoutApp.getInitialProps  LayoutApp.constructor</li>
+<li>&#x524D;&#x53F0;  LayoutApp.getInitialProps</li>
+</ul>
+</li>
+<li>&#x5207;&#x6362;&#x8DEF;&#x7531;&#x65F6;&#x7684;&#x6267;&#x884C;&#x987A;&#x5E8F;<ul>
+<li>&#x524D;&#x53F0;  LayoutApp.getInitialProps</li>
+</ul>
+</li>
+</ul>
+<h3 id="t399.1 &#x5B89;&#x88C5;&#x4F9D;&#x8D56;">9.1 &#x5B89;&#x88C5;&#x4F9D;&#x8D56; <a href="#t399.1 &#x5B89;&#x88C5;&#x4F9D;&#x8D56;"> # </a></h3>
+<pre><code class="lang-js">yarn add redux react-redux
+</code></pre>
+<h3 id="t409.2 pages_app.js">9.2 pages_app.js <a href="#t409.2 pages_app.js"> # </a></h3>
+<p>pages_app.js</p>
+<pre><code class="lang-diff">import App from &apos;next/app&apos;;
+import Link from &apos;next/link&apos;;
+import _appStyle from &apos;./_app.module.css&apos;;
+import &apos;../styles/global.css&apos;;
+<span class="hljs-addition">+import { Provider } from &apos;react-redux&apos;;</span>
+<span class="hljs-addition">+import axios from &apos;../utils/axios&apos;;</span>
+<span class="hljs-addition">+import createStore from &apos;../store&apos;;</span>
+<span class="hljs-addition">+import * as types from &apos;../store/action-types&apos;;</span>
+<span class="hljs-addition">+function getStore(initialState) {</span>
+<span class="hljs-addition">+    if (typeof window == &apos;undefined&apos;) {</span>
+<span class="hljs-addition">+        return createStore(initialState);//&#x5982;&#x679C;&#x662F;&#x670D;&#x52A1;&#x5668;&#x7AEF;,&#x6BCF;&#x6B21;&#x90FD;&#x8FD4;&#x56DE;&#x65B0;&#x7684;&#x4ED3;&#x5E93;</span>
+<span class="hljs-addition">+    } else {</span>
+<span class="hljs-addition">+        if (!window._REDUX_STORE_) {</span>
+<span class="hljs-addition">+            window._REDUX_STORE_ = createStore(initialState);</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+        return window._REDUX_STORE_;</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+class LayoutApp extends App{</span>
+<span class="hljs-addition">+    constructor(props){</span>
+<span class="hljs-addition">+        super(props);</span>
+<span class="hljs-addition">+        this.store = getStore(props.initialState);//3.&#x540E;&#x53F0;&#x7528;&#x65B0;&#x72B6;&#x91CD;&#x65B0;&#x521B;&#x5EFA;&#x65B0;&#x4ED3;&#x5E93;</span>
+<span class="hljs-addition">+        //4.&#x521D;&#x59CB;&#x72B6;&#x6001;&#x5E8F;&#x5217;&#x5316;&#x540E;&#x53D1;&#x7ED9;&#x4E86;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x91CD;&#x65B0;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x4ED3;&#x5E93;</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+   static async getInitialProps({ Component, ctx }) {</span>
+<span class="hljs-addition">+       let store = getStore();//1.&#x540E;&#x53F0;&#x521B;&#x5EFA;&#x65B0;&#x4ED3;&#x5E93;  5.&#x6BCF;&#x6B21;&#x5207;&#x6362;&#x8DEF;&#x7531;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#x6B64;&#x65B9;&#x6CD5;&#x83B7;&#x53D6;&#x8001;&#x4ED3;&#x5E93;</span>
+<span class="hljs-addition">+       if (typeof window == &apos;undefined&apos;) {//2.&#x540E;&#x53F0;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;</span>
+<span class="hljs-addition">+           let options = { url: &apos;/api/currentUser&apos; };</span>
+<span class="hljs-addition">+           if (ctx.req&amp;&amp;ctx.req.headers.cookie) {</span>
+<span class="hljs-addition">+               options.headers = options.headers || {};</span>
+<span class="hljs-addition">+               options.headers.cookie = ctx.req.headers.cookie;</span>
+<span class="hljs-addition">+           }</span>
+<span class="hljs-addition">+           let response = await axios(options).then(res=&gt;res.data);</span>
+<span class="hljs-addition">+           if (response.success) {</span>
+<span class="hljs-addition">+               store.dispatch({ type: types.SET_USER_INFO, payload: response.data });</span>
+<span class="hljs-addition">+           }</span>
+<span class="hljs-addition">+       }</span>
+<span class="hljs-addition">+      let pageProps = {};</span>
+<span class="hljs-addition">+      if (Component.getInitialProps)</span>
+<span class="hljs-addition">+         pageProps = await Component.getInitialProps(ctx);</span>
+<span class="hljs-addition">+      let props =  { pageProps};</span>
+<span class="hljs-addition">+      if (typeof window == &apos;undefined&apos;) {//&#x540E;&#x53F0;&#x83B7;&#x53D6;&#x7528;&#x8D4B;&#x503C;&#x72B6;&#x6001;</span>
+<span class="hljs-addition">+       props.initialState=store.getState();</span>
+<span class="hljs-addition">+      }</span>
+<span class="hljs-addition">+      return props;</span>
+<span class="hljs-addition">+   }</span>
+    render() {
+        let { Component,pageProps} = this.props;
+<span class="hljs-addition">+       let state = this.store.getState();</span>
+        return (
+<span class="hljs-addition">+           &lt;Provider store={this.store}&gt;</span>
+                &lt;style jsx&gt;
+                     {
+                     `li{
+                         display:inline-block;
+                         margin-left:10px;
+                         line-height:31px;
+                       }`
+                     }
+                &lt;/style&gt;
+                &lt;div&gt;
+                    &lt;header&gt;
+                        &lt;img src=&quot;/images/jglogo.png&quot; className={_appStyle.logo}/&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;&lt;Link href=&quot;/&quot;&gt;&lt;a&gt;&#x9996;&#x9875;&lt;/a&gt;&lt;/Link&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;Link href=&quot;/user/list&quot; &gt;&lt;a&gt;&#x7528;&#x6237;&#x7BA1;&#x7406;&lt;/a&gt;&lt;/Link&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;Link href=&quot;/profile&quot;&gt;&lt;a&gt;&#x4E2A;&#x4EBA;&#x4E2D;&#x5FC3;&lt;/a&gt;&lt;/Link&gt;&lt;/li&gt;
+<span class="hljs-addition">+                            &lt;li&gt;</span>
+<span class="hljs-addition">+                                {</span>
+<span class="hljs-addition">+                                 state.currentUser ? &lt;span&gt;{state.currentUser.name}&lt;/span&gt;:&lt;Link href=&quot;/login&quot;&gt;&#x767B;&#x5F55;&lt;/Link&gt;</span>
+<span class="hljs-addition">+                                }</span>
+<span class="hljs-addition">+                            &lt;/li&gt;</span>
+                        &lt;/ul&gt;
+                        {
+
+                        }
+                    &lt;/header&gt;
+                    &lt;Component {...pageProps} /&gt;
+                    &lt;footer style={{ textAlign: &apos;center&apos; }} &gt;@copyright &#x73E0;&#x5CF0;&#x67B6;&#x6784;&lt;/footer&gt;
+                &lt;/div&gt;
+<span class="hljs-addition">+           &lt;/Provider&gt;</span>
+        )
+    }
+}
+export default LayoutApp;
+</code></pre>
+<h3 id="t419.3 store\action-types.js">9.3 store\action-types.js <a href="#t419.3 store\action-types.js"> # </a></h3>
+<p>store\action-types.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> SET_USER_INFO = <span class="hljs-string">&apos;SET_USER_INFO&apos;</span>;<span class="hljs-comment">//&#x8BBE;&#x7F6E;&#x7528;&#x6237;&#x4FE1;&#x606F;</span>
+</code></pre>
+<h3 id="t429.4 store\reducer.js">9.4 store\reducer.js <a href="#t429.4 store\reducer.js"> # </a></h3>
+<p>store\reducer.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> types <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./action-types&apos;</span>;
+<span class="hljs-keyword">let</span> initState = {
+    <span class="hljs-attr">currentUser</span>: <span class="hljs-literal">null</span>
+}
+<span class="hljs-keyword">const</span> reducer = <span class="hljs-function">(<span class="hljs-params">state = initState, action</span>) =&gt;</span> {
+    <span class="hljs-keyword">switch</span> (action.type) {
+        <span class="hljs-keyword">case</span> types.SET_USER_INFO:
+            <span class="hljs-keyword">return</span> { <span class="hljs-attr">currentUser</span>: action.payload }
+        <span class="hljs-attr">default</span>:
+            <span class="hljs-keyword">return</span> state;
+    }
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> reducer;
+</code></pre>
+<h3 id="t439.5 store\index.js">9.5 store\index.js <a href="#t439.5 store\index.js"> # </a></h3>
+<p>store\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { createStore } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;redux&apos;</span>;
+<span class="hljs-keyword">import</span> reducer <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./reducer&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">initialState</span>) </span>{
+    <span class="hljs-keyword">return</span> createStore(reducer, initialState);
+}
+</code></pre>
+<h2 id="t4410.loading&#x6548;&#x679C;">10.loading&#x6548;&#x679C; <a href="#t4410.loading&#x6548;&#x679C;"> # </a></h2>
+<ul>
+<li><a href="https://nextjs.frontendx.cn/docs/#%E8%B7%AF%E7%94%B1">&#x8DEF;&#x7531;&#x4E8B;&#x4EF6;</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x4E8B;&#x4EF6;</th>
+<th style="text-align:left">&#x89E6;&#x53D1;&#x65F6;&#x673A;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">routeChangeStart(url)</td>
+<td style="text-align:left">&#x8DEF;&#x7531;&#x5F00;&#x59CB;&#x5207;&#x6362;&#x65F6;&#x89E6;&#x53D1;</td>
+</tr>
+<tr>
+<td style="text-align:left">routeChangeComplete(url)</td>
+<td style="text-align:left">&#x5B8C;&#x6210;&#x8DEF;&#x7531;&#x5207;&#x6362;&#x65F6;&#x89E6;&#x53D1;</td>
+</tr>
+<tr>
+<td style="text-align:left">routeChangeError(err, url)</td>
+<td style="text-align:left">&#x8DEF;&#x7531;&#x5207;&#x6362;&#x62A5;&#x9519;&#x65F6;&#x89E6;&#x53D1;</td>
+</tr>
+<tr>
+<td style="text-align:left">beforeHistoryChange(url)</td>
+<td style="text-align:left">&#x6D4F;&#x89C8;&#x5668; history &#x6A21;&#x5F0F;&#x5F00;&#x59CB;&#x5207;&#x6362;&#x65F6;&#x89E6;&#x53D1;</td>
+</tr>
+<tr>
+<td style="text-align:left">hashChangeStart(url)</td>
+<td style="text-align:left">&#x5F00;&#x59CB;&#x5207;&#x6362; hash &#x503C;&#x4F46;&#x662F;&#x6CA1;&#x6709;&#x5207;&#x6362;&#x9875;&#x9762;&#x8DEF;&#x7531;&#x65F6;&#x89E6;&#x53D1;</td>
+</tr>
+<tr>
+<td style="text-align:left">hashChangeComplete(url)</td>
+<td style="text-align:left">&#x5B8C;&#x6210;&#x5207;&#x6362; hash &#x503C;&#x4F46;&#x662F;&#x6CA1;&#x6709;&#x5207;&#x6362;&#x9875;&#x9762;&#x8DEF;&#x7531;&#x65F6;&#x89E6;&#x53D1;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t4511.1 pages_app.js">11.1 pages_app.js <a href="#t4511.1 pages_app.js"> # </a></h3>
+<pre><code class="lang-diff">import App from &apos;next/app&apos;;
+import Link from &apos;next/link&apos;;
+import _appStyle from &apos;./_app.module.css&apos;;
+import &apos;../styles/global.css&apos;;
+import { Provider } from &apos;react-redux&apos;;
+import axios from &apos;../utils/axios&apos;;
+import createStore from &apos;../store&apos;;
+import * as types from &apos;../store/action-types&apos;;
+<span class="hljs-addition">+import router from &apos;next/router&apos;;</span>
+function getStore(initialState) {
+    if (typeof window == &apos;undefined&apos;) {
+        return createStore(initialState);//&#x5982;&#x679C;&#x662F;&#x670D;&#x52A1;&#x5668;&#x7AEF;,&#x6BCF;&#x6B21;&#x90FD;&#x8FD4;&#x56DE;&#x65B0;&#x7684;&#x4ED3;&#x5E93;
+    } else {
+        if (!window._REDUX_STORE_) {
+            window._REDUX_STORE_ = createStore(initialState);
+        }
+        return window._REDUX_STORE_;
+    }
+}
+class LayoutApp extends App{
+<span class="hljs-addition">+    state = { loading: false }</span>
+    constructor(props){
+        super(props);
+        this.store = getStore(props.initialState);//3.&#x540E;&#x53F0;&#x7528;&#x65B0;&#x72B6;&#x91CD;&#x65B0;&#x521B;&#x5EFA;&#x65B0;&#x4ED3;&#x5E93;
+        //4.&#x521D;&#x59CB;&#x72B6;&#x6001;&#x5E8F;&#x5217;&#x5316;&#x540E;&#x53D1;&#x7ED9;&#x4E86;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x91CD;&#x65B0;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x4ED3;&#x5E93;
+    }
+    static async getInitialProps({ Component, ctx }) {
+        let store = getStore();//1.&#x540E;&#x53F0;&#x521B;&#x5EFA;&#x65B0;&#x4ED3;&#x5E93;  5.&#x6BCF;&#x6B21;&#x5207;&#x6362;&#x8DEF;&#x7531;&#x90FD;&#x4F1A;&#x6267;&#x884C;&#x6B64;&#x65B9;&#x6CD5;&#x83B7;&#x53D6;&#x8001;&#x4ED3;&#x5E93;
+        if (typeof window == &apos;undefined&apos;) {//2.&#x540E;&#x53F0;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;
+            let options = { url: &apos;/api/currentUser&apos; };
+            if (ctx.req&amp;&amp;ctx.req.headers.cookie) {
+                options.headers = options.headers || {};
+                options.headers.cookie = ctx.req.headers.cookie;
+            }
+            let response = await axios(options).then(res=&gt;res.data);
+            if (response.success) {
+                store.dispatch({ type: types.SET_USER_INFO, payload: response.data });
+            }
+        }
+       let pageProps = {};
+       if (Component.getInitialProps)
+          pageProps = await Component.getInitialProps(ctx);
+       let props =  { pageProps};
+       if (typeof window == &apos;undefined&apos;) {//&#x540E;&#x53F0;&#x83B7;&#x53D6;&#x7528;&#x8D4B;&#x503C;&#x72B6;&#x6001;
+        props.initialState=store.getState();
+       }
+       return props;
+    }
+<span class="hljs-addition">+   componentDidMount() {</span>
+<span class="hljs-addition">+       this.routeChangeStart = (url) =&gt; {</span>
+<span class="hljs-addition">+           this.setState({ loading: true });</span>
+<span class="hljs-addition">+       };</span>
+<span class="hljs-addition">+       router.events.on(&apos;routeChangeStart&apos;, this.routeChangeStart);</span>
+<span class="hljs-addition">+       this.routeChangeComplete = (url) =&gt; {</span>
+<span class="hljs-addition">+           this.setState({ loading: false });</span>
+<span class="hljs-addition">+       };</span>
+<span class="hljs-addition">+       router.events.on(&apos;routeChangeComplete&apos;, this.routeChangeComplete);</span>
+<span class="hljs-addition">+   }</span>
+<span class="hljs-addition">+   componentWillUnmount() {</span>
+<span class="hljs-addition">+       router.events.off(&apos;routeChangeStart&apos;, this.routeChangeStart)</span>
+<span class="hljs-addition">+       router.events.off(&apos;routeChangeStart&apos;, this.routeChangeComplete)</span>
+<span class="hljs-addition">+   }</span>
+    render() {
+        let { Component,pageProps} = this.props;
+        let state = this.store.getState();
+        return (
+            &lt;Provider store={this.store}&gt;
+                &lt;style jsx&gt;
+                     {
+                     `li{
+                         display:inline-block;
+                         margin-left:10px;
+                         line-height:31px;
+                       }`
+                     }
+                &lt;/style&gt;
+                &lt;div&gt;
+                    &lt;header&gt;
+                        &lt;img src=&quot;/images/jglogo.png&quot; className={_appStyle.logo}/&gt;
+                        &lt;ul&gt;
+                            &lt;li&gt;&lt;Link href=&quot;/&quot;&gt;&lt;a&gt;&#x9996;&#x9875;&lt;/a&gt;&lt;/Link&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;Link href=&quot;/user/list&quot; &gt;&lt;a&gt;&#x7528;&#x6237;&#x7BA1;&#x7406;&lt;/a&gt;&lt;/Link&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;Link href=&quot;/profile&quot;&gt;&lt;a&gt;&#x4E2A;&#x4EBA;&#x4E2D;&#x5FC3;&lt;/a&gt;&lt;/Link&gt;&lt;/li&gt;
+                            &lt;li&gt;
+                                {
+                                 state.currentUser ? &lt;span&gt;{state.currentUser.name}&lt;/span&gt;:&lt;Link href=&quot;/login&quot;&gt;&#x767B;&#x5F55;&lt;/Link&gt;
+                                }
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                        {
+
+                        }
+                    &lt;/header&gt;
+<span class="hljs-addition">+                    {</span>
+<span class="hljs-addition">+                        this.state.loading ? &lt;div&gt;&#x5207;&#x6362;&#x4E2D;......&lt;/div&gt; : &lt;Component {...pageProps} /&gt;</span>
+<span class="hljs-addition">+                    }                   </span>
+                    &lt;footer style={{ textAlign: &apos;center&apos; }} &gt;@copyright &#x73E0;&#x5CF0;&#x67B6;&#x6784;&lt;/footer&gt;
+                &lt;/div&gt;
+            &lt;/Provider&gt;
+        )
+    }
+}
+export default LayoutApp;
+</code></pre>
+<h2 id="t4611.&#x53D7;&#x4FDD;&#x62A4;&#x8DEF;&#x7531;">11.&#x53D7;&#x4FDD;&#x62A4;&#x8DEF;&#x7531; <a href="#t4611.&#x53D7;&#x4FDD;&#x62A4;&#x8DEF;&#x7531;"> # </a></h2>
+<h3 id="t4711.1 pages\profile.js">11.1 pages\profile.js <a href="#t4711.1 pages\profile.js"> # </a></h3>
+<p>pages\profile.js</p>
+<pre><code class="lang-diff"><span class="hljs-addition">+import router from &apos;next/router&apos;;</span>
+<span class="hljs-addition">+import { connect } from &apos;react-redux&apos;;</span>
+<span class="hljs-addition">+import axios from &apos;../utils/axios&apos;;</span>
+<span class="hljs-addition">+function Profile(props) {</span>
+<span class="hljs-addition">+    let { currentUser } = props;</span>
+<span class="hljs-addition">+    return (</span>
+<span class="hljs-addition">+        &lt;div&gt;</span>
+<span class="hljs-addition">+            &lt;p&gt;&#x5F53;&#x524D;&#x767B;&#x5F55;&#x7528;&#x6237;:{currentUser.name}&lt;/p&gt;</span>
+<span class="hljs-addition">+            &lt;button onClick={() =&gt; router.back()}&gt;&#x8FD4;&#x56DE;&lt;/button&gt;</span>
+<span class="hljs-addition">+        &lt;/div&gt;</span>
+<span class="hljs-addition">+    )</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+Profile.getInitialProps = async function (ctx) {</span>
+<span class="hljs-addition">+    let options = { url: &apos;/api/currentUser&apos; };</span>
+<span class="hljs-addition">+    if (ctx.req &amp;&amp; ctx.req.headers.cookie) {</span>
+<span class="hljs-addition">+        options.headers = options.headers || {};</span>
+<span class="hljs-addition">+        options.headers.cookie = ctx.req.headers.cookie;</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    let response = await axios(options).then(res=&gt;res.data);</span>
+<span class="hljs-addition">+    if (response.success) {</span>
+<span class="hljs-addition">+        return {currentUser:response.data};</span>
+<span class="hljs-addition">+    } else {</span>
+<span class="hljs-addition">+        if (ctx.req) {</span>
+<span class="hljs-addition">+            ctx.res.writeHead(303, { Location: &apos;/login&apos; })</span>
+<span class="hljs-addition">+            ctx.res.end()</span>
+<span class="hljs-addition">+        } else {</span>
+<span class="hljs-addition">+            router.push(&apos;/login&apos;);</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+        return {};</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+</span>
+<span class="hljs-addition">+const WrappedProfile = connect(</span>
+<span class="hljs-addition">+    state =&gt; state</span>
+<span class="hljs-addition">+)(Profile);</span>
+<span class="hljs-addition">+export default WrappedProfile;</span>
+</code></pre>
+<h2 id="t4812.&#x81EA;&#x5B9A;&#x4E49;Document">12.&#x81EA;&#x5B9A;&#x4E49;Document <a href="#t4812.&#x81EA;&#x5B9A;&#x4E49;Document"> # </a></h2>
+<h3 id="t4912.1 pages_document.js">12.1 pages_document.js <a href="#t4912.1 pages_document.js"> # </a></h3>
+<p>pages_document.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> Document, { Html, Head, Main, NextScript } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;next/document&apos;</span>;
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CustomDocument</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Document</span> </span>{
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">async</span> getInitialProps(ctx) {
+        <span class="hljs-keyword">const</span> props = <span class="hljs-keyword">await</span> Document.getInitialProps(ctx);
+        <span class="hljs-keyword">return</span> { ...props };
+    }
+    render() {
+        <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Html</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">Head</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span>
+                        {
+                            `
+                            *{
+                                padding:0;
+                                margin:0;
+                            }
+                            `
+                        }
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">Head</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">Main</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">NextScript</span> /&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">Html</span>&gt;</span></span>
+        )
+    }
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> CustomDocument;
+</code></pre>
+<h3 id="t5013.2 pages\index.js">13.2 pages\index.js <a href="#t5013.2 pages\index.js"> # </a></h3>
+<p>pages\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> Head <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;next/head&apos;</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">props</span>) </span>{
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">Head</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>&#x9996;&#x9875;<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;description&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;&#x8FD9;&#x662F;&#x9996;&#x9875;&quot;</span> /&gt;</span>
+             <span class="hljs-tag">&lt;/<span class="hljs-name">Head</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+}
+</code></pre>
+<h2 id="t5113. &#x65B0;&#x7248;&#x521D;&#x59CB;&#x5316;&#x51FD;&#x6570;">13. &#x65B0;&#x7248;&#x521D;&#x59CB;&#x5316;&#x51FD;&#x6570; <a href="#t5113. &#x65B0;&#x7248;&#x521D;&#x59CB;&#x5316;&#x51FD;&#x6570;"> # </a></h2>
+<ul>
+<li><a href="https://nextjs.org/docs/basic-features/data-fetching">data-fetching</a><ul>
+<li>getStaticProps (Static Generation): Fetch data at build time</li>
+<li>getStaticPaths (Static Generation): Specify dynamic routes to pre-render based on data</li>
+<li>getServerSideProps (Server-side Rendering): Fetch data on each request</li>
+</ul>
+</li>
+</ul>
+<h3 id="t5213.1 pages\user.js">13.1 pages\user.js <a href="#t5213.1 pages\user.js"> # </a></h3>
+<p>pages\user.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> Link <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;next/link&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">{users}</span>) </span>{
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+              {
+                  users.map(user=&gt;(
+                      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{user.id}</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">{</span>`/<span class="hljs-attr">user</span>/<span class="hljs-attr">detail</span>/${<span class="hljs-attr">user.id</span>}`}&gt;</span>{user.name}<span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                  ))
+              }
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></span>
+    )
+}
+<span class="hljs-comment">//&#x6BCF;&#x4E2A;&#x8BF7;&#x6C42;&#x90FD;&#x4F1A;&#x8C03;&#x7528;</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getServerSideProps</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> fetch(<span class="hljs-string">&apos;http://localhost:4000/api/users&apos;</span>).then(<span class="hljs-function"><span class="hljs-params">res</span>=&gt;</span>res.json());
+    <span class="hljs-keyword">return</span> {
+      <span class="hljs-attr">props</span>: {
+        <span class="hljs-attr">users</span>:res.data
+      },
+    }
+  }
+</code></pre>
+<h3 id="t5313.2 pages\user\list.js">13.2 pages\user\list.js <a href="#t5313.2 pages\user\list.js"> # </a></h3>
+<p>pages\user\list.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> Link <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;next/link&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">{users}</span>) </span>{
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+              {
+                  users.map(user=&gt;(
+                      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{user.id}</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">{</span>`/<span class="hljs-attr">user</span>/<span class="hljs-attr">detail</span>/${<span class="hljs-attr">user.id</span>}`}&gt;</span>{user.name}<span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                  ))
+              }
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></span>
+    )
+}
+<span class="hljs-comment">// &#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x5728;&#x7F16;&#x8BD1;&#x9636;&#x6BB5;&#x88AB;&#x8C03;&#x7528;</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getStaticProps</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> fetch(<span class="hljs-string">&apos;http://localhost:4000/api/users&apos;</span>).then(<span class="hljs-function"><span class="hljs-params">res</span>=&gt;</span>res.json());
+    <span class="hljs-keyword">return</span> {
+      <span class="hljs-attr">props</span>: {
+        <span class="hljs-attr">users</span>:res.data
+      },
+    }
+}
+</code></pre>
+<h3 id="t5413.3 pages\user\detail[id].js">13.3 pages\user\detail[id].js <a href="#t5413.3 pages\user\detail[id].js"> # </a></h3>
+<p>pages\user\detail[id].js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">{user}</span>) </span>{
+    <span class="hljs-keyword">return</span> (
+       <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+           <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>ID:{user.id}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+           <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>name:{user.name}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getStaticPaths</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> fetch(<span class="hljs-string">&apos;http://localhost:4000/api/users&apos;</span>).then(<span class="hljs-function"><span class="hljs-params">res</span>=&gt;</span>res.json());
+    <span class="hljs-keyword">const</span> users = res.data;
+    <span class="hljs-keyword">const</span> paths = users.map(<span class="hljs-function"><span class="hljs-params">user</span>=&gt;</span><span class="hljs-string">`/user/detail/<span class="hljs-subst">${user.id}</span>`</span>);
+    <span class="hljs-keyword">return</span> {paths,<span class="hljs-attr">fallback</span>:<span class="hljs-literal">false</span>}
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getStaticProps</span>(<span class="hljs-params">{params}</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;params&apos;</span>,params,<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>().toTimeString());
+    <span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> fetch(<span class="hljs-string">`http://localhost:4000/api/users/<span class="hljs-subst">${params.id}</span>`</span>).then(<span class="hljs-function"><span class="hljs-params">res</span>=&gt;</span>res.json());
+    <span class="hljs-keyword">return</span> {
+      <span class="hljs-attr">props</span>: {
+        <span class="hljs-attr">user</span>:res.data
+      }
+    }
+}
+</code></pre>
+<h2 id="t5514. &#x5E03;&#x7F72;">14. &#x5E03;&#x7F72; <a href="#t5514. &#x5E03;&#x7F72;"> # </a></h2>
+<h3 id="t5614.1 &#x76F4;&#x63A5;&#x5E03;&#x7F72;">14.1 &#x76F4;&#x63A5;&#x5E03;&#x7F72; <a href="#t5614.1 &#x76F4;&#x63A5;&#x5E03;&#x7F72;"> # </a></h3>
+<pre><code class="lang-js">npm run build
+npm run start
+</code></pre>
+<h3 id="t5714.2 &#x96C6;&#x6210;express&#x5E03;&#x7F72;">14.2 &#x96C6;&#x6210;express&#x5E03;&#x7F72; <a href="#t5714.2 &#x96C6;&#x6210;express&#x5E03;&#x7F72;"> # </a></h3>
+<pre><code class="lang-js">npm run build
+</code></pre>
+<h4 id="t5814.2.1 start.js">14.2.1 start.js <a href="#t5814.2.1 start.js"> # </a></h4>
+<p>start.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> next = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;next&apos;</span>);
+<span class="hljs-keyword">const</span> app = next({ <span class="hljs-attr">dev</span>:<span class="hljs-literal">false</span> });
+<span class="hljs-keyword">const</span> handler = app.getRequestHandler();
+app.prepare().then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    <span class="hljs-keyword">let</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;express&quot;</span>);
+    <span class="hljs-keyword">let</span> bodyParser = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;body-parser&quot;</span>);
+    <span class="hljs-keyword">let</span> {UserModel} = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./model&apos;</span>);
+    <span class="hljs-keyword">let</span> session = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;express-session&quot;</span>);
+    <span class="hljs-keyword">let</span> config = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./config&apos;</span>);
+    <span class="hljs-keyword">let</span> MongoStore = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;connect-mongo&apos;</span>)(session);
+    <span class="hljs-keyword">let</span> app = express();
+    app.use(bodyParser.urlencoded({ <span class="hljs-attr">extended</span>: <span class="hljs-literal">false</span> }));
+    app.use(bodyParser.json());
+    app.use(
+        session({
+            <span class="hljs-attr">secret</span>: config.secret,
+            <span class="hljs-attr">resave</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-attr">saveUninitialized</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-attr">store</span>: <span class="hljs-keyword">new</span> MongoStore({
+                <span class="hljs-attr">url</span>: config.dbUrl,
+                <span class="hljs-attr">mongoOptions</span>: {
+                    <span class="hljs-attr">useNewUrlParser</span>: <span class="hljs-literal">true</span>,
+                    <span class="hljs-attr">useUnifiedTopology</span>: <span class="hljs-literal">true</span>
+                }
+            })
+        })
+    );
+    app.get(<span class="hljs-string">&apos;/api/users&apos;</span>, <span class="hljs-keyword">async</span> (req, res) =&gt; {
+        <span class="hljs-keyword">let</span> users = <span class="hljs-keyword">await</span> UserModel.find();
+        users = users.map(<span class="hljs-function"><span class="hljs-params">user</span>=&gt;</span>user.toJSON());
+        res.send({ <span class="hljs-attr">success</span>:<span class="hljs-literal">true</span>, <span class="hljs-attr">data</span>: users });
+    });
+    app.get(<span class="hljs-string">&apos;/api/users/:id&apos;</span>, <span class="hljs-keyword">async</span> (req, res) =&gt; {
+        <span class="hljs-keyword">let</span> user = <span class="hljs-keyword">await</span> UserModel.findById(req.params.id);
+        res.send({ <span class="hljs-attr">success</span>:<span class="hljs-literal">true</span>, <span class="hljs-attr">data</span>: user.toJSON() });
+    });
+    app.post(<span class="hljs-string">&apos;/api/register&apos;</span>, <span class="hljs-keyword">async</span> (req, res) =&gt; {
+        <span class="hljs-keyword">let</span> user = req.body;
+        user = <span class="hljs-keyword">await</span> UserModel.create(user);
+        res.send({ <span class="hljs-attr">success</span>:<span class="hljs-literal">true</span>, <span class="hljs-attr">data</span>: user.toJSON() });
+    });
+    app.post(<span class="hljs-string">&apos;/api/login&apos;</span>, <span class="hljs-keyword">async</span> (req, res) =&gt; {
+        <span class="hljs-keyword">let</span> user = req.body;
+        <span class="hljs-keyword">let</span> dbUser = <span class="hljs-keyword">await</span> UserModel.findOne(user);
+        <span class="hljs-keyword">if</span> (dbUser) {
+            req.session.currentUser = dbUser.toJSON();
+            res.send({ <span class="hljs-attr">success</span>:<span class="hljs-literal">true</span>, <span class="hljs-attr">data</span>: dbUser.toJSON() });
+        } <span class="hljs-keyword">else</span> {
+            res.send({ <span class="hljs-attr">success</span>:<span class="hljs-literal">false</span>, <span class="hljs-attr">error</span>: <span class="hljs-string">&apos;&#x767B;&#x5F55;&#x5931;&#x8D25;&apos;</span> });
+        }
+    });
+
+    app.get(<span class="hljs-string">&apos;/api/currentUser&apos;</span>, <span class="hljs-keyword">async</span> (req, res) =&gt; {
+        <span class="hljs-keyword">let</span> currentUser = req.session.currentUser;
+        <span class="hljs-keyword">if</span> (currentUser) {
+            res.send({ <span class="hljs-attr">success</span>:<span class="hljs-literal">true</span>, <span class="hljs-attr">data</span>: currentUser });
+        } <span class="hljs-keyword">else</span> {
+            res.send({ <span class="hljs-attr">success</span>:<span class="hljs-literal">false</span>, <span class="hljs-attr">error</span>: <span class="hljs-string">&apos;&#x5F53;&#x524D;&#x7528;&#x6237;&#x672A;&#x767B;&#x5F55;&apos;</span> });
+        }
+    });
+    app.get(<span class="hljs-string">&apos;*&apos;</span>, <span class="hljs-keyword">async</span> (req, res) =&gt; {
+        <span class="hljs-keyword">await</span> handler(req, res);
+    })
+    app.listen(<span class="hljs-number">3000</span>, () =&gt; {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x670D;&#x52A1;&#x5668;&#x5728;3000&#x7AEF;&#x53E3;&#x542F;&#x52A8;!&apos;</span>);
+    });
+});
+</code></pre>
+<h4 id="t5914.2.2 config.js">14.2.2 config.js <a href="#t5914.2.2 config.js"> # </a></h4>
+<p>config.js</p>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
+    <span class="hljs-attr">secret</span>: <span class="hljs-string">&apos;zhufeng&apos;</span>,
+    <span class="hljs-attr">dbUrl</span>: <span class="hljs-string">&quot;mongodb://127.0.0.1/zhufengnext2&quot;</span>
+}
+</code></pre>
+<h4 id="t6014.2.3 model.js">14.2.3 model.js <a href="#t6014.2.3 model.js"> # </a></h4>
+<p>model.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> mongoose = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;mongoose&apos;</span>);
+<span class="hljs-keyword">const</span> Schema = mongoose.Schema;
+<span class="hljs-keyword">const</span> config = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./config&apos;</span>);
+<span class="hljs-keyword">const</span> conn = mongoose.createConnection(config.dbUrl, { <span class="hljs-attr">useNewUrlParser</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">useUnifiedTopology</span>: <span class="hljs-literal">true</span> });
+<span class="hljs-keyword">const</span> UserModel = conn.model(<span class="hljs-string">&apos;User&apos;</span>, <span class="hljs-keyword">new</span> Schema({
+    <span class="hljs-attr">name</span>: { <span class="hljs-attr">type</span>: <span class="hljs-built_in">String</span> },
+    <span class="hljs-attr">password</span>: { <span class="hljs-attr">type</span>: <span class="hljs-built_in">String</span> },
+},{ <span class="hljs-attr">timestamps</span>: <span class="hljs-literal">true</span> ,    <span class="hljs-attr">toJSON</span>: {
+    <span class="hljs-attr">transform</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">_doc, result</span>) </span>{
+        result.id = result._id;
+        <span class="hljs-keyword">delete</span> result._id;
+        <span class="hljs-keyword">return</span> result;
+    }
+}}));
+<span class="hljs-built_in">module</span>.exports = {
+    UserModel
+}
+</code></pre>
+<h2 id="t6113.&#x670D;&#x52A1;&#x7AEF;">13.&#x670D;&#x52A1;&#x7AEF; <a href="#t6113.&#x670D;&#x52A1;&#x7AEF;"> # </a></h2>
+<h3 id="t6213.1  &#x5B89;&#x88C5;">13.1  &#x5B89;&#x88C5; <a href="#t6213.1  &#x5B89;&#x88C5;"> # </a></h3>
+<pre><code class="lang-js">yarn add express  body-parser  cors express-session connect-mongo mongoose
+</code></pre>
+<h3 id="t6313.2 &#x63A5;&#x53E3;&#x6587;&#x6863;">13.2 &#x63A5;&#x53E3;&#x6587;&#x6863; <a href="#t6313.2 &#x63A5;&#x53E3;&#x6587;&#x6863;"> # </a></h3>
+<h4 id="t6413.2.1 &#x6CE8;&#x518C;">13.2.1 &#x6CE8;&#x518C; <a href="#t6413.2.1 &#x6CE8;&#x518C;"> # </a></h4>
+<h5 id="t6513.2.1.1 &#x63A5;&#x53E3;&#x5730;&#x5740;">13.2.1.1 &#x63A5;&#x53E3;&#x5730;&#x5740; <a href="#t6513.2.1.1 &#x63A5;&#x53E3;&#x5730;&#x5740;"> # </a></h5>
+<pre><code class="lang-js">POST /api/register
+</code></pre>
+<h5 id="t6613.2.1.2 &#x53C2;&#x6570;">13.2.1.2 &#x53C2;&#x6570; <a href="#t6613.2.1.2 &#x53C2;&#x6570;"> # </a></h5>
+<h4 id="t67JSON&#x8BF7;&#x6C42;&#x4F53;&#x53C2;&#x6570;">JSON&#x8BF7;&#x6C42;&#x4F53;&#x53C2;&#x6570; <a href="#t67JSON&#x8BF7;&#x6C42;&#x4F53;&#x53C2;&#x6570;"> # </a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x53D8;&#x91CF;&#x540D;</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">name</td>
+<td style="text-align:left">&#x5B57;&#x7B26;&#x4E32;</td>
+<td style="text-align:left">&#x7528;&#x6237;&#x540D;</td>
+</tr>
+<tr>
+<td style="text-align:left">password</td>
+<td style="text-align:left">&#x5B57;&#x7B26;&#x4E32;</td>
+<td style="text-align:left">&#x5BC6;&#x7801;</td>
+</tr>
+</tbody>
+</table>
+<h5 id="t6813.2.1.3 &#x8FD4;&#x56DE;&#x503C;">13.2.1.3 &#x8FD4;&#x56DE;&#x503C; <a href="#t6813.2.1.3 &#x8FD4;&#x56DE;&#x503C;"> # </a></h5>
+<h5 id="t6913.2.1.4 &#x8FD4;&#x56DE;&#x7ED3;&#x679C;">13.2.1.4 &#x8FD4;&#x56DE;&#x7ED3;&#x679C; <a href="#t6913.2.1.4 &#x8FD4;&#x56DE;&#x7ED3;&#x679C;"> # </a></h5>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x53D8;&#x91CF;&#x540D;</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">success</td>
+<td style="text-align:left">&#x5E03;&#x5C14;&#x503C;</td>
+<td style="text-align:left">&#x662F;&#x5426;&#x6210;&#x529F;</td>
+</tr>
+<tr>
+<td style="text-align:left">data</td>
+<td style="text-align:left">&#x5BF9;&#x8C61;</td>
+<td style="text-align:left">&#x6CE8;&#x518C;&#x6210;&#x529F;&#x4E4B;&#x540E;&#x7684;&#x5BF9;&#x8C61;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x793A;&#x4F8B;</p>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">&quot;success&quot;</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">&quot;data&quot;</span>: {
+            <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x5F20;&#x4E09;&quot;</span>,
+            <span class="hljs-attr">&quot;password&quot;</span>: <span class="hljs-string">&quot;123456&quot;</span>
+    }
+}
+</code></pre>
+<h4 id="t7013.2.2 &#x767B;&#x5F55;">13.2.2 &#x767B;&#x5F55; <a href="#t7013.2.2 &#x767B;&#x5F55;"> # </a></h4>
+<h5 id="t7113.2.2.1 &#x63A5;&#x53E3;&#x5730;&#x5740;">13.2.2.1 &#x63A5;&#x53E3;&#x5730;&#x5740; <a href="#t7113.2.2.1 &#x63A5;&#x53E3;&#x5730;&#x5740;"> # </a></h5>
+<pre><code class="lang-js">POST /api/login
+</code></pre>
+<h5 id="t7213.2.2.2 &#x53C2;&#x6570;">13.2.2.2 &#x53C2;&#x6570; <a href="#t7213.2.2.2 &#x53C2;&#x6570;"> # </a></h5>
+<h4 id="t73JSON&#x8BF7;&#x6C42;&#x4F53;&#x53C2;&#x6570;">JSON&#x8BF7;&#x6C42;&#x4F53;&#x53C2;&#x6570; <a href="#t73JSON&#x8BF7;&#x6C42;&#x4F53;&#x53C2;&#x6570;"> # </a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x53D8;&#x91CF;&#x540D;</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">name</td>
+<td style="text-align:left">&#x5B57;&#x7B26;&#x4E32;</td>
+<td style="text-align:left">&#x7528;&#x6237;&#x540D;</td>
+</tr>
+<tr>
+<td style="text-align:left">password</td>
+<td style="text-align:left">&#x5B57;&#x7B26;&#x4E32;</td>
+<td style="text-align:left">&#x5BC6;&#x7801;</td>
+</tr>
+</tbody>
+</table>
+<h5 id="t7413.2.2.3 &#x8FD4;&#x56DE;&#x503C;">13.2.2.3 &#x8FD4;&#x56DE;&#x503C; <a href="#t7413.2.2.3 &#x8FD4;&#x56DE;&#x503C;"> # </a></h5>
+<h5 id="t7513.2.2.4 &#x8FD4;&#x56DE;&#x7ED3;&#x679C;">13.2.2.4 &#x8FD4;&#x56DE;&#x7ED3;&#x679C; <a href="#t7513.2.2.4 &#x8FD4;&#x56DE;&#x7ED3;&#x679C;"> # </a></h5>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x53D8;&#x91CF;&#x540D;</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">success</td>
+<td style="text-align:left">&#x5E03;&#x5C14;&#x503C;</td>
+<td style="text-align:left">&#x662F;&#x5426;&#x6210;&#x529F;</td>
+</tr>
+<tr>
+<td style="text-align:left">data</td>
+<td style="text-align:left">&#x5BF9;&#x8C61;</td>
+<td style="text-align:left">&#x767B;&#x5F55;&#x6210;&#x529F;&#x4E4B;&#x540E;&#x7684;&#x5BF9;&#x8C61;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x793A;&#x4F8B;</p>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">&quot;success&quot;</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">&quot;data&quot;</span>: {
+            <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x5F20;&#x4E09;&quot;</span>,
+            <span class="hljs-attr">&quot;password&quot;</span>: <span class="hljs-string">&quot;123456&quot;</span>
+    }
+}
+</code></pre>
+<h4 id="t7613.2.3 &#x67E5;&#x770B;&#x5F53;&#x524D;&#x767B;&#x5F55;&#x7684;&#x7528;&#x6237;&#x4FE1;&#x606F;">13.2.3 &#x67E5;&#x770B;&#x5F53;&#x524D;&#x767B;&#x5F55;&#x7684;&#x7528;&#x6237;&#x4FE1;&#x606F; <a href="#t7613.2.3 &#x67E5;&#x770B;&#x5F53;&#x524D;&#x767B;&#x5F55;&#x7684;&#x7528;&#x6237;&#x4FE1;&#x606F;"> # </a></h4>
+<h5 id="t7713.2.3.1 &#x63A5;&#x53E3;&#x5730;&#x5740;">13.2.3.1 &#x63A5;&#x53E3;&#x5730;&#x5740; <a href="#t7713.2.3.1 &#x63A5;&#x53E3;&#x5730;&#x5740;"> # </a></h5>
+<pre><code class="lang-js">GET /api/currentUser
+</code></pre>
+<h5 id="t7813.2.3.2 &#x53C2;&#x6570;">13.2.3.2 &#x53C2;&#x6570; <a href="#t7813.2.3.2 &#x53C2;&#x6570;"> # </a></h5>
+<h5 id="t7913.2.3.3 &#x8FD4;&#x56DE;&#x503C;">13.2.3.3 &#x8FD4;&#x56DE;&#x503C; <a href="#t7913.2.3.3 &#x8FD4;&#x56DE;&#x503C;"> # </a></h5>
+<h5 id="t8013.2.3.4 &#x8FD4;&#x56DE;&#x7ED3;&#x679C;">13.2.3.4 &#x8FD4;&#x56DE;&#x7ED3;&#x679C; <a href="#t8013.2.3.4 &#x8FD4;&#x56DE;&#x7ED3;&#x679C;"> # </a></h5>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x53D8;&#x91CF;&#x540D;</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">success</td>
+<td style="text-align:left">&#x5E03;&#x5C14;&#x503C;</td>
+<td style="text-align:left">&#x662F;&#x5426;&#x6210;&#x529F;</td>
+</tr>
+<tr>
+<td style="text-align:left">data</td>
+<td style="text-align:left">&#x5BF9;&#x8C61;</td>
+<td style="text-align:left">&#x5F53;&#x524D;&#x7528;&#x6237;&#x5BF9;&#x8C61;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x793A;&#x4F8B;</p>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">&quot;success&quot;</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">&quot;data&quot;</span>: {
+            <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x5F20;&#x4E09;&quot;</span>,
+            <span class="hljs-attr">&quot;password&quot;</span>: <span class="hljs-string">&quot;123456&quot;</span>
+    }
+}
+</code></pre>
+<h4 id="t8113.2.4 &#x67E5;&#x770B;&#x7528;&#x6237;&#x5217;&#x8868;">13.2.4 &#x67E5;&#x770B;&#x7528;&#x6237;&#x5217;&#x8868; <a href="#t8113.2.4 &#x67E5;&#x770B;&#x7528;&#x6237;&#x5217;&#x8868;"> # </a></h4>
+<h5 id="t8213.2.4.1 &#x63A5;&#x53E3;&#x5730;&#x5740;">13.2.4.1 &#x63A5;&#x53E3;&#x5730;&#x5740; <a href="#t8213.2.4.1 &#x63A5;&#x53E3;&#x5730;&#x5740;"> # </a></h5>
+<pre><code class="lang-js">GET /api/users
+</code></pre>
+<h5 id="t8313.2.4.2 &#x53C2;&#x6570;">13.2.4.2 &#x53C2;&#x6570; <a href="#t8313.2.4.2 &#x53C2;&#x6570;"> # </a></h5>
+<h5 id="t8413.2.4.3 &#x8FD4;&#x56DE;&#x503C;">13.2.4.3 &#x8FD4;&#x56DE;&#x503C; <a href="#t8413.2.4.3 &#x8FD4;&#x56DE;&#x503C;"> # </a></h5>
+<h5 id="t8513.2.4.4 &#x8FD4;&#x56DE;&#x7ED3;&#x679C;">13.2.4.4 &#x8FD4;&#x56DE;&#x7ED3;&#x679C; <a href="#t8513.2.4.4 &#x8FD4;&#x56DE;&#x7ED3;&#x679C;"> # </a></h5>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x53D8;&#x91CF;&#x540D;</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">success</td>
+<td style="text-align:left">&#x5E03;&#x5C14;&#x503C;</td>
+<td style="text-align:left">&#x662F;&#x5426;&#x6210;&#x529F;</td>
+</tr>
+<tr>
+<td style="text-align:left">data</td>
+<td style="text-align:left">&#x5BF9;&#x8C61;&#x6570;&#x7EC4;</td>
+<td style="text-align:left">&#x7528;&#x6237;&#x5BF9;&#x8C61;&#x6570;&#x7EC4;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x793A;&#x4F8B;</p>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">&quot;success&quot;</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">&quot;data&quot;</span>: [
+        {
+            <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x5F20;&#x4E09;&quot;</span>,
+            <span class="hljs-attr">&quot;password&quot;</span>: <span class="hljs-string">&quot;123456&quot;</span>
+        },
+         {
+            <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">2</span>,
+            <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x674E;&#x56DB;&quot;</span>,
+            <span class="hljs-attr">&quot;password&quot;</span>: <span class="hljs-string">&quot;123456&quot;</span>
+        }
+    ]
+}
+</code></pre>
+<h4 id="t8613.2.5 &#x67E5;&#x770B;&#x67D0;&#x4E2A;&#x7528;&#x6237;&#x4FE1;&#x606F;">13.2.5 &#x67E5;&#x770B;&#x67D0;&#x4E2A;&#x7528;&#x6237;&#x4FE1;&#x606F; <a href="#t8613.2.5 &#x67E5;&#x770B;&#x67D0;&#x4E2A;&#x7528;&#x6237;&#x4FE1;&#x606F;"> # </a></h4>
+<h5 id="t8713.2.5.1 &#x63A5;&#x53E3;&#x5730;&#x5740;">13.2.5.1 &#x63A5;&#x53E3;&#x5730;&#x5740; <a href="#t8713.2.5.1 &#x63A5;&#x53E3;&#x5730;&#x5740;"> # </a></h5>
+<pre><code class="lang-js">GET /api/users/:id
+</code></pre>
+<h5 id="t8813.2.5.2 &#x53C2;&#x6570;">13.2.5.2 &#x53C2;&#x6570; <a href="#t8813.2.5.2 &#x53C2;&#x6570;"> # </a></h5>
+<h5 id="t8913.2.5.3 &#x8FD4;&#x56DE;&#x503C;">13.2.5.3 &#x8FD4;&#x56DE;&#x503C; <a href="#t8913.2.5.3 &#x8FD4;&#x56DE;&#x503C;"> # </a></h5>
+<h5 id="t9013.2.5.4 &#x8FD4;&#x56DE;&#x7ED3;&#x679C;">13.2.5.4 &#x8FD4;&#x56DE;&#x7ED3;&#x679C; <a href="#t9013.2.5.4 &#x8FD4;&#x56DE;&#x7ED3;&#x679C;"> # </a></h5>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x53D8;&#x91CF;&#x540D;</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">success</td>
+<td style="text-align:left">&#x5E03;&#x5C14;&#x503C;</td>
+<td style="text-align:left">&#x662F;&#x5426;&#x6210;&#x529F;</td>
+</tr>
+<tr>
+<td style="text-align:left">data</td>
+<td style="text-align:left">&#x5BF9;&#x8C61;</td>
+<td style="text-align:left">&#x7528;&#x6237;&#x5BF9;&#x8C61;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x793A;&#x4F8B;</p>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">&quot;success&quot;</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">&quot;data&quot;</span>: {
+            <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;&#x5F20;&#x4E09;&quot;</span>,
+            <span class="hljs-attr">&quot;password&quot;</span>: <span class="hljs-string">&quot;123456&quot;</span>
+    }
+}
+</code></pre>
+<h3 id="t9113.1 api\index.js">13.1 api\index.js <a href="#t9113.1 api\index.js"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;express&quot;</span>);
+<span class="hljs-keyword">let</span> bodyParser = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;body-parser&quot;</span>);
+<span class="hljs-keyword">let</span> cors = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;cors&quot;</span>);
+<span class="hljs-keyword">let</span> {UserModel} = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./model&apos;</span>);
+<span class="hljs-keyword">let</span> session = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;express-session&quot;</span>);
+<span class="hljs-keyword">let</span> config = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./config&apos;</span>);
+<span class="hljs-keyword">let</span> MongoStore = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;connect-mongo&apos;</span>)(session);
+<span class="hljs-keyword">let</span> app = express();
+app.use(
+    cors({
+        <span class="hljs-attr">origin</span>: [<span class="hljs-string">&apos;http://localhost:3000&apos;</span>],
+        <span class="hljs-attr">credentials</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">allowedHeaders</span>: <span class="hljs-string">&quot;Content-Type,Authorization&quot;</span>,
+        <span class="hljs-attr">methods</span>: <span class="hljs-string">&quot;GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS&quot;</span>
+    })
+);
+app.use(bodyParser.urlencoded({ <span class="hljs-attr">extended</span>: <span class="hljs-literal">false</span> }));
+app.use(bodyParser.json());
+app.use(
+    session({
+        <span class="hljs-attr">secret</span>: config.secret,
+        <span class="hljs-attr">resave</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">saveUninitialized</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">store</span>: <span class="hljs-keyword">new</span> MongoStore({
+            <span class="hljs-attr">url</span>: config.dbUrl,
+            <span class="hljs-attr">mongoOptions</span>: {
+                <span class="hljs-attr">useNewUrlParser</span>: <span class="hljs-literal">true</span>,
+                <span class="hljs-attr">useUnifiedTopology</span>: <span class="hljs-literal">true</span>
+            }
+        })
+    })
+);
+app.get(<span class="hljs-string">&apos;/api/users&apos;</span>, <span class="hljs-keyword">async</span> (req, res) =&gt; {
+    <span class="hljs-keyword">let</span> users = <span class="hljs-keyword">await</span> UserModel.find();
+    users = users.map(<span class="hljs-function"><span class="hljs-params">user</span>=&gt;</span>user.toJSON());
+    res.send({ <span class="hljs-attr">code</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">data</span>: users });
+});
+app.get(<span class="hljs-string">&apos;/api/users/:id&apos;</span>, <span class="hljs-keyword">async</span> (req, res) =&gt; {
+    <span class="hljs-keyword">let</span> user = <span class="hljs-keyword">await</span> UserModel.findById(req.params.id);
+    res.send({ <span class="hljs-attr">code</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">data</span>: user.toJSON() });
+});
+app.post(<span class="hljs-string">&apos;/api/register&apos;</span>, <span class="hljs-keyword">async</span> (req, res) =&gt; {
+    <span class="hljs-keyword">let</span> user = req.body;
+    user = <span class="hljs-keyword">await</span> UserModel.create(user);
+    res.send({ <span class="hljs-attr">code</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">data</span>: user.toJSON() });
+});
+app.post(<span class="hljs-string">&apos;/api/login&apos;</span>, <span class="hljs-keyword">async</span> (req, res) =&gt; {
+    <span class="hljs-keyword">let</span> user = req.body;
+    <span class="hljs-keyword">let</span> dbUser = <span class="hljs-keyword">await</span> UserModel.findOne(user);
+    <span class="hljs-keyword">if</span> (dbUser) {
+        req.session.currentUser = dbUser.toJSON();
+        res.send({ <span class="hljs-attr">code</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">data</span>: dbUser.toJSON() });
+    } <span class="hljs-keyword">else</span> {
+        res.send({ <span class="hljs-attr">code</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">error</span>: <span class="hljs-string">&apos;&#x767B;&#x5F55;&#x5931;&#x8D25;&apos;</span> });
+    }
+});
+
+app.get(<span class="hljs-string">&apos;/api/currentUser&apos;</span>, <span class="hljs-keyword">async</span> (req, res) =&gt; {
+    <span class="hljs-keyword">let</span> currentUser = req.session.currentUser;
+    <span class="hljs-keyword">if</span> (currentUser) {
+        res.send({ <span class="hljs-attr">code</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">data</span>: currentUser });
+    } <span class="hljs-keyword">else</span> {
+        res.send({ <span class="hljs-attr">code</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">error</span>: <span class="hljs-string">&apos;&#x5F53;&#x524D;&#x7528;&#x6237;&#x672A;&#x767B;&#x5F55;&apos;</span> });
+    }
+});
+app.listen(<span class="hljs-number">4000</span>, () =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x670D;&#x52A1;&#x5668;&#x5728;4000&#x7AEF;&#x53E3;&#x542F;&#x52A8;!&apos;</span>);
+});
+</code></pre>
+<h3 id="t9213.2 api\config.js">13.2 api\config.js <a href="#t9213.2 api\config.js"> # </a></h3>
+<p>api\config.js</p>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
+    <span class="hljs-attr">secret</span>: <span class="hljs-string">&apos;zhufeng&apos;</span>,
+    <span class="hljs-attr">dbUrl</span>: <span class="hljs-string">&quot;mongodb://127.0.0.1/zhufengnext2&quot;</span>
+}
+</code></pre>
+<h3 id="t9313.3 server\model.js">13.3 server\model.js <a href="#t9313.3 server\model.js"> # </a></h3>
+<p>server\model.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> mongoose = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;mongoose&apos;</span>);
+<span class="hljs-keyword">const</span> Schema = mongoose.Schema;
+<span class="hljs-keyword">const</span> config = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./config&apos;</span>);
+<span class="hljs-keyword">const</span> conn = mongoose.createConnection(config.dbUrl, { <span class="hljs-attr">useNewUrlParser</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">useUnifiedTopology</span>: <span class="hljs-literal">true</span> });
+<span class="hljs-keyword">const</span> UserModel = conn.model(<span class="hljs-string">&apos;User&apos;</span>, <span class="hljs-keyword">new</span> Schema({
+    <span class="hljs-attr">name</span>: { <span class="hljs-attr">type</span>: <span class="hljs-built_in">String</span> },
+    <span class="hljs-attr">password</span>: { <span class="hljs-attr">type</span>: <span class="hljs-built_in">String</span> }
+},{ <span class="hljs-attr">timestamps</span>: <span class="hljs-literal">true</span> ,    <span class="hljs-attr">toJSON</span>: {
+    <span class="hljs-attr">transform</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">_doc, result</span>) </span>{
+        result.id = result._id;
+        <span class="hljs-keyword">delete</span> result._id;
+        <span class="hljs-keyword">return</span> result;
+    }
+}}));
+
+<span class="hljs-built_in">module</span>.exports = {
+    UserModel
+}
+</code></pre>
+
+    </div>
+</div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+    aria-labelledby="loginModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="loginModalLabel">请登录</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="username" class="control-label">姓名:</label>
+                        <input type="text" class="form-control" id="username" placeholder="珠峰架构VIP会员系统用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">密码:</label>
+                        <input type="text" class="form-control" id="password" placeholder="珠峰架构VIP会员系统密码">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                    data-dismiss="modal">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

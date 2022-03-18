@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+
+<ul><li><a href="../index.html" tppabs="http://www.zhufengpeixun.cn/plan/index.html">index</a></li><li><a href="0.editor.html" tppabs="http://www.zhufengpeixun.cn/plan/html/0.editor.html">0.editor</a></li><li><a href="0.module.html" tppabs="http://www.zhufengpeixun.cn/plan/html/0.module.html">0.module</a></li><li><a href="0.Async.html" tppabs="http://www.zhufengpeixun.cn/plan/html/0.Async.html">0.Async</a></li><li><a href="1.ES2015.html" tppabs="http://www.zhufengpeixun.cn/plan/html/1.ES2015.html">1.ES2015</a></li><li><a href="2.Promise.html" tppabs="http://www.zhufengpeixun.cn/plan/html/2.Promise.html">2.Promise</a></li><li><a href="3.Node.html" tppabs="http://www.zhufengpeixun.cn/plan/html/3.Node.html">3.Node</a></li><li><a href="4.NodeInstall.html" tppabs="http://www.zhufengpeixun.cn/plan/html/4.NodeInstall.html">4.NodeInstall</a></li><li><a href="5.REPL.html" tppabs="http://www.zhufengpeixun.cn/plan/html/5.REPL.html">5.REPL</a></li><li><a href="6.NodeCore.html" tppabs="http://www.zhufengpeixun.cn/plan/html/6.NodeCore.html">6.NodeCore</a></li><li><a href="7.module&NPM.html" tppabs="http://www.zhufengpeixun.cn/plan/html/7.module&NPM.html">7.module&NPM</a></li><li><a href="8.Encoding.html" tppabs="http://www.zhufengpeixun.cn/plan/html/8.Encoding.html">8.Encoding</a></li><li><a href="9.Buffer.html" tppabs="http://www.zhufengpeixun.cn/plan/html/9.Buffer.html">9.Buffer</a></li><li><a href="10.fs.html" tppabs="http://www.zhufengpeixun.cn/plan/html/10.fs.html">10.fs</a></li><li><a href="11.Stream-1.html" tppabs="http://www.zhufengpeixun.cn/plan/html/11.Stream-1.html">11.Stream-1</a></li><li><a href="11.Stream-2.html" tppabs="http://www.zhufengpeixun.cn/plan/html/11.Stream-2.html">11.Stream-2</a></li><li><a href="11.Stream-3.html" tppabs="http://www.zhufengpeixun.cn/plan/html/11.Stream-3.html">11.Stream-3</a></li><li><a href="11.Stream-4.html" tppabs="http://www.zhufengpeixun.cn/plan/html/11.Stream-4.html">11.Stream-4</a></li><li><a href="12.Network-1.html" tppabs="http://www.zhufengpeixun.cn/plan/html/12.Network-1.html">12.Network-1</a></li><li><a href="12.NetWork-3.html" tppabs="http://www.zhufengpeixun.cn/plan/html/12.NetWork-3.html">12.NetWork-3</a></li><li><a href="12-Network-2.html" tppabs="http://www.zhufengpeixun.cn/plan/html/12-Network-2.html">12-Network-2</a></li><li><a href="13.tcp.html" tppabs="http://www.zhufengpeixun.cn/plan/html/13.tcp.html">13.tcp</a></li><li><a href="14.http-1.html" tppabs="http://www.zhufengpeixun.cn/plan/html/14.http-1.html">14.http-1</a></li><li><a href="14.http-2.html" tppabs="http://www.zhufengpeixun.cn/plan/html/14.http-2.html">14.http-2</a></li><li><a href="15.compress.html" tppabs="http://www.zhufengpeixun.cn/plan/html/15.compress.html">15.compress</a></li><li><a href="16.crypto.html" tppabs="http://www.zhufengpeixun.cn/plan/html/16.crypto.html">16.crypto</a></li><li><a href="17.process.html" tppabs="http://www.zhufengpeixun.cn/plan/html/17.process.html">17.process</a></li><li><a href="18.yargs.html" tppabs="http://www.zhufengpeixun.cn/plan/html/18.yargs.html">18.yargs</a></li><li><a href="19.cache.html" tppabs="http://www.zhufengpeixun.cn/plan/html/19.cache.html">19.cache</a></li><li><a href="20.action.html" tppabs="http://www.zhufengpeixun.cn/plan/html/20.action.html">20.action</a></li><li><a href="21.https.html" tppabs="http://www.zhufengpeixun.cn/plan/html/21.https.html">21.https</a></li><li><a href="22.cookie.html" tppabs="http://www.zhufengpeixun.cn/plan/html/22.cookie.html">22.cookie</a></li><li><a href="23.session.html" tppabs="http://www.zhufengpeixun.cn/plan/html/23.session.html">23.session</a></li><li><a href="24.express-1.html" tppabs="http://www.zhufengpeixun.cn/plan/html/24.express-1.html">24.express-1</a></li><li><a href="24.express-2.html" tppabs="http://www.zhufengpeixun.cn/plan/html/24.express-2.html">24.express-2</a></li><li><a href="24.express-3.html" tppabs="http://www.zhufengpeixun.cn/plan/html/24.express-3.html">24.express-3</a></li><li><a href="24.express-4.html" tppabs="http://www.zhufengpeixun.cn/plan/html/24.express-4.html">24.express-4</a></li><li><a href="25.koa-1.html" tppabs="http://www.zhufengpeixun.cn/plan/html/25.koa-1.html">25.koa-1</a></li><li><a href="26.webpack-1.html" tppabs="http://www.zhufengpeixun.cn/plan/html/26.webpack-1.html">26.webpack-1</a></li><li><a href="26.webpack-2.html" tppabs="http://www.zhufengpeixun.cn/plan/html/26.webpack-2.html">26.webpack-2</a></li><li><a href="26.webpack-3.html" tppabs="http://www.zhufengpeixun.cn/plan/html/26.webpack-3.html">26.webpack-3</a></li><li><a href="26.webpack-4.html" tppabs="http://www.zhufengpeixun.cn/plan/html/26.webpack-4.html">26.webpack-4</a></li><li><a href="26.webpack-loader.html" tppabs="http://www.zhufengpeixun.cn/plan/html/26.webpack-loader.html">26.webpack-loader</a></li><li><a href="26.webpack-plugin.html" tppabs="http://www.zhufengpeixun.cn/plan/html/26.webpack-plugin.html">26.webpack-plugin</a></li><li><a href="26.tapable.html" tppabs="http://www.zhufengpeixun.cn/plan/html/26.tapable.html">26.tapable</a></li><li><a href="26.AST.html" tppabs="http://www.zhufengpeixun.cn/plan/html/26.AST.html">26.AST</a></li><li><a href="27.react-1.html" tppabs="http://www.zhufengpeixun.cn/plan/html/27.react-1.html">27.react-1</a></li><li><a href="27.react-2.html" tppabs="http://www.zhufengpeixun.cn/plan/html/27.react-2.html">27.react-2</a></li><li><a href="27.react-3.html" tppabs="http://www.zhufengpeixun.cn/plan/html/27.react-3.html">27.react-3</a></li><li><a href="26.webpack-5.html" tppabs="http://www.zhufengpeixun.cn/plan/html/26.webpack-5.html">26.webpack-5</a></li><li><a href="27.react-4-immutable.html" tppabs="http://www.zhufengpeixun.cn/plan/html/27.react-4-immutable.html">27.react-4-immutable</a></li><li><a href="27.react-5-react-dom-diff.html" tppabs="http://www.zhufengpeixun.cn/plan/html/27.react-5-react-dom-diff.html">27.react-5-react-dom-diff</a></li><li><a href="28.redux-1.html" tppabs="http://www.zhufengpeixun.cn/plan/html/28.redux-1.html">28.redux-1</a></li><li><a href="28.redux-2-中间件.html" tppabs="http://www.zhufengpeixun.cn/plan/html/28.redux-2-中间件.html">28.redux-2-中间件</a></li><li><a href="28.redux-3-saga.html" tppabs="http://www.zhufengpeixun.cn/plan/html/28.redux-3-saga.html">28.redux-3-saga</a></li><li><a href="28.redux-4-dva.html" tppabs="http://www.zhufengpeixun.cn/plan/html/28.redux-4-dva.html">28.redux-4-dva</a></li><li><a href="28.redux-0.html" tppabs="http://www.zhufengpeixun.cn/plan/html/28.redux-0.html">28.redux-0</a></li><li><a href="29.mongodb-1.html" tppabs="http://www.zhufengpeixun.cn/plan/html/29.mongodb-1.html">29.mongodb-1</a></li><li><a href="29.mongodb-2.html" tppabs="http://www.zhufengpeixun.cn/plan/html/29.mongodb-2.html">29.mongodb-2</a></li><li><a href="29.mongodb-3.html" tppabs="http://www.zhufengpeixun.cn/plan/html/29.mongodb-3.html">29.mongodb-3</a></li><li><a href="29.mongodb-4.html" tppabs="http://www.zhufengpeixun.cn/plan/html/29.mongodb-4.html">29.mongodb-4</a></li><li><a href="29.mongodb-5.html" tppabs="http://www.zhufengpeixun.cn/plan/html/29.mongodb-5.html">29.mongodb-5</a></li><li><a href="29.mongodb-6.html" tppabs="http://www.zhufengpeixun.cn/plan/html/29.mongodb-6.html">29.mongodb-6</a></li><li><a href="30.mysql-1.html" tppabs="http://www.zhufengpeixun.cn/plan/html/30.mysql-1.html">30.mysql-1</a></li><li><a href="30.mysql-2.html" tppabs="http://www.zhufengpeixun.cn/plan/html/30.mysql-2.html">30.mysql-2</a></li><li><a href="31.egg-1.html" tppabs="http://www.zhufengpeixun.cn/plan/html/31.egg-1.html">31.egg-1</a></li><li><a href="31.egg-2.html" tppabs="http://www.zhufengpeixun.cn/plan/html/31.egg-2.html">31.egg-2</a></li><li><a href="31.egg-3.html" tppabs="http://www.zhufengpeixun.cn/plan/html/31.egg-3.html">31.egg-3</a></li><li><a href="32.ant.html" tppabs="http://www.zhufengpeixun.cn/plan/html/32.ant.html">32.ant</a></li><li><a href="33.redis.html" tppabs="http://www.zhufengpeixun.cn/plan/html/33.redis.html">33.redis</a></li><li><a href="34.unittest.html" tppabs="http://www.zhufengpeixun.cn/plan/html/34.unittest.html">34.unittest</a></li><li><a href="35.jwt.html" tppabs="http://www.zhufengpeixun.cn/plan/html/35.jwt.html">35.jwt</a></li><li><a href="36.websocket-1.html" tppabs="http://www.zhufengpeixun.cn/plan/html/36.websocket-1.html">36.websocket-1</a></li><li><a href="36.websocket-2.html" tppabs="http://www.zhufengpeixun.cn/plan/html/36.websocket-2.html">36.websocket-2</a></li></ul></div>
+
+
+<div class="warpper">
+
+    <div class="page-toc">
+        <ul><li><a href="#t01. Redux应用场景">1. Redux应用场景</a></li><li><a href="#t12. Redux设计思想">2. Redux设计思想</a></li><li><a href="#t23. Redux三大原则">3. Redux三大原则</a></li><li><a href="#t34. Redux概念解析">4. Redux概念解析</a><ul><li><a href="#t44.1 Store">4.1 Store</a></li><li><a href="#t54.2 State">4.2 State</a></li><li><a href="#t64.3 Action">4.3 Action</a></li><li><a href="#t74.4 Action Creator">4.4 Action Creator</a></li><li><a href="#t84.5 store.dispatch()">4.5 store.dispatch()</a></li><li><a href="#t94.6 Reducer">4.6 Reducer</a></li></ul></li><li><a href="#t105.编写Redux">5.编写Redux</a></li><li><a href="#t116. Counter-Vanilla">6. Counter-Vanilla</a></li><li><a href="#t126. Counter">6. Counter</a></li><li><a href="#t137.actionCreator优化结构">7.actionCreator优化结构</a></li><li><a href="#t148.bindActionCreator">8.bindActionCreator</a></li><li><a href="#t159. combineReducers">9. combineReducers</a></li><li><a href="#t1610. react-redux">10. react-redux</a></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <h2 id="t01. Redux&#x5E94;&#x7528;&#x573A;&#x666F;">1. Redux&#x5E94;&#x7528;&#x573A;&#x666F; <a href="#t01. Redux&#x5E94;&#x7528;&#x573A;&#x666F;"> # </a></h2>
+<ul>
+<li>&#x968F;&#x7740; JavaScript &#x5355;&#x9875;&#x5E94;&#x7528;&#x5F00;&#x53D1;&#x65E5;&#x8D8B;&#x590D;&#x6742;,&#x7BA1;&#x7406;&#x4E0D;&#x65AD;&#x53D8;&#x5316;&#x7684; state &#x975E;&#x5E38;&#x56F0;&#x96BE;</li>
+<li>Redux&#x7684;&#x51FA;&#x73B0;&#x5C31;&#x662F;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;state&#x91CC;&#x7684;&#x6570;&#x636E;&#x95EE;&#x9898;</li>
+<li>&#x5728;React&#x4E2D;&#xFF0C;&#x6570;&#x636E;&#x5728;&#x7EC4;&#x4EF6;&#x4E2D;&#x662F;&#x5355;&#x5411;&#x6D41;&#x52A8;&#x7684;</li>
+<li>&#x6570;&#x636E;&#x4ECE;&#x4E00;&#x4E2A;&#x65B9;&#x5411;&#x7236;&#x7EC4;&#x4EF6;&#x6D41;&#x5411;&#x5B50;&#x7EC4;&#x4EF6;(&#x901A;&#x8FC7;props)&#xFF0C;&#x7531;&#x4E8E;&#x8FD9;&#x4E2A;&#x7279;&#x5F81;&#xFF0C;&#x4E24;&#x4E2A;&#x975E;&#x7236;&#x5B50;&#x5173;&#x7CFB;&#x7684;&#x7EC4;&#x4EF6;&#xFF08;&#x6216;&#x8005;&#x79F0;&#x4F5C;&#x5144;&#x5F1F;&#x7EC4;&#x4EF6;&#xFF09;&#x4E4B;&#x95F4;&#x7684;&#x901A;&#x4FE1;&#x5C31;&#x6BD4;&#x8F83;&#x9EBB;&#x70E6;</li>
+</ul>
+<p><img src="../../../7xil5b.com1.z0.glb.clouddn.com/redux-wrong.png" tppabs="http://7xil5b.com1.z0.glb.clouddn.com/redux-wrong.png" alt="redux-wrong"></p>
+<h2 id="t12. Redux&#x8BBE;&#x8BA1;&#x601D;&#x60F3;">2. Redux&#x8BBE;&#x8BA1;&#x601D;&#x60F3; <a href="#t12. Redux&#x8BBE;&#x8BA1;&#x601D;&#x60F3;"> # </a></h2>
+<ul>
+<li>Redux&#x662F;&#x5C06;&#x6574;&#x4E2A;&#x5E94;&#x7528;&#x72B6;&#x6001;&#x5B58;&#x50A8;&#x5230;&#x5230;&#x4E00;&#x4E2A;&#x5730;&#x65B9;&#xFF0C;&#x79F0;&#x4E3A;store</li>
+<li>&#x91CC;&#x9762;&#x4FDD;&#x5B58;&#x4E00;&#x68F5;&#x72B6;&#x6001;&#x6811;(state tree)</li>
+<li>&#x7EC4;&#x4EF6;&#x53EF;&#x4EE5;&#x6D3E;&#x53D1;(dispatch)&#x884C;&#x4E3A;(action)&#x7ED9;store,&#x800C;&#x4E0D;&#x662F;&#x76F4;&#x63A5;&#x901A;&#x77E5;&#x5176;&#x5B83;&#x7EC4;&#x4EF6;</li>
+<li>&#x5176;&#x5B83;&#x7EC4;&#x4EF6;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8BA2;&#x9605;store&#x4E2D;&#x7684;&#x72B6;&#x6001;(state)&#x6765;&#x5237;&#x65B0;&#x81EA;&#x5DF1;&#x7684;&#x89C6;&#x56FE;. </li>
+</ul>
+<p><img src="../../../7xil5b.com1.z0.glb.clouddn.com/redux-flow.png" tppabs="http://7xil5b.com1.z0.glb.clouddn.com/redux-flow.png" alt="redux-flow"></p>
+<h2 id="t23. Redux&#x4E09;&#x5927;&#x539F;&#x5219;">3. Redux&#x4E09;&#x5927;&#x539F;&#x5219; <a href="#t23. Redux&#x4E09;&#x5927;&#x539F;&#x5219;"> # </a></h2>
+<ul>
+<li>&#x6574;&#x4E2A;&#x5E94;&#x7528;&#x7684; state &#x88AB;&#x50A8;&#x5B58;&#x5728;&#x4E00;&#x68F5; object tree &#x4E2D;&#xFF0C;&#x5E76;&#x4E14;&#x8FD9;&#x4E2A; object tree &#x53EA;&#x5B58;&#x5728;&#x4E8E;&#x552F;&#x4E00;&#x4E00;&#x4E2A; store &#x4E2D;</li>
+<li>State &#x662F;&#x53EA;&#x8BFB;&#x7684;&#xFF0C;&#x60DF;&#x4E00;&#x6539;&#x53D8; state &#x7684;&#x65B9;&#x6CD5;&#x5C31;&#x662F;&#x89E6;&#x53D1; action&#xFF0C;action &#x662F;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x63CF;&#x8FF0;&#x5DF2;&#x53D1;&#x751F;&#x4E8B;&#x4EF6;&#x7684;&#x666E;&#x901A;&#x5BF9;&#x8C61;
+&#x4F7F;&#x7528;&#x7EAF;&#x51FD;&#x6570;&#x6765;&#x6267;&#x884C;&#x4FEE;&#x6539;&#xFF0C;&#x4E3A;&#x4E86;&#x63CF;&#x8FF0;action&#x5982;&#x4F55;&#x6539;&#x53D8;state tree &#xFF0C;&#x4F60;&#x9700;&#x8981;&#x7F16;&#x5199; reducers</li>
+<li>&#x5355;&#x4E00;&#x6570;&#x636E;&#x6E90;&#x7684;&#x8BBE;&#x8BA1;&#x8BA9;React&#x7684;&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x7684;&#x901A;&#x4FE1;&#x66F4;&#x52A0;&#x65B9;&#x4FBF;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x4FBF;&#x4E8E;&#x72B6;&#x6001;&#x7684;&#x7EDF;&#x4E00;&#x7BA1;&#x7406;</li>
+</ul>
+<h2 id="t34. Redux&#x6982;&#x5FF5;&#x89E3;&#x6790;">4. Redux&#x6982;&#x5FF5;&#x89E3;&#x6790; <a href="#t34. Redux&#x6982;&#x5FF5;&#x89E3;&#x6790;"> # </a></h2>
+<h3 id="t44.1 Store">4.1 Store <a href="#t44.1 Store"> # </a></h3>
+<ul>
+<li><code>Store</code>&#x5C31;&#x662F;&#x4FDD;&#x5B58;&#x6570;&#x636E;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x628A;&#x5B83;&#x770B;&#x6210;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#x3002;&#x6574;&#x4E2A;&#x5E94;&#x7528;&#x53EA;&#x80FD;&#x6709;&#x4E00;&#x4E2A;<code>Store</code></li>
+<li>Redux &#x63D0;&#x4F9B;<code>createStore</code>&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x7528;&#x6765;&#x751F;&#x6210;<code>Store</code><pre><code class="lang-js"><span class="hljs-keyword">import</span> { createStore } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;redux&apos;</span>;
+<span class="hljs-keyword">const</span> store = createStore(fn);
+</code></pre>
+<blockquote>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;createStore&#x51FD;&#x6570;&#x63A5;&#x53D7;&#x53E6;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#xFF0C;&#x8FD4;&#x56DE;&#x65B0;&#x751F;&#x6210;&#x7684;Store&#x5BF9;&#x8C61;&#x3002;</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="t54.2 State">4.2 State <a href="#t54.2 State"> # </a></h3>
+<p>Store&#x5BF9;&#x8C61;&#x5305;&#x542B;&#x6240;&#x6709;&#x6570;&#x636E;&#x3002;&#x5982;&#x679C;&#x60F3;&#x5F97;&#x5230;&#x67D0;&#x4E2A;&#x65F6;&#x70B9;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5C31;&#x8981;&#x5BF9;Store&#x751F;&#x6210;&#x5FEB;&#x7167;&#x3002;&#x8FD9;&#x79CD;&#x65F6;&#x95F4;&#x70B9;&#x7684;&#x6570;&#x636E;&#x96C6;&#x5408;&#xFF0C;&#x5C31;&#x53EB;&#x505A;State&#x3002; &#x5F53;&#x524D;&#x65F6;&#x523B;&#x7684;State&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>store.getState()</code>&#x62FF;&#x5230;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { createStore } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;redux&apos;</span>;
+<span class="hljs-keyword">const</span> store = createStore(fn);
+<span class="hljs-keyword">const</span> state = store.getState();
+</code></pre>
+<blockquote>
+<p>Redux &#x89C4;&#x5B9A;&#xFF0C; &#x4E00;&#x4E2A; State &#x5BF9;&#x5E94;&#x4E00;&#x4E2A; View&#x3002;&#x53EA;&#x8981; State &#x76F8;&#x540C;&#xFF0C;View &#x5C31;&#x76F8;&#x540C;&#x3002;&#x4F60;&#x77E5;&#x9053; State&#xFF0C;&#x5C31;&#x77E5;&#x9053; View &#x662F;&#x4EC0;&#x4E48;&#x6837;&#xFF0C;&#x53CD;&#x4E4B;&#x4EA6;&#x7136;&#x3002;</p>
+</blockquote>
+<h3 id="t64.3 Action">4.3 Action <a href="#t64.3 Action"> # </a></h3>
+<p>State&#x7684;&#x53D8;&#x5316;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;View&#x7684;&#x53D8;&#x5316;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x7528;&#x6237;&#x63A5;&#x89E6;&#x4E0D;&#x5230; State&#xFF0C;&#x53EA;&#x80FD;&#x63A5;&#x89E6;&#x5230;View
+&#x6240;&#x4EE5;&#xFF0C;State&#x7684;&#x53D8;&#x5316;&#x5FC5;&#x987B;&#x662F; View&#x5BFC;&#x81F4;&#x7684;&#x3002;Action &#x5C31;&#x662F; View &#x53D1;&#x51FA;&#x7684;&#x901A;&#x77E5;&#xFF0C;&#x8868;&#x793A;State &#x5E94;&#x8BE5;&#x8981;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x4E86;&#x3002; 
+Action&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x3002;&#x5176;&#x4E2D;&#x7684;type&#x5C5E;&#x6027;&#x662F;&#x5FC5;&#x987B;&#x7684;&#xFF0C;&#x8868;&#x793A; Action &#x7684;&#x540D;&#x79F0;&#x3002;&#x5176;&#x4ED6;&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x81EA;&#x7531;&#x8BBE;&#x7F6E;&#xFF0C;&#x793E;&#x533A;&#x6709;&#x4E00;&#x4E2A;&#x89C4;&#x8303;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> action = {
+  <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;ADD_TODO&apos;</span>,
+  <span class="hljs-attr">payload</span>: <span class="hljs-string">&apos;&#x5B66;&#x4E60;redux&apos;</span>
+};
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;Action &#x7684;&#x540D;&#x79F0;&#x662F;<code>ADD_TODO</code>&#xFF0C;&#x5B83;&#x643A;&#x5E26;&#x7684;&#x4FE1;&#x606F;&#x662F;&#x5B57;&#x7B26;&#x4E32;<code>&#x5B66;&#x4E60;redux</code>&#x3002; 
+&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x7406;&#x89E3;&#xFF0C;Action&#x63CF;&#x8FF0;&#x5F53;&#x524D;&#x53D1;&#x751F;&#x7684;&#x4E8B;&#x60C5;&#x3002;&#x6539;&#x53D8;State&#x7684;&#x552F;&#x4E00;&#x529E;&#x6CD5;&#xFF0C;&#x5C31;&#x662F;&#x4F7F;&#x7528; Action&#x3002;&#x5B83;&#x4F1A;&#x8FD0;&#x9001;&#x6570;&#x636E;&#x5230; Store&#x3002;</p>
+<h3 id="t74.4 Action Creator">4.4 Action Creator <a href="#t74.4 Action Creator"> # </a></h3>
+<p>View&#x8981;&#x53D1;&#x9001;&#x591A;&#x5C11;&#x79CD;&#x6D88;&#x606F;&#xFF0C;&#x5C31;&#x4F1A;&#x6709;&#x591A;&#x5C11;&#x79CD; Action&#x3002;&#x5982;&#x679C;&#x90FD;&#x624B;&#x5199;&#xFF0C;&#x4F1A;&#x5F88;&#x9EBB;&#x70E6;&#x3002;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x6765;&#x751F;&#x6210; Action&#xFF0C;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x5C31;&#x53EB; Action Creator&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> ADD_TODO = <span class="hljs-string">&apos;&#x6DFB;&#x52A0; TODO&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">addTodo</span>(<span class="hljs-params">text</span>) </span>{
+  <span class="hljs-keyword">return</span> {
+    <span class="hljs-attr">type</span>: ADD_TODO,
+    text
+  }
+}
+
+<span class="hljs-keyword">const</span> action = addTodo(<span class="hljs-string">&apos;&#x5B66;&#x4E60;Redux&apos;</span>);
+</code></pre>
+<blockquote>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;addTodo&#x51FD;&#x6570;&#x5C31;&#x662F;&#x4E00;&#x4E2A; Action Creator&#x3002;</p>
+</blockquote>
+<h3 id="t84.5 store.dispatch()">4.5 store.dispatch() <a href="#t84.5 store.dispatch()"> # </a></h3>
+<p><code>store.dispatch()</code>&#x662F; View &#x53D1;&#x51FA; Action &#x7684;&#x552F;&#x4E00;&#x65B9;&#x6CD5;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { createStore } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;redux&apos;</span>;
+<span class="hljs-keyword">const</span> store = createStore(fn);
+
+store.dispatch({
+  <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;ADD_TODO&apos;</span>,
+  <span class="hljs-attr">payload</span>: <span class="hljs-string">&apos;&#x5B66;&#x4E60;Redux&apos;</span>
+});
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;store.dispatch&#x63A5;&#x53D7;&#x4E00;&#x4E2A; Action &#x5BF9;&#x8C61;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#xFF0C;&#x5C06;&#x5B83;&#x53D1;&#x9001;&#x51FA;&#x53BB;&#x3002; &#x7ED3;&#x5408; Action Creator&#xFF0C;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x6539;&#x5199;&#x5982;&#x4E0B;&#x3002;</p>
+<pre><code class="lang-js">store.dispatch(addTodo(<span class="hljs-string">&apos;&#x5B66;&#x4E60;Redux&apos;</span>))
+</code></pre>
+<h3 id="t94.6 Reducer">4.6 Reducer <a href="#t94.6 Reducer"> # </a></h3>
+<p>Store &#x6536;&#x5230; Action &#x4EE5;&#x540E;&#xFF0C;&#x5FC5;&#x987B;&#x7ED9;&#x51FA;&#x4E00;&#x4E2A;&#x65B0;&#x7684; State&#xFF0C;&#x8FD9;&#x6837; View &#x624D;&#x4F1A;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x3002;
+&#x8FD9;&#x79CD; State &#x7684;&#x8BA1;&#x7B97;&#x8FC7;&#x7A0B;&#x5C31;&#x53EB;&#x505A; Reducer&#x3002; 
+Reducer &#x662F;&#x4E00;&#x4E2A;&#x7EAF;&#x51FD;&#x6570;&#xFF0C;&#x5B83;&#x63A5;&#x53D7;  &#x5F53;&#x524D; State &#x548C;Action&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x65B0;&#x7684; State&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> reducer = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">state, action</span>) </span>{
+  <span class="hljs-keyword">return</span> new_state;
+};
+</code></pre>
+<h2 id="t105.&#x7F16;&#x5199;Redux">5.&#x7F16;&#x5199;Redux <a href="#t105.&#x7F16;&#x5199;Redux"> # </a></h2>
+<pre><code class="lang-js">
+<span class="hljs-comment">/**
+ * &#x521B;&#x5EFA;&#x4E00;&#x4E2A;Redux&#x4ED3;&#x5E93;&#x6765;&#x4FDD;&#x5B58;&#x6574;&#x4E2A;&#x72B6;&#x6001;&#x6811;
+ * &#x6539;&#x53D8;&#x72B6;&#x6001;&#x6811;&#x7684;&#x552F;&#x4E00;&#x65B9;&#x6CD5;&#x662F;&#x8C03;&#x7528;store.dispatch&#x65B9;&#x6CD5;
+ * &#x5728;&#x6574;&#x4E2A;&#x5E94;&#x7528;&#x4E2D;&#x53EA;&#x80FD;&#x6709;&#x4E00;&#x4E2A;&#x4ED3;&#x5E93;
+ * &#x4E3A;&#x4E86;&#x6307;&#x5B9A;&#x72B6;&#x6001;&#x6811;&#x7684;&#x5404;&#x4E2A;&#x90E8;&#x5206;&#x5982;&#x4F55;&#x54CD;&#x5E94;action&#x7684;&#x53D8;&#x5316;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x4F7F;&#x7528;combineReducers&#x65B9;&#x6CD5;&#x628A;&#x591A;&#x4E2A;reducer&#x5408;&#x5E76;&#x4E3A;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684;reducer
+ * 
+ * @param {Function} reducer &#x4E00;&#x4E2A;&#x901A;&#x8FC7;&#x5F53;&#x524D;&#x72B6;&#x6001;&#x5BF9;&#x8C61;&#x548C;&#x8981;&#x5904;&#x7406;&#x7684;action&#x8FD4;&#x56DE;&#x65B0;&#x7684;&#x72B6;&#x6001;&#x6811;&#x7684;&#x51FD;&#x6570;
+ * @param {any} [preloadedState] &#x521D;&#x59CB;&#x72B6;&#x6001;&#x3002;&#x5728;&#x540C;&#x6784;&#x5E94;&#x7528;&#x4E2D;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x6307;&#x5B9A;&#x5B83;&#x4EE5;&#x5408;&#x5E76;&#x6765;&#x81EA;&#x670D;&#x52A1;&#x5668;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x6216;&#x8005;&#x4ECE;&#x4E00;&#x4E2A;&#x4EE5;&#x524D;&#x5E8F;&#x5217;&#x5316;&#x7684;&#x7528;&#x6237;&#x4F1A;&#x8BDD;&#x4E2D;&#x6062;&#x590D;. 
+ * &#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528;&#x4E86;combineReducers,&#x6765;&#x4ECE;&#x6839;reducer&#x4E2D;&#x4EA7;&#x751F;&#x72B6;&#x6001;&#xFF0C;&#x8FD9;&#x5FC5;&#x987B;&#x662F;&#x4E00;&#x4E2A;&#x548C;combineReducer &#x7684;keys&#x76F8;&#x540C;&#x5F62;&#x72B6;&#x7684;&#x5BF9;&#x8C61;
+ * @param {Function} [enhancer] &#x4ED3;&#x5E93;&#x7684;enhancer. &#x4F60;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x6307;&#x5B9A;&#x8FD9;&#x4E2A;&#x53BB;&#x589E;&#x5F3A;&#x4ED3;&#x5E93;&#x7684;&#x80FD;&#x529B;&#x4EE5;&#x4F7F;&#x7528;&#x7B2C;&#x4E09;&#x65B9;&#x7684;&#x80FD;&#x529B;&#x6BD4;&#x5982;&#x4E2D;&#x95F4;&#x4EF6;
+ * &#x65F6;&#x95F4;&#x65C5;&#x884C;&#xFF0C;&#x6301;&#x4E45;&#x5316;&#x7B49;&#x7B49;&#x3002;redux&#x81EA;&#x5E26;&#x7684;&#x552F;&#x4E00;&#x4E2D;&#x95F4;&#x4EF6;&#x662F;applyMiddleware
+ * @returns {Store} &#x662F;&#x4E00;&#x4E2A;Redux&#x4ED3;&#x5E93;&#x8BA9;&#x4F60;&#x53EF;&#x4EE5;&#x8BFB;&#x53D6;&#x72B6;&#x6001;&#xFF0C;&#x6D3E;&#x53D1;action&#x5E76;&#x8BA2;&#x9605;&#x72B6;&#x6001;&#x53D8;&#x5316;
+ */</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createStore</span>(<span class="hljs-params">reducer,preloadedState,enhancer</span>) </span>{
+    <span class="hljs-keyword">if</span> (enhancer) {
+        <span class="hljs-keyword">return</span> enhancer(createStore)(reducer,preloadedState);
+    }
+    <span class="hljs-keyword">let</span> state=preloadedState;
+    <span class="hljs-keyword">let</span> listeners=[];
+    <span class="hljs-comment">/**
+     * &#x8BFB;&#x53D6;&#x4ED3;&#x5E93;&#x7BA1;&#x7406;&#x7684;&#x72B6;&#x6001;&#x6811;
+     * @returns {any} &#x5E94;&#x7528;&#x5F53;&#x524D;&#x7684;&#x72B6;&#x6001;&#x6811;
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getState</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">return</span> state;
+    }
+    <span class="hljs-comment">/**
+     * &#x589E;&#x52A0;&#x4E00;&#x4E2A;&#x53D8;&#x5316;&#x76D1;&#x542C;&#x51FD;&#x6570;&#x3002;&#x5B83;&#x5C06;&#x5728;&#x4EFB;&#x4F55;&#x6D3E;&#x53D1;&#x52A8;&#x4F5C;&#x7684;&#x65F6;&#x5019;&#x88AB;&#x8C03;&#x7528;
+     * &#x72B6;&#x6001;&#x6811;&#x7684;&#x90E8;&#x5206;&#x6570;&#x636E;&#x53EF;&#x80FD;&#x4F1A;&#x53D1;&#x751F;&#x6F5C;&#x5728;&#x7684;&#x53D8;&#x5316;&#x3002;&#x4F60;&#x53EF;&#x80FD;&#x5728;&#x90A3;&#x4E2A;&#x65F6;&#x5019;&#x5728;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x4E2D;&#x8C03;&#x7528;getState&#x65B9;&#x6CD5;&#x4EE5;&#x83B7;&#x53D6;&#x6700;&#x65B0;&#x7684;&#x72B6;&#x6001;&#x3002;
+     * &#x4F60;&#x53EF;&#x80FD;&#x4F1A;&#x5728;&#x76D1;&#x542C;&#x51FD;&#x6570;&#x91CC;&#x8C03;&#x7528;dispatch&#x65B9;&#x6CD5;&#xFF0C;&#x5B83;&#x4F1A;&#x5177;&#x5907;&#x4EE5;&#x4E0B;&#x6CE8;&#x610F;&#x4E8B;&#x9879;
+     * 1. &#x8BA2;&#x9605;&#x4EC5;&#x4EC5;&#x5728;&#x6BCF;&#x4E00;&#x6B21;&#x8C03;&#x7528;&#x6BCF;&#x4E00;&#x4E2A;dispatch&#x65B9;&#x6CD5;&#x65F6;&#x88AB;&#x8BB0;&#x5F55;&#x5FEB;&#x7167;
+     * &#x5982;&#x679C;&#x4F60;&#x5728;&#x76D1;&#x542C;&#x51FD;&#x6570;&#x88AB;&#x89E6;&#x53D1;&#x7684;&#x65F6;&#x5019;&#x8BA2;&#x9605;&#x6216;&#x53D6;&#x6D88;&#x8BA2;&#x9605;&#x7684;&#x8BDD;&#xFF0C;&#x8FD9;&#x5BF9;&#x5F53;&#x524D;&#x6B63;&#x5728;&#x5904;&#x7406;&#x4E2D;&#x7684;dispatch&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x6548;&#x679C;
+     * &#x5C3D;&#x7BA1;&#x5982;&#x6B64;&#xFF0C;&#x5728;&#x4E0B;&#x4E00;&#x6B21;dispatch&#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;&#x4E2D;&#xFF0C;&#x4E0D;&#x7BA1;&#x662F;&#x4E0D;&#x662F;&#x5185;&#x5D4C;&#xFF0C;&#x90FD;&#x5C06;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x6700;&#x65B0;&#x7684;&#x8BA2;&#x9605;&#x5217;&#x8868;
+     * 
+     * 2.&#x76D1;&#x542C;&#x51FD;&#x6570;&#x4E0D;&#x5E94;&#x8BE5;&#x9884;&#x671F;&#x6240;&#x6709;&#x7684;&#x72B6;&#x6001;&#x53D8;&#x5316;&#xFF0C;&#x56E0;&#x4E3A;&#x72B6;&#x6001;&#x53EF;&#x80FD;&#x5728;dispatch&#x4E2D;&#x88AB;&#x66F4;&#x65B0;&#x591A;&#x6B21;&#x3002; &#x5C3D;&#x7BA1;&#x5982;&#x6B64;&#xFF0C;&#x5728; dispatch&#x4E4B;&#x524D;&#x6CE8;&#x518C;&#x7684;&#x8BA2;&#x9605;&#x8005;&#x5C06;&#x4F1A;&#x4EE5;&#x6700;&#x65B0;&#x7684;&#x72B6;&#x6001;&#x8C03;&#x7528;
+     * 
+     * @param {*} listener  &#x6BCF;&#x4E00;&#x6B21;dispatch&#x65F6;&#x88AB;&#x8C03;&#x7528;&#x7684;&#x76D1;&#x542C;&#x51FD;&#x6570;
+     * @returns {Function} &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x79FB;&#x9664;&#x6B64;&#x76D1;&#x542C;&#x51FD;&#x6570;&#x7684;&#x51FD;&#x6570;
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">subscribe</span>(<span class="hljs-params">listener</span>) </span>{
+        listeners.push(listener);
+        <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">const</span> index=listeners.indexOf(listener);
+            listeners.splice(inddx,<span class="hljs-number">1</span>);
+        }
+    }
+
+    <span class="hljs-comment">/**
+     * &#x6D3E;&#x53D1;&#x4E00;&#x4E2A;&#x52A8;&#x4F5C;&#xFF0C;&#x8FD9;&#x662F;&#x89E6;&#x53D1;&#x72B6;&#x6001;&#x6539;&#x53D8;&#x7684;&#x552F;&#x4E00;&#x65B9;&#x5F0F;
+     * &#x7528;&#x6765;&#x521B;&#x5EFA;&#x4ED3;&#x5E93;&#x7684;reducer&#x51FD;&#x6570;&#x5C06;&#x4F1A;&#x88AB;&#x8C03;&#x7528;&#xFF0C;&#x53C2;&#x6570;&#x662F;&#x5F53;&#x524D;&#x7684;&#x72B6;&#x6001;&#x6811;&#x548C;&#x7ED9;&#x5B9A;&#x7684;&#x52A8;&#x4F5C;&#x3002;&#x5B83;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x5C06;&#x4F1A;&#x88AB;&#x5F53;&#x4F5C;&#x4E0B;&#x4E00;&#x4E2A;&#x72B6;&#x6001;&#x6811;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x76D1;&#x542C;&#x51FD;&#x6570;&#x4E5F;&#x4F1A;&#x88AB;&#x901A;&#x77E5;
+     * 
+     * &#x57FA;&#x672C;&#x5B9E;&#x73B0;&#x4E2D;&#x53EA;&#x652F;&#x6301;&#x7B80;&#x5355;&#x52A8;&#x4F5C;&#x5BF9;&#x8C61;&#x3002;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x8981;&#x6D3E;&#x53D1;&#x4E00;&#x4E2A;Promise&#x3001;&#x4E00;&#x4E2A;Observerable&#x3001;&#x4E00;&#x4E2A;thunk&#x6216;&#x8005;&#x5176;&#x5B83;&#x7684;&#x4EFB;&#x4F55;&#x61C2;&#x7231;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x628A;&#x4F60;&#x521B;&#x5EFA;&#x4ED3;&#x5E93;&#x7684;&#x51FD;&#x6570;&#x5305;&#x88F9;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x4E2D;&#x95F4;&#x4EF6;&#x91CC;&#x3002;
+     * &#x6BD4;&#x5982;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x770B;&#x4E00;&#x4E0B;redux-thunk&#x5305;&#x3002;&#x751A;&#x81F3;&#x4E2D;&#x95F4;&#x4EF6;&#x6700;&#x540E;&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5C06;&#x4F1A;&#x6D3E;&#x53D1;&#x7B80;&#x5355;&#x5BF9;&#x8C61;&#x3002;
+     * 
+     * 
+     * @param {*} action &#x4E00;&#x4E2A;&#x8868;&#x793A;&#x53D1;&#x751F;&#x4E86;&#x4EC0;&#x4E48;&#x7684;&#x7B80;&#x5355;&#x5BF9;&#x8C61;&#x3002;&#x4FDD;&#x6301;&#x52A8;&#x4F5C;&#x5E8F;&#x5217;&#x5316;&#x5C06;&#x4F1A;&#x662F;&#x4E00;&#x4E2A;&#x597D;&#x4E3B;&#x610F;&#xFF0C;&#x4EE5;&#x65B9;&#x4FBF;&#x4F60;&#x8FDB;&#x884C;&#x8BB0;&#x5F55;&#x548C;&#x56DE;&#x653E;&#x7528;&#x6237;&#x4F1A;&#x8BDD;&#x3002;&#x6216;&#x8005;&#x4F7F;&#x7528;&#x65F6;&#x95F4;&#x65C5;&#x884C;&#x5DE5;&#x5177;redux-devtools.&#x4E00;&#x4E2A;&#x52A8;&#x4F5C;&#x5FC5;&#x987B;&#x6709;&#x4E00;&#x4E2A;type&#x5C5E;&#x6027;&#x800C;&#x4E14;&#x4E0D;&#x80FD;&#x662F;undefine.&#x4F7F;&#x7528;&#x5B57;&#x7B26;&#x4E32;&#x5E38;&#x91CF;&#x8868;&#x793A;&#x52A8;&#x4F5C;&#x7C7B;&#x578B;&#x5C06;&#x4F1A;&#x662F;&#x4E2A;&#x597D;&#x4E3B;&#x610F;&#x3002;
+     * @returns {object} &#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#xFF0C;&#x4F60;&#x6D3E;&#x53D1;&#x7684;&#x76F8;&#x540C;&#x7684;&#x52A8;&#x4F5C;&#x5BF9;&#x8C61;
+     * &#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x5305;&#x88F9; dispatch&#x53BB;&#x8FD4;&#x56DE;&#x522B;&#x7684;&#x4E1C;&#x897F;(&#x6BD4;&#x5982;&#x4F60;&#x7B49;&#x5F85;&#x7684;Promise)
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">dispatch</span>(<span class="hljs-params">action</span>) </span>{
+        state=reducer(state,action);
+        listeners.forEach(<span class="hljs-function"><span class="hljs-params">listener</span>=&gt;</span>listener())
+    }
+    dispatch({<span class="hljs-attr">type</span>:<span class="hljs-string">&apos;@@redux/INIT&apos;</span>});
+    <span class="hljs-keyword">return</span> {
+        dispatch,
+        subscribe,
+        getState
+    }
+}
+</code></pre>
+<h2 id="t116. Counter-Vanilla">6. Counter-Vanilla <a href="#t116. Counter-Vanilla"> # </a></h2>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;value&quot;</span><span class="hljs-attr">0</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;increment&quot;</span>&gt;</span>+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;decrement&quot;</span>&gt;</span>+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;incrementIfOdd&quot;</span>&gt;</span>&#x5947;&#x6570;+1/button&gt;
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;incrementAsync&quot;</span>&gt;</span>&#x5F02;&#x6B65;+1<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> {createStore} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../redux&apos;</span>;
+<span class="hljs-keyword">const</span> INCREMENT=<span class="hljs-string">&apos;INCREMENT&apos;</span>;
+<span class="hljs-keyword">const</span> DECREMENT = <span class="hljs-string">&apos;DECREMENT&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">reducer</span>(<span class="hljs-params">state=<span class="hljs-number">0</span>,action</span>)</span>{
+    <span class="hljs-keyword">switch</span>(action.type){
+        <span class="hljs-keyword">case</span> INCREMENT:
+            <span class="hljs-keyword">return</span> state + <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">case</span> DECREMENT:
+            <span class="hljs-keyword">return</span> state - <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">default</span>:
+            <span class="hljs-keyword">return</span> state;
+    }
+}
+<span class="hljs-keyword">let</span> store=createStore(reducer);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">render</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;value&apos;</span>).innerHTML=store.getState();
+}
+store.subscribe(render);
+<span class="hljs-built_in">console</span>.log(store.getState());
+render();
+<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;increment&apos;</span>).addEventListener(<span class="hljs-string">&apos;click&apos;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    store.dispatch({<span class="hljs-attr">type</span>:INCREMENT});
+});
+<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;decrement&apos;</span>).addEventListener(<span class="hljs-string">&apos;click&apos;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    store.dispatch({<span class="hljs-attr">type</span>:DECREMENT});
+});
+<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;incrementIfOdd&apos;</span>).addEventListener(<span class="hljs-string">&apos;click&apos;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">if</span>(store.getState()%<span class="hljs-number">2</span>!=<span class="hljs-number">0</span>)
+        store.dispatch({<span class="hljs-attr">type</span>:INCREMENT});
+});
+<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;incrementAsync&apos;</span>).addEventListener(<span class="hljs-string">&apos;click&apos;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        store.dispatch({<span class="hljs-attr">type</span>:INCREMENT});
+    },<span class="hljs-number">1000</span>);
+});
+</code></pre>
+<h2 id="t126. Counter">6. Counter <a href="#t126. Counter"> # </a></h2>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React,{Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> PropTypes <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;prop-types&apos;</span>;
+<span class="hljs-keyword">import</span> counter <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../reducers&apos;</span>;
+<span class="hljs-keyword">import</span> {createStore} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../redux&apos;</span>;
+<span class="hljs-keyword">const</span> store=createStore(counter);
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Counter</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span></span>{
+    <span class="hljs-keyword">constructor</span>(props) {
+        <span class="hljs-keyword">super</span>(props);
+        <span class="hljs-keyword">this</span>.state={<span class="hljs-attr">value</span>:<span class="hljs-number">0</span>};
+    }
+    componentDidMount() {
+        <span class="hljs-keyword">this</span>.unsubscribe=store.subscribe(<span class="hljs-function"><span class="hljs-params">()</span>=&gt;</span><span class="hljs-keyword">this</span>.setState({<span class="hljs-attr">value</span>:store.getState()}));
+    }
+    componentWillUnmount() {
+        <span class="hljs-keyword">this</span>.unsubscribe();
+    }
+    render() {
+        <span class="hljs-keyword">const</span> {value,onInrement,onDecrement}=<span class="hljs-keyword">this</span>.props;
+        <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{this.state.value}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span>=&gt;</span>store.dispatch({type:&apos;INCREMENT&apos;})}&gt;+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span>=&gt;</span>store.dispatch({type:&apos;DECREMENT&apos;})}&gt;-<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{</span>
+                    () =&gt;</span> {
+                        if (this.state.value%2!=0)
+                            store.dispatch({type: &apos;INCREMENT&apos;})
+                    }
+                }&gt;IncrementIfOdd<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{</span>
+                    () =&gt;</span> {
+                        setTimeout(() =&gt; {
+                            store.dispatch({type:&apos;INCREMENT&apos;})
+                        },1000);
+                    }
+                }&gt;IncrementAsync<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+        )
+    }
+}
+</code></pre>
+<h2 id="t137.actionCreator&#x4F18;&#x5316;&#x7ED3;&#x6784;">7.actionCreator&#x4F18;&#x5316;&#x7ED3;&#x6784; <a href="#t137.actionCreator&#x4F18;&#x5316;&#x7ED3;&#x6784;"> # </a></h2>
+<pre><code class="lang-js">&#x251C;&#x2500;&#x2500; components
+&#x2502;   &#x2514;&#x2500;&#x2500; Counter.js
+&#x251C;&#x2500;&#x2500; index.js
+&#x2514;&#x2500;&#x2500; store
+    &#x251C;&#x2500;&#x2500; action-types.js
+    &#x251C;&#x2500;&#x2500; actions
+    &#x2502;   &#x2514;&#x2500;&#x2500; counter.js
+    &#x251C;&#x2500;&#x2500; index.js
+    &#x2514;&#x2500;&#x2500; reducers
+        &#x2514;&#x2500;&#x2500; counter.js
+</code></pre>
+<p>actions.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> types <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../action-types&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    add() {
+        <span class="hljs-keyword">return</span> {<span class="hljs-attr">type</span>: types.INCREMENT};
+    },
+    minus() {
+        <span class="hljs-keyword">return</span> {<span class="hljs-attr">type</span>: types.DECREMENT};
+    }
+}
+</code></pre>
+<h2 id="t148.bindActionCreator">8.bindActionCreator <a href="#t148.bindActionCreator"> # </a></h2>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> actions <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../store/actions/counter&apos;</span>;
+<span class="hljs-keyword">import</span> {bindActionCreator} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../redux&apos;</span>;
+<span class="hljs-keyword">let</span> newActions=bindActionCreator(actions,store.dispatch);
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span>=&gt;</span>newActions.add()}&gt;+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
+&lt;button onClick={()=&gt;newActions.minus()}&gt;-<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">actions,dispatch</span>) </span>{
+    <span class="hljs-keyword">let</span> newActions={};
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> key <span class="hljs-keyword">in</span> actions) {
+        newActions[key]=<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> dispatch(actions[key].apply(<span class="hljs-literal">null</span>,<span class="hljs-built_in">arguments</span>));
+    }
+    <span class="hljs-keyword">return</span> newActions;
+}
+</code></pre>
+<h2 id="t159. combineReducers">9. combineReducers <a href="#t159. combineReducers"> # </a></h2>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">combineReducers</span>(<span class="hljs-params">reducers</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">state={},action</span>) </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.keys(reducers).reduce(<span class="hljs-function">(<span class="hljs-params">newState,key</span>) =&gt;</span> {
+            newState[key]=reducers[key](state[key],action);
+            <span class="hljs-keyword">return</span> newState;
+        },{});
+    }
+}
+</code></pre>
+<h2 id="t1610. react-redux">10. react-redux <a href="#t1610. react-redux"> # </a></h2>
+<p>Provider</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React,{Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> PropTypes <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;prop-types&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Provider</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span></span>{
+    <span class="hljs-keyword">static</span> childContextTypes={
+      <span class="hljs-attr">store</span>:PropTypes.object.isRequired
+    }
+    getChildContext() {
+        <span class="hljs-keyword">return</span> {
+            <span class="hljs-attr">store</span>:<span class="hljs-keyword">this</span>.props.store
+        }
+    }
+    render() {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.props.children;
+    }
+}
+</code></pre>
+<p>connect</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React,{Component} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> PropTypes <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;prop-types&apos;</span>;
+<span class="hljs-keyword">import</span> {bindActionCreator} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../redux&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">mapStateToProps,mapDispatchToProps</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">Component</span>) </span>{
+        <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WrappedComponent</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span></span>{
+            <span class="hljs-keyword">static</span> contextTypes={
+                <span class="hljs-attr">store</span>:PropTypes.object.isRequired
+            }
+            <span class="hljs-keyword">constructor</span>(props,context) {
+                <span class="hljs-keyword">super</span>(props);
+                <span class="hljs-keyword">this</span>.store=context.store;
+                <span class="hljs-keyword">this</span>.state=mapStateToProps(<span class="hljs-keyword">this</span>.store.getState());
+            }
+            componentDidMount() {
+                <span class="hljs-keyword">this</span>.unsubscribe = <span class="hljs-keyword">this</span>.store.subscribe(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+                    <span class="hljs-keyword">this</span>.setState(mapStateToProps(<span class="hljs-keyword">this</span>.store.getState()));
+                });
+            }
+            componentWillUnmount() {
+                <span class="hljs-keyword">this</span>.unsubscribe();
+            }
+            render() {
+                <span class="hljs-keyword">let</span> actions={};
+                <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> mapDispatchToProps == <span class="hljs-string">&apos;object&apos;</span>) {
+                    actions=bindActionCreator(mapDispatchToProps,<span class="hljs-keyword">this</span>.store.dispatch);
+                } <span class="hljs-keyword">else</span> {
+                    actions=mapDispatchToProps(<span class="hljs-keyword">this</span>.store.dispatch);
+                }
+                <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Component</span> {<span class="hljs-attr">...this.state</span>}  {<span class="hljs-attr">...actions</span>}/&gt;</span>
+            }
+        }
+        return WrappedComponent;
+    }
+}
+</span></code></pre>
+
+        <div class="copyright">Powered by <a href="javascript:if(confirm('https://github.com/jaywcjlove/idoc  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://github.com/jaywcjlove/idoc'" tppabs="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="javascript:if(confirm('https://nodejs.org/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://nodejs.org/'" tppabs="https://nodejs.org/">Node.js</a> run.</div>
+    </div>
+    
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

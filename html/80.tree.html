@@ -1,0 +1,1852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+   
+                      
+
+                        
+<div class="warpper">
+    <div class="page-toc">
+        <ul><li><a href="#t01. 初始化项目">1. 初始化项目</a><ul><li><a href="#t11.1 创建项目">1.1 创建项目</a></li><li><a href="#t21.2 安装依赖">1.2 安装依赖</a></li><li><a href="#t31.3 支持typescript">1.3 支持typescript</a></li><li><a href="#t41.4 webpack.config.js">1.4 webpack.config.js</a></li><li><a href="#t51.5 src\index.tsx">1.5 src\index.tsx</a></li><li><a href="#t61.6 src\index.html">1.6 src\index.html</a></li><li><a href="#t71.7 package.json">1.7 package.json</a></li></ul></li><li><a href="#t82. 单元测试">2. 单元测试</a><ul><li><a href="#t92.1 jest.config.js">2.1 jest.config.js</a></li><li><a href="#t102.2 src\utils.tsx">2.2 src\utils.tsx</a></li><li><a href="#t112.3 utils.spec.tsx">2.3 utils.spec.tsx</a></li><li><a href="#t122.4 mocks\file-mock.js">2.4 mocks\file-mock.js</a></li><li><a href="#t132.5 object-mock.js">2.5 object-mock.js</a></li></ul></li><li><a href="#t143. 创建树型菜单">3. 创建树型菜单</a><ul><li><a href="#t153.1 src\index.tsx">3.1 src\index.tsx</a></li><li><a href="#t163.2 src\data.tsx">3.2 src\data.tsx</a></li><li><a href="#t173.3 typings.tsx">3.3 typings.tsx</a></li><li><a href="#t183.4 components\tree.tsx">3.4 components\tree.tsx</a></li><li><a href="#t193.5 index.less">3.5 index.less</a></li></ul></li><li><a href="#t204. 渲染树型结构">4. 渲染树型结构</a><ul><li><a href="#t214.1 src\components\tree.tsx">4.1 src\components\tree.tsx</a></li><li><a href="#t224.2 index.less">4.2 index.less</a></li><li><a href="#t234.3 components\tree-node.tsx">4.3 components\tree-node.tsx</a></li></ul></li><li><a href="#t245. 打开关闭功能">5. 打开关闭功能</a><ul><li><a href="#t255.1 components\tree.tsx">5.1 components\tree.tsx</a></li><li><a href="#t265.2 tree-node.tsx">5.2 tree-node.tsx</a></li><li><a href="#t275.3 components\index.less">5.3 components\index.less</a></li><li><a href="#t285.4 images.d.ts">5.4 images.d.ts</a></li></ul></li><li><a href="#t296. 全选和全消功能">6. 全选和全消功能</a><ul><li><a href="#t306.1 src\typings.tsx">6.1 src\typings.tsx</a></li><li><a href="#t316.2 components\tree.tsx">6.2 components\tree.tsx</a></li><li><a href="#t326.3 tree-node.tsx">6.3 tree-node.tsx</a></li></ul></li><li><a href="#t337. 动态加载数据">7. 动态加载数据</a><ul><li><a href="#t347.1 typings.tsx">7.1 typings.tsx</a></li><li><a href="#t357.2 tree.tsx">7.2 tree.tsx</a></li><li><a href="#t367.3 tree-node.tsx">7.3 tree-node.tsx</a></li><li><a href="#t377.4 src\api.tsx">7.4 src\api.tsx</a></li><li><a href="#t387.5 api.js">7.5 api.js</a></li></ul></li><li><a href="#t398. 拖动排序">8. 拖动排序</a><ul><li><a href="#t408.1 components\tree.tsx">8.1 components\tree.tsx</a></li><li><a href="#t418.2 tree-node.tsx">8.2 tree-node.tsx</a></li></ul></li></ul>
+    </div>
+    <div class="content markdown-body">
+        <h2 id="t01. &#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;">1. &#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE; <a href="#t01. &#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;"> # </a></h2>
+<ul>
+<li><a href="http://img.zhufengpeixun.cn/tree4.html">&#x9879;&#x76EE;&#x9884;&#x89C8;</a></li>
+</ul>
+<h3 id="t11.1 &#x521B;&#x5EFA;&#x9879;&#x76EE;">1.1 &#x521B;&#x5EFA;&#x9879;&#x76EE; <a href="#t11.1 &#x521B;&#x5EFA;&#x9879;&#x76EE;"> # </a></h3>
+<pre><code class="lang-js">mkdir zhufeng_prepare_tree
+cd zhufeng_prepare_tree
+cnpm init -y
+touch .gitignore
+</code></pre>
+<h3 id="t21.2 &#x5B89;&#x88C5;&#x4F9D;&#x8D56;">1.2 &#x5B89;&#x88C5;&#x4F9D;&#x8D56; <a href="#t21.2 &#x5B89;&#x88C5;&#x4F9D;&#x8D56;"> # </a></h3>
+<ul>
+<li><a href="https://github.com/DefinitelyTyped/DefinitelyTyped">@types</a>&#x5F00;&#x5934;&#x7684;&#x5305;&#x90FD;&#x662F;typeScript&#x7684;&#x58F0;&#x660E;&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x8FDB;&#x5165;<code>node_modules/@types/XX/index.d.ts</code>&#x8FDB;&#x884C;&#x67E5;&#x770B;</li>
+</ul>
+<pre><code class="lang-js">cnpm i react @types/react react-dom @types/react-dom -S
+cnpm i webpack webpack-cli webpack-dev-server  -D
+cnpm i typescript ts-loader source-map-loader style-loader css-loader  less-loader  less file-loader url-loader html-webpack-plugin -D
+cnpm i jest @types/jest ts-jest jest-junit enzyme @types/enzyme 
+enzyme-adapter-react<span class="hljs-number">-16</span> @types/enzyme-adapter-react<span class="hljs-number">-16</span> -D
+cnpm i axios express qs @types/qs -D
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x6A21;&#x5757;&#x540D;</th>
+<th style="text-align:left">&#x4F7F;&#x7528;&#x65B9;&#x5F0F;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">react</td>
+<td style="text-align:left">React is a JavaScript library for creating user interfaces.</td>
+</tr>
+<tr>
+<td style="text-align:left">react-dom</td>
+<td style="text-align:left">This package serves as the entry point to the DOM and server renderers for React. It is intended to be paired with the generic React package, which is shipped as react to npm.</td>
+</tr>
+<tr>
+<td style="text-align:left">webpack</td>
+<td style="text-align:left">webpack is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging just about any resource or asset.</td>
+</tr>
+<tr>
+<td style="text-align:left">webpack-cli</td>
+<td style="text-align:left">The official CLI of webpack</td>
+</tr>
+<tr>
+<td style="text-align:left">webpack-dev-server</td>
+<td style="text-align:left">Use webpack with a development server that provides live reloading. This should be used for development only.</td>
+</tr>
+<tr>
+<td style="text-align:left">typescript</td>
+<td style="text-align:left">TypeScript is a language for application-scale JavaScript.</td>
+</tr>
+<tr>
+<td style="text-align:left">ts-loader</td>
+<td style="text-align:left">This is the TypeScript loader for webpack.</td>
+</tr>
+<tr>
+<td style="text-align:left">source-map-loader</td>
+<td style="text-align:left">Extracts source maps from existing source files (from their sourceMappingURL).</td>
+</tr>
+<tr>
+<td style="text-align:left">style-loader</td>
+<td style="text-align:left">Inject CSS into the DOM.</td>
+</tr>
+<tr>
+<td style="text-align:left">css-loader</td>
+<td style="text-align:left">The css-loader interprets @import and url() like import/require() and will resolve them.</td>
+</tr>
+<tr>
+<td style="text-align:left">less-loader</td>
+<td style="text-align:left">A Less loader for webpack. Compiles Less to CSS.</td>
+</tr>
+<tr>
+<td style="text-align:left">less</td>
+<td style="text-align:left">This is the JavaScript, official, stable version of Less.</td>
+</tr>
+<tr>
+<td style="text-align:left">file-loader</td>
+<td style="text-align:left">The file-loader resolves import/require() on a file into a url and emits the file into the output directory.</td>
+</tr>
+<tr>
+<td style="text-align:left">url-loader</td>
+<td style="text-align:left">A loader for webpack which transforms files into base64 URIs.</td>
+</tr>
+<tr>
+<td style="text-align:left">html-webpack-plugin</td>
+<td style="text-align:left">Plugin that simplifies creation of HTML files to serve your bundles</td>
+</tr>
+<tr>
+<td style="text-align:left">jest</td>
+<td style="text-align:left"><a href="https://jestjs.io/">jest</a> is a delightful JavaScript Testing Framework with a focus on simplicity.</td>
+</tr>
+<tr>
+<td style="text-align:left">jest-junit</td>
+<td style="text-align:left">A Jest reporter that creates compatible junit xml files</td>
+</tr>
+<tr>
+<td style="text-align:left">ts-jest</td>
+<td style="text-align:left">ts-jest is a TypeScript preprocessor with source map support for Jest that lets you use Jest to test projects written in TypeScript.</td>
+</tr>
+<tr>
+<td style="text-align:left">enzyme</td>
+<td style="text-align:left">JavaScript Testing utilities for React</td>
+</tr>
+<tr>
+<td style="text-align:left">enzyme-adapter-react-16</td>
+<td style="text-align:left">Enzyme is a JavaScript Testing utility for React that makes it easier to test your React Components&apos; output. You can also manipulate, traverse, and in some ways simulate runtime given the output.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t31.3 &#x652F;&#x6301;typescript">1.3 &#x652F;&#x6301;typescript <a href="#t31.3 &#x652F;&#x6301;typescript"> # </a></h3>
+<ul>
+<li>&#x9996;&#x5148;&#x9700;&#x8981;&#x751F;&#x6210;&#x4E00;&#x4E2A;<code>tsconfig.json</code>&#x6587;&#x4EF6;&#x6765;&#x544A;&#x8BC9;<code>ts-loader</code>&#x5982;&#x4F55;&#x7F16;&#x8BD1;&#x4EE3;&#x7801;TypeScript&#x4EE3;&#x7801;</li>
+</ul>
+<pre><code class="lang-js">tsc --init
+</code></pre>
+<pre><code class="lang-json">{
+  <span class="hljs-attr">&quot;compilerOptions&quot;</span>: {
+    <span class="hljs-attr">&quot;target&quot;</span>: <span class="hljs-string">&quot;es5&quot;</span>,
+    <span class="hljs-attr">&quot;module&quot;</span>: <span class="hljs-string">&quot;commonjs&quot;</span>,
+    <span class="hljs-attr">&quot;jsx&quot;</span>: <span class="hljs-string">&quot;react&quot;</span>,
+    <span class="hljs-attr">&quot;outDir&quot;</span>: <span class="hljs-string">&quot;./dist&quot;</span>,
+    <span class="hljs-attr">&quot;rootDir&quot;</span>: <span class="hljs-string">&quot;./src&quot;</span>,
+    <span class="hljs-attr">&quot;noImplicitAny&quot;</span>:<span class="hljs-literal">true</span>,
+    <span class="hljs-attr">&quot;esModuleInterop&quot;</span>: <span class="hljs-literal">true</span>
+  },
+  <span class="hljs-attr">&quot;include&quot;</span>: [
+    <span class="hljs-string">&quot;./src/**/*&quot;</span>,
+    <span class="hljs-string">&quot;./typings/**/*&quot;</span>
+  ]
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x53C2;&#x6570;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">target</td>
+<td style="text-align:left">&#x8F6C;&#x6362;&#x6210;es5</td>
+</tr>
+<tr>
+<td style="text-align:left">module</td>
+<td style="text-align:left">&#x4EE3;&#x7801;&#x89C4;&#x8303;</td>
+</tr>
+<tr>
+<td style="text-align:left">jsx</td>
+<td style="text-align:left">react&#x6A21;&#x5F0F;&#x4F1A;&#x751F;&#x6210;React.createElement&#xFF0C;&#x5728;&#x4F7F;&#x7528;&#x524D;&#x4E0D;&#x9700;&#x8981;&#x518D;&#x8FDB;&#x884C;&#x8F6C;&#x6362;&#x64CD;&#x4F5C;&#x4E86;&#xFF0C;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x7684;&#x6269;&#x5C55;&#x540D;&#x4E3A;.js</td>
+</tr>
+<tr>
+<td style="text-align:left">outDir</td>
+<td style="text-align:left">&#x6307;&#x5B9A;&#x8F93;&#x51FA;&#x76EE;&#x5F55;</td>
+</tr>
+<tr>
+<td style="text-align:left">rootDir</td>
+<td style="text-align:left">&#x6307;&#x5B9A;&#x6839;&#x76EE;&#x5F55;</td>
+</tr>
+<tr>
+<td style="text-align:left">sourceMap</td>
+<td style="text-align:left">&#x628A; ts &#x6587;&#x4EF6;&#x7F16;&#x8BD1;&#x6210; js &#x6587;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x540C;&#x65F6;&#x751F;&#x6210;&#x5BF9;&#x5E94;&#x7684;sourceMap&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td style="text-align:left">noImplicitAny</td>
+<td style="text-align:left">&#x5982;&#x679C;&#x4E3A;true&#x7684;&#x8BDD;&#xFF0C;TypeScript &#x7F16;&#x8BD1;&#x5668;&#x65E0;&#x6CD5;&#x63A8;&#x65AD;&#x51FA;&#x7C7B;&#x578B;&#x65F6;&#xFF0C;&#x5B83;&#x4ECD;&#x7136;&#x4F1A;&#x751F;&#x6210; JS&#x6587;&#x4EF6;&#xFF0C;&#x4F46;&#x662F;&#x5B83;&#x4E5F;&#x4F1A;&#x62A5;&#x544A;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;</td>
+</tr>
+<tr>
+<td style="text-align:left">esModuleInterop</td>
+<td style="text-align:left">&#x662F;&#x5426;&#x8F6C;&#x8BD1;common.js&#x6A21;&#x5757;</td>
+</tr>
+<tr>
+<td style="text-align:left">include</td>
+<td style="text-align:left">&#x9700;&#x8981;&#x7F16;&#x8BD1;&#x7684;&#x76EE;&#x5F55;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t41.4 webpack.config.js">1.4 webpack.config.js <a href="#t41.4 webpack.config.js"> # </a></h3>
+<p>webpack.config.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> webpack = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;webpack&apos;</span>);
+<span class="hljs-keyword">const</span> HtmlWebpackPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;html-webpack-plugin&apos;</span>);
+<span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
+<span class="hljs-built_in">module</span>.exports = {
+    <span class="hljs-attr">mode</span>: <span class="hljs-string">&apos;development&apos;</span>,
+    <span class="hljs-attr">entry</span>: <span class="hljs-string">&quot;./src/index.tsx&quot;</span>,
+    <span class="hljs-attr">output</span>: {
+        <span class="hljs-attr">path</span>: path.join(__dirname, <span class="hljs-string">&apos;dist&apos;</span>)
+    },
+    <span class="hljs-attr">devtool</span>: <span class="hljs-string">&quot;source-map&quot;</span>,
+    <span class="hljs-attr">devServer</span>: {
+        <span class="hljs-attr">hot</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">contentBase</span>: path.join(__dirname, <span class="hljs-string">&apos;dist&apos;</span>),
+        <span class="hljs-attr">historyApiFallback</span>: {
+            <span class="hljs-attr">index</span>: <span class="hljs-string">&apos;./index.html&apos;</span>
+        }
+    },
+    <span class="hljs-attr">resolve</span>: {
+        <span class="hljs-attr">extensions</span>: [<span class="hljs-string">&quot;.ts&quot;</span>, <span class="hljs-string">&quot;.tsx&quot;</span>, <span class="hljs-string">&quot;.js&quot;</span>, <span class="hljs-string">&quot;.json&quot;</span>]
+    },
+
+    <span class="hljs-attr">module</span>: {
+        <span class="hljs-attr">rules</span>: [{
+            <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.tsx?$/</span>,
+            <span class="hljs-attr">loader</span>: <span class="hljs-string">&quot;ts-loader&quot;</span>
+        },
+        {
+            <span class="hljs-attr">enforce</span>: <span class="hljs-string">&quot;pre&quot;</span>,
+            <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.tsx$/</span>,
+            <span class="hljs-attr">loader</span>: <span class="hljs-string">&quot;source-map-loader&quot;</span>
+        },
+        {
+            <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.less$/</span>,
+            <span class="hljs-attr">use</span>: [<span class="hljs-string">&apos;style-loader&apos;</span>, <span class="hljs-string">&apos;css-loader&apos;</span>, <span class="hljs-string">&apos;less-loader&apos;</span>]
+        },
+        {
+            <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.(jpg|png|gif|svg)$/</span>,
+            <span class="hljs-attr">loader</span>: <span class="hljs-string">&quot;url-loader&quot;</span>
+        }
+        ]
+    },
+
+    <span class="hljs-attr">plugins</span>: [
+        <span class="hljs-keyword">new</span> HtmlWebpackPlugin({
+            <span class="hljs-attr">template</span>: <span class="hljs-string">&apos;./src/index.html&apos;</span>
+        }),
+        <span class="hljs-keyword">new</span> webpack.HotModuleReplacementPlugin()
+    ],
+};
+</code></pre>
+<h3 id="t51.5 src\index.tsx">1.5 src\index.tsx <a href="#t51.5 src\index.tsx"> # </a></h3>
+<p>src\index.tsx</p>
+<pre><code class="lang-js"><span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;hello&apos;</span>);
+</code></pre>
+<h3 id="t61.6 src\index.html">1.6 src\index.html <a href="#t61.6 src\index.html"> # </a></h3>
+<p>src\index.html</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;root&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+</code></pre>
+<h3 id="t71.7 package.json">1.7 package.json <a href="#t71.7 package.json"> # </a></h3>
+<p>package.json</p>
+<pre><code class="lang-json">  &quot;scripts&quot;: {
+    &quot;build&quot;: &quot;webpack&quot;,
+    &quot;dev&quot;: &quot;webpack-dev-server&quot;,
+    &quot;test&quot;: &quot;jest&quot;
+  }
+</code></pre>
+<h2 id="t82. &#x5355;&#x5143;&#x6D4B;&#x8BD5;">2. &#x5355;&#x5143;&#x6D4B;&#x8BD5; <a href="#t82. &#x5355;&#x5143;&#x6D4B;&#x8BD5;"> # </a></h2>
+<h3 id="t92.1 jest.config.js">2.1 jest.config.js <a href="#t92.1 jest.config.js"> # </a></h3>
+<p>jest.config.js</p>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
+    <span class="hljs-attr">verbose</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">clearMocks</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">collectCoverage</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">reporters</span>: [<span class="hljs-string">&quot;default&quot;</span>, <span class="hljs-string">&quot;jest-junit&quot;</span>],
+    <span class="hljs-attr">moduleFileExtensions</span>: [<span class="hljs-string">&apos;js&apos;</span>, <span class="hljs-string">&apos;jsx&apos;</span>, <span class="hljs-string">&apos;ts&apos;</span>, <span class="hljs-string">&apos;tsx&apos;</span>],
+    <span class="hljs-attr">moduleDirectories</span>: [<span class="hljs-string">&apos;node_modules&apos;</span>],
+    <span class="hljs-attr">transform</span>: {
+        <span class="hljs-string">&apos;^.+\\.tsx?$&apos;</span>: <span class="hljs-string">&apos;ts-jest&apos;</span>,
+    },
+    <span class="hljs-attr">moduleNameMapper</span>: {
+        <span class="hljs-string">&quot;\\.(jpg|jpeg|png|gif||svg|ttf|woff|woff2)$&quot;</span>:
+            <span class="hljs-string">&quot;&lt;rootDir&gt;/test/__mocks__/file-mock.js&quot;</span>,
+        <span class="hljs-string">&quot;\\.(css|less|sass|scss)$&quot;</span>:
+            <span class="hljs-string">&quot;&lt;rootDir&gt;/test/__mocks__/object-mock.js&quot;</span>
+    },
+    <span class="hljs-attr">testRegex</span>: <span class="hljs-string">&apos;(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx|tsx)$&apos;</span>,
+    <span class="hljs-attr">moduleFileExtensions</span>: [<span class="hljs-string">&apos;ts&apos;</span>, <span class="hljs-string">&apos;tsx&apos;</span>, <span class="hljs-string">&apos;js&apos;</span>, <span class="hljs-string">&apos;jsx&apos;</span>, <span class="hljs-string">&apos;json&apos;</span>, <span class="hljs-string">&apos;node&apos;</span>],
+    <span class="hljs-attr">setupFilesAfterEnv</span>: [<span class="hljs-string">&apos;&lt;rootDir&gt;/test/setupTests.tsx&apos;</span>]
+}
+</code></pre>
+<h3 id="t102.2 src\utils.tsx">2.2 src\utils.tsx <a href="#t102.2 src\utils.tsx"> # </a></h3>
+<p>src\utils.tsx</p>
+<pre><code class="lang-tsx">export function sum(a: number, b: number): number {
+    return a + b;
+}
+</code></pre>
+<h3 id="t112.3 utils.spec.tsx">2.3 utils.spec.tsx <a href="#t112.3 utils.spec.tsx"> # </a></h3>
+<p>src__tests__\utils.spec.tsx</p>
+<pre><code class="lang-tsx">import { sum } from &apos;../utils&apos;;
+describe(&apos;sum&apos;, () =&gt; {
+    test(&apos;1+1&apos;, () =&gt; {
+        expect(sum(1, 1)).toBe(2);
+    });
+    test(&apos;2+2&apos;, () =&gt; {
+        expect(sum(2, 2)).toBe(4);
+    });
+});
+</code></pre>
+<h3 id="t122.4 mocks\file-mock.js">2.4 mocks\file-mock.js <a href="#t122.4 mocks\file-mock.js"> # </a></h3>
+<p>test__mocks__\file-mock.js</p>
+<pre><code class="lang-tsx">module.exports = &apos;file-stub&apos;;
+</code></pre>
+<h3 id="t132.5 object-mock.js">2.5 object-mock.js <a href="#t132.5 object-mock.js"> # </a></h3>
+<p>test__mocks__\object-mock.js</p>
+<pre><code class="lang-tsx">module.exports = {}
+</code></pre>
+<h2 id="t143. &#x521B;&#x5EFA;&#x6811;&#x578B;&#x83DC;&#x5355;">3. &#x521B;&#x5EFA;&#x6811;&#x578B;&#x83DC;&#x5355; <a href="#t143. &#x521B;&#x5EFA;&#x6811;&#x578B;&#x83DC;&#x5355;"> # </a></h2>
+<p><img src="http://img.zhufengpeixun.cn/treecomponent.png" alt="treecomponent"></p>
+<h3 id="t153.1 src\index.tsx">3.1 src\index.tsx <a href="#t153.1 src\index.tsx"> # </a></h3>
+<p>src\index.tsx</p>
+<pre><code class="lang-tsx">import React from &apos;react&apos;;
+import ReactDOM from &apos;react-dom&apos;;
+import Tree from &apos;./components/tree&apos;;
+import data from &apos;./data&apos;;
+
+ReactDOM.render(<tree data="{data}">, document.getElementById(&apos;root&apos;));
+</tree></code></pre>
+<h3 id="t163.2 src\data.tsx">3.2 src\data.tsx <a href="#t163.2 src\data.tsx"> # </a></h3>
+<p>src\data.tsx</p>
+<pre><code class="lang-tsx">import { TreeData } from &apos;./typings&apos;;
+const data: TreeData = {
+    name: &apos;&#x7236;&#x4EB2;&apos;,
+    key: &apos;1&apos;,
+    type: &apos;folder&apos;,
+    collapsed: false,
+    children: [
+        {
+            name: &apos;&#x513F;&#x5B50;1&apos;,
+            key: &apos;1-1&apos;,
+            type: &apos;folder&apos;,
+            collapsed: false,
+            children: [
+                {
+                    name: &apos;&#x5B59;&#x5B50;1&apos;,
+                    key: &apos;1-1-1&apos;,
+                    type: &apos;folder&apos;,
+                    collapsed: false,
+                    children: [
+                        {
+                            name: &apos;&#x91CD;&#x5B59;1&apos;,
+                            key: &apos;1-1-1-1&apos;,
+                            type: &apos;file&apos;,
+                            collapsed: false,
+                            children: []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            name: &apos;&#x513F;&#x5B50;2&apos;,
+            key: &apos;1-2&apos;,
+            type: &apos;folder&apos;,
+            collapsed: true
+        }
+    ]
+}
+export default data;
+</code></pre>
+<h3 id="t173.3 typings.tsx">3.3 typings.tsx <a href="#t173.3 typings.tsx"> # </a></h3>
+<p>src\typings.tsx</p>
+<pre><code class="lang-tsx">export interface TreeData {
+    name: string;
+    key: string;
+    type: string;
+    collapsed?: boolean;
+    children?: Array<treedata>;
+    parent?: TreeData;
+}
+</treedata></code></pre>
+<h3 id="t183.4 components\tree.tsx">3.4 components\tree.tsx <a href="#t183.4 components\tree.tsx"> # </a></h3>
+<p>src\components\tree.tsx</p>
+<pre><code class="lang-tsx">import React from &apos;react&apos;;
+import &apos;./index.less&apos;;
+import { TreeData } from &apos;../typings&apos;;
+interface Props {
+    data: TreeData
+}
+class Tree extends React.Component<props> {
+    render() {
+        return (
+            <div classname="tree">
+                Tree
+            </div>
+        )
+    }
+}
+export default Tree;
+</props></code></pre>
+<h3 id="t193.5 index.less">3.5 index.less <a href="#t193.5 index.less"> # </a></h3>
+<p>src\components\index.less</p>
+<pre><code class="lang-tsx">.tree{
+    position: fixed;
+    left:0;
+    top:0;
+    bottom:0;
+    width:80%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #EEE;
+}
+</code></pre>
+<h2 id="t204. &#x6E32;&#x67D3;&#x6811;&#x578B;&#x7ED3;&#x6784;">4. &#x6E32;&#x67D3;&#x6811;&#x578B;&#x7ED3;&#x6784; <a href="#t204. &#x6E32;&#x67D3;&#x6811;&#x578B;&#x7ED3;&#x6784;"> # </a></h2>
+<h3 id="t214.1 src\components\tree.tsx">4.1 src\components\tree.tsx <a href="#t214.1 src\components\tree.tsx"> # </a></h3>
+<p>src\components\tree.tsx</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import &apos;./index.less&apos;;
+import { TreeData } from &apos;../typings&apos;;
+<span class="hljs-addition">+import TreeNode from &apos;./tree-node&apos;;</span>
+interface Props {
+    data: TreeData
+}
+<span class="hljs-addition">+interface KeyToNodeMap {</span>
+<span class="hljs-addition">+    [key: string]: TreeData</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+interface State {</span>
+<span class="hljs-addition">+    data: TreeData</span>
+<span class="hljs-addition">+}</span>
+class Tree extends React.Component&lt;Props, State&gt; {
+<span class="hljs-addition">+    data: TreeData;</span>
+<span class="hljs-addition">+    keyToNodeMap: KeyToNodeMap;</span>
+<span class="hljs-addition">+    constructor(props: Props) {</span>
+<span class="hljs-addition">+        super(props);</span>
+<span class="hljs-addition">+        this.data = props.data;</span>
+<span class="hljs-addition">+        this.state={ data: this.props.data };</span>
+<span class="hljs-addition">+        this.buildKeyMap();</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    buildKeyMap = () =&gt; {</span>
+<span class="hljs-addition">+        let data = this.data;</span>
+<span class="hljs-addition">+        this.keyToNodeMap = {};</span>
+<span class="hljs-addition">+        this.keyToNodeMap[data.key] = data;</span>
+<span class="hljs-addition">+        if (data.children &amp;&amp; data.children.length &gt; 0) {</span>
+<span class="hljs-addition">+            this.walk(data.children, data);</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    walk = (children: Array&lt;TreeData&gt;, parent: TreeData): void =&gt; {</span>
+<span class="hljs-addition">+        children.map((item: TreeData) =&gt; {</span>
+<span class="hljs-addition">+            item.parent = parent;</span>
+<span class="hljs-addition">+            this.keyToNodeMap[item.key] = item;</span>
+<span class="hljs-addition">+            if (item.children &amp;&amp; item.children.length &gt; 0) {</span>
+<span class="hljs-addition">+                this.walk(item.children, item);</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+        });</span>
+<span class="hljs-addition">+    }</span>
+    render() {
+        return (
+            &lt;div className=&quot;tree&quot;&gt;
+<span class="hljs-addition">+                &lt;div className=&quot;tree-nodes&quot;&gt;</span>
+<span class="hljs-addition">+                    &lt;TreeNode</span>
+<span class="hljs-addition">+                        data={this.props.data}</span>
+<span class="hljs-addition">+                    /&gt;</span>
+<span class="hljs-addition">+                &lt;/div&gt;</span>
+            &lt;/div&gt;
+        )
+    }
+}
+export default Tree;
+</code></pre>
+<h3 id="t224.2 index.less">4.2 index.less <a href="#t224.2 index.less"> # </a></h3>
+<p>src\components\index.less</p>
+<pre><code class="lang-diff">.tree{
+    position: fixed;
+    left:0;
+    top:0;
+    bottom:0;
+    width:80%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #EEE;
+<span class="hljs-addition">+    .tree-nodes{</span>
+<span class="hljs-addition">+        position: relative;</span>
+<span class="hljs-addition">+        overflow:hidden;</span>
+<span class="hljs-addition">+        .tree-node{</span>
+<span class="hljs-addition">+            .inner{</span>
+<span class="hljs-addition">+                color:#000;</span>
+<span class="hljs-addition">+                font-size:20px;</span>
+<span class="hljs-addition">+                position: relative;</span>
+<span class="hljs-addition">+                cursor:pointer;</span>
+<span class="hljs-addition">+                padding-left:10px;</span>
+<span class="hljs-addition">+                .content{</span>
+<span class="hljs-addition">+                    display: inline-block;</span>
+<span class="hljs-addition">+                    width:100%;</span>
+<span class="hljs-addition">+                    padding:4px 5px;</span>
+<span class="hljs-addition">+                }</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+            .children{</span>
+<span class="hljs-addition">+                padding-left: 20px;</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+        }    </span>
+<span class="hljs-addition">+    }</span>
+}
+</code></pre>
+<h3 id="t234.3 components\tree-node.tsx">4.3 components\tree-node.tsx <a href="#t234.3 components\tree-node.tsx"> # </a></h3>
+<p>src\components\tree-node.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { TreeData } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../typings&apos;</span>;
+interface Props {
+    <span class="hljs-attr">data</span>: TreeData
+}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TreeNode</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span>&lt;<span class="hljs-title">Props</span>&gt; </span>{
+    <span class="hljs-keyword">constructor</span>(props: Props) {
+        <span class="hljs-keyword">super</span>(props);
+    }
+    render() {
+        <span class="hljs-keyword">let</span> { <span class="hljs-attr">data</span>: { name, children } } = <span class="hljs-keyword">this</span>.props;
+        <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;tree-node&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;inner&quot;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;content&quot;</span>&gt;</span>{name}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                {
+                    (children &amp;&amp; children.length &gt; 0) &amp;&amp; (
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;children&quot;</span>&gt;</span>
+                            {
+                                children.map((item: TreeData) =&gt; (
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">TreeNode</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{item.key}</span> <span class="hljs-attr">data</span>=<span class="hljs-string">{item}</span> /&gt;</span>
+                                ))
+                            }
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                    )
+                }
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+        )
+    }
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> TreeNode;
+</code></pre>
+<h2 id="t245. &#x6253;&#x5F00;&#x5173;&#x95ED;&#x529F;&#x80FD;">5. &#x6253;&#x5F00;&#x5173;&#x95ED;&#x529F;&#x80FD; <a href="#t245. &#x6253;&#x5F00;&#x5173;&#x95ED;&#x529F;&#x80FD;"> # </a></h2>
+<ul>
+<li><a href="http://img.zhufengpeixun.cn/icons.zip">icons.zip</a></li>
+</ul>
+<h3 id="t255.1 components\tree.tsx">5.1 components\tree.tsx <a href="#t255.1 components\tree.tsx"> # </a></h3>
+<p>src\components\tree.tsx</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import &apos;./index.less&apos;;
+import { TreeData } from &apos;../typings&apos;;
+import TreeNode from &apos;./tree-node&apos;;
+interface Props {
+    data: TreeData
+}
+interface KeyToNodeMap {
+    [key: string]: TreeData
+}
+interface State {
+    data: TreeData
+}
+class Tree extends React.Component&lt;Props, State&gt; {
+    data: TreeData;
+    keyToNodeMap: KeyToNodeMap;
+    constructor(props: Props) {
+        super(props);
+        this.data = props.data;
+        this.state={ data: this.props.data };
+        this.buildKeyMap();
+    }
+    buildKeyMap = () =&gt; {
+        let data = this.data;
+        this.keyToNodeMap = {};
+        this.keyToNodeMap[data.key] = data;
+        if (data.children &amp;&amp; data.children.length &gt; 0) {
+            this.walk(data.children, data);
+        }
+    }
+    walk = (children: Array&lt;TreeData&gt;, parent: TreeData): void =&gt; {
+        children.map((item: TreeData) =&gt; {
+            item.parent = parent;
+            this.keyToNodeMap[item.key] = item;
+            if (item.children &amp;&amp; item.children.length &gt; 0) {
+                this.walk(item.children, item);
+            }
+        });
+    }
+<span class="hljs-addition">+    onCollapse = (key: string) =&gt; {</span>
+<span class="hljs-addition">+        let data = this.keyToNodeMap[key];</span>
+<span class="hljs-addition">+        if (data) {</span>
+<span class="hljs-addition">+            data.collapsed = !data.collapsed;</span>
+<span class="hljs-addition">+            data.children = data.children || [];</span>
+<span class="hljs-addition">+            this.setState({ data: this.state.data });</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+    }</span>
+    render() {
+        return (
+            &lt;div className=&quot;tree&quot;&gt;
+                &lt;div className=&quot;tree-nodes&quot;&gt;
+                    &lt;TreeNode
+                        data={this.props.data}
+<span class="hljs-addition">+                        onCollapse={this.onCollapse}</span>
+                    /&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        )
+    }
+}
+export default Tree;
+</code></pre>
+<h3 id="t265.2 tree-node.tsx">5.2 tree-node.tsx <a href="#t265.2 tree-node.tsx"> # </a></h3>
+<p>src\components\tree-node.tsx</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import { TreeData } from &apos;../typings&apos;;
+<span class="hljs-addition">+import file from &apos;../assets/file.png&apos;;</span>
+<span class="hljs-addition">+import closedFolder from &apos;../assets/closed-folder.png&apos;;</span>
+<span class="hljs-addition">+import openedFolder from &apos;../assets/opened-folder.png&apos;;</span>
+interface Props {
+    data: TreeData,
+<span class="hljs-addition">+    onCollapse: any</span>
+}
+class TreeNode extends React.Component&lt;Props&gt; {
+    constructor(props: Props) {
+        super(props);
+    }
+    render() {
+<span class="hljs-addition">+        let { data: { name, children, collapsed = false, key } } = this.props;</span>
+<span class="hljs-addition">+        let caret, icon;</span>
+<span class="hljs-addition">+        if (children) {</span>
+<span class="hljs-addition">+            if (children.length &gt; 0) {</span>
+<span class="hljs-addition">+                caret = (</span>
+<span class="hljs-addition">+                    &lt;span className={`collapse ${collapsed ? &apos;caret-right&apos; : &apos;caret-down&apos;}`}</span>
+<span class="hljs-addition">+                        onClick={() =&gt; this.props.onCollapse(key)}</span>
+<span class="hljs-addition">+                    /&gt;</span>
+<span class="hljs-addition">+                )</span>
+<span class="hljs-addition">+                icon = collapsed ? closedFolder : openedFolder;</span>
+<span class="hljs-addition">+            } else {</span>
+<span class="hljs-addition">+                caret = null;</span>
+<span class="hljs-addition">+                icon = file;</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+        } else {</span>
+<span class="hljs-addition">+            caret = (</span>
+<span class="hljs-addition">+                &lt;span className={`collapse caret-right`}</span>
+<span class="hljs-addition">+                    onClick={() =&gt; this.props.onCollapse(key)}</span>
+<span class="hljs-addition">+                /&gt;</span>
+<span class="hljs-addition">+            )</span>
+<span class="hljs-addition">+            icon = closedFolder;</span>
+<span class="hljs-addition">+        }</span>
+        return (
+            &lt;div className=&quot;tree-node&quot;&gt;
+                &lt;div className=&quot;inner&quot;&gt;
+<span class="hljs-addition">+                    {caret}</span>
+<span class="hljs-addition">+                    &lt;span className=&quot;content&quot;&gt;</span>
+<span class="hljs-addition">+                        &lt;img style={{ width: 20 }} src={icon} /&gt;</span>
+<span class="hljs-addition">+                        {name}</span>
+<span class="hljs-addition">+                    &lt;/span&gt;</span>
+                &lt;/div&gt;
+                {
+<span class="hljs-addition">+                    (children &amp;&amp; children.length &gt; 0 &amp;&amp; !collapsed) &amp;&amp; (</span>
+                        &lt;div className=&quot;children&quot;&gt;
+                            {
+                                children.map((item: TreeData) =&gt; (
+                                    &lt;TreeNode
+<span class="hljs-addition">+                                        onCollapse={this.props.onCollapse}</span>
+                                        key={item.key}
+                                        data={item} /&gt;
+                                ))
+                            }
+                        &lt;/div&gt;
+                    )
+                }
+            &lt;/div&gt;
+        )
+    }
+}
+export default TreeNode;
+</code></pre>
+<h3 id="t275.3 components\index.less">5.3 components\index.less <a href="#t275.3 components\index.less"> # </a></h3>
+<p>src\components\index.less</p>
+<pre><code class="lang-diff">.tree{
+    position: fixed;
+    left:0;
+    top:0;
+    bottom:0;
+    width:80%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #EEE;
+    .tree-nodes{
+        position: relative;
+        overflow:hidden;
+        .tree-node{
+            .inner{
+                color:#000;
+                font-size:20px;
+                position: relative;
+                cursor:pointer;
+                padding-left:10px;
+<span class="hljs-addition">+                .collapse {</span>
+<span class="hljs-addition">+                    position: absolute;</span>
+<span class="hljs-addition">+                    left: 0;</span>
+<span class="hljs-addition">+                    cursor: pointer;</span>
+<span class="hljs-addition">+                }</span>
+<span class="hljs-addition">+                .caret-right:before {</span>
+<span class="hljs-addition">+                    content: &apos;\25B8&apos;;</span>
+<span class="hljs-addition">+                }</span>
+<span class="hljs-addition">+                .caret-down:before {</span>
+<span class="hljs-addition">+                    content: &apos;\25BE&apos;;</span>
+<span class="hljs-addition">+                }</span>
+                .content{
+                    display: inline-block;
+                    width:100%;
+                    padding:4px 5px;
+                }
+            }
+            .children{
+                padding-left: 20px;
+            }
+        }
+
+    }
+}
+</code></pre>
+<h3 id="t285.4 images.d.ts">5.4 images.d.ts <a href="#t285.4 images.d.ts"> # </a></h3>
+<p>typings\images.d.ts</p>
+<pre><code class="lang-ts"><span class="hljs-keyword">declare</span> <span class="hljs-keyword">module</span> &apos;*.svg&apos;;
+declare <span class="hljs-keyword">module</span> &apos;*.png&apos;;
+declare <span class="hljs-keyword">module</span> &apos;*.jpg&apos;;
+declare <span class="hljs-keyword">module</span> &apos;*.jpeg&apos;;
+declare <span class="hljs-keyword">module</span> &apos;*.gif&apos;;
+declare <span class="hljs-keyword">module</span> &apos;*.bmp&apos;;
+declare <span class="hljs-keyword">module</span> &apos;*.tiff&apos;;
+</code></pre>
+<h2 id="t296. &#x5168;&#x9009;&#x548C;&#x5168;&#x6D88;&#x529F;&#x80FD;">6. &#x5168;&#x9009;&#x548C;&#x5168;&#x6D88;&#x529F;&#x80FD; <a href="#t296. &#x5168;&#x9009;&#x548C;&#x5168;&#x6D88;&#x529F;&#x80FD;"> # </a></h2>
+<h3 id="t306.1 src\typings.tsx">6.1 src\typings.tsx <a href="#t306.1 src\typings.tsx"> # </a></h3>
+<p>src\typings.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> interface TreeData {
+    <span class="hljs-attr">name</span>: string;
+    key: string;
+    type: string;
+    collapsed: boolean;
+    children?: <span class="hljs-built_in">Array</span>&lt;TreeData&gt;;
+    parent?: TreeData;
+    checked?: boolean;
+}
+</code></pre>
+<h3 id="t316.2 components\tree.tsx">6.2 components\tree.tsx <a href="#t316.2 components\tree.tsx"> # </a></h3>
+<p>src\components\tree.tsx</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import &apos;./index.less&apos;;
+import { TreeData } from &apos;../typings&apos;;
+import TreeNode from &apos;./tree-node&apos;;
+interface Props {
+    data: TreeData
+}
+interface KeyToNodeMap {
+    [key: string]: TreeData
+}
+interface State {
+    data: TreeData
+}
+class Tree extends React.Component&lt;Props, State&gt; {
+    data: TreeData;
+    keyToNodeMap: KeyToNodeMap;
+    constructor(props: Props) {
+        super(props);
+        this.data = props.data;
+        this.state={ data: this.props.data };
+        this.buildKeyMap();
+    }
+    buildKeyMap = () =&gt; {
+        let data = this.data;
+        this.keyToNodeMap = {};
+        this.keyToNodeMap[data.key] = data;
+        if (data.children &amp;&amp; data.children.length &gt; 0) {
+            this.walk(data.children, data);
+        }
+    }
+    walk = (children: Array&lt;TreeData&gt;, parent: TreeData): void =&gt; {
+        children.map((item: TreeData) =&gt; {
+            item.parent = parent;
+            this.keyToNodeMap[item.key] = item;
+            if (item.children &amp;&amp; item.children.length &gt; 0) {
+                this.walk(item.children, item);
+            }
+        });
+    }
+    onCollapse = (key: string) =&gt; {
+        let data = this.keyToNodeMap[key];
+        if (data) {
+            data.collapsed = !data.collapsed;
+            data.children = data.children || [];
+            this.setState({ data: this.state.data });
+        }
+    }
+<span class="hljs-addition">+    onCheck = (key: string) =&gt; {</span>
+<span class="hljs-addition">+        let data: TreeData = this.keyToNodeMap[key];</span>
+<span class="hljs-addition">+        if (data) {</span>
+<span class="hljs-addition">+            data.checked = !data.checked;</span>
+<span class="hljs-addition">+            if (data.checked) {</span>
+<span class="hljs-addition">+                this.checkChildren(data.children, true);</span>
+<span class="hljs-addition">+                this.checkParentCheckAll(data.parent);</span>
+<span class="hljs-addition">+            } else {</span>
+<span class="hljs-addition">+                this.checkChildren(data.children, false);</span>
+<span class="hljs-addition">+                this.checkParent(data.parent, false);</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+            this.setState({ data: this.state.data });</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    checkParentCheckAll = (parent: TreeData) =&gt; {</span>
+<span class="hljs-addition">+        while (parent) {</span>
+<span class="hljs-addition">+            parent.checked = parent.children.every(item =&gt; item.checked);</span>
+<span class="hljs-addition">+            parent = parent.parent;</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    checkParent = (parent: TreeData, checked: boolean) =&gt; {</span>
+<span class="hljs-addition">+        while (parent) {</span>
+<span class="hljs-addition">+            parent.checked = checked;</span>
+<span class="hljs-addition">+            parent = parent.parent;</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    checkChildren = (children: Array&lt;TreeData&gt; = [], checked: boolean) =&gt; {</span>
+<span class="hljs-addition">+        children.forEach((item: TreeData) =&gt; {</span>
+<span class="hljs-addition">+            item.checked = checked;</span>
+<span class="hljs-addition">+            this.checkChildren(item.children, checked);</span>
+<span class="hljs-addition">+        });</span>
+<span class="hljs-addition">+    }</span>
+    render() {
+        return (
+            &lt;div className=&quot;tree&quot;&gt;
+                &lt;div className=&quot;tree-nodes&quot;&gt;
+                    &lt;TreeNode
+                        data={this.props.data}
+                        onCollapse={this.onCollapse}
+<span class="hljs-addition">+                        onCheck={this.onCheck}</span>
+                    /&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        )
+    }
+}
+export default Tree;
+</code></pre>
+<h3 id="t326.3 tree-node.tsx">6.3 tree-node.tsx <a href="#t326.3 tree-node.tsx"> # </a></h3>
+<p>src\components\tree-node.tsx</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import { TreeData } from &apos;../typings&apos;;
+import file from &apos;../assets/file.png&apos;;
+import closedFolder from &apos;../assets/closed-folder.png&apos;;
+import openedFolder from &apos;../assets/opened-folder.png&apos;;
+interface Props {
+    data: TreeData,
+    onCollapse: any,
+<span class="hljs-addition">+    onCheck: any</span>
+}
+class TreeNode extends React.Component&lt;Props&gt; {
+    constructor(props: Props) {
+        super(props);
+    }
+    render() {
+<span class="hljs-addition">+        let { data: { name, children, collapsed = false, key, checked = false } } = this.props;</span>
+        let caret, icon;
+        if (children) {
+            if (children.length &gt; 0) {
+                caret = (
+                    &lt;span className={`collapse ${collapsed ? &apos;caret-right&apos; : &apos;caret-down&apos;}`}
+                        onClick={() =&gt; this.props.onCollapse(key)}
+                    /&gt;
+                )
+                icon = collapsed ? closedFolder : openedFolder;
+            } else {
+                caret = null;
+                icon = file;
+            }
+        } else {
+            caret = (
+                &lt;span className={`collapse caret-right`}
+                    onClick={() =&gt; this.props.onCollapse(key)}
+                /&gt;
+            )
+            icon = closedFolder;
+        }
+        return (
+            &lt;div className=&quot;tree-node&quot;&gt;
+                &lt;div className=&quot;inner&quot;&gt;
+                    {caret}
+                    &lt;span className=&quot;content&quot;&gt;
+<span class="hljs-addition">+                        &lt;input type=&quot;checkbox&quot; checked={checked} onChange={() =&gt; this.props.onCheck(key)} /&gt;</span>
+                        &lt;img style={{ width: 20 }} src={icon} /&gt;
+                        {name}
+                    &lt;/span&gt;
+                &lt;/div&gt;
+                {
+                    (children &amp;&amp; children.length &gt; 0 &amp;&amp; !collapsed) &amp;&amp; (
+                        &lt;div className=&quot;children&quot;&gt;
+                            {
+                                children.map((item: TreeData) =&gt; (
+                                    &lt;TreeNode
+                                        onCollapse={this.props.onCollapse}
+<span class="hljs-addition">+                                       onCheck={this.props.onCheck}</span>
+                                        key={item.key}
+                                        data={item} /&gt;
+                                ))
+                            }
+                        &lt;/div&gt;
+                    )
+                }
+            &lt;/div&gt;
+        )
+    }
+}
+export default TreeNode;
+</code></pre>
+<h2 id="t337. &#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x6570;&#x636E;">7. &#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x6570;&#x636E; <a href="#t337. &#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x6570;&#x636E;"> # </a></h2>
+<h3 id="t347.1 typings.tsx">7.1 typings.tsx <a href="#t347.1 typings.tsx"> # </a></h3>
+<p>src\typings.tsx</p>
+<pre><code class="lang-diff">export interface TreeData {
+    name: string;
+    key: string;
+    type: string;
+    collapsed: boolean;
+    children?: Array&lt;TreeData&gt;;
+    parent?: TreeData;
+    checked?: boolean;
+<span class="hljs-addition">+   loading?: boolean;</span>
+}
+</code></pre>
+<h3 id="t357.2 tree.tsx">7.2 tree.tsx <a href="#t357.2 tree.tsx"> # </a></h3>
+<p>src\components\tree.tsx</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import &apos;./index.less&apos;;
+import { TreeData } from &apos;../typings&apos;;
+import TreeNode from &apos;./tree-node&apos;;
+<span class="hljs-addition">+import { getChildren } from &apos;../api&apos;;</span>
+interface Props {
+    data: TreeData
+}
+interface KeyToNodeMap {
+    [key: string]: TreeData
+}
+interface State {
+    data: TreeData
+}
+class Tree extends React.Component&lt;Props, State&gt; {
+    data: TreeData;
+    keyToNodeMap: KeyToNodeMap;
+    constructor(props: Props) {
+        super(props);
+        this.data = props.data;
+        this.state={ data: this.props.data };
+        this.buildKeyMap();
+    }
+    buildKeyMap = () =&gt; {
+        let data = this.data;
+        this.keyToNodeMap = {};
+        this.keyToNodeMap[data.key] = data;
+        if (data.children &amp;&amp; data.children.length &gt; 0) {
+            this.walk(data.children, data);
+        }
+    }
+    walk = (children: Array&lt;TreeData&gt;, parent: TreeData): void =&gt; {
+        children.map((item: TreeData) =&gt; {
+            item.parent = parent;
+            this.keyToNodeMap[item.key] = item;
+            if (item.children &amp;&amp; item.children.length &gt; 0) {
+                this.walk(item.children, item);
+            }
+        });
+    }
+<span class="hljs-addition">+    onCollapse = async (key: string) =&gt; {</span>
+        let data = this.keyToNodeMap[key];
+        if (data) {
+<span class="hljs-addition">+            let { children } = data;</span>
+<span class="hljs-addition">+            if (!children) {</span>
+<span class="hljs-addition">+                data.loading = true;</span>
+<span class="hljs-addition">+                this.setState({ data: this.state.data });</span>
+<span class="hljs-addition">+                let result = await getChildren(data);</span>
+<span class="hljs-addition">+                if (result.code == 0) {</span>
+<span class="hljs-addition">+                    data.children = result.data;</span>
+<span class="hljs-addition">+                    data.collapsed = false;</span>
+<span class="hljs-addition">+                    data.loading = false;</span>
+<span class="hljs-addition">+                    this.buildKeyMap();</span>
+<span class="hljs-addition">+                    this.setState({ data: this.state.data });</span>
+<span class="hljs-addition">+                } else {</span>
+<span class="hljs-addition">+                    alert(&apos;&#x52A0;&#x8F7D;&#x5931;&#x8D25;&apos;);</span>
+<span class="hljs-addition">+                }</span>
+<span class="hljs-addition">+            } else {</span>
+<span class="hljs-addition">+                data.collapsed = !data.collapsed;</span>
+<span class="hljs-addition">+                this.setState({ data: this.state.data });</span>
+<span class="hljs-addition">+            }</span>
+        }
+    }
+    onCheck = (key: string) =&gt; {
+        let data: TreeData = this.keyToNodeMap[key];
+        if (data) {
+            data.checked = !data.checked;
+            if (data.checked) {
+                this.checkChildren(data.children, true);
+                this.checkParentCheckAll(data.parent);
+            } else {
+                this.checkChildren(data.children, false);
+                this.checkParent(data.parent, false);
+            }
+            this.setState({ data: this.state.data });
+        }
+    }
+    checkParentCheckAll = (parent: TreeData) =&gt; {
+        while (parent) {
+            parent.checked = parent.children.every(item =&gt; item.checked);
+            parent = parent.parent;
+        }
+    }
+    checkParent = (parent: TreeData, checked: boolean) =&gt; {
+        while (parent) {
+            parent.checked = checked;
+            parent = parent.parent;
+        }
+    }
+    checkChildren = (children: Array&lt;TreeData&gt; = [], checked: boolean) =&gt; {
+        children.forEach((item: TreeData) =&gt; {
+            item.checked = checked;
+            this.checkChildren(item.children, checked);
+        });
+    }
+    render() {
+        return (
+            &lt;div className=&quot;tree&quot;&gt;
+                &lt;div className=&quot;tree-nodes&quot;&gt;
+                    &lt;TreeNode
+                        data={this.props.data}
+                        onCollapse={this.onCollapse}
+                        onCheck={this.onCheck}
+                    /&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        )
+    }
+}
+export default Tree;
+</code></pre>
+<h3 id="t367.3 tree-node.tsx">7.3 tree-node.tsx <a href="#t367.3 tree-node.tsx"> # </a></h3>
+<p>src\components\tree-node.tsx</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import { TreeData } from &apos;../typings&apos;;
+import file from &apos;../assets/file.png&apos;;
+import closedFolder from &apos;../assets/closed-folder.png&apos;;
+import openedFolder from &apos;../assets/opened-folder.png&apos;;
+<span class="hljs-addition">+import loadingSrc from &apos;../assets/loading.gif&apos;;</span>
+interface Props {
+    data: TreeData,
+    onCollapse: any,
+    onCheck: any
+}
+class TreeNode extends React.Component&lt;Props&gt; {
+    constructor(props: Props) {
+        super(props);
+    }
+    render() {
+<span class="hljs-addition">+        let { data: { name, children, collapsed = false, key, checked = false,loading } } = this.props;</span>
+        let caret, icon;
+        if (children) {
+            if (children.length &gt; 0) {
+                caret = (
+                    &lt;span className={`collapse ${collapsed ? &apos;caret-right&apos; : &apos;caret-down&apos;}`}
+                        onClick={() =&gt; this.props.onCollapse(key)}
+                    /&gt;
+                )
+                icon = collapsed ? closedFolder : openedFolder;
+            } else {
+                caret = null;
+                icon = file;
+            }
+        } else {
+<span class="hljs-addition">+            caret = (</span>
+                loading?&lt;img className=&quot;collapse&quot; src={loadingSrc} style={{ width: 14, top: &apos;50%&apos;, marginTop: -7 }}/&gt;:&lt;span className={`collapse caret-right`}
+                    onClick={() =&gt; this.props.onCollapse(key)}
+                /&gt;
+            )
+            icon = closedFolder;
+        }
+        return (
+            &lt;div className=&quot;tree-node&quot;&gt;
+                &lt;div className=&quot;inner&quot;&gt;
+                    {caret}
+                    &lt;span className=&quot;content&quot;&gt;
+                        &lt;input type=&quot;checkbox&quot; checked={checked} onChange={() =&gt; this.props.onCheck(key)} /&gt;
+                        &lt;img style={{ width: 20 }} src={icon} /&gt;
+                        {name}
+                    &lt;/span&gt;
+                &lt;/div&gt;
+                {
+                    (children &amp;&amp; children.length &gt; 0 &amp;&amp; !collapsed) &amp;&amp; (
+                        &lt;div className=&quot;children&quot;&gt;
+                            {
+                                children.map((item: TreeData) =&gt; (
+                                    &lt;TreeNode
+                                        onCollapse={this.props.onCollapse}
+                                        onCheck={this.props.onCheck}
+                                        key={item.key}
+                                        data={item} /&gt;
+                                ))
+                            }
+                        &lt;/div&gt;
+                    )
+                }
+            &lt;/div&gt;
+        )
+    }
+}
+export default TreeNode;
+</code></pre>
+<h3 id="t377.4 src\api.tsx">7.4 src\api.tsx <a href="#t377.4 src\api.tsx"> # </a></h3>
+<p>src\api.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> axios <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;axios&apos;</span>;
+<span class="hljs-keyword">import</span> qs <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;qs&apos;</span>;
+axios.defaults.baseURL = <span class="hljs-string">&apos;http://localhost:3000&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> getChildren = <span class="hljs-function">(<span class="hljs-params">data: any</span>) =&gt;</span> {
+    <span class="hljs-keyword">return</span> axios.get(<span class="hljs-string">`/getChildren?<span class="hljs-subst">${qs.stringify({ key: data.key, name: data.name }</span>)}`</span>).then(<span class="hljs-function"><span class="hljs-params">res</span> =&gt;</span> res.data).catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{
+        <span class="hljs-built_in">console</span>.log(error);
+    });
+}
+</code></pre>
+<h3 id="t387.5 api.js">7.5 api.js <a href="#t387.5 api.js"> # </a></h3>
+<p>api.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express&apos;</span>);
+<span class="hljs-keyword">let</span> app = express();
+app.use(<span class="hljs-function">(<span class="hljs-params">req, res, next</span>) =&gt;</span> {
+    res.setHeader(<span class="hljs-string">&apos;Access-Control-Allow-Origin&apos;</span>, <span class="hljs-string">&apos;*&apos;</span>);
+    <span class="hljs-keyword">if</span> (req.method === <span class="hljs-string">&apos;OPTIONS&apos;</span>) {
+        <span class="hljs-keyword">return</span> res.sendStatus(<span class="hljs-number">200</span>);
+    }
+    next();
+});
+app.get(<span class="hljs-string">&apos;/getChildren&apos;</span>, (req, res) =&gt; {
+    <span class="hljs-keyword">let</span> data = req.query;
+    setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        res.json({
+            <span class="hljs-attr">code</span>: <span class="hljs-number">0</span>,
+            <span class="hljs-attr">data</span>: [
+                {
+                    <span class="hljs-attr">name</span>: data.name + <span class="hljs-string">&apos;&#x7684;&#x513F;&#x5B50;1&apos;</span>,
+                    <span class="hljs-attr">key</span>: <span class="hljs-string">`<span class="hljs-subst">${data.key}</span>-1`</span>,
+                    <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;folder&apos;</span>,
+                    <span class="hljs-attr">collapsed</span>: <span class="hljs-literal">true</span>
+                },
+                {
+                    <span class="hljs-attr">name</span>: data.name + <span class="hljs-string">&apos;&#x7684;&#x513F;&#x5B50;2&apos;</span>,
+                    <span class="hljs-attr">key</span>: <span class="hljs-string">`<span class="hljs-subst">${data.key}</span>-2`</span>,
+                    <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;folder&apos;</span>,
+                    <span class="hljs-attr">collapsed</span>: <span class="hljs-literal">true</span>
+                }
+            ]
+        });
+    }, <span class="hljs-number">2000</span>)
+
+});
+app.listen(<span class="hljs-number">3000</span>, () =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`&#x63A5;&#x53E3;&#x670D;&#x52A1;&#x5668;&#x5728;<span class="hljs-subst">${<span class="hljs-number">3000</span>}</span>&#x4E0A;&#x542F;&#x52A8;`</span>);
+});
+</code></pre>
+<h2 id="t398. &#x62D6;&#x52A8;&#x6392;&#x5E8F;">8. &#x62D6;&#x52A8;&#x6392;&#x5E8F; <a href="#t398. &#x62D6;&#x52A8;&#x6392;&#x5E8F;"> # </a></h2>
+<h3 id="t408.1 components\tree.tsx">8.1 components\tree.tsx <a href="#t408.1 components\tree.tsx"> # </a></h3>
+<p>src\components\tree.tsx</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import &apos;./index.less&apos;;
+import { TreeData } from &apos;../typings&apos;;
+import TreeNode from &apos;./tree-node&apos;;
+import { getChildren } from &apos;../api&apos;;
+interface Props {
+    data: TreeData;
+}
+interface KeyToNodeMap {
+    [key: string]: TreeData
+}
+interface State {
+    data: TreeData;
+<span class="hljs-addition">+    fromNode?: TreeData;</span>
+}
+class Tree extends React.Component&lt;Props, State&gt; {
+    data: TreeData;
+    keyToNodeMap: KeyToNodeMap;
+    constructor(props: Props) {
+        super(props);
+        this.state = { data: this.props.data };
+        this.data = props.data;
+        this.buildKeyMap();
+    }
+    buildKeyMap = () =&gt; {
+        let data = this.data;
+        this.keyToNodeMap = {};
+        this.keyToNodeMap[data.key] = data;
+        if (data.children &amp;&amp; data.children.length &gt; 0) {
+            this.walk(data.children, data);
+        }
+        this.setState({ data: this.state.data });
+    }
+    walk = (children: Array&lt;TreeData&gt;, parent: TreeData): void =&gt; {
+        children.map((item: TreeData) =&gt; {
+            item.parent = parent;
+            this.keyToNodeMap[item.key] = item;
+            if (item.children &amp;&amp; item.children.length &gt; 0) {
+                this.walk(item.children, item);
+            }
+        });
+    }
+    onCollapse = async (key: string) =&gt; {
+        let data = this.keyToNodeMap[key];
+        if (data) {
+            let { children } = data;
+            if (!children) {
+                data.loading = true;
+                this.setState({ data: this.state.data });
+                let result = await getChildren(data);
+                if (result.code == 0) {
+                    data.children = result.data;
+                    data.collapsed = false;
+                    data.loading = false;
+                    this.buildKeyMap();
+                } else {
+                    alert(&apos;&#x52A0;&#x8F7D;&#x5931;&#x8D25;&apos;);
+                }
+            } else {
+                data.collapsed = !data.collapsed;
+                this.setState({ data: this.state.data });
+            }
+        }
+    }
+    onCheck = (key: string) =&gt; {
+        let data: TreeData = this.keyToNodeMap[key];
+        if (data) {
+            data.checked = !data.checked;
+            if (data.checked) {
+                this.checkChildren(data.children, true);
+                this.checkParentCheckAll(data.parent);
+            } else {
+                this.checkChildren(data.children, false);
+                this.checkParent(data.parent, false);
+            }
+            this.setState({ data: this.state.data });
+        }
+    }
+    checkParentCheckAll = (parent: TreeData) =&gt; {
+        while (parent) {
+            parent.checked = parent.children.every(item =&gt; item.checked);
+            parent = parent.parent;
+        }
+    }
+    checkParent = (parent: TreeData, checked: boolean) =&gt; {
+        while (parent) {
+            parent.checked = checked;
+            parent = parent.parent;
+        }
+    }
+    checkChildren = (children: Array&lt;TreeData&gt; = [], checked: boolean) =&gt; {
+        children.forEach((item: TreeData) =&gt; {
+            item.checked = checked;
+            this.checkChildren(item.children, checked);
+        });
+    }
+<span class="hljs-addition">+    setFromNode = (fromNode: TreeData) =&gt; {</span>
+<span class="hljs-addition">+        this.setState({ ...this.state, fromNode });</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    onMove = (toNode: TreeData) =&gt; {</span>
+<span class="hljs-addition">+        let fromNode = this.state.fromNode;</span>
+<span class="hljs-addition">+        let fromChildren = fromNode.parent.children, toChildren = toNode.parent.children;</span>
+<span class="hljs-addition">+        let fromIndex = fromChildren.findIndex((item: TreeData) =&gt; item === fromNode);</span>
+<span class="hljs-addition">+        let toIndex = toChildren.findIndex(item =&gt; item === toNode);</span>
+<span class="hljs-addition">+        fromChildren.splice(fromIndex, 1, toNode);</span>
+<span class="hljs-addition">+        toChildren.splice(toIndex, 1, fromNode);</span>
+<span class="hljs-addition">+        this.buildKeyMap();</span>
+<span class="hljs-addition">+    }</span>
+    render() {
+        return (
+            &lt;div className=&quot;tree&quot;&gt;
+                &lt;div className=&quot;tree-nodes&quot;&gt;
+                    &lt;TreeNode
+                        data={this.props.data}
+                        onCollapse={this.onCollapse}
+                        onCheck={this.onCheck}
+<span class="hljs-addition">+                        setFromNode={this.setFromNode}</span>
+<span class="hljs-addition">+                        onMove={this.onMove}</span>
+                    /&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        )
+    }
+}
+export default Tree;
+</code></pre>
+<h3 id="t418.2 tree-node.tsx">8.2 tree-node.tsx <a href="#t418.2 tree-node.tsx"> # </a></h3>
+<p>src\components\tree-node.tsx</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import { TreeData } from &apos;../typings&apos;;
+import file from &apos;../assets/file.png&apos;;
+import closedFolder from &apos;../assets/closed-folder.png&apos;;
+import openedFolder from &apos;../assets/opened-folder.png&apos;;
+import loadingSrc from &apos;../assets/loading.gif&apos;;
+interface Props {
+    data: TreeData,
+    onCollapse: any,
+    onCheck: any;
+<span class="hljs-addition">+   setFromNode: any;</span>
+<span class="hljs-addition">+   onMove: any</span>
+}
+class TreeNode extends React.Component&lt;Props&gt; {
+    treeNodeRef: React.RefObject&lt;HTMLDivElement&gt;;
+    constructor(props: Props) {
+        super(props);
+<span class="hljs-addition">+        this.treeNodeRef = React.createRef();</span>
+    }
+<span class="hljs-addition">+    componentDidMount() {</span>
+<span class="hljs-addition">+        this.treeNodeRef.current.addEventListener(&apos;dragstart&apos;, (event: DragEvent): void =&gt; {</span>
+<span class="hljs-addition">+            this.props.setFromNode(this.props.data);</span>
+<span class="hljs-addition">+            event.stopPropagation();</span>
+<span class="hljs-addition">+        }, false);//useCapture=false</span>
+<span class="hljs-addition">+        this.treeNodeRef.current.addEventListener(&apos;dragenter&apos;, (event: DragEvent) =&gt; {</span>
+<span class="hljs-addition">+            event.preventDefault();</span>
+<span class="hljs-addition">+            event.stopPropagation();</span>
+<span class="hljs-addition">+        }, false);</span>
+<span class="hljs-addition">+        this.treeNodeRef.current.addEventListener(&apos;dragover&apos;, (event: DragEvent) =&gt; {</span>
+<span class="hljs-addition">+            event.preventDefault();</span>
+<span class="hljs-addition">+            event.stopPropagation();</span>
+<span class="hljs-addition">+        }, false);</span>
+<span class="hljs-addition">+        this.treeNodeRef.current.addEventListener(&apos;drop&apos;, (event: DragEvent) =&gt; {</span>
+<span class="hljs-addition">+            event.preventDefault();</span>
+<span class="hljs-addition">+            this.props.onMove(this.props.data);</span>
+<span class="hljs-addition">+            event.stopPropagation();</span>
+<span class="hljs-addition">+        }, false);</span>
+<span class="hljs-addition">+    }</span>
+    render() {
+        let { data: { name, children, collapsed = false, key, checked = false, loading } } = this.props;
+        let caret, icon;
+        if (children) {
+            if (children.length &gt; 0) {
+                caret = (
+                    &lt;span className={`collapse ${collapsed ? &apos;caret-right&apos; : &apos;caret-down&apos;}`}
+                        onClick={() =&gt; this.props.onCollapse(key)}
+                    /&gt;
+                )
+                icon = collapsed ? closedFolder : openedFolder;
+            } else {
+                caret = null;
+                icon = file;
+            }
+        } else {
+            caret = (
+                loading ? &lt;img className=&quot;collapse&quot; src={loadingSrc} style={{ width: 14, top: &apos;50%&apos;, marginTop: -7 }} /&gt; : &lt;span className={`collapse caret-right`}
+                    onClick={() =&gt; this.props.onCollapse(key)}
+                /&gt;
+            )
+            icon = closedFolder;
+        }
+        return (
+            &lt;div className=&quot;tree-node&quot; draggable={true} ref={this.treeNodeRef}&gt;
+                &lt;div className=&quot;inner&quot;&gt;
+                    {caret}
+                    &lt;span className=&quot;content&quot;&gt;
+                        &lt;input type=&quot;checkbox&quot; checked={checked} onChange={() =&gt; this.props.onCheck(key)} /&gt;
+                        &lt;img style={{ width: 20 }} src={icon} /&gt;
+                        {name}
+                    &lt;/span&gt;
+                &lt;/div&gt;
+                {
+                    (children &amp;&amp; children.length &gt; 0 &amp;&amp; !collapsed) &amp;&amp; (
+                        &lt;div className=&quot;children&quot;&gt;
+                            {
+                                children.map((item: TreeData) =&gt; (
+                                    &lt;TreeNode
+                                        onCollapse={this.props.onCollapse}
+                                        onCheck={this.props.onCheck}
+                                        key={item.key}
+<span class="hljs-addition">+                                        setFromNode={this.props.setFromNode}</span>
+<span class="hljs-addition">+                                        onMove={this.props.onMove}</span>
+                                        data={item} /&gt;
+                                ))
+                            }
+                        &lt;/div&gt;
+                    )
+                }
+            &lt;/div&gt;
+        )
+    }
+}
+export default TreeNode;
+</code></pre>
+
+    </div>
+</div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+    aria-labelledby="loginModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="loginModalLabel">请登录</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="username" class="control-label">姓名:</label>
+                        <input type="text" class="form-control" id="username" placeholder="珠峰架构VIP会员系统用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">密码:</label>
+                        <input type="text" class="form-control" id="password" placeholder="珠峰架构VIP会员系统密码">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                    data-dismiss="modal">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

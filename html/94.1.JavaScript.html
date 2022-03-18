@@ -1,0 +1,1772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+   
+                     
+
+                        
+<div class="warpper">
+    <div class="page-toc">
+        <ul><li><a href="#t01.栈">1.栈</a><ul><li><a href="#t11.1 数据结构中的栈">1.1 数据结构中的栈</a></li><li><a href="#t21.2 代码的运行方式">1.2 代码的运行方式</a></li><li><a href="#t31.3 内存区域">1.3 内存区域</a></li></ul></li><li><a href="#t42. 队列">2. 队列</a></li><li><a href="#t53. 数据类型">3. 数据类型</a></li><li><a href="#t64. 执行上下文">4. 执行上下文</a><ul><li><a href="#t74.1  如何存储">4.1  如何存储</a></li><li><a href="#t84.2  如何复制">4.2  如何复制</a><ul><li><a href="#t94.2.1 基本数据">4.2.1 基本数据</a></li><li><a href="#t104.2.2 引用数据">4.2.2 引用数据</a></li></ul></li></ul></li><li><a href="#t115. 多个执行上下文栈">5. 多个执行上下文栈</a><ul><li><a href="#t125.1 执行上下文分类">5.1 执行上下文分类</a></li><li><a href="#t135.2 多个执行上下文">5.2 多个执行上下文</a></li></ul></li><li><a href="#t146. 执行上下文生命周期">6. 执行上下文生命周期</a><ul><li><a href="#t156.1 生命周期有两个阶段">6.1 生命周期有两个阶段</a></li><li><a href="#t166.2 变量对象">6.2 变量对象</a><ul><li><a href="#t176.2.1 基本类型">6.2.1 基本类型</a></li><li><a href="#t186.2.3 激活对象">6.2.3 激活对象</a></li><li><a href="#t196.2.4 全局上下文的变量对象">6.2.4 全局上下文的变量对象</a></li></ul></li></ul></li><li><a href="#t207. 作用域">7. 作用域</a><ul><li><a href="#t217.1 作用域">7.1 作用域</a></li><li><a href="#t227.2 作用域链">7.2 作用域链</a><ul><li><a href="#t237.2.1 作用域链">7.2.1 作用域链</a></li><li><a href="#t247.2.2 作用域链">7.2.2 作用域链</a></li></ul></li></ul></li><li><a href="#t258. 闭包">8. 闭包</a><ul><li><a href="#t268.1 闭包">8.1 闭包</a></li><li><a href="#t278.2 闭包优化">8.2 闭包优化</a></li><li><a href="#t288.3 arguments">8.3 arguments</a></li></ul></li><li><a href="#t299. var和let">9. var和let</a><ul><li><a href="#t309.1 ES5问题">9.1 ES5问题</a><ul><li><a href="#t319.1.1 全局变量">9.1.1 全局变量</a></li><li><a href="#t329.1.2 内层变量可能会覆盖外层变量">9.1.2 内层变量可能会覆盖外层变量</a></li></ul></li><li><a href="#t339.2 let">9.2 let</a></li><li><a href="#t349.3 var&let&const">9.3 var&let&const</a></li><li><a href="#t359.3.1 暂时性死区">9.3.1 暂时性死区</a></li><li><a href="#t369.3.2 全局变量">9.3.2 全局变量</a></li><li><a href="#t379.3.3 题目">9.3.3 题目</a></li></ul></li><li><a href="#t3810. this">10. this</a><ul><li><a href="#t3910.1 全局对象">10.1 全局对象</a></li><li><a href="#t4010.1 用点调用">10.1 用点调用</a></li><li><a href="#t4110.2 直接调用">10.2 直接调用</a></li><li><a href="#t4210.3 绑定事件">10.3 绑定事件</a></li><li><a href="#t4310.4 箭头函数">10.4 箭头函数</a></li><li><a href="#t4410.5 构造函数">10.5 构造函数</a></li><li><a href="#t4510.6  call/apply/bind">10.6  call/apply/bind</a></li></ul></li><li><a href="#t4611. 面向对象">11. 面向对象</a><ul><li><a href="#t4711.1 原型链">11.1 原型链</a><ul><li><a href="#t4811.1.1 一切皆对象">11.1.1 一切皆对象</a></li><li><a href="#t4911.1.1.1 typeof">11.1.1.1 typeof</a></li><li><a href="#t5011.1.2 函数">11.1.2 函数</a></li><li><a href="#t5111.1.3 隐式原型">11.1.3 隐式原型</a><ul><li><a href="#t5211.1.3.1 proto">11.1.3.1 proto</a></li><li><a href="#t5311.1.3.2 自定义函数的prototype">11.1.3.2 自定义函数的prototype</a></li><li><a href="#t5411.1.3.3 自定义函数">11.1.3.3 自定义函数</a></li></ul></li><li><a href="#t5511.1.4 instanceof">11.1.4 instanceof</a></li></ul></li><li><a href="#t5611.2 批量创建对象">11.2 批量创建对象</a></li><li><a href="#t5711.3  继承">11.3  继承</a><ul><li><a href="#t5811.3.6 原型链面试题">11.3.6 原型链面试题</a></li><li><a href="#t5911.3.7 异步面试题">11.3.7 异步面试题</a></li></ul></li></ul></li><li><a href="#t6012. ES6">12. ES6</a><ul><li><a href="#t6112.1 词法环境">12.1 词法环境</a></li><li><a href="#t6212.2 静态作用域">12.2 静态作用域</a></li><li><a href="#t6312.3 闭包">12.3 闭包</a></li></ul></li></ul>
+    </div>
+    <div class="content markdown-body">
+        <h2 id="t01.&#x6808;">1.&#x6808; <a href="#t01.&#x6808;"> # </a></h2>
+<ul>
+<li><code>&#x6808;</code>&#x8005;,&#x5B58;&#x50A8;&#x8D27;&#x7269;&#x6216;&#x4F9B;&#x65C5;&#x5BA2;&#x4F4F;&#x5BBF;&#x7684;&#x5730;&#x65B9;,&#x53EF;&#x5F15;&#x7533;&#x4E3A;&#x4ED3;&#x5E93;</li>
+</ul>
+<h3 id="t11.1 &#x6570;&#x636E;&#x7ED3;&#x6784;&#x4E2D;&#x7684;&#x6808;">1.1 &#x6570;&#x636E;&#x7ED3;&#x6784;&#x4E2D;&#x7684;&#x6808; <a href="#t11.1 &#x6570;&#x636E;&#x7ED3;&#x6784;&#x4E2D;&#x7684;&#x6808;"> # </a></h3>
+<ul>
+<li>&#x6808;&#x662F;&#x4E00;&#x7EC4;&#x6570;&#x636E;&#x7684;&#x5B58;&#x653E;&#x65B9;&#x5F0F;,&#x7279;&#x70B9;&#x662F;&#x5148;&#x8FDB;&#x540E;&#x51FA;&#xFF0C;&#x540E;&#x8FDB;&#x5148;&#x51FA;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/instack.png" alt="instack"></p>
+<p><img src="http://img.zhufengpeixun.cn/outstack.png" alt="outstack"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x65B9;&#x6CD5;&#x540D;</th>
+<th style="text-align:left">&#x64CD;&#x4F5C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">push()</td>
+<td style="text-align:left">&#x6DFB;&#x52A0;&#x65B0;&#x5143;&#x7D20;&#x5230;&#x6808;&#x9876;</td>
+</tr>
+<tr>
+<td style="text-align:left">pop()</td>
+<td style="text-align:left">&#x79FB;&#x9664;&#x6808;&#x9876;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x540C;&#x65F6;&#x8FD4;&#x56DE;&#x88AB;&#x79FB;&#x9664;&#x7684;&#x5143;&#x7D20;</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Stack</span> </span>{
+    private items: number[] = [];
+    <span class="hljs-comment">// &#x6DFB;&#x52A0;&#x5143;&#x7D20;&#x5230;&#x6808;&#x9876;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x6808;&#x7684;&#x672B;&#x5C3E;</span>
+    push(element: number) {
+        <span class="hljs-keyword">this</span>.items.push(element);
+    }
+    <span class="hljs-comment">// &#x6808;&#x7684;&#x540E;&#x8FDB;&#x5148;&#x51FA;&#x539F;&#x5219;&#xFF0C;&#x4ECE;&#x6808;&#x9876;&#x51FA;&#x6808;</span>
+    pop(): number {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.items.pop();
+    }
+}
+
+<span class="hljs-keyword">let</span> stack = <span class="hljs-keyword">new</span> Stack();
+stack.push(<span class="hljs-number">1</span>);
+stack.push(<span class="hljs-number">2</span>);
+stack.push(<span class="hljs-number">3</span>);
+<span class="hljs-built_in">console</span>.log(stack.pop());
+</code></pre>
+<h3 id="t21.2 &#x4EE3;&#x7801;&#x7684;&#x8FD0;&#x884C;&#x65B9;&#x5F0F;">1.2 &#x4EE3;&#x7801;&#x7684;&#x8FD0;&#x884C;&#x65B9;&#x5F0F; <a href="#t21.2 &#x4EE3;&#x7801;&#x7684;&#x8FD0;&#x884C;&#x65B9;&#x5F0F;"> # </a></h3>
+<ul>
+<li>&#x8868;&#x793A;&#x51FD;&#x6570;&#x7684;&#x4E00;&#x5C42;&#x5C42;&#x8C03;&#x7528;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">one</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">two</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">three</span>(<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">debugger</span>;
+        }
+        three();
+    }
+    two();
+}
+one();
+</code></pre>
+<p><img src="http://img.zhufengpeixun.cn/callbackstack.png" alt="callbackstack"></p>
+<h3 id="t31.3 &#x5185;&#x5B58;&#x533A;&#x57DF;">1.3 &#x5185;&#x5B58;&#x533A;&#x57DF; <a href="#t31.3 &#x5185;&#x5B58;&#x533A;&#x57DF;"> # </a></h3>
+<ul>
+<li>&#x6808;&#x4E5F;&#x662F;&#x662F;&#x5B58;&#x653E;&#x6570;&#x636E;&#x7684;&#x4E00;&#x79CD;&#x5185;&#x5B58;&#x533A;&#x57DF;</li>
+<li>&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9700;&#x8981;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#x5B58;&#x653E;&#x6570;&#x636E;&#x3002;&#x4E00;&#x822C;&#x6765;&#x8BF4;,&#x7CFB;&#x7EDF;&#x4F1A;&#x5212;&#x5206;&#x51FA;&#x4E24;&#x79CD;&#x4E0D;&#x540C;&#x7684;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#xFF1A;&#x4E00;&#x79CD;&#x53EB;&#x505A;stack(&#x6808;)&#xFF0C;&#x53E6;&#x4E00;&#x79CD;&#x53EB;&#x505A;heap(&#x5806;)<ul>
+<li>stack&#x662F;&#x6709;&#x7ED3;&#x6784;&#x7684;&#xFF0C;&#x6BCF;&#x4E2A;&#x533A;&#x5757;&#x6309;&#x7167;&#x4E00;&#x5B9A;&#x6B21;&#x5E8F;&#x5B58;&#x653E;&#xFF0C;&#x53EF;&#x4EE5;&#x660E;&#x786E;&#x77E5;&#x9053;&#x6BCF;&#x4E2A;&#x533A;&#x5757;&#x7684;&#x5927;&#x5C0F;</li>
+<li>heap&#x662F;&#x6CA1;&#x6709;&#x7ED3;&#x6784;&#x7684;&#xFF0C;&#x6570;&#x636E;&#x53EF;&#x4EE5;&#x4EFB;&#x610F;&#x5B58;&#x653E;&#x3002;&#x56E0;&#x6B64;&#xFF0C;stack&#x7684;&#x5BFB;&#x5740;&#x901F;&#x5EA6;&#x8981;&#x5FEB;&#x4E8E;heap</li>
+</ul>
+</li>
+<li>&#x53EA;&#x8981;&#x662F;&#x5C40;&#x90E8;&#x7684;&#x3001;&#x5360;&#x7528;&#x7A7A;&#x95F4;&#x786E;&#x5B9A;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x4E00;&#x822C;&#x90FD;&#x5B58;&#x653E;&#x5728;stack&#x91CC;&#x9762;&#xFF0C;&#x5426;&#x5219;&#x5C31;&#x653E;&#x5728;heap&#x91CC;&#x9762;,&#x6240;&#x6709;&#x7684;&#x5BF9;&#x8C61;&#x90FD;&#x5B58;&#x653E;&#x5728;heap</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">task</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> a = <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">var</span> b = <span class="hljs-number">2</span>;
+    <span class="hljs-keyword">var</span> c = {
+        <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;zhufeng&apos;</span>,
+        <span class="hljs-attr">age</span>: <span class="hljs-number">10</span>
+    }
+}
+task();
+</code></pre>
+<p><img src="http://img.zhufengpeixun.cn/memoryposition.jpg" alt="memoryposition"></p>
+<h2 id="t42. &#x961F;&#x5217;">2. &#x961F;&#x5217; <a href="#t42. &#x961F;&#x5217;"> # </a></h2>
+<ul>
+<li>&#x961F;&#x5217;&#x662F;&#x4E00;&#x79CD;&#x64CD;&#x4F5C;&#x53D7;&#x9650;&#x5236;&#x7684;&#x7EBF;&#x6027;&#x8868;</li>
+<li>&#x7279;&#x6B8A;&#x4E4B;&#x5904;&#x5728;&#x4E8E;&#x5B83;&#x53EA;&#x5141;&#x8BB8;&#x5728;&#x8868;&#x7684;&#x524D;&#x7AEF;&#x8FDB;&#x884C;&#x5220;&#x9664;&#x64CD;&#x4F5C;&#xFF0C;&#x800C;&#x5728;&#x8868;&#x7684;&#x540E;&#x7AEF;&#x8FDB;&#x884C;&#x63D2;&#x5165;&#x64CD;&#x4F5C;</li>
+<li>&#x8FDB;&#x884C;&#x63D2;&#x5165;&#x64CD;&#x4F5C;&#x7684;&#x7AEF;&#x79F0;&#x4E3A;&#x961F;&#x5C3E;&#xFF0C;&#x8FDB;&#x884C;&#x5220;&#x9664;&#x64CD;&#x4F5C;&#x7684;&#x7AEF;&#x79F0;&#x4E3A;&#x961F;&#x5934;</li>
+<li>&#x56E0;&#x4E3A;&#x961F;&#x5217;&#x53EA;&#x5141;&#x8BB8;&#x5728;&#x4E00;&#x7AEF;&#x63D2;&#x5165;,&#x5728;&#x53E6;&#x4E00;&#x7AEF;&#x5220;&#x9664;&#xFF0C;&#x6240;&#x4EE5;&#x53EA;&#x6709;&#x6700;&#x65E9;&#x8FDB;&#x5165;&#x961F;&#x5217;&#x7684;&#x5143;&#x7D20;&#x624D;&#x80FD;&#x6700;&#x5148;&#x4ECE;&#x961F;&#x5217;&#x4E2D;&#x5220;&#x9664;,&#x6545;&#x961F;&#x5217;&#x53C8;&#x79F0;&#x4E3A;&#x5148;&#x8FDB;&#x5148;&#x51FA;&#x7EBF;&#x6027;&#x8868;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/inqueue.png" alt="inqueue.png"></p>
+<p><img src="http://img.zhufengpeixun.cn/outqueue.png" alt="outqueue.png"></p>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Queue</span> </span>{
+    private items: number[] = [];
+    <span class="hljs-comment">// &#x6DFB;&#x52A0;&#x5143;&#x7D20;&#x5230;&#x6808;&#x9876;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x6808;&#x7684;&#x672B;&#x5C3E;</span>
+    enqueue(element: number) {
+        <span class="hljs-keyword">this</span>.items.push(element);
+    }
+    dequeue() {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.items.shift();
+    }
+}
+
+<span class="hljs-keyword">let</span> queue = <span class="hljs-keyword">new</span> Queue();
+queue.enqueue(<span class="hljs-number">1</span>);
+queue.enqueue(<span class="hljs-number">2</span>);
+queue.enqueue(<span class="hljs-number">3</span>);
+<span class="hljs-built_in">console</span>.log(queue.dequeue());<span class="hljs-comment">//1</span>
+</code></pre>
+<h2 id="t53. &#x6570;&#x636E;&#x7C7B;&#x578B;">3. &#x6570;&#x636E;&#x7C7B;&#x578B; <a href="#t53. &#x6570;&#x636E;&#x7C7B;&#x578B;"> # </a></h2>
+<ul>
+<li>JS&#x4E2D;&#x6709;&#x4E03;&#x79CD;&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;<ul>
+<li>&#x516D;&#x79CD;&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B; Boolean Null Undefined Number String Symbol</li>
+<li>&#x4E00;&#x79CD;&#x5F15;&#x7528;&#x7C7B;&#x578B; object {} [] /^$/ new Date() Math</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x503C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">true&#x6216;false</td>
+</tr>
+<tr>
+<td style="text-align:left">Null</td>
+<td style="text-align:left">null</td>
+</tr>
+<tr>
+<td style="text-align:left">Undefined</td>
+<td style="text-align:left">undefined</td>
+</tr>
+<tr>
+<td style="text-align:left">Number</td>
+<td style="text-align:left">&#x6570;&#x5B57;</td>
+</tr>
+<tr>
+<td style="text-align:left">String</td>
+<td style="text-align:left">&#x5B57;&#x7B26;&#x4E32;</td>
+</tr>
+<tr>
+<td style="text-align:left">Symbol</td>
+<td style="text-align:left">&#x7B26;&#x53F7;&#x7C7B;&#x578B;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="t64. &#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;">4. &#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587; <a href="#t64. &#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;"> # </a></h2>
+<h3 id="t74.1  &#x5982;&#x4F55;&#x5B58;&#x50A8;">4.1  &#x5982;&#x4F55;&#x5B58;&#x50A8; <a href="#t74.1  &#x5982;&#x4F55;&#x5B58;&#x50A8;"> # </a></h3>
+<ul>
+<li>&#x5F53;&#x51FD;&#x6570;&#x8FD0;&#x884C;&#x65F6;&#xFF0C;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6267;&#x884C;&#x73AF;&#x5883;&#xFF0C;&#x8FD9;&#x4E2A;&#x6267;&#x884C;&#x73AF;&#x5883;&#x5C31;&#x53EB;&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;(Execution Context)</li>
+<li>&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x53EB;&#x4F5C;&#x53D8;&#x91CF;&#x5BF9;&#x8C61;(Value Object),&#x57FA;&#x7840;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x90FD;&#x4FDD;&#x5B58;&#x5728;&#x53D8;&#x91CF;&#x5BF9;&#x8C61;&#x4E2D;</li>
+<li>&#x5F15;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x503C;&#x4FDD;&#x5B58;&#x5728;&#x5806;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x64CD;&#x4F5C;&#x5BF9;&#x8C61;&#x7684;&#x5F15;&#x7528;&#x5730;&#x5740;&#x6765;&#x64CD;&#x4F5C;&#x5BF9;&#x8C61;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">task</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-keyword">var</span> a = <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">var</span> b = {
+        <span class="hljs-attr">name</span>:<span class="hljs-string">&apos;zhufeng&apos;</span>
+    }
+    <span class="hljs-keyword">var</span> c = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>];
+}
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> ExecuteContext = {
+    <span class="hljs-attr">VO</span>:{
+        <span class="hljs-attr">a</span>:<span class="hljs-number">1</span>,
+        <span class="hljs-attr">b</span>:<span class="hljs-string">&apos;XO1&apos;</span>,
+        <span class="hljs-attr">c</span>:<span class="hljs-string">&apos;XA1&apos;</span>
+    }
+};
+</code></pre>
+<p><img src="http://img.zhufengpeixun.cn/valueobject.png" alt="valueobject"></p>
+<h3 id="t84.2  &#x5982;&#x4F55;&#x590D;&#x5236;">4.2  &#x5982;&#x4F55;&#x590D;&#x5236; <a href="#t84.2  &#x5982;&#x4F55;&#x590D;&#x5236;"> # </a></h3>
+<h4 id="t94.2.1 &#x57FA;&#x672C;&#x6570;&#x636E;">4.2.1 &#x57FA;&#x672C;&#x6570;&#x636E; <a href="#t94.2.1 &#x57FA;&#x672C;&#x6570;&#x636E;"> # </a></h4>
+<ul>
+<li>&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x590D;&#x5236;&#x7684;&#x662F;&#x503C;&#x672C;&#x8EAB;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> a = <span class="hljs-number">1</span>;
+<span class="hljs-keyword">var</span> b = a;
+b = <span class="hljs-number">2</span>;
+<span class="hljs-built_in">console</span>.log(a);
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> ExecuteContext = {
+    <span class="hljs-attr">VO</span>: { <span class="hljs-attr">a</span>: <span class="hljs-number">1</span> }
+};
+
+ExecuteContext.VO.b = ExecuteContext.VO.a;
+ExecuteContext.VO.b = <span class="hljs-number">2</span>;
+<span class="hljs-built_in">console</span>.log(ExecuteContext.VO.a);
+</code></pre>
+<p><img src="http://img.zhufengpeixun.cn/changebasictype.png" alt="changebasictype"></p>
+<h4 id="t104.2.2 &#x5F15;&#x7528;&#x6570;&#x636E;">4.2.2 &#x5F15;&#x7528;&#x6570;&#x636E; <a href="#t104.2.2 &#x5F15;&#x7528;&#x6570;&#x636E;"> # </a></h4>
+<ul>
+<li>&#x5F15;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x590D;&#x5236;&#x7684;&#x662F;&#x5F15;&#x7528;&#x5730;&#x5740;&#x6307;&#x9488;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> m = { <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">b</span>: <span class="hljs-number">2</span> };
+<span class="hljs-keyword">var</span> n = m;
+n.a = <span class="hljs-number">10</span>;
+<span class="hljs-built_in">console</span>.log(m.a);
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> ExecuteContext = {
+    <span class="hljs-attr">VO</span>: { <span class="hljs-attr">m</span>: { <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">b</span>: <span class="hljs-number">2</span> } }
+};
+
+ExecuteContext.VO.b = ExecuteContext.VO.a;
+ExecuteContext.VO.a = <span class="hljs-number">10</span>;
+<span class="hljs-built_in">console</span>.log(ExecuteContext.VO.a);
+</code></pre>
+<p><img src="http://img.zhufengpeixun.cn/copyrefer.png" alt="copyrefer"></p>
+<h2 id="t115. &#x591A;&#x4E2A;&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;&#x6808;">5. &#x591A;&#x4E2A;&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;&#x6808; <a href="#t115. &#x591A;&#x4E2A;&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;&#x6808;"> # </a></h2>
+<h3 id="t125.1 &#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;&#x5206;&#x7C7B;">5.1 &#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;&#x5206;&#x7C7B; <a href="#t125.1 &#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;&#x5206;&#x7C7B;"> # </a></h3>
+<ul>
+<li>JS&#x4EE3;&#x7801;&#x5728;&#x6267;&#x884C;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x8FDB;&#x5165;&#x4E00;&#x4E2A;&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;&#xFF0C;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x5F53;&#x524D;&#x4EE3;&#x7801;&#x7684;&#x8FD0;&#x884C;&#x73AF;&#x5883; </li>
+<li>&#x5728;JS&#x4E2D;&#x8FD0;&#x884C;&#x73AF;&#x5883;&#x4E3B;&#x8981;&#x5206;&#x4E3A;&#x5168;&#x5C40;&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;&#x73AF;&#x5883;&#x548C;&#x51FD;&#x6570;&#x73AF;&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;&#x73AF;&#x5883;<ul>
+<li>&#x5168;&#x5C40;&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#xFF0C;&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x4E2D;&#x4E00;&#x822C;&#x7531;&#x6D4F;&#x89C8;&#x5668;&#x521B;&#x5EFA;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x719F;&#x77E5;&#x7684;window&#x5BF9;&#x8C61;&#xFF0C;&#x6211;&#x4EEC;&#x80FD;&#x901A;&#x8FC7;this&#x76F4;&#x63A5;&#x8BBF;&#x95EE;&#x5230;&#x5B83;</li>
+<li>window&#x5BF9;&#x8C61;&#x8FD8;&#x662F;var&#x58F0;&#x660E;&#x7684;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x7684;&#x8F7D;&#x4F53;&#x3002;&#x6211;&#x4EEC;&#x901A;&#x8FC7;var&#x521B;&#x5EFA;&#x7684;&#x5168;&#x5C40;&#x5BF9;&#x8C61;&#xFF0C;&#x90FD;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;window&#x76F4;&#x63A5;&#x8BBF;&#x95EE;</li>
+</ul>
+</li>
+</ul>
+<h3 id="t135.2 &#x591A;&#x4E2A;&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;">5.2 &#x591A;&#x4E2A;&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587; <a href="#t135.2 &#x591A;&#x4E2A;&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;"> # </a></h3>
+<ul>
+<li>&#x5728;JS&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x4F1A;&#x4EA7;&#x51FA;&#x591A;&#x4E2A;&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;,JS&#x5F15;&#x64CE;&#x4F1A;&#x6709;&#x6808;&#x6765;&#x7BA1;&#x7406;&#x8FD9;&#x4E9B;&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;</li>
+<li>&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;&#x6808;(&#x4E0B;&#x6587;&#x7B80;&#x79F0;&#x6267;&#x884C;&#x6808;)&#x4E5F;&#x53EB;&#x8C03;&#x7528;&#x6808;&#xFF0C;&#x6267;&#x884C;&#x6808;&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x4EE3;&#x7801;&#x6267;&#x884C;&#x671F;&#x95F4;&#x521B;&#x5EFA;&#x7684;&#x6240;&#x6709;&#x4E0A;&#x4E0B;&#x6587;&#xFF0C;&#x5177;&#x6709;LIFO&#xFF08;Last In First Out&#x540E;&#x8FDB;&#x5148;&#x51FA;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5148;&#x8FDB;&#x540E;&#x51FA;&#xFF09;&#x7684;&#x7279;&#x6027;</li>
+<li>&#x6808;&#x5E95;&#x6C38;&#x8FDC;&#x662F;&#x5168;&#x5C40;&#x4E0A;&#x4E0B;&#x6587;&#xFF0C;&#x6808;&#x9876;&#x4E3A;&#x5F53;&#x524D;&#x6B63;&#x5728;&#x6267;&#x884C;&#x7684;&#x4E0A;&#x4E0B;&#x6587;</li>
+<li>&#x5F53;&#x5F00;&#x542F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x6267;&#x884C;&#x65F6;&#x4F1A;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;&#x5E76;&#x653E;&#x5165;&#x8C03;&#x7528;&#x6808;&#xFF0C;&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#x540E;&#x4F1A;&#x81EA;&#x52A8;&#x51FA;&#x6808;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">one</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> a = <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">debugger</span>;
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">two</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">var</span> b = <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">debugger</span>;
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">three</span>(<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">var</span> c = <span class="hljs-number">1</span>;
+            <span class="hljs-keyword">debugger</span>;
+        }
+        three();
+        <span class="hljs-keyword">debugger</span>;
+    }
+    two();
+    <span class="hljs-keyword">debugger</span>;
+}
+one();
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> globalExecuteContext = {
+    <span class="hljs-attr">VO</span>: { <span class="hljs-attr">setTimeout</span>: <span class="hljs-string">&apos;setTimeout&apos;</span> }
+}
+<span class="hljs-keyword">var</span> executeContextStack = [globalExecuteContext];
+<span class="hljs-keyword">var</span> oneExecuteContext = {
+    <span class="hljs-attr">VO</span>: { <span class="hljs-attr">a</span>: <span class="hljs-number">1</span> }
+}
+executeContextStack.push(oneExecuteContext);
+<span class="hljs-keyword">var</span> twoExecuteContext = {
+    <span class="hljs-attr">VO</span>: { <span class="hljs-attr">b</span>: <span class="hljs-number">2</span> }
+}
+executeContextStack.push(twoExecuteContext);
+<span class="hljs-keyword">var</span> threeExecuteContext = {
+    <span class="hljs-attr">VO</span>: { <span class="hljs-attr">c</span>: <span class="hljs-number">3</span> }
+}
+executeContextStack.push(threeExecuteContext);
+<span class="hljs-built_in">console</span>.log(executeContextStack);
+
+executeContextStack.pop();
+executeContextStack.pop();
+executeContextStack.pop();
+</code></pre>
+<h2 id="t146. &#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;&#x751F;&#x547D;&#x5468;&#x671F;">6. &#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;&#x751F;&#x547D;&#x5468;&#x671F; <a href="#t146. &#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;&#x751F;&#x547D;&#x5468;&#x671F;"> # </a></h2>
+<h3 id="t156.1 &#x751F;&#x547D;&#x5468;&#x671F;&#x6709;&#x4E24;&#x4E2A;&#x9636;&#x6BB5;">6.1 &#x751F;&#x547D;&#x5468;&#x671F;&#x6709;&#x4E24;&#x4E2A;&#x9636;&#x6BB5; <a href="#t156.1 &#x751F;&#x547D;&#x5468;&#x671F;&#x6709;&#x4E24;&#x4E2A;&#x9636;&#x6BB5;"> # </a></h3>
+<ul>
+<li>&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x6709;&#x4E24;&#x4E2A;&#x9636;&#x6BB5;<ul>
+<li>&#x521B;&#x5EFA;&#x9636;&#x6BB5;<ul>
+<li>&#x521B;&#x5EFA;&#x53D8;&#x91CF;&#x5BF9;&#x8C61;</li>
+<li>&#x786E;&#x5B9A;&#x4F5C;&#x7528;&#x57DF;&#x94FE;</li>
+<li>&#x786E;&#x5B9A;<code>this</code>&#x6307;&#x5411;</li>
+</ul>
+</li>
+<li>&#x6267;&#x884C;&#x9636;&#x6BB5;<ul>
+<li>&#x53D8;&#x91CF;&#x8D4B;&#x503C;</li>
+<li>&#x51FD;&#x6570;&#x8D4B;&#x503C;</li>
+<li>&#x4EE3;&#x7801;&#x6267;&#x884C;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="t166.2 &#x53D8;&#x91CF;&#x5BF9;&#x8C61;">6.2 &#x53D8;&#x91CF;&#x5BF9;&#x8C61; <a href="#t166.2 &#x53D8;&#x91CF;&#x5BF9;&#x8C61;"> # </a></h3>
+<ul>
+<li>&#x53D8;&#x91CF;&#x5BF9;&#x8C61;&#x4F1A;&#x4FDD;&#x5B58;&#x53D8;&#x91CF;&#x58F0;&#x660E;(var)&#x3001;&#x51FD;&#x6570;&#x53C2;&#x6570;(arguments)&#x3001;&#x51FD;&#x6570;&#x5B9A;&#x4E49;(function)<ul>
+<li>&#x53D8;&#x91CF;&#x5BF9;&#x8C61;&#x4F1A;&#x9996;&#x5148;&#x83B7;&#x5F97;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#x53D8;&#x91CF;&#x548C;&#x503C;</li>
+<li>&#x83B7;&#x53D6;&#x6240;&#x6709;&#x7528;<code>function</code>&#x8FDB;&#x884C;&#x7684;&#x51FD;&#x6570;&#x58F0;&#x660E;&#xFF0C;&#x51FD;&#x6570;&#x540D;&#x4E3A;&#x53D8;&#x91CF;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x540D;&#xFF0C;&#x503C;&#x4E3A;&#x51FD;&#x6570;&#x5BF9;&#x8C61;,&#x5982;&#x679C;&#x5C5E;&#x6027;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#xFF0C;&#x503C;&#x4F1A;&#x7528;&#x65B0;&#x503C;&#x8986;&#x76D6;</li>
+<li>&#x518D;&#x4F9D;&#x6B21;&#x6240;&#x6709;&#x7684;var&#x5173;&#x952E;&#x5B57;&#x8FDB;&#x884C;&#x7684;&#x53D8;&#x91CF;&#x58F0;&#x660E;&#xFF0C;&#x6BCF;&#x627E;&#x5230;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x58F0;&#x660E;&#xFF0C;&#x5C31;&#x4F1A;&#x5728;&#x53D8;&#x91CF;&#x5BF9;&#x8C61;&#x4E0A;&#x5EFA;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#xFF0C;&#x503C;&#x4E3A;<code>undefined</code>,&#x5982;&#x679C;&#x53D8;&#x91CF;&#x540D;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x4F1A;&#x8DF3;&#x8FC7;&#xFF0C;&#x5E76;&#x4E0D;&#x4F1A;&#x4FEE;&#x6539;&#x539F;&#x5C5E;&#x6027;&#x503C;,<code>let</code>&#x58F0;&#x660E;&#x7684;&#x53D8;&#x91CF;&#x5E76;&#x4E0D;&#x4F1A;&#x5728;&#x6B64;&#x9636;&#x6BB5;&#x8FDB;&#x884C;&#x5904;&#x7406;</li>
+</ul>
+</li>
+<li>&#x51FD;&#x6570;&#x58F0;&#x660E;&#x4F18;&#x5148;&#x7EA7;&#x66F4;&#x9AD8;&#xFF0C;&#x540C;&#x540D;&#x7684;&#x51FD;&#x6570;&#x4F1A;&#x8986;&#x76D6;&#x51FD;&#x6570;&#x548C;&#x53D8;&#x91CF;&#xFF0C;&#x4F46;&#x540C;&#x540D;<code>var</code>&#x53D8;&#x91CF;&#x5E76;&#x4E0D;&#x4F1A;&#x8986;&#x76D6;&#x51FD;&#x6570;.&#x6267;&#x884C;&#x9636;&#x6BB5;&#x91CD;&#x65B0;&#x8D4B;&#x503C;&#x53EF;&#x4EE5;&#x6539;&#x53D8;&#x539F;&#x6709;&#x7684;&#x503C;</li>
+</ul>
+<h4 id="t176.2.1 &#x57FA;&#x672C;&#x7C7B;&#x578B;">6.2.1 &#x57FA;&#x672C;&#x7C7B;&#x578B; <a href="#t176.2.1 &#x57FA;&#x672C;&#x7C7B;&#x578B;"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-built_in">console</span>.log(a);
+<span class="hljs-keyword">var</span> a = <span class="hljs-number">1</span>;
+</code></pre>
+<pre><code>```js
+</code></pre><p>var a = undefined;//&#x53D8;&#x91CF;&#x63D0;&#x5347;
+console.log(a);
+a = 1;</p>
+<pre><code>
+#### 6.2.2 &#x53D8;&#x91CF;&#x63D0;&#x5347;
+- &#x6B63;&#x5E38;&#x7F16;&#x5199;
+
+```js
+var a = 1;
+function fn(m) { console.log(&apos;fn&apos;); }
+function fn(m) { console.log(&apos;new_fn&apos;); }
+function a() { console.log(&apos;fn_a&apos;); }
+console.log(a);
+fn(1);
+var fn = &apos;var_fn&apos;;
+console.log(fn);
+//1
+//new_fn
+//var_fn
+</code></pre><ul>
+<li>&#x771F;&#x6B63;&#x6267;&#x884C;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x521B;&#x5EFA;&#x9636;&#x6BB5;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fn</span>(<span class="hljs-params">m</span>) </span>{ <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;fn&apos;</span>); }
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fn</span>(<span class="hljs-params">m</span>) </span>{ <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;new_fn&apos;</span>); }
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">a</span>(<span class="hljs-params"></span>) </span>{ <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;fn_a&apos;</span>); }
+<span class="hljs-keyword">var</span> a = <span class="hljs-literal">undefined</span>;
+<span class="hljs-keyword">var</span> fn = <span class="hljs-literal">undefined</span>;
+<span class="hljs-comment">//&#x6267;&#x884C;&#x9636;&#x6BB5;</span>
+a = <span class="hljs-number">1</span>;
+<span class="hljs-built_in">console</span>.log(a);
+fn();
+fn = <span class="hljs-string">&apos;var_fn&apos;</span>;
+<span class="hljs-built_in">console</span>.log(fn);
+</code></pre>
+<ul>
+<li>&#x4E0A;&#x4E0B;&#x6587;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x521B;&#x5EFA;&#x9636;&#x6BB5;</span>
+<span class="hljs-keyword">var</span> globalEC = {
+    <span class="hljs-attr">VO</span>: {
+        ...arguments,
+        <span class="hljs-attr">a</span>: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> { <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;fn_a&apos;</span>); },
+        <span class="hljs-attr">fn</span>: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> { <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;new_fn&apos;</span>); }
+    }
+}
+<span class="hljs-keyword">var</span> ECStack = [globalEC];
+<span class="hljs-comment">//&#x6267;&#x884C;&#x9636;&#x6BB5;</span>
+globalEC.VO.a = <span class="hljs-number">1</span>;
+<span class="hljs-built_in">console</span>.log(globalEC.VO.a);
+globalEC.VO.fn();
+globalEC.VO.fn = <span class="hljs-string">&apos;var_fn&apos;</span>;
+<span class="hljs-built_in">console</span>.log(globalEC.VO.fn);
+</code></pre>
+<h4 id="t186.2.3 &#x6FC0;&#x6D3B;&#x5BF9;&#x8C61;">6.2.3 &#x6FC0;&#x6D3B;&#x5BF9;&#x8C61; <a href="#t186.2.3 &#x6FC0;&#x6D3B;&#x5BF9;&#x8C61;"> # </a></h4>
+<ul>
+<li>&#x5728;&#x51FD;&#x6570;&#x7684;&#x8C03;&#x7528;&#x6808;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x5F53;&#x524D;&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;&#x5904;&#x4E8E;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x6808;&#x7684;&#x9876;&#x7AEF;&#xFF0C;&#x5219;&#x610F;&#x5473;&#x7740;&#x5F53;&#x524D;&#x4E0A;&#x4E0B;&#x6587;&#x5904;&#x4E8E;&#x6FC0;&#x6D3B;&#x72B6;&#x6001;&#xFF0C;&#x6B64;&#x65F6;&#x53D8;&#x91CF;&#x5BF9;&#x8C61;&#x79F0;&#x4E3A;&#x6D3B;&#x52A8;&#x5BF9;&#x8C61;(AO,Activation Object)  VO=&gt;AO</li>
+<li>&#x6D3B;&#x52A8;&#x53D8;&#x91CF;&#x5305;&#x542B;&#x53D8;&#x91CF;&#x5BF9;&#x8C61;&#x6240;&#x6709;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x5E76;&#x6709;&#x5305;&#x542B;<code>this</code>&#x6307;&#x9488;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">one</span>(<span class="hljs-params">m</span>) </span>{
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">two</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;two&apos;</span>);
+    }
+}
+one(<span class="hljs-number">1</span>);
+
+<span class="hljs-comment">//&#x6267;&#x884C;&#x9636;&#x6BB5; VO=&gt;AO</span>
+<span class="hljs-keyword">let</span> VO = AO = {
+    <span class="hljs-attr">m</span>:<span class="hljs-number">1</span>,
+    <span class="hljs-attr">two</span>: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> { <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;two&apos;</span>); },
+
+}
+<span class="hljs-keyword">let</span> oneEC={
+    VO,
+    <span class="hljs-attr">this</span>: <span class="hljs-built_in">window</span>,
+    <span class="hljs-attr">scopeChain</span>:[VO,globalVO]
+}
+</code></pre>
+<h4 id="t196.2.4 &#x5168;&#x5C40;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x53D8;&#x91CF;&#x5BF9;&#x8C61;">6.2.4 &#x5168;&#x5C40;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x53D8;&#x91CF;&#x5BF9;&#x8C61; <a href="#t196.2.4 &#x5168;&#x5C40;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x53D8;&#x91CF;&#x5BF9;&#x8C61;"> # </a></h4>
+<ul>
+<li>&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x91CC;&#xFF0C;&#x5168;&#x5C40;&#x5BF9;&#x8C61;&#x4E3A;<code>window</code></li>
+<li>&#x5168;&#x5C40;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x53D8;&#x91CF;&#x5BF9;&#x8C61;&#x4E3A;<code>window</code>,&#x800C;&#x4E14;&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#x5BF9;&#x8C61;&#x4E0D;&#x80FD;&#x6FC0;&#x6D3B;&#x53D8;&#x6210;&#x6D3B;&#x52A8;&#x5BF9;&#x8C61;</li>
+<li>&#x53EA;&#x5728;&#x7A97;&#x53E3;&#x6253;&#x5F00;&#xFF0C;&#x5168;&#x5C40;&#x4E0A;&#x4E0B;&#x6587;&#x4F1A;&#x4E00;&#x76F4;&#x5B58;&#x5728;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x90FD;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;&#x5168;&#x5C40;&#x4E0A;&#x4E0B;&#x6587;&#x53D8;&#x91CF;&#x5BF9;&#x8C61;&#x4E0A;&#x7684;&#x5C5E;&#x6027;</li>
+<li>&#x53EA;&#x6709;&#x5168;&#x5C40;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x53D8;&#x91CF;&#x5BF9;&#x8C61;&#x5141;&#x8BB8;&#x901A;&#x8FC7;VO&#x7684;&#x5C5E;&#x6027;&#x540D;&#x79F0;&#x6765;&#x95F4;&#x63A5;&#x8BBF;&#x95EE;&#xFF0C;&#x5728;&#x51FD;&#x6570;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x662F;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;VO&#x5BF9;&#x8C61;&#x7684;</li>
+<li>&#x672A;&#x8FDB;&#x5165;&#x6267;&#x884C;&#x9636;&#x6BB5;&#x524D;&#xFF0C;&#x53D8;&#x91CF;&#x5BF9;&#x8C61;&#x4E2D;&#x7684;&#x5C5E;&#x6027;&#x90FD;&#x4E0D;&#x80FD;&#x8BBF;&#x95EE;&#xFF01;&#x4F46;&#x662F;&#x8FDB;&#x5165;&#x5230;&#x6267;&#x884C;&#x9636;&#x6BB5;&#x4E4B;&#x540E;&#xFF0C;&#x53D8;&#x91CF;&#x5BF9;&#x8C61;&#x8F6C;&#x53D8;&#x6210;&#x4E86;&#x6D3B;&#x52A8;&#x5BF9;&#x8C61;&#xFF0C;&#x91CC;&#x9762;&#x7684;&#x5C5E;&#x6027;&#x90FD;&#x80FD;&#x88AB;&#x8BBF;&#x95EE;&#x4E86;,&#x5BF9;&#x4E8E;&#x51FD;&#x6570;&#x4E0A;&#x4E0B;&#x6587;&#x6765;&#x8BB2;&#xFF0C;&#x6D3B;&#x52A8;&#x5BF9;&#x8C61;&#x4E0E;&#x53D8;&#x91CF;&#x5BF9;&#x8C61;&#x5176;&#x5B9E;&#x90FD;&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;,&#x53EA;&#x662F;&#x5904;&#x4E8E;&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x4E0D;&#x540C;&#x751F;&#x547D;&#x5468;&#x671F;</li>
+</ul>
+<h2 id="t207. &#x4F5C;&#x7528;&#x57DF;">7. &#x4F5C;&#x7528;&#x57DF; <a href="#t207. &#x4F5C;&#x7528;&#x57DF;"> # </a></h2>
+<h3 id="t217.1 &#x4F5C;&#x7528;&#x57DF;">7.1 &#x4F5C;&#x7528;&#x57DF; <a href="#t217.1 &#x4F5C;&#x7528;&#x57DF;"> # </a></h3>
+<ul>
+<li>&#x5728;JS&#x4E2D;&#xFF0C;&#x4F5C;&#x7528;&#x57DF;&#x662F;&#x7528;&#x6765;&#x89C4;&#x5B9A;&#x53D8;&#x91CF;&#x8BBF;&#x95EE;&#x8303;&#x56F4;&#x7684;&#x89C4;&#x5219;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">one</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> a = <span class="hljs-number">1</span>;
+}
+<span class="hljs-built_in">console</span>.log(a);
+</code></pre>
+<h3 id="t227.2 &#x4F5C;&#x7528;&#x57DF;&#x94FE;">7.2 &#x4F5C;&#x7528;&#x57DF;&#x94FE; <a href="#t227.2 &#x4F5C;&#x7528;&#x57DF;&#x94FE;"> # </a></h3>
+<ul>
+<li>&#x4F5C;&#x7528;&#x57DF;&#x94FE;&#x662F;&#x7531;&#x5F53;&#x524D;&#x6267;&#x884C;&#x73AF;&#x5883;&#x4E0E;&#x4E0A;&#x5C42;&#x6267;&#x884C;&#x73AF;&#x5883;&#x7684;&#x4E00;&#x7CFB;&#x5217;&#x53D8;&#x91CF;&#x5BF9;&#x8C61;&#x7EC4;&#x6210;&#x7684;&#xFF0C;&#x5B83;&#x4FDD;&#x8BC1;&#x4E86;&#x5F53;&#x524D;&#x6267;&#x884C;&#x73AF;&#x5883;&#x5BF9;&#x7B26;&#x5408;&#x8BBF;&#x95EE;&#x6743;&#x9650;&#x7684;&#x53D8;&#x91CF;&#x548C;&#x51FD;&#x6570;&#x7684;&#x6709;&#x5E8F;&#x8BBF;&#x95EE;</li>
+</ul>
+<h4 id="t237.2.1 &#x4F5C;&#x7528;&#x57DF;&#x94FE;">7.2.1 &#x4F5C;&#x7528;&#x57DF;&#x94FE; <a href="#t237.2.1 &#x4F5C;&#x7528;&#x57DF;&#x94FE;"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">one</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> a = <span class="hljs-number">1</span>;
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">two</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">var</span> b = <span class="hljs-number">2</span>;
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">three</span>(<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">var</span> c = <span class="hljs-number">3</span>;
+            <span class="hljs-built_in">console</span>.log(a, b, c);
+        }
+        three();
+    }
+    two();
+}
+one(); 
+</code></pre>
+<pre><code class="lang-js">
+
+<span class="hljs-comment">// 1.&#x521B;&#x5EFA;&#x5168;&#x5C40;&#x4E0A;&#x4E0B;&#x6587;</span>
+<span class="hljs-keyword">var</span> globalExecuteContextVO = { <span class="hljs-attr">one</span>: <span class="hljs-string">`()=&gt;{var a = 1;}`</span> }
+<span class="hljs-keyword">var</span> globalExecuteContext = {
+    <span class="hljs-attr">VO</span>: globalExecuteContextVO,
+    <span class="hljs-attr">scopeChain</span>: [globalExecuteContextVO]
+}
+<span class="hljs-keyword">var</span> executeContextStack = [globalExecuteContext];
+<span class="hljs-comment">//2.&#x6267;&#x884C;one&#xFF0C;&#x521B;&#x5EFA;one&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;</span>
+<span class="hljs-keyword">var</span> oneExecuteContextVO = {
+    <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">two</span>: <span class="hljs-string">`()=&gt;{var b = 2 ;}`</span>
+}
+<span class="hljs-keyword">var</span> oneExecuteContext = {
+    <span class="hljs-attr">VO</span>: oneExecuteContextVO,
+    <span class="hljs-attr">scopeChain</span>: [oneExecuteContextVO, globalExecuteContext.VO]
+}
+<span class="hljs-comment">//2.&#x6267;&#x884C;two&#xFF0C;&#x521B;&#x5EFA;two&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;</span>
+<span class="hljs-keyword">var</span> twoExecuteContextVO = {
+    <span class="hljs-attr">b</span>: <span class="hljs-number">2</span>,
+    <span class="hljs-attr">three</span>: <span class="hljs-string">`()=&gt;{var c = 3 ;}`</span>
+}
+<span class="hljs-keyword">var</span> twoExecuteContext = {
+    <span class="hljs-attr">VO</span>: twoExecuteContextVO,
+    <span class="hljs-attr">scopeChain</span>: [twoExecuteContextVO, oneExecuteContext.VO, globalExecuteContext.VO]
+}
+<span class="hljs-comment">//3.&#x6267;&#x884C;three&#xFF0C;&#x521B;&#x5EFA;three&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;</span>
+<span class="hljs-keyword">var</span> threeExecuteContextVO = {
+    <span class="hljs-attr">c</span>: <span class="hljs-number">3</span>
+}
+<span class="hljs-keyword">var</span> threeExecuteContext = {
+    <span class="hljs-attr">VO</span>: threeExecuteContextVO,
+    <span class="hljs-attr">scopeChain</span>: [threeExecuteContextVO, twoExecuteContext.VO, oneExecuteContext.VO, globalExecuteContext.VO]
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getValue</span>(<span class="hljs-params">varName</span>) </span>{
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; threeExecuteContext.scopeChain.length; i++) {
+        <span class="hljs-keyword">if</span> (varName <span class="hljs-keyword">in</span> threeExecuteContext.scopeChain[i]) {
+            <span class="hljs-keyword">return</span> threeExecuteContext.scopeChain[i][varName];
+        }
+    }
+}
+<span class="hljs-comment">//console.log(a, b, c);</span>
+<span class="hljs-built_in">console</span>.log(
+    getValue(<span class="hljs-string">&apos;a&apos;</span>),
+    getValue(<span class="hljs-string">&apos;b&apos;</span>),
+    getValue(<span class="hljs-string">&apos;c&apos;</span>),
+);
+</code></pre>
+<h4 id="t247.2.2 &#x4F5C;&#x7528;&#x57DF;&#x94FE;">7.2.2 &#x4F5C;&#x7528;&#x57DF;&#x94FE; <a href="#t247.2.2 &#x4F5C;&#x7528;&#x57DF;&#x94FE;"> # </a></h4>
+<ul>
+<li><code>scopeChain</code>&#x5176;&#x5B9E;&#x662F;&#x5728;&#x521B;&#x5EFA;&#x51FD;&#x6570;&#x7684;&#x65F6;&#x5019;&#x786E;&#x5B9A;&#x7684;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">one</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> a = <span class="hljs-number">1</span>;
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">two</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">console</span>.log(a);
+    }
+    <span class="hljs-keyword">return</span> two;
+}
+<span class="hljs-keyword">var</span> a = <span class="hljs-number">2</span>;
+<span class="hljs-keyword">var</span> two = one();
+two();
+</code></pre>
+<pre><code class="lang-js">
+<span class="hljs-comment">// 1.&#x521B;&#x5EFA;&#x5168;&#x5C40;&#x4E0A;&#x4E0B;&#x6587;</span>
+<span class="hljs-keyword">var</span> globalExecuteContextVO = { <span class="hljs-attr">one</span>: <span class="hljs-string">`()=&gt;{var a = 1;}`</span>, <span class="hljs-attr">a</span>: <span class="hljs-literal">undefined</span>, <span class="hljs-attr">two</span>: <span class="hljs-literal">undefined</span> }
+<span class="hljs-keyword">var</span> globalExecuteContext = {
+    <span class="hljs-attr">VO</span>: globalExecuteContextVO,
+    <span class="hljs-attr">scopeChain</span>: [globalExecuteContextVO]
+}
+<span class="hljs-comment">//2.&#x5F00;&#x59CB;&#x6267;&#x884C;</span>
+globalExecuteContextVO.a = <span class="hljs-number">2</span>;
+<span class="hljs-comment">//3.&#x5F00;&#x59CB;&#x6267;&#x884C;one</span>
+<span class="hljs-keyword">var</span> oneExecuteContextVO = { <span class="hljs-attr">a</span>: <span class="hljs-literal">undefined</span>, <span class="hljs-attr">two</span>: <span class="hljs-string">`()=&gt;{console.log(a)}`</span> }
+<span class="hljs-keyword">var</span> oneExecuteContext = {
+    <span class="hljs-attr">VO</span>: oneExecuteContextVO,
+    <span class="hljs-attr">scopeChain</span>: [oneExecuteContextVO, globalExecuteContextVO]
+}
+oneExecuteContextVO.a = <span class="hljs-number">1</span>;
+<span class="hljs-comment">//4.&#x7ED9;two&#x8D4B;&#x503C;</span>
+globalExecuteContextVO.two = oneExecuteContextVO.two;
+<span class="hljs-comment">//5.&#x6267;&#x884C;two</span>
+<span class="hljs-keyword">var</span> twoExecuteContextVO = {}
+<span class="hljs-keyword">var</span> twoExecuteContext = {
+    <span class="hljs-attr">VO</span>: twoExecuteContextVO,
+    <span class="hljs-comment">//scopeChain&#x662F;&#x5728;&#x521B;&#x5EFA;&#x6B64;&#x51FD;&#x6570;&#x636E;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x51B3;&#x5B9A;&#x4E86;,&#x8DDF;&#x5728;&#x54EA;&#x91CC;&#x6267;&#x884C;&#x65E0;&#x5173;</span>
+    <span class="hljs-attr">scopeChain</span>: [twoExecuteContextVO, oneExecuteContextVO, globalExecuteContextVO]
+}
+</code></pre>
+<h2 id="t258. &#x95ED;&#x5305;">8. &#x95ED;&#x5305; <a href="#t258. &#x95ED;&#x5305;"> # </a></h2>
+<ul>
+<li>&#x95ED;&#x5305;&#x6709;&#x4E24;&#x90E8;&#x5206;&#x7EC4;&#x6210;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;&#x5F53;&#x524D;&#x7684;&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;A&#xFF0C;&#x4E00;&#x4E2A;&#x662F;&#x5728;&#x8BE5;&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x521B;&#x5EFA;&#x7684;&#x51FD;&#x6570;B</li>
+<li>&#x5F53;B&#x6267;&#x884C;&#x7684;&#x65F6;&#x5019;&#x5F15;&#x7528;&#x4E86;&#x5F53;&#x524D;&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;A&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x5C31;&#x4F1A;&#x4EA7;&#x51FA;&#x95ED;&#x5305;</li>
+<li>&#x5F53;&#x4E00;&#x4E2A;&#x503C;&#x5931;&#x53BB;&#x5F15;&#x7528;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x4F1A;&#x4F1A;&#x6807;&#x8BB0;&#xFF0C;&#x88AB;&#x5783;&#x573E;&#x6536;&#x96C6;&#x56DE;&#x6536;&#x673A;&#x56DE;&#x6536;&#x5E76;&#x91CA;&#x653E;&#x7A7A;&#x95F4;</li>
+<li>&#x95ED;&#x5305;&#x7684;&#x672C;&#x8D28;&#x5C31;&#x662F;&#x5728;&#x51FD;&#x6570;&#x5916;&#x90E8;&#x4FDD;&#x6301;&#x5185;&#x90E8;&#x53D8;&#x91CF;&#x7684;&#x5F15;&#x7528;&#xFF0C;&#x4ECE;&#x800C;&#x963B;&#x6B62;&#x5783;&#x573E;&#x56DE;&#x6536;</li>
+<li>&#x8C03;&#x7528;&#x6808;&#x7684;&#x5E76;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x4F5C;&#x7528;&#x57DF;&#x94FE;,&#x51FD;&#x6570;&#x8C03;&#x7528;&#x6808;&#x662F;&#x5728;&#x6267;&#x884C;&#x65F6;&#x624D;&#x786E;&#x5B9A;&#xFF0C;&#x800C;&#x4F5C;&#x7528;&#x57DF;&#x89C4;&#x5219;&#x662F;&#x5728;&#x4EE3;&#x7801;&#x7F16;&#x8BD1;&#x9636;&#x6BB5;&#x5C31;&#x5DF2;&#x7ECF;&#x786E;&#x5B9A;&#x4E86;</li>
+<li>MDN&#x5B9A;&#x4E49;:&#x95ED;&#x5305;&#x662F;&#x6307;&#x8FD9;&#x6837;&#x7684;&#x4F5C;&#x7528;&#x57DF;<code>foo</code>,&#x5B83;&#x5305;&#x542B;&#x4E86;&#x4E00;&#x4E2A;&#x51FD;&#x6570;<code>fn</code>&#xFF0C;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;<code>fn1</code>&#x53EF;&#x4EE5;&#x8C03;&#x7528;&#x88AB;&#x8FD9;&#x4E2A;&#x4F5C;&#x7528;&#x57DF;&#x6240;&#x5C01;&#x95ED;&#x7684;&#x53D8;&#x91CF;<code>a</code>&#x3001;&#x51FD;&#x6570;&#x7B49;&#x5185;&#x5BB9;</li>
+</ul>
+<h3 id="t268.1 &#x95ED;&#x5305;">8.1 &#x95ED;&#x5305; <a href="#t268.1 &#x95ED;&#x5305;"> # </a></h3>
+<ul>
+<li><code>Call Stack</code>&#x4E3A;&#x5F53;&#x524D;&#x7684;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x6808;</li>
+<li><code>Scope</code>&#x4E3A;&#x5F53;&#x524D;&#x6B63;&#x5728;&#x88AB;&#x6267;&#x884C;&#x51FD;&#x6570;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#x94FE; </li>
+<li><code>Local</code>&#x4E3A;&#x5F53;&#x524D;&#x7684;&#x6D3B;&#x52A8;&#x5BF9;&#x8C61;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">one</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> a = <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">var</span> b = <span class="hljs-number">2</span>;
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">two</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">var</span> c = <span class="hljs-number">3</span>;
+        <span class="hljs-keyword">debugger</span>;
+        <span class="hljs-built_in">console</span>.log(a,c);
+    }
+    <span class="hljs-keyword">return</span> two;
+}
+<span class="hljs-keyword">let</span> two = one();
+two();
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">one</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> a = <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">var</span> b = <span class="hljs-number">2</span>;
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">two</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">debugger</span>;
+        <span class="hljs-built_in">console</span>.log(a);
+    }
+    two();
+}
+one();
+</code></pre>
+<p><img src="http://img.zhufengpeixun.cn/closure2.png" alt="closure2"></p>
+<h3 id="t278.2 &#x95ED;&#x5305;&#x4F18;&#x5316;">8.2 &#x95ED;&#x5305;&#x4F18;&#x5316; <a href="#t278.2 &#x95ED;&#x5305;&#x4F18;&#x5316;"> # </a></h3>
+<ul>
+<li>&#x4E2D;&#x95F4;&#x6CA1;&#x7528;&#x5230;&#x7684;&#x53D8;&#x91CF;&#x95ED;&#x5305;&#x4F1A;&#x88AB;&#x5FFD;&#x7565; </li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">one</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> a = <span class="hljs-number">1</span>;
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">two</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">var</span> b = <span class="hljs-number">2</span>;
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">three</span>(<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">var</span> c = <span class="hljs-number">3</span>;
+            <span class="hljs-keyword">debugger</span>;
+            <span class="hljs-built_in">console</span>.log(a, b, c);
+        }
+        three();
+    }
+    two();
+}
+one();
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">one</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> a = <span class="hljs-number">1</span>;
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">two</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">var</span> b = <span class="hljs-number">2</span>;
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">three</span>(<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">var</span> c = <span class="hljs-number">3</span>;
+            <span class="hljs-keyword">debugger</span>;
+            <span class="hljs-built_in">console</span>.log(a, c);
+        }
+        three();
+    }
+    two();
+}
+one();
+</code></pre>
+<h3 id="t288.3 arguments">8.3 arguments <a href="#t288.3 arguments"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">log</span>(<span class="hljs-params">a, b</span>) </span>{
+    <span class="hljs-keyword">debugger</span>;
+    <span class="hljs-built_in">console</span>.log(a, b);
+}
+log(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>);
+</code></pre>
+<p><img src="http://img.zhufengpeixun.cn/arguments.png" alt="arguments"></p>
+<h2 id="t299. var&#x548C;let">9. var&#x548C;let <a href="#t299. var&#x548C;let"> # </a></h2>
+<ul>
+<li>JS&#x4E2D;&#x4F5C;&#x7528;&#x57DF;&#x6709;&#xFF1A;&#x5168;&#x5C40;&#x4F5C;&#x7528;&#x57DF;&#x3001;&#x51FD;&#x6570;&#x4F5C;&#x7528;&#x57DF;&#x3002;&#x6CA1;&#x6709;&#x5757;&#x4F5C;&#x7528;&#x57DF;&#x7684;&#x6982;&#x5FF5;&#x3002;ECMAScript 6(&#x7B80;&#x79F0;ES6)&#x4E2D;&#x65B0;&#x589E;&#x4E86;&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;</li>
+<li>&#x5757;&#x4F5C;&#x7528;&#x57DF;&#x7531; <code>{ }</code> &#x5305;&#x62EC;,<code>if</code>&#x8BED;&#x53E5;&#x548C;<code>for</code>&#x8BED;&#x53E5;&#x91CC;&#x9762;&#x7684;<code>{ }</code>&#x4E5F;&#x5C5E;&#x4E8E;&#x5757;&#x4F5C;&#x7528;&#x57DF;</li>
+</ul>
+<h3 id="t309.1 ES5&#x95EE;&#x9898;">9.1 ES5&#x95EE;&#x9898; <a href="#t309.1 ES5&#x95EE;&#x9898;"> # </a></h3>
+<h4 id="t319.1.1 &#x5168;&#x5C40;&#x53D8;&#x91CF;">9.1.1 &#x5168;&#x5C40;&#x53D8;&#x91CF; <a href="#t319.1.1 &#x5168;&#x5C40;&#x53D8;&#x91CF;"> # </a></h4>
+<ul>
+<li>&#x5728;if&#x6216;&#x8005;for&#x5FAA;&#x73AF;&#x4E2D;&#x58F0;&#x660E;&#x7684;&#x53D8;&#x91CF;&#x4F1A;&#x53D8;&#x6210;&#x5168;&#x5C40;&#x53D8;&#x91CF;<pre><code class="lang-js"><span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i=<span class="hljs-number">0</span>;i&lt;=<span class="hljs-number">5</span>;i++){
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;hello&quot;</span>);
+}
+<span class="hljs-built_in">console</span>.log(i); <span class="hljs-comment">//5</span>
+</code></pre>
+<h4 id="t329.1.2 &#x5185;&#x5C42;&#x53D8;&#x91CF;&#x53EF;&#x80FD;&#x4F1A;&#x8986;&#x76D6;&#x5916;&#x5C42;&#x53D8;&#x91CF;">9.1.2 &#x5185;&#x5C42;&#x53D8;&#x91CF;&#x53EF;&#x80FD;&#x4F1A;&#x8986;&#x76D6;&#x5916;&#x5C42;&#x53D8;&#x91CF; <a href="#t329.1.2 &#x5185;&#x5C42;&#x53D8;&#x91CF;&#x53EF;&#x80FD;&#x4F1A;&#x8986;&#x76D6;&#x5916;&#x5C42;&#x53D8;&#x91CF;"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> a = <span class="hljs-number">1</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fn</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(a);
+  <span class="hljs-keyword">if</span> (<span class="hljs-literal">false</span>) {
+      <span class="hljs-keyword">var</span> a = <span class="hljs-number">2</span>;
+  }
+}
+fn(); <span class="hljs-comment">//undefined</span>
+</code></pre>
+</li>
+</ul>
+<h3 id="t339.2 let">9.2 let <a href="#t339.2 let"> # </a></h3>
+<ul>
+<li>&#x5141;&#x8BB8;&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;&#x4EFB;&#x610F;&#x5D4C;&#x5957;</li>
+<li>&#x5916;&#x5C42;&#x4F5C;&#x7528;&#x57DF;&#x65E0;&#x6CD5;&#x8BFB;&#x53D6;&#x5185;&#x5C42;&#x4F5C;&#x7528;&#x57DF;&#x7684;&#x53D8;&#x91CF;</li>
+<li>&#x5185;&#x5C42;&#x4F5C;&#x7528;&#x57DF;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x5916;&#x5C42;&#x4F5C;&#x7528;&#x57DF;&#x7684;&#x540C;&#x540D;&#x53D8;&#x91CF;</li>
+<li>&#x51FD;&#x6570;&#x672C;&#x8EAB;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#x5728;&#x5176;&#x6240;&#x5728;&#x7684;&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;&#x4E4B;&#x5185;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-meta">
+&apos;use strict&apos;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fn</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;out&quot;</span>);
+}
+(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">if</span> (<span class="hljs-literal">false</span>) {
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fn</span>(<span class="hljs-params"></span>) </span>{
+            <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;in&quot;</span>);
+        }
+    }
+    fn();
+}());
+</code></pre>
+<h3 id="t349.3 var&amp;let&amp;const">9.3 var&amp;let&amp;const <a href="#t349.3 var&amp;let&amp;const"> # </a></h3>
+<ul>
+<li>var&#x5B9A;&#x4E49;&#x7684;&#x53D8;&#x91CF;&#x6CA1;&#x6709;&#x5757;&#x7684;&#x6982;&#x5FF5;,&#x53EF;&#x4EE5;&#x8DE8;&#x5757;&#x8BBF;&#x95EE;,&#x4E0D;&#x80FD;&#x8DE8;&#x51FD;&#x6570;&#x8BBF;&#x95EE;,&#x6709;&#x53D8;&#x91CF;&#x63D0;&#x5347;,&#x53EF;&#x91CD;&#x590D;&#x58F0;&#x660E;</li>
+<li>let&#x5B9A;&#x4E49;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x53EA;&#x80FD;&#x5728;&#x5757;&#x4F5C;&#x7528;&#x57DF;&#x91CC;&#x8BBF;&#x95EE;&#xFF0C;&#x4E0D;&#x80FD;&#x8DE8;&#x5757;&#x8BBF;&#x95EE;&#xFF0C;&#x4E5F;&#x4E0D;&#x80FD;&#x8DE8;&#x51FD;&#x6570;&#x8BBF;&#x95EE;&#xFF0C;&#x65E0;&#x53D8;&#x91CF;&#x63D0;&#x5347;&#xFF0C;&#x4E0D;&#x53EF;&#x4EE5;&#x91CD;&#x590D;&#x58F0;&#x660E;</li>
+<li>let &#x58F0;&#x660E;&#x7684;&#x53D8;&#x91CF;&#x53EA;&#x5728;&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;&#x5185;&#x6709;&#x6548;,&#x4E0D;&#x5B58;&#x5728;&#x53D8;&#x91CF;&#x63D0;&#x5347;&#xFF0C;&#x800C;&#x662F;<strong>&#x7ED1;&#x5B9A;</strong>&#x5728;&#x6682;&#x65F6;&#x6027;&#x6B7B;&#x533A;</li>
+<li>&#x6216;&#x8005;&#x8BF4;let&#x53D8;&#x91CF;&#x63D0;&#x5347;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x5728;let&#x58F0;&#x660E;&#x53D8;&#x91CF;&#x524D;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x8BE5;&#x53D8;&#x91CF;&#xFF0C;&#x8FD9;&#x7279;&#x6027;&#x53EB;&#x6682;&#x65F6;&#x6027;&#x6B7B;&#x533A;(temporal dead zone)</li>
+<li>&#x5982;&#x679C;&#x6709;&#x91CD;&#x590D;&#x53D8;&#x91CF;<code>let</code>&#x4F1A;&#x5728;&#x7F16;&#x8BD1;&#x9636;&#x6BB5;&#x62A5;&#x9519;</li>
+</ul>
+<h3 id="t359.3.1 &#x6682;&#x65F6;&#x6027;&#x6B7B;&#x533A;">9.3.1 &#x6682;&#x65F6;&#x6027;&#x6B7B;&#x533A; <a href="#t359.3.1 &#x6682;&#x65F6;&#x6027;&#x6B7B;&#x533A;"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x4E0D;&#x5B58;&#x5728;&#x53D8;&#x91CF;&#x63D0;&#x5347;</span>
+<span class="hljs-meta">&apos;use strict&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">func</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-built_in">console</span>.log(i);
+    <span class="hljs-keyword">let</span> i;
+};
+func(); <span class="hljs-comment">// &#x62A5;&#x9519;</span>
+</code></pre>
+<h3 id="t369.3.2 &#x5168;&#x5C40;&#x53D8;&#x91CF;">9.3.2 &#x5168;&#x5C40;&#x53D8;&#x91CF; <a href="#t369.3.2 &#x5168;&#x5C40;&#x53D8;&#x91CF;"> # </a></h3>
+<ul>
+<li>ES5&#x58F0;&#x660E;&#x53D8;&#x91CF;&#x53EA;&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;var&#x548C;function</li>
+<li>ES6&#x6709;let&#x3001;const&#x3001;import&#x3001;class&#x518D;&#x52A0;&#x4E0A;ES5&#x7684;var&#x3001;function&#x5171;&#x6709;&#x516D;&#x79CD;&#x58F0;&#x660E;&#x53D8;&#x91CF;&#x7684;&#x65B9;&#x5F0F;</li>
+<li>&#x6D4F;&#x89C8;&#x5668;&#x73AF;&#x5883;&#x4E2D;&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#x662F;window&#xFF0C;Node&#x4E2D;&#x662F;global&#x5BF9;&#x8C61;</li>
+<li>ES5&#x4E2D; &#x9876;&#x5C42;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x7B49;&#x4EF7;&#x4E8E;&#x5168;&#x5C40;&#x53D8;&#x91CF;</li>
+<li>ES6&#x4E2D;var&#x3001;function&#x58F0;&#x660E;&#x7684;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF0C;&#x4F9D;&#x7136;&#x662F;&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#xFF1B;let&#x3001;const&#x3001;class&#x58F0;&#x660E;&#x7684;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x4E0D;&#x5C5E;&#x4E8E;&#x9876;&#x5C42;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;</li>
+</ul>
+<h3 id="t379.3.3 &#x9898;&#x76EE;">9.3.3 &#x9898;&#x76EE; <a href="#t379.3.3 &#x9898;&#x76EE;"> # </a></h3>
+<ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode">Strict_mode</a></li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-meta">&apos;use strict&apos;</span> 
+<span class="hljs-keyword">var</span> a = <span class="hljs-number">1</span>;
+<span class="hljs-built_in">console</span>.log(a);<span class="hljs-comment">//1</span>
+{
+    <span class="hljs-built_in">console</span>.log(a);<span class="hljs-comment">// f 1</span>
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">a</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-number">1</span>);
+    }
+}
+<span class="hljs-built_in">console</span>.log(a);<span class="hljs-comment">// f 1</span>
+</code></pre>
+<h2 id="t3810. this">10. this <a href="#t3810. this"> # </a></h2>
+<ul>
+<li>&#x5F53;&#x524D;&#x51FD;&#x6570;&#x7684;this&#x662F;&#x5728;&#x88AB;&#x8C03;&#x7528;&#x7684;&#x65F6;&#x5019;&#x624D;&#x80FD;&#x786E;&#x5B9A;&#x7684;</li>
+<li>&#x5982;&#x679C;&#x5F53;&#x524D;&#x7684;&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;&#x5904;&#x4E8E;&#x8C03;&#x7528;&#x6808;&#x7684;&#x6808;&#x9876;&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x53D8;&#x91CF;&#x5BF9;&#x8C61;&#x53D8;&#x6210;&#x4E86;&#x6D3B;&#x52A8;&#x5BF9;&#x8C61;&#xFF0C;THIS&#x6307;&#x9488;&#x624D;&#x80FD;&#x786E;&#x5B9A;</li>
+</ul>
+<h3 id="t3910.1 &#x5168;&#x5C40;&#x5BF9;&#x8C61;">10.1 &#x5168;&#x5C40;&#x5BF9;&#x8C61; <a href="#t3910.1 &#x5168;&#x5C40;&#x5BF9;&#x8C61;"> # </a></h3>
+<ul>
+<li>&#x5168;&#x5C40;&#x5BF9;&#x8C61;this&#x6307;&#x5411;&#x672C;&#x8EAB;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> a=<span class="hljs-number">1</span>;<span class="hljs-comment">//&#x58F0;&#x660E;&#x7ED1;&#x5B9A;&#x53D8;&#x91CF;&#x5BF9;&#x8C61;&#xFF0C;&#x4F46;&#x5728;&#x5168;&#x5C40;&#x73AF;&#x5883;&#x4E2D;&#xFF0C;&#x53D8;&#x91CF;&#x5BF9;&#x8C61;&#x5C31;&#x662F;&#x5168;&#x5C40;&#x5BF9;&#x8C61;</span>
+<span class="hljs-keyword">this</span>.b=<span class="hljs-number">2</span>;<span class="hljs-comment">//this&#x7ED1;&#x5B9A;&#x5168;&#x5C40;&#x5BF9;&#x8C61;</span>
+c=<span class="hljs-number">3</span>;<span class="hljs-comment">//&#x8D4B;&#x503C;&#x64CD;&#x4F5C; &#x9690;&#x5F0F;&#x7ED1;&#x5B9A;</span>
+</code></pre>
+<h3 id="t4010.1 &#x7528;&#x70B9;&#x8C03;&#x7528;">10.1 &#x7528;&#x70B9;&#x8C03;&#x7528; <a href="#t4010.1 &#x7528;&#x70B9;&#x8C03;&#x7528;"> # </a></h3>
+<ul>
+<li>&#x5728;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#xFF0C;this&#x7531;&#x51FD;&#x6570;&#x7684;&#x8C03;&#x7528;&#x8005;&#x63D0;&#x4F9B;&#xFF0C;&#x7531;&#x8C03;&#x7528;&#x51FD;&#x6570;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x51B3;&#x5B9A;&#x6307;&#x5411;</li>
+<li>&#x5982;&#x679C;&#x662F;&#x51FD;&#x6570;&#x6267;&#x884C;,&#x5982;&#x679C;&#x524D;&#x9762;&#x6709;&#x70B9;&#xFF0C;&#x90A3;&#x4E48;&#x70B9;&#x524D;&#x9762;&#x662F;&#x8C01;<code>this</code>&#x5C31;&#x662F;&#x8C01;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> obj = {
+    getName(){
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>);
+    }
+};
+obj.getName();
+</code></pre>
+<h3 id="t4110.2 &#x76F4;&#x63A5;&#x8C03;&#x7528;">10.2 &#x76F4;&#x63A5;&#x8C03;&#x7528; <a href="#t4110.2 &#x76F4;&#x63A5;&#x8C03;&#x7528;"> # </a></h3>
+<ul>
+<li>&#x5982;&#x679C;&#x6CA1;&#x6709;,this&#x5C31;&#x662F;window(&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#x4E0B;&#x662F;undefined),&#x81EA;&#x6267;&#x884C;&#x51FD;&#x6570;&#x4E2D;&#x7684;this&#x4E00;&#x822C;&#x90FD;&#x662F;window</li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode">Strict_mode</a></li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> obj = {
+    getName(){
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>);
+    }
+};
+<span class="hljs-keyword">let</span> getName = obj.getName;
+getName();
+</code></pre>
+<h3 id="t4210.3 &#x7ED1;&#x5B9A;&#x4E8B;&#x4EF6;">10.3 &#x7ED1;&#x5B9A;&#x4E8B;&#x4EF6; <a href="#t4210.3 &#x7ED1;&#x5B9A;&#x4E8B;&#x4EF6;"> # </a></h3>
+<ul>
+<li>&#x7ED9;&#x5143;&#x7D20;&#x7ED1;&#x5B9A;&#x4E8B;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x7ED1;&#x5B9A;&#x7684;&#x65B9;&#x6CD5;&#x4E2D;&#x7684;this&#x4E00;&#x822C;&#x662F;&#x5143;&#x7D20;&#x672C;&#x8EAB;</li>
+</ul>
+<pre><code class="lang-js">container.addEventListener(<span class="hljs-string">&apos;click&apos;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>);
+});
+</code></pre>
+<h3 id="t4310.4 &#x7BAD;&#x5934;&#x51FD;&#x6570;">10.4 &#x7BAD;&#x5934;&#x51FD;&#x6570; <a href="#t4310.4 &#x7BAD;&#x5934;&#x51FD;&#x6570;"> # </a></h3>
+<ul>
+<li>&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x6CA1;&#x6709;&#x81EA;&#x5DF1;&#x7684;this</li>
+<li>&#x4E5F;&#x6CA1;&#x6709;prototype</li>
+<li>&#x4E5F;&#x6CA1;&#x6709;arguments</li>
+<li>&#x65E0;&#x6CD5;&#x521B;&#x5EFA;&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x7684;&#x5B9E;&#x4F8B;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> fn = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">arguments</span>);<span class="hljs-comment">//Uncaught ReferenceError: arguments is not defined</span>
+}
+<span class="hljs-built_in">console</span>.log(fn.prototype);<span class="hljs-comment">//undefined</span>
+fn();
+<span class="hljs-keyword">new</span> fn();<span class="hljs-comment">//VM4416:8 Uncaught TypeError: fn is not a constructor</span>
+</code></pre>
+<h3 id="t4410.5 &#x6784;&#x9020;&#x51FD;&#x6570;">10.5 &#x6784;&#x9020;&#x51FD;&#x6570; <a href="#t4410.5 &#x6784;&#x9020;&#x51FD;&#x6570;"> # </a></h3>
+<ul>
+<li>&#x6784;&#x9020;&#x51FD;&#x6570;&#x4E2D;&#x7684;THIS&#x662F;&#x5F53;&#x524D;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fn</span>(<span class="hljs-params"></span>)</span>{
+
+}
+<span class="hljs-keyword">let</span> obj = <span class="hljs-keyword">new</span> fn();
+</code></pre>
+<h3 id="t4510.6  call/apply/bind">10.6  call/apply/bind <a href="#t4510.6  call/apply/bind"> # </a></h3>
+<ul>
+<li>call/apply/bind&#x53EF;&#x4EE5;&#x6539;&#x53D8;&#x51FD;&#x6570;&#x4E2D;this&#x7684;&#x6307;&#x5411;</li>
+<li>&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x6539;&#x53D8;this&#x6307;&#x5411;(&#x975E;&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x4F20;&#x9012;null/undefined&#x6307;&#x5411;&#x4E5F;&#x662F;window)</li>
+<li>call&#x53C2;&#x6570;&#x662F;&#x4F9D;&#x6B21;&#x4F20;&#x9012;&#xFF0C;apply&#x662F;&#x4EE5;&#x6570;&#x7EC4;&#x7684;&#x65B9;&#x5F0F;&#x4F20;&#x9012;</li>
+</ul>
+<pre><code class="lang-js">!<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">proto</span>) </span>{
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getContext</span>(<span class="hljs-params">context</span>) </span>{
+        context = context || <span class="hljs-built_in">window</span>;
+        <span class="hljs-keyword">var</span> type = <span class="hljs-keyword">typeof</span> context;
+        <span class="hljs-keyword">if</span> ([<span class="hljs-string">&apos;number&apos;</span>, <span class="hljs-string">&apos;string&apos;</span>, <span class="hljs-string">&apos;boolean&apos;</span>, <span class="hljs-string">&apos;null&apos;</span>].includes(type)) {
+            context = <span class="hljs-keyword">new</span> context.constructor(context);
+        }
+        <span class="hljs-keyword">return</span> context;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">call</span>(<span class="hljs-params">context, ...args</span>) </span>{
+        context = getContext(context);
+        context._fn = <span class="hljs-keyword">this</span>;
+        <span class="hljs-keyword">let</span> result = context._fn(...args);
+        <span class="hljs-keyword">delete</span> context._fn;
+        <span class="hljs-keyword">return</span> result;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">apply</span>(<span class="hljs-params">context, args</span>) </span>{
+        context = getContext(context);
+        context._fn = <span class="hljs-keyword">this</span>;
+        <span class="hljs-keyword">let</span> result = context._fn(...args);
+        <span class="hljs-keyword">delete</span> context._fn;
+        <span class="hljs-keyword">return</span> result;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">bind</span>(<span class="hljs-params">context, ...bindArgs</span>) </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-function">(<span class="hljs-params">...args</span>) =&gt;</span> <span class="hljs-keyword">this</span>.call(context, ...bindArgs, ...args);
+    }
+    proto.call = call;
+    proto.apply = apply;
+    proto.bind = bind;
+}(<span class="hljs-built_in">Function</span>.prototype)
+</code></pre>
+<h2 id="t4611. &#x9762;&#x5411;&#x5BF9;&#x8C61;">11. &#x9762;&#x5411;&#x5BF9;&#x8C61; <a href="#t4611. &#x9762;&#x5411;&#x5BF9;&#x8C61;"> # </a></h2>
+<ul>
+<li>&#x5BF9;&#x8C61;&#x4E3A;&#x65E0;&#x5E8F;&#x5C5E;&#x6027;&#x7684;&#x96C6;&#x5408;&#xFF0C;&#x5176;&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x57FA;&#x672C;&#x503C;&#x3001;&#x5BF9;&#x8C61;&#x548C;&#x51FD;&#x6570;</li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">Inheritance_and_the_prototype_chain</a></li>
+</ul>
+<h3 id="t4711.1 &#x539F;&#x578B;&#x94FE;">11.1 &#x539F;&#x578B;&#x94FE; <a href="#t4711.1 &#x539F;&#x578B;&#x94FE;"> # </a></h3>
+<ul>
+<li><a href="http://www.ibm.com/developerworks/cn/web/1306_jiangjj_jsinstanceof/figure1.jpg">jsinstanceof</a></li>
+</ul>
+<h4 id="t4811.1.1 &#x4E00;&#x5207;&#x7686;&#x5BF9;&#x8C61;">11.1.1 &#x4E00;&#x5207;&#x7686;&#x5BF9;&#x8C61; <a href="#t4811.1.1 &#x4E00;&#x5207;&#x7686;&#x5BF9;&#x8C61;"> # </a></h4>
+<ul>
+<li>&#x5BF9;&#x8C61;&#x5C31;&#x662F;&#x4E00;&#x4E9B;&#x5C5E;&#x6027;&#x7684;&#x96C6;&#x5408;</li>
+<li>&#x65B9;&#x6CD5;&#x4E5F;&#x662F;&#x4E00;&#x79CD;&#x5C5E;&#x6027;</li>
+<li>&#x4E00;&#x5207;&#xFF08;&#x5F15;&#x7528;&#x7C7B;&#x578B;&#xFF09;&#x90FD;&#x662F;&#x5BF9;&#x8C61;&#xFF0C;&#x5BF9;&#x8C61;&#x662F;&#x5C5E;&#x6027;&#x7684;&#x96C6;&#x5408;</li>
+<li>&#x51FD;&#x6570;&#x548C;&#x6570;&#x7EC4;&#x4E5F;&#x662F;&#x5BF9;&#x8C61;</li>
+<li>&#x4E3A;&#x4EC0;&#x4E48; <code>typeof function=&apos;function&apos;</code></li>
+</ul>
+<h4 id="t4911.1.1.1 typeof">11.1.1.1 typeof <a href="#t4911.1.1.1 typeof"> # </a></h4>
+<ul>
+<li>&#x68C0;&#x6D4B;&#x6570;&#x636E;&#x7C7B;&#x578B; <code>typeof</code>&#x8FD4;&#x56DE;&#x7684;&#x90FD;&#x662F;&#x5B57;&#x7B26;&#x4E32;</li>
+<li>&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B; number  string boolean undefined symbol</li>
+<li>&#x5F15;&#x7528;&#x7C7B;&#x578B; null {} [] /&amp;$/ Date =&gt;  object</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">typeof</span> a);    <span class="hljs-comment">// undefined</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">typeof</span> <span class="hljs-number">1</span>);   <span class="hljs-comment">// number</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">typeof</span> <span class="hljs-string">&apos;zhufeng&apos;</span>); <span class="hljs-comment">// string</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">typeof</span> <span class="hljs-literal">true</span>);  <span class="hljs-comment">// boolean</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">Symbol</span>(<span class="hljs-string">&apos;a&apos;</span>));  <span class="hljs-comment">// symbol</span>
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">typeof</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ });  <span class="hljs-comment">//function</span>
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">typeof</span> [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]);  <span class="hljs-comment">//object</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">typeof</span> { <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;zhufeng&apos;</span> });  <span class="hljs-comment">//object</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">typeof</span> <span class="hljs-literal">null</span>);  <span class="hljs-comment">//object</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">typeof</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Number</span>(<span class="hljs-number">1</span>));  <span class="hljs-comment">//object</span>
+</code></pre>
+<h4 id="t5011.1.2 &#x51FD;&#x6570;">11.1.2 &#x51FD;&#x6570; <a href="#t5011.1.2 &#x51FD;&#x6570;"> # </a></h4>
+<ul>
+<li>&#x5BF9;&#x8C61;&#x662F;&#x901A;&#x8FC7;&#x51FD;&#x6570;&#x521B;&#x5EFA;&#x7684;</li>
+<li>&#x6279;&#x91CF;&#x751F;&#x4EA7;&#x5BF9;&#x8C61;&#x7684;&#x51FD;&#x6570;<code>Object</code></li>
+<li>&#x5B9E;&#x73B0;&#x79C1;&#x6709;&#x548C;&#x516C;&#x6709;&#x5C5E;&#x6027;&#x7684;&#x5C01;&#x88C5;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> obj = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Object</span>();
+obj.name=<span class="hljs-string">&apos;zhufeng&apos;</span>;
+obj.age = <span class="hljs-number">10</span>;
+</code></pre>
+<h4 id="t5111.1.3 &#x9690;&#x5F0F;&#x539F;&#x578B;">11.1.3 &#x9690;&#x5F0F;&#x539F;&#x578B; <a href="#t5111.1.3 &#x9690;&#x5F0F;&#x539F;&#x578B;"> # </a></h4>
+<h5 id="t5211.1.3.1 proto">11.1.3.1 proto <a href="#t5211.1.3.1 proto"> # </a></h5>
+<ul>
+<li>&#x6BCF;&#x4E2A;&#x5BF9;&#x8C61;&#x90FD;&#x6709;&#x4E00;&#x4E2A;<strong>proto</strong>&#x5C5E;&#x6027;&#xFF0C;&#x6307;&#x5411;&#x521B;&#x5EFA;&#x8BE5;&#x5BF9;&#x8C61;&#x7684;&#x51FD;&#x6570;&#x7684;prototype</li>
+<li>Object.prototype<code>__proto__</code>&#x6307;&#x5411;&#x7684;&#x662F;<code>null</code></li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/objectprototype.png" alt="objectprototype"></p>
+<p><img src="http://img.zhufengpeixun.cn/object_prototypes.png" alt="object_prototypes"></p>
+<h5 id="t5311.1.3.2 &#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x7684;prototype">11.1.3.2 &#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x7684;prototype <a href="#t5311.1.3.2 &#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x7684;prototype"> # </a></h5>
+<ul>
+<li>&#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x7684;<code>prototype</code>&#x7684;<strong>proto</strong>&#x6307;&#x5411;&#x7684;&#x5C31;&#x662F;Object.prototype</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/customefuntionprototype.png" alt="customefuntionprototype"></p>
+<h5 id="t5411.1.3.3 &#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570;">11.1.3.3 &#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570; <a href="#t5411.1.3.3 &#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570;"> # </a></h5>
+<ul>
+<li>&#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570;Foo.<strong>proto</strong>&#x6307;&#x5411;Function.prototype</li>
+<li>Function&#x7684;prototype&#x548C;<strong>proto</strong>&#x90FD;&#x6307;&#x5411;<code>Function.prototype</code></li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> add = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Function</span>(<span class="hljs-string">&apos;a&apos;</span>,<span class="hljs-string">&apos;b&apos;</span>,<span class="hljs-string">&apos;return a+b&apos;</span>);
+<span class="hljs-built_in">console</span>.log(add(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>));
+</code></pre>
+<p><img src="http://img.zhufengpeixun.cn/2functionprotype.png" alt="2functionprotype"></p>
+<p><img src="http://img.zhufengpeixun.cn/3functionprotype.png" alt="3functionprotype"></p>
+<h4 id="t5511.1.4 instanceof">11.1.4 instanceof <a href="#t5511.1.4 instanceof"> # </a></h4>
+<ul>
+<li>instanceof&#x8FD0;&#x7B97;&#x7B26;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E00;&#x822C;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;</li>
+<li>instanceof&#x7684;&#x5224;&#x65AD;&#x89C4;&#x5219;&#x662F;: &#x6CBF;&#x7740;&#x5BF9;&#x8C61;&#x7684;<code>__proto__</code>&#x8FD9;&#x6761;&#x94FE;&#x6765;&#x5411;&#x4E0A;&#x67E5;&#x627E;&#x627E;,&#x5982;&#x679C;&#x80FD;&#x627E;&#x5230;&#x51FD;&#x6570;&#x7684;prototype&#x5219;&#x8FD4;&#x56DE;true,&#x5426;&#x5219; &#x8FD4;&#x56DE;false</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/prototypechain.jpg" alt="prototypechain"></p>
+<h3 id="t5611.2 &#x6279;&#x91CF;&#x521B;&#x5EFA;&#x5BF9;&#x8C61;">11.2 &#x6279;&#x91CF;&#x521B;&#x5EFA;&#x5BF9;&#x8C61; <a href="#t5611.2 &#x6279;&#x91CF;&#x521B;&#x5EFA;&#x5BF9;&#x8C61;"> # </a></h3>
+<ul>
+<li>&#x901A;&#x8FC7;<code>new</code>&#x6765;&#x8C03;&#x7528;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x5C31;&#x6210;&#x4E3A;&#x4E86;&#x6784;&#x9020;&#x51FD;&#x6570;,&#x6784;&#x9020;&#x51FD;&#x6570;&#x91CC;&#x53EF;&#x4EE5;&#x5BF9;&#x4F8B;&#x5BF9;&#x8C61;&#x7684;&#x79C1;&#x6709;&#x5C5E;&#x6027;&#x8D4B;&#x503C;</li>
+<li>&#x6BCF;&#x4E2A;&#x51FD;&#x6570;&#x4F1A;&#x6709;&#x4E00;&#x4E2A;<code>prototype</code>&#x5C5E;&#x6027;&#xFF0C;&#x6B64;&#x539F;&#x578B;&#x5BF9;&#x8C61;&#x4E0A;&#x5B58;&#x653E;&#x6240;&#x6709;&#x5B9E;&#x4F8B;&#x7684;&#x516C;&#x6709;&#x65B9;&#x6CD5;</li>
+<li>&#x82E5;new&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x81EA;&#x5DF1;&#x8FD4;&#x56DE;&#x5F15;&#x7528;&#x503C;&#xFF0C;&#x5219;&#x4EE5;&#x81EA;&#x5DF1;&#x8FD4;&#x56DE;&#x7684;&#x4E3A;&#x4E3B;&#xFF0C;&#x5426;&#x5219; &#x8FD4;&#x56DE;&#x521B;&#x5EFA;&#x7684;&#x5B9E;&#x4F8B;</li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create">create</a></li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Person</span>(<span class="hljs-params">name</span>) </span>{
+    <span class="hljs-keyword">this</span>.name = name;
+}
+Person.prototype.getName = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.name);
+}
+<span class="hljs-keyword">let</span> person = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">&apos;zhufeng&apos;</span>);
+person.getName();
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-built_in">Object</span>.create = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">proto</span>) </span>{
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">F</span>(<span class="hljs-params"></span>) </span>{}
+    F.prototype = proto;
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> F();
+};
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_new</span>(<span class="hljs-params">clazz, ...args</span>) </span>{
+    <span class="hljs-keyword">let</span> _this = <span class="hljs-built_in">Object</span>.create(clazz.prototype);
+    <span class="hljs-keyword">let</span> result = clazz.call(_this, ...args);
+    <span class="hljs-keyword">if</span> ((result != <span class="hljs-literal">null</span> &amp;&amp; <span class="hljs-keyword">typeof</span> result === <span class="hljs-string">&apos;object&apos;</span>) || <span class="hljs-keyword">typeof</span> result === <span class="hljs-string">&apos;function&apos;</span>) {
+        <span class="hljs-keyword">return</span> result;
+    }
+    <span class="hljs-keyword">return</span> _this;
+}
+</code></pre>
+<h3 id="t5711.3  &#x7EE7;&#x627F;">11.3  &#x7EE7;&#x627F; <a href="#t5711.3  &#x7EE7;&#x627F;"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Father</span> </span>{
+    <span class="hljs-keyword">static</span> staticFatherName = <span class="hljs-string">&quot;FatherName&quot;</span>
+    <span class="hljs-keyword">static</span> staticGetFatherName = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">console</span>.log(Father.staticFatherName);
+    }
+    <span class="hljs-keyword">constructor</span>(public name) {
+        <span class="hljs-keyword">this</span>.name = name;
+    }
+    getName() {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.name);
+    }
+}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Child</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Father</span> </span>{
+    <span class="hljs-keyword">static</span> staticChildName = <span class="hljs-string">&quot;ChildName&quot;</span>
+    <span class="hljs-keyword">static</span> staticGetChildName = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">console</span>.log(Child.staticChildName);
+    }
+    <span class="hljs-keyword">constructor</span>(public name, public age) {
+        <span class="hljs-keyword">super</span>(name);
+        <span class="hljs-keyword">this</span>.age = age;
+    }
+    getAge() {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.age);
+    }
+}
+<span class="hljs-keyword">let</span> child = <span class="hljs-keyword">new</span> Child(<span class="hljs-string">&apos;zhufeng&apos;</span>, <span class="hljs-number">10</span>);
+child.getName();
+child.getAge();
+Child.staticGetFatherName();
+Child.staticGetChildName();
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> _extends = (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> extendStatics = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">Child, Father</span>) </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.setPrototypeOf(Child, Father);
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">Child, Father</span>) </span>{
+        extendStatics(Child, Father);
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Temp</span>(<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">this</span>.constructor = Child;
+        }
+        Temp.prototype = Father.prototype;
+        Child.prototype = <span class="hljs-keyword">new</span> Temp();
+    };
+})();
+
+<span class="hljs-keyword">var</span> Father = (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Father</span>(<span class="hljs-params">name</span>) </span>{
+        <span class="hljs-keyword">this</span>.name = name;
+    }
+    Father.prototype.getName = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.name);
+    };
+    Father.staticFatherName = <span class="hljs-string">&quot;FatherName&quot;</span>;
+    Father.staticGetFatherName = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">console</span>.log(Father.staticFatherName);
+    };
+    <span class="hljs-keyword">return</span> Father;
+}());
+<span class="hljs-comment">//_super&#x7236;&#x7C7B;&#x6784;&#x9020;&#x51FD;&#x6570;</span>
+<span class="hljs-keyword">var</span> Child = (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">_super</span>) </span>{
+    _extends(Child, _super);
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Child</span>(<span class="hljs-params">name, age</span>) </span>{
+        _super.call(<span class="hljs-keyword">this</span>, name);<span class="hljs-comment">//&#x7EE7;&#x627F;&#x7236;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x79C1;&#x6709;&#x5C5E;&#x6027;</span>
+        <span class="hljs-keyword">this</span>.age = age;
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+    }
+    Child.prototype.getAge = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.age);
+    };
+    Child.staticChildName = <span class="hljs-string">&quot;ChildName&quot;</span>;
+    Child.staticGetChildName = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">console</span>.log(Child.staticChildName);
+    };
+    <span class="hljs-keyword">return</span> Child;
+}(Father));
+
+<span class="hljs-keyword">let</span> child = <span class="hljs-keyword">new</span> Child(<span class="hljs-string">&apos;zhufeng&apos;</span>, <span class="hljs-number">10</span>);
+<span class="hljs-built_in">console</span>.log(child);
+
+child.getName();
+child.getAge();
+Child.staticGetFatherName();
+Child.staticGetChildName();
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> __extends = (<span class="hljs-keyword">this</span> &amp;&amp; <span class="hljs-keyword">this</span>.__extends) || (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> extendStatics = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">d, b</span>) </span>{
+        extendStatics = <span class="hljs-built_in">Object</span>.setPrototypeOf ||
+            ({ <span class="hljs-attr">__proto__</span>: [] } <span class="hljs-keyword">instanceof</span> <span class="hljs-built_in">Array</span> &amp;&amp; <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">d, b</span>) </span>{ d.__proto__ = b; }) ||
+            <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">d, b</span>) </span>{ <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> p <span class="hljs-keyword">in</span> b) <span class="hljs-keyword">if</span> (b.hasOwnProperty(p)) d[p] = b[p]; };
+        <span class="hljs-keyword">return</span> extendStatics(d, b);
+    };
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">d, b</span>) </span>{
+        extendStatics(d, b);
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">__</span>(<span class="hljs-params"></span>) </span>{ <span class="hljs-keyword">this</span>.constructor = d; }
+        d.prototype = b === <span class="hljs-literal">null</span> ? <span class="hljs-built_in">Object</span>.create(b) : (__.prototype = b.prototype, <span class="hljs-keyword">new</span> __());
+    };
+})();
+<span class="hljs-keyword">var</span> Father = <span class="hljs-comment">/** @class */</span> (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Father</span>(<span class="hljs-params">name</span>) </span>{
+        <span class="hljs-keyword">this</span>.name = name;
+        <span class="hljs-keyword">this</span>.name = name;
+    }
+    Father.prototype.getName = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.name);
+    };
+    Father.staticFatherName = <span class="hljs-string">&quot;FatherName&quot;</span>;
+    Father.staticGetFatherName = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">console</span>.log(Father.staticFatherName);
+    };
+    <span class="hljs-keyword">return</span> Father;
+}());
+<span class="hljs-keyword">var</span> Child = <span class="hljs-comment">/** @class */</span> (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">_super</span>) </span>{
+    __extends(Child, _super);
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Child</span>(<span class="hljs-params">name, age</span>) </span>{
+        <span class="hljs-keyword">var</span> _this = _super.call(<span class="hljs-keyword">this</span>, name) || <span class="hljs-keyword">this</span>;
+        _this.name = name;
+        _this.age = age;
+        _this.age = age;
+        <span class="hljs-keyword">return</span> _this;
+    }
+    Child.prototype.getAge = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.age);
+    };
+    Child.staticChildName = <span class="hljs-string">&quot;ChildName&quot;</span>;
+    Child.staticGetChildName = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">console</span>.log(Child.staticChildName);
+    };
+    <span class="hljs-keyword">return</span> Child;
+}(Father));
+<span class="hljs-keyword">var</span> child = <span class="hljs-keyword">new</span> Child(<span class="hljs-string">&apos;zhufeng&apos;</span>, <span class="hljs-number">10</span>);
+child.getName();
+child.getAge();
+Child.staticGetFatherName();
+Child.staticGetChildName();
+</code></pre>
+<h4 id="t5811.3.6 &#x539F;&#x578B;&#x94FE;&#x9762;&#x8BD5;&#x9898;">11.3.6 &#x539F;&#x578B;&#x94FE;&#x9762;&#x8BD5;&#x9898; <a href="#t5811.3.6 &#x539F;&#x578B;&#x94FE;&#x9762;&#x8BD5;&#x9898;"> # </a></h4>
+<ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">Operator_Precedence</a><pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Foo</span>(<span class="hljs-params"></span>) </span>{
+  getName = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-number">1</span>);
+  }
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+}
+Foo.getName = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-number">2</span>);
+}
+Foo.prototype.getName = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-number">3</span>);
+}
+<span class="hljs-keyword">var</span> getName = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-number">4</span>);
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getName</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-number">5</span>);
+}
+Foo.getName();
+getName();
+Foo().getName();
+getName();<span class="hljs-comment">//1</span>
+<span class="hljs-keyword">new</span> Foo.getName();
+<span class="hljs-keyword">new</span> Foo().getName();
+<span class="hljs-keyword">new</span> <span class="hljs-keyword">new</span> Foo().getName();
+<span class="hljs-comment">// 2 4 1 1 2 3 3</span>
+</code></pre>
+</li>
+</ul>
+<h4 id="t5911.3.7 &#x5F02;&#x6B65;&#x9762;&#x8BD5;&#x9898;">11.3.7 &#x5F02;&#x6B65;&#x9762;&#x8BD5;&#x9898; <a href="#t5911.3.7 &#x5F02;&#x6B65;&#x9762;&#x8BD5;&#x9898;"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">async1</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;async1 start&apos;</span>)
+    <span class="hljs-keyword">await</span> async2()
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;async1 end&apos;</span>)
+}
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">async2</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;async2&apos;</span>)
+}
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;script start&apos;</span>)
+setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;setTimeout&apos;</span>)
+})
+async1()
+<span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">resolve</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;promise1&apos;</span>)
+    resolve()
+}).then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;promise2&apos;</span>)
+})
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;script end&apos;</span>)
+</code></pre>
+<pre><code class="lang-js">script start
+async1 start
+async2
+promise1
+script end
+async1 end
+promise2
+setTimeout
+</code></pre>
+<h2 id="t6012. ES6">12. ES6 <a href="#t6012. ES6"> # </a></h2>
+<ul>
+<li>&#x8BCD;&#x6CD5;&#x73AF;&#x5883;VS&#x9759;&#x6001;&#x4F5C;&#x7528;&#x57DF;</li>
+<li>&#x53D8;&#x91CF;&#x73AF;&#x5883;(variableEnvironment)&#x548C;&#x8BCD;&#x6CD5;&#x73AF;&#x5883;(Lexical Environment)</li>
+<li>&#x95ED;&#x5305;</li>
+</ul>
+<h3 id="t6112.1 &#x8BCD;&#x6CD5;&#x73AF;&#x5883;">12.1 &#x8BCD;&#x6CD5;&#x73AF;&#x5883; <a href="#t6112.1 &#x8BCD;&#x6CD5;&#x73AF;&#x5883;"> # </a></h3>
+<ul>
+<li>let &#x539F;&#x7406;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fn</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> a = <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">let</span> b = <span class="hljs-number">2</span>;
+    {
+        <span class="hljs-keyword">let</span> b = <span class="hljs-number">3</span>;
+        <span class="hljs-keyword">var</span> c = <span class="hljs-number">4</span>;
+        <span class="hljs-keyword">let</span> d = <span class="hljs-number">5</span>;
+        <span class="hljs-comment">//console.log(a, b, c, d);//TODO</span>
+    }
+    {
+        <span class="hljs-keyword">let</span> b = <span class="hljs-number">6</span>;
+        <span class="hljs-keyword">let</span> d = <span class="hljs-number">7</span>;
+        <span class="hljs-comment">//console.log(a, b, c, d);</span>
+    }
+}
+fn();
+
+<span class="hljs-comment">/**
+ * 1.global&#x7F16;&#x8BD1;&#x9636;&#x6BB5;
+ */</span>
+
+<span class="hljs-keyword">let</span> globalEC = {
+    <span class="hljs-attr">this</span>: globalThis,
+    <span class="hljs-attr">outer</span>: <span class="hljs-literal">null</span>,<span class="hljs-comment">//&#x5916;&#x90E8;&#x7684;&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;,&#x8BCD;&#x6CD5;&#x4F5C;&#x7528;&#x57DF;&#x5C31;&#x662F;&#x9759;&#x6001;&#x4F5C;&#x7528;&#x57DF;&#xFF0C;&#x5C31;&#x662F;&#x6307;&#x4F5C;&#x7528;&#x57DF;&#x662F;&#x7531;&#x4EE3;&#x7801;&#x4E2D;&#x51FD;&#x6570;&#x58F0;&#x660E;&#x7684;&#x4F4D;&#x7F6E;&#x6765;&#x51B3;&#x5B9A;&#x7684;</span>
+    <span class="hljs-attr">variableEnvironment</span>: {
+        fn() { <span class="hljs-built_in">console</span>.log(a, b, c, d) }
+    },
+    <span class="hljs-attr">lexicalEnvironment</span>: {}
+}
+
+
+<span class="hljs-comment">/**
+ * 2.fn&#x7F16;&#x8BD1;&#x9636;&#x6BB5;
+ */</span>
+<span class="hljs-keyword">let</span> fnEC = {
+    <span class="hljs-attr">this</span>: globalThis,
+    <span class="hljs-attr">outer</span>: globalEC,
+    <span class="hljs-attr">variableEnvironment</span>: { <span class="hljs-attr">a</span>: <span class="hljs-literal">undefined</span>, <span class="hljs-attr">c</span>: <span class="hljs-literal">undefined</span> },
+    <span class="hljs-attr">lexicalEnvironment</span>: [{ <span class="hljs-attr">b</span>: <span class="hljs-literal">undefined</span> }]
+}
+<span class="hljs-comment">/**
+ * 3.&#x7F16;&#x8BD1;&#x4EE3;&#x7801;&#x5757;1
+ */</span>
+fnEC.variableEnvironment.a = <span class="hljs-number">1</span>;
+fnEC.lexicalEnvironment.b = <span class="hljs-number">2</span>;
+fnEC.lexicalEnvironment.push({
+    <span class="hljs-attr">b</span>: <span class="hljs-literal">undefined</span>,
+    <span class="hljs-attr">d</span>: <span class="hljs-literal">undefined</span>
+});
+<span class="hljs-comment">/**
+ * 4.&#x6267;&#x884C;&#x4EE3;&#x7801;&#x5757;1
+ */</span>
+
+fnEC.lexicalEnvironment[<span class="hljs-number">1</span>].b = <span class="hljs-number">3</span>;
+fnEC.variableEnvironment.c = <span class="hljs-number">4</span>;
+fnEC.lexicalEnvironment[<span class="hljs-number">1</span>].d = <span class="hljs-number">5</span>;
+
+<span class="hljs-built_in">console</span>.log(getValue(<span class="hljs-string">&apos;a&apos;</span>, fnEC), getValue(<span class="hljs-string">&apos;b&apos;</span>, fnEC), getValue(<span class="hljs-string">&apos;c&apos;</span>, fnEC), getValue(<span class="hljs-string">&apos;d&apos;</span>, fnEC));
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getValue</span>(<span class="hljs-params">name, ec</span>) </span>{
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = ec.lexicalEnvironment.length - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) {
+        <span class="hljs-keyword">if</span> (name <span class="hljs-keyword">in</span> ec.lexicalEnvironment[i]) {
+            <span class="hljs-keyword">return</span> ec.lexicalEnvironment[i][name];
+        }
+    }
+    <span class="hljs-keyword">let</span> currentVariableEnvironment = ec.variableEnvironment;
+    <span class="hljs-keyword">while</span> (currentVariableEnvironment) {
+        <span class="hljs-keyword">if</span> (name <span class="hljs-keyword">in</span> currentVariableEnvironment) {
+            <span class="hljs-keyword">return</span> currentVariableEnvironment[name];
+        }
+        currentVariableEnvironment = currentVariableEnvironment.outer;
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+}
+
+<span class="hljs-comment">/**
+ * 5.&#x7F16;&#x8BD1;&#x4EE3;&#x7801;&#x5757;2
+ */</span>
+fnEC.lexicalEnvironment.pop();
+fnEC.lexicalEnvironment.push({
+    <span class="hljs-attr">b</span>: <span class="hljs-literal">undefined</span>,
+    <span class="hljs-attr">d</span>: <span class="hljs-literal">undefined</span>
+});
+<span class="hljs-comment">/**
+ * 5.&#x6267;&#x884C;&#x4EE3;&#x7801;&#x5757;2
+ */</span>
+fnEC.lexicalEnvironment[<span class="hljs-number">1</span>].b = <span class="hljs-number">6</span>;
+fnEC.lexicalEnvironment[<span class="hljs-number">1</span>].d = <span class="hljs-number">7</span>;
+<span class="hljs-built_in">console</span>.log(getValue(<span class="hljs-string">&apos;a&apos;</span>, fnEC), getValue(<span class="hljs-string">&apos;b&apos;</span>, fnEC), getValue(<span class="hljs-string">&apos;c&apos;</span>, fnEC), getValue(<span class="hljs-string">&apos;d&apos;</span>, fnEC));
+</code></pre>
+<h3 id="t6212.2 &#x9759;&#x6001;&#x4F5C;&#x7528;&#x57DF;">12.2 &#x9759;&#x6001;&#x4F5C;&#x7528;&#x57DF; <a href="#t6212.2 &#x9759;&#x6001;&#x4F5C;&#x7528;&#x57DF;"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-comment">/* let name = &apos;zhufeng&apos;
+{
+    //ReferenceError: Cannot access &apos;name&apos; before initialization
+    console.log(name)
+    let name = &apos;jiagou&apos;
+} */</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">two</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(a);
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">one</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> a = <span class="hljs-number">2</span>;
+    two();
+}
+<span class="hljs-keyword">var</span> a = <span class="hljs-number">1</span>;
+one();
+
+<span class="hljs-keyword">let</span> globalEC = {
+    <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>,
+    one() { },
+    two() { }
+}
+<span class="hljs-keyword">let</span> twoEC = {
+    <span class="hljs-attr">this</span>: globalThis,
+    <span class="hljs-attr">outer</span>: globalEC,
+    <span class="hljs-attr">variableEnvironment</span>: { <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>, two() { <span class="hljs-built_in">console</span>.log(a) } } <span class="hljs-comment">//&#x51FA;&#x751F;&#x7684;&#x5730;&#x65B9;</span>
+}
+<span class="hljs-keyword">var</span> twoEc = { <span class="hljs-attr">outer</span>: globalEC };
+<span class="hljs-built_in">console</span>.log(twoEC.outer.a);
+</code></pre>
+<h3 id="t6312.3 &#x95ED;&#x5305;">12.3 &#x95ED;&#x5305; <a href="#t6312.3 &#x95ED;&#x5305;"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">one</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> a = <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">var</span> name = <span class="hljs-string">&apos;one&apos;</span>;
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">two</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">var</span> b = <span class="hljs-number">2</span>;
+        <span class="hljs-keyword">var</span> name = <span class="hljs-string">&apos;two&apos;</span>;
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">three</span>(<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">var</span> c = <span class="hljs-number">3</span>;
+            <span class="hljs-keyword">var</span> name = <span class="hljs-string">&apos;three&apos;</span>;
+            <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.log(a, b, c);
+
+        }
+        <span class="hljs-keyword">return</span> three();
+    }
+    <span class="hljs-keyword">return</span> two();
+}
+<span class="hljs-keyword">var</span> fn = one();
+fn();
+<span class="hljs-keyword">let</span> globalEC = {
+    <span class="hljs-attr">this</span>: globalThis,
+    <span class="hljs-attr">outer</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">variableEnvironment</span>: { one() { } }
+}
+<span class="hljs-keyword">let</span> oneEC = {
+    <span class="hljs-attr">this</span>: globalThis,
+    <span class="hljs-attr">outer</span>: globalEC.variableEnvironment,
+    <span class="hljs-attr">variableEnvironment</span>: { <span class="hljs-attr">a</span>: <span class="hljs-number">1</span>, two() { }, <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;one&apos;</span> }
+}
+<span class="hljs-keyword">let</span> twoEC = {
+    <span class="hljs-attr">this</span>: globalThis,
+    <span class="hljs-attr">outer</span>: oneEC.variableEnvironment,
+    <span class="hljs-attr">variableEnvironment</span>: { <span class="hljs-attr">b</span>: <span class="hljs-number">2</span>, three() { }, <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;two&apos;</span> }
+}
+<span class="hljs-keyword">let</span> threeEC = {
+    <span class="hljs-attr">this</span>: globalThis,
+    <span class="hljs-attr">outer</span>: twoEC.variableEnvironment,
+    <span class="hljs-attr">variableEnvironment</span>: { <span class="hljs-attr">c</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;three&apos;</span> }
+}
+<span class="hljs-keyword">let</span> fnEC = {
+    <span class="hljs-attr">this</span>: globalThis,
+    <span class="hljs-attr">outer</span>: globalEC,
+    <span class="hljs-comment">//Closure(three) Closure(two) Closure(one)</span>
+    <span class="hljs-attr">closures</span>: [{ <span class="hljs-attr">a</span>: <span class="hljs-number">1</span> }, { <span class="hljs-attr">b</span>: <span class="hljs-number">2</span> }, { <span class="hljs-attr">c</span>: <span class="hljs-number">3</span> }],
+    <span class="hljs-attr">variableEnvironment</span>: { <span class="hljs-attr">c</span>: <span class="hljs-number">3</span> }
+}
+<span class="hljs-built_in">console</span>.log(getValue(<span class="hljs-string">&apos;a&apos;</span>, fnEC), getValue(<span class="hljs-string">&apos;b&apos;</span>, fnEC), getValue(<span class="hljs-string">&apos;c&apos;</span>, fnEC));
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getValue</span>(<span class="hljs-params">name, ec</span>) </span>{
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = ec.closures.length - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) {
+        <span class="hljs-keyword">if</span> (name <span class="hljs-keyword">in</span> ec.closures[i]) {
+            <span class="hljs-keyword">return</span> ec.closures[i][name];
+        }
+    }
+    <span class="hljs-keyword">let</span> currentVariableEnvironment = ec.variableEnvironment;
+    <span class="hljs-keyword">while</span> (currentVariableEnvironment) {
+        <span class="hljs-keyword">if</span> (name <span class="hljs-keyword">in</span> currentVariableEnvironment) {
+            <span class="hljs-keyword">return</span> currentVariableEnvironment[name];
+        }
+        currentVariableEnvironment = currentVariableEnvironment.outer;
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+}
+</code></pre>
+
+    </div>
+</div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+    aria-labelledby="loginModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="loginModalLabel">请登录</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="username" class="control-label">姓名:</label>
+                        <input type="text" class="form-control" id="username" placeholder="珠峰架构VIP会员系统用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">密码:</label>
+                        <input type="text" class="form-control" id="password" placeholder="珠峰架构VIP会员系统密码">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                    data-dismiss="modal">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

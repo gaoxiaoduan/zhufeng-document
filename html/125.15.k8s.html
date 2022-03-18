@@ -1,0 +1,1529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+   
+                    
+
+                        
+<div class="warpper">
+    <div class="page-toc">
+        <ul><li><a href="#t01.灰度发布">1.灰度发布</a><ul><li><a href="#t11.1 准备新版本Service">1.1 准备新版本Service</a></li><li><a href="#t21.2 根据 Cookie 切分流量">1.2 根据 Cookie 切分流量</a></li><li><a href="#t31.3 基于 Header 切分流量">1.3 基于 Header 切分流量</a></li><li><a href="#t41.4 基于权重切分流量">1.4 基于权重切分流量</a></li><li><a href="#t51.5 优先级">1.5 优先级</a></li></ul></li><li><a href="#t62.滚动发布">2.滚动发布</a><ul><li><a href="#t72.1 发布流程和策略">2.1 发布流程和策略</a></li><li><a href="#t82.2 配置文件">2.2 配置文件</a></li></ul></li><li><a href="#t93.服务可用性探针">3.服务可用性探针</a><ul><li><a href="#t103.1 什么是健康度检查？">3.1 什么是健康度检查？</a></li><li><a href="#t113.2 什么是服务探针？">3.2 什么是服务探针？</a><ul><li><a href="#t123.2.1 存活探针 LivenessProbe">3.2.1 存活探针 LivenessProbe</a></li><li><a href="#t133.2.2 可用探针 ReadinessProbe">3.2.2 可用探针 ReadinessProbe</a></li><li><a href="#t143.2.3 启动探针 StartupProbe">3.2.3 启动探针 StartupProbe</a></li></ul></li><li><a href="#t153.3 探测方式">3.3 探测方式</a><ul><li><a href="#t163.3.1 ExecAction">3.3.1 ExecAction</a></li><li><a href="#t173.3.2 TCPSocketAction">3.3.2 TCPSocketAction</a></li><li><a href="#t183.3.3 HTTPGetAction">3.3.3 HTTPGetAction</a></li></ul></li></ul></li><li><a href="#t194.储存机密信息">4.储存机密信息</a><ul><li><a href="#t204.1 什么是 Secret">4.1 什么是 Secret</a></li><li><a href="#t214.2 Opaque 类型">4.2 Opaque 类型</a><ul><li><a href="#t224.2.1 命令行创建">4.2.1 命令行创建</a></li><li><a href="#t234.2.2 配置文件创建">4.2.2 配置文件创建</a></li></ul></li><li><a href="#t244.3 私有镜像库认证">4.3 私有镜像库认证</a><ul><li><a href="#t254.3.1 命令行创建">4.3.1 命令行创建</a></li><li><a href="#t264.3.2 通过文件创建">4.3.2 通过文件创建</a></li></ul></li><li><a href="#t274.4 使用">4.4 使用</a><ul><li><a href="#t284.4.1 Volume 挂载">4.4.1 Volume 挂载</a></li><li><a href="#t294.4.2 环境变量注入">4.4.2 环境变量注入</a></li><li><a href="#t304.4.3 Docker 私有库认证">4.4.3 Docker 私有库认证</a></li></ul></li></ul></li><li><a href="#t315.服务发现">5.服务发现</a><ul><li><a href="#t325.1 服务发现">5.1 服务发现</a></li><li><a href="#t335.2 CoreDNS">5.2 CoreDNS</a></li><li><a href="#t345.3  服务发现规则">5.3  服务发现规则</a></li></ul></li><li><a href="#t356.统一管理服务环境变量">6.统一管理服务环境变量</a><ul><li><a href="#t366.1 什么是 ConfigMap">6.1 什么是 ConfigMap</a></li><li><a href="#t376.2 创建">6.2 创建</a><ul><li><a href="#t386.2.1 命令行创建">6.2.1 命令行创建</a></li><li><a href="#t396.2.2 配置清单创建">6.2.2 配置清单创建</a></li><li><a href="#t406.2.3 文件创建">6.2.3 文件创建</a></li><li><a href="#t416.2.4 目录创建">6.2.4 目录创建</a></li></ul></li><li><a href="#t426.3 使用方式">6.3 使用方式</a><ul><li><a href="#t436.3.1 环境变量注入">6.3.1 环境变量注入</a></li><li><a href="#t446.3.2 存储卷挂载">6.3.2 存储卷挂载</a></li></ul></li></ul></li><li><a href="#t457.污点与容忍">7.污点与容忍</a><ul><li><a href="#t467.1 么是污点和容忍度？">7.1 么是污点和容忍度？</a></li></ul></li></ul>
+    </div>
+    <div class="content markdown-body">
+        <h2 id="t01.&#x7070;&#x5EA6;&#x53D1;&#x5E03;">1.&#x7070;&#x5EA6;&#x53D1;&#x5E03; <a href="#t01.&#x7070;&#x5EA6;&#x53D1;&#x5E03;"> # </a></h2>
+<ul>
+<li>&#x7070;&#x5EA6;&#x53D1;&#x5E03;&#x662F;&#x4E00;&#x79CD;&#x53D1;&#x5E03;&#x65B9;&#x5F0F;&#xFF0C;&#x4E5F;&#x53EB;&#x91D1;&#x4E1D;&#x96C0;&#x53D1;&#x5E03;</li>
+<li>&#x8D77;&#x6E90;&#x662F;&#x77FF;&#x5DE5;&#x5728;&#x4E0B;&#x4E95;&#x4E4B;&#x524D;&#x4F1A;&#x5148;&#x653E;&#x4E00;&#x53EA;&#x91D1;&#x4E1D;&#x96C0;&#x5230;&#x4E95;&#x91CC;&#xFF0C;&#x5982;&#x679C;&#x91D1;&#x4E1D;&#x96C0;&#x4E0D;&#x53EB;&#x4E86;&#xFF0C;&#x5C31;&#x4EE3;&#x8868;&#x74E6;&#x65AF;&#x6D53;&#x5EA6;&#x9AD8;&#x3002;&#x539F;&#x56E0;&#x662F;&#x91D1;&#x4E1D;&#x96C0;&#x5BF9;&#x74E6;&#x65AF;&#x6C14;&#x4F53;&#x5F88;&#x654F;&#x611F;</li>
+<li>&#x7070;&#x5EA6;&#x53D1;&#x5E03;&#x7684;&#x505A;&#x6CD5;&#x662F;&#xFF1A;&#x4F1A;&#x5728;&#x73B0;&#x5B58;&#x65E7;&#x5E94;&#x7528;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#xFF0C;&#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x65B0;&#x7248;&#x5E94;&#x7528;</li>
+<li>&#x4F46;&#x662F;&#x65B0;&#x7248;&#x5E94;&#x7528;&#x5E76;&#x4E0D;&#x4F1A;&#x76F4;&#x63A5;&#x8BA9;&#x7528;&#x6237;&#x8BBF;&#x95EE;&#x3002;&#x800C;&#x662F;&#x5148;&#x8BA9;&#x6D4B;&#x8BD5;&#x540C;&#x5B66;&#x53BB;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x95EE;&#x9898;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x5C06;&#x771F;&#x6B63;&#x7684;&#x7528;&#x6237;&#x6D41;&#x91CF;&#x6162;&#x6162;&#x5BFC;&#x5165;&#x5230;&#x65B0;&#x7248;</li>
+<li>&#x5728;&#x8FD9;&#x4E2D;&#x95F4;&#xFF0C;&#x6301;&#x7EED;&#x5BF9;&#x65B0;&#x7248;&#x672C;&#x8FD0;&#x884C;&#x72B6;&#x6001;&#x505A;&#x89C2;&#x5BDF;&#xFF0C;&#x76F4;&#x5230;&#x6162;&#x6162;&#x5207;&#x6362;&#x8FC7;&#x53BB;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x6240;&#x8C13;&#x7684;A/B&#x6D4B;&#x8BD5;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x62DB;&#x52DF;&#x4E00;&#x4E9B;&#x7070;&#x5EA6;&#x7528;&#x6237;&#xFF0C;&#x7ED9;&#x4ED6;&#x4EEC;&#x8BBE;&#x7F6E;&#x72EC;&#x6709;&#x7684;&#x7070;&#x5EA6;&#x6807;&#x793A;&#xFF08;Cookie&#xFF0C;Header&#xFF09;&#xFF0C;&#x6765;&#x8BA9;&#x4ED6;&#x4EEC;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x5230;&#x65B0;&#x7248;&#x5E94;&#x7528;</li>
+<li>&#x5F53;&#x7136;&#xFF0C;&#x5982;&#x679C;&#x4E2D;&#x95F4;&#x5207;&#x6362;&#x51FA;&#x73B0;&#x95EE;&#x9898;&#xFF0C;&#x4E5F;&#x5E94;&#x8BE5;&#x5C06;&#x6D41;&#x91CF;&#x8FC5;&#x901F;&#x5730;&#x5207;&#x6362;&#x5230;&#x8001;&#x5E94;&#x7528;&#x4E0A;
+<img src="https://img.zhufengpeixun.com/7a69348037ccf22a240499919efff1e9" alt="jinsique"></li>
+</ul>
+<h3 id="t11.1 &#x51C6;&#x5907;&#x65B0;&#x7248;&#x672C;Service">1.1 &#x51C6;&#x5907;&#x65B0;&#x7248;&#x672C;Service <a href="#t11.1 &#x51C6;&#x5907;&#x65B0;&#x7248;&#x672C;Service"> # </a></h3>
+<pre><code class="lang-js">cp deployment-user-v1.yaml deployment-user-v2.yaml
+</code></pre>
+<pre><code class="lang-diff">apiVersion: apps/v1  #API &#x914D;&#x7F6E;&#x7248;&#x672C;
+kind: Deployment     #&#x8D44;&#x6E90;&#x7C7B;&#x578B;
+metadata:
+<span class="hljs-addition">+  name: user-v2     #&#x8D44;&#x6E90;&#x540D;&#x79F0;</span>
+spec:
+  selector:
+    matchLabels:
+<span class="hljs-addition">+      app: user-v2 #&#x544A;&#x8BC9;deployment&#x6839;&#x636E;&#x89C4;&#x5219;&#x5339;&#x914D;&#x76F8;&#x5E94;&#x7684;Pod&#x8FDB;&#x884C;&#x63A7;&#x5236;&#x548C;&#x7BA1;&#x7406;&#xFF0C;matchLabels&#x5B57;&#x6BB5;&#x5339;&#x914D;Pod&#x7684;label&#x503C;</span>
+  replicas: 3 #&#x58F0;&#x660E;&#x4E00;&#x4E2A; Pod,&#x526F;&#x672C;&#x7684;&#x6570;&#x91CF;
+  template:
+    metadata:
+      labels:
+<span class="hljs-addition">+        app: user-v2 #Pod&#x7684;&#x540D;&#x79F0;</span>
+    spec:   #&#x7EC4;&#x5185;&#x521B;&#x5EFA;&#x7684; Pod &#x4FE1;&#x606F;
+      containers:
+      - name: nginx #&#x5BB9;&#x5668;&#x7684;&#x540D;&#x79F0;
+<span class="hljs-addition">+        image: registry.cn-beijing.aliyuncs.com/zhangrenyang/nginx:user-v2</span>
+        ports:
+        - containerPort: 80 #&#x5BB9;&#x5668;&#x5185;&#x6620;&#x5C04;&#x7684;&#x7AEF;&#x53E3;
+</code></pre>
+<p>service-user-v2.yaml</p>
+<pre><code class="lang-diff">apiVersion: v1
+kind: Service
+metadata:
+<span class="hljs-addition">+  name: service-user-v2</span>
+spec:
+  selector:
+<span class="hljs-addition">+    app: user-v2</span>
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+  type: NodePort
+</code></pre>
+<pre><code class="lang-js">kubectl apply -f deployment-user-v2.yaml service-user-v2.yaml
+</code></pre>
+<h3 id="t21.2 &#x6839;&#x636E; Cookie &#x5207;&#x5206;&#x6D41;&#x91CF;">1.2 &#x6839;&#x636E; Cookie &#x5207;&#x5206;&#x6D41;&#x91CF; <a href="#t21.2 &#x6839;&#x636E; Cookie &#x5207;&#x5206;&#x6D41;&#x91CF;"> # </a></h3>
+<ul>
+<li>&#x57FA;&#x4E8E; Cookie &#x5207;&#x5206;&#x6D41;&#x91CF;&#x3002;&#x8FD9;&#x79CD;&#x5B9E;&#x73B0;&#x539F;&#x7406;&#x4E3B;&#x8981;&#x6839;&#x636E;&#x7528;&#x6237;&#x8BF7;&#x6C42;&#x4E2D;&#x7684; Cookie &#x662F;&#x5426;&#x5B58;&#x5728;&#x7070;&#x5EA6;&#x6807;&#x793A; Cookie&#x53BB;&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x7070;&#x5EA6;&#x7528;&#x6237;&#xFF0C;&#x518D;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x8FD4;&#x56DE;&#x7070;&#x5EA6;&#x7248;&#x672C;&#x670D;&#x52A1;</li>
+<li><code>nginx.ingress.kubernetes.io/canary</code>&#xFF1A;&#x53EF;&#x9009;&#x503C;&#x4E3A; true / false &#x3002;&#x4EE3;&#x8868;&#x662F;&#x5426;&#x5F00;&#x542F;&#x7070;&#x5EA6;&#x529F;&#x80FD;</li>
+<li><code>nginx.ingress.kubernetes.io/canary-by-cookie</code>&#xFF1A;&#x7070;&#x5EA6;&#x53D1;&#x5E03; cookie &#x7684; key&#x3002;&#x5F53; key &#x503C;&#x7B49;&#x4E8E; always &#x65F6;&#xFF0C;&#x7070;&#x5EA6;&#x89E6;&#x53D1;&#x751F;&#x6548;&#x3002;&#x7B49;&#x4E8E;&#x5176;&#x4ED6;&#x503C;&#x65F6;&#xFF0C;&#x5219;&#x4E0D;&#x4F1A;&#x8D70;&#x7070;&#x5EA6;&#x73AF;&#x5883;
+ingress-gray.yaml <pre><code class="lang-js">apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+name: user-canary
+annotations:
+  kubernetes.io/ingress.class: nginx
+  nginx.ingress.kubernetes.io/rewrite-target: /
+  nginx.ingress.kubernetes.io/canary: &quot;true&quot;
+  nginx.ingress.kubernetes.io/canary-by-cookie: &quot;vip_user&quot;
+spec:
+rules:
+- http:
+    paths: 
+     - backend:
+        serviceName: service-user-v2
+        servicePort: 80
+backend:
+   serviceName: service-user-v2
+   servicePort: 80
+</code></pre>
+</li>
+<li>&#x751F;&#x6548;&#x914D;&#x7F6E;&#x6587;&#x4EF6;<pre><code class="lang-js">kubectl apply -f ./ingress-gray.yaml 
+</code></pre>
+</li>
+<li>&#x6765;&#x83B7;&#x53D6; ingress &#x7684;&#x5916;&#x90E8;&#x7AEF;&#x53E3;</li>
+<li>-n: &#x6839;&#x636E;&#x8D44;&#x6E90;&#x540D;&#x79F0;&#x8FDB;&#x884C;&#x6A21;&#x7CCA;&#x67E5;&#x8BE2;<pre><code class="lang-js">kubectl -n ingress-nginx <span class="hljs-keyword">get</span> svc
+</code></pre>
+<pre><code class="lang-js">curl http:<span class="hljs-comment">//172.31.178.169:31234/user</span>
+curl http:<span class="hljs-comment">//118.190.156.138:31234/user</span>
+curl --cookie <span class="hljs-string">&quot;vip_user=always&quot;</span>  http:<span class="hljs-comment">//172.31.178.169:31234/user</span>
+</code></pre>
+<h3 id="t31.3 &#x57FA;&#x4E8E; Header &#x5207;&#x5206;&#x6D41;&#x91CF;">1.3 &#x57FA;&#x4E8E; Header &#x5207;&#x5206;&#x6D41;&#x91CF; <a href="#t31.3 &#x57FA;&#x4E8E; Header &#x5207;&#x5206;&#x6D41;&#x91CF;"> # </a></h3>
+</li>
+<li>&#x57FA;&#x4E8E; Header &#x5207;&#x5206;&#x6D41;&#x91CF;&#xFF0C;&#x8FD9;&#x79CD;&#x5B9E;&#x73B0;&#x539F;&#x7406;&#x4E3B;&#x8981;&#x6839;&#x636E;&#x7528;&#x6237;&#x8BF7;&#x6C42;&#x4E2D;&#x7684; header &#x662F;&#x5426;&#x5B58;&#x5728;&#x7070;&#x5EA6;&#x6807;&#x793A; header&#x53BB;&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x7070;&#x5EA6;&#x7528;&#x6237;&#xFF0C;&#x518D;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x8FD4;&#x56DE;&#x7070;&#x5EA6;&#x7248;&#x672C;&#x670D;&#x52A1;</li>
+</ul>
+<pre><code class="lang-js">vi ingress-gray.yaml 
+</code></pre>
+<pre><code class="lang-diff">apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: user-canary
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/canary: &quot;true&quot;
+<span class="hljs-addition">+    nginx.ingress.kubernetes.io/canary-by-header: &quot;name&quot;</span>
+<span class="hljs-addition">+    nginx.ingress.kubernetes.io/canary-by-header-value: &quot;vip&quot;</span>
+spec:
+  rules:
+  - http:
+      paths: 
+       - backend:
+          serviceName: service-user-v2
+          servicePort: 80
+  backend:
+     serviceName: service-user-v2
+     servicePort: 80
+</code></pre>
+<pre><code class="lang-js">kubectl apply -f ingress-gray.yaml
+curl --header <span class="hljs-string">&quot;name:vip&quot;</span>  http:<span class="hljs-comment">//172.31.178.169:31234/user</span>
+</code></pre>
+<h3 id="t41.4 &#x57FA;&#x4E8E;&#x6743;&#x91CD;&#x5207;&#x5206;&#x6D41;&#x91CF;">1.4 &#x57FA;&#x4E8E;&#x6743;&#x91CD;&#x5207;&#x5206;&#x6D41;&#x91CF; <a href="#t41.4 &#x57FA;&#x4E8E;&#x6743;&#x91CD;&#x5207;&#x5206;&#x6D41;&#x91CF;"> # </a></h3>
+<ul>
+<li>&#x8FD9;&#x79CD;&#x5B9E;&#x73B0;&#x539F;&#x7406;&#x4E3B;&#x8981;&#x662F;&#x6839;&#x636E;&#x7528;&#x6237;&#x8BF7;&#x6C42;&#xFF0C;&#x901A;&#x8FC7;&#x6839;&#x636E;&#x7070;&#x5EA6;&#x767E;&#x5206;&#x6BD4;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x8F6C;&#x53D1;&#x5230;&#x7070;&#x5EA6;&#x670D;&#x52A1;&#x73AF;&#x5883;&#x4E2D;</li>
+<li><code>nginx.ingress.kubernetes.io/canary-weight</code>&#xFF1A;&#x503C;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4E3A; 0-100 &#x7684;&#x6570;&#x5B57;&#xFF0C;&#x4EE3;&#x8868;&#x7070;&#x5EA6;&#x73AF;&#x5883;&#x547D;&#x4E2D;&#x6982;&#x7387;&#x3002;&#x5982;&#x679C;&#x503C;&#x4E3A; 0&#xFF0C;&#x5219;&#x8868;&#x793A;&#x4E0D;&#x4F1A;&#x8D70;&#x7070;&#x5EA6;&#x3002;&#x503C;&#x8D8A;&#x5927;&#x547D;&#x4E2D;&#x6982;&#x7387;&#x8D8A;&#x5927;&#x3002;&#x5F53;&#x503C; = 100 &#x65F6;&#xFF0C;&#x4EE3;&#x8868;&#x5168;&#x8D70;&#x7070;&#x5EA6;</li>
+</ul>
+<pre><code class="lang-js">vi ingress-gray.yaml 
+</code></pre>
+<pre><code class="lang-diff">apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: user-canary
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/canary: &quot;true&quot;
+<span class="hljs-addition">+   nginx.ingress.kubernetes.io/canary-weight: &quot;50&quot;</span>
+spec:
+  rules:
+  - http:
+      paths: 
+       - backend:
+          serviceName: service-user-v2
+          servicePort: 80
+  backend:
+     serviceName: service-user-v2
+     servicePort: 80
+</code></pre>
+<pre><code class="lang-js">kubectl apply -f ingress-gray.yaml
+<span class="hljs-keyword">for</span> ((i=<span class="hljs-number">1</span>; i&lt;=<span class="hljs-number">10</span>; i++)); <span class="hljs-keyword">do</span> curl http:<span class="hljs-comment">//172.31.178.169:31234/user; done</span>
+</code></pre>
+<h3 id="t51.5 &#x4F18;&#x5148;&#x7EA7;">1.5 &#x4F18;&#x5148;&#x7EA7; <a href="#t51.5 &#x4F18;&#x5148;&#x7EA7;"> # </a></h3>
+<ul>
+<li>canary-by-header -&gt; canary-by-cookie -&gt; canary-weight</li>
+<li>k8s &#x4F1A;&#x4F18;&#x5148;&#x53BB;&#x5339;&#x914D; header &#xFF0C;&#x5982;&#x679C;&#x672A;&#x5339;&#x914D;&#x5219;&#x53BB;&#x5339;&#x914D; cookie &#xFF0C;&#x6700;&#x540E;&#x662F; weight</li>
+</ul>
+<h2 id="t62.&#x6EDA;&#x52A8;&#x53D1;&#x5E03;">2.&#x6EDA;&#x52A8;&#x53D1;&#x5E03; <a href="#t62.&#x6EDA;&#x52A8;&#x53D1;&#x5E03;"> # </a></h2>
+<ul>
+<li>&#x6EDA;&#x52A8;&#x53D1;&#x5E03;&#xFF0C;&#x5219;&#x662F;&#x6211;&#x4EEC;&#x4E00;&#x822C;&#x6240;&#x8BF4;&#x7684;&#x65E0;&#x5B95;&#x673A;&#x53D1;&#x5E03;&#x3002;&#x5176;&#x53D1;&#x5E03;&#x65B9;&#x5F0F;&#x5982;&#x540C;&#x540D;&#x79F0;&#x4E00;&#x6837;&#xFF0C;&#x4E00;&#x6B21;&#x53D6;&#x51FA;&#x4E00;&#x53F0;/&#x591A;&#x53F0;&#x670D;&#x52A1;&#x5668;&#xFF08;&#x770B;&#x7B56;&#x7565;&#x914D;&#x7F6E;&#xFF09;&#x8FDB;&#x884C;&#x65B0;&#x7248;&#x672C;&#x66F4;&#x65B0;&#x3002;&#x5F53;&#x53D6;&#x51FA;&#x7684;&#x670D;&#x52A1;&#x5668;&#x65B0;&#x7248;&#x786E;&#x4FDD;&#x65E0;&#x95EE;&#x9898;&#x540E;&#xFF0C;&#x63A5;&#x7740;&#x91C7;&#x7528;&#x540C;&#x7B49;&#x65B9;&#x5F0F;&#x66F4;&#x65B0;&#x540E;&#x9762;&#x7684;&#x670D;&#x52A1;&#x5668;</li>
+<li>k8s&#x521B;&#x5EFA;&#x526F;&#x672C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x6700;&#x4F73;&#x65B9;&#x6CD5;&#x5C31;&#x662F;&#x90E8;&#x7F72;(Deployment)&#xFF0C;&#x90E8;&#x7F72;&#x81EA;&#x52A8;&#x521B;&#x5EFA;&#x526F;&#x672C;&#x96C6;(ReplicaSet)&#xFF0C;&#x526F;&#x672C;&#x96C6;&#x53EF;&#x4EE5;&#x7CBE;&#x786E;&#x5730;&#x63A7;&#x5236;&#x6BCF;&#x6B21;&#x66FF;&#x6362;&#x7684;Pod&#x6570;&#x91CF;&#xFF0C;&#x4ECE;&#x800C;&#x53EF;&#x4EE5;&#x5F88;&#x597D;&#x7684;&#x5B9E;&#x73B0;&#x6EDA;&#x52A8;&#x66F4;&#x65B0;</li>
+<li>k8s&#x6BCF;&#x6B21;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x526F;&#x672C;&#x63A7;&#x5236;&#x5668;(replication controller)&#x6765;&#x66FF;&#x6362;&#x5DF2;&#x5B58;&#x5728;&#x7684;&#x526F;&#x672C;&#x63A7;&#x5236;&#x5668;&#xFF0C;&#x4ECE;&#x800C;&#x59CB;&#x7EC8;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x65B0;&#x7684;Pod&#x6A21;&#x677F;&#x6765;&#x66FF;&#x6362;&#x65E7;&#x7684;pod&#x6A21;&#x677F;<ul>
+<li>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;replication controller</li>
+<li>&#x589E;&#x52A0;&#x6216;&#x51CF;&#x5C11;pod&#x526F;&#x672C;&#x6570;&#x91CF;&#xFF0C;&#x76F4;&#x5230;&#x6EE1;&#x8DB3;&#x5F53;&#x524D;&#x6279;&#x6B21;&#x671F;&#x671B;&#x7684;&#x6570;&#x91CF;</li>
+<li>&#x5220;&#x9664;&#x65E7;&#x7684;replication controller</li>
+</ul>
+</li>
+</ul>
+<h3 id="t72.1 &#x53D1;&#x5E03;&#x6D41;&#x7A0B;&#x548C;&#x7B56;&#x7565;">2.1 &#x53D1;&#x5E03;&#x6D41;&#x7A0B;&#x548C;&#x7B56;&#x7565; <a href="#t72.1 &#x53D1;&#x5E03;&#x6D41;&#x7A0B;&#x548C;&#x7B56;&#x7565;"> # </a></h3>
+<ul>
+<li>&#x4F18;&#x70B9;<ul>
+<li>&#x4E0D;&#x9700;&#x8981;&#x505C;&#x673A;&#x66F4;&#x65B0;&#xFF0C;&#x65E0;&#x611F;&#x77E5;&#x5E73;&#x6ED1;&#x66F4;&#x65B0;&#x3002;</li>
+<li>&#x7248;&#x672C;&#x66F4;&#x65B0;&#x6210;&#x672C;&#x5C0F;,&#x4E0D;&#x9700;&#x8981;&#x65B0;&#x65E7;&#x7248;&#x672C;&#x5171;&#x5B58;</li>
+</ul>
+</li>
+<li>&#x7F3A;&#x70B9;<ul>
+<li>&#x66F4;&#x65B0;&#x65F6;&#x95F4;&#x957F;&#xFF1A;&#x6BCF;&#x6B21;&#x53EA;&#x66F4;&#x65B0;&#x4E00;&#x4E2A;/&#x591A;&#x4E2A;&#x955C;&#x50CF;&#xFF0C;&#x9700;&#x8981;&#x9891;&#x7E41;&#x8FDE;&#x7EED;&#x7B49;&#x5F85;&#x670D;&#x52A1;&#x542F;&#x52A8;&#x7F13;&#x51B2;</li>
+<li>&#x65E7;&#x7248;&#x672C;&#x73AF;&#x5883;&#x65E0;&#x6CD5;&#x5F97;&#x5230;&#x5907;&#x4EFD;&#xFF1A;&#x59CB;&#x7EC8;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x73AF;&#x5883;&#x5B58;&#x5728;</li>
+<li>&#x56DE;&#x6EDA;&#x7248;&#x672C;&#x5F02;&#x5E38;&#x75DB;&#x82E6;&#xFF1A;&#x5982;&#x679C;&#x6EDA;&#x52A8;&#x53D1;&#x5E03;&#x5230;&#x4E00;&#x534A;&#x51FA;&#x4E86;&#x95EE;&#x9898;&#xFF0C;&#x56DE;&#x6EDA;&#x65F6;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x540C;&#x6837;&#x7684;&#x6EDA;&#x52A8;&#x7B56;&#x7565;&#x56DE;&#x6EDA;&#x65E7;&#x7248;&#x672C;</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://img.zhufengpeixun.com/2f0529036ed8d4da16567297105a5d7f" alt>
+<img src="https://img.zhufengpeixun.com/00a2eaa29b202b63619b5f70f8abba22" alt>
+<img src="https://img.zhufengpeixun.com/39a62f4e6d3c3e91260268528de6723a" alt>
+<img src="https://img.zhufengpeixun.com/d132b095703f8563e946e1b49a6391c6" alt>
+<img src="https://img.zhufengpeixun.com/5f8473671577b28825421ddb705c668e" alt></p>
+<h3 id="t82.2 &#x914D;&#x7F6E;&#x6587;&#x4EF6;">2.2 &#x914D;&#x7F6E;&#x6587;&#x4EF6; <a href="#t82.2 &#x914D;&#x7F6E;&#x6587;&#x4EF6;"> # </a></h3>
+<ul>
+<li>&#x5148;&#x6269;&#x5BB9;&#x4E3A;10&#x4E2A;&#x526F;&#x672C;<pre><code class="lang-js">kubectl <span class="hljs-keyword">get</span> deploy
+kubectl scale deployment user-v1  --replicas=10
+</code></pre>
+</li>
+</ul>
+<p>deployment-user-v1.yaml</p>
+<pre><code class="lang-diff">apiVersion: apps/v1  #API &#x914D;&#x7F6E;&#x7248;&#x672C;
+kind: Deployment     #&#x8D44;&#x6E90;&#x7C7B;&#x578B;
+metadata:
+  name: user-v1     #&#x8D44;&#x6E90;&#x540D;&#x79F0;
+spec:
+  minReadySeconds: 1
+<span class="hljs-addition">+ strategy:</span>
+<span class="hljs-addition">+   type: RollingUpdate</span>
+<span class="hljs-addition">+   rollingUpdate:</span>
+<span class="hljs-addition">+     maxSurge: 1</span>
+<span class="hljs-addition">+     maxUnavailable: 0</span>
+<span class="hljs-addition">+ selector:</span>
+<span class="hljs-addition">+   matchLabels:</span>
+<span class="hljs-addition">+     app: user-v1 #&#x544A;&#x8BC9;deployment&#x6839;&#x636E;&#x89C4;&#x5219;&#x5339;&#x914D;&#x76F8;&#x5E94;&#x7684;Pod&#x8FDB;&#x884C;&#x63A7;&#x5236;&#x548C;&#x7BA1;&#x7406;&#xFF0C;matchLabels&#x5B57;&#x6BB5;&#x5339;&#x914D;Pod&#x7684;label&#x503C;</span>
+  replicas: 10 #&#x58F0;&#x660E;&#x4E00;&#x4E2A; Pod,&#x526F;&#x672C;&#x7684;&#x6570;&#x91CF;
+  template:
+    metadata:
+      labels:
+        app: user-v1 #Pod&#x7684;&#x540D;&#x79F0;
+    spec:   #&#x7EC4;&#x5185;&#x521B;&#x5EFA;&#x7684; Pod &#x4FE1;&#x606F;
+      containers:
+      - name: nginx #&#x5BB9;&#x5668;&#x7684;&#x540D;&#x79F0;
+<span class="hljs-addition">+       image: registry.cn-beijing.aliyuncs.com/zhangrenyang/nginx:user-v3 #&#x4F7F;&#x7528;&#x54EA;&#x4E2A;&#x955C;&#x50CF;</span>
+        ports:
+        - containerPort: 80 #&#x5BB9;&#x5668;&#x5185;&#x6620;&#x5C04;&#x7684;&#x7AEF;&#x53E3;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x53C2;&#x6570;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">minReadySeconds</td>
+<td style="text-align:left">&#x5BB9;&#x5668;&#x63A5;&#x53D7;&#x6D41;&#x91CF;&#x5EF6;&#x7F13;&#x65F6;&#x95F4;&#xFF1A;&#x5355;&#x4F4D;&#x4E3A;&#x79D2;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;0&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x8BBE;&#x7F6E;&#x7684;&#x8BDD;&#xFF0C;k8s&#x4F1A;&#x8BA4;&#x4E3A;&#x5BB9;&#x5668;&#x542F;&#x52A8;&#x6210;&#x529F;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x7528;&#x4E86;&#x3002;&#x8BBE;&#x7F6E;&#x8BE5;&#x503C;&#x53EF;&#x4EE5;&#x5EF6;&#x7F13;&#x5BB9;&#x5668;&#x6D41;&#x91CF;&#x5207;&#x5206;</td>
+</tr>
+<tr>
+<td style="text-align:left">strategy.type = RollingUpdate</td>
+<td style="text-align:left">ReplicaSet &#x53D1;&#x5E03;&#x7C7B;&#x578B;&#xFF0C;&#x58F0;&#x660E;&#x4E3A;&#x6EDA;&#x52A8;&#x53D1;&#x5E03;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E5F;&#x4E3A;&#x6EDA;&#x52A8;&#x53D1;&#x5E03;</td>
+</tr>
+<tr>
+<td style="text-align:left">strategy.rollingUpdate.maxSurge</td>
+<td style="text-align:left">&#x6700;&#x591A;Pod&#x6570;&#x91CF;&#xFF1A;&#x4E3A;&#x6570;&#x5B57;&#x7C7B;&#x578B;/&#x767E;&#x5206;&#x6BD4;&#x3002;&#x5982;&#x679C; maxSurge &#x8BBE;&#x7F6E;&#x4E3A;1&#xFF0C;replicas &#x8BBE;&#x7F6E;&#x4E3A;10&#xFF0C;&#x5219;&#x5728;&#x53D1;&#x5E03;&#x8FC7;&#x7A0B;&#x4E2D;pod&#x6570;&#x91CF;&#x6700;&#x591A;&#x4E3A;10 + 1&#x4E2A;&#xFF08;&#x591A;&#x51FA;&#x6765;&#x7684;&#x4E3A;&#x65E7;&#x7248;&#x672C;pod&#xFF0C;&#x5E73;&#x6ED1;&#x671F;&#x4E0D;&#x53EF;&#x7528;&#x72B6;&#x6001;&#xFF09;&#x3002;maxUnavailable &#x4E3A; 0 &#x65F6;&#xFF0C;&#x8BE5;&#x503C;&#x4E5F;&#x4E0D;&#x80FD;&#x8BBE;&#x7F6E;&#x4E3A;0</td>
+</tr>
+<tr>
+<td style="text-align:left">strategy.rollingUpdate.maxUnavailable</td>
+<td style="text-align:left">&#x5347;&#x7EA7;&#x4E2D;&#x6700;&#x591A;&#x4E0D;&#x53EF;&#x7528;pod&#x7684;&#x6570;&#x91CF;&#xFF1A;&#x4E3A;&#x6570;&#x5B57;&#x7C7B;&#x578B;/&#x767E;&#x5206;&#x6BD4;&#x3002;&#x5F53; maxSurge &#x4E3A; 0 &#x65F6;&#xFF0C;&#x8BE5;&#x503C;&#x4E5F;&#x4E0D;&#x80FD;&#x8BBE;&#x7F6E;&#x4E3A;0</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-js">kubectl apply -f ./deployment-user-v1.yaml
+deployment.apps/user-v1 configured
+</code></pre>
+<pre><code class="lang-js">kubectl rollout status deployment/user-v1
+Waiting <span class="hljs-keyword">for</span> deployment <span class="hljs-string">&quot;user-v1&quot;</span> rollout to finish: <span class="hljs-number">3</span> <span class="hljs-keyword">of</span> <span class="hljs-number">10</span> updated replicas are available...
+Waiting <span class="hljs-keyword">for</span> deployment <span class="hljs-string">&quot;user-v1&quot;</span> rollout to finish: <span class="hljs-number">3</span> <span class="hljs-keyword">of</span> <span class="hljs-number">10</span> updated replicas are available...
+Waiting <span class="hljs-keyword">for</span> deployment <span class="hljs-string">&quot;user-v1&quot;</span> rollout to finish: <span class="hljs-number">4</span> <span class="hljs-keyword">of</span> <span class="hljs-number">10</span> updated replicas are available...
+Waiting <span class="hljs-keyword">for</span> deployment <span class="hljs-string">&quot;user-v1&quot;</span> rollout to finish: <span class="hljs-number">4</span> <span class="hljs-keyword">of</span> <span class="hljs-number">10</span> updated replicas are available...
+Waiting <span class="hljs-keyword">for</span> deployment <span class="hljs-string">&quot;user-v1&quot;</span> rollout to finish: <span class="hljs-number">4</span> <span class="hljs-keyword">of</span> <span class="hljs-number">10</span> updated replicas are available...
+Waiting <span class="hljs-keyword">for</span> deployment <span class="hljs-string">&quot;user-v1&quot;</span> rollout to finish: <span class="hljs-number">4</span> <span class="hljs-keyword">of</span> <span class="hljs-number">10</span> updated replicas are available...
+Waiting <span class="hljs-keyword">for</span> deployment <span class="hljs-string">&quot;user-v1&quot;</span> rollout to finish: <span class="hljs-number">4</span> <span class="hljs-keyword">of</span> <span class="hljs-number">10</span> updated replicas are available...
+Waiting <span class="hljs-keyword">for</span> deployment <span class="hljs-string">&quot;user-v1&quot;</span> rollout to finish: <span class="hljs-number">4</span> <span class="hljs-keyword">of</span> <span class="hljs-number">10</span> updated replicas are available...
+deployment <span class="hljs-string">&quot;user-v1&quot;</span> successfully rolled out
+</code></pre>
+<h2 id="t93.&#x670D;&#x52A1;&#x53EF;&#x7528;&#x6027;&#x63A2;&#x9488;">3.&#x670D;&#x52A1;&#x53EF;&#x7528;&#x6027;&#x63A2;&#x9488; <a href="#t93.&#x670D;&#x52A1;&#x53EF;&#x7528;&#x6027;&#x63A2;&#x9488;"> # </a></h2>
+<h3 id="t103.1 &#x4EC0;&#x4E48;&#x662F;&#x5065;&#x5EB7;&#x5EA6;&#x68C0;&#x67E5;&#xFF1F;">3.1 &#x4EC0;&#x4E48;&#x662F;&#x5065;&#x5EB7;&#x5EA6;&#x68C0;&#x67E5;&#xFF1F; <a href="#t103.1 &#x4EC0;&#x4E48;&#x662F;&#x5065;&#x5EB7;&#x5EA6;&#x68C0;&#x67E5;&#xFF1F;"> # </a></h3>
+<ul>
+<li>&#x5F53; Pod &#x7684;&#x72B6;&#x6001;&#x4E3A; Running &#x65F6;&#xFF0C;&#x8BE5; Pod &#x5C31;&#x53EF;&#x4EE5;&#x88AB;&#x5206;&#x914D;&#x6D41;&#x91CF;(&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x5230;)&#x4E86;</li>
+<li>&#x4E00;&#x4E2A;&#x540E;&#x7AEF;&#x5BB9;&#x5668;&#x542F;&#x52A8;&#x6210;&#x529F;&#xFF0C;&#x4E0D;&#x4E00;&#x5B9A;&#x4E0D;&#x4EE3;&#x8868;&#x670D;&#x52A1;&#x542F;&#x52A8;&#x6210;&#x529F;</li>
+</ul>
+<h3 id="t113.2 &#x4EC0;&#x4E48;&#x662F;&#x670D;&#x52A1;&#x63A2;&#x9488;&#xFF1F;">3.2 &#x4EC0;&#x4E48;&#x662F;&#x670D;&#x52A1;&#x63A2;&#x9488;&#xFF1F; <a href="#t113.2 &#x4EC0;&#x4E48;&#x662F;&#x670D;&#x52A1;&#x63A2;&#x9488;&#xFF1F;"> # </a></h3>
+<ul>
+<li><a href="https://kubernetes.io/zh/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#define-a-TCP-liveness-probe">define-a-TCP-liveness-probe</a></li>
+<li><h4 id="t123.2.1 &#x5B58;&#x6D3B;&#x63A2;&#x9488; LivenessProbe">3.2.1 &#x5B58;&#x6D3B;&#x63A2;&#x9488; LivenessProbe <a href="#t123.2.1 &#x5B58;&#x6D3B;&#x63A2;&#x9488; LivenessProbe"> # </a></h4>
+</li>
+<li>&#x7B2C;&#x4E00;&#x79CD;&#x662F;&#x5B58;&#x6D3B;&#x63A2;&#x9488;&#x3002;&#x5B58;&#x6D3B;&#x63A2;&#x9488;&#x662F;&#x5BF9;&#x8FD0;&#x884C;&#x4E2D;&#x7684;&#x5BB9;&#x5668;&#x68C0;&#x6D4B;&#x7684;&#x3002;&#x5982;&#x679C;&#x60F3;&#x68C0;&#x6D4B;&#x4F60;&#x7684;&#x670D;&#x52A1;&#x5728;&#x8FD0;&#x884C;&#x4E2D;&#x6709;&#x6CA1;&#x6709;&#x53D1;&#x751F;&#x5D29;&#x6E83;&#xFF0C;&#x670D;&#x52A1;&#x6709;&#x6CA1;&#x6709;&#x4E2D;&#x9014;&#x9000;&#x51FA;&#x6216;&#x65E0;&#x54CD;&#x5E94;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x63A2;&#x9488;</li>
+<li>&#x5982;&#x679C;&#x63A2;&#x9488;&#x63A2;&#x6D4B;&#x5230;&#x9519;&#x8BEF;&#xFF0C; Kubernetes &#x5C31;&#x4F1A;&#x6740;&#x6389;&#x8FD9;&#x4E2A; Pod&#xFF1B;&#x5426;&#x5219;&#x5C31;&#x4E0D;&#x4F1A;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x3002;&#x5982;&#x679C;&#x9ED8;&#x8BA4;&#x6CA1;&#x6709;&#x914D;&#x7F6E;&#x8FD9;&#x4E2A;&#x63A2;&#x9488;&#xFF0C; Pod &#x4E0D;&#x4F1A;&#x88AB;&#x6740;&#x6B7B;</li>
+</ul>
+<h4 id="t133.2.2 &#x53EF;&#x7528;&#x63A2;&#x9488; ReadinessProbe">3.2.2 &#x53EF;&#x7528;&#x63A2;&#x9488; ReadinessProbe <a href="#t133.2.2 &#x53EF;&#x7528;&#x63A2;&#x9488; ReadinessProbe"> # </a></h4>
+<ul>
+<li>&#x7B2C;&#x4E8C;&#x79CD;&#x662F;&#x53EF;&#x7528;&#x63A2;&#x9488;&#x3002;&#x4F5C;&#x7528;&#x662F;&#x7528;&#x6765;&#x68C0;&#x6D4B; Pod &#x662F;&#x5426;&#x5141;&#x8BB8;&#x88AB;&#x8BBF;&#x95EE;&#x5230;&#xFF08;&#x662F;&#x5426;&#x51C6;&#x5907;&#x597D;&#x63A5;&#x53D7;&#x6D41;&#x91CF;&#xFF09;&#x3002;&#x5982;&#x679C;&#x4F60;&#x7684;&#x670D;&#x52A1;&#x52A0;&#x8F7D;&#x5F88;&#x591A;&#x6570;&#x636E;&#xFF0C;&#x6216;&#x8005;&#x6709;&#x5176;&#x4ED6;&#x9700;&#x6C42;&#x8981;&#x6C42;&#x5728;&#x7279;&#x5B9A;&#x60C5;&#x51B5;&#x4E0B;&#x4E0D;&#x88AB;&#x5206;&#x914D;&#x5230;&#x6D41;&#x91CF;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x7528;&#x8FD9;&#x4E2A;&#x63A2;&#x9488;</li>
+<li>&#x5982;&#x679C;&#x63A2;&#x9488;&#x68C0;&#x6D4B;&#x5931;&#x8D25;&#xFF0C;&#x6D41;&#x91CF;&#x5C31;&#x4E0D;&#x4F1A;&#x5206;&#x914D;&#x7ED9;&#x8BE5; Pod&#x3002;&#x5728;&#x6CA1;&#x6709;&#x914D;&#x7F6E;&#x8BE5;&#x63A2;&#x9488;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F1A;&#x4E00;&#x76F4;&#x5C06;&#x6D41;&#x91CF;&#x5206;&#x914D;&#x7ED9; Pod&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x63A2;&#x9488;&#x68C0;&#x6D4B;&#x5931;&#x8D25;&#xFF0C;Pod &#x4E0D;&#x4F1A;&#x88AB;&#x6740;&#x6B7B;</li>
+</ul>
+<h4 id="t143.2.3 &#x542F;&#x52A8;&#x63A2;&#x9488; StartupProbe">3.2.3 &#x542F;&#x52A8;&#x63A2;&#x9488; StartupProbe <a href="#t143.2.3 &#x542F;&#x52A8;&#x63A2;&#x9488; StartupProbe"> # </a></h4>
+<ul>
+<li>&#x7B2C;&#x4E09;&#x79CD;&#x662F;&#x542F;&#x52A8;&#x63A2;&#x9488;&#x3002;&#x4F5C;&#x7528;&#x662F;&#x7528;&#x6765;&#x68C0;&#x6D4B; Pod &#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x542F;&#x52A8;&#x6210;&#x529F;&#x3002;&#x5982;&#x679C;&#x4F60;&#x7684;&#x670D;&#x52A1;&#x542F;&#x52A8;&#x9700;&#x8981;&#x4E00;&#x4E9B;&#x52A0;&#x8F7D;&#x65F6;&#x957F;&#xFF08;&#x4F8B;&#x5982;&#x521D;&#x59CB;&#x5316;&#x65E5;&#x5FD7;&#xFF0C;&#x7B49;&#x5F85;&#x5176;&#x4ED6;&#x8C03;&#x7528;&#x7684;&#x670D;&#x52A1;&#x542F;&#x52A8;&#x6210;&#x529F;&#xFF09;&#x624D;&#x4EE3;&#x8868;&#x670D;&#x52A1;&#x542F;&#x52A8;&#x6210;&#x529F;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x7528;&#x8FD9;&#x4E2A;&#x63A2;&#x9488;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x63A2;&#x9488;&#x68C0;&#x6D4B;&#x5931;&#x8D25;&#xFF0C;&#x8BE5; Pod &#x5C31;&#x4F1A;&#x88AB;&#x6740;&#x6B7B;&#x91CD;&#x542F;&#x3002;&#x5728;&#x6CA1;&#x6709;&#x914D;&#x7F6E;&#x8BE5;&#x63A2;&#x9488;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E0D;&#x4F1A;&#x6740;&#x6B7B; Pod &#x3002;&#x5728;&#x542F;&#x52A8;&#x63A2;&#x9488;&#x8FD0;&#x884C;&#x65F6;&#xFF0C;&#x5176;&#x4ED6;&#x6240;&#x6709;&#x7684;&#x63A2;&#x9488;&#x68C0;&#x6D4B;&#x90FD;&#x4F1A;&#x5931;&#x6548;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x63A2;&#x9488;&#x540D;&#x79F0;</th>
+<th style="text-align:left">&#x5728;&#x54EA;&#x4E2A;&#x73AF;&#x8282;&#x89E6;&#x53D1;</th>
+<th style="text-align:left">&#x4F5C;&#x7528;</th>
+<th style="text-align:left">&#x68C0;&#x6D4B;&#x5931;&#x8D25;&#x5BF9;Pod&#x7684;&#x53CD;&#x5E94;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x542F;&#x52A8;&#x63A2;&#x9488;</td>
+<td style="text-align:left">Pod &#x8FD0;&#x884C;&#x65F6;</td>
+<td style="text-align:left">&#x68C0;&#x6D4B;&#x670D;&#x52A1;&#x662F;&#x5426;&#x542F;&#x52A8;&#x6210;&#x529F;</td>
+<td style="text-align:left">&#x6740;&#x6B7B; Pod &#x5E76;&#x91CD;&#x542F;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x5B58;&#x6D3B;&#x63A2;&#x9488;</td>
+<td style="text-align:left">Pod &#x8FD0;&#x884C;&#x65F6;</td>
+<td style="text-align:left">&#x68C0;&#x6D4B;&#x670D;&#x52A1;&#x662F;&#x5426;&#x5D29;&#x6E83;&#xFF0C;&#x662F;&#x5426;&#x9700;&#x8981;&#x91CD;&#x542F;&#x670D;&#x52A1;</td>
+<td style="text-align:left">&#x6740;&#x6B7B; Pod &#x5E76;&#x91CD;&#x542F;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x53EF;&#x7528;&#x63A2;&#x9488;</td>
+<td style="text-align:left">Pod &#x8FD0;&#x884C;&#x65F6;</td>
+<td style="text-align:left">&#x68C0;&#x6D4B;&#x670D;&#x52A1;&#x662F;&#x4E0D;&#x662F;&#x5141;&#x8BB8;&#x88AB;&#x8BBF;&#x95EE;&#x5230;</td>
+<td style="text-align:left">&#x505C;&#x6B62;Pod&#x7684;&#x8BBF;&#x95EE;&#x8C03;&#x5EA6;&#xFF0C;&#x4E0D;&#x4F1A;&#x88AB;&#x6740;&#x6B7B;&#x91CD;&#x542F;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t153.3 &#x63A2;&#x6D4B;&#x65B9;&#x5F0F;">3.3 &#x63A2;&#x6D4B;&#x65B9;&#x5F0F; <a href="#t153.3 &#x63A2;&#x6D4B;&#x65B9;&#x5F0F;"> # </a></h3>
+<h4 id="t163.3.1 ExecAction">3.3.1 ExecAction <a href="#t163.3.1 ExecAction"> # </a></h4>
+<ul>
+<li>&#x901A;&#x8FC7;&#x5728; Pod &#x7684;&#x5BB9;&#x5668;&#x5185;&#x6267;&#x884C;&#x9884;&#x5B9A;&#x7684; Shell &#x811A;&#x672C;&#x547D;&#x4EE4;&#x3002;&#x5982;&#x679C;&#x6267;&#x884C;&#x7684;&#x547D;&#x4EE4;&#x6CA1;&#x6709;&#x62A5;&#x9519;&#x9000;&#x51FA;&#xFF08;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;0&#xFF09;&#xFF0C;&#x4EE3;&#x8868;&#x5BB9;&#x5668;&#x72B6;&#x6001;&#x5065;&#x5EB7;&#x3002;&#x5426;&#x5219;&#x5C31;&#x662F;&#x6709;&#x95EE;&#x9898;&#x7684;</li>
+</ul>
+<p>vi shell-probe.yaml</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> <span class="hljs-string">v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">Pod</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">labels:</span>
+    <span class="hljs-attr">test:</span> <span class="hljs-string">shell-probe</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">shell-probe</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">containers:</span>
+  <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">shell-probe</span>
+    <span class="hljs-attr">image:</span> <span class="hljs-string">registry.aliyuncs.com/google_containers/busybox</span>
+    <span class="hljs-attr">args:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">/bin/sh</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">-c</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">touch</span> <span class="hljs-string">/tmp/healthy;</span> <span class="hljs-string">sleep</span> <span class="hljs-number">30</span><span class="hljs-string">;</span> <span class="hljs-string">rm</span> <span class="hljs-string">-rf</span> <span class="hljs-string">/tmp/healthy;</span> <span class="hljs-string">sleep</span> <span class="hljs-number">600</span>
+    <span class="hljs-attr">livenessProbe:</span>
+      <span class="hljs-attr">exec:</span>
+        <span class="hljs-attr">command:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-string">cat</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-string">/tmp/healthy</span>
+      <span class="hljs-attr">initialDelaySeconds:</span> <span class="hljs-number">5</span>
+      <span class="hljs-attr">periodSeconds:</span> <span class="hljs-number">5</span>
+</code></pre>
+<pre><code class="lang-js">kubectl apply -f liveness.yaml 
+kubectl <span class="hljs-keyword">get</span> pods | grep liveness-exec
+kubectl describe pods liveness-exec
+
+Events:
+  Type     Reason     Age                  From               Message
+  ----     ------     ----                 ----               -------
+  Normal   Scheduled  2m44s                default-scheduler  Successfully assigned default/liveness-exec to node1
+  Normal   Pulled     2m41s                kubelet            Successfully pulled image &quot;registry.aliyuncs.com/google_containers/busybox&quot; in 1.669600584s
+  Normal   Pulled     86s                  kubelet            Successfully pulled image &quot;registry.aliyuncs.com/google_containers/busybox&quot; in 605.008964ms
+  Warning  Unhealthy  41s (x6 over 2m6s)   kubelet            Liveness probe failed: cat: can&apos;t open &apos;/tmp/healthy&apos;: No such file or directory
+  Normal   Killing    41s (x2 over 116s)   kubelet            Container liveness failed liveness probe, will be restarted
+  Normal   Created    11s (x3 over 2m41s)  kubelet            Created container liveness
+  Normal   Started    11s (x3 over 2m41s)  kubelet            Started container liveness
+  Normal   Pulling    11s (x3 over 2m43s)  kubelet            Pulling image &quot;registry.aliyuncs.com/google_containers/busybox&quot;
+  Normal   Pulled     11s                  kubelet            Successfully pulled image &quot;registry.aliyuncs.com/google_containers/busybox&quot; in 521.70892ms
+</code></pre>
+<h4 id="t173.3.2 TCPSocketAction">3.3.2 TCPSocketAction <a href="#t173.3.2 TCPSocketAction"> # </a></h4>
+<ul>
+<li>&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x662F;&#x4F7F;&#x7528; TCP &#x5957;&#x63A5;&#x5B57;&#x68C0;&#x6D4B;&#x3002; Kubernetes &#x4F1A;&#x5C1D;&#x8BD5;&#x5728; Pod &#x5185;&#x4E0E;&#x6307;&#x5B9A;&#x7684;&#x7AEF;&#x53E3;&#x8FDB;&#x884C;&#x8FDE;&#x63A5;&#x3002;&#x5982;&#x679C;&#x80FD;&#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;&#xFF08;Pod&#x7684;&#x7AEF;&#x53E3;&#x6253;&#x5F00;&#x4E86;&#xFF09;&#xFF0C;&#x8FD9;&#x4E2A;&#x5BB9;&#x5668;&#x5C31;&#x4EE3;&#x8868;&#x662F;&#x5065;&#x5EB7;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x80FD;&#xFF0C;&#x5219;&#x4EE3;&#x8868;&#x8FD9;&#x4E2A; Pod &#x5C31;&#x662F;&#x6709;&#x95EE;&#x9898;&#x7684;</li>
+</ul>
+<p>tcp-probe.yaml</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> <span class="hljs-string">v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">Pod</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">tcp-probe</span>
+  <span class="hljs-attr">labels:</span>
+    <span class="hljs-attr">app:</span> <span class="hljs-string">tcp-probe</span>
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">containers:</span>
+  <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">tcp-probe</span>
+    <span class="hljs-attr">image:</span> <span class="hljs-string">nginx</span>
+    <span class="hljs-attr">ports:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-attr">containerPort:</span> <span class="hljs-number">80</span>
+    <span class="hljs-attr">readinessProbe:</span>
+      <span class="hljs-attr">tcpSocket:</span>
+        <span class="hljs-attr">port:</span> <span class="hljs-number">80</span>
+      <span class="hljs-attr">initialDelaySeconds:</span> <span class="hljs-number">5</span>
+      <span class="hljs-attr">periodSeconds:</span> <span class="hljs-number">10</span>
+</code></pre>
+<pre><code class="lang-js">kubectl apply -f tcp-probe.yaml 
+kubectl <span class="hljs-keyword">get</span> pods | grep tcp-probe
+kubectl describe pods tcp-probe
+</code></pre>
+<pre><code class="lang-js">kubectl exec -it tcp-probe  -- <span class="hljs-regexp">/bin/</span>sh
+apt-<span class="hljs-keyword">get</span> update
+apt-<span class="hljs-keyword">get</span> install vim -y
+vi  /etc/nginx/conf.d/default.conf
+80=&gt;8080
+nginx -s reload
+kubectl describe pod tcp-probe
+Warning  Unhealthy  6s    kubelet            Readiness probe failed: dial tcp 10.244.1.47:80: connect: connection 
+</code></pre>
+<h4 id="t183.3.3 HTTPGetAction">3.3.3 HTTPGetAction <a href="#t183.3.3 HTTPGetAction"> # </a></h4>
+<ul>
+<li>&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x662F;&#x4F7F;&#x7528; HTTP GET &#x8BF7;&#x6C42;&#x3002;Kubernetes &#x4F1A;&#x5C1D;&#x8BD5;&#x8BBF;&#x95EE; Pod &#x5185;&#x6307;&#x5B9A;&#x7684;API&#x8DEF;&#x5F84;&#x3002;&#x5982;&#x679C;&#x8FD4;&#x56DE;200&#xFF0C;&#x4EE3;&#x8868;&#x5BB9;&#x5668;&#x5C31;&#x662F;&#x5065;&#x5EB7;&#x7684;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x80FD;&#xFF0C;&#x4EE3;&#x8868;&#x8FD9;&#x4E2A; Pod &#x662F;&#x6709;&#x95EE;&#x9898;&#x7684;</li>
+</ul>
+<p>vi http-probe.yaml</p>
+<pre><code class="lang-js">apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    test: http-probe
+  name: http-probe
+spec:
+  containers:
+  - name: http-probe
+    image: registry.cn-beijing.aliyuncs.com/zhangrenyang/http-probe:1.0.0
+    livenessProbe:
+      httpGet:
+        path: /liveness
+        port: 80
+        httpHeaders:
+        - name: source
+          value: probe
+      initialDelaySeconds: 3
+      periodSeconds: 3
+</code></pre>
+<pre><code class="lang-js">vim ./http-probe.yaml
+kubectl apply -f ./http-probe.yaml
+kubectl describe pods http-probe
+Normal   Killing    <span class="hljs-number">5</span>s                kubelet            Container http-probe failed liveness probe, will be restarted
+docker pull registry.cn-beijing.aliyuncs.com/zhangrenyang/http-probe:<span class="hljs-number">1.0</span><span class="hljs-number">.0</span>
+kubectl replace --force -f http-probe.yaml 
+</code></pre>
+<p>Dockerfile</p>
+<pre><code class="lang-yaml"><span class="hljs-string">FROM</span> <span class="hljs-string">node</span>
+<span class="hljs-string">COPY</span> <span class="hljs-string">./app</span> <span class="hljs-string">/app</span>
+<span class="hljs-string">WORKDIR</span> <span class="hljs-string">/app</span>
+<span class="hljs-string">EXPOSE</span> <span class="hljs-number">3000</span>
+<span class="hljs-string">CMD</span> <span class="hljs-string">node</span> <span class="hljs-string">index.js</span>
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> http = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;http&apos;</span>);
+<span class="hljs-keyword">let</span> start = <span class="hljs-built_in">Date</span>.now();
+http.createServer(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req,res</span>)</span>{
+  <span class="hljs-keyword">if</span>(req.url === <span class="hljs-string">&apos;/liveness&apos;</span>){
+    <span class="hljs-keyword">let</span> value = req.headers[<span class="hljs-string">&apos;source&apos;</span>];
+    <span class="hljs-keyword">if</span>(value === <span class="hljs-string">&apos;probe&apos;</span>){
+     <span class="hljs-keyword">let</span> duration = <span class="hljs-built_in">Date</span>.now()-start;
+      <span class="hljs-keyword">if</span>(duration&gt;<span class="hljs-number">10</span>*<span class="hljs-number">1000</span>){
+          res.statusCode=<span class="hljs-number">500</span>;
+          res.end(<span class="hljs-string">&apos;error&apos;</span>);
+      }<span class="hljs-keyword">else</span>{
+          res.statusCode=<span class="hljs-number">200</span>;
+          res.end(<span class="hljs-string">&apos;success&apos;</span>);
+      }
+    }<span class="hljs-keyword">else</span>{
+     res.statusCode=<span class="hljs-number">200</span>;
+     res.end(<span class="hljs-string">&apos;liveness&apos;</span>);
+    }
+  }<span class="hljs-keyword">else</span>{
+     res.statusCode=<span class="hljs-number">200</span>;
+     res.end(<span class="hljs-string">&apos;liveness&apos;</span>);
+  }
+}).listen(<span class="hljs-number">3000</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;http server started on 3000&quot;</span>)});
+</code></pre>
+<h2 id="t194.&#x50A8;&#x5B58;&#x673A;&#x5BC6;&#x4FE1;&#x606F;">4.&#x50A8;&#x5B58;&#x673A;&#x5BC6;&#x4FE1;&#x606F; <a href="#t194.&#x50A8;&#x5B58;&#x673A;&#x5BC6;&#x4FE1;&#x606F;"> # </a></h2>
+<h3 id="t204.1 &#x4EC0;&#x4E48;&#x662F; Secret">4.1 &#x4EC0;&#x4E48;&#x662F; Secret <a href="#t204.1 &#x4EC0;&#x4E48;&#x662F; Secret"> # </a></h3>
+<ul>
+<li>Secret &#x662F; Kubernetes &#x5185;&#x7684;&#x4E00;&#x79CD;&#x8D44;&#x6E90;&#x7C7B;&#x578B;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x5B83;&#x6765;&#x5B58;&#x653E;&#x4E00;&#x4E9B;&#x673A;&#x5BC6;&#x4FE1;&#x606F;&#xFF08;&#x5BC6;&#x7801;&#xFF0C;token&#xFF0C;&#x5BC6;&#x94A5;&#x7B49;&#xFF09;</li>
+<li>&#x4FE1;&#x606F;&#x88AB;&#x5B58;&#x5165;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6302;&#x8F7D;&#x5377;&#x7684;&#x65B9;&#x5F0F;&#x6302;&#x8F7D;&#x8FDB;&#x6211;&#x4EEC;&#x7684; Pod &#x5185;&#x3002;&#x5F53;&#x7136;&#x4E5F;&#x53EF;&#x4EE5;&#x5B58;&#x653E;docker&#x79C1;&#x6709;&#x955C;&#x50CF;&#x5E93;&#x7684;&#x767B;&#x5F55;&#x540D;&#x548C;&#x5BC6;&#x7801;&#xFF0C;&#x7528;&#x4E8E;&#x62C9;&#x53D6;&#x79C1;&#x6709;&#x955C;&#x50CF;&#x3002;</li>
+</ul>
+<h3 id="t214.2 Opaque &#x7C7B;&#x578B;">4.2 Opaque &#x7C7B;&#x578B; <a href="#t214.2 Opaque &#x7C7B;&#x578B;"> # </a></h3>
+<ul>
+<li>&#x4E00;&#x822C;&#x62FF;&#x6765;&#x5B58;&#x653E;&#x5BC6;&#x7801;&#xFF0C;&#x5BC6;&#x94A5;&#x7B49;&#x4FE1;&#x606F;&#xFF0C;&#x5B58;&#x50A8;&#x683C;&#x5F0F;&#x4E3A; base64</li>
+</ul>
+<h4 id="t224.2.1 &#x547D;&#x4EE4;&#x884C;&#x521B;&#x5EFA;">4.2.1 &#x547D;&#x4EE4;&#x884C;&#x521B;&#x5EFA; <a href="#t224.2.1 &#x547D;&#x4EE4;&#x884C;&#x521B;&#x5EFA;"> # </a></h4>
+<ul>
+<li>account&#x4E3A; &#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x540D;&#x79F0;</li>
+<li>--from-literal &#x7684;&#x540E;&#x9762;&#x5219;&#x8DDF;&#x968F;&#x4E00;&#x7EC4; key=value</li>
+</ul>
+<pre><code class="lang-js">kubectl create secret generic mysql-account --<span class="hljs-keyword">from</span>-literal=username=zhufeng --<span class="hljs-keyword">from</span>-literal=password=<span class="hljs-number">123456</span>
+</code></pre>
+<pre><code class="lang-js">kubectl <span class="hljs-keyword">get</span> secret
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">NAME</td>
+<td style="text-align:left">Secret&#x7684;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td style="text-align:left">TYPE</td>
+<td style="text-align:left">Secret&#x7684;&#x7C7B;&#x578B;</td>
+</tr>
+<tr>
+<td style="text-align:left">DATA</td>
+<td style="text-align:left">&#x5B58;&#x50A8;&#x5185;&#x5BB9;&#x7684;&#x6570;&#x91CF;</td>
+</tr>
+<tr>
+<td style="text-align:left">AGE</td>
+<td style="text-align:left">&#x521B;&#x5EFA;&#x5230;&#x73B0;&#x5728;&#x7684;&#x65F6;&#x95F4;</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-js"><span class="hljs-comment">//&#x7F16;&#x8F91;&#x503C;</span>
+kubectl edit secret account
+<span class="hljs-comment">//&#x8F93;&#x51FA;yaml&#x683C;&#x5F0F;</span>
+kubectl <span class="hljs-keyword">get</span> secret account -o yaml
+//&#x8F93;&#x51FA;json&#x683C;&#x5F0F;
+kubectl <span class="hljs-keyword">get</span> secret account -o json
+//&#x5BF9;Base64&#x8FDB;&#x884C;&#x89E3;&#x7801;
+echo MTIzNDU2 | base64 -d
+</code></pre>
+<h4 id="t234.2.2 &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x521B;&#x5EFA;">4.2.2 &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x521B;&#x5EFA; <a href="#t234.2.2 &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x521B;&#x5EFA;"> # </a></h4>
+<p>mysql-account.yaml</p>
+<pre><code class="lang-js">apiVersion: v1
+<span class="hljs-attr">kind</span>: Secret
+<span class="hljs-attr">metadata</span>:
+  name: mysql-account
+<span class="hljs-attr">stringData</span>:
+  username: root
+  <span class="hljs-attr">password</span>: root
+<span class="hljs-attr">type</span>: Opaque
+</code></pre>
+<pre><code class="lang-js">kubectl apply -f mysql-account.yaml 
+secret/mysql-account created
+kubectl <span class="hljs-keyword">get</span> secret mysql-account -o yaml
+</code></pre>
+<h3 id="t244.3 &#x79C1;&#x6709;&#x955C;&#x50CF;&#x5E93;&#x8BA4;&#x8BC1;">4.3 &#x79C1;&#x6709;&#x955C;&#x50CF;&#x5E93;&#x8BA4;&#x8BC1; <a href="#t244.3 &#x79C1;&#x6709;&#x955C;&#x50CF;&#x5E93;&#x8BA4;&#x8BC1;"> # </a></h3>
+<ul>
+<li>&#x7B2C;&#x4E8C;&#x79CD;&#x662F;&#x79C1;&#x6709;&#x955C;&#x50CF;&#x5E93;&#x8BA4;&#x8BC1;&#x7C7B;&#x578B;&#xFF0C;&#x8FD9;&#x79CD;&#x7C7B;&#x578B;&#x4E5F;&#x6BD4;&#x8F83;&#x5E38;&#x7528;&#xFF0C;&#x4E00;&#x822C;&#x5728;&#x62C9;&#x53D6;&#x79C1;&#x6709;&#x5E93;&#x7684;&#x955C;&#x50CF;&#x65F6;&#x4F7F;&#x7528;</li>
+</ul>
+<h4 id="t254.3.1 &#x547D;&#x4EE4;&#x884C;&#x521B;&#x5EFA;">4.3.1 &#x547D;&#x4EE4;&#x884C;&#x521B;&#x5EFA; <a href="#t254.3.1 &#x547D;&#x4EE4;&#x884C;&#x521B;&#x5EFA;"> # </a></h4>
+<pre><code class="lang-js">kubectl create secret docker-registry private-registry \
+--docker-username=[&#x7528;&#x6237;&#x540D;] \
+--docker-password=[&#x5BC6;&#x7801;] \
+--docker-email=[&#x90AE;&#x7BB1;] \
+--docker-server=[&#x79C1;&#x6709;&#x955C;&#x50CF;&#x5E93;&#x5730;&#x5740;]
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-comment">//&#x67E5;&#x770B;&#x79C1;&#x6709;&#x5E93;&#x5BC6;&#x94A5;&#x7EC4;</span>
+kubectl <span class="hljs-keyword">get</span> secret private-registry -o yaml
+</code></pre>
+<pre><code class="lang-js">echo [value] | base64 -d
+</code></pre>
+<h4 id="t264.3.2 &#x901A;&#x8FC7;&#x6587;&#x4EF6;&#x521B;&#x5EFA;">4.3.2 &#x901A;&#x8FC7;&#x6587;&#x4EF6;&#x521B;&#x5EFA; <a href="#t264.3.2 &#x901A;&#x8FC7;&#x6587;&#x4EF6;&#x521B;&#x5EFA;"> # </a></h4>
+<p>vi private-registry-file.yaml</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> <span class="hljs-string">v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">Secret</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">private-registry-file</span>
+<span class="hljs-attr">data:</span>
+  <span class="hljs-string">.dockerconfigjson:</span> <span class="hljs-string">eyJhdXRocyI6eyJodHRwczo</span>
+<span class="hljs-attr">type:</span> <span class="hljs-string">kubernetes.io/dockerconfigjson</span>
+</code></pre>
+<pre><code class="lang-js">kubectl apply -f ./private-registry-file.yaml
+kubectl <span class="hljs-keyword">get</span> secret private-registry-file -o yaml
+</code></pre>
+<h3 id="t274.4 &#x4F7F;&#x7528;">4.4 &#x4F7F;&#x7528; <a href="#t274.4 &#x4F7F;&#x7528;"> # </a></h3>
+<h4 id="t284.4.1 Volume &#x6302;&#x8F7D;">4.4.1 Volume &#x6302;&#x8F7D; <a href="#t284.4.1 Volume &#x6302;&#x8F7D;"> # </a></h4>
+<ul>
+<li>&#x901A;&#x8FC7;&#x5B58;&#x50A8;&#x5377;&#x7684;&#x65B9;&#x5F0F;&#x6302;&#x8F7D;&#x8FDB;&#x53BB;</li>
+</ul>
+<pre><code class="lang-diff">apiVersion: apps/v1  #API &#x914D;&#x7F6E;&#x7248;&#x672C;
+kind: Deployment     #&#x8D44;&#x6E90;&#x7C7B;&#x578B;
+metadata:
+  name: user-v1     #&#x8D44;&#x6E90;&#x540D;&#x79F0;
+spec:
+  minReadySeconds: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  selector:
+    matchLabels:
+      app: user-v1 #&#x544A;&#x8BC9;deployment&#x6839;&#x636E;&#x89C4;&#x5219;&#x5339;&#x914D;&#x76F8;&#x5E94;&#x7684;Pod&#x8FDB;&#x884C;&#x63A7;&#x5236;&#x548C;&#x7BA1;&#x7406;&#xFF0C;matchLabels&#x5B57;&#x6BB5;&#x5339;&#x914D;Pod&#x7684;label&#x503C;
+<span class="hljs-addition">+ replicas: 1 #&#x58F0;&#x660E;&#x4E00;&#x4E2A; Pod,&#x526F;&#x672C;&#x7684;&#x6570;&#x91CF;</span>
+  template:
+    metadata:
+      labels:
+        app: user-v1 #Pod&#x7684;&#x540D;&#x79F0;
+    spec:   #&#x7EC4;&#x5185;&#x521B;&#x5EFA;&#x7684; Pod &#x4FE1;&#x606F;
+<span class="hljs-addition">+     volumes:</span>
+<span class="hljs-addition">+       - name: mysql-account</span>
+<span class="hljs-addition">+         secret:</span>
+<span class="hljs-addition">+           secretName: mysql-account</span>
+      containers:
+      - name: nginx #&#x5BB9;&#x5668;&#x7684;&#x540D;&#x79F0;
+        image: registry.cn-beijing.aliyuncs.com/zhangrenyang/nginx:user-v3 #&#x4F7F;&#x7528;&#x54EA;&#x4E2A;&#x955C;&#x50CF;
+<span class="hljs-addition">+       volumeMounts:</span>
+<span class="hljs-addition">+       - name: mysql-account</span>
+<span class="hljs-addition">+         mountPath: /mysql-account</span>
+<span class="hljs-addition">+         readOnly: true</span>
+        ports:
+        - containerPort: 80 #&#x5BB9;&#x5668;&#x5185;&#x6620;&#x5C04;&#x7684;&#x7AEF;&#x53E3;
+</code></pre>
+<pre><code class="lang-js">kubectl describe pods  user-v1-b88799944-tjgrs 
+kubectl exec -it user-v1-b88799944-tjgrs  -- ls /root
+</code></pre>
+<h4 id="t294.4.2 &#x73AF;&#x5883;&#x53D8;&#x91CF;&#x6CE8;&#x5165;">4.4.2 &#x73AF;&#x5883;&#x53D8;&#x91CF;&#x6CE8;&#x5165; <a href="#t294.4.2 &#x73AF;&#x5883;&#x53D8;&#x91CF;&#x6CE8;&#x5165;"> # </a></h4>
+<ul>
+<li>&#x7B2C;&#x4E8C;&#x79CD;&#x662F;&#x5C06; Secret &#x6CE8;&#x5165;&#x8FDB;&#x5BB9;&#x5668;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;</li>
+</ul>
+<p>deployment-user-v1.yaml</p>
+<pre><code class="lang-diff">apiVersion: apps/v1  #API &#x914D;&#x7F6E;&#x7248;&#x672C;
+kind: Deployment     #&#x8D44;&#x6E90;&#x7C7B;&#x578B;
+metadata:
+  name: user-v1     #&#x8D44;&#x6E90;&#x540D;&#x79F0;
+spec:
+  minReadySeconds: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  selector:
+    matchLabels:
+      app: user-v1 #&#x544A;&#x8BC9;deployment&#x6839;&#x636E;&#x89C4;&#x5219;&#x5339;&#x914D;&#x76F8;&#x5E94;&#x7684;Pod&#x8FDB;&#x884C;&#x63A7;&#x5236;&#x548C;&#x7BA1;&#x7406;&#xFF0C;matchLabels&#x5B57;&#x6BB5;&#x5339;&#x914D;Pod&#x7684;label&#x503C;
+  replicas: 1 #&#x58F0;&#x660E;&#x4E00;&#x4E2A; Pod,&#x526F;&#x672C;&#x7684;&#x6570;&#x91CF;
+  template:
+    metadata:
+      labels:
+        app: user-v1 #Pod&#x7684;&#x540D;&#x79F0;
+    spec:   #&#x7EC4;&#x5185;&#x521B;&#x5EFA;&#x7684; Pod &#x4FE1;&#x606F;
+      volumes:
+        - name: mysql-account
+          secret:
+            secretName: mysql-account
+      containers:
+      - name: nginx #&#x5BB9;&#x5668;&#x7684;&#x540D;&#x79F0;
+<span class="hljs-addition">+       env:</span>
+<span class="hljs-addition">+       - name: USERNAME</span>
+<span class="hljs-addition">+         valueFrom:</span>
+<span class="hljs-addition">+           secretKeyRef:</span>
+<span class="hljs-addition">+             name: mysql-account</span>
+<span class="hljs-addition">+             key: username</span>
+<span class="hljs-addition">+       - name: PASSWORD</span>
+<span class="hljs-addition">+         valueFrom:</span>
+<span class="hljs-addition">+           secretKeyRef:</span>
+<span class="hljs-addition">+             name: mysql-account</span>
+<span class="hljs-addition">+             key: password</span>
+        image: registry.cn-beijing.aliyuncs.com/zhangrenyang/nginx:user-v3 #&#x4F7F;&#x7528;&#x54EA;&#x4E2A;&#x955C;&#x50CF;
+        volumeMounts:
+        - name: mysql-account
+          mountPath: /mysql-account
+          readOnly: true
+        ports:
+        - containerPort: 80 #&#x5BB9;&#x5668;&#x5185;&#x6620;&#x5C04;&#x7684;&#x7AEF;&#x53E3;
+</code></pre>
+<pre><code class="lang-js">kubectl apply -f deployment-user-v1.yaml 
+kubectl <span class="hljs-keyword">get</span> pods
+kubectl describe pod  user-v1-5f48f78d86-hjkcl
+kubectl exec -it user-v1-688486759f-9snpx -- env | grep USERNAME
+</code></pre>
+<h4 id="t304.4.3 Docker &#x79C1;&#x6709;&#x5E93;&#x8BA4;&#x8BC1;">4.4.3 Docker &#x79C1;&#x6709;&#x5E93;&#x8BA4;&#x8BC1; <a href="#t304.4.3 Docker &#x79C1;&#x6709;&#x5E93;&#x8BA4;&#x8BC1;"> # </a></h4>
+<ul>
+<li>&#x7B2C;&#x4E09;&#x79CD;&#x662F; Docker &#x79C1;&#x6709;&#x5E93;&#x7C7B;&#x578B;&#xFF0C;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x53EA;&#x80FD;&#x7528;&#x6765;&#x914D;&#x7F6E; &#x79C1;&#x6709;&#x955C;&#x50CF;&#x5E93;&#x8BA4;&#x8BC1;&#x3002;</li>
+</ul>
+<p>vi v4.yaml</p>
+<pre><code class="lang-js">image: [&#x4EC5;&#x6709;&#x955C;&#x50CF;&#x5E93;&#x5730;&#x5740;]/[&#x955C;&#x50CF;&#x540D;&#x79F0;]:[&#x955C;&#x50CF;&#x6807;&#x7B7E;]
+</code></pre>
+<pre><code class="lang-js">kubectl apply -f v4.yaml
+kubectl <span class="hljs-keyword">get</span> pods
+kubectl describe pods [POD_NAME]
+</code></pre>
+<p>vi v4.yaml</p>
+<pre><code class="lang-diff"><span class="hljs-addition">+imagePullSecrets:</span>
+<span class="hljs-addition">+ - name: private-registry-file</span>
+containers:
+  - name: nginx
+</code></pre>
+<pre><code class="lang-js">kubectl apply -f v4.yaml
+</code></pre>
+<h2 id="t315.&#x670D;&#x52A1;&#x53D1;&#x73B0;">5.&#x670D;&#x52A1;&#x53D1;&#x73B0; <a href="#t315.&#x670D;&#x52A1;&#x53D1;&#x73B0;"> # </a></h2>
+<ul>
+<li>&#x5F53;A&#x670D;&#x52A1;&#x4F9D;&#x8D56;&#x53E6;&#x4E00;&#x4E2A; B&#x670D;&#x52A1;,&#x800C;&#x6211;&#x4EEC;&#x5E38;&#x5E38;&#x4E0D;&#x77E5;&#x9053; B&#x670D;&#x52A1; &#x7684;&#x7AEF;&#x53E3;&#x548C;IP&#xFF0C;&#x4E14;&#x7AEF;&#x53E3;&#x548C;IP&#x4E5F;&#x76F8;&#x5BF9;&#x4E0D;&#x56FA;&#x5B9A;&#x6709;&#x53EF;&#x80FD;&#x7ECF;&#x5E38;&#x66F4;&#x6539;</li>
+<li>&#x8FD9;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x9700;&#x8981;<code>&#x670D;&#x52A1;&#x53D1;&#x73B0;</code></li>
+</ul>
+<h3 id="t325.1 &#x670D;&#x52A1;&#x53D1;&#x73B0;">5.1 &#x670D;&#x52A1;&#x53D1;&#x73B0; <a href="#t325.1 &#x670D;&#x52A1;&#x53D1;&#x73B0;"> # </a></h3>
+<ul>
+<li>&#x670D;&#x52A1;&#x53D1;&#x73B0;&#x662F;&#x6307;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x6CE8;&#x518C;&#x4E2D;&#x5FC3;&#x6765;&#x8BB0;&#x5F55;&#x5206;&#x5E03;&#x5F0F;&#x7CFB;&#x7EDF;&#x4E2D;&#x7684;&#x5168;&#x90E8;&#x670D;&#x52A1;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x4EE5;&#x4FBF;&#x5176;&#x4ED6;&#x670D;&#x52A1;&#x80FD;&#x591F;&#x5FEB;&#x901F;&#x7684;&#x627E;&#x5230;&#x8FD9;&#x4E9B;&#x5DF2;&#x6CE8;&#x518C;&#x7684;&#x670D;&#x52A1;</li>
+</ul>
+<h3 id="t335.2 CoreDNS">5.2 CoreDNS <a href="#t335.2 CoreDNS"> # </a></h3>
+<ul>
+<li>Pod &#x7684; IP &#x5E38;&#x5E38;&#x662F;&#x6F02;&#x79FB;&#x4E14;&#x4E0D;&#x56FA;&#x5B9A;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x8981;&#x4F7F;&#x7528; Service &#x8FD9;&#x4E2A;&#x795E;&#x5668;&#x6765;&#x5C06;&#x5B83;&#x7684;&#x8BBF;&#x95EE;&#x5165;&#x53E3;&#x56FA;&#x5B9A;&#x4F4F;</li>
+<li>&#x53EF;&#x4EE5;&#x5229;&#x7528; DNS &#x7684;&#x673A;&#x5236;&#x7ED9;&#x6BCF;&#x4E2A; Service &#x52A0;&#x4E00;&#x4E2A;&#x5185;&#x90E8;&#x7684;&#x57DF;&#x540D;&#xFF0C;&#x6307;&#x5411;&#x5176;&#x771F;&#x5B9E;&#x7684;IP</li>
+<li>&#x5728;Kubernetes&#x4E2D;&#xFF0C;&#x5BF9; Service &#x7684;&#x670D;&#x52A1;&#x53D1;&#x73B0;&#xFF0C;&#x662F;&#x901A;&#x8FC7;&#x4E00;&#x79CD;&#x53EB;&#x505A; CoreDNS &#x7684;&#x7EC4;&#x4EF6;&#x53BB;&#x5B9E;&#x73B0;&#x7684;</li>
+<li>coreDNS &#x662F;&#x4F7F;&#x7528; Go &#x8BED;&#x8A00;&#x5B9E;&#x73B0;&#x7684;&#x4E00;&#x4E2A;DNS&#x670D;&#x52A1;&#x5668;<ul>
+<li>-n &#x6309;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x8FC7;&#x6EE4;</li>
+<li>-l &#x6309;&#x6807;&#x7B7E;&#x8FC7;&#x6EE4; </li>
+<li>-o wide &#x8F93;&#x51FA;&#x989D;&#x5916;&#x4FE1;&#x606F;&#x3002;&#x5BF9;&#x4E8E;Pod&#xFF0C;&#x5C06;&#x8F93;&#x51FA;Pod&#x6240;&#x5728;&#x7684;Node&#x540D;</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-js">kubectl -n kube-system <span class="hljs-keyword">get</span> all  -l k8s-app=kube-dns -o wide
+</code></pre>
+<h3 id="t345.3  &#x670D;&#x52A1;&#x53D1;&#x73B0;&#x89C4;&#x5219;">5.3  &#x670D;&#x52A1;&#x53D1;&#x73B0;&#x89C4;&#x5219; <a href="#t345.3  &#x670D;&#x52A1;&#x53D1;&#x73B0;&#x89C4;&#x5219;"> # </a></h3>
+<ul>
+<li>kubectl exec &#x7684;&#x4F5C;&#x7528;&#x662F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5728;&#x5BB9;&#x5668;&#x5185;&#x6267;&#x884C;Shell&#x811A;&#x672C;<ul>
+<li>&#x547D;&#x4EE4;&#x683C;&#x5F0F;&#xFF1A;<code>kubectl exec -it [PodName] -- [Command]</code></li>
+<li>-i&#xFF1A;&#x5373;&#x4F7F;&#x6CA1;&#x6709;&#x8FDE;&#x63A5;&#xFF0C;&#x4E5F;&#x8981;&#x4FDD;&#x6301;&#x6807;&#x51C6;&#x8F93;&#x5165;&#x4FDD;&#x6301;&#x6253;&#x5F00;&#x72B6;&#x6001;&#x3002;&#x4E00;&#x822C;&#x4E0E; -t &#x8FDE;&#x7528;&#x3002;</li>
+<li>-t&#xFF1A;&#x5206;&#x914D;&#x4E00;&#x4E2A;&#x4F2A;TTY&#xFF08;&#x7EC8;&#x7AEF;&#x8BBE;&#x5907;&#x7EC8;&#x7AEF;&#x7A97;&#x53E3;&#xFF09;&#xFF0C;&#x4E00;&#x822C;&#x4E0E; -i &#x8FDE;&#x7528;&#x3002;&#x53EF;&#x4EE5;&#x5206;&#x914D;&#x7ED9;&#x6211;&#x4EEC;&#x4E00;&#x4E2A;Shell&#x7EC8;&#x7AEF;</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-js">kubectl <span class="hljs-keyword">get</span> pods
+kubectl <span class="hljs-keyword">get</span> svc
+kubectl exec -it user-v1-688486759f-9snpx -- /bin/sh
+curl http://service-user-v2
+</code></pre>
+<ul>
+<li><p>namespace(&#x547D;&#x540D;&#x7A7A;&#x95F4;)</p>
+<ul>
+<li>kubernetes namespace&#xFF08;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#xFF09;&#x662F; kubernetes &#x91CC;&#x6BD4;&#x8F83;&#x91CD;&#x8981;&#x7684;&#x4E00;&#x4E2A;&#x6982;&#x5FF5;</li>
+<li>&#x5728;&#x542F;&#x52A8;&#x96C6;&#x7FA4;&#x540E;&#xFF0C;kubernetes &#x4F1A;&#x5206;&#x914D;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#xFF0C;&#x53EB;default&#x3002;&#x4E0D;&#x540C;&#x7684;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x8D44;&#x6E90;&#x9694;&#x79BB;&#xFF0C;&#x670D;&#x52A1;&#x9694;&#x79BB;&#xFF0C;&#x751A;&#x81F3;&#x6743;&#x9650;&#x9694;&#x79BB;</li>
+<li>&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x5728;&#x4E4B;&#x524D;&#x521B;&#x5EFA;&#x7684;&#x670D;&#x52A1;&#xFF0C;&#x90FD;&#x6CA1;&#x6709;&#x6307;&#x5B9A; namespace &#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x7684;&#x670D;&#x52A1;&#x90FD;&#x662F;&#x5728;&#x540C;&#x4E00;&#x4E2A; namespace default&#x4E0B;</li>
+<li>&#x5728;&#x540C; namespace &#x4E0B;&#x7684;&#x89C4;&#x5219;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x76F4;&#x63A5;&#x8BBF;&#x95EE; <a href="http://ServiceName:Port">http://ServiceName:Port</a> &#x5C31;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x5230;&#x76F8;&#x5E94;&#x7684; Service</li>
+<li>&#x4E0D;&#x540C; namespace &#x4E0B;&#x7684;&#x89C4;&#x5219;&#x662F; <code>[ServiceName].[NameSpace].svc.cluster.local</code></li>
+</ul>
+</li>
+<li><p>ServiceName &#x5C31;&#x662F;&#x6211;&#x4EEC;&#x521B;&#x5EFA;&#x7684; Service &#x540D;&#x79F0;</p>
+</li>
+<li>NameSpace &#x5219;&#x662F;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x3002;&#x5982;&#x679C;&#x4F60;&#x6CA1;&#x6709;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#xFF0C;&#x5219;&#x8FD9;&#x4E2A;&#x503C;&#x4E3A; default&#x3002;</li>
+</ul>
+<pre><code class="lang-js">curl http:<span class="hljs-comment">//service-user-v2.default.svc.cluster.local</span>
+</code></pre>
+<h2 id="t356.&#x7EDF;&#x4E00;&#x7BA1;&#x7406;&#x670D;&#x52A1;&#x73AF;&#x5883;&#x53D8;&#x91CF;">6.&#x7EDF;&#x4E00;&#x7BA1;&#x7406;&#x670D;&#x52A1;&#x73AF;&#x5883;&#x53D8;&#x91CF; <a href="#t356.&#x7EDF;&#x4E00;&#x7BA1;&#x7406;&#x670D;&#x52A1;&#x73AF;&#x5883;&#x53D8;&#x91CF;"> # </a></h2>
+<ul>
+<li>Kubernetes Secret &#x7684;&#x4E3B;&#x8981;&#x4F5C;&#x7528;&#x662F;&#x6765;&#x5B58;&#x653E;&#x5BC6;&#x7801;&#xFF0C;&#x5BC6;&#x94A5;&#x7B49;&#x673A;&#x5BC6;&#x4FE1;&#x606F;</li>
+<li>&#x5BF9;&#x4E8E;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x7684;&#x914D;&#x7F6E;&#xFF1A;&#x4F8B;&#x5982;&#x4F60;&#x7684;&#x6570;&#x636E;&#x5E93;&#x5730;&#x5740;&#xFF0C;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x8981;&#x8F6C;&#x53D1;&#x7684;&#x670D;&#x52A1;&#x5730;&#x5740;&#x7B49;&#x4FE1;&#x606F;&#x3002;&#x8FD9;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x4F7F;&#x7528; Secret &#x663E;&#x7136;&#x4E0D;&#x5408;&#x9002;&#xFF0C;&#x6253;&#x5305;&#x5728;&#x955C;&#x50CF;&#x5185;&#x8026;&#x5408;&#x53C8;&#x592A;&#x4E25;&#x91CD;&#x3002;&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x501F;&#x52A9; Kubernetes ConfigMap &#x6765;&#x914D;&#x7F6E;&#x8FD9;&#x9879;&#x4E8B;&#x60C5;</li>
+</ul>
+<h3 id="t366.1 &#x4EC0;&#x4E48;&#x662F; ConfigMap">6.1 &#x4EC0;&#x4E48;&#x662F; ConfigMap <a href="#t366.1 &#x4EC0;&#x4E48;&#x662F; ConfigMap"> # </a></h3>
+<ul>
+<li>ConfigMap &#x662F; Kubernetes &#x7684;&#x4E00;&#x79CD;&#x8D44;&#x6E90;&#x7C7B;&#x578B;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5B83;&#x5B58;&#x653E;&#x4E00;&#x4E9B;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x548C;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</li>
+<li>&#x4FE1;&#x606F;&#x5B58;&#x5165;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6302;&#x8F7D;&#x5377;&#x7684;&#x65B9;&#x5F0F;&#x6302;&#x8F7D;&#x8FDB;&#x6211;&#x4EEC;&#x7684; Pod &#x5185;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x6CE8;&#x5165;</li>
+<li>&#x548C; Secret &#x7C7B;&#x578B;&#x6700;&#x5927;&#x7684;&#x4E0D;&#x540C;&#x662F;&#xFF0C;&#x5B58;&#x5728; ConfigMap &#x5185;&#x7684;&#x5185;&#x5BB9;&#x4E0D;&#x4F1A;&#x52A0;&#x5BC6;</li>
+</ul>
+<h3 id="t376.2 &#x521B;&#x5EFA;">6.2 &#x521B;&#x5EFA; <a href="#t376.2 &#x521B;&#x5EFA;"> # </a></h3>
+<h4 id="t386.2.1 &#x547D;&#x4EE4;&#x884C;&#x521B;&#x5EFA;">6.2.1 &#x547D;&#x4EE4;&#x884C;&#x521B;&#x5EFA; <a href="#t386.2.1 &#x547D;&#x4EE4;&#x884C;&#x521B;&#x5EFA;"> # </a></h4>
+<pre><code class="lang-js">kubectl create configmap [config_name] --<span class="hljs-keyword">from</span>-literal=[key]=[value]
+</code></pre>
+<pre><code class="lang-js">kubectl create configmap mysql-config --<span class="hljs-keyword">from</span>-literal=MYSQL_HOST=<span class="hljs-number">192.168</span><span class="hljs-number">.1</span><span class="hljs-number">.172</span> --<span class="hljs-keyword">from</span>-literal=MYSQL_PORT=<span class="hljs-number">3306</span>
+</code></pre>
+<ul>
+<li>&#x9700;&#x8981;&#x6CE8;&#x610F;&#xFF0C;configmap &#x7684;&#x540D;&#x79F0;&#x5FC5;&#x987B;&#x662F;&#x5168;&#x5C0F;&#x5199;&#xFF0C;&#x7279;&#x6B8A;&#x7B26;&#x53F7;&#x53EA;&#x80FD;&#x5305;&#x542B; &apos;-&apos; &#x548C; &apos;.&apos;&#x3002;&#x53EF;&#x4EE5;&#x7528;&#x4E0B;&#x9762;&#x7684;&#x8FD9;&#x4E2A;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x6821;&#x9A8C;&#x4E0B;&#x770B;&#x770B;&#x7B26;&#x4E0D;&#x7B26;&#x5408;&#x89C4;&#x5219;&#xFF1A;<code>[a-z0-9]([-a-z0-9]*[a-z0-9])?(\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*&apos;)</code></li>
+</ul>
+<pre><code class="lang-js">kubectl <span class="hljs-keyword">get</span> cm
+kubectl describe cm mysql-config
+</code></pre>
+<h4 id="t396.2.2 &#x914D;&#x7F6E;&#x6E05;&#x5355;&#x521B;&#x5EFA;">6.2.2 &#x914D;&#x7F6E;&#x6E05;&#x5355;&#x521B;&#x5EFA; <a href="#t396.2.2 &#x914D;&#x7F6E;&#x6E05;&#x5355;&#x521B;&#x5EFA;"> # </a></h4>
+<ul>
+<li>kind &#x7684;&#x503C;&#x4E3A; ConfigMap,&#x4EE3;&#x8868;&#x58F0;&#x660E;&#x4E00;&#x4E2A; ConfigMap &#x7C7B;&#x578B;&#x7684;&#x8D44;&#x6E90;</li>
+<li>metadata.name &#x4EE3;&#x8868;&#x662F;&#x8BE5; configmap &#x7684;&#x540D;&#x79F0;</li>
+<li>data &#x662F;&#x5B58;&#x653E;&#x6570;&#x636E;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x4E3A; key:value</li>
+</ul>
+<p>mysql-config-file.yaml</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> <span class="hljs-string">v1</span>
+<span class="hljs-attr">kind:</span> <span class="hljs-string">ConfigMap</span>
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">mysql-config-file</span>
+<span class="hljs-attr">data:</span>
+  <span class="hljs-attr">MYSQL_HOST:</span> <span class="hljs-string">&quot;192.168.1.172&quot;</span>
+  <span class="hljs-attr">MYSQL_PORT:</span> <span class="hljs-string">&quot;3306&quot;</span>
+</code></pre>
+<pre><code class="lang-js">kubectl apply -f ./mysql-config-file.yaml
+kubectl describe cm mysql-config-file
+</code></pre>
+<h4 id="t406.2.3 &#x6587;&#x4EF6;&#x521B;&#x5EFA;">6.2.3 &#x6587;&#x4EF6;&#x521B;&#x5EFA; <a href="#t406.2.3 &#x6587;&#x4EF6;&#x521B;&#x5EFA;"> # </a></h4>
+<ul>
+<li><code>--from-file</code>&#x4EE3;&#x8868;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;</li>
+<li><code>key</code>&#x662F;&#x6587;&#x4EF6;&#x5728; <code>configmap</code> &#x5185;&#x7684; key</li>
+<li><code>file_path</code> &#x662F;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;</li>
+</ul>
+<pre><code class="lang-js">kubectl create configmap [configname] --<span class="hljs-keyword">from</span>-file=[key]=[file_path]
+</code></pre>
+<p>env.config</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">HOST:</span> <span class="hljs-number">192.168</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>
+<span class="hljs-attr">PORT:</span> <span class="hljs-number">8080</span>
+</code></pre>
+<pre><code class="lang-js">kubectl create configmap env-<span class="hljs-keyword">from</span>-file --<span class="hljs-keyword">from</span>-file=env=./env.config
+configmap/env-<span class="hljs-keyword">from</span>-file created
+</code></pre>
+<pre><code class="lang-js">kubectl <span class="hljs-keyword">get</span> cm env-from-file -o yaml
+</code></pre>
+<h4 id="t416.2.4 &#x76EE;&#x5F55;&#x521B;&#x5EFA;">6.2.4 &#x76EE;&#x5F55;&#x521B;&#x5EFA; <a href="#t416.2.4 &#x76EE;&#x5F55;&#x521B;&#x5EFA;"> # </a></h4>
+<ul>
+<li>&#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5C06;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6587;&#x4EF6;&#x6574;&#x4E2A;&#x5B58;&#x5165;&#x8FDB;&#x53BB;</li>
+</ul>
+<pre><code class="lang-js">kubectl create configmap [configname] --<span class="hljs-keyword">from</span>-file=[dir_path]
+</code></pre>
+<pre><code class="lang-js">mkdir env &amp;&amp; cd ./env
+echo <span class="hljs-string">&apos;local&apos;</span> &gt; env.local
+echo <span class="hljs-string">&apos;test&apos;</span> &gt; env.test
+echo <span class="hljs-string">&apos;prod&apos;</span> &gt; env.prod
+</code></pre>
+<pre><code class="lang-js">kubectl create configmap env-<span class="hljs-keyword">from</span>-dir --<span class="hljs-keyword">from</span>-file=./
+</code></pre>
+<pre><code class="lang-js">kubectl <span class="hljs-keyword">get</span> cm env-from-dir -o yaml
+</code></pre>
+<h3 id="t426.3 &#x4F7F;&#x7528;&#x65B9;&#x5F0F;">6.3 &#x4F7F;&#x7528;&#x65B9;&#x5F0F; <a href="#t426.3 &#x4F7F;&#x7528;&#x65B9;&#x5F0F;"> # </a></h3>
+<h4 id="t436.3.1 &#x73AF;&#x5883;&#x53D8;&#x91CF;&#x6CE8;&#x5165;">6.3.1 &#x73AF;&#x5883;&#x53D8;&#x91CF;&#x6CE8;&#x5165; <a href="#t436.3.1 &#x73AF;&#x5883;&#x53D8;&#x91CF;&#x6CE8;&#x5165;"> # </a></h4>
+<ul>
+<li>name &#x4E3A;&#x8981;&#x9009;&#x62E9;&#x6CE8;&#x5165;&#x7684; configmap &#x540D;&#x79F0;</li>
+<li>key &#x5219;&#x4E3A; configmap &#x5185;&#x7684;&#x5176;&#x4E2D;&#x4E00;&#x4E2A; key</li>
+</ul>
+<pre><code class="lang-diff">containers:
+  - name: nginx #&#x5BB9;&#x5668;&#x7684;&#x540D;&#x79F0;
+<span class="hljs-addition">+   env:</span>
+<span class="hljs-addition">+     - name: MYSQL_HOST</span>
+<span class="hljs-addition">+       valueFrom:</span>
+<span class="hljs-addition">+         configMapKeyRef:</span>
+<span class="hljs-addition">+           name: mysql-config</span>
+<span class="hljs-addition">+           key: MYSQL_HOST</span>
+</code></pre>
+<pre><code class="lang-js">kubectl apply -f ./v1.yaml
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-comment">//kubectl exec -it [POD_NAME] -- env | grep MYSQL_HOST</span>
+kubectl exec  -it user-v1<span class="hljs-number">-744</span>f48d6bd<span class="hljs-number">-9</span>klqr -- env | grep MYSQL_HOST
+kubectl exec  -it user-v1<span class="hljs-number">-744</span>f48d6bd<span class="hljs-number">-9</span>klqr  -- env | grep MYSQL_PORT
+</code></pre>
+<pre><code class="lang-diff">      containers:
+      - name: nginx #&#x5BB9;&#x5668;&#x7684;&#x540D;&#x79F0;
+        env:
+<span class="hljs-addition">+       envFrom:</span>
+<span class="hljs-addition">+       - configMapRef:</span>
+<span class="hljs-addition">+           name: mysql-config</span>
+<span class="hljs-addition">+           optional: true  </span>
+        image: registry.cn-beijing.aliyuncs.com/zhangrenyang/nginx:user-v3 #&#x4F7F;&#x7528;&#x54EA;&#x4E2A;&#x955C;&#x50CF;
+        volumeMounts:
+        - name: mysql-account
+          mountPath: /mysql-account
+          readOnly: true
+        ports:
+        - containerPort: 80 #&#x5BB9;&#x5668;&#x5185;&#x6620;&#x5C04;&#x7684;&#x7AEF;&#x53E3;
+</code></pre>
+<h4 id="t446.3.2 &#x5B58;&#x50A8;&#x5377;&#x6302;&#x8F7D;">6.3.2 &#x5B58;&#x50A8;&#x5377;&#x6302;&#x8F7D; <a href="#t446.3.2 &#x5B58;&#x50A8;&#x5377;&#x6302;&#x8F7D;"> # </a></h4>
+<ul>
+<li>&#x5B58;&#x50A8;&#x5377;&#x6302;&#x8F7D;&#x4F1A;&#x5C06; configmap &#x91CC;&#x5185;&#x5BB9;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A; key &#x548C; value&#xFF0C;&#x4EE5;&#x72EC;&#x7ACB;&#x6587;&#x4EF6;&#x65B9;&#x5F0F;&#x4EE5;&#x5916;&#x90E8;&#x6302;&#x8F7D;&#x5377;&#x65B9;&#x5F0F;&#x6302;&#x8F7D;&#x8FDB;&#x53BB;&#xFF08; key &#x662F;&#x6587;&#x4EF6;&#x540D;&#xFF0C;value &#x662F;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#xFF09;</li>
+<li>&#x5728; Pod &#x5C42;&#x9762;&#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x5916;&#x90E8;&#x5B58;&#x50A8;&#x5377;<ul>
+<li>name &#x4E3A;&#x5B58;&#x50A8;&#x5377;&#x540D;&#x79F0;</li>
+<li>configMap &#x4EE3;&#x8868;&#x5B58;&#x50A8;&#x5377;&#x7684;&#x6587;&#x4EF6;&#x6765;&#x6E90;</li>
+<li>configMap.name &#x8981;&#x586B;&#x5165;&#x8981;&#x52A0;&#x8F7D;&#x7684; configMap &#x540D;&#x79F0;</li>
+</ul>
+</li>
+<li>&#x5728;&#x5BB9;&#x5668;&#x955C;&#x50CF;&#x5C42;&#x9762;&#x914D;&#x7F6E;&#x5B58;&#x50A8;&#x5377;<ul>
+<li>name &#x7684;&#x503C;&#x6765;&#x6E90;&#x4E8E;&#x7B2C;&#x4E00;&#x6B65;&#x914D;&#x7F6E;&#x7684; name &#x503C;</li>
+<li>mountPath &#x4E3A;&#x8981;&#x6302;&#x8F7D;&#x7684;&#x76EE;&#x5F55;</li>
+<li>readonly &#x5219;&#x4EE3;&#x8868;&#x6587;&#x4EF6;&#x662F;&#x4E0D;&#x662F;&#x53EA;&#x8BFB;</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-diff">  template:
+    metadata:
+      labels:
+        app: user-v1 #Pod&#x7684;&#x540D;&#x79F0;
+    spec:   #&#x7EC4;&#x5185;&#x521B;&#x5EFA;&#x7684; Pod &#x4FE1;&#x606F;
+      volumes:
+        - name: mysql-account
+          secret:
+            secretName: mysql-account
+<span class="hljs-addition">+       - name: envfiles</span>
+<span class="hljs-addition">+         configMap:</span>
+<span class="hljs-addition">+           name: env-from-dir</span>
+      containers:
+      - name: nginx #&#x5BB9;&#x5668;&#x7684;&#x540D;&#x79F0;
+        env:
+        - name: USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: mysql-account
+              key: username
+        - name: PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-account
+              key: password
+        envFrom:
+        - configMapRef:
+            name: mysql-config
+            optional: true  
+        image: registry.cn-beijing.aliyuncs.com/zhangrenyang/nginx:user-v3 #&#x4F7F;&#x7528;&#x54EA;&#x4E2A;&#x955C;&#x50CF;
+        volumeMounts:
+        - name: mysql-account
+          mountPath: /mysql-account
+          readOnly: true
+<span class="hljs-addition">+       - name: envfiles</span>
+<span class="hljs-addition">+         mountPath: /envfiles</span>
+<span class="hljs-addition">+         readOnly: true</span>
+        ports:
+        - containerPort: 80 #&#x5BB9;&#x5668;&#x5185;&#x6620;&#x5C04;&#x7684;&#x7AEF;&#x53E3;
+</code></pre>
+<pre><code class="lang-js">kubectl apply -f deployment-user-v1.yaml 
+kubectl <span class="hljs-keyword">get</span> pods
+kubectl describe pod user-v1-79b8768f54-r56kd
+kubectl exec -it user-v1-744f48d6bd-9klqr -- ls /envfiles
+</code></pre>
+<ul>
+<li>&#x53EF;&#x4EE5;&#x501F;&#x52A9; volumes.configMap.items[] &#x5B57;&#x6BB5;&#x6765;&#x914D;&#x7F6E;&#x591A;&#x4E2A; item &#x9879;</li>
+</ul>
+<pre><code class="lang-diff"> spec:   #&#x7EC4;&#x5185;&#x521B;&#x5EFA;&#x7684; Pod &#x4FE1;&#x606F;
+      volumes:
+        - name: mysql-account
+          secret:
+            secretName: mysql-account
+        - name: envfiles
+          configMap:
+            name: env-from-dir
+<span class="hljs-addition">+           items:</span>
+<span class="hljs-addition">+           - key: env.local</span>
+<span class="hljs-addition">+             path: env.local</span>
+</code></pre>
+<h2 id="t457.&#x6C61;&#x70B9;&#x4E0E;&#x5BB9;&#x5FCD;">7.&#x6C61;&#x70B9;&#x4E0E;&#x5BB9;&#x5FCD; <a href="#t457.&#x6C61;&#x70B9;&#x4E0E;&#x5BB9;&#x5FCD;"> # </a></h2>
+<ul>
+<li>&#x5982;&#x4F55;&#x5E72;&#x9884;Pod &#x90E8;&#x7F72;&#x5230;&#x7279;&#x5B9A;&#x7684;&#x8282;&#x70B9;&#x4E0A;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6C61;&#x70B9;&#x4E0E;&#x5BB9;&#x5FCD;&#x5EA6;&#x53BB;&#x5B9E;&#x73B0;</li>
+</ul>
+<h3 id="t467.1 &#x4E48;&#x662F;&#x6C61;&#x70B9;&#x548C;&#x5BB9;&#x5FCD;&#x5EA6;&#xFF1F;">7.1 &#x4E48;&#x662F;&#x6C61;&#x70B9;&#x548C;&#x5BB9;&#x5FCD;&#x5EA6;&#xFF1F; <a href="#t467.1 &#x4E48;&#x662F;&#x6C61;&#x70B9;&#x548C;&#x5BB9;&#x5FCD;&#x5EA6;&#xFF1F;"> # </a></h3>
+<ul>
+<li>&#x5728; Kubernetes &#x4E2D;&#xFF0C; Pod &#x88AB;&#x90E8;&#x7F72;&#x5230; Node &#x4E0A;&#x9762;&#x53BB;&#x7684;&#x89C4;&#x5219;&#x548C;&#x903B;&#x8F91;&#x662F;&#x7531; Kubernetes &#x7684;&#x8C03;&#x5EA6;&#x7EC4;&#x4EF6;&#x6839;&#x636E; Node &#x7684;&#x5269;&#x4F59;&#x8D44;&#x6E90;&#xFF0C;&#x5730;&#x4F4D;&#xFF0C;&#x4EE5;&#x53CA;&#x5176;&#x4ED6;&#x89C4;&#x5219;&#x81EA;&#x52A8;&#x9009;&#x62E9;&#x8C03;&#x5EA6;&#x7684;</li>
+<li>&#x4F46;&#x524D;&#x7AEF;&#x548C;&#x540E;&#x7AEF;&#x5F80;&#x5F80;&#x670D;&#x52A1;&#x5668;&#x8D44;&#x6E90;&#x7684;&#x5206;&#x914D;&#x90FD;&#x662F;&#x4E0D;&#x5747;&#x8861;&#x7684;&#xFF0C;&#x751A;&#x81F3;&#x6709;&#x7684;&#x670D;&#x52A1;&#x53EA;&#x80FD;&#x8BA9;&#x7279;&#x5B9A;&#x7684;&#x670D;&#x52A1;&#x5668;&#x6765;&#x8DD1;</li>
+<li>&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x9009;&#x62E9;&#x81EA;&#x52A8;&#x8C03;&#x5EA6;&#x662F;&#x4E0D;&#x5747;&#x8861;&#x7684;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x4EBA;&#x5DE5;&#x53BB;&#x5E72;&#x9884;&#x5339;&#x914D;&#x9009;&#x62E9;&#x89C4;&#x5219;&#x4E86;</li>
+<li>&#x8FD9;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x5728;&#x7ED9; Node &#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x53EB;&#x505A;&#x6C61;&#x70B9;&#x7684;&#x4E1C;&#x897F;&#xFF0C;&#x4EE5;&#x786E;&#x4FDD; Node &#x4E0D;&#x88AB; Pod &#x8C03;&#x5EA6;&#x5230;</li>
+<li>&#x5F53;&#x4F60;&#x7ED9; Node &#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x6C61;&#x70B9;&#x540E;&#xFF0C;&#x9664;&#x975E;&#x7ED9; Pod &#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x76F8;&#x5BF9;&#x5E94;&#x7684;&#x5BB9;&#x5FCD;&#x5EA6;&#xFF0C;&#x5426;&#x5219; Pod &#x624D;&#x80FD;&#x88AB;&#x8C03;&#x5EA6;&#x4E0A;&#x53BB;&#x3002;&#x8FD9;&#x4E5F;&#x5C31;&#x662F;&#x6C61;&#x70B9;&#x548C;&#x5BB9;&#x5FCD;&#x7684;&#x6765;&#x6E90;</li>
+<li>&#x6C61;&#x70B9;&#x7684;&#x683C;&#x5F0F;&#x662F; <code>key=value</code>&#xFF0C;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x81EA;&#x5DF1;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x5C31;&#x50CF;&#x662F;&#x4E00;&#x7EC4; Tag &#x4E00;&#x6837;</li>
+</ul>
+<ul>
+<li>Node_Name &#x4E3A;&#x8981;&#x6DFB;&#x52A0;&#x6C61;&#x70B9;&#x7684; node &#x540D;&#x79F0;</li>
+<li>key &#x548C; value &#x4E3A;&#x4E00;&#x7EC4;&#x952E;&#x503C;&#x5BF9;&#xFF0C;&#x4EE3;&#x8868;&#x4E00;&#x7EC4;&#x6807;&#x793A;&#x6807;&#x7B7E;</li>
+<li>NoSchedule &#x5219;&#x4E3A;&#x4E0D;&#x88AB;&#x8C03;&#x5EA6;&#x7684;&#x610F;&#x601D;&#xFF0C;&#x548C;&#x5B83;&#x540C;&#x7EA7;&#x522B;&#x7684;&#x8FD8;&#x6709;&#x5176;&#x4ED6;&#x7684;&#x503C;&#xFF1A;PreferNoSchedule &#x548C; NoExecute</li>
+</ul>
+<pre><code class="lang-js">kubectl taint nodes [Node_Name] [key]=[value]:NoSchedule
+<span class="hljs-comment">//&#x6DFB;&#x52A0;&#x6C61;&#x70B9;</span>
+kubectl taint nodes node1 user-v4=<span class="hljs-literal">true</span>:NoSchedule
+<span class="hljs-comment">//&#x67E5;&#x770B;&#x6C61;&#x70B9;</span>
+kubectl describe node node1
+kubectl describe node master
+<span class="hljs-attr">Taints</span>: node-role.kubernetes.io/master:NoSchedule
+</code></pre>
+<p>vi deployment-user-v4.yaml</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">apiVersion:</span> <span class="hljs-string">apps/v1</span> 
+<span class="hljs-attr">kind:</span> <span class="hljs-string">Deployment</span> 
+<span class="hljs-attr">metadata:</span>
+  <span class="hljs-attr">name:</span> <span class="hljs-string">user-v4</span> 
+<span class="hljs-attr">spec:</span>
+  <span class="hljs-attr">minReadySeconds:</span> <span class="hljs-number">1</span>
+  <span class="hljs-attr">selector:</span>
+    <span class="hljs-attr">matchLabels:</span>
+      <span class="hljs-attr">app:</span> <span class="hljs-string">user-v4</span> 
+  <span class="hljs-attr">replicas:</span> <span class="hljs-number">1</span>
+  <span class="hljs-attr">template:</span>
+    <span class="hljs-attr">metadata:</span>
+      <span class="hljs-attr">labels:</span>
+        <span class="hljs-attr">app:</span> <span class="hljs-string">user-v4</span> 
+    <span class="hljs-attr">spec:</span>
+      <span class="hljs-attr">containers:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">nginx</span>
+        <span class="hljs-attr">image:</span> <span class="hljs-string">registry.cn-beijing.aliyuncs.com/zhangrenyang/nginx:user-v3</span> 
+        <span class="hljs-attr">ports:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">containerPort:</span> <span class="hljs-number">80</span>
+</code></pre>
+<pre><code class="lang-js">kubectl apply -f deployment-user-v4.yaml
+</code></pre>
+<ul>
+<li>&#x7ED9; Pod &#x8BBE;&#x7F6E;&#x5BB9;&#x5FCD;&#x5EA6;<ul>
+<li>&#x60F3;&#x8BA9; Pod &#x88AB;&#x8C03;&#x5EA6;&#x8FC7;&#x53BB;&#xFF0C;&#x9700;&#x8981;&#x5728; Pod &#x4E00;&#x4FA7;&#x6DFB;&#x52A0;&#x76F8;&#x540C;&#x7684;&#x5BB9;&#x5FCD;&#x5EA6;&#x624D;&#x80FD;&#x88AB;&#x8C03;&#x5EA6;&#x5230;</li>
+<li>&#x7ED9; Pod &#x8BBE;&#x7F6E;&#x4E00;&#x7EC4;&#x5BB9;&#x5FCD;&#x5EA6;&#xFF0C;&#x4EE5;&#x5339;&#x914D;&#x5BF9;&#x5E94;&#x7684; Node &#x7684;&#x6C61;&#x70B9;</li>
+<li>key &#x548C; value &#x662F;&#x4F60;&#x914D;&#x7F6E; Node &#x6C61;&#x70B9;&#x7684; key &#x548C; value</li>
+<li>effect &#x662F; Node &#x6C61;&#x70B9;&#x7684;&#x8C03;&#x5EA6;&#x6548;&#x679C;&#xFF0C;&#x548C; Node &#x7684;&#x8BBE;&#x7F6E;&#x9879;&#x4E5F;&#x662F;&#x5339;&#x914D;&#x7684;</li>
+<li>operator &#x662F;&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;equal &#x4EE3;&#x8868;&#x53EA;&#x6709; key &#x548C; value &#x76F8;&#x7B49;&#x624D;&#x7B97;&#x6570;&#x3002;&#x5F53;&#x7136;&#x4E5F;&#x53EF;&#x4EE5;&#x914D;&#x7F6E; exists &#xFF0C;&#x4EE3;&#x8868;&#x53EA;&#x8981; key &#x5B58;&#x5728;&#x5C31;&#x5339;&#x914D;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x6821;&#x9A8C; value &#x7684;&#x503C;</li>
+</ul>
+</li>
+</ul>
+<p>vi deployment-user-v4.yaml</p>
+<pre><code class="lang-diff">apiVersion: apps/v1 
+kind: Deployment 
+metadata:
+  name: user-v4 
+spec:
+  minReadySeconds: 1
+  selector:
+    matchLabels:
+      app: user-v4 
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: user-v4 
+    spec:  
+<span class="hljs-addition">+     tolerations:</span>
+<span class="hljs-addition">+     - key: &quot;user-v4&quot;</span>
+<span class="hljs-addition">+       operator: &quot;Equal&quot;</span>
+<span class="hljs-addition">+       value: &quot;true&quot;</span>
+<span class="hljs-addition">+       effect: &quot;NoSchedule&quot;</span>
+      containers:
+      - name: nginx
+        image: registry.cn-beijing.aliyuncs.com/zhangrenyang/nginx:user-v3 
+        ports:
+        - containerPort: 80
+</code></pre>
+<ul>
+<li><p>&#x4FEE;&#x6539;Node&#x7684;&#x6C61;&#x70B9;</p>
+<pre><code class="lang-js">kubectl taint nodes node1 user-v4=<span class="hljs-number">1</span>:NoSchedule --overwrite
+</code></pre>
+</li>
+<li><p>&#x5220;&#x9664; Node &#x7684;&#x6C61;&#x70B9;</p>
+<pre><code class="lang-js">kubectl taint nodes node1 user-v4-
+</code></pre>
+</li>
+<li><p>&#x5728;master&#x4E0A;&#x5E03;&#x7F72;pod</p>
+</li>
+</ul>
+<pre><code class="lang-js">kubectl taint nodes node1 user-v4=<span class="hljs-literal">true</span>:NoSchedule
+kubectl describe node node1
+kubectl describe node master
+</code></pre>
+<p>vi deployment-user-v4.yaml</p>
+<pre><code class="lang-diff">apiVersion: apps/v1 
+kind: Deployment 
+metadata:
+  name: user-v4 
+spec:
+  minReadySeconds: 1
+  selector:
+    matchLabels:
+      app: user-v4 
+  replicas: 1 
+  template:
+    metadata:
+      labels:
+        app: user-v4 
+    spec:  
+<span class="hljs-addition">+     tolerations:</span>
+<span class="hljs-addition">+     - key: &quot;node-role.kubernetes.io/master&quot;</span>
+<span class="hljs-addition">+       operator: &quot;Exists&quot;</span>
+<span class="hljs-addition">+       effect: &quot;NoSchedule&quot;</span>
+      containers:
+      - name: nginx
+        image: registry.cn-beijing.aliyuncs.com/zhangrenyang/nginx:user-v3 
+        ports:
+        - containerPort: 80
+</code></pre>
+<pre><code class="lang-js"> kubectl apply -f deployment-user-v4.yaml
+</code></pre>
+<p>apiVersion: v1kind: Podmetadata:  name: private-regspec:  containers:  - name: private-reg-container    image:   imagePullSecrets:  - name: har</p>
+<ul>
+<li><a href="https://www.jianshu.com/p/02d269c86bbe">Nexus3&#x5BC6;&#x7801;&#x627E;&#x56DE;</a></li>
+<li><a href="https://cloud.tencent.com/developer/article/1671701">nexus&#x914D;&#x7F6E;https&#x652F;&#x6301;</a></li>
+</ul>
+
+    </div>
+</div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+    aria-labelledby="loginModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="loginModalLabel">请登录</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="username" class="control-label">姓名:</label>
+                        <input type="text" class="form-control" id="username" placeholder="珠峰架构VIP会员系统用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">密码:</label>
+                        <input type="text" class="form-control" id="password" placeholder="珠峰架构VIP会员系统密码">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                    data-dismiss="modal">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

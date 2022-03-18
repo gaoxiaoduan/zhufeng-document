@@ -1,0 +1,2787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+
+
+
+
+<div class="warpper">
+
+    <div class="page-toc">
+        <ul><li><a href="#t01.安装">1.安装</a><ul><li><a href="#t11.1.安装mysql">1.1.安装mysql</a></li><li><a href="#t21.2.安装redis">1.2.安装redis</a></li><li><a href="#t31.3.安装nginx">1.3.安装nginx</a></li></ul></li><li><a href="#t42. 配置nginx">2. 配置nginx</a><ul><li><a href="#t52.1 nginx.conf">2.1 nginx.conf</a></li></ul></li><li><a href="#t63. 下载项目">3. 下载项目</a></li><li><a href="#t74.埋点上报">4.埋点上报</a><ul><li><a href="#t84.1 安装">4.1 安装</a></li><li><a href="#t94.2 配置">4.2 配置</a></li><li><a href="#t104.3 监控类型">4.3 监控类型</a><ul><li><a href="#t114.3.1 time_on_page(用户在线时长统计)">4.3.1 time_on_page(用户在线时长统计)</a></li><li><a href="#t124.3.2 performance(页面载入性能)">4.3.2 performance(页面载入性能)</a></li><li><a href="#t134.3.2.1 sdk\src\index.js">4.3.2.1 sdk\src\index.js</a></li><li><a href="#t144.3.3 js_error(页面报错)">4.3.3 js_error(页面报错)</a><ul><li><a href="#t154.3.3.1 ERROR_RUNTIME">4.3.3.1 ERROR_RUNTIME</a></li><li><a href="#t164.3.3.2 LOAD_ERROR">4.3.3.2 LOAD_ERROR</a></li><li><a href="#t174.3.3.2 LOAD_ERROR">4.3.3.2 LOAD_ERROR</a></li><li><a href="#t184.3.3.3 ERROR_TRY_CATCH">4.3.3.3 ERROR_TRY_CATCH</a></li></ul></li><li><a href="#t194.3.4 手工上报">4.3.4 手工上报</a></li></ul></li></ul></li><li><a href="#t205.数据处理">5.数据处理</a><ul><li><a href="#t215.1 安装server">5.1 安装server</a></li><li><a href="#t225.2 配置">5.2 配置</a><ul><li><a href="#t235.2.1 配置mysql">5.2.1 配置mysql</a></li><li><a href="#t245.2.2  配置redis">5.2.2  配置redis</a></li></ul></li><li><a href="#t255.3 数据解析">5.3 数据解析</a></li><li><a href="#t265.3.1 数据存储">5.3.1 数据存储</a></li><li><a href="#t275.3.1.1 表名说明">5.3.1.1 表名说明</a></li><li><a href="#t285.3.1.2 数据库表">5.3.1.2 数据库表</a></li><li><a href="#t295.3.2 指令">5.3.2 指令</a><ul><li><a href="#t305.3.2.1 指令帮助">5.3.2.1 指令帮助</a></li><li><a href="#t315.3.2.2 初始化数据库">5.3.2.2 初始化数据库</a></li><li><a href="#t325.3.2.3 SaveLog:Nginx">5.3.2.3 SaveLog:Nginx</a></li><li><a href="#t335.3.2.4 Parse:Performance">5.3.2.4 Parse:Performance</a></li><li><a href="#t345.3.2.5  Summary:Performance">5.3.2.5  Summary:Performance</a></li><li><a href="#t355.3.2.5 Parse:TimeOnSiteByHour">5.3.2.5 Parse:TimeOnSiteByHour</a></li><li><a href="#t365.3.2.6 Summary:TimeOnSite">5.3.2.6 Summary:TimeOnSite</a></li><li><a href="#t375.3.2.7 Parse:Monitor">5.3.2.7 Parse:Monitor</a></li><li><a href="#t385.3.2.8 Summary:Error">5.3.2.8 Summary:Error</a></li><li><a href="#t395.3.2.9 Parse:Device">5.3.2.9 Parse:Device</a></li><li><a href="#t405.3.2.10 Summary">5.3.2.10 Summary</a></li></ul></li></ul></li><li><a href="#t416.计划任务">6.计划任务</a><ul><li><a href="#t426.1 任务执行周期">6.1 任务执行周期</a></li><li><a href="#t436.2 执行任务">6.2 执行任务</a></li></ul></li><li><a href="#t447.前台展示">7.前台展示</a><ul><li><a href="#t457.1 启动接口">7.1 启动接口</a></li><li><a href="#t467.2 启动前台">7.2 启动前台</a></li><li><a href="#t477.3 前端应用">7.3 前端应用</a></li><li><a href="#t487.4 页面性能">7.4 页面性能</a><ul><li><a href="#t497.4.1 urlList">7.4.1 urlList</a></li><li><a href="#t507.4.2 lineChartData">7.4.2 lineChartData</a></li><li><a href="#t517.4.3 urlOverview">7.4.3 urlOverview</a></li></ul></li></ul></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <h2 id="t01.&#x5B89;&#x88C5;">1.&#x5B89;&#x88C5; <a href="#t01.&#x5B89;&#x88C5;"> # </a></h2>
+<h3 id="t11.1.&#x5B89;&#x88C5;mysql">1.1.&#x5B89;&#x88C5;mysql <a href="#t11.1.&#x5B89;&#x88C5;mysql"> # </a></h3>
+<ul>
+<li><a href="https://dev.mysql.com/downloads/mysql/">mysql</a></li>
+</ul>
+<h3 id="t21.2.&#x5B89;&#x88C5;redis">1.2.&#x5B89;&#x88C5;redis <a href="#t21.2.&#x5B89;&#x88C5;redis"> # </a></h3>
+<ul>
+<li><a href="https://redis.io/">redis</a></li>
+</ul>
+<h3 id="t31.3.&#x5B89;&#x88C5;nginx">1.3.&#x5B89;&#x88C5;nginx <a href="#t31.3.&#x5B89;&#x88C5;nginx"> # </a></h3>
+<ul>
+<li><a href="http://nginx.org/en/download.html">nginx</a></li>
+</ul>
+<h2 id="t42. &#x914D;&#x7F6E;nginx">2. &#x914D;&#x7F6E;nginx <a href="#t42. &#x914D;&#x7F6E;nginx"> # </a></h2>
+<h3 id="t52.1 nginx.conf">2.1 nginx.conf <a href="#t52.1 nginx.conf"> # </a></h3>
+<pre><code class="lang-js">http {
+    include       mime.types;
+    default_type  application/octet-stream;
+
+    log_format  main &apos;$time_iso8601    -    -    $remote_addr    $http_host    $status    $request_time    $request_length    $body_bytes_sent    15d04347-be16-b9ab-0029-24e4b6645950    -    -    9689c3ea-5155-2df7-a719-e90d2dedeb2c 937ba755-116a-18e6-0735-312cba23b00c    -    -    $request_uri    $http_user_agent    -    sample=-&amp;_UC_agent=-&amp;device_id=-&amp;-    -    -    -&apos;;
+    access_log  logs/access.log  main;
+    server {
+        listen       80;
+        server_name  localhost;
+        if ($time_iso8601 ~ &quot;^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})&quot;) {
+         set $year $1;
+         set $month $2;
+         set $day $3;
+         set $hour $4;
+         set $minute $5;
+        }
+        access_log  logs/$year$month-$day-$hour-$minute.log  main;
+        location / {
+            root   html;
+            index  index.html index.htm;
+        }
+
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+    }
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">$time_iso8601</td>
+<td style="text-align:left">&#x670D;&#x52A1;&#x5668;&#x65F6;&#x95F4;&#x7684;ISO 8610&#x683C;&#x5F0F;</td>
+</tr>
+<tr>
+<td style="text-align:left">$remote_addr</td>
+<td style="text-align:left">&#x5BA2;&#x6237;&#x7AEF;&#x5730;&#x5740;</td>
+</tr>
+<tr>
+<td style="text-align:left">$http_host</td>
+<td style="text-align:left">&#x4E3B;&#x673A;&#x540D;</td>
+</tr>
+<tr>
+<td style="text-align:left">$status</td>
+<td style="text-align:left">HTTP&#x54CD;&#x5E94;&#x4EE3;&#x7801;</td>
+</tr>
+<tr>
+<td style="text-align:left">$request_time</td>
+<td style="text-align:left">&#x5904;&#x7406;&#x5BA2;&#x6237;&#x7AEF;&#x8BF7;&#x6C42;&#x4F7F;&#x7528;&#x7684;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td style="text-align:left">$request_length</td>
+<td style="text-align:left">&#x8BF7;&#x6C42;&#x7684;&#x957F;&#x5EA6;</td>
+</tr>
+<tr>
+<td style="text-align:left">$body_bytes_sent</td>
+<td style="text-align:left">&#x4F20;&#x8F93;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x5B57;&#x8282;&#x6570;</td>
+</tr>
+<tr>
+<td style="text-align:left">$request_uri</td>
+<td style="text-align:left">&#x5305;&#x542B;&#x4E00;&#x4E9B;&#x5BA2;&#x6237;&#x7AEF;&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x7684;&#x539F;&#x59CB;URI</td>
+</tr>
+<tr>
+<td style="text-align:left">$http_user_agent</td>
+<td style="text-align:left">&#x5BA2;&#x6237;&#x7AEF;&#x7528;&#x6237;&#x4EE3;&#x7406;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="t63. &#x4E0B;&#x8F7D;&#x9879;&#x76EE;">3. &#x4E0B;&#x8F7D;&#x9879;&#x76EE; <a href="#t63. &#x4E0B;&#x8F7D;&#x9879;&#x76EE;"> # </a></h2>
+<pre><code class="lang-js">git clone https:<span class="hljs-comment">//gitee.com/zhufengpeixun/monitor.git</span>
+</code></pre>
+<h2 id="t74.&#x57CB;&#x70B9;&#x4E0A;&#x62A5;">4.&#x57CB;&#x70B9;&#x4E0A;&#x62A5; <a href="#t74.&#x57CB;&#x70B9;&#x4E0A;&#x62A5;"> # </a></h2>
+<h3 id="t84.1 &#x5B89;&#x88C5;">4.1 &#x5B89;&#x88C5; <a href="#t84.1 &#x5B89;&#x88C5;"> # </a></h3>
+<pre><code class="lang-js">cd monitor/sdk
+cnpm install
+</code></pre>
+<h3 id="t94.2 &#x914D;&#x7F6E;">4.2 &#x914D;&#x7F6E; <a href="#t94.2 &#x914D;&#x7F6E;"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-built_in">window</span>.dt &amp;&amp; dt.set({
+  <span class="hljs-attr">pid</span>: <span class="hljs-string">&apos;template&apos;</span>, <span class="hljs-comment">// [&#x5FC5;&#x586B;]&#x9879;&#x76EE;id,</span>
+  <span class="hljs-attr">uuid</span>: <span class="hljs-string">&apos;uuid&apos;</span>, <span class="hljs-comment">// [&#x53EF;&#x9009;]&#x8BBE;&#x5907;&#x552F;&#x4E00;id, &#x7528;&#x4E8E;&#x8BA1;&#x7B97;uv&#x6570;&amp;&#x8BBE;&#x5907;&#x5206;&#x5E03;. &#x4E00;&#x822C;&#x5728;cookie&#x4E2D;&#x53EF;&#x4EE5;&#x53D6;&#x5230;, &#x6CA1;&#x6709;uuid&#x53EF;&#x7528;&#x8BBE;&#x5907;macidfa/imei&#x66FF;&#x4EE3;. &#x6216;&#x8005;&#x5728;storage&#x7684;key&#x4E2D;&#x5B58;&#x5165;&#x968F;&#x673A;&#x6570;&#x5B57;, &#x6A21;&#x62DF;&#x8BBE;&#x5907;&#x552F;&#x4E00;id.</span>
+  <span class="hljs-attr">ucid</span>: <span class="hljs-string">&apos;ucid&apos;</span>, <span class="hljs-comment">// [&#x53EF;&#x9009;]&#x7528;&#x6237;ucid, &#x7528;&#x4E8E;&#x53D1;&#x751F;&#x5F02;&#x5E38;&#x65F6;&#x8FFD;&#x8E2A;&#x7528;&#x6237;&#x4FE1;&#x606F;, &#x4E00;&#x822C;&#x5728;cookie&#x4E2D;&#x53EF;&#x4EE5;&#x53D6;&#x5230;, &#x6CA1;&#x6709;&#x53EF;&#x4F20;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;</span>
+  <span class="hljs-attr">is_test</span>: <span class="hljs-literal">true</span>, <span class="hljs-comment">// &#x662F;&#x5426;&#x4E3A;&#x6D4B;&#x8BD5;&#x6570;&#x636E;, &#x9ED8;&#x8BA4;&#x4E3A;false(&#x6D4B;&#x8BD5;&#x6A21;&#x5F0F;&#x4E0B;&#x6253;&#x70B9;&#x6570;&#x636E;&#x4EC5;&#x4F9B;&#x6D4F;&#x89C8;, &#x4E0D;&#x4F1A;&#x5C55;&#x793A;&#x5728;&#x7CFB;&#x7EDF;&#x4E2D;)</span>
+  <span class="hljs-attr">record</span>: {
+    <span class="hljs-attr">time_on_page</span>: <span class="hljs-literal">true</span>, <span class="hljs-comment">// &#x662F;&#x5426;&#x76D1;&#x63A7;&#x7528;&#x6237;&#x5728;&#x7EBF;&#x65F6;&#x957F;&#x6570;&#x636E;, &#x9ED8;&#x8BA4;&#x4E3A;true</span>
+    <span class="hljs-attr">performance</span>: <span class="hljs-literal">true</span>, <span class="hljs-comment">// &#x662F;&#x5426;&#x76D1;&#x63A7;&#x9875;&#x9762;&#x8F7D;&#x5165;&#x6027;&#x80FD;, &#x9ED8;&#x8BA4;&#x4E3A;true</span>
+    <span class="hljs-attr">js_error</span>: <span class="hljs-literal">true</span>, <span class="hljs-comment">//  &#x662F;&#x5426;&#x76D1;&#x63A7;&#x9875;&#x9762;&#x62A5;&#x9519;&#x4FE1;&#x606F;, &#x9ED8;&#x8BA4;&#x4E3A;true</span>
+    <span class="hljs-comment">// &#x914D;&#x7F6E;&#x9700;&#x8981;&#x76D1;&#x63A7;&#x7684;&#x9875;&#x9762;&#x62A5;&#x9519;&#x7C7B;&#x522B;, &#x4EC5;&#x5728;js_error&#x4E3A;true&#x65F6;&#x751F;&#x6548;, &#x9ED8;&#x8BA4;&#x5747;&#x4E3A;true(&#x53EF;&#x4EE5;&#x5C06;&#x914D;&#x7F6E;&#x6539;&#x4E3A;false, &#x4EE5;&#x5C4F;&#x853D;&#x4E0D;&#x9700;&#x8981;&#x62A5;&#x7684;&#x9519;&#x8BEF;&#x7C7B;&#x522B;)</span>
+    <span class="hljs-attr">js_error_report_config</span>: {
+      <span class="hljs-attr">ERROR_RUNTIME</span>: <span class="hljs-literal">true</span>, <span class="hljs-comment">// js&#x8FD0;&#x884C;&#x65F6;&#x62A5;&#x9519;</span>
+      <span class="hljs-attr">ERROR_SCRIPT</span>: <span class="hljs-literal">true</span>, <span class="hljs-comment">// js&#x8D44;&#x6E90;&#x52A0;&#x8F7D;&#x5931;&#x8D25;</span>
+      <span class="hljs-attr">ERROR_STYLE</span>: <span class="hljs-literal">true</span>, <span class="hljs-comment">// css&#x8D44;&#x6E90;&#x52A0;&#x8F7D;&#x5931;&#x8D25;</span>
+      <span class="hljs-attr">ERROR_IMAGE</span>: <span class="hljs-literal">true</span>, <span class="hljs-comment">// &#x56FE;&#x7247;&#x8D44;&#x6E90;&#x52A0;&#x8F7D;&#x5931;&#x8D25;</span>
+      <span class="hljs-attr">ERROR_AUDIO</span>: <span class="hljs-literal">true</span>, <span class="hljs-comment">// &#x97F3;&#x9891;&#x8D44;&#x6E90;&#x52A0;&#x8F7D;&#x5931;&#x8D25;</span>
+      <span class="hljs-attr">ERROR_VIDEO</span>: <span class="hljs-literal">true</span>, <span class="hljs-comment">// &#x89C6;&#x9891;&#x8D44;&#x6E90;&#x52A0;&#x8F7D;&#x5931;&#x8D25;</span>
+      <span class="hljs-attr">ERROR_CONSOLE</span>: <span class="hljs-literal">true</span>, <span class="hljs-comment">// vue&#x8FD0;&#x884C;&#x65F6;&#x62A5;&#x9519;</span>
+      <span class="hljs-attr">ERROR_TRY_CATCH</span>: <span class="hljs-literal">true</span>, <span class="hljs-comment">// &#x672A;catch&#x9519;&#x8BEF;</span>
+      <span class="hljs-comment">// &#x81EA;&#x5B9A;&#x4E49;&#x68C0;&#x6D4B;&#x51FD;&#x6570;, &#x4E0A;&#x62A5;&#x524D;&#x6700;&#x540E;&#x5224;&#x65AD;&#x662F;&#x5426;&#x9700;&#x8981;&#x62A5;&#x544A;&#x8BE5;&#x9519;&#x8BEF;</span>
+      <span class="hljs-comment">// &#x56DE;&#x8C03;&#x51FD;&#x6570;&#x8BF4;&#x660E;</span>
+      <span class="hljs-comment">// &#x4F20;&#x5165;&#x53C2;&#x6570; =&gt; </span>
+      <span class="hljs-comment">//            desc:  &#x5B57;&#x7B26;&#x4E32;, &#x9519;&#x8BEF;&#x63CF;&#x8FF0;</span>
+      <span class="hljs-comment">//            stack: &#x5B57;&#x7B26;&#x4E32;, &#x9519;&#x8BEF;&#x5806;&#x6808;&#x4FE1;&#x606F;</span>
+      <span class="hljs-comment">// &#x8FD4;&#x56DE;&#x503C; =&gt;  </span>
+      <span class="hljs-comment">//            true  : &#x4E0A;&#x62A5;&#x6253;&#x70B9;&#x8BF7;&#x6C42;</span>
+      <span class="hljs-comment">//            false : &#x4E0D;&#x9700;&#x8981;&#x4E0A;&#x62A5;</span>
+      <span class="hljs-attr">checkErrrorNeedReport</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">desc, stack</span>)</span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
+      }
+    }
+  },
+  <span class="hljs-comment">// &#x4E1A;&#x52A1;&#x65B9;&#x7684;js&#x7248;&#x672C;&#x53F7;, &#x4F1A;&#x968F;&#x7740;&#x6253;&#x70B9;&#x6570;&#x636E;&#x4E00;&#x8D77;&#x4E0A;&#x4F20;, &#x65B9;&#x4FBF;&#x533A;&#x5206;&#x6570;&#x636E;&#x6765;&#x6E90;</span>
+  <span class="hljs-comment">// &#x53EF;&#x4EE5;&#x4E0D;&#x586B;, &#x9ED8;&#x8BA4;&#x4E3A;1.0.0</span>
+  <span class="hljs-attr">version</span>: <span class="hljs-string">&apos;1.0.0&apos;</span>,
+  <span class="hljs-comment">// test.com/detail/1.html</span>
+  <span class="hljs-comment">// test.com/detail/2.html</span>
+  <span class="hljs-comment">// test.com/detail/3.html</span>
+  <span class="hljs-comment">// &#x8FD9;&#x79CD;&#x9875;&#x9762;&#x6765;&#x8BF4;, &#x867D;&#x7136;url&#x4E0D;&#x540C;, &#x4F46;&#x4ED6;&#x4EEC;&#x672C;&#x8D28;&#x4E0A;&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x9875;&#x9762;</span>
+  <span class="hljs-comment">// &#x56E0;&#x6B64;&#x9700;&#x8981;&#x4E1A;&#x52A1;&#x65B9;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x5904;&#x7406;&#x51FD;&#x6570;, &#x6839;&#x636E;&#x5F53;&#x524D;url&#x89E3;&#x6790;&#x51FA;&#x771F;&#x5B9E;&#x7684;&#x9875;&#x9762;&#x7C7B;&#x578B;</span>
+  <span class="hljs-attr">getPageType</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">location</span>)</span>{ <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${location.host}</span><span class="hljs-subst">${location.pathname}</span>`</span> }
+})
+</code></pre>
+<h3 id="t104.3 &#x76D1;&#x63A7;&#x7C7B;&#x578B;">4.3 &#x76D1;&#x63A7;&#x7C7B;&#x578B; <a href="#t104.3 &#x76D1;&#x63A7;&#x7C7B;&#x578B;"> # </a></h3>
+<h4 id="t114.3.1 time_on_page(&#x7528;&#x6237;&#x5728;&#x7EBF;&#x65F6;&#x957F;&#x7EDF;&#x8BA1;)">4.3.1 time_on_page(&#x7528;&#x6237;&#x5728;&#x7EBF;&#x65F6;&#x957F;&#x7EDF;&#x8BA1;) <a href="#t114.3.1 time_on_page(&#x7528;&#x6237;&#x5728;&#x7EBF;&#x65F6;&#x957F;&#x7EDF;&#x8BA1;)"> # </a></h4>
+<ul>
+<li>t_r_duration_distribution</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x7528;&#x6237;&#x5728;&#x7EBF;&#x65F6;&#x957F;&#x7EDF;&#x8BA1;</span>
+<span class="hljs-keyword">const</span> OFFLINE_MILL = <span class="hljs-number">15</span> * <span class="hljs-number">60</span> * <span class="hljs-number">1000</span> <span class="hljs-comment">// 15&#x5206;&#x949F;&#x4E0D;&#x64CD;&#x4F5C;&#x8BA4;&#x4E3A;&#x4E0D;&#x5728;&#x7EBF;</span>
+<span class="hljs-keyword">const</span> SEND_MILL = <span class="hljs-number">5</span> * <span class="hljs-number">1000</span> <span class="hljs-comment">// &#x6BCF;5s&#x6253;&#x70B9;&#x4E00;&#x6B21;</span>
+
+<span class="hljs-keyword">let</span> lastTime = <span class="hljs-built_in">Date</span>.now()
+<span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">&apos;click&apos;</span>, () =&gt; {
+  <span class="hljs-comment">// &#x68C0;&#x67E5;&#x662F;&#x5426;&#x76D1;&#x63A7;&#x7528;&#x6237;&#x5728;&#x7EBF;&#x65F6;&#x957F;</span>
+  <span class="hljs-keyword">const</span> isTimeOnPageFlagOn = _.get(
+    commonConfig,
+    [<span class="hljs-string">&apos;record&apos;</span>, <span class="hljs-string">&apos;time_on_page&apos;</span>],
+    _.get(DEFAULT_CONFIG, [<span class="hljs-string">&apos;record&apos;</span>, <span class="hljs-string">&apos;time_on_page&apos;</span>])
+  )
+  <span class="hljs-keyword">const</span> isOldTimeOnPageFlagOn = _.get(commonConfig, [<span class="hljs-string">&apos;online&apos;</span>], <span class="hljs-literal">false</span>)
+  <span class="hljs-keyword">const</span> needRecordTimeOnPage = isTimeOnPageFlagOn || isOldTimeOnPageFlagOn
+  <span class="hljs-keyword">if</span> (needRecordTimeOnPage === <span class="hljs-literal">false</span>) {
+    debugLogger(<span class="hljs-string">`config.record.time_on_page&#x503C;&#x4E3A;false, &#x8DF3;&#x8FC7;&#x505C;&#x7559;&#x65F6;&#x957F;&#x6253;&#x70B9;`</span>)
+    <span class="hljs-keyword">return</span>
+  }
+
+  <span class="hljs-keyword">const</span> now = <span class="hljs-built_in">Date</span>.now();
+  <span class="hljs-keyword">const</span> duration = now - lastTime;
+  <span class="hljs-keyword">if</span> (duration &gt; OFFLINE_MILL) {
+    lastTime = <span class="hljs-built_in">Date</span>.now()
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (duration &gt; SEND_MILL) {
+    lastTime = <span class="hljs-built_in">Date</span>.now()
+    debugLogger(<span class="hljs-string">&apos;&#x53D1;&#x9001;&#x7528;&#x6237;&#x7559;&#x5B58;&#x65F6;&#x95F4;&#x57CB;&#x70B9;, &#x57CB;&#x70B9;&#x5185;&#x5BB9; =&gt; &apos;</span>, { <span class="hljs-attr">duration_ms</span>: duration })
+    <span class="hljs-comment">// &#x7528;&#x6237;&#x5728;&#x7EBF;&#x65F6;&#x957F;</span>
+    log.product(<span class="hljs-number">10001</span>, { <span class="hljs-attr">duration_ms</span>: duration });
+  }
+}, <span class="hljs-literal">false</span>)
+</code></pre>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">&quot;d&quot;</span>: {
+        <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;product&quot;</span>,
+        <span class="hljs-attr">&quot;code&quot;</span>: <span class="hljs-number">10001</span>,
+        <span class="hljs-attr">&quot;detail&quot;</span>: {
+            <span class="hljs-attr">&quot;duration_ms&quot;</span>: <span class="hljs-number">21553</span>
+        },
+        <span class="hljs-attr">&quot;extra&quot;</span>: {}
+    }
+}
+</code></pre>
+<h4 id="t124.3.2 performance(&#x9875;&#x9762;&#x8F7D;&#x5165;&#x6027;&#x80FD;)">4.3.2 performance(&#x9875;&#x9762;&#x8F7D;&#x5165;&#x6027;&#x80FD;) <a href="#t124.3.2 performance(&#x9875;&#x9762;&#x8F7D;&#x5165;&#x6027;&#x80FD;)"> # </a></h4>
+<p><img src="http://img.zhufengpeixun.cn/renderscope3.jpg" alt="renderscope3"></p>
+<h4 id="t134.3.2.1 sdk\src\index.js">4.3.2.1 sdk\src\index.js <a href="#t134.3.2.1 sdk\src\index.js"> # </a></h4>
+<p>sdk\src\index.js</p>
+<pre><code class="lang-js"><span class="hljs-built_in">window</span>.onload = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-comment">// &#x68C0;&#x67E5;&#x662F;&#x5426;&#x76D1;&#x63A7;&#x6027;&#x80FD;&#x6307;&#x6807;</span>
+  <span class="hljs-keyword">const</span> isPerformanceFlagOn = _.get(
+    commonConfig,
+    [<span class="hljs-string">&apos;record&apos;</span>, <span class="hljs-string">&apos;performance&apos;</span>],
+    _.get(DEFAULT_CONFIG, [<span class="hljs-string">&apos;record&apos;</span>, <span class="hljs-string">&apos;performance&apos;</span>])
+  )
+  <span class="hljs-keyword">const</span> isOldPerformanceFlagOn = _.get(commonConfig, [<span class="hljs-string">&apos;performance&apos;</span>], <span class="hljs-literal">false</span>)
+  <span class="hljs-keyword">const</span> needRecordPerformance = isPerformanceFlagOn || isOldPerformanceFlagOn
+  <span class="hljs-keyword">if</span> (needRecordPerformance === <span class="hljs-literal">false</span>) {
+    debugLogger(<span class="hljs-string">`config.record.performance&#x503C;&#x4E3A;false, &#x8DF3;&#x8FC7;&#x6027;&#x80FD;&#x6307;&#x6807;&#x6253;&#x70B9;`</span>)
+    <span class="hljs-keyword">return</span>
+  }
+
+  <span class="hljs-keyword">const</span> performance = <span class="hljs-built_in">window</span>.performance
+  <span class="hljs-keyword">if</span> (!performance) {
+    <span class="hljs-comment">// &#x5F53;&#x524D;&#x6D4F;&#x89C8;&#x5668;&#x4E0D;&#x652F;&#x6301;</span>
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x4F60;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x4E0D;&#x652F;&#x6301; performance &#x63A5;&#x53E3;&apos;</span>)
+    <span class="hljs-keyword">return</span>
+  }
+  <span class="hljs-keyword">const</span> times = performance.timing.toJSON()
+
+  debugLogger(<span class="hljs-string">&apos;&#x53D1;&#x9001;&#x9875;&#x9762;&#x6027;&#x80FD;&#x6307;&#x6807;&#x6570;&#x636E;, &#x4E0A;&#x62A5;&#x5185;&#x5BB9; =&gt; &apos;</span>, {
+    ...times,
+    <span class="hljs-attr">url</span>: <span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-built_in">window</span>.location.host}</span><span class="hljs-subst">${<span class="hljs-built_in">window</span>.location.pathname}</span>`</span>
+  })
+
+  log(<span class="hljs-string">&apos;perf&apos;</span>, <span class="hljs-number">20001</span>, {
+    ...times,
+    <span class="hljs-attr">url</span>: <span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-built_in">window</span>.location.host}</span><span class="hljs-subst">${<span class="hljs-built_in">window</span>.location.pathname}</span>`</span>
+  })
+}
+</code></pre>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">&quot;d&quot;</span>: {
+        <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;perf&quot;</span>,
+        <span class="hljs-attr">&quot;code&quot;</span>: <span class="hljs-number">20001</span>,
+        <span class="hljs-attr">&quot;detail&quot;</span>: {
+            <span class="hljs-attr">&quot;connectStart&quot;</span>: <span class="hljs-number">1592020165386</span>,
+            <span class="hljs-attr">&quot;navigationStart&quot;</span>: <span class="hljs-number">1592020165383</span>,
+            <span class="hljs-attr">&quot;loadEventEnd&quot;</span>: <span class="hljs-number">0</span>,
+            <span class="hljs-attr">&quot;domLoading&quot;</span>: <span class="hljs-number">1592020165401</span>,
+            <span class="hljs-attr">&quot;secureConnectionStart&quot;</span>: <span class="hljs-number">0</span>,
+            <span class="hljs-attr">&quot;fetchStart&quot;</span>: <span class="hljs-number">1592020165386</span>,
+            <span class="hljs-attr">&quot;domContentLoadedEventStart&quot;</span>: <span class="hljs-number">1592020165630</span>,
+            <span class="hljs-attr">&quot;responseStart&quot;</span>: <span class="hljs-number">1592020165393</span>,
+            <span class="hljs-attr">&quot;responseEnd&quot;</span>: <span class="hljs-number">1592020165394</span>,
+            <span class="hljs-attr">&quot;domInteractive&quot;</span>: <span class="hljs-number">1592020165630</span>,
+            <span class="hljs-attr">&quot;domainLookupEnd&quot;</span>: <span class="hljs-number">1592020165386</span>,
+            <span class="hljs-attr">&quot;redirectStart&quot;</span>: <span class="hljs-number">0</span>,
+            <span class="hljs-attr">&quot;requestStart&quot;</span>: <span class="hljs-number">1592020165387</span>,
+            <span class="hljs-attr">&quot;unloadEventEnd&quot;</span>: <span class="hljs-number">1592020165398</span>,
+            <span class="hljs-attr">&quot;unloadEventStart&quot;</span>: <span class="hljs-number">1592020165397</span>,
+            <span class="hljs-attr">&quot;domComplete&quot;</span>: <span class="hljs-number">1592020165630</span>,
+            <span class="hljs-attr">&quot;domainLookupStart&quot;</span>: <span class="hljs-number">1592020165386</span>,
+            <span class="hljs-attr">&quot;loadEventStart&quot;</span>: <span class="hljs-number">1592020165630</span>,
+            <span class="hljs-attr">&quot;domContentLoadedEventEnd&quot;</span>: <span class="hljs-number">1592020165630</span>,
+            <span class="hljs-attr">&quot;redirectEnd&quot;</span>: <span class="hljs-number">0</span>,
+            <span class="hljs-attr">&quot;connectEnd&quot;</span>: <span class="hljs-number">1592020165386</span>,
+            <span class="hljs-attr">&quot;url&quot;</span>: <span class="hljs-string">&quot;localhost:9000/&quot;</span>
+        },
+        <span class="hljs-attr">&quot;extra&quot;</span>: {}
+    }
+}
+</code></pre>
+<h4 id="t144.3.3 js_error(&#x9875;&#x9762;&#x62A5;&#x9519;)">4.3.3 js_error(&#x9875;&#x9762;&#x62A5;&#x9519;) <a href="#t144.3.3 js_error(&#x9875;&#x9762;&#x62A5;&#x9519;)"> # </a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x9519;&#x8BEF;&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">ERROR_RUNTIME</td>
+<td style="text-align:left">js&#x8FD0;&#x884C;&#x65F6;&#x62A5;&#x9519;</td>
+</tr>
+<tr>
+<td style="text-align:left">ERROR_SCRIPT</td>
+<td style="text-align:left">js&#x8D44;&#x6E90;&#x52A0;&#x8F7D;&#x5931;&#x8D25;</td>
+</tr>
+<tr>
+<td style="text-align:left">ERROR_IMAGE</td>
+<td style="text-align:left">&#x56FE;&#x7247;&#x8D44;&#x6E90;&#x52A0;&#x8F7D;&#x5931;&#x8D25;</td>
+</tr>
+<tr>
+<td style="text-align:left">ERROR_AUDIO</td>
+<td style="text-align:left">&#x97F3;&#x9891;&#x8D44;&#x6E90;&#x52A0;&#x8F7D;&#x5931;&#x8D25;</td>
+</tr>
+<tr>
+<td style="text-align:left">ERROR_VIDEO</td>
+<td style="text-align:left">&#x89C6;&#x9891;&#x8D44;&#x6E90;&#x52A0;&#x8F7D;&#x5931;&#x8D25;</td>
+</tr>
+<tr>
+<td style="text-align:left">ERROR_CONSOLE</td>
+<td style="text-align:left">vue&#x8FD0;&#x884C;&#x65F6;&#x62A5;&#x9519;</td>
+</tr>
+<tr>
+<td style="text-align:left">ERROR_TRY_CATCH</td>
+<td style="text-align:left">&#x672A;catch&#x9519;&#x8BEF;</td>
+</tr>
+</tbody>
+</table>
+<h5 id="t154.3.3.1 ERROR_RUNTIME">4.3.3.1 ERROR_RUNTIME <a href="#t154.3.3.1 ERROR_RUNTIME"> # </a></h5>
+<pre><code class="lang-js"><span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">&apos;error&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">event</span>) </span>{
+    <span class="hljs-comment">// &#x8FC7;&#x6EE4; target &#x4E3A; window &#x7684;&#x5F02;&#x5E38;&#xFF0C;&#x907F;&#x514D;&#x4E0E;&#x4E0A;&#x9762;&#x7684; onerror &#x91CD;&#x590D;</span>
+    <span class="hljs-keyword">var</span> errorTarget = event.target
+    <span class="hljs-keyword">if</span> (errorTarget !== <span class="hljs-built_in">window</span> &amp;&amp; errorTarget.nodeName &amp;&amp; LOAD_ERROR_TYPE[errorTarget.nodeName.toUpperCase()]) {
+      handleError(formatLoadError(errorTarget))
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-comment">// onerror&#x4F1A;&#x88AB;&#x8986;&#x76D6;, &#x56E0;&#x6B64;&#x8F6C;&#x4E3A;&#x4F7F;&#x7528;Listener&#x8FDB;&#x884C;&#x76D1;&#x63A7;</span>
+      <span class="hljs-keyword">let</span> { message, filename, lineno, colno, error } = event
+      handleError(formatRuntimerError(message, filename, lineno, colno, error))
+    }
+}, <span class="hljs-literal">true</span>)
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">formatRuntimerError</span> (<span class="hljs-params">message, source, lineno, colno, error</span>) </span>{
+  <span class="hljs-keyword">return</span> {
+    <span class="hljs-attr">type</span>: ERROR_RUNTIME,
+    <span class="hljs-attr">desc</span>: message + <span class="hljs-string">&apos; at &apos;</span> + source + <span class="hljs-string">&apos;:&apos;</span> + lineno + <span class="hljs-string">&apos;:&apos;</span> + colno,
+    <span class="hljs-attr">stack</span>: error &amp;&amp; error.stack ? error.stack : <span class="hljs-string">&apos;no stack&apos;</span> 
+  }
+}
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-built_in">console</span>.log(a.b);
+</code></pre>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">&quot;d&quot;</span>: {
+        <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;error&quot;</span>,
+        <span class="hljs-attr">&quot;code&quot;</span>: <span class="hljs-number">7</span>,
+        <span class="hljs-attr">&quot;detail&quot;</span>: {
+            <span class="hljs-attr">&quot;error_no&quot;</span>: <span class="hljs-string">&quot;&#x9875;&#x9762;&#x62A5;&#x9519;_JS_RUNTIME_ERROR&quot;</span>,
+            <span class="hljs-attr">&quot;url&quot;</span>: <span class="hljs-string">&quot;localhost:9000/&quot;</span>
+        },
+        <span class="hljs-attr">&quot;extra&quot;</span>: {
+            <span class="hljs-attr">&quot;desc&quot;</span>: <span class="hljs-string">&quot;Uncaught ReferenceError: a is not defined at http://localhost:9000/:53:21&quot;</span>,
+            <span class="hljs-attr">&quot;stack&quot;</span>: <span class="hljs-string">&quot;ReferenceError: a is not defined\n    at http://localhost:9000/:53:21&quot;</span>
+        }
+    }
+}
+</code></pre>
+<h5 id="t164.3.3.2 LOAD_ERROR">4.3.3.2 LOAD_ERROR <a href="#t164.3.3.2 LOAD_ERROR"> # </a></h5>
+<pre><code class="lang-html">      <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;/error.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/error.css&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;/error.gif&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">audio</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;/error.mp3&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">audio</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">video</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;/error.mp4&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">formatLoadError</span> (<span class="hljs-params">errorTarget</span>) </span>{
+  <span class="hljs-keyword">return</span> {
+    <span class="hljs-attr">type</span>: LOAD_ERROR_TYPE[errorTarget.nodeName.toUpperCase()],
+    <span class="hljs-attr">desc</span>: errorTarget.baseURI + <span class="hljs-string">&apos;@&apos;</span> + (errorTarget.src || errorTarget.href),
+    <span class="hljs-attr">stack</span>: <span class="hljs-string">&apos;no stack&apos;</span>
+  }
+}
+</code></pre>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">&quot;d&quot;</span>: {
+        <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;error&quot;</span>,
+        <span class="hljs-attr">&quot;code&quot;</span>: <span class="hljs-number">7</span>,
+        <span class="hljs-attr">&quot;detail&quot;</span>: {
+            <span class="hljs-attr">&quot;error_no&quot;</span>: <span class="hljs-string">&quot;&#x9875;&#x9762;&#x62A5;&#x9519;_SCRIPT_LOAD_ERROR&quot;</span>,
+            <span class="hljs-attr">&quot;url&quot;</span>: <span class="hljs-string">&quot;localhost:9000/&quot;</span>
+        },
+        <span class="hljs-attr">&quot;extra&quot;</span>: {
+            <span class="hljs-attr">&quot;desc&quot;</span>: <span class="hljs-string">&quot;http://localhost:9000/@http://localhost:9000/error.js&quot;</span>,
+            <span class="hljs-attr">&quot;stack&quot;</span>: <span class="hljs-string">&quot;no stack&quot;</span>
+        }
+    }
+}
+</code></pre>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">&quot;d&quot;</span>: {
+        <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;error&quot;</span>,
+        <span class="hljs-attr">&quot;code&quot;</span>: <span class="hljs-number">7</span>,
+        <span class="hljs-attr">&quot;detail&quot;</span>: {
+            <span class="hljs-attr">&quot;error_no&quot;</span>: <span class="hljs-string">&quot;&#x9875;&#x9762;&#x62A5;&#x9519;_CSS_LOAD_ERROR&quot;</span>,
+            <span class="hljs-attr">&quot;url&quot;</span>: <span class="hljs-string">&quot;localhost:9000/&quot;</span>
+        },
+        <span class="hljs-attr">&quot;extra&quot;</span>: {
+            <span class="hljs-attr">&quot;desc&quot;</span>: <span class="hljs-string">&quot;http://localhost:9000/@http://localhost:9000/error.css&quot;</span>,
+            <span class="hljs-attr">&quot;stack&quot;</span>: <span class="hljs-string">&quot;no stack&quot;</span>
+        }
+    }
+}
+</code></pre>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">&quot;d&quot;</span>: {
+        <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;error&quot;</span>,
+        <span class="hljs-attr">&quot;code&quot;</span>: <span class="hljs-number">7</span>,
+        <span class="hljs-attr">&quot;detail&quot;</span>: {
+            <span class="hljs-attr">&quot;error_no&quot;</span>: <span class="hljs-string">&quot;&#x9875;&#x9762;&#x62A5;&#x9519;_IMAGE_LOAD_ERROR&quot;</span>,
+            <span class="hljs-attr">&quot;url&quot;</span>: <span class="hljs-string">&quot;localhost:9000/&quot;</span>
+        },
+        <span class="hljs-attr">&quot;extra&quot;</span>: {
+            <span class="hljs-attr">&quot;desc&quot;</span>: <span class="hljs-string">&quot;http://localhost:9000/@http://localhost:9000/error.gif&quot;</span>,
+            <span class="hljs-attr">&quot;stack&quot;</span>: <span class="hljs-string">&quot;no stack&quot;</span>
+        }
+    }
+}
+</code></pre>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">&quot;d&quot;</span>: {
+        <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;error&quot;</span>,
+        <span class="hljs-attr">&quot;code&quot;</span>: <span class="hljs-number">7</span>,
+        <span class="hljs-attr">&quot;detail&quot;</span>: {
+            <span class="hljs-attr">&quot;error_no&quot;</span>: <span class="hljs-string">&quot;&#x9875;&#x9762;&#x62A5;&#x9519;_VIDEO_LOAD_ERROR&quot;</span>,
+            <span class="hljs-attr">&quot;url&quot;</span>: <span class="hljs-string">&quot;localhost:9000/&quot;</span>
+        },
+        <span class="hljs-attr">&quot;extra&quot;</span>: {
+            <span class="hljs-attr">&quot;desc&quot;</span>: <span class="hljs-string">&quot;http://localhost:9000/@http://localhost:9000/error.mp4&quot;</span>,
+            <span class="hljs-attr">&quot;stack&quot;</span>: <span class="hljs-string">&quot;no stack&quot;</span>
+        }
+    }
+}
+</code></pre>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">&quot;d&quot;</span>: {
+        <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;error&quot;</span>,
+        <span class="hljs-attr">&quot;code&quot;</span>: <span class="hljs-number">7</span>,
+        <span class="hljs-attr">&quot;detail&quot;</span>: {
+            <span class="hljs-attr">&quot;error_no&quot;</span>: <span class="hljs-string">&quot;&#x9875;&#x9762;&#x62A5;&#x9519;_AUDIO_LOAD_ERROR&quot;</span>,
+            <span class="hljs-attr">&quot;url&quot;</span>: <span class="hljs-string">&quot;localhost:9000/&quot;</span>
+        },
+        <span class="hljs-attr">&quot;extra&quot;</span>: {
+            <span class="hljs-attr">&quot;desc&quot;</span>: <span class="hljs-string">&quot;http://localhost:9000/@http://localhost:9000/error.mp3&quot;</span>,
+            <span class="hljs-attr">&quot;stack&quot;</span>: <span class="hljs-string">&quot;no stack&quot;</span>
+        }
+    }
+}
+</code></pre>
+<h5 id="t174.3.3.2 LOAD_ERROR">4.3.3.2 LOAD_ERROR <a href="#t174.3.3.2 LOAD_ERROR"> # </a></h5>
+<pre><code class="lang-js"> <span class="hljs-built_in">console</span>.error(<span class="hljs-string">&apos;vue error&apos;</span>);
+</code></pre>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">&quot;d&quot;</span>: {
+        <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;error&quot;</span>,
+        <span class="hljs-attr">&quot;code&quot;</span>: <span class="hljs-number">7</span>,
+        <span class="hljs-attr">&quot;detail&quot;</span>: {
+            <span class="hljs-attr">&quot;error_no&quot;</span>: <span class="hljs-string">&quot;&#x9875;&#x9762;&#x62A5;&#x9519;_CONSOLE_ERROR&quot;</span>,
+            <span class="hljs-attr">&quot;url&quot;</span>: <span class="hljs-string">&quot;localhost:9000/&quot;</span>
+        },
+        <span class="hljs-attr">&quot;extra&quot;</span>: {
+            <span class="hljs-attr">&quot;desc&quot;</span>: <span class="hljs-string">&quot;vue error&quot;</span>
+        }
+    }
+}
+</code></pre>
+<h5 id="t184.3.3.3 ERROR_TRY_CATCH">4.3.3.3 ERROR_TRY_CATCH <a href="#t184.3.3.3 ERROR_TRY_CATCH"> # </a></h5>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">exec</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">&apos;&#x672A;&#x6355;&#x83B7;&#x9519;&#x8BEF;&apos;</span>);
+}
+<span class="hljs-built_in">window</span>.dt.tryJS.wrap(exec);
+exec._wrapped();
+</code></pre>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">&quot;d&quot;</span>: {
+        <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;error&quot;</span>,
+        <span class="hljs-attr">&quot;code&quot;</span>: <span class="hljs-number">7</span>,
+        <span class="hljs-attr">&quot;detail&quot;</span>: {
+            <span class="hljs-attr">&quot;error_no&quot;</span>: <span class="hljs-string">&quot;&#x9875;&#x9762;&#x62A5;&#x9519;_TRY_CATCH_ERROR&quot;</span>,
+            <span class="hljs-attr">&quot;url&quot;</span>: <span class="hljs-string">&quot;localhost:9000/&quot;</span>
+        },
+        <span class="hljs-attr">&quot;extra&quot;</span>: {
+            <span class="hljs-attr">&quot;desc&quot;</span>: <span class="hljs-string">&quot;&#x672A;&#x6355;&#x83B7;&#x9519;&#x8BEF;&quot;</span>,
+            <span class="hljs-attr">&quot;stack&quot;</span>: <span class="hljs-string">&quot;Error: &#x672A;&#x6355;&#x83B7;&#x9519;&#x8BEF;\n    at Function.exec (http://localhost:9000/:56:17)\n    at Function.func._wrapped (webpack-internal:///./src/js-tracker/try.js:31:21)\n    at http://localhost:9000/:59:14&quot;</span>
+        }
+    }
+}
+</code></pre>
+<h4 id="t194.3.4 &#x624B;&#x5DE5;&#x4E0A;&#x62A5;">4.3.4 &#x624B;&#x5DE5;&#x4E0A;&#x62A5; <a href="#t194.3.4 &#x624B;&#x5DE5;&#x4E0A;&#x62A5;"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-comment">//&#x9519;&#x8BEF;&#x4E0A;&#x62A5;</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> Elog = log.error = <span class="hljs-function">(<span class="hljs-params">code, detail, extra</span>) =&gt;</span> {
+  <span class="hljs-keyword">return</span> log(<span class="hljs-string">&apos;error&apos;</span>, code, detail, extra)
+}
+<span class="hljs-comment">//&#x4EA7;&#x54C1;&#x6570;&#x636E;&#x4E0A;&#x62A5;</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> Plog = log.product = <span class="hljs-function">(<span class="hljs-params">code, detail, extra</span>) =&gt;</span> {
+  <span class="hljs-keyword">return</span> log(<span class="hljs-string">&apos;product&apos;</span>, code, detail, extra)
+}
+<span class="hljs-comment">//&#x666E;&#x901A;&#x4FE1;&#x606F;&#x4E0A;&#x62A5;</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> Ilog = log.info = <span class="hljs-function">(<span class="hljs-params">code, detail, extra</span>) =&gt;</span> {
+  <span class="hljs-keyword">return</span> log(<span class="hljs-string">&apos;info&apos;</span>, code, detail, extra)
+}
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-built_in">window</span>.dt.product(<span class="hljs-number">19999</span>, {}, {})
+</code></pre>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">&quot;d&quot;</span>: {
+        <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;product&quot;</span>,
+        <span class="hljs-attr">&quot;code&quot;</span>: <span class="hljs-number">19999</span>,
+        <span class="hljs-attr">&quot;detail&quot;</span>: {},
+        <span class="hljs-attr">&quot;extra&quot;</span>: {}
+    }
+}
+</code></pre>
+<h2 id="t205.&#x6570;&#x636E;&#x5904;&#x7406;">5.&#x6570;&#x636E;&#x5904;&#x7406; <a href="#t205.&#x6570;&#x636E;&#x5904;&#x7406;"> # </a></h2>
+<h3 id="t215.1 &#x5B89;&#x88C5;server">5.1 &#x5B89;&#x88C5;server <a href="#t215.1 &#x5B89;&#x88C5;server"> # </a></h3>
+<pre><code class="lang-js">cd server 
+npm install
+</code></pre>
+<h3 id="t225.2 &#x914D;&#x7F6E;">5.2 &#x914D;&#x7F6E; <a href="#t225.2 &#x914D;&#x7F6E;"> # </a></h3>
+<h4 id="t235.2.1 &#x914D;&#x7F6E;mysql">5.2.1 &#x914D;&#x7F6E;mysql <a href="#t235.2.1 &#x914D;&#x7F6E;mysql"> # </a></h4>
+<p>server\src\configs\mysql.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> development = {
+  <span class="hljs-attr">host</span>: <span class="hljs-string">&apos;127.0.0.1&apos;</span>,
+  <span class="hljs-attr">port</span>: <span class="hljs-string">&apos;3306&apos;</span>,
+  <span class="hljs-attr">user</span>: <span class="hljs-string">&apos;root&apos;</span>,
+  <span class="hljs-attr">password</span>: <span class="hljs-string">&apos;5f8b8a5d650637f8&apos;</span>,
+  <span class="hljs-attr">database</span>: <span class="hljs-string">&apos;platform&apos;</span>
+}
+</code></pre>
+<h4 id="t245.2.2  &#x914D;&#x7F6E;redis">5.2.2  &#x914D;&#x7F6E;redis <a href="#t245.2.2  &#x914D;&#x7F6E;redis"> # </a></h4>
+<p>server\src\configs\redis.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> development = {
+  <span class="hljs-attr">host</span>: <span class="hljs-string">&apos;127.0.0.1&apos;</span>,
+  <span class="hljs-attr">port</span>: <span class="hljs-string">&apos;6379&apos;</span>
+}
+</code></pre>
+<h3 id="t255.3 &#x6570;&#x636E;&#x89E3;&#x6790;">5.3 &#x6570;&#x636E;&#x89E3;&#x6790; <a href="#t255.3 &#x6570;&#x636E;&#x89E3;&#x6790;"> # </a></h3>
+<h3 id="t265.3.1 &#x6570;&#x636E;&#x5B58;&#x50A8;">5.3.1 &#x6570;&#x636E;&#x5B58;&#x50A8; <a href="#t265.3.1 &#x6570;&#x636E;&#x5B58;&#x50A8;"> # </a></h3>
+<h3 id="t275.3.1.1 &#x8868;&#x540D;&#x8BF4;&#x660E;">5.3.1.1 &#x8868;&#x540D;&#x8BF4;&#x660E; <a href="#t275.3.1.1 &#x8868;&#x540D;&#x8BF4;&#x660E;"> # </a></h3>
+<ul>
+<li>&#x6240;&#x6709;&#x8868;&#x90FD;&#x4EE5;<code>t_</code>&#x5F00;&#x5934;</li>
+<li>&#x539F;&#x59CB;&#x8868;&#x6DFB;&#x52A0;<code>_o</code>&#x540E;&#x7F00;&#xFF0C;&#x5373;<code>t_o_</code></li>
+<li>&#x7ED3;&#x679C;&#x8868;&#x6DFB;&#x52A0;<code>-r</code>&#x540E;&#x7EED;&#xFF0C;&#x5373;<code>t_r_</code></li>
+<li>&#x8868;&#x540D;&#x3001;&#x5B57;&#x6BB5;&#x540D;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x4E0B;&#x5212;&#x7EBF;&#x65B9;&#x5F0F;&#x547D;&#x540D;&#xFF0C;&#x4E0D;&#x533A;&#x5206;&#x5927;&#x5C0F;&#x5199;</li>
+<li>&#x6570;&#x636E;&#x5E93;&#x7F16;&#x7801;&#x5B57;&#x7B26;&#x96C6;&#x4E3A;<code>utf8mb4</code></li>
+<li>&#x8BB0;&#x5F55;ID&#x7528;<code>unsigned bigint</code></li>
+<li>&#x5982;&#x679C;&#x5B57;&#x6BB5;&#x540D;&#x6709;&#x5173;&#x952E;&#x5B57;&#xFF0C;&#x9700;&#x8981;&#x52A0;<code>_c</code>&#x524D;&#x7F00;</li>
+<li>&#x6240;&#x6709;&#x8868;&#x4E2D;&#x5FC5;&#x987B;&#x6709;<code>update_time</code> &#x548C;<code>create_time</code>&#x5B57;&#x6BB5;</li>
+</ul>
+<h3 id="t285.3.1.2 &#x6570;&#x636E;&#x5E93;&#x8868;">5.3.1.2 &#x6570;&#x636E;&#x5E93;&#x8868; <a href="#t285.3.1.2 &#x6570;&#x636E;&#x5E93;&#x8868;"> # </a></h3>
+<p>t_o_project &#x9879;&#x76EE;&#x540D;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>id</code> bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT &apos;&#x9879;&#x76EE;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>display_name</code> varchar(50) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x9879;&#x76EE;&#x540D;&#x79F0;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>project_name</code> varchar(50) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x9879;&#x76EE;&#x4EE3;&#x53F7;(&#x66FF;&#x4EE3;&#x9879;&#x76EE;id, &#x65B9;&#x4FBF;debug)&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>c_desc</code> varchar(100) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x5907;&#x6CE8;&#x4FE1;&#x606F;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>rate</code> int(10) NOT NULL DEFAULT &apos;10000&apos; COMMENT &apos;&#x6570;&#x636E;&#x62BD;&#x6837;&#x6BD4;&#x7387;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>is_delete</code> tinyint(1) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x662F;&#x5426;&#x5DF2;&#x5220;&#x9664;(1 =&gt; &#x662F;, 0 =&gt; &#x5426;)&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>create_ucid</code> varchar(20) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x521B;&#x5EFA;&#x4EBA;ucid&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>update_ucid</code> varchar(20) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x66F4;&#x65B0;&#x4EBA;ucid&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>create_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x636E;&#x5E93;&#x521B;&#x5EFA;&#x65F6;&#x95F4;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>update_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x636E;&#x5E93;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&apos;</td>
+</tr>
+</tbody>
+</table>
+<p>t_r_behavior_distribution</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>id</code> bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT &apos;&#x8BB0;&#x5F55;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>project_id</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x9879;&#x76EE;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>code</code> varchar(50) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x7528;&#x6237;&#x884C;&#x4E3A;&#x6807;&#x8BC6;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>name</code> varchar(50) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x7528;&#x6237;&#x70B9;&#x51FB;&#x540D;&#x79F0;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>url</code> varchar(200) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x7528;&#x6237;&#x70B9;&#x51FB;&#x9875;&#x9762;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>total_count</code> int(10) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x70B9;&#x51FB;&#x603B;&#x91CF;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>count_at_time</code> varchar(30) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x7EDF;&#x8BA1;&#x65E5;&#x671F;,&#x683C;&#x5F0F;&#x6839;&#x636E;&#x7EDF;&#x8BA1;&#x5C3A;&#x5EA6;&#x4E0D;&#x540C;&#x6709;&#x4E09;&#x79CD;&#x53EF;&#x80FD;,  hour =&gt; YYYY-MM-DD_HH, day =&gt; YYYY-MM-DD, month =&gt; YYYY-MM&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>count_type</code> varchar(20) NOT NULL DEFAULT &apos;day&apos; COMMENT &apos;&#x7EDF;&#x8BA1;&#x5C3A;&#x5EA6;(hour/day/month)&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>city_distribute_id</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x57CE;&#x5E02;&#x5206;&#x5E03;&#x8BE6;&#x60C5;&#x8BB0;&#x5F55;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>create_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x636E;&#x5E93;&#x521B;&#x5EFA;&#x65F6;&#x95F4;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>update_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x636E;&#x5E93;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&apos;</td>
+</tr>
+</tbody>
+</table>
+<p>t_r_duration_distribution &#x7528;&#x6237;&#x505C;&#x7559;&#x65F6;&#x95F4;&#x8868;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>id</code> bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT &apos;&#x8BB0;&#x5F55;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>project_id</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x9879;&#x76EE;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>total_stay_ms</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x603B;&#x505C;&#x7559;&#x6BEB;&#x79D2;&#x6570;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>total_uv</code> int(10) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x603B;uv&#x6570;(&#x4ECE;uv&#x8868;&#x4E2D;&#x83B7;&#x53D6;)&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>count_at_time</code> varchar(30) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x7EDF;&#x8BA1;&#x65E5;&#x671F;,&#x683C;&#x5F0F;&#x6839;&#x636E;&#x7EDF;&#x8BA1;&#x5C3A;&#x5EA6;&#x4E0D;&#x540C;&#x6709;&#x4E24;&#x79CD;&#x53EF;&#x80FD;, day =&gt; YYYY-MM-DD, month =&gt; YYYY-MM&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>count_type</code> varchar(20) NOT NULL DEFAULT &apos;day&apos; COMMENT &apos;&#x7EDF;&#x8BA1;&#x5C3A;&#x5EA6;(day/month)&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>city_distribute_id</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x57CE;&#x5E02;&#x5206;&#x5E03;&#x8BE6;&#x60C5;&#x8BB0;&#x5F55;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>create_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x636E;&#x5E93;&#x521B;&#x5EFA;&#x65F6;&#x95F4;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>update_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x636E;&#x5E93;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&apos;</td>
+</tr>
+</tbody>
+</table>
+<p>t_r_http_error_distribution</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>id</code> bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT &apos;&#x8BB0;&#x5F55;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>project_id</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x9879;&#x76EE;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>total_count</code> int(10) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;http&#x54CD;&#x5E94;&#x7801;&#x603B;&#x6570;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>http_code_2xx_count</code> int(10) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;http&#x54CD;&#x5E94;&#x7801;2xx&#x603B;&#x6570;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>http_code_3xx_count</code> int(10) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;http&#x54CD;&#x5E94;&#x7801;3xx&#x603B;&#x6570;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>http_code_4xx_count</code> int(10) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;http&#x54CD;&#x5E94;&#x7801;4xx&#x603B;&#x6570;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>http_code_5xx_count</code> int(10) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;http&#x54CD;&#x5E94;&#x7801;5xx&#x603B;&#x6570;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>http_code_other_count</code> int(10) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x5176;&#x4ED6;http&#x54CD;&#x5E94;&#x7801;&#x603B;&#x6570;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>city_distribute_id</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x57CE;&#x5E02;&#x5206;&#x5E03;&#x8BE6;&#x60C5;&#x8BB0;&#x5F55;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>count_at_time</code> varchar(30) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x7EDF;&#x8BA1;&#x65E5;&#x671F;,&#x683C;&#x5F0F;&#x6839;&#x636E;&#x7EDF;&#x8BA1;&#x5C3A;&#x5EA6;&#x4E0D;&#x540C;&#x6709;&#x4E09;&#x79CD;&#x53EF;&#x80FD;,  hour =&gt; YYYY-MM-DD_HH, day =&gt; YYYY-MM-DD, month =&gt; YYYY-MM&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>count_type</code> varchar(20) NOT NULL DEFAULT &apos;hour&apos; COMMENT &apos;&#x7EDF;&#x8BA1;&#x5C3A;&#x5EA6;(hour/day/month)&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>update_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x636E;&#x5E93;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>create_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x636E;&#x5E93;&#x521B;&#x5EFA;&#x65F6;&#x95F4;&apos;</td>
+</tr>
+</tbody>
+</table>
+<p>t_r_page_view</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>id</code> bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT &apos;&#x8BB0;&#x5F55;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>project_id</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x9879;&#x76EE;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>total_count</code> int(10) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;pv&#x6570;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>count_at_time</code> varchar(30) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x7EDF;&#x8BA1;&#x65E5;&#x671F;,&#x683C;&#x5F0F;&#x6839;&#x636E;&#x7EDF;&#x8BA1;&#x5C3A;&#x5EA6;&#x4E0D;&#x540C;&#x6709;&#x4E09;&#x79CD;&#x53EF;&#x80FD;,  hour =&gt; YYYY-MM-DD_HH, day =&gt; YYYY-MM-DD, month =&gt; YYYY-MM&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>count_type</code> varchar(20) NOT NULL DEFAULT &apos;hour&apos; COMMENT &apos;&#x7EDF;&#x8BA1;&#x5C3A;&#x5EA6;(hour/day/month)&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>city_distribute_id</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x57CE;&#x5E02;&#x5206;&#x5E03;&#x8BB0;&#x5F55;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>create_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x636E;&#x5E93;&#x521B;&#x5EFA;&#x65F6;&#x95F4;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>update_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x636E;&#x5E93;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&apos;</td>
+</tr>
+</tbody>
+</table>
+<p>t_r_system_browser</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>id</code> bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT &apos;&#x8BB0;&#x5F55;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>project_id</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x9879;&#x76EE;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>browser</code> varchar(20) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x6D4F;&#x89C8;&#x5668;&#x54C1;&#x724C;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>browser_version</code> varchar(50) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x6D4F;&#x89C8;&#x5668;&#x8BE6;&#x60C5;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>total_count</code> int(10) unsigned NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x91CF;&#x603B;&#x548C;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>count_at_month</code> varchar(15) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x7EDF;&#x8BA1;&#x65F6;&#x95F4;&#x6BB5;, YYYY-MM&#x683C;&#x5F0F; =&gt; 2018-09&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>city_distribute_id</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x57CE;&#x5E02;&#x5206;&#x5E03;&#x8BB0;&#x5F55;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>create_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x636E;&#x5E93;&#x521B;&#x5EFA;&#x65F6;&#x95F4;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>update_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x636E;&#x5E93;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&apos;</td>
+</tr>
+</tbody>
+</table>
+<p>t_r_system_runtime_version</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>id</code> bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT &apos;&#x8BB0;&#x5F55;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>project_id</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x9879;&#x76EE;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>runtime_version</code> varchar(50) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x5E94;&#x7528;&#x7248;&#x672C;&#x53F7;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>total_count</code> int(10) unsigned NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x91CF;&#x603B;&#x548C;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>count_at_month</code> varchar(15) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x7EDF;&#x8BA1;&#x65F6;&#x95F4;&#x6BB5;, YYYY-MM&#x683C;&#x5F0F; =&gt; 2018-09&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>city_distribute_id</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x57CE;&#x5E02;&#x5206;&#x5E03;&#x8BB0;&#x5F55;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>create_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x636E;&#x5E93;&#x521B;&#x5EFA;&#x65F6;&#x95F4;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>update_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x636E;&#x5E93;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&apos;</td>
+</tr>
+</tbody>
+</table>
+<p>t_r_system_device</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>id</code> bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT &apos;&#x8BB0;&#x5F55;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>project_id</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x9879;&#x76EE;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>device_vendor</code> varchar(50) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x8BBE;&#x5907;&#x5236;&#x9020;&#x5546;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>device_model</code> varchar(50) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x8BBE;&#x5907;&#x8BE6;&#x60C5;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>total_count</code> int(10) unsigned NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x91CF;&#x603B;&#x548C;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>count_at_month</code> varchar(15) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x7EDF;&#x8BA1;&#x65F6;&#x95F4;&#x6BB5;, YYYY-MM&#x683C;&#x5F0F; =&gt; 2018-09&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>city_distribute_id</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x57CE;&#x5E02;&#x5206;&#x5E03;&#x8BB0;&#x5F55;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>create_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x636E;&#x5E93;&#x521B;&#x5EFA;&#x65F6;&#x95F4;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>update_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x636E;&#x5E93;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&apos;</td>
+</tr>
+</tbody>
+</table>
+<p>t_r_system_os</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>id</code> bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT &apos;&#x8BB0;&#x5F55;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>project_id</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x9879;&#x76EE;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>os</code> varchar(50) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x540D;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>os_version</code> varchar(50) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7248;&#x672C;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>total_count</code> int(10) unsigned NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x91CF;&#x603B;&#x548C;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>count_at_month</code> varchar(15) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x7EDF;&#x8BA1;&#x65F6;&#x95F4;&#x6BB5;, YYYY-MM&#x683C;&#x5F0F; =&gt; 2018-09&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>city_distribute_id</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x57CE;&#x5E02;&#x5206;&#x5E03;&#x8BB0;&#x5F55;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>create_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x636E;&#x5E93;&#x521B;&#x5EFA;&#x65F6;&#x95F4;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>update_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x636E;&#x5E93;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&apos;</td>
+</tr>
+</tbody>
+</table>
+<p>t_r_unique_view</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>id</code> bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT &apos;&#x8BB0;&#x5F55;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>project_id</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x9879;&#x76EE;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>total_count</code> int(10) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;uv&#x6570;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>count_at_time</code> varchar(30) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x7EDF;&#x8BA1;&#x65E5;&#x671F;,&#x683C;&#x5F0F;&#x6839;&#x636E;&#x7EDF;&#x8BA1;&#x5C3A;&#x5EA6;&#x4E0D;&#x540C;&#x6709;&#x4E09;&#x79CD;&#x53EF;&#x80FD;,  hour =&gt; YYYY-MM-DD_HH, day =&gt; YYYY-MM-DD, month =&gt; YYYY-MM&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>count_type</code> varchar(20) NOT NULL DEFAULT &apos;hour&apos; COMMENT &apos;&#x7EDF;&#x8BA1;&#x5C3A;&#x5EA6;(hour/day/month)&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>city_distribute_id</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x57CE;&#x5E02;&#x5206;&#x5E03;&#x8BB0;&#x5F55;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>create_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x636E;&#x5E93;&#x521B;&#x5EFA;&#x65F6;&#x95F4;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>update_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x636E;&#x5E93;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&apos;</td>
+</tr>
+</tbody>
+</table>
+<p>t_o_alarm_config</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>id</code> bigint(20) unsigned NOT NULL AUTO_INCREMENT</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>project_id</code> bigint(20) unsigned NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x8981;&#x62A5;&#x8B66;&#x9879;&#x76EE;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>owner_ucid</code> varchar(20) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x9879;&#x76EE;&#x6240;&#x6709;&#x4EBA;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>error_type</code> varchar(20) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x62A5;&#x8B66;&#x9519;&#x8BEF;&#x7C7B;&#x578B;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>error_name</code> varchar(255) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x8981;&#x62A5;&#x8B66;&#x9519;&#x8BEF;&#x540D;&#x5B57;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>time_range_s</code> int(20) unsigned NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x62A5;&#x8B66;&#x65F6;&#x95F4;&#x8303;&#x56F4;_&#x79D2;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>max_error_count</code> int(20) unsigned NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x62A5;&#x8B66;&#x9519;&#x8BEF;&#x6570;&#x9608;&#x503C;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>alarm_interval_s</code> bigint(20) unsigned NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x62A5;&#x8B66;&#x65F6;&#x95F4;&#x95F4;&#x9694;_&#x79D2;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>is_enable</code> tinyint(1) unsigned NOT NULL DEFAULT &apos;1&apos; COMMENT &apos;&#x662F;&#x5426;&#x5F00;&#x542F;&#x672C;&#x6761;&#x62A5;&#x8B66;&#x914D;&#x7F6E;1&#xFF1A;&#x662F;0&#xFF1A;&#x5426;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>note</code> varchar(255) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x914D;&#x7F6E;&#x8BF4;&#x660E;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>is_delete</code> tinyint(1) unsigned NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x662F;&#x5426;&#x5220;&#x9664;(1 =&gt; &#x662F;, 0 =&gt; &#x5426;)&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>create_ucid</code> varchar(20) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x521B;&#x5EFA;&#x6B64;&#x8BB0;&#x5F55;&#x7684;&#x4EBA;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>update_ucid</code> varchar(20) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x66F4;&#x65B0;&#x6B64;&#x8BB0;&#x5F55;&#x7684;&#x4EBA;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>create_time</code> bigint(20) unsigned NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x521B;&#x5EFA;&#x6B64;&#x8BB0;&#x5F55;&#x7684;&#x65F6;&#x95F4;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>update_time</code> bigint(20) unsigned NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x66F4;&#x65B0;&#x6B64;&#x8BB0;&#x5F55;&#x7684;&#x65F6;&#x95F4;&apos;</td>
+</tr>
+</tbody>
+</table>
+<p>t_o_user</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>id</code> bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT &apos;&#x8BB0;&#x5F55;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>ucid</code> varchar(50) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x8D1D;&#x58F3;ucid&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>account</code> varchar(50) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x8D26;&#x6237;&#x540D;,&#x4E0D;&#x80FD;&#x91CD;&#x590D;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>email</code> varchar(50) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x90AE;&#x7BB1;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>password_md5</code> varchar(32) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;md5&#x540E;&#x7684;password&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>nickname</code> varchar(20) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x6635;&#x79F0;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>role</code> varchar(50) NOT NULL DEFAULT &apos;dev&apos; COMMENT &apos;&#x89D2;&#x8272;(dev =&gt; &#x5F00;&#x53D1;&#x8005;,admin =&gt; &#x7BA1;&#x7406;&#x5458;)&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>register_type</code> varchar(20) NOT NULL DEFAULT &apos;site&apos; COMMENT &apos;&#x6CE8;&#x518C;&#x7C7B;&#x578B;(site =&gt; &#x7F51;&#x7AD9;&#x6CE8;&#x518C;, third =&gt; &#x7B2C;&#x4E09;&#x65B9;&#x767B;&#x5F55;)&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>avatar_url</code> varchar(200) NOT NULL DEFAULT &apos;<a href="http://ww1.sinaimg.cn/large/00749HCsly1fwofq2t1kaj30qn0qnaai.jpg&apos;">http://ww1.sinaimg.cn/large/00749HCsly1fwofq2t1kaj30qn0qnaai.jpg&apos;</a> COMMENT &apos;&#x5934;&#x50CF;&#x5730;&#x5740;, &#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x8D1D;&#x58F3;logo&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>mobile</code> varchar(20) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x624B;&#x673A;&#x53F7;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>is_delete</code> tinyint(1) unsigned NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x662F;&#x5426;&#x5220;&#x9664;(1 =&gt; &#x662F;, 0 =&gt; &#x5426;)&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>create_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x636E;&#x5E93;&#x521B;&#x5EFA;&#x65F6;&#x95F4;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>update_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x636E;&#x5E93;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&apos;</td>
+</tr>
+</tbody>
+</table>
+<p>t_o_project_member</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>id</code> bigint(20) unsigned NOT NULL AUTO_INCREMENT</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>project_id</code> bigint(20) unsigned NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x9879;&#x76EE;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>ucid</code> varchar(20) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x9879;&#x76EE;&#x53C2;&#x4E0E;&#x8005;ucid&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>role</code> varchar(20) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x53C2;&#x4E0E;&#x8005;&#x89D2;&#x8272;(owner =&gt; &#x7EC4;&#x957F;, dev =&gt; &#x6210;&#x5458;)&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>need_alarm</code> tinyint(1) unsigned NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x662F;&#x5426;&#x9700;&#x8981;&#x62A5;&#x8B66;(0 =&gt; &#x4E0D;&#x9700;&#x8981;, 1 =&gt; &#x9700;&#x8981;)&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>is_delete</code> tinyint(1) unsigned NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x662F;&#x5426;&#x5DF2;&#x5220;&#x9664;(0 =&gt; &#x672A;&#x5220;&#x9664;, 1 =&gt; &#x5DF2;&#x5220;&#x9664;)&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>create_ucid</code> varchar(20) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x521B;&#x5EFA;&#x8005;ucid&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>update_ucid</code> varchar(20) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x66F4;&#x65B0;&#x8005;ucid&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>create_time</code> bigint(20) unsigned NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x521B;&#x5EFA;&#x6B64;&#x8BB0;&#x5F55;&#x7684;&#x65F6;&#x95F4;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>update_time</code> bigint(20) unsigned NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x66F4;&#x65B0;&#x6B64;&#x8BB0;&#x5F55;&#x7684;&#x65F6;&#x95F4;&apos;</td>
+</tr>
+</tbody>
+</table>
+<p>t_r_new_user_summary</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>id</code> bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT &apos;&#x8BB0;&#x5F55;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>project_id</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x9879;&#x76EE;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>total_count</code> int(10)    NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x91CF;&#x603B;&#x548C;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>count_at_time</code> varchar(20) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x7EDF;&#x8BA1;&#x65E5;&#x671F;,&#x683C;&#x5F0F;&#x6839;&#x636E;&#x7EDF;&#x8BA1;&#x5C3A;&#x5EA6;&#x4E0D;&#x540C;&#x4E09;&#x4E24;&#x79CD;&#x53EF;&#x80FD;, hour =&gt; YYYY-MM-DD_HH, day =&gt; YYYY-MM-DD, month =&gt; YYYY-MM&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>count_type</code> varchar(10) NOT NULL DEFAULT &apos;day&apos; COMMENT &apos;&#x7EDF;&#x8BA1;&#x5C3A;&#x5EA6;(hour/day/month)&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>city_distribute_id</code> bigint(10) NOT NULL DEFAULT 0 COMMENT &apos;&#x57CE;&#x5E02;&#x5206;&#x5E03;&#x8BE6;&#x60C5;&#x8BB0;&#x5F55;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>create_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x521B;&#x5EFA;&#x65F6;&#x95F4;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>update_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&apos;</td>
+</tr>
+</tbody>
+</table>
+<p>t_r_alarm_log</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>id</code> bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT &apos;&#x8BB0;&#x5F55;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>project_id</code> bigint(20) unsigned NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x8981;&#x62A5;&#x8B66;&#x9879;&#x76EE;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>config_id</code> bigint(20) unsigned NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x62A5;&#x8B66;&#x914D;&#x7F6E;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>send_at</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x62A5;&#x8B66;&#x65F6;&#x95F4;&#x6233;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>error_type</code> varchar(20) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x9519;&#x8BEF;&#x7C7B;&#x578B;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>error_name</code> varchar(255) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x9519;&#x8BEF;&#x540D;&#x5B57;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>message</code> varchar(500) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x62A5;&#x8B66;&#x4FE1;&#x606F;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>create_time</code> bigint(20) unsigned NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x521B;&#x5EFA;&#x65F6;&#x95F4;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>update_time</code> bigint(20) unsigned NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&apos;</td>
+</tr>
+</tbody>
+</table>
+<p>t_o_monitor_1_202005</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>id</code> bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT &apos;&#x8BB0;&#x5F55;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>error_type</code> varchar(20) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x5F02;&#x5E38;&#x7C7B;&#x578B;(&#x76EE;&#x524D;&#x662F;&#x56DB;&#x79CD;,&#x5206;&#x522B;&#x5BF9;&#x5E94;&#x524D;&#x7AEF;&#x7684;&#x56DB;&#x79CD;&#x62A5;&#x9519;&#x7C7B;&#x578B;: api_data =&gt;&#x524D;&#x7AEF;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x62A5;&#x8B66;, start_process =&gt; &#x542F;&#x52A8;&#x8FC7;&#x7A0B;&#x5F02;&#x5E38;, load_wv =&gt; Url&#x52A0;&#x8F7D;&#x7A7A;&#x670D;&#x52A1;&#x62A5;&#x8B66;, api_code =&gt; &#x8BF7;&#x6C42;&#x63A5;&#x53E3;&#x5F02;&#x5E38;&#x62A5;&#x8B66;)&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>error_name</code> varchar(255) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x9519;&#x8BEF;&#x540D;/&#x9519;&#x8BEF;&#x4EE3;&#x7801;,&#x7528;&#x4E8E;&#x7EC6;&#x5206;&#x9519;&#x8BEF;&#x7C7B;&#x522B;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>http_code</code> int(10) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;http&#x72B6;&#x6001;&#x7801;, &#x6CA1;&#x6709;&#x5219;&#x4E3A;0&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>monitor_ext_id</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x8BE6;&#x60C5;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>during_ms</code> int(10) unsigned NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x63A5;&#x53E3;&#x8BF7;&#x6C42;&#x65F6;&#x957F;, &#x5355;&#x4F4D;&#x6BEB;&#x79D2;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>request_size_b</code> int(10) unsigned NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x63A5;&#x53E3;&#x8BF7;&#x6C42;&#x4F53;&#x79EF;, &#x5355;&#x4F4D;b&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>response_size_b</code> int(10) unsigned NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x63A5;&#x53E3;&#x54CD;&#x5E94;&#x4F53;&#x79EF;, &#x5355;&#x4F4D;b&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>url</code> varchar(255) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x53D1;&#x751F;&#x5F02;&#x5E38;&#x7684;url&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>country</code> varchar(10) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x6240;&#x5C5E;&#x56FD;&#x5BB6;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>province</code> varchar(15) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x6240;&#x5C5E;&#x7701;&#x4EFD;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>city</code> varchar(15) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x6240;&#x5C5E;&#x57CE;&#x5E02;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>log_at</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;&#x65F6;&#x95F4;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>md5</code> char(32) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x8BB0;&#x5F55;&#x751F;&#x6210;MD5&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>create_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x636E;&#x5E93;&#x521B;&#x5EFA;&#x65F6;&#x95F4;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>update_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x636E;&#x5E93;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&apos;</td>
+</tr>
+</tbody>
+</table>
+<p>t_o_monitor_ext_1_202005</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>id</code> bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT &apos;&#x8BB0;&#x5F55;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>ext_json</code> text COMMENT &apos;&#x5F02;&#x5E38;&#x8BB0;&#x5F55;&#x6269;&#x5C55;&#x4FE1;&#x606F;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>create_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x636E;&#x5E93;&#x521B;&#x5EFA;&#x65F6;&#x95F4;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>update_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x636E;&#x5E93;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&apos;</td>
+</tr>
+</tbody>
+</table>
+<p>t_o_uv_record_1_202005</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>id</code> bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT &apos;&#x9879;&#x76EE;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uuid</code> varchar(50) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x8BBE;&#x5907;&#x552F;&#x4E00;&#x6807;&#x8BC6;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>country</code> varchar(10) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x6240;&#x5C5E;&#x56FD;&#x5BB6;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>province</code> varchar(15) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x6240;&#x5C5E;&#x7701;&#x4EFD;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>city</code> varchar(15) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x6240;&#x5C5E;&#x57CE;&#x5E02;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>visit_at_hour</code> varchar(20) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x8BBF;&#x95EE;&#x65E5;&#x671F;, &#x6570;&#x636E;&#x683C;&#x5F0F;&#x4E3A; YYYY-MM-DD_HH demo =&gt; 2018-08-02_23&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>pv_count</code> int(10) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x65F6;&#x95F4;&#x6BB5;&#x5185;&#x540C;&#x4E00;uuid&#x8BBF;&#x95EE;&#x6B21;&#x6570;, &#x7528;&#x4E8E;&#x8BA1;&#x7B97;&#x603B;pv&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>create_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x636E;&#x5E93;&#x521B;&#x5EFA;&#x65F6;&#x95F4;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>update_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x636E;&#x5E93;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&apos;</td>
+</tr>
+</tbody>
+</table>
+<p>t_r_city_distribution_1_202005</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>id</code> bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT &apos;&#x8BB0;&#x5F55;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>city_distribute_json</code> text COMMENT &apos;&#x6269;&#x5C55;&#x5B57;&#x6BB5;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>create_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x636E;&#x5E93;&#x521B;&#x5EFA;&#x65F6;&#x95F4;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>update_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x636E;&#x5E93;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&apos;</td>
+</tr>
+</tbody>
+</table>
+<p>t_r_performance_1_202005</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>id</code> bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT &apos;&#x8BB0;&#x5F55;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>sum_indicator_value</code> bigInt(10) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6027;&#x80FD;&#x6307;&#x6807;&#x6C42;&#x548C;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>pv</code> bigInt(10) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6027;&#x80FD;&#x6307;&#x6807;pv&#x6570;,&#x7528;&#x4E8E;&#x8BA1;&#x7B97;&#x5E73;&#x5747;&#x65F6;&#x957F;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>indicator</code> varchar(50) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x6027;&#x80FD;&#x6307;&#x6807;:DNS&#x54CD;&#x5E94;&#x65F6;&#x95F4;/TCP&#x65F6;&#x95F4;/404&#x6570;&#x91CF;/etc&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>url</code> varchar(255) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x9875;&#x9762;url&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>city_distribute_id</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x57CE;&#x5E02;&#x5206;&#x5E03;&#x8BE6;&#x60C5;&#x8BB0;&#x5F55;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>count_at_time</code> varchar(20) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x7EDF;&#x8BA1;&#x65E5;&#x671F;,&#x683C;&#x5F0F;&#x6839;&#x636E;&#x7EDF;&#x8BA1;&#x5C3A;&#x5EA6;&#x4E0D;&#x540C;&#x6709;&#x56DB;&#x79CD;&#x53EF;&#x80FD;,  minute =&gt; YYYY-MM-DD_HH:mm, hour =&gt; YYYY-MM-DD_HH, day =&gt; YYYY-MM-DD, month =&gt; YYYY-MM&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>count_type</code> varchar(10) NOT NULL DEFAULT &apos;minute&apos; COMMENT &apos;&#x7EDF;&#x8BA1;&#x5C3A;&#x5EA6;(minute/hour/day/month)&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>create_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x521B;&#x5EFA;&#x65F6;&#x95F4;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>update_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&apos;</td>
+</tr>
+</tbody>
+</table>
+<p>t_o_system_collection_1</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>id</code> bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT &apos;&#x8BB0;&#x5F55;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>uuid</code> varchar(50) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x8BBE;&#x5907;&#x552F;&#x4E00;&#x6807;&#x8BC6;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>browser</code> varchar(50) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x6D4F;&#x89C8;&#x5668;&#x54C1;&#x724C;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>browser_version</code> varchar(100) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x6D4F;&#x89C8;&#x5668;&#x7248;&#x672C;&#x8BE6;&#x60C5;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>engine</code> varchar(100) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x5185;&#x6838;&#x540D;&#x79F0;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>engine_version</code> varchar(100) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x5185;&#x6838;&#x7248;&#x672C;&#x8BE6;&#x60C5;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>device_vendor</code> varchar(100) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x624B;&#x673A;&#x54C1;&#x724C;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>device_model</code> varchar(100) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x624B;&#x673A;&#x578B;&#x53F7;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>os</code> varchar(50) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>os_version</code> varchar(50) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x8BE6;&#x60C5;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>country</code> varchar(10) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x6240;&#x5C5E;&#x56FD;&#x5BB6;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>province</code> varchar(15) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x6240;&#x5C5E;&#x7701;&#x4EFD;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>city</code> varchar(15) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x6240;&#x5C5E;&#x57CE;&#x5E02;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>runtime_version</code> varchar(50) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x5E94;&#x7528;&#x7248;&#x672C;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>visit_at_month</code> varchar(20) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x8BBF;&#x95EE;&#x65E5;&#x671F;, &#x6570;&#x636E;&#x683C;&#x5F0F;&#x4E3A; YYYY-MM demo =&gt; 2018-09&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>log_at</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;&#x65F6;&#x95F4;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>create_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x636E;&#x5E93;&#x521B;&#x5EFA;&#x65F6;&#x95F4;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>update_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x636E;&#x5E93;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&apos;</td>
+</tr>
+</tbody>
+</table>
+<p>t_o_user_first_login_at_1</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>id</code> bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT &apos;&#x8BB0;&#x5F55;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>ucid</code> varchar(20) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x7528;&#x6237;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>first_visit_at</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x7528;&#x6237;&#x9996;&#x6B21;&#x8BBF;&#x95EE;&#x65F6;&#x95F4;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>country</code> varchar(10) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x6240;&#x5C5E;&#x56FD;&#x5BB6;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>province</code> varchar(15) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x6240;&#x5C5E;&#x7701;&#x4EFD;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>city</code> varchar(15) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x6240;&#x5C5E;&#x57CE;&#x5E02;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>create_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x521B;&#x5EFA;&#x65F6;&#x95F4;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>update_time</code> bigint(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&apos;</td>
+</tr>
+</tbody>
+</table>
+<p>t_r_error_summary_1_202005</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>id</code> bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT &apos;&#x8BB0;&#x5F55;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>error_type</code> varchar(20) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x9519;&#x8BEF;&#x7C7B;&#x578B;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>error_name</code> varchar(255) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x9519;&#x8BEF;&#x540D;&#x5B57;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>url_path</code> varchar(255) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x9519;&#x8BEF;URL_PATH&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>city_distribution_id</code> bigint(20) unsigned NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x57CE;&#x5E02;&#x5206;&#x5E03;&#x8BE6;&#x60C5;id&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>count_at_time</code> varchar(20) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;&#x7EDF;&#x8BA1;&#x65F6;&#x95F4;(&#x6309;&#x7C7B;&#x578B;&#x4E0D;&#x540C;,day:YYYY-MM-DD;hour:YYYY-MM-DD_HH;minute:YYYY-MM-DD_HH:mm)&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>count_type</code> varchar(10) NOT NULL DEFAULT &apos;day&apos; COMMENT &apos;&#x7EDF;&#x8BA1;&#x7C7B;&#x578B;(day&#x5929;,hour&#x5C0F;&#x65F6;,minute&#x5206;)&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>error_count</code> int(10) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x6570;&#x91CF;&#x603B;&#x548C;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>create_time</code> int(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x521B;&#x5EFA;&#x65F6;&#x95F4;&apos;</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>update_time</code> int(20) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&apos;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t295.3.2 &#x6307;&#x4EE4;">5.3.2 &#x6307;&#x4EE4; <a href="#t295.3.2 &#x6307;&#x4EE4;"> # </a></h3>
+<h4 id="t305.3.2.1 &#x6307;&#x4EE4;&#x5E2E;&#x52A9;">5.3.2.1 &#x6307;&#x4EE4;&#x5E2E;&#x52A9; <a href="#t305.3.2.1 &#x6307;&#x4EE4;&#x5E2E;&#x52A9;"> # </a></h4>
+<pre><code class="lang-js">node dist/fee.js -h
+<span class="hljs-attr">Usage</span>:
+  command [<span class="hljs-built_in">arguments</span>] [options]
+
+Global Options:
+  --env                            <span class="hljs-built_in">Set</span> NODE_ENV before running the commands
+  --no-ansi                        Disable colored output
+
+Available Commands:
+ Command
+  <span class="hljs-attr">Command</span>:Demo                     &#x89E3;&#x6790;nginx&#x65E5;&#x5FD7;, &#x5206;&#x6790;pv
+ CreateCache
+  <span class="hljs-attr">CreateCache</span>:UpdatePerOneMinute   [&#x6BCF;<span class="hljs-number">10</span>&#x5206;&#x949F;&#x6267;&#x884C;&#x4E00;&#x6B21;] &#x4E3B;&#x52A8;&#x8C03;&#x7528;&#x65B9;&#x6CD5;, &#x66F4;&#x65B0;Redis&#x7F13;&#x5B58;, &#x6BCF;<span class="hljs-number">10</span>&#x5206;&#x949F;&#x66F4;&#x65B0;&#x4E00;&#x6B21;
+ Parse
+  <span class="hljs-attr">Parse</span>:Device                     [&#x6309;&#x5929;] &#x89E3;&#x6790;nginx&#x65E5;&#x5FD7;, &#x5206;&#x6790;&#x6307;&#x5B9A;&#x65F6;&#x95F4;&#x8303;&#x56F4;Device
+  <span class="hljs-attr">Parse</span>:MenuClick                  [&#x6309;&#x5929;] &#x89E3;&#x6790;nginx&#x65E5;&#x5FD7;, &#x7528;&#x6237;&#x70B9;&#x51FB;&#x60C5;&#x51B5;
+  <span class="hljs-attr">Parse</span>:Monitor                    [&#x6309;&#x5206;&#x949F;] &#x89E3;&#x6790;nginx&#x65E5;&#x5FD7;, &#x5206;&#x6790;Monitor
+  <span class="hljs-attr">Parse</span>:Performance                [&#x6309;&#x5C0F;&#x65F6;] &#x89E3;&#x6790;nginx&#x65E5;&#x5FD7;, &#x5206;&#x6790;&#x5206;&#x949F;&#x7EA7;&#x522B;&#x7684;&#x6307;&#x5B9A;&#x65F6;&#x95F4;&#x8303;&#x56F4;&#x5185;&#x7684;&#x6027;&#x80FD;&#x6307;&#x6807;
+  <span class="hljs-attr">Parse</span>:TimeOnSiteByHour           [&#x6309;&#x5C0F;&#x65F6;] &#x89E3;&#x6790;nginx&#x65E5;&#x5FD7;, &#x5206;&#x6790;&#x8BB0;&#x5F55;&#x6307;&#x5B9A;&#x65F6;&#x95F4;&#x8303;&#x56F4;&#x5185;&#x7528;&#x6237;&#x505C;&#x7559;&#x65F6;&#x957F;
+  <span class="hljs-attr">Parse</span>:UV                         [&#x6309;&#x5C0F;&#x65F6;] &#x89E3;&#x6790;nginx&#x65E5;&#x5FD7;, &#x5206;&#x6790;&#x8BB0;&#x5F55;&#x6307;&#x5B9A;&#x65F6;&#x95F4;&#x8303;&#x56F4;&#x5185;&#x7684;uv
+  <span class="hljs-attr">Parse</span>:UserFirstLoginAt           [&#x6309;&#x5929;] &#x89E3;&#x6790;nginx&#x65E5;&#x5FD7;, &#x8BB0;&#x5F55;&#x7528;&#x6237;&#x9996;&#x6B21;&#x767B;&#x9646;&#x65F6;&#x95F4;
+ SaveLog
+  <span class="hljs-attr">SaveLog</span>:Nginx                    &#x6BCF;&#x4E00;&#x5206;&#x949F;&#x8BFB;&#x53D6;Nginx&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x89E3;&#x6790;
+ Summary
+  <span class="hljs-attr">Summary</span>:<span class="hljs-built_in">Error</span>                    [&#x6309;&#x5206;&#x949F;/&#x6309;&#x5C0F;&#x65F6;/&#x6309;&#x5929;] &#x6839;&#x636E;&#x5386;&#x53F2;&#x6570;&#x636E;, &#x6C47;&#x603B;&#x5206;&#x6790;&#x9519;&#x8BEF;&#x6570;
+  <span class="hljs-attr">Summary</span>:HttpError                [&#x6309;&#x5929;/&#x6309;&#x6708;] &#x57FA;&#x4E8E;&#x6570;&#x636E;&#x8868;&#x505A;&#x7EDF;&#x8BA1;, &#x7EDF;&#x8BA1;http error&#x5206;&#x5E03;&#x60C5;&#x51B5;
+  <span class="hljs-attr">Summary</span>:NewUser                  [&#x6309;&#x5C0F;&#x65F6;/&#x6309;&#x5929;/&#x6309;&#x6708;] &#x6839;&#x636E;&#x5386;&#x53F2;&#x6570;&#x636E;, &#x6C47;&#x603B;&#x5206;&#x6790;&#x8BB0;&#x5F55;&#x6307;&#x5B9A;&#x65F6;&#x95F4;&#x8303;&#x56F4;&#x5185;&#x7684;&#x65B0;&#x589E;&#x7528;&#x6237;&#x6570;
+  <span class="hljs-attr">Summary</span>:Performance              [&#x6309;&#x5C0F;&#x65F6;/&#x6309;&#x5929;/&#x6309;&#x6708;] &#x6839;&#x636E;&#x5386;&#x53F2;&#x6570;&#x636E;, &#x6C47;&#x603B;&#x5206;&#x6790;&#x8BB0;&#x5F55;&#x6307;&#x5B9A;&#x65F6;&#x95F4;&#x8303;&#x56F4;&#x5185;&#x7684;&#x6027;&#x80FD;&#x6307;&#x6807;&#x6570;&#x636E;
+  <span class="hljs-attr">Summary</span>:SystemBrowser            [&#x6309;&#x6708;] &#x57FA;&#x4E8E;&#x6570;&#x636E;&#x5E93;&#x7EDF;&#x8BA1;&#x6D4F;&#x89C8;&#x5668;&#x5360;&#x6BD4;
+  <span class="hljs-attr">Summary</span>:SystemDevice             [&#x6309;&#x6708;] &#x57FA;&#x4E8E;&#x6570;&#x636E;&#x5E93;&#x7EDF;&#x8BA1;&#x8BBE;&#x5907;&#x5360;&#x6BD4;
+  <span class="hljs-attr">Summary</span>:SystemOS                 [&#x6309;&#x6708;]&#x57FA;&#x4E8E;&#x6570;&#x636E;&#x5E93;&#x7EDF;&#x8BA1;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5360;&#x6BD4;
+  <span class="hljs-attr">Summary</span>:SystemRuntimeVersion     [&#x6309;&#x6708;] &#x57FA;&#x4E8E;&#x6570;&#x636E;&#x5E93;&#x7EDF;&#x8BA1;&#x6D4F;&#x89C8;&#x5668;&#x5360;&#x6BD4;
+  <span class="hljs-attr">Summary</span>:TimeOnSite               [&#x6309;&#x5929;/&#x6309;&#x6708;] &#x6839;&#x636E;&#x5386;&#x53F2;&#x6570;&#x636E;, &#x6C47;&#x603B;&#x5206;&#x6790;&#x8BB0;&#x5F55;&#x6307;&#x5B9A;&#x65F6;&#x95F4;&#x8303;&#x56F4;&#x5185;&#x7528;&#x6237;&#x505C;&#x7559;&#x65F6;&#x957F;
+  <span class="hljs-attr">Summary</span>:UV                       [&#x6309;&#x5C0F;&#x65F6;/&#x6309;&#x5929;/&#x6309;&#x6708;] &#x6839;&#x636E;&#x5386;&#x53F2;&#x6570;&#x636E;, &#x6C47;&#x603B;&#x5206;&#x6790;&#x8BB0;&#x5F55;&#x6307;&#x5B9A;&#x65F6;&#x95F4;&#x8303;&#x56F4;&#x5185;&#x7684;uv
+ Task
+  <span class="hljs-attr">Task</span>:Manager                     &#x4EFB;&#x52A1;&#x8C03;&#x5EA6;&#x4E3B;&#x8FDB;&#x7A0B;, &#x53EA;&#x80FD;&#x542F;&#x52A8;&#x4E00;&#x6B21;
+ Utils
+  <span class="hljs-attr">Utils</span>:CleanOldLog                &#x53EA;&#x4FDD;&#x7559;&#x5F53;&#x524D;&#x6708;&#x5185;&#x6570;&#x636E;, &#x6BCF;&#x6708;<span class="hljs-number">20</span>&#x53F7;&#x4E4B;&#x540E;&#x81EA;&#x52A8;&#x5220;&#x9664;&#x4E0A;&#x4E2A;&#x6708;&#x6570;&#x636E;
+  <span class="hljs-attr">Utils</span>:GenerateSQL                &#x751F;&#x6210;&#x9879;&#x76EE;&#x5728;&#x6307;&#x5B9A;&#x65E5;&#x671F;&#x8303;&#x56F4;&#x5185;&#x7684;&#x5EFA;&#x8868;SQL
+  <span class="hljs-attr">Utils</span>:TemplateSQL                &#x751F;&#x6210;&#x9879;&#x76EE;&#x5728;&#x6307;&#x5B9A;&#x65E5;&#x671F;&#x8303;&#x56F4;&#x5185;&#x7684;&#x5EFA;&#x8868;SQL
+  <span class="hljs-attr">Utils</span>:Test                       &#x4E13;&#x4E1A;&#x7C98;&#x8D34;&#x8C03;&#x8BD5;&#x4EE3;&#x7801;
+  <span class="hljs-attr">Utils</span>:TestUC                     &#x6D4B;&#x8BD5;UC&#x63A5;&#x53E3;
+ WatchDog
+  <span class="hljs-attr">WatchDog</span>:Alarm                   [&#x6839;&#x636E;&#x62A5;&#x8B66;&#x914D;&#x7F6E;] &#x76D1;&#x6D4B;&#x6BCF;&#x4E00;&#x6761;&#x62A5;&#x8B66;&#x914D;&#x7F6E;&#x5BF9;&#x5E94;&#x7684;&#x9879;&#x76EE;&#x9519;&#x8BEF;
+  <span class="hljs-attr">WatchDog</span>:Saas                    [&#x6309;&#x5206;&#x949F;] &#x68C0;&#x67E5;&#x6700;&#x8FD1;<span class="hljs-number">5</span>&#x5206;&#x949F;&#x5185;&#x9519;&#x8BEF;&#x6570;&#x662F;&#x5426;&#x8D85;&#x51FA;&#x9608;&#x503C;, &#x81EA;&#x52A8;&#x62A5;&#x8B66;
+</code></pre>
+<h4 id="t315.3.2.2 &#x521D;&#x59CB;&#x5316;&#x6570;&#x636E;&#x5E93;">5.3.2.2 &#x521D;&#x59CB;&#x5316;&#x6570;&#x636E;&#x5E93; <a href="#t315.3.2.2 &#x521D;&#x59CB;&#x5316;&#x6570;&#x636E;&#x5E93;"> # </a></h4>
+<ul>
+<li>&#x521B;&#x5EFA;<code>platform</code>&#x6570;&#x636E;&#x5E93;</li>
+<li><code>npm run watch</code></li>
+<li><code>node dist/fee.js Utils:GenerateSQL 1 &apos;2020-06&apos; &apos;2020-06&apos; &gt; init.sql</code></li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-comment">//id, &#x62BD;&#x6837;&#x6BD4;&#x7387;, &#x9879;&#x76EE;&#x540D;(&#x5C55;&#x793A;), &#x9879;&#x76EE;id, &#x8D1F;&#x8D23;&#x4EBA;&#x4FE1;&#x606F;</span>
+REPLACE INTO <span class="hljs-string">`t_o_project`</span> (<span class="hljs-string">`id`</span>, <span class="hljs-string">`rate`</span>, <span class="hljs-string">`display_name`</span>, <span class="hljs-string">`project_name`</span>, <span class="hljs-string">`c_desc`</span>, <span class="hljs-string">`is_delete`</span>, <span class="hljs-string">`create_ucid`</span>, <span class="hljs-string">`update_ucid`</span>, <span class="hljs-string">`create_time`</span>, <span class="hljs-string">`update_time`</span>) VALUES (<span class="hljs-number">1</span>, <span class="hljs-number">100</span>, <span class="hljs-string">&apos;&#x793A;&#x4F8B;&#x9879;&#x76EE;&apos;</span>, <span class="hljs-string">&apos;template&apos;</span>, <span class="hljs-string">&apos;&#x8D1F;&#x8D23;&#x4EBA;&apos;</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&apos;&apos;</span>, <span class="hljs-string">&apos;&apos;</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
+</code></pre>
+<h4 id="t325.3.2.3 SaveLog:Nginx">5.3.2.3 SaveLog:Nginx <a href="#t325.3.2.3 SaveLog:Nginx"> # </a></h4>
+<ul>
+<li>&#x6BCF;&#x4E00;&#x5206;&#x949F;&#x8BFB;&#x53D6;Nginx&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x89E3;&#x6790;</li>
+</ul>
+<p>server\src\library\nginx\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> logPath = appConfig.absoluteLogPath
+</code></pre>
+<p>server\src\configs\app.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> development = {
+  <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;fee&#x76D1;&#x63A7;&#x5E73;&#x53F0;&#x5F00;&#x53D1;&#x73AF;&#x5883;&apos;</span>,
+  <span class="hljs-attr">port</span>: <span class="hljs-number">3000</span>,
+  <span class="hljs-attr">proxy</span>: <span class="hljs-literal">false</span>,
+  <span class="hljs-attr">absoluteLogPath</span>: path.resolve(__dirname, <span class="hljs-string">&apos;../../&apos;</span>, <span class="hljs-string">&apos;log&apos;</span>)
+}
+</code></pre>
+<pre><code class="lang-js">node dist/fee.js SaveLog:Nginx
+</code></pre>
+<pre><code class="lang-js">&#x6536;&#x5230;&#x6570;&#x636E;, &#x5F53;&#x524D;&#x5171;&#x8BB0;&#x5F55;<span class="hljs-number">1</span>/<span class="hljs-number">1</span>&#x6761;&#x6570;&#x636E;
+&#x6E05;&#x6D17;&#x540E;&#x7684;&#x65E5;&#x5FD7;&#x8DEF;&#x5F84; C:\afirst\monitor\server\log\nginx\raw\month_202006\day_13\<span class="hljs-number">16</span>\<span class="hljs-number">14.</span>log
+
+&#x6E05;&#x6D17;&#x540E;&#x7684;&#x65E5;&#x5FD7;&#x8DEF;&#x5F84; C:\afirst\monitor\server\log\nginx\json\month_202006\day_13\<span class="hljs-number">16</span>\<span class="hljs-number">14.</span>log
+</code></pre>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;perf&quot;</span>,
+    <span class="hljs-attr">&quot;code&quot;</span>: <span class="hljs-number">20001</span>,
+    <span class="hljs-attr">&quot;detail&quot;</span>: {
+        <span class="hljs-attr">&quot;connectStart&quot;</span>: <span class="hljs-number">1592036791666</span>,
+        <span class="hljs-attr">&quot;navigationStart&quot;</span>: <span class="hljs-number">1592036791361</span>,
+        <span class="hljs-attr">&quot;loadEventEnd&quot;</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">&quot;domLoading&quot;</span>: <span class="hljs-number">1592036791677</span>,
+        <span class="hljs-attr">&quot;secureConnectionStart&quot;</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">&quot;fetchStart&quot;</span>: <span class="hljs-number">1592036791362</span>,
+        <span class="hljs-attr">&quot;domContentLoadedEventStart&quot;</span>: <span class="hljs-number">1592036791976</span>,
+        <span class="hljs-attr">&quot;responseStart&quot;</span>: <span class="hljs-number">1592036791669</span>,
+        <span class="hljs-attr">&quot;responseEnd&quot;</span>: <span class="hljs-number">1592036791670</span>,
+        <span class="hljs-attr">&quot;domInteractive&quot;</span>: <span class="hljs-number">1592036791976</span>,
+        <span class="hljs-attr">&quot;domainLookupEnd&quot;</span>: <span class="hljs-number">1592036791365</span>,
+        <span class="hljs-attr">&quot;redirectStart&quot;</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">&quot;requestStart&quot;</span>: <span class="hljs-number">1592036791667</span>,
+        <span class="hljs-attr">&quot;unloadEventEnd&quot;</span>: <span class="hljs-number">1592036791674</span>,
+        <span class="hljs-attr">&quot;unloadEventStart&quot;</span>: <span class="hljs-number">1592036791674</span>,
+        <span class="hljs-attr">&quot;domComplete&quot;</span>: <span class="hljs-number">1592036791976</span>,
+        <span class="hljs-attr">&quot;domainLookupStart&quot;</span>: <span class="hljs-number">1592036791365</span>,
+        <span class="hljs-attr">&quot;loadEventStart&quot;</span>: <span class="hljs-number">1592036791976</span>,
+        <span class="hljs-attr">&quot;domContentLoadedEventEnd&quot;</span>: <span class="hljs-number">1592036791976</span>,
+        <span class="hljs-attr">&quot;redirectEnd&quot;</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">&quot;connectEnd&quot;</span>: <span class="hljs-number">1592036791667</span>,
+        <span class="hljs-attr">&quot;url&quot;</span>: <span class="hljs-string">&quot;localhost:9000/&quot;</span>
+    },
+    <span class="hljs-attr">&quot;extra&quot;</span>: {},
+    <span class="hljs-attr">&quot;common&quot;</span>: {
+        <span class="hljs-attr">&quot;pid&quot;</span>: <span class="hljs-string">&quot;template&quot;</span>,
+        <span class="hljs-attr">&quot;uuid&quot;</span>: <span class="hljs-string">&quot;uuid2&quot;</span>,
+        <span class="hljs-attr">&quot;ucid&quot;</span>: <span class="hljs-string">&quot;ucid&quot;</span>,
+        <span class="hljs-attr">&quot;is_test&quot;</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">&quot;record&quot;</span>: {
+            <span class="hljs-attr">&quot;time_on_page&quot;</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-attr">&quot;performance&quot;</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-attr">&quot;js_error&quot;</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-attr">&quot;js_error_report_config&quot;</span>: {
+                <span class="hljs-attr">&quot;ERROR_RUNTIME&quot;</span>: <span class="hljs-literal">true</span>,
+                <span class="hljs-attr">&quot;ERROR_SCRIPT&quot;</span>: <span class="hljs-literal">true</span>,
+                <span class="hljs-attr">&quot;ERROR_STYLE&quot;</span>: <span class="hljs-literal">true</span>,
+                <span class="hljs-attr">&quot;ERROR_IMAGE&quot;</span>: <span class="hljs-literal">true</span>,
+                <span class="hljs-attr">&quot;ERROR_AUDIO&quot;</span>: <span class="hljs-literal">true</span>,
+                <span class="hljs-attr">&quot;ERROR_VIDEO&quot;</span>: <span class="hljs-literal">true</span>,
+                <span class="hljs-attr">&quot;ERROR_CONSOLE&quot;</span>: <span class="hljs-literal">true</span>,
+                <span class="hljs-attr">&quot;ERROR_TRY_CATCH&quot;</span>: <span class="hljs-literal">true</span>
+            }
+        },
+        <span class="hljs-attr">&quot;version&quot;</span>: <span class="hljs-string">&quot;1.0.0&quot;</span>,
+        <span class="hljs-attr">&quot;test&quot;</span>: <span class="hljs-string">&quot;b47ca710747e96f1c523ebab8022c19e9abaa56b&quot;</span>,
+        <span class="hljs-attr">&quot;timestamp&quot;</span>: <span class="hljs-number">1592036791977</span>,
+        <span class="hljs-attr">&quot;runtime_version&quot;</span>: <span class="hljs-string">&quot;1.0.0&quot;</span>,
+        <span class="hljs-attr">&quot;sdk_version&quot;</span>: <span class="hljs-string">&quot;1.0.40&quot;</span>,
+        <span class="hljs-attr">&quot;page_type&quot;</span>: <span class="hljs-string">&quot;localhost:9000/&quot;</span>
+    },
+    <span class="hljs-attr">&quot;md5&quot;</span>: <span class="hljs-string">&quot;382eecc357bb7c6629e139eb7eb6509e&quot;</span>,
+    <span class="hljs-attr">&quot;project_id&quot;</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">&quot;project_name&quot;</span>: <span class="hljs-string">&quot;template&quot;</span>,
+    <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-number">1592036792</span>,
+    <span class="hljs-attr">&quot;ua&quot;</span>: {
+        <span class="hljs-attr">&quot;ua&quot;</span>: <span class="hljs-string">&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1&quot;</span>,
+        <span class="hljs-attr">&quot;browser&quot;</span>: {
+            <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Mobile Safari&quot;</span>,
+            <span class="hljs-attr">&quot;version&quot;</span>: <span class="hljs-string">&quot;13.0.3&quot;</span>,
+            <span class="hljs-attr">&quot;major&quot;</span>: <span class="hljs-string">&quot;13&quot;</span>
+        },
+        <span class="hljs-attr">&quot;engine&quot;</span>: {
+            <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;WebKit&quot;</span>,
+            <span class="hljs-attr">&quot;version&quot;</span>: <span class="hljs-string">&quot;605.1.15&quot;</span>
+        },
+        <span class="hljs-attr">&quot;os&quot;</span>: {
+            <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;iOS&quot;</span>,
+            <span class="hljs-attr">&quot;version&quot;</span>: <span class="hljs-string">&quot;13.2.3&quot;</span>
+        },
+        <span class="hljs-attr">&quot;device&quot;</span>: {
+            <span class="hljs-attr">&quot;vendor&quot;</span>: <span class="hljs-string">&quot;Apple&quot;</span>,
+            <span class="hljs-attr">&quot;model&quot;</span>: <span class="hljs-string">&quot;iPhone&quot;</span>,
+            <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;mobile&quot;</span>
+        },
+        <span class="hljs-attr">&quot;cpu&quot;</span>: {}
+    },
+    <span class="hljs-attr">&quot;ip&quot;</span>: <span class="hljs-string">&quot;59.109.146.215&quot;</span>,
+    <span class="hljs-attr">&quot;country&quot;</span>: <span class="hljs-string">&quot;&#x4E2D;&#x56FD;&quot;</span>,
+    <span class="hljs-attr">&quot;province&quot;</span>: <span class="hljs-string">&quot;&#x5317;&#x4EAC;&quot;</span>,
+    <span class="hljs-attr">&quot;city&quot;</span>: <span class="hljs-string">&quot;&#x5317;&#x4EAC;&quot;</span>
+}
+</code></pre>
+<h4 id="t335.3.2.4 Parse:Performance">5.3.2.4 Parse:Performance <a href="#t335.3.2.4 Parse:Performance"> # </a></h4>
+<ul>
+<li>[&#x6309;&#x5C0F;&#x65F6;] &#x89E3;&#x6790;nginx&#x65E5;&#x5FD7;, &#x5206;&#x6790;&#x5206;&#x949F;&#x7EA7;&#x522B;&#x7684;&#x6307;&#x5B9A;&#x65F6;&#x95F4;&#x8303;&#x56F4;&#x5185;&#x7684;&#x6027;&#x80FD;&#x6307;&#x6807;</li>
+</ul>
+<pre><code class="lang-js">node dist/fee.js Parse:Performance <span class="hljs-number">2020</span><span class="hljs-number">-06</span><span class="hljs-number">-13</span>_16:<span class="hljs-number">26</span>  <span class="hljs-number">2020</span><span class="hljs-number">-06</span><span class="hljs-number">-13</span>_16:<span class="hljs-number">26</span>
+</code></pre>
+<pre><code class="lang-js">{
+  [&#x9879;&#x76EE;ID,url,&#x6307;&#x6807;,&#x6C47;&#x603B;&#x7684;&#x65F6;&#x95F4;]:{
+    [&#x56FD;&#x5BB6;,&#x7701;,&#x5E02;],value&#xFF1A;{&#x6307;&#x6807;&#x548C;:<span class="hljs-number">614</span>,pv&#x548C;:<span class="hljs-number">1</span>}
+  }
+}
+</code></pre>
+<pre><code class="lang-js">{
+  [<span class="hljs-number">1</span>,<span class="hljs-string">&quot;localhost:9000/&quot;</span>,<span class="hljs-string">&quot;tcp_connect_ms&quot;</span>,<span class="hljs-string">&quot;2020-06-13_16:26&quot;</span>]:{
+    [<span class="hljs-string">&quot;&#x4E2D;&#x56FD;&quot;</span>,<span class="hljs-string">&quot;&#x5317;&#x4EAC;&quot;</span>,<span class="hljs-string">&quot;&#x5317;&#x4EAC;&quot;</span>],value&#xFF1A;{<span class="hljs-string">&quot;sum_indicator_value&quot;</span>:<span class="hljs-number">614</span>,<span class="hljs-string">&quot;pv&quot;</span>:<span class="hljs-number">1</span>}
+  }
+}
+</code></pre>
+<h4 id="t345.3.2.5  Summary:Performance">5.3.2.5  Summary:Performance <a href="#t345.3.2.5  Summary:Performance"> # </a></h4>
+<ul>
+<li>[&#x6309;&#x5C0F;&#x65F6;/&#x6309;&#x5929;/&#x6309;&#x6708;] &#x6839;&#x636E;&#x5386;&#x53F2;&#x6570;&#x636E;, &#x6C47;&#x603B;&#x5206;&#x6790;&#x8BB0;&#x5F55;&#x6307;&#x5B9A;&#x65F6;&#x95F4;&#x8303;&#x56F4;&#x5185;&#x7684;&#x6027;&#x80FD;&#x6307;&#x6807;&#x6570;&#x636E;</li>
+</ul>
+<pre><code class="lang-js">node dist/fee.js Summary:Performance <span class="hljs-string">&quot;2020-06-13 16&quot;</span> hour
+node dist/fee.js Summary:Performance <span class="hljs-number">2020</span><span class="hljs-number">-06</span><span class="hljs-number">-13</span> day
+node dist/fee.js Summary:Performance <span class="hljs-number">2020</span><span class="hljs-number">-06</span> month
+</code></pre>
+<h4 id="t355.3.2.5 Parse:TimeOnSiteByHour">5.3.2.5 Parse:TimeOnSiteByHour <a href="#t355.3.2.5 Parse:TimeOnSiteByHour"> # </a></h4>
+<ul>
+<li>[&#x6309;&#x5C0F;&#x65F6;] &#x89E3;&#x6790;nginx&#x65E5;&#x5FD7;, &#x5206;&#x6790;&#x8BB0;&#x5F55;&#x6307;&#x5B9A;&#x65F6;&#x95F4;&#x8303;&#x56F4;&#x5185;&#x7528;&#x6237;&#x505C;&#x7559;&#x65F6;&#x957F;</li>
+<li>t_r_city_distribution_1_202006</li>
+<li>t_r_duration_distribution</li>
+</ul>
+<pre><code class="lang-js">node dist/fee.js SaveLog:Nginx
+node dist/fee.js Parse:TimeOnSiteByHour <span class="hljs-string">&quot;2020-06-13 22:30&quot;</span>  <span class="hljs-string">&quot;2020-06-13 22:30&quot;</span>
+</code></pre>
+<h4 id="t365.3.2.6 Summary:TimeOnSite">5.3.2.6 Summary:TimeOnSite <a href="#t365.3.2.6 Summary:TimeOnSite"> # </a></h4>
+<ul>
+<li>[&#x6309;&#x5C0F;&#x65F6;] &#x89E3;&#x6790;nginx&#x65E5;&#x5FD7;, &#x5206;&#x6790;&#x8BB0;&#x5F55;&#x6307;&#x5B9A;&#x65F6;&#x95F4;&#x8303;&#x56F4;&#x5185;&#x7528;&#x6237;&#x505C;&#x7559;&#x65F6;&#x957F;</li>
+<li>t_r_duration_distribution</li>
+</ul>
+<pre><code class="lang-js">node dist/fee.js Summary:TimeOnSite <span class="hljs-string">&quot;2020-06 13&quot;</span>  day
+node dist/fee.js Summary:TimeOnSite <span class="hljs-string">&quot;2020-06&quot;</span>  month
+</code></pre>
+<h4 id="t375.3.2.7 Parse:Monitor">5.3.2.7 Parse:Monitor <a href="#t375.3.2.7 Parse:Monitor"> # </a></h4>
+<ul>
+<li>[&#x6309;&#x5206;&#x949F;] &#x89E3;&#x6790;nginx&#x65E5;&#x5FD7;, &#x5206;&#x6790;Monitor</li>
+<li>t_o_monitor_1_202006</li>
+<li>t_o_monitor_ext_1_202006</li>
+</ul>
+<pre><code class="lang-js">node dist/fee.js Parse:Monitor <span class="hljs-string">&quot;2020-06-13 22:35&quot;</span>  <span class="hljs-string">&quot;2020-06-13 22:35&quot;</span>
+</code></pre>
+<h4 id="t385.3.2.8 Summary:Error">5.3.2.8 Summary:Error <a href="#t385.3.2.8 Summary:Error"> # </a></h4>
+<ul>
+<li>[&#x6309;&#x5206;&#x949F;/&#x6309;&#x5C0F;&#x65F6;/&#x6309;&#x5929;] &#x6839;&#x636E;&#x5386;&#x53F2;&#x6570;&#x636E;, &#x6C47;&#x603B;&#x5206;&#x6790;&#x9519;&#x8BEF;&#x6570;</li>
+<li>t_r_error_summary_1_202006<pre><code class="lang-js">node dist/fee.js Summary:<span class="hljs-built_in">Error</span> <span class="hljs-string">&quot;2020-06-13 22:35&quot;</span>  minute
+node dist/fee.js Summary:<span class="hljs-built_in">Error</span> <span class="hljs-string">&quot;2020-06-13 22&quot;</span> hour
+node dist/fee.js Summary:<span class="hljs-built_in">Error</span> <span class="hljs-string">&quot;2020-06-13&quot;</span> day
+</code></pre>
+</li>
+</ul>
+<h4 id="t395.3.2.9 Parse:Device">5.3.2.9 Parse:Device <a href="#t395.3.2.9 Parse:Device"> # </a></h4>
+<ul>
+<li>[&#x6309;&#x5929;] &#x89E3;&#x6790;nginx&#x65E5;&#x5FD7;, &#x5206;&#x6790;&#x6307;&#x5B9A;&#x65F6;&#x95F4;&#x8303;&#x56F4;Device</li>
+<li>t_o_system_collection_1</li>
+</ul>
+<pre><code class="lang-js">node dist/fee.js Parse:Device <span class="hljs-string">&quot;2020-06-13 22:58&quot;</span>  <span class="hljs-string">&quot;2020-06-13 22:58&quot;</span>
+</code></pre>
+<pre><code class="lang-js">projectMap={
+  <span class="hljs-number">1</span>:{
+    <span class="hljs-string">&quot;2020-06&quot;</span>:{
+      <span class="hljs-string">&quot;uuid&quot;</span>:{
+        <span class="hljs-string">&quot;browser&quot;</span>:<span class="hljs-string">&quot;Mobile Safari&quot;</span>
+      }
+    }
+  }
+}
+</code></pre>
+<h4 id="t405.3.2.10 Summary">5.3.2.10 Summary <a href="#t405.3.2.10 Summary"> # </a></h4>
+<ul>
+<li>Summary:SystemBrowser            [&#x6309;&#x6708;] &#x57FA;&#x4E8E;&#x6570;&#x636E;&#x5E93;&#x7EDF;&#x8BA1;&#x6D4F;&#x89C8;&#x5668;&#x5360;&#x6BD4;</li>
+<li>Summary:SystemDevice             [&#x6309;&#x6708;] &#x57FA;&#x4E8E;&#x6570;&#x636E;&#x5E93;&#x7EDF;&#x8BA1;&#x8BBE;&#x5907;&#x5360;&#x6BD4;</li>
+<li>Summary:SystemOS                 [&#x6309;&#x6708;]&#x57FA;&#x4E8E;&#x6570;&#x636E;&#x5E93;&#x7EDF;&#x8BA1;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5360;&#x6BD4;</li>
+<li><p>Summary:SystemRuntimeVersion     [&#x6309;&#x6708;] &#x57FA;&#x4E8E;&#x6570;&#x636E;&#x5E93;&#x7EDF;&#x8BA1;&#x6D4F;&#x89C8;&#x5668;&#x5360;&#x6BD4;</p>
+</li>
+<li><p>t_r_system_browser</p>
+</li>
+<li>t_r_system_device</li>
+<li>t_r_system_os</li>
+<li>t_r_system_runtime_version</li>
+</ul>
+<pre><code class="lang-js">node dist/fee.js Summary:SystemBrowser <span class="hljs-string">&quot;2020-06&quot;</span>  month
+node dist/fee.js Summary:SystemDevice <span class="hljs-string">&quot;2020-06&quot;</span>  month
+node dist/fee.js Summary:SystemOS <span class="hljs-string">&quot;2020-06&quot;</span>  month
+node dist/fee.js Summary:SystemRuntimeVersion <span class="hljs-string">&quot;2020-06&quot;</span>  month
+</code></pre>
+<h2 id="t416.&#x8BA1;&#x5212;&#x4EFB;&#x52A1;">6.&#x8BA1;&#x5212;&#x4EFB;&#x52A1; <a href="#t416.&#x8BA1;&#x5212;&#x4EFB;&#x52A1;"> # </a></h2>
+<ul>
+<li>server\src\commands\task\manage.js</li>
+</ul>
+<h3 id="t426.1 &#x4EFB;&#x52A1;&#x6267;&#x884C;&#x5468;&#x671F;">6.1 &#x4EFB;&#x52A1;&#x6267;&#x884C;&#x5468;&#x671F; <a href="#t426.1 &#x4EFB;&#x52A1;&#x6267;&#x884C;&#x5468;&#x671F;"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-number">1.</span>  &#x6BCF;&#x5206;&#x949F;&#x4E00;&#x6B21;(&#x51C6;&#x5B9E;&#x65F6;)
+    <span class="hljs-number">1.</span>  &#x539F;&#x59CB;&#x6570;&#x636E;&#x5165;&#x5E93;
+        <span class="hljs-number">1.</span>  &#x9519;&#x8BEF;&#x6570;&#x636E;&#x5165;&#x5E93;(&#x5EF6;&#x8FDF;<span class="hljs-number">2</span>&#x5206;&#x949F;)
+    <span class="hljs-number">2.</span>  &#x6309;&#x5206;&#x949F;&#x7EDF;&#x8BA1;
+        <span class="hljs-number">1.</span>  &#x9519;&#x8BEF;&#x6570;&#x636E;&#x7EDF;&#x8BA1;(&#x5EF6;&#x8FDF;<span class="hljs-number">2</span>&#x5206;&#x949F;)
+<span class="hljs-number">2.</span>  &#x6BCF;<span class="hljs-number">10</span>&#x5206;&#x949F;&#x4E00;&#x6B21;
+    <span class="hljs-number">1.</span>  &#x539F;&#x59CB;&#x6570;&#x636E;&#x5165;&#x5E93;
+        <span class="hljs-number">1.</span>  uv
+        <span class="hljs-number">2.</span>  &#x9875;&#x9762;&#x6027;&#x80FD;&#x6307;&#x6807;
+        <span class="hljs-number">3.</span>  &#x7528;&#x6237;&#x505C;&#x7559;&#x65F6;&#x957F;
+    <span class="hljs-number">2.</span>  &#x6309;&#x5C0F;&#x65F6;&#x7EDF;&#x8BA1;
+        <span class="hljs-number">1.</span>  uv
+        <span class="hljs-number">2.</span>  &#x65B0;&#x7528;&#x6237;&#x6570;
+        <span class="hljs-number">3.</span>  &#x9875;&#x9762;&#x6027;&#x80FD;&#x6307;&#x6807;
+        <span class="hljs-number">4.</span>  &#x9519;&#x8BEF;&#x6570;&#x636E;&#x7EDF;&#x8BA1;
+<span class="hljs-number">3.</span>  &#x6BCF;&#x5C0F;&#x65F6;&#x4E00;&#x6B21;
+    <span class="hljs-number">1.</span>  &#x539F;&#x59CB;&#x6570;&#x636E;&#x5165;&#x5E93;
+        <span class="hljs-number">1.</span>  &#x8BBE;&#x5907;&#x6570;&#x636E;
+        <span class="hljs-number">2.</span>  &#x7528;&#x6237;&#x70B9;&#x51FB;
+        <span class="hljs-number">3.</span>  &#x9996;&#x6B21;&#x767B;&#x9646;&#x7528;&#x6237;
+    <span class="hljs-number">2.</span>  &#x6309;&#x5929;&#x7EDF;&#x8BA1;(&#x5F53;&#x5929;)
+        <span class="hljs-number">1.</span>  uv
+        <span class="hljs-number">2.</span>  &#x65B0;&#x7528;&#x6237;&#x6570;
+        <span class="hljs-number">3.</span>  &#x9875;&#x9762;&#x6027;&#x80FD;&#x6307;&#x6807;
+        <span class="hljs-number">4.</span>  &#x9519;&#x8BEF;&#x6570;&#x636E;&#x7EDF;&#x8BA1;
+        <span class="hljs-number">5.</span>  &#x7528;&#x6237;&#x505C;&#x7559;&#x65F6;&#x957F;
+<span class="hljs-number">4.</span>  &#x6BCF;&#x516D;&#x5C0F;&#x65F6;&#x4E00;&#x6B21;
+    <span class="hljs-number">1.</span>  &#x6309;&#x5929;&#x7EDF;&#x8BA1;(&#x6628;&#x65E5;)
+        <span class="hljs-number">1.</span>  uv
+        <span class="hljs-number">2.</span>  &#x65B0;&#x7528;&#x6237;&#x6570;
+        <span class="hljs-number">3.</span>  &#x9875;&#x9762;&#x6027;&#x80FD;&#x6307;&#x6807;
+        <span class="hljs-number">4.</span>  &#x9519;&#x8BEF;&#x6570;&#x636E;&#x7EDF;&#x8BA1;
+        <span class="hljs-number">5.</span>  &#x7528;&#x6237;&#x505C;&#x7559;&#x65F6;&#x957F;
+    <span class="hljs-number">2.</span>  &#x6309;&#x6708;&#x7EDF;&#x8BA1;
+        <span class="hljs-number">1.</span>  uv
+        <span class="hljs-number">2.</span>  &#x65B0;&#x7528;&#x6237;&#x6570;
+        <span class="hljs-number">3.</span>  &#x9875;&#x9762;&#x6027;&#x80FD;&#x6307;&#x6807;
+        <span class="hljs-number">4.</span>  &#x9519;&#x8BEF;&#x6570;&#x636E;&#x7EDF;&#x8BA1;
+        <span class="hljs-number">5.</span>  &#x7528;&#x6237;&#x505C;&#x7559;&#x65F6;&#x957F;
+        <span class="hljs-number">6.</span>  &#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5206;&#x5E03;
+        <span class="hljs-number">7.</span>  &#x8BBE;&#x5907;&#x5206;&#x5E03;
+        <span class="hljs-number">8.</span>  &#x6D4F;&#x89C8;&#x5668;&#x5206;&#x5E03;
+</code></pre>
+<h3 id="t436.2 &#x6267;&#x884C;&#x4EFB;&#x52A1;">6.2 &#x6267;&#x884C;&#x4EFB;&#x52A1; <a href="#t436.2 &#x6267;&#x884C;&#x4EFB;&#x52A1;"> # </a></h3>
+<ul>
+<li><a href="https://cron.qqe2.com/">cron</a></li>
+</ul>
+<pre><code class="lang-js">node dist/fee.js Task:saveLog
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">async</span> handle (args, options) {
+    <span class="hljs-keyword">let</span> that = <span class="hljs-keyword">this</span>
+    schedule.scheduleJob(<span class="hljs-string">&apos;0 */1 * * * * *&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+      that.log(<span class="hljs-string">&apos;registerTaskRepeatPer1Minute &#x5F00;&#x59CB;&#x6267;&#x884C;&apos;</span>)
+      that.execCommand(<span class="hljs-string">&apos;SaveLog:Nginx&apos;</span>, []);
+    })
+  }
+</code></pre>
+<pre><code class="lang-js">*  *  *  *  *  *
+&#x252C; &#x252C; &#x252C; &#x252C; &#x252C; &#x252C;
+&#x2502; &#x2502; &#x2502; &#x2502; &#x2502;  |
+&#x2502; &#x2502; &#x2502; &#x2502; &#x2502; &#x2514; day <span class="hljs-keyword">of</span> week (<span class="hljs-number">0</span> - <span class="hljs-number">7</span>) (<span class="hljs-number">0</span> or <span class="hljs-number">7</span> is Sun)
+&#x2502; &#x2502; &#x2502; &#x2502; &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500; month (<span class="hljs-number">1</span> - <span class="hljs-number">12</span>)
+&#x2502; &#x2502; &#x2502; &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500; day <span class="hljs-keyword">of</span> month (<span class="hljs-number">1</span> - <span class="hljs-number">31</span>)
+&#x2502; &#x2502; &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500; hour (<span class="hljs-number">0</span> - <span class="hljs-number">23</span>)
+&#x2502; &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500; minute (<span class="hljs-number">0</span> - <span class="hljs-number">59</span>)
+&#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500; second (<span class="hljs-number">0</span> - <span class="hljs-number">59</span>, OPTIONAL)
+</code></pre>
+<h2 id="t447.&#x524D;&#x53F0;&#x5C55;&#x793A;">7.&#x524D;&#x53F0;&#x5C55;&#x793A; <a href="#t447.&#x524D;&#x53F0;&#x5C55;&#x793A;"> # </a></h2>
+<h3 id="t457.1 &#x542F;&#x52A8;&#x63A5;&#x53E3;">7.1 &#x542F;&#x52A8;&#x63A5;&#x53E3; <a href="#t457.1 &#x542F;&#x52A8;&#x63A5;&#x53E3;"> # </a></h3>
+<pre><code class="lang-js">node dist/app.js
+</code></pre>
+<pre><code class="lang-js">&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4E5F;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/behavior/menu
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4E5F;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/behavior/online
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4E5F;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/os
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4E5F;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/browser/list
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4E5F;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/browser
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4E5F;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/browser/
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4E5F;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/runtimeVersion
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4E5F;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/error/viser/area/
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4E5F;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/error/log/list
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4E5F;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/error/distribution/url
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4E5F;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/error/distribution/
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4E5F;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/error/distribution/
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4E5F;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/error/distribution/
+&#x4E0D;&#x9700;&#x8981;&#x767B;&#x5F55;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/log/content/test
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4E5F;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: post) =&gt;/api/alarm/config/add
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4E5F;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/alarm/config/query
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4E5F;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/alarm/config/list
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4E5F;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/alarm/config/delete
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4E5F;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: post) =&gt;/api/alarm/config/update
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4E5F;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/alarm/config/error_name_list
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4E5F;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/alarm/config/error_type_list
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4E5F;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/alarm/log
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4E5F;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/alarm/log/line
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4F46;&#x4E0D;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/user/detail
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4F46;&#x4E0D;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/user/search
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4F46;&#x4E0D;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: post) =&gt;/api/user/update
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4F46;&#x4E0D;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/user/delete
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4F46;&#x4E0D;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/user/search_uc
+&#x4E0D;&#x9700;&#x8981;&#x767B;&#x5F55;(Method: post) =&gt;/api/user/register
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4F46;&#x4E0D;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: post) =&gt;/api/user/modify/password
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4F46;&#x4E0D;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: post) =&gt;/api/user/modify/msg
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4F46;&#x4E0D;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/user/destroy
+&#x4E0D;&#x9700;&#x8981;&#x767B;&#x5F55;(Method: post) =&gt;/api/login/site
+&#x4E0D;&#x9700;&#x8981;&#x767B;&#x5F55;(Method: post) =&gt;/api/login/uc
+&#x4E0D;&#x9700;&#x8981;&#x767B;&#x5F55;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/logout
+&#x4E0D;&#x9700;&#x8981;&#x767B;&#x5F55;(Method: post) =&gt;/api/login/normal
+&#x4E0D;&#x9700;&#x8981;&#x767B;&#x5F55;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/login/type
+&#x4E0D;&#x9700;&#x8981;&#x767B;&#x5F55;(Method: post) =&gt;/api/login
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4F46;&#x4E0D;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/project/item/detail
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4F46;&#x4E0D;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: post) =&gt;/api/project/item/add
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4F46;&#x4E0D;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/project/item/list
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4F46;&#x4E0D;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/project/item/delete
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4F46;&#x4E0D;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: post) =&gt;/api/project/item/update
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4E5F;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: post) =&gt;/api/project/member/add
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4E5F;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/project/member/list
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4E5F;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/project/member/delete
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4E5F;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: post) =&gt;/api/project/member/update
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4E5F;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/project/summary/new_user/distribution_line
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4E5F;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/project/summary/new_user/distribution_map
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4E5F;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/performance/url_list
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4E5F;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/performance/url/overview
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4E5F;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/performance/project/overview
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4E5F;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/performance/url/line_chart
+&#x9700;&#x8981;&#x767B;&#x5F55;,&#x4E5F;&#x9700;&#x8981;&#x68C0;&#x9A8C;&#x9879;&#x76EE;&#x6743;&#x9650;(Method: <span class="hljs-keyword">get</span>) =&gt;/api/uv/count
+</code></pre>
+<h3 id="t467.2 &#x542F;&#x52A8;&#x524D;&#x53F0;">7.2 &#x542F;&#x52A8;&#x524D;&#x53F0; <a href="#t467.2 &#x542F;&#x52A8;&#x524D;&#x53F0;"> # </a></h3>
+<pre><code class="lang-js">cd client
+cnpm i 
+npm run start
+</code></pre>
+<h3 id="t477.3 &#x524D;&#x7AEF;&#x5E94;&#x7528;">7.3 &#x524D;&#x7AEF;&#x5E94;&#x7528; <a href="#t477.3 &#x524D;&#x7AEF;&#x5E94;&#x7528;"> # </a></h3>
+<p>client\src\router\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> token = getToken();
+<span class="hljs-keyword">if</span> (!token &amp;&amp; to.name !== LOGIN_PAGE_NAME) {
+    <span class="hljs-comment">// &#x672A;&#x767B;&#x5F55;&#x4E14;&#x8981;&#x8DF3;&#x8F6C;&#x7684;&#x9875;&#x9762;&#x4E0D;&#x662F;&#x767B;&#x5F55;&#x9875;</span>
+    next({
+      <span class="hljs-attr">name</span>: LOGIN_PAGE_NAME <span class="hljs-comment">// &#x8DF3;&#x8F6C;&#x5230;&#x767B;&#x5F55;&#x9875;</span>
+    })
+}
+</code></pre>
+<p>server\src\routes\api\user\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> register = RouterConfigBuilder.routerConfigBuilder(<span class="hljs-string">&apos;/api/user/register&apos;</span>, RouterConfigBuilder.METHOD_TYPE_POST, <span class="hljs-keyword">async</span> (req, res) =&gt; {
+  <span class="hljs-keyword">const</span> body = _.get(req, [<span class="hljs-string">&apos;body&apos;</span>], {})
+}
+</code></pre>
+<p>server\src\model\project\user.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">register</span> (<span class="hljs-params">account, userInfo</span>) </span>{
+  <span class="hljs-keyword">const</span> tableName = getTableName();  <span class="hljs-comment">// t_o_user</span>
+}
+</code></pre>
+<h3 id="t487.4 &#x9875;&#x9762;&#x6027;&#x80FD;">7.4 &#x9875;&#x9762;&#x6027;&#x80FD; <a href="#t487.4 &#x9875;&#x9762;&#x6027;&#x80FD;"> # </a></h3>
+<p><a href="http://localhost:8080/project/1/monitor/performance">http://localhost:8080/project/1/monitor/performance</a></p>
+<h4 id="t497.4.1 urlList">7.4.1 urlList <a href="#t497.4.1 urlList"> # </a></h4>
+<ul>
+<li>&#x7528;&#x6765;&#x63D0;&#x4F9B;&#x67D0;&#x65F6;&#x95F4;&#x8303;&#x56F4;&#x5185;&#x7684;URL&#x6027;&#x80FD;&#x5217;&#x8868;&#xFF0C;&#x56E0;&#x4E3A;&#x5728;&#x67E5;&#x770B;&#x6027;&#x80FD;&#x6307;&#x6807;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x6309;&#x9875;&#x9762;&#x7684;URL&#x6765;&#x8FDB;&#x884C;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x9875;&#x9762;&#x7684;&#x521D;&#x59CB;&#x9636;&#x6BB5;&#x4F1A;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#x51FD;&#x6570;&#x6765;&#x83B7;&#x53D6; &#x8FD9;&#x4E9B;&#x6027;&#x80FD;&#x6307;&#x6807;&#x5BF9;&#x5E94;&#x7684;URL&#x5217;&#x8868; </li>
+</ul>
+<p>client\src\view\performance\index.vue</p>
+<pre><code class="lang-js">    <span class="hljs-keyword">async</span> getUrlList (params = {}) {
+      <span class="hljs-keyword">const</span> {
+        st,
+        et,
+        summaryBy
+      } = params
+      <span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> fetchUrlList({
+        <span class="hljs-attr">st</span>: st || +<span class="hljs-keyword">this</span>.dateRange[<span class="hljs-number">0</span>],
+        <span class="hljs-attr">et</span>: et || +<span class="hljs-keyword">this</span>.dateRange[<span class="hljs-number">1</span>],
+        <span class="hljs-attr">summaryBy</span>: summaryBy || <span class="hljs-string">&apos;minute&apos;</span>
+      })
+      <span class="hljs-keyword">this</span>.urlData = <span class="hljs-function">(<span class="hljs-params">res.data || []</span>).<span class="hljs-params">map</span>(<span class="hljs-params">(item, index</span>) =&gt;</span> ({
+        <span class="hljs-attr">name</span>: item
+      }))
+      <span class="hljs-keyword">this</span>.url = _.get(<span class="hljs-keyword">this</span>, [<span class="hljs-string">&apos;urlData&apos;</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&apos;name&apos;</span>], <span class="hljs-string">&apos;&apos;</span>)
+      <span class="hljs-keyword">this</span>.getTimeDetail()
+      <span class="hljs-keyword">this</span>.getTimeLine()
+      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.urlColumns) {
+        <span class="hljs-keyword">this</span>.urlLoading = <span class="hljs-literal">false</span>
+      }
+    },
+</code></pre>
+<p>client\src\api\performance\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> fetchUrlList = <span class="hljs-function">(<span class="hljs-params">params</span>) =&gt;</span> {
+  <span class="hljs-keyword">return</span> axios.request({
+    <span class="hljs-attr">url</span>: <span class="hljs-string">`project/<span class="hljs-subst">${getProjectId()}</span>/api/performance/url_list`</span>,
+    <span class="hljs-attr">method</span>: <span class="hljs-string">&apos;get&apos;</span>,
+    <span class="hljs-attr">params</span>: {
+      ...params
+    }
+  })
+}
+</code></pre>
+<pre><code class="lang-js">Request URL: http:<span class="hljs-comment">//localhost:3000/project/1/api/performance/url_list?st=1591977600000&amp;et=1592051809707&amp;summaryBy=minute</span>
+</code></pre>
+<p>server\src\routes\api\performance\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> urlList = RouterConfigBuilder.routerConfigBuilder(<span class="hljs-string">&apos;/api/performance/url_list&apos;</span>, RouterConfigBuilder.METHOD_TYPE_GET, <span class="hljs-keyword">async</span> (req, res) =&gt; {
+  <span class="hljs-keyword">let</span> projectId = _.get(req, [<span class="hljs-string">&apos;fee&apos;</span>, <span class="hljs-string">&apos;project&apos;</span>, <span class="hljs-string">&apos;projectId&apos;</span>], <span class="hljs-number">0</span>);
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;projectId &apos;</span>,projectId);
+  <span class="hljs-keyword">let</span> request = _.get(req, [<span class="hljs-string">&apos;query&apos;</span>], {})
+  <span class="hljs-comment">// &#x83B7;&#x53D6;&#x5F00;&#x59CB;&amp;&#x7ED3;&#x675F;&#x65F6;&#x95F4;</span>
+  <span class="hljs-keyword">let</span> startAt = _.get(request, [<span class="hljs-string">&apos;st&apos;</span>], <span class="hljs-number">0</span>)
+  <span class="hljs-keyword">let</span> endAt = _.get(request, [<span class="hljs-string">&apos;et&apos;</span>], <span class="hljs-number">0</span>)
+  <span class="hljs-keyword">const</span> summaryBy = _.get(request, <span class="hljs-string">&apos;summaryBy&apos;</span>, <span class="hljs-string">&apos;&apos;</span>)
+  <span class="hljs-keyword">if</span> (_.includes([DATE_FORMAT.UNIT.DAY, DATE_FORMAT.UNIT.HOUR, DATE_FORMAT.UNIT.MINUTE], summaryBy) === <span class="hljs-literal">false</span>) {
+    res.send(API_RES.showError(<span class="hljs-string">`summaryBy&#x53C2;&#x6570;&#x4E0D;&#x6B63;&#x786E;`</span>))
+    <span class="hljs-keyword">return</span>
+  }
+
+  <span class="hljs-keyword">const</span> currentStamp = moment().unix()
+
+  <span class="hljs-keyword">if</span> (startAt) {
+    startAt = _.floor(startAt / <span class="hljs-number">1000</span>)
+  } <span class="hljs-keyword">else</span> {
+    startAt = currentStamp
+  }
+  <span class="hljs-keyword">if</span> (endAt) {
+    endAt = _.ceil(endAt / <span class="hljs-number">1000</span>)
+  } <span class="hljs-keyword">else</span> {
+    endAt = currentStamp
+  }
+  <span class="hljs-keyword">let</span> urlList = <span class="hljs-keyword">await</span> MPerformance.getDistinctUrlListInRange(projectId, MPerformance.INDICATOR_TYPE_LIST, startAt, endAt, summaryBy)
+  res.send(API_RES.showResult(urlList))
+}
+)
+</code></pre>
+<p>server\src\model\parse\performance.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getDistinctUrlListInRange</span> (<span class="hljs-params">projectId, indicatorList, startAt, endAt, countType = DATE_FORMAT.UNIT.MINUTE</span>) </span>{
+   <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> tableName <span class="hljs-keyword">of</span> tableNameList) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;tableName,countType,indicatorList,countAtTimeList&apos;</span>,tableName,countType,indicatorList,countAtTimeList);
+    <span class="hljs-keyword">let</span> rawRecordList = <span class="hljs-keyword">await</span> Knex
+      .distinct([<span class="hljs-string">&apos;url&apos;</span>])
+      .from(tableName)
+      .where({
+        <span class="hljs-attr">count_type</span>: countType
+      })
+      .whereIn(<span class="hljs-string">&apos;indicator&apos;</span>, indicatorList)
+      .whereIn(<span class="hljs-string">&apos;count_at_time&apos;</span>, countAtTimeList)
+      .catch(<span class="hljs-function">(<span class="hljs-params">e</span>) =&gt;</span> {
+        Logger.warn(<span class="hljs-string">&apos;&#x67E5;&#x8BE2;&#x5931;&#x8D25;, &#x9519;&#x8BEF;&#x539F;&#x56E0; =&gt;&apos;</span>, e)
+        <span class="hljs-keyword">return</span> []
+      })
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> rawRecord <span class="hljs-keyword">of</span> rawRecordList) {
+      <span class="hljs-keyword">if</span> (_.has(rawRecord, [<span class="hljs-string">&apos;url&apos;</span>])) {
+        <span class="hljs-keyword">let</span> url = _.get(rawRecord, [<span class="hljs-string">&apos;url&apos;</span>])
+        urlList.push(url)
+      }
+    }
+  }
+}
+<span class="hljs-comment">// performance distinctUrlList[&quot;localhost:9000/&quot;]</span>
+</code></pre>
+<h4 id="t507.4.2 lineChartData">7.4.2 lineChartData <a href="#t507.4.2 lineChartData"> # </a></h4>
+<ul>
+<li>&#x5728;&#x83B7;&#x53D6; URL&#x4E4B;&#x540E;&#xFF0C;&#x6839;&#x636E;&#x5BF9;&#x5E94;&#x7684;&#x65F6;&#x95F4;&#x53C2;&#x6570;&#x63D0;&#x4F9B;&#x53C2;&#x6570;&#x65F6;&#x95F4;&#x8303;&#x56F4;&#x5185;&#x7684;&#x63D0;&#x5B9A;URL&#x4E0B;&#x9762;&#x7684;&#x6240;&#x6709;&#x6307;&#x6807;&#x6298;&#x7EBF;&#x56FE;</li>
+</ul>
+<p>client\src\view\performance\index.vue</p>
+<pre><code class="lang-js"><span class="hljs-keyword">async</span> getTimeDetail (params = {}) {
+      <span class="hljs-keyword">const</span> {
+        st,
+        et,
+        url,
+        summaryBy
+      } = params
+      <span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> fetchTimeDetail({
+        <span class="hljs-attr">st</span>: st || +<span class="hljs-keyword">this</span>.dateRange[<span class="hljs-number">0</span>],
+        <span class="hljs-attr">et</span>: et || +<span class="hljs-keyword">this</span>.dateRange[<span class="hljs-number">1</span>],
+        <span class="hljs-attr">url</span>: url || <span class="hljs-keyword">this</span>.url,
+        <span class="hljs-attr">summaryBy</span>: summaryBy || <span class="hljs-string">&apos;hour&apos;</span>
+      })
+      <span class="hljs-keyword">const</span> dv = <span class="hljs-keyword">new</span> DataSet.View().source(res.data)
+      dv.transform({
+        <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;rename&apos;</span>,
+        <span class="hljs-attr">map</span>: {
+          <span class="hljs-attr">dns_lookup_ms</span>: <span class="hljs-string">&apos;DNS&#x67E5;&#x8BE2;&#x8017;&#x65F6;&apos;</span>,
+          <span class="hljs-attr">response_request_ms</span>: <span class="hljs-string">&apos;&#x8BF7;&#x6C42;&#x54CD;&#x5E94;&#x8017;&#x65F6;&apos;</span>,
+          <span class="hljs-attr">dom_parse_ms</span>: <span class="hljs-string">&apos;DOM&#x89E3;&#x6790;&#x8017;&#x65F6;&apos;</span>,
+          <span class="hljs-attr">response_transfer_ms</span>: <span class="hljs-string">&apos;&#x5185;&#x5BB9;&#x4F20;&#x8F93;&#x8017;&#x65F6;&apos;</span>,
+          <span class="hljs-attr">load_resource_ms</span>: <span class="hljs-string">&apos;&#x8D44;&#x6E90;&#x52A0;&#x8F7D;&#x8017;&#x65F6;&apos;</span>,
+          <span class="hljs-attr">dom_ready_ms</span>: <span class="hljs-string">&apos;DOM_READY_&#x8017;&#x65F6;&apos;</span>,
+          <span class="hljs-attr">first_render_ms</span>: <span class="hljs-string">&apos;&#x9996;&#x6B21;&#x6E32;&#x67D3;&#x8017;&apos;</span>,
+          <span class="hljs-attr">first_response_ms</span>: <span class="hljs-string">&apos;&#x9996;&#x6B21;&#x53EF;&#x4EA4;&#x4E92;&#x8017;&#x65F6;&apos;</span>,
+          <span class="hljs-attr">first_tcp_ms</span>: <span class="hljs-string">&apos;&#x9996;&#x5305;&#x65F6;&#x95F4;&#x8017;&#x65F6;&apos;</span>,
+          <span class="hljs-attr">load_complete_ms</span>: <span class="hljs-string">&apos;&#x9875;&#x9762;&#x5B8C;&#x5168;&#x52A0;&#x8F7D;&#x8017;&#x65F6;&apos;</span>,
+          <span class="hljs-attr">ssl_connect_ms</span>: <span class="hljs-string">&apos;SSL&#x8FDE;&#x63A5;&#x8017;&#x65F6;&apos;</span>,
+          <span class="hljs-attr">tcp_connect_ms</span>: <span class="hljs-string">&apos;TCP&#x94FE;&#x63A5;&#x8017;&#x65F6;&apos;</span>
+        }
+      })
+      dv.transform({
+        <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;fold&apos;</span>,
+        <span class="hljs-attr">fields</span>: [
+          <span class="hljs-string">&apos;DNS&#x67E5;&#x8BE2;&#x8017;&#x65F6;&apos;</span>,
+          <span class="hljs-string">&apos;&#x8BF7;&#x6C42;&#x54CD;&#x5E94;&#x8017;&#x65F6;&apos;</span>,
+          <span class="hljs-string">&apos;DOM&#x89E3;&#x6790;&#x8017;&#x65F6;&apos;</span>,
+          <span class="hljs-string">&apos;&#x5185;&#x5BB9;&#x4F20;&#x8F93;&#x8017;&#x65F6;&apos;</span>,
+          <span class="hljs-string">&apos;&#x8D44;&#x6E90;&#x52A0;&#x8F7D;&#x8017;&#x65F6;&apos;</span>,
+          <span class="hljs-string">&apos;DOM_READY_&#x8017;&#x65F6;&apos;</span>,
+          <span class="hljs-string">&apos;&#x9996;&#x6B21;&#x6E32;&#x67D3;&#x8017;&apos;</span>,
+          <span class="hljs-string">&apos;&#x9996;&#x6B21;&#x53EF;&#x4EA4;&#x4E92;&#x8017;&#x65F6;&apos;</span>,
+          <span class="hljs-string">&apos;&#x9996;&#x5305;&#x65F6;&#x95F4;&#x8017;&#x65F6;&apos;</span>,
+          <span class="hljs-string">&apos;&#x9875;&#x9762;&#x5B8C;&#x5168;&#x52A0;&#x8F7D;&#x8017;&#x65F6;&apos;</span>,
+          <span class="hljs-string">&apos;SSL&#x8FDE;&#x63A5;&#x8017;&#x65F6;&apos;</span>,
+          <span class="hljs-string">&apos;TCP&#x94FE;&#x63A5;&#x8017;&#x65F6;&apos;</span>
+        ],
+        <span class="hljs-attr">key</span>: <span class="hljs-string">&apos;type&apos;</span>,
+        <span class="hljs-attr">value</span>: <span class="hljs-string">&apos;ms&apos;</span>
+      })
+      <span class="hljs-keyword">const</span> data = dv.rows
+      <span class="hljs-keyword">this</span>.lineData = data
+      <span class="hljs-keyword">const</span> scale = [{
+        <span class="hljs-attr">dataKey</span>: <span class="hljs-string">&apos;ms&apos;</span>,
+        <span class="hljs-attr">sync</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">alias</span>: <span class="hljs-string">&apos;ms&apos;</span>,
+        <span class="hljs-attr">formatter</span>: <span class="hljs-function">(<span class="hljs-params">value</span>) =&gt;</span> value + <span class="hljs-string">&apos; ms&apos;</span>
+      }, {
+        <span class="hljs-attr">dataKey</span>: <span class="hljs-string">&apos;index_timestamp_ms&apos;</span>,
+        <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;time&apos;</span>,
+        <span class="hljs-attr">tickCount</span>: <span class="hljs-number">10</span>,
+        <span class="hljs-attr">mask</span>: <span class="hljs-string">&apos;MM-DD HH:mm&apos;</span>
+      }]
+      <span class="hljs-keyword">this</span>.lineScale = scale
+      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.lineData &amp;&amp; <span class="hljs-keyword">this</span>.lineScale) {
+        <span class="hljs-keyword">this</span>.isSpinShowDetail = <span class="hljs-literal">false</span>
+      }
+    },
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> fetchTimeDetail = <span class="hljs-function">(<span class="hljs-params">params</span>) =&gt;</span> {
+  <span class="hljs-keyword">return</span> axios.request({
+    <span class="hljs-attr">url</span>: <span class="hljs-string">`project/<span class="hljs-subst">${getProjectId()}</span>/api/performance/url/line_chart`</span>,
+    <span class="hljs-attr">method</span>: <span class="hljs-string">&apos;get&apos;</span>,
+    <span class="hljs-attr">params</span>: {
+      ...params
+    }
+  })
+}
+</code></pre>
+<pre><code class="lang-js">http:<span class="hljs-comment">//localhost:3000/project/1/api/performance/url/line_chart?st=1591977600000&amp;et=1592053122452&amp;url=localhost:9000%2F&amp;summaryBy=hour</span>
+</code></pre>
+<p>server\src\routes\api\performance\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> lineChartData = RouterConfigBuilder.routerConfigBuilder(<span class="hljs-string">&apos;/api/performance/url/line_chart&apos;</span>, RouterConfigBuilder.METHOD_TYPE_GET, <span class="hljs-keyword">async</span> (req, res) =&gt; {
+  <span class="hljs-keyword">let</span> projectId = _.get(req, [<span class="hljs-string">&apos;fee&apos;</span>, <span class="hljs-string">&apos;project&apos;</span>, <span class="hljs-string">&apos;projectId&apos;</span>], <span class="hljs-number">0</span>)
+  <span class="hljs-keyword">let</span> request = _.get(req, [<span class="hljs-string">&apos;query&apos;</span>], {})
+  res.send(API_RES.showResult(resultList))
+}
+)
+</code></pre>
+<p>server\src\model\parse\performance.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getDistinctUrlListInRange</span> (<span class="hljs-params">projectId, indicatorList, startAt, endAt, countType = DATE_FORMAT.UNIT.MINUTE</span>) </span>{
+
+</code></pre>
+<h4 id="t517.4.3 urlOverview">7.4.3 urlOverview <a href="#t517.4.3 urlOverview"> # </a></h4>
+<ul>
+<li>&#x5728;&#x83B7;&#x53D6; URL&#x4E4B;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x6B64;&#x63A5;&#x53E3;&#x63D0;&#x4F9B;&#x7684;&#x65F6;&#x95F4;&#x8303;&#x56F4;&#x6307;&#x5B9A;&#x7684;URL&#x7684;&#x5404;&#x9879;&#x6307;&#x6807;&#x5E73;&#x5747;&#x503C;  </li>
+</ul>
+<p>client\src\view\performance\index.vue</p>
+<pre><code class="lang-js"><span class="hljs-keyword">async</span> getTimeLine (params = {}) {
+      <span class="hljs-keyword">const</span> {st,et} = params
+      <span class="hljs-keyword">const</span> res = <span class="hljs-keyword">await</span> fetchTimeLine({
+        <span class="hljs-attr">st</span>: st || +<span class="hljs-keyword">this</span>.dateRange[<span class="hljs-number">0</span>],
+        <span class="hljs-attr">et</span>: et || +<span class="hljs-keyword">this</span>.dateRange[<span class="hljs-number">1</span>],
+        <span class="hljs-attr">url</span>: <span class="hljs-keyword">this</span>.url,
+        <span class="hljs-attr">summaryBy</span>: <span class="hljs-string">&apos;minute&apos;</span>
+      })
+</code></pre>
+<p>client\src\api\performance\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> fetchTimeLine = <span class="hljs-function">(<span class="hljs-params">params</span>) =&gt;</span> {
+  <span class="hljs-keyword">return</span> axios.request({
+    <span class="hljs-attr">url</span>: <span class="hljs-string">`project/<span class="hljs-subst">${getProjectId()}</span>/api/performance/url/overview`</span>,
+    <span class="hljs-attr">method</span>: <span class="hljs-string">&apos;get&apos;</span>,
+    <span class="hljs-attr">params</span>: {
+      ...params
+    }
+  })
+}
+</code></pre>
+<pre><code class="lang-js">http:<span class="hljs-comment">//localhost:3000/project/1/api/performance/url/overview?st=1591977600000&amp;et=1592054332424&amp;url=localhost:9000%2F&amp;summaryBy=minute</span>
+</code></pre>
+<p>server\src\routes\api\performance\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> urlOverview = RouterConfigBuilder.routerConfigBuilder(<span class="hljs-string">&apos;/api/performance/url/overview&apos;</span>, RouterConfigBuilder.METHOD_TYPE_GET, <span class="hljs-keyword">async</span> (req, res) =&gt; {
+  <span class="hljs-keyword">let</span> projectId = _.get(req, [<span class="hljs-string">&apos;fee&apos;</span>, <span class="hljs-string">&apos;project&apos;</span>, <span class="hljs-string">&apos;projectId&apos;</span>], <span class="hljs-number">0</span>)
+  <span class="hljs-keyword">let</span> request = _.get(req, [<span class="hljs-string">&apos;query&apos;</span>], {});
+}
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getUrlOverviewInSameMonth</span> (<span class="hljs-params">projectId, urlList, startAt, endAt, countType</span>) </span>{
+}
+</code></pre>
+<ul>
+<li><a href="https://gitee.com/zhufengpeixun/front-monitor">front-monitor</a></li>
+<li><code>node dist/fee.js Utils:TemplateSQL</code></li>
+</ul>
+
+        <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
+    </div>
+    
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,2463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+                        
+<div class="warpper">
+    <div class="page-toc">
+        <ul><li><a href="#t0内容大纲">内容大纲</a></li><li><a href="#t11. React路由原理">1. React路由原理</a><ul><li><a href="#t21.1 HashRouter">1.1 HashRouter</a></li><li><a href="#t31.2 BrowserRouter">1.2 BrowserRouter</a><ul><li><a href="#t41.2.1 history">1.2.1 history</a><ul><li><a href="#t51.2.1.1 pushState">1.2.1.1 pushState</a></li><li><a href="#t61.2.1.2 replaceState">1.2.1.2 replaceState</a></li><li><a href="#t71.2.1.3 onpopstate">1.2.1.3 onpopstate</a></li><li><a href="#t81.2.1.4 案例">1.2.1.4 案例</a></li></ul></li></ul></li></ul></li><li><a href="#t92.使用基本路由">2.使用基本路由</a><ul><li><a href="#t102.1 安装">2.1 安装</a></li><li><a href="#t112.2 src\index.js">2.2 src\index.js</a></li><li><a href="#t122.3 Home.js">2.3 Home.js</a></li><li><a href="#t132.4 User.js">2.4 User.js</a></li><li><a href="#t142.5 Profile.js">2.5 Profile.js</a></li></ul></li><li><a href="#t153.实现基本路由">3.实现基本路由</a><ul><li><a href="#t163.1 react-router-dom\index.js">3.1 react-router-dom\index.js</a></li><li><a href="#t173.2 src\react-router\index.js">3.2 src\react-router\index.js</a></li></ul></li><li><a href="#t184.实现history">4.实现history</a><ul><li><a href="#t194.1 createBrowserHistory.js">4.1 createBrowserHistory.js</a></li><li><a href="#t204.2 createHashHistory.js">4.2 createHashHistory.js</a></li><li><a href="#t214.3 history\index.js">4.3 history\index.js</a></li><li><a href="#t224.4 react-router-dom\index.js">4.4 react-router-dom\index.js</a></li></ul></li><li><a href="#t235. path-to-regexp">5. path-to-regexp</a><ul><li><a href="#t245.1 /home结束">5.1 /home结束</a></li><li><a href="#t255.2 /home非结束">5.2 /home非结束</a></li><li><a href="#t265.3 路径参数">5.3 路径参数</a></li><li><a href="#t275.4 正则匹配">5.4 正则匹配</a></li></ul></li><li><a href="#t286. 路径参数">6. 路径参数</a><ul><li><a href="#t296.1 src\index.js">6.1 src\index.js</a></li><li><a href="#t306.2 src\react-router\index.js">6.2 src\react-router\index.js</a></li><li><a href="#t316.3 Post.js">6.3 Post.js</a></li></ul></li><li><a href="#t327. Link导航">7. Link导航</a><ul><li><a href="#t337.1 src\index.js">7.1 src\index.js</a></li><li><a href="#t347.2 react-router-dom\index.js">7.2 react-router-dom\index.js</a></li><li><a href="#t357.3 react-router\index.js">7.3 react-router\index.js</a></li></ul></li><li><a href="#t368. 支持嵌套路由和Outlet">8. 支持嵌套路由和Outlet</a><ul><li><a href="#t378.1 src\index.js">8.1 src\index.js</a></li><li><a href="#t388.2 User.js">8.2 User.js</a></li><li><a href="#t398.3 src\utils.js">8.3 src\utils.js</a></li><li><a href="#t408.4 UserAdd.js">8.4 UserAdd.js</a></li><li><a href="#t418.5 UserDetail.js">8.5 UserDetail.js</a></li><li><a href="#t428.6 UserList.js">8.6 UserList.js</a></li><li><a href="#t438.7 react-router\index.js">8.7 react-router\index.js</a></li></ul></li><li><a href="#t449. 实现NavLink">9. 实现NavLink</a><ul><li><a href="#t459.1 public\index.html">9.1 public\index.html</a></li><li><a href="#t469.2 src\index.js">9.2 src\index.js</a></li><li><a href="#t479.3 src\react-router-dom\index.js">9.3 src\react-router-dom\index.js</a></li></ul></li><li><a href="#t4810. 跳转和重定向">10. 跳转和重定向</a><ul><li><a href="#t4910.1 src\index.js">10.1 src\index.js</a></li><li><a href="#t5010.2 Home.js">10.2 Home.js</a></li><li><a href="#t5110.3 react-router\index.js">10.3 react-router\index.js</a></li></ul></li><li><a href="#t5211. 受保护路由">11. 受保护路由</a><ul><li><a href="#t5311.1 src\index.js">11.1 src\index.js</a></li><li><a href="#t5411.2 Login.js">11.2 Login.js</a></li><li><a href="#t5511.3 Protected.js">11.3 Protected.js</a></li></ul></li><li><a href="#t5612. 配置式路由和懒加载">12. 配置式路由和懒加载</a><ul><li><a href="#t5712.1 src\index.js">12.1 src\index.js</a></li><li><a href="#t5812.2 src\routesConfig.js">12.2 src\routesConfig.js</a></li><li><a href="#t5912.3 NotFound.js">12.3 NotFound.js</a></li></ul></li></ul>
+    </div>
+    <div class="content markdown-body">
+        <h2 id="t0&#x5185;&#x5BB9;&#x5927;&#x7EB2;">&#x5185;&#x5BB9;&#x5927;&#x7EB2; <a href="#t0&#x5185;&#x5BB9;&#x5927;&#x7EB2;"> # </a></h2>
+<ul>
+<li>&#x8DEF;&#x7531;&#x57FA;&#x672C;&#x539F;&#x7406;</li>
+<li>&#x8DEF;&#x7531;&#x5B9E;&#x6218;</li>
+<li>&#x5B9E;&#x73B0;history</li>
+<li>path-to-regexp</li>
+<li>&#x8DEF;&#x5F84;&#x53C2;&#x6570;</li>
+<li>Link&#x5BFC;&#x822A;</li>
+<li>&#x652F;&#x6301;&#x5D4C;&#x5957;&#x8DEF;&#x7531;&#x548C;Outlet</li>
+<li>&#x5B9E;&#x73B0;NavLink</li>
+<li>&#x8DF3;&#x8F6C;&#x548C;&#x91CD;&#x5B9A;&#x5411;</li>
+<li>&#x53D7;&#x4FDD;&#x62A4;&#x8DEF;&#x7531;</li>
+<li>&#x914D;&#x7F6E;&#x5F0F;&#x8DEF;&#x7531;&#x548C;&#x61D2;&#x52A0;&#x8F7D;</li>
+</ul>
+<h2 id="t11. React&#x8DEF;&#x7531;&#x539F;&#x7406;">1. React&#x8DEF;&#x7531;&#x539F;&#x7406; <a href="#t11. React&#x8DEF;&#x7531;&#x539F;&#x7406;"> # </a></h2>
+<ul>
+<li>&#x4E0D;&#x540C;&#x7684;&#x8DEF;&#x5F84;&#x6E32;&#x67D3;&#x4E0D;&#x540C;&#x7684;&#x7EC4;&#x4EF6;</li>
+<li>&#x6709;&#x4E24;&#x79CD;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;<ul>
+<li>HashRouter:&#x5229;&#x7528;hash&#x5B9E;&#x73B0;&#x8DEF;&#x7531;&#x5207;&#x6362;</li>
+<li>BrowserRouter:&#x5B9E;&#x73B0;h5 Api&#x5B9E;&#x73B0;&#x8DEF;&#x7531;&#x7684;&#x5207;&#x6362;</li>
+</ul>
+</li>
+</ul>
+<h3 id="t21.1 HashRouter">1.1 HashRouter <a href="#t21.1 HashRouter"> # </a></h3>
+<ul>
+<li>&#x5229;&#x7528;hash&#x5B9E;&#x73B0;&#x8DEF;&#x7531;&#x5207;&#x6362;</li>
+</ul>
+<p>public\index.html</p>
+<pre><code class="lang-js">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+        #root{
+            border:1px solid red;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#/a&quot;&gt;/a&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#/b&quot;&gt;/b&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;script&gt;
+        window.addEventListener(&apos;hashchange&apos;,()=&gt;{
+            console.log(window.location.hash);
+            let pathname = window.location.hash.slice(1);//&#x628A;&#x6700;&#x524D;&#x9762;&#x7684;&#x90A3;&#x4E2A;#&#x5220;&#x9664; 
+            root.innerHTML = pathname;
+        });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="t31.2 BrowserRouter">1.2 BrowserRouter <a href="#t31.2 BrowserRouter"> # </a></h3>
+<ul>
+<li>&#x5229;&#x7528;h5 Api&#x5B9E;&#x73B0;&#x8DEF;&#x7531;&#x7684;&#x5207;&#x6362;</li>
+</ul>
+<h4 id="t41.2.1 history">1.2.1 history <a href="#t41.2.1 history"> # </a></h4>
+<ul>
+<li>HTML5&#x89C4;&#x8303;&#x7ED9;&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/history">history</a>&#x63A5;&#x53E3;</li>
+<li>HTML5 History API&#x5305;&#x62EC;2&#x4E2A;&#x65B9;&#x6CD5;&#xFF1A;<code>history.pushState()</code>&#x548C;<code>history.replaceState()</code>&#xFF0C;&#x548C;1&#x4E2A;&#x4E8B;&#x4EF6;<code>window.onpopstate</code></li>
+</ul>
+<h5 id="t51.2.1.1 pushState">1.2.1.1 pushState <a href="#t51.2.1.1 pushState"> # </a></h5>
+<ul>
+<li>history.pushState(stateObject, title, url)&#xFF0C;&#x5305;&#x62EC;&#x4E09;&#x4E2A;&#x53C2;&#x6570;<ul>
+<li>&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x8BE5;url&#x5BF9;&#x5E94;&#x7684;&#x72B6;&#x6001;&#x5BF9;&#x8C61;&#xFF0C;&#x8BE5;&#x5BF9;&#x8C61;&#x53EF;&#x5728;onpopstate&#x4E8B;&#x4EF6;&#x4E2D;&#x83B7;&#x53D6;&#xFF0C;&#x4E5F;&#x53EF;&#x5728;history&#x5BF9;&#x8C61;&#x4E2D;&#x83B7;&#x53D6;</li>
+<li>&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x6807;&#x9898;&#xFF0C;&#x76EE;&#x524D;&#x6D4F;&#x89C8;&#x5668;&#x5E76;&#x672A;&#x5B9E;&#x73B0;</li>
+<li>&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x5219;&#x662F;&#x8BBE;&#x5B9A;&#x7684;url</li>
+</ul>
+</li>
+<li>pushState&#x51FD;&#x6570;&#x5411;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x5386;&#x53F2;&#x5806;&#x6808;&#x538B;&#x5165;&#x4E00;&#x4E2A;url&#x4E3A;&#x8BBE;&#x5B9A;&#x503C;&#x7684;&#x8BB0;&#x5F55;&#xFF0C;&#x5E76;&#x6539;&#x53D8;&#x5386;&#x53F2;&#x5806;&#x6808;&#x7684;&#x5F53;&#x524D;&#x6307;&#x9488;&#x81F3;&#x6808;&#x9876;  </li>
+</ul>
+<h5 id="t61.2.1.2 replaceState">1.2.1.2 replaceState <a href="#t61.2.1.2 replaceState"> # </a></h5>
+<ul>
+<li>&#x8BE5;&#x63A5;&#x53E3;&#x4E0E;pushState&#x53C2;&#x6570;&#x76F8;&#x540C;&#xFF0C;&#x542B;&#x4E49;&#x4E5F;&#x76F8;&#x540C;</li>
+<li>&#x552F;&#x4E00;&#x7684;&#x533A;&#x522B;&#x5728;&#x4E8E;<code>replaceState</code>&#x662F;&#x66FF;&#x6362;&#x6D4F;&#x89C8;&#x5668;&#x5386;&#x53F2;&#x5806;&#x6808;&#x7684;&#x5F53;&#x524D;&#x5386;&#x53F2;&#x8BB0;&#x5F55;&#x4E3A;&#x8BBE;&#x5B9A;&#x7684;url</li>
+<li>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;<code>replaceState</code>&#x4E0D;&#x4F1A;&#x6539;&#x52A8;&#x6D4F;&#x89C8;&#x5668;&#x5386;&#x53F2;&#x5806;&#x6808;&#x7684;&#x5F53;&#x524D;&#x6307;&#x9488;</li>
+</ul>
+<h5 id="t71.2.1.3 onpopstate">1.2.1.3 onpopstate <a href="#t71.2.1.3 onpopstate"> # </a></h5>
+<ul>
+<li>&#x8BE5;&#x4E8B;&#x4EF6;&#x662F;window&#x7684;&#x5C5E;&#x6027;</li>
+<li>&#x8BE5;&#x4E8B;&#x4EF6;&#x4F1A;&#x5728;&#x8C03;&#x7528;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x524D;&#x8FDB;&#x3001;&#x540E;&#x9000;&#x4EE5;&#x53CA;&#x6267;&#x884C;<code>history.forward</code>&#x3001;<code>history.back</code>&#x3001;&#x548C;<code>history.go</code>&#x89E6;&#x53D1;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x4E9B;&#x64CD;&#x4F5C;&#x6709;&#x4E00;&#x4E2A;&#x5171;&#x6027;&#xFF0C;&#x5373;&#x4FEE;&#x6539;&#x4E86;&#x5386;&#x53F2;&#x5806;&#x6808;&#x7684;&#x5F53;&#x524D;&#x6307;&#x9488;</li>
+<li>&#x5728;&#x4E0D;&#x6539;&#x53D8;document&#x7684;&#x524D;&#x63D0;&#x4E0B;&#xFF0C;&#x4E00;&#x65E6;&#x5F53;&#x524D;&#x6307;&#x9488;&#x6539;&#x53D8;&#x5219;&#x4F1A;&#x89E6;&#x53D1;<code>onpopstate</code>&#x4E8B;&#x4EF6;</li>
+</ul>
+<h5 id="t81.2.1.4 &#x6848;&#x4F8B;">1.2.1.4 &#x6848;&#x4F8B; <a href="#t81.2.1.4 &#x6848;&#x4F8B;"> # </a></h5>
+<ul>
+<li>&#x6D4F;&#x89C8;&#x5668;&#x9488;&#x5BF9;&#x6BCF;&#x4E2A;&#x9875;&#x9762;&#x7EF4;&#x62A4;&#x4E00;&#x4E2A;<code>History</code>&#x6808;,&#x6267;&#x884C;<code>pushState</code>&#x51FD;&#x6570;&#x53EF;&#x538B;&#x5165;&#x8BBE;&#x5B9A;&#x7684;<code>url</code>&#x81F3;&#x6808;&#x9876;,&#x540C;&#x65F6;&#x4FEE;&#x6539;&#x5F53;&#x524D;&#x6307;&#x9488;</li>
+<li>&#x5F53;&#x6267;&#x884C;<code>back</code>&#x548C;<code>forward</code>&#x64CD;&#x4F5C;&#x65F6;&#xFF0C;history&#x6808;&#x5927;&#x5C0F;&#x5E76;&#x4E0D;&#x4F1A;&#x6539;&#x53D8;&#xFF08;history.length&#x4E0D;&#x53D8;&#xFF09;&#xFF0C;&#x4EC5;&#x4EC5;&#x79FB;&#x52A8;&#x5F53;&#x524D;&#x6307;&#x9488;&#x7684;&#x4F4D;&#x7F6E;</li>
+<li>&#x82E5;&#x5F53;&#x524D;&#x6307;&#x9488;&#x5728;history&#x6808;&#x7684;&#x4E2D;&#x95F4;&#x4F4D;&#x7F6E;(&#x975E;&#x6808;&#x9876;)&#xFF0C;&#x6B64;&#x65F6;&#x6267;&#x884C;pushState&#x4F1A;&#x5728;&#x6307;&#x9488;&#x5F53;&#x524D;&#x7684;&#x4F4D;&#x7F6E;&#x6DFB;&#x52A0;&#x6B64;&#x6761;&#x76EE;,&#x5E76;&#x6210;&#x4E3A;&#x65B0;&#x7684;&#x6808;&#x9876;</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Document<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+        <span class="hljs-selector-id">#root</span>{
+            <span class="hljs-attribute">border</span>:<span class="hljs-number">1px</span> solid red;
+            <span class="hljs-attribute">height</span>:<span class="hljs-number">20px</span>;
+        }
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;root&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-keyword">var</span> historyObj = <span class="hljs-built_in">window</span>.history;
+        <span class="hljs-comment">//&#x76D1;&#x542C;&#x8DEF;&#x5F84;&#x6539;&#x53D8;&#x4E8B;&#x4EF6; &#x8868;&#x793A;&#x5C06;&#x5F53;&#x524D;&#x7684;&#x72B6;&#x6001;&#x53D8;&#x66F4;&#x4E86;&#xFF0C;&#x5F39;&#x51FA;&#x4E86;</span>
+        <span class="hljs-built_in">window</span>.onpushstate = <span class="hljs-function">(<span class="hljs-params">event</span>) =&gt;</span> {
+            <span class="hljs-built_in">console</span>.log(event.type,event.detail.state);
+            root.innerHTML = <span class="hljs-built_in">window</span>.location.pathname;
+        }
+        <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">&apos;popstate&apos;</span>, (event) =&gt; {
+            <span class="hljs-built_in">console</span>.log(event.type,event.state);
+            root.innerHTML = <span class="hljs-built_in">window</span>.location.pathname;
+        });
+
+        (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">historyObj</span>) </span>{
+            <span class="hljs-keyword">let</span> oldPushState = history.pushState;<span class="hljs-comment">//&#x7F13;&#x5B58;&#x539F;&#x751F;&#x7684;pushState</span>
+            historyObj.pushState = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">state, title, pathname</span>) </span>{
+                <span class="hljs-keyword">let</span> result = oldPushState.apply(history, <span class="hljs-built_in">arguments</span>);
+                <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">window</span>.onpushstate === <span class="hljs-string">&apos;function&apos;</span>) {
+                    <span class="hljs-built_in">window</span>.onpushstate(<span class="hljs-keyword">new</span> CustomEvent(<span class="hljs-string">&apos;pushstate&apos;</span>,{<span class="hljs-attr">detail</span>:{pathname,state}}));
+                }
+                <span class="hljs-keyword">return</span> result;
+            }
+        })(historyObj);
+        <span class="hljs-keyword">let</span> oldHistoryLength = historyObj.length;
+        setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+            historyObj.pushState({ <span class="hljs-attr">page</span>: <span class="hljs-number">1</span> }, { <span class="hljs-attr">title</span>: <span class="hljs-string">&apos;page1&apos;</span> }, <span class="hljs-string">&apos;/page1&apos;</span>);<span class="hljs-comment">//page1</span>
+            <span class="hljs-built_in">console</span>.log(historyObj.length-oldHistoryLength);
+        }, <span class="hljs-number">1000</span>);
+        setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+            historyObj.pushState({ <span class="hljs-attr">page</span>: <span class="hljs-number">2</span> }, { <span class="hljs-attr">title</span>: <span class="hljs-string">&apos;page2&apos;</span> }, <span class="hljs-string">&apos;/page2&apos;</span>);<span class="hljs-comment">//page2</span>
+            <span class="hljs-built_in">console</span>.log(historyObj.length-oldHistoryLength);
+        }, <span class="hljs-number">2000</span>);
+        setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+            historyObj.pushState({ <span class="hljs-attr">page</span>: <span class="hljs-number">3</span> }, { <span class="hljs-attr">title</span>: <span class="hljs-string">&apos;page3&apos;</span> }, <span class="hljs-string">&apos;/page3&apos;</span>);<span class="hljs-comment">//page3</span>
+            <span class="hljs-built_in">console</span>.log(historyObj.length-oldHistoryLength);
+        }, <span class="hljs-number">3000</span>);
+        setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+            historyObj.back();<span class="hljs-comment">//historyObj.go(-1);//page2</span>
+            setTimeout(<span class="hljs-function"><span class="hljs-params">()</span>=&gt;</span><span class="hljs-built_in">console</span>.log(historyObj.length-oldHistoryLength),<span class="hljs-number">100</span>);
+
+        }, <span class="hljs-number">4000</span>);
+        setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+            historyObj.pushState({ <span class="hljs-attr">page</span>:<span class="hljs-number">4</span> }, { <span class="hljs-attr">title</span>: <span class="hljs-string">&apos;page4&apos;</span> }, <span class="hljs-string">&apos;/page4&apos;</span>);<span class="hljs-comment">//page4</span>
+            <span class="hljs-built_in">console</span>.log(historyObj.length-oldHistoryLength);
+        }, <span class="hljs-number">5000</span>);
+        setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+            historyObj.go(<span class="hljs-number">1</span>);
+            <span class="hljs-built_in">console</span>.log(historyObj.length-oldHistoryLength);<span class="hljs-comment">//page4</span>
+        }, <span class="hljs-number">6000</span>);
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h2 id="t92.&#x4F7F;&#x7528;&#x57FA;&#x672C;&#x8DEF;&#x7531;">2.&#x4F7F;&#x7528;&#x57FA;&#x672C;&#x8DEF;&#x7531; <a href="#t92.&#x4F7F;&#x7528;&#x57FA;&#x672C;&#x8DEF;&#x7531;"> # </a></h2>
+<ul>
+<li><a href="https://create-react-app.dev">https://create-react-app.dev</a></li>
+<li><a href="https://reactrouter.com/docs/en/v6">https://reactrouter.com/docs/en/v6</a></li>
+<li><a href="https://github.com/remix-run/react-router">https://github.com/remix-run/react-router</a></li>
+</ul>
+<h3 id="t102.1 &#x5B89;&#x88C5;">2.1 &#x5B89;&#x88C5; <a href="#t102.1 &#x5B89;&#x88C5;"> # </a></h3>
+<pre><code class="lang-js">npm i react-router-dom --save
+</code></pre>
+<h3 id="t112.2 src\index.js">2.2 src\index.js <a href="#t112.2 src\index.js"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+<span class="hljs-keyword">import</span> { HashRouter, BrowserRouter, Routes, Route } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router-dom&apos;</span>;
+<span class="hljs-keyword">import</span> Home <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./components/Home&apos;</span>;
+<span class="hljs-keyword">import</span> User <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./components/User&apos;</span>;
+<span class="hljs-keyword">import</span> Profile <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./components/Profile&apos;</span>;
+ReactDOM.render(
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">HashRouter</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Routes</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&quot;/&quot;</span> <span class="hljs-attr">element</span>=<span class="hljs-string">{</span>&lt;<span class="hljs-attr">Home</span> /&gt;</span>} /&gt;
+      <span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&quot;/user&quot;</span> <span class="hljs-attr">element</span>=<span class="hljs-string">{</span>&lt;<span class="hljs-attr">User</span> /&gt;</span>} /&gt;
+      <span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&quot;/profile&quot;</span> <span class="hljs-attr">element</span>=<span class="hljs-string">{</span>&lt;<span class="hljs-attr">Profile</span> /&gt;</span>} /&gt;
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Routes</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">HashRouter</span>&gt;</span></span>
+  , <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;root&apos;</span>));
+</code></pre>
+<h3 id="t122.3 Home.js">2.3 Home.js <a href="#t122.3 Home.js"> # </a></h3>
+<p>src\components\Home.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Home</span>(<span class="hljs-params">props</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(props);
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Home;
+</code></pre>
+<h3 id="t132.4 User.js">2.4 User.js <a href="#t132.4 User.js"> # </a></h3>
+<p>src\components\User.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">User</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>User<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> User;
+</code></pre>
+<h3 id="t142.5 Profile.js">2.5 Profile.js <a href="#t142.5 Profile.js"> # </a></h3>
+<p>src\components\Profile.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Profile</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Profile<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Profile;
+</code></pre>
+<h2 id="t153.&#x5B9E;&#x73B0;&#x57FA;&#x672C;&#x8DEF;&#x7531;">3.&#x5B9E;&#x73B0;&#x57FA;&#x672C;&#x8DEF;&#x7531; <a href="#t153.&#x5B9E;&#x73B0;&#x57FA;&#x672C;&#x8DEF;&#x7531;"> # </a></h2>
+<h3 id="t163.1 react-router-dom\index.js">3.1 react-router-dom\index.js <a href="#t163.1 react-router-dom\index.js"> # </a></h3>
+<p>src\react-router-dom\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+<span class="hljs-keyword">import</span> { Router } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../react-router&apos;</span>;
+<span class="hljs-keyword">import</span> { createHashHistory, createBrowserHistory } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;history&quot;</span>;
+<span class="hljs-keyword">export</span> * <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../react-router&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">HashRouter</span>(<span class="hljs-params">{ children }</span>) </span>{
+    <span class="hljs-keyword">let</span> historyRef = React.useRef();
+    <span class="hljs-keyword">if</span> (historyRef.current == <span class="hljs-literal">null</span>) {
+        historyRef.current = createHashHistory();
+    }
+    <span class="hljs-keyword">let</span> history = historyRef.current;
+    <span class="hljs-keyword">let</span> [state, setState] = React.useState({
+        <span class="hljs-attr">action</span>: history.action,
+        <span class="hljs-attr">location</span>: history.location
+    });
+    React.useLayoutEffect(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> history.listen(setState), [history]);
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Router</span>
+            <span class="hljs-attr">children</span>=<span class="hljs-string">{children}</span>
+            <span class="hljs-attr">location</span>=<span class="hljs-string">{state.location}</span>
+            <span class="hljs-attr">navigationType</span>=<span class="hljs-string">{state.action}</span>
+            <span class="hljs-attr">navigator</span>=<span class="hljs-string">{history}</span>
+        /&gt;</span></span>
+    );
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">BrowserRouter</span>(<span class="hljs-params">{ children }</span>) </span>{
+    <span class="hljs-keyword">let</span> historyRef = React.useRef();
+    <span class="hljs-keyword">if</span> (historyRef.current == <span class="hljs-literal">null</span>) {
+        historyRef.current = createBrowserHistory();
+    }
+    <span class="hljs-keyword">let</span> history = historyRef.current;
+    <span class="hljs-keyword">let</span> [state, setState] = React.useState({
+        <span class="hljs-attr">action</span>: history.action,
+        <span class="hljs-attr">location</span>: history.location
+    });
+    React.useLayoutEffect(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> history.listen(setState), [history]);
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Router</span>
+            <span class="hljs-attr">children</span>=<span class="hljs-string">{children}</span>
+            <span class="hljs-attr">location</span>=<span class="hljs-string">{state.location}</span>
+            <span class="hljs-attr">navigationType</span>=<span class="hljs-string">{state.action}</span>
+            <span class="hljs-attr">navigator</span>=<span class="hljs-string">{history}</span>
+        /&gt;</span></span>
+    );
+}
+</code></pre>
+<h3 id="t173.2 src\react-router\index.js">3.2 src\react-router\index.js <a href="#t173.2 src\react-router\index.js"> # </a></h3>
+<p>src\react-router\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-comment">//&#x5BFC;&#x822A;&#x4E0A;&#x4E0B;&#x6587;</span>
+<span class="hljs-keyword">const</span> NavigationContext = React.createContext({});
+<span class="hljs-comment">//&#x8DEF;&#x5F84;&#x4E0A;&#x4E0B;&#x6587;</span>
+<span class="hljs-keyword">const</span> LocationContext = React.createContext({});
+<span class="hljs-comment">//&#x8DEF;&#x7531;&#x4E0A;&#x4E0B;&#x6587;</span>
+<span class="hljs-keyword">const</span> RouteContext = React.createContext({});
+
+<span class="hljs-keyword">export</span> {
+    NavigationContext,
+    LocationContext,
+    RouteContext
+};
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Router</span>(<span class="hljs-params">{ children, location, navigator }</span>) </span>{
+    <span class="hljs-keyword">let</span> navigationContext = React.useMemo(
+        <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> ({ navigator }),
+        [navigator]
+    );
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">NavigationContext.Provider</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{navigationContext}</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">LocationContext.Provider</span>
+                <span class="hljs-attr">children</span>=<span class="hljs-string">{children}</span>
+                <span class="hljs-attr">value</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">location</span> }}
+            /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">NavigationContext.Provider</span>&gt;</span></span>
+    );
+}
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Routes</span>(<span class="hljs-params">{ children }</span>) </span>{
+    <span class="hljs-keyword">return</span> useRoutes(createRoutesFromChildren(children));
+}
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useLocation</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> React.useContext(LocationContext).location;
+}
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useRoutes</span>(<span class="hljs-params">routes</span>) </span>{
+    <span class="hljs-keyword">let</span> location = useLocation();<span class="hljs-comment">//&#x5F53;&#x524D;&#x7684;&#x8DEF;&#x5F84;&#x5BF9;&#x8C61;</span>
+    <span class="hljs-keyword">let</span> pathname = location.pathname || <span class="hljs-string">&quot;/&quot;</span>;<span class="hljs-comment">//&#x5F53;&#x524D;&#x7684;&#x8DEF;&#x5F84;</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; routes.length; i++) {
+        <span class="hljs-keyword">let</span> { path, element } = routes[i];
+        <span class="hljs-keyword">let</span> match = matchPath(path, pathname);
+        <span class="hljs-keyword">if</span> (match) {
+            <span class="hljs-keyword">return</span> element;
+        }
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createRoutesFromChildren</span>(<span class="hljs-params">children</span>) </span>{
+    <span class="hljs-keyword">let</span> routes = [];
+    React.Children.forEach(children, element =&gt; {
+        <span class="hljs-keyword">let</span> route = {
+            <span class="hljs-attr">path</span>: element.props.path,
+            <span class="hljs-attr">element</span>: element.props.element
+        };
+        routes.push(route);
+    });
+    <span class="hljs-keyword">return</span> routes;
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Route</span>(<span class="hljs-params">props</span>) </span>{
+
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">compilePath</span>(<span class="hljs-params">path</span>) </span>{
+    <span class="hljs-keyword">let</span> regexpSource = <span class="hljs-string">&quot;^&quot;</span> + path;
+    regexpSource += <span class="hljs-string">&quot;$&quot;</span>;
+    <span class="hljs-keyword">let</span> matcher = <span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(regexpSource);
+    <span class="hljs-keyword">return</span> matcher;
+}
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">matchPath</span>(<span class="hljs-params">path, pathname</span>) </span>{
+    <span class="hljs-keyword">let</span> matcher = compilePath(path);
+    <span class="hljs-keyword">let</span> match = pathname.match(matcher);
+    <span class="hljs-keyword">if</span> (!match) <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+    <span class="hljs-keyword">return</span> match;
+}
+</code></pre>
+<h2 id="t184.&#x5B9E;&#x73B0;history">4.&#x5B9E;&#x73B0;history <a href="#t184.&#x5B9E;&#x73B0;history"> # </a></h2>
+<h3 id="t194.1 createBrowserHistory.js">4.1 createBrowserHistory.js <a href="#t194.1 createBrowserHistory.js"> # </a></h3>
+<p>src\history\createBrowserHistory.js</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createBrowserHistory</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-keyword">const</span> globalHistory = <span class="hljs-built_in">window</span>.history;
+    <span class="hljs-keyword">let</span> listeners = [];<span class="hljs-comment">//&#x5B58;&#x653E;&#x6240;&#x6709;&#x7684;&#x76D1;&#x542C;&#x51FD;&#x6570;</span>
+    <span class="hljs-keyword">let</span> state;
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">listen</span>(<span class="hljs-params">listener</span>)</span>{
+        listeners.push(listener);
+        <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-params">()</span>=&gt;</span>{
+            listeners = listeners.filter(<span class="hljs-function"><span class="hljs-params">item</span>=&gt;</span>item!=listener);
+        }
+    }
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">go</span>(<span class="hljs-params">n</span>)</span>{
+        globalHistory.go(n);
+    }
+    <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">&apos;popstate&apos;</span>,()=&gt;{
+        <span class="hljs-keyword">let</span> location = {<span class="hljs-attr">state</span>:globalHistory.state,<span class="hljs-attr">pathname</span>:<span class="hljs-built_in">window</span>.location.pathname};
+        <span class="hljs-comment">//&#x5F53;&#x8DEF;&#x5F84;&#x6539;&#x53D8;&#x4E4B;&#x540E;&#x5E94;&#x8BE5;&#x8BA9;history&#x7684;&#x76D1;&#x542C;&#x51FD;&#x6570;&#x6267;&#x884C;&#xFF0C;&#x91CD;&#x65B0;&#x5237;&#x65B0;&#x7EC4;&#x4EF6;</span>
+        notify({<span class="hljs-attr">action</span>:<span class="hljs-string">&quot;POP&quot;</span>,location});
+    });
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">goBack</span>(<span class="hljs-params"></span>)</span>{
+        go(<span class="hljs-number">-1</span>);
+    }
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">goForward</span>(<span class="hljs-params"></span>)</span>{
+        go(<span class="hljs-number">1</span>);
+    }
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">notify</span>(<span class="hljs-params">newState</span>)</span>{
+        <span class="hljs-comment">//&#x628A;newState&#x4E0A;&#x7684;&#x5C5E;&#x6027;&#x8D4B;&#x503C;&#x5230;history&#x5BF9;&#x8C61;&#x4E0A;</span>
+        <span class="hljs-built_in">Object</span>.assign(history,newState);
+        history.length = globalHistory.length;<span class="hljs-comment">//&#x8DEF;&#x7531;&#x5386;&#x53F2;&#x6808;&#x4E2D;&#x5386;&#x53F2;&#x6761;&#x76EE;&#x7684;&#x957F;&#x5EA6;</span>
+         listeners.forEach(<span class="hljs-function"><span class="hljs-params">listener</span> =&gt;</span> listener({ <span class="hljs-attr">location</span>: history.location }));
+    }
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">push</span>(<span class="hljs-params">pathname,nextState</span>)</span>{
+        <span class="hljs-keyword">const</span> action = <span class="hljs-string">&apos;PUSH&apos;</span>;<span class="hljs-comment">//action&#x8868;&#x793A;&#x662F;&#x7531;&#x4E8E;&#x4EC0;&#x4E48;&#x6837;&#x7684;&#x52A8;&#x4F5C;&#x5F15;&#x8D77;&#x4E86;&#x8DEF;&#x5F84;&#x7684;&#x53D8;&#x66F4;</span>
+        <span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> pathname === <span class="hljs-string">&apos;object&apos;</span>){
+            state = pathname.state;
+            pathname = pathname.pathname;
+        }<span class="hljs-keyword">else</span>{
+            state=nextState; 
+        }
+        globalHistory.pushState(state,<span class="hljs-literal">null</span>,pathname);<span class="hljs-comment">//&#x6211;&#x4EEC;&#x5DF2;&#x7ECF; &#x8DF3;&#x8F6C;&#x8DEF;&#x5F84;</span>
+        <span class="hljs-keyword">let</span> location = {state,pathname};
+        notify({action,location});
+    }
+    <span class="hljs-keyword">const</span> history = {
+        <span class="hljs-attr">action</span>:<span class="hljs-string">&apos;POP&apos;</span>,
+        go,
+        goBack,
+        goForward,
+        push,
+        listen,
+        <span class="hljs-attr">location</span>:{<span class="hljs-attr">pathname</span>:<span class="hljs-built_in">window</span>.location.pathname,<span class="hljs-attr">state</span>:<span class="hljs-built_in">window</span>.location.state}
+    }
+    <span class="hljs-keyword">return</span> history;
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> createBrowserHistory;
+</code></pre>
+<h3 id="t204.2 createHashHistory.js">4.2 createHashHistory.js <a href="#t204.2 createHashHistory.js"> # </a></h3>
+<p>src\history\createHashHistory.js</p>
+<pre><code class="lang-js"><span class="hljs-comment">/**
+ * hash&#x4E0D;&#x80FD;&#x4F7F;&#x7528; &#x6D4F;&#x89C8;&#x5668;&#x7684;history&#x5BF9;&#x8C61;&#x4E86;
+ * <span class="hljs-doctag">@returns </span>
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createHashHistory</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-keyword">let</span> stack = [];<span class="hljs-comment">//&#x7C7B;&#x4F3C;&#x4E8E;&#x5386;&#x53F2;&#x6808; &#x91CC;&#x9762;&#x5B58;&#x653E;&#x90FD;&#x662F;&#x8DEF;&#x5F84;</span>
+    <span class="hljs-keyword">let</span> index = <span class="hljs-number">-1</span>;<span class="hljs-comment">//&#x6808;&#x7684;&#x6307;&#x9488;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;-1</span>
+    <span class="hljs-keyword">let</span> action = <span class="hljs-string">&apos;POP&apos;</span>;<span class="hljs-comment">//&#x52A8;&#x4F5C;</span>
+    <span class="hljs-keyword">let</span> state ;<span class="hljs-comment">//&#x6700;&#x65B0;&#x7684;&#x72B6;&#x6001; </span>
+    <span class="hljs-keyword">let</span> listeners = [];<span class="hljs-comment">//&#x76D1;&#x542C;&#x51FD;&#x6570;&#x7684;&#x6570;&#x7EC4;</span>
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">listen</span>(<span class="hljs-params">listener</span>)</span>{
+        listeners.push(listener);
+        <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-params">()</span>=&gt;</span>{
+            listeners = listeners.filter(<span class="hljs-function"><span class="hljs-params">item</span>=&gt;</span>item!=listener);
+        }
+    }
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">go</span>(<span class="hljs-params">n</span>)</span>{
+        action = <span class="hljs-string">&apos;POP&apos;</span>;
+        index+=n;<span class="hljs-comment">//&#x66F4;&#x6539;&#x6808;&#x9876;&#x7684;&#x6307;&#x9488;</span>
+        <span class="hljs-keyword">let</span> nextLocation = stack[index];<span class="hljs-comment">//&#x53D6;&#x51FA;&#x6307;&#x5B9A;&#x7D22;&#x5F15;&#x5BF9;&#x5E94;&#x7684;&#x8DEF;&#x5F84;&#x5BF9;&#x8C61;</span>
+        state= nextLocation.state;<span class="hljs-comment">//&#x53D6;&#x51FA;&#x6B64;location&#x5BF9;&#x5E94;&#x7684;&#x72B6;&#x6001; </span>
+        <span class="hljs-built_in">window</span>.location.hash = nextLocation.pathname;<span class="hljs-comment">//&#x4FEE;&#x6539;hash&#x503C; &#xFF0C;&#x4ECE;&#x800C;&#x4FEE;&#x6539;&#x5F53;&#x524D;&#x7684;&#x8DEF;&#x5F84;</span>
+    }
+    <span class="hljs-keyword">let</span> hashChangeHandler = <span class="hljs-function"><span class="hljs-params">()</span>=&gt;</span>{
+        <span class="hljs-keyword">let</span> pathname = <span class="hljs-built_in">window</span>.location.hash.slice(<span class="hljs-number">1</span>);<span class="hljs-comment">//&#x53D6;&#x51FA;&#x6700;&#x65B0;&#x7684;hash&#x503C;&#x5BF9;&#x5E94;&#x7684;&#x8DEF;&#x5F84;  #/user</span>
+        <span class="hljs-built_in">Object</span>.assign(history,{action,<span class="hljs-attr">location</span>:{pathname,state}});
+        <span class="hljs-keyword">if</span>(action === <span class="hljs-string">&apos;PUSH&apos;</span>){<span class="hljs-comment">//&#x8BF4;&#x660E;&#x662F;&#x8C03;&#x7528;push&#x65B9;&#x6CD5;&#xFF0C;&#x9700;&#x8981;&#x5F80;&#x5386;&#x53F2;&#x6808;&#x4E2D;&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x6761;&#x76EE; </span>
+            stack[++index]=history.location;
+        }
+         listeners.forEach(<span class="hljs-function"><span class="hljs-params">listener</span> =&gt;</span> listener({ <span class="hljs-attr">location</span>: history.location }));
+    }
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">push</span>(<span class="hljs-params">pathname,nextState</span>)</span>{
+        action = <span class="hljs-string">&apos;PUSH&apos;</span>;
+        <span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> pathname ===<span class="hljs-string">&apos;object&apos;</span>){
+            state = pathname.state;
+            pathname = pathname.pathname
+        }<span class="hljs-keyword">else</span>{
+            state = nextState;
+        }
+        <span class="hljs-built_in">window</span>.location.hash = pathname;
+    }
+    <span class="hljs-comment">//&#x5F53;hash&#x53D1;&#x751F;&#x53D8;&#x5316;&#x7684;&#x8BDD;&#xFF0C;&#x4F1A;&#x6267;&#x884C;&#x56DE;&#x8C03;</span>
+    <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">&apos;hashchange&apos;</span>,hashChangeHandler);
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">goBack</span>(<span class="hljs-params"></span>)</span>{
+        go(<span class="hljs-number">-1</span>);
+    }
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">goForward</span>(<span class="hljs-params"></span>)</span>{
+        go(<span class="hljs-number">1</span>);
+    }
+    <span class="hljs-keyword">const</span> history = {
+        <span class="hljs-attr">action</span>:<span class="hljs-string">&apos;POP&apos;</span>,
+        go,
+        goBack,
+        goForward,
+        push,
+        listen,
+        <span class="hljs-attr">location</span>:{},
+        <span class="hljs-attr">location</span>:{<span class="hljs-attr">pathname</span>:<span class="hljs-string">&apos;/&apos;</span>,<span class="hljs-attr">state</span>:<span class="hljs-literal">undefined</span>}
+    }
+    <span class="hljs-keyword">if</span>(<span class="hljs-built_in">window</span>.location.hash){<span class="hljs-comment">//&#x5982;&#x679C;&#x521D;&#x59CB;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5982;&#x679C;hash&#x662F;&#x6709;&#x503C;&#x7684;</span>
+        action = <span class="hljs-string">&apos;PUSH&apos;</span>;
+        hashChangeHandler();
+    }<span class="hljs-keyword">else</span>{
+        <span class="hljs-built_in">window</span>.location.hash = <span class="hljs-string">&apos;/&apos;</span>;
+    }
+    <span class="hljs-keyword">return</span> history;
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> createHashHistory;
+</code></pre>
+<h3 id="t214.3 history\index.js">4.3 history\index.js <a href="#t214.3 history\index.js"> # </a></h3>
+<p>src\history\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> {<span class="hljs-keyword">default</span> <span class="hljs-keyword">as</span> createBrowserHistory} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./createBrowserHistory&apos;</span>;
+<span class="hljs-keyword">export</span> {<span class="hljs-keyword">default</span> <span class="hljs-keyword">as</span> createHashHistory} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./createHashHistory&apos;</span>;
+</code></pre>
+<h3 id="t224.4 react-router-dom\index.js">4.4 react-router-dom\index.js <a href="#t224.4 react-router-dom\index.js"> # </a></h3>
+<p>src\react-router-dom\index.js</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;
+import { Router } from &apos;../react-router&apos;;
+<span class="hljs-addition">+import { createHashHistory, createBrowserHistory } from &quot;../history&quot;;</span>
+export * from &apos;../react-router&apos;;
+
+export function HashRouter({ children }) {
+    let historyRef = React.useRef();
+    if (historyRef.current == null) {
+        historyRef.current = createHashHistory();
+    }
+    let history = historyRef.current;
+    let [state, setState] = React.useState({
+        action: history.action,
+        location: history.location
+    });
+    React.useLayoutEffect(() =&gt; history.listen(setState), [history]);
+    return (
+        &lt;Router
+            children={children}
+            location={state.location}
+            navigationType={state.action}
+            navigator={history}
+        /&gt;
+    );
+}
+
+export function BrowserRouter({ children }) {
+    let historyRef = React.useRef();
+    if (historyRef.current == null) {
+        historyRef.current = createBrowserHistory();
+    }
+    let history = historyRef.current;
+    let [state, setState] = React.useState({
+        action: history.action,
+        location: history.location
+    });
+    React.useLayoutEffect(() =&gt; history.listen(setState), [history]);
+    return (
+        &lt;Router
+            children={children}
+            location={state.location}
+            navigationType={state.action}
+            navigator={history}
+        /&gt;
+    );
+}
+</code></pre>
+<h2 id="t235. path-to-regexp">5. path-to-regexp <a href="#t235. path-to-regexp"> # </a></h2>
+<ul>
+<li><a href="https://jex.im/regulex">regulex</a></li>
+<li><a href="https://www.npmjs.com/package/path-to-regexp">path-to-regexp</a><ul>
+<li>sensitive &#x662F;&#x5426;&#x5927;&#x5C0F;&#x5199;&#x654F;&#x611F; (&#x9ED8;&#x8BA4;&#x503C;: false)</li>
+<li>strict &#x662F;&#x5426;&#x5141;&#x8BB8;&#x7ED3;&#x5C3E;&#x6709;&#x4E00;&#x4E2A;&#x53EF;&#x9009;&#x7684;/  (&#x9ED8;&#x8BA4;&#x503C;: false)</li>
+<li>end &#x662F;&#x5426;&#x5339;&#x914D;&#x6574;&#x4E2A;&#x5B57;&#x7B26;&#x4E32; (&#x9ED8;&#x8BA4;&#x503C;: true)</li>
+</ul>
+</li>
+</ul>
+<h3 id="t245.1 /home&#x7ED3;&#x675F;">5.1 /home&#x7ED3;&#x675F; <a href="#t245.1 /home&#x7ED3;&#x675F;"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> pathToRegExp = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path-to-regexp&apos;</span>);
+<span class="hljs-keyword">let</span> regxp = pathToRegExp(<span class="hljs-string">&apos;/home&apos;</span>,[],{<span class="hljs-attr">end</span>:<span class="hljs-literal">true</span>});
+<span class="hljs-built_in">console</span>.log(regxp);<span class="hljs-comment">//   /^\/home\/?$/i</span>
+<span class="hljs-built_in">console</span>.log(regxp.test(<span class="hljs-string">&apos;/home&apos;</span>));
+<span class="hljs-built_in">console</span>.log(regxp.test(<span class="hljs-string">&apos;/home/2&apos;</span>));
+</code></pre>
+<p><img src="http://img.zhufengpeixun.cn/homereg.png" alt="homereg"></p>
+<h3 id="t255.2 /home&#x975E;&#x7ED3;&#x675F;">5.2 /home&#x975E;&#x7ED3;&#x675F; <a href="#t255.2 /home&#x975E;&#x7ED3;&#x675F;"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> pathToRegExp = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path-to-regexp&apos;</span>);
+<span class="hljs-keyword">let</span> regExp = pathToRegExp(<span class="hljs-string">&apos;/home&apos;</span>,[],{<span class="hljs-attr">end</span>:<span class="hljs-literal">false</span>});
+<span class="hljs-built_in">console</span>.log(regExp);<span class="hljs-comment">//   /^\/home\/?(?=\/|$)/i</span>
+<span class="hljs-built_in">console</span>.log(regExp.test(<span class="hljs-string">&apos;/home&apos;</span>));
+<span class="hljs-built_in">console</span>.log(regExp.test(<span class="hljs-string">&apos;/home/&apos;</span>));
+<span class="hljs-built_in">console</span>.log(regExp.test(<span class="hljs-string">&apos;/home//&apos;</span>));
+<span class="hljs-built_in">console</span>.log(regExp.test(<span class="hljs-string">&apos;/home/2&apos;</span>));
+</code></pre>
+<p><img src="http://img.zhufengpeixun.cn/homereg2.png" alt="homereg2"></p>
+<h3 id="t265.3 &#x8DEF;&#x5F84;&#x53C2;&#x6570;">5.3 &#x8DEF;&#x5F84;&#x53C2;&#x6570; <a href="#t265.3 &#x8DEF;&#x5F84;&#x53C2;&#x6570;"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> params = [];
+<span class="hljs-keyword">let</span> regExp = pathToRegExp(<span class="hljs-string">&apos;/user/:id&apos;</span>,params,{<span class="hljs-attr">end</span>:<span class="hljs-literal">true</span>});
+<span class="hljs-built_in">console</span>.log(regExp,params);
+<span class="hljs-comment">/**
+/^\/user\/(?:([^\/]+?))\/?$/i
+[ { name: &apos;id&apos;, optional: false, offset: 7 } ]
+**/</span>
+</code></pre>
+<p><img src="http://img.zhufengpeixun.cn/uerreg.png" alt="uerreg"></p>
+<h3 id="t275.4 &#x6B63;&#x5219;&#x5339;&#x914D;">5.4 &#x6B63;&#x5219;&#x5339;&#x914D; <a href="#t275.4 &#x6B63;&#x5219;&#x5339;&#x914D;"> # </a></h3>
+<ul>
+<li>&#x662F;&#x5426;&#x6355;&#x83B7;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x8868;&#x8FBE;&#x5F0F;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">()</td>
+<td style="text-align:left">&#x8868;&#x793A;&#x6355;&#x83B7;&#x5206;&#x7EC4;&#xFF0C;()&#x4F1A;&#x628A;&#x6BCF;&#x4E2A;&#x5206;&#x7EC4;&#x91CC;&#x7684;&#x5339;&#x914D;&#x7684;&#x503C;&#x4FDD;&#x5B58;&#x8D77;&#x6765;&#xFF0C;&#x4F7F;&#x7528;$n(n&#x662F;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#xFF0C;&#x8868;&#x793A;&#x7B2C;n&#x4E2A;&#x6355;&#x83B7;&#x7EC4;&#x7684;&#x5185;&#x5BB9;)</td>
+</tr>
+<tr>
+<td style="text-align:left">(?:)</td>
+<td style="text-align:left">&#x8868;&#x793A;&#x975E;&#x6355;&#x83B7;&#x5206;&#x7EC4;&#xFF0C;&#x548C;&#x6355;&#x83B7;&#x5206;&#x7EC4;&#x552F;&#x4E00;&#x7684;&#x533A;&#x522B;&#x5728;&#x4E8E;&#xFF0C;&#x975E;&#x6355;&#x83B7;&#x5206;&#x7EC4;&#x5339;&#x914D;&#x7684;&#x503C;&#x4E0D;&#x4F1A;&#x4FDD;&#x5B58;&#x8D77;&#x6765;</td>
+</tr>
+<tr>
+<td style="text-align:left">(?<name>...)</name></td>
+<td style="text-align:left">&#x8868;&#x793A;&#x547D;&#x540D;&#x6355;&#x83B7;&#x5206;&#x7EC4;,&#x53CD;&#x5411;&#x5F15;&#x7528;&#x4E00;&#x4E2A;&#x547D;&#x540D;&#x5206;&#x7EC4;&#x7684;&#x8BED;&#x6CD5;&#x662F; \k<name>,&#x5728; replace() &#x65B9;&#x6CD5;&#x7684;&#x66FF;&#x6362;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x53CD;&#x5411;&#x5F15;&#x7528;&#x662F;&#x7528; $<name></name></name></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-js"><span class="hljs-comment">//&#x5206;&#x7EC4;&#x83B7;&#x53D6;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;1ab&apos;</span>.match(<span class="hljs-regexp">/1[a-z]([b-c])/</span>));
+<span class="hljs-comment">//&#x5206;&#x7EC4;&#x4E0D;&#x6355;&#x83B7;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;1ab&apos;</span>.match(<span class="hljs-regexp">/1[a-z](?:[a-z])/</span>));
+<span class="hljs-comment">//?&lt;x&gt; &#x8868;&#x793A;&#x547D;&#x540D;&#x6355;&#x83B7;&#x5206;&#x7EC4;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-regexp">/(?&lt;x&gt;\d{2})-(?&lt;y&gt;\d{2})/</span>.exec(<span class="hljs-string">&apos;11-22&apos;</span>));
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;11-22&apos;</span>.replace(<span class="hljs-regexp">/(?&lt;x&gt;\d{2})-(?&lt;y&gt;\d{2})/</span>,<span class="hljs-string">&quot;$&lt;y&gt;-$&lt;x&gt;&quot;</span>));
+</code></pre>
+<ul>
+<li>&#x524D;&#x77BB;&#x548C;&#x540E;&#x987E;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x8868;&#x8FBE;&#x5F0F;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">(?=pattern)</td>
+<td style="text-align:left">&#x6B63;&#x5411;&#x80AF;&#x5B9A;&#x67E5;&#x627E;(&#x524D;&#x77BB;),&#x540E;&#x9762;&#x5FC5;&#x987B;&#x8DDF;&#x7740;&#x4EC0;&#x4E48;</td>
+</tr>
+<tr>
+<td style="text-align:left">(?!pattern)</td>
+<td style="text-align:left">&#x6B63;&#x5411;&#x5426;&#x5B9A;&#x67E5;&#x627E;(&#x524D;&#x77BB;)&#xFF0C;&#x540E;&#x9762;&#x4E0D;&#x80FD;&#x8DDF;&#x7740;&#x4EC0;&#x4E48;</td>
+</tr>
+<tr>
+<td style="text-align:left">(?&lt;=pattern)</td>
+<td style="text-align:left">&#x53CD;&#x5411;&#x80AF;&#x5B9A;&#x6761;&#x4EF6;&#x67E5;&#x627E;(&#x540E;&#x987E;),&#x4E0D;&#x6355;&#x83B7;</td>
+</tr>
+<tr>
+<td style="text-align:left">(?&lt;!pattern)</td>
+<td style="text-align:left">&#x53CD;&#x5411;&#x5426;&#x5B9A;&#x6761;&#x4EF6;&#x67E5;&#x627E;&#xFF08;&#x540E;&#x987E;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-js"><span class="hljs-comment">//&#x4F1A;&#x6D88;&#x8017;&#x6389;&#x5B57;&#x7B26;&#x7684;</span>
+<span class="hljs-comment">//console.log(&apos;1a&apos;.match(/\d[a-z][a-z]/));</span>
+<span class="hljs-comment">//?= &#x6B63;&#x5411;&#x80AF;&#x5B9A;&#x67E5;&#x627E; &#x4E0D;&#x6D88;&#x8D39;&#x5B57;&#x7B26; &#x6B63;&#x5411;&#x524D;&#x77BB;</span>
+<span class="hljs-comment">//console.log(&apos;1a&apos;.match(/\d(?=[a-z])[a-z]/));</span>
+
+<span class="hljs-comment">//&#x6B63;&#x5411;&#x80AF;&#x5B9A;&#x524D;&#x77BB;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;1a&apos;</span>.match(<span class="hljs-regexp">/\d(?=[a-z])[a-z]/</span>));
+<span class="hljs-comment">//&#x6B63;&#x5411;&#x5426;&#x5B9A;&#x524D;&#x77BB;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;1a&apos;</span>.match(<span class="hljs-regexp">/\d(?![A-Z])[a-z]/</span>));
+<span class="hljs-comment">//&#x53CD;&#x5411;&#x80AF;&#x5B9A;&#x524D;&#x77BB;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;1a&apos;</span>.match(<span class="hljs-regexp">/(?&lt;=[a-z])\d[a-z]/</span>));
+<span class="hljs-comment">//&#x53CD;&#x5411;&#x5426;&#x5B9A;&#x524D;&#x77BB;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;1a&apos;</span>.match(<span class="hljs-regexp">/(?&lt;![A-Z])\d[a-z]/</span>));
+
+<span class="hljs-keyword">let</span> array = [<span class="hljs-string">&apos;1ab&apos;</span>];
+array.index = <span class="hljs-number">0</span>;
+array.input = <span class="hljs-string">&apos;1ab&apos;</span>;
+array.groups = <span class="hljs-literal">undefined</span>;
+<span class="hljs-built_in">console</span>.log(array);
+</code></pre>
+<h2 id="t286. &#x8DEF;&#x5F84;&#x53C2;&#x6570;">6. &#x8DEF;&#x5F84;&#x53C2;&#x6570; <a href="#t286. &#x8DEF;&#x5F84;&#x53C2;&#x6570;"> # </a></h2>
+<h3 id="t296.1 src\index.js">6.1 src\index.js <a href="#t296.1 src\index.js"> # </a></h3>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import ReactDOM from &apos;react-dom&apos;;
+import { HashRouter, BrowserRouter, Routes, Route } from &apos;./react-router-dom&apos;;
+import Home from &apos;./components/Home&apos;;
+import User from &apos;./components/User&apos;;
+import Profile from &apos;./components/Profile&apos;;
+import Post from &apos;./components/Post&apos;;
+ReactDOM.render(
+  &lt;BrowserRouter&gt;
+    &lt;Routes&gt;
+      &lt;Route path=&quot;/&quot; element={&lt;Home /&gt;} /&gt;
+      &lt;Route path=&quot;/user&quot; element={&lt;User /&gt;} /&gt;
+      &lt;Route path=&quot;/profile&quot; element={&lt;Profile /&gt;} /&gt;
+<span class="hljs-addition">+     &lt;Route path=&quot;/post/:id&quot; element={&lt;Post /&gt;} /&gt;</span>
+    &lt;/Routes&gt;
+  &lt;/BrowserRouter&gt;
+  , document.getElementById(&apos;root&apos;));
+</code></pre>
+<h3 id="t306.2 src\react-router\index.js">6.2 src\react-router\index.js <a href="#t306.2 src\react-router\index.js"> # </a></h3>
+<p>src\react-router\index.js</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+//&#x5BFC;&#x822A;&#x4E0A;&#x4E0B;&#x6587;
+const NavigationContext = React.createContext({});
+//&#x8DEF;&#x5F84;&#x4E0A;&#x4E0B;&#x6587;
+const LocationContext = React.createContext({});
+//&#x8DEF;&#x7531;&#x4E0A;&#x4E0B;&#x6587;
+const RouteContext = React.createContext({});
+
+export {
+    NavigationContext,
+    LocationContext,
+    RouteContext
+};
+export function Router({ children, location, navigator }) {
+    let navigationContext = React.useMemo(
+        () =&gt; ({ navigator }),
+        [navigator]
+    );
+    return (
+        &lt;NavigationContext.Provider value={navigationContext}&gt;
+            &lt;LocationContext.Provider
+                children={children}
+                value={{ location }}
+            /&gt;
+        &lt;/NavigationContext.Provider&gt;
+    );
+}
+export function Routes({ children }) {
+    return useRoutes(createRoutesFromChildren(children));
+}
+export function useLocation() {
+    return React.useContext(LocationContext).location;
+}
+export function useRoutes(routes) {
+    let location = useLocation();//&#x5F53;&#x524D;&#x7684;&#x8DEF;&#x5F84;&#x5BF9;&#x8C61;
+    let pathname = location.pathname || &quot;/&quot;;//&#x5F53;&#x524D;&#x7684;&#x8DEF;&#x5F84;
+    for (let i = 0; i &lt; routes.length; i++) {
+        let { path, element } = routes[i];
+        let match = matchPath(path, pathname);
+        if (match) {
+<span class="hljs-addition">+           return React.cloneElement(element, { ...element.props, match });</span>
+        }
+    }
+    return null;
+}
+
+export function createRoutesFromChildren(children) {
+    let routes = [];
+    React.Children.forEach(children, element =&gt; {
+        let route = {
+            path: element.props.path,
+            element: element.props.element
+        };
+        routes.push(route);
+    });
+    return routes;
+}
+
+export function Route(props) {
+
+}
+function compilePath(path) {
+<span class="hljs-addition">+   let paramNames = [];</span>
+<span class="hljs-addition">+   let regexpSource = &quot;^&quot; + path</span>
+<span class="hljs-addition">+       .replace(/:(\w+)/g, (_, key) =&gt; {</span>
+<span class="hljs-addition">+           paramNames.push(key);</span>
+<span class="hljs-addition">+           return &quot;([^\\/]+)&quot;;</span>
+<span class="hljs-addition">+       });</span>
+<span class="hljs-addition">+    regexpSource += &quot;$&quot;;</span>
+    let matcher = new RegExp(regexpSource);
+<span class="hljs-addition">+   return [matcher, paramNames];</span>
+}
+export function matchPath(path, pathname) {
+<span class="hljs-addition">+   let [matcher, paramNames] = compilePath(path);</span>
+    let match = pathname.match(matcher);
+    if (!match) return null;
+<span class="hljs-addition">+   let matchedPathname = match[0];</span>
+<span class="hljs-addition">+   let values = match.slice(1);</span>
+<span class="hljs-addition">+   let params = paramNames.reduce(</span>
+<span class="hljs-addition">+       (memo, paramName, index) =&gt; {</span>
+<span class="hljs-addition">+           memo[paramName] = values[index];</span>
+<span class="hljs-addition">+           return memo;</span>
+<span class="hljs-addition">+       },</span>
+<span class="hljs-addition">+       {}</span>
+<span class="hljs-addition">+   );</span>
+<span class="hljs-addition">+   return { params, pathname: matchedPathname, path };</span>
+}
+</code></pre>
+<h3 id="t316.3 Post.js">6.3 Post.js <a href="#t316.3 Post.js"> # </a></h3>
+<p>src\components\Post.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Post</span>(<span class="hljs-params">props</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(props);
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Post<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Post;
+</code></pre>
+<h2 id="t327. Link&#x5BFC;&#x822A;">7. Link&#x5BFC;&#x822A; <a href="#t327. Link&#x5BFC;&#x822A;"> # </a></h2>
+<h3 id="t337.1 src\index.js">7.1 src\index.js <a href="#t337.1 src\index.js"> # </a></h3>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import ReactDOM from &apos;react-dom&apos;;
+<span class="hljs-addition">+import { HashRouter, BrowserRouter, Routes, Route, Link } from &apos;./react-router-dom&apos;;</span>
+import Home from &apos;./components/Home&apos;;
+import User from &apos;./components/User&apos;;
+import Profile from &apos;./components/Profile&apos;;
+import Post from &apos;./components/Post&apos;;
+ReactDOM.render(
+  &lt;BrowserRouter&gt;
+<span class="hljs-addition">+   &lt;ul&gt;</span>
+<span class="hljs-addition">+     &lt;li&gt;&lt;Link to=&quot;/&quot;&gt;&#x9996;&#x9875;&lt;/Link&gt;&lt;/li&gt;</span>
+<span class="hljs-addition">+     &lt;li&gt;&lt;Link to=&quot;/user&quot; &gt;&#x7528;&#x6237;&#x7BA1;&#x7406;&lt;/Link&gt;&lt;/li&gt;</span>
+<span class="hljs-addition">+     &lt;li&gt;&lt;Link to=&quot;/profile&quot; &gt;&#x4E2A;&#x4EBA;&#x4E2D;&#x5FC3;&lt;/Link&gt;&lt;/li&gt;</span>
+<span class="hljs-addition">+   &lt;/ul&gt;</span>
+    &lt;Routes&gt;
+      &lt;Route path=&quot;/&quot; element={&lt;Home /&gt;} /&gt;
+      &lt;Route path=&quot;/user&quot; element={&lt;User /&gt;} /&gt;
+      &lt;Route path=&quot;/profile&quot; element={&lt;Profile /&gt;} /&gt;
+      &lt;Route path=&quot;/post/:id&quot; element={&lt;Post /&gt;} /&gt;
+    &lt;/Routes&gt;
+  &lt;/BrowserRouter&gt;
+  , document.getElementById(&apos;root&apos;));
+</code></pre>
+<h3 id="t347.2 react-router-dom\index.js">7.2 react-router-dom\index.js <a href="#t347.2 react-router-dom\index.js"> # </a></h3>
+<p>src\react-router-dom\index.js</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;
+<span class="hljs-addition">+import { Router, useNavigate } from &apos;../react-router&apos;;</span>
+import { createHashHistory, createBrowserHistory } from &quot;../history&quot;;
+export * from &apos;../react-router&apos;;
+
+export function HashRouter({ children }) {
+    let historyRef = React.useRef();
+    if (historyRef.current == null) {
+        historyRef.current = createHashHistory();
+    }
+    let history = historyRef.current;
+    let [state, setState] = React.useState({
+        action: history.action,
+        location: history.location
+    });
+    React.useLayoutEffect(() =&gt; history.listen(setState), [history]);
+    return (
+        &lt;Router
+            children={children}
+            location={state.location}
+            navigationType={state.action}
+            navigator={history}
+        /&gt;
+    );
+}
+
+export function BrowserRouter({ children }) {
+    let historyRef = React.useRef();
+    if (historyRef.current == null) {
+        historyRef.current = createBrowserHistory();
+    }
+    let history = historyRef.current;
+    let [state, setState] = React.useState({
+        action: history.action,
+        location: history.location
+    });
+    React.useLayoutEffect(() =&gt; history.listen(setState), [history]);
+    return (
+        &lt;Router
+            children={children}
+            location={state.location}
+            navigationType={state.action}
+            navigator={history}
+        /&gt;
+    );
+}
+
+<span class="hljs-addition">+export function Link({ to, ...rest }) {</span>
+<span class="hljs-addition">+    let navigate = useNavigate();</span>
+<span class="hljs-addition">+    function handleClick() {</span>
+<span class="hljs-addition">+        navigate(to);</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    return (</span>
+<span class="hljs-addition">+        &lt;a</span>
+<span class="hljs-addition">+            {...rest}</span>
+<span class="hljs-addition">+            href={to}</span>
+<span class="hljs-addition">+            onClick={handleClick}</span>
+<span class="hljs-addition">+        /&gt;</span>
+<span class="hljs-addition">+    );</span>
+<span class="hljs-addition">+}</span>
+</code></pre>
+<h3 id="t357.3 react-router\index.js">7.3 react-router\index.js <a href="#t357.3 react-router\index.js"> # </a></h3>
+<p>src\react-router\index.js</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+//&#x5BFC;&#x822A;&#x4E0A;&#x4E0B;&#x6587;
+const NavigationContext = React.createContext({});
+//&#x8DEF;&#x5F84;&#x4E0A;&#x4E0B;&#x6587;
+const LocationContext = React.createContext({});
+//&#x8DEF;&#x7531;&#x4E0A;&#x4E0B;&#x6587;
+const RouteContext = React.createContext({});
+
+export {
+    NavigationContext,
+    LocationContext,
+    RouteContext
+};
+export function Router({ children, location, navigator }) {
+    let navigationContext = React.useMemo(
+        () =&gt; ({ navigator }),
+        [navigator]
+    );
+    return (
+        &lt;NavigationContext.Provider value={navigationContext}&gt;
+            &lt;LocationContext.Provider
+                children={children}
+                value={{ location }}
+            /&gt;
+        &lt;/NavigationContext.Provider&gt;
+    );
+}
+export function Routes({ children }) {
+    return useRoutes(createRoutesFromChildren(children));
+}
+export function useLocation() {
+    return React.useContext(LocationContext).location;
+}
+export function useRoutes(routes) {
+    let location = useLocation();//&#x5F53;&#x524D;&#x7684;&#x8DEF;&#x5F84;&#x5BF9;&#x8C61;
+    let pathname = location.pathname || &quot;/&quot;;//&#x5F53;&#x524D;&#x7684;&#x8DEF;&#x5F84;
+    for (let i = 0; i &lt; routes.length; i++) {
+        let { path, element } = routes[i];
+        let match = matchPath(path, pathname);
+        if (match) {
+            return React.cloneElement(element, { ...element.props, match });
+        }
+    }
+    return null;
+}
+
+export function createRoutesFromChildren(children) {
+    let routes = [];
+    React.Children.forEach(children, element =&gt; {
+        let route = {
+            path: element.props.path,
+            element: element.props.element
+        };
+        routes.push(route);
+    });
+    return routes;
+}
+
+export function Route(props) {
+
+}
+
+function compilePath(path) {
+    let paramNames = [];
+    let regexpSource = &quot;^&quot; + path
+        .replace(/:(\w+)/g, (_, key) =&gt; {
+            paramNames.push(key);
+            return &quot;([^\\/]+)&quot;;
+        });
+    regexpSource += &quot;$&quot;;
+    let matcher = new RegExp(regexpSource);
+    return [matcher, paramNames];
+}
+export function matchPath(path, pathname) {
+    let [matcher, paramNames] = compilePath(path);
+    let match = pathname.match(matcher);
+    if (!match) return null;
+    let matchedPathname = match[0];
+    let values = match.slice(1);
+    let params = paramNames.reduce(
+        (memo, paramName, index) =&gt; {
+            memo[paramName] = values[index];
+            return memo;
+        },
+        {}
+    );
+    return { params, pathname: matchedPathname, path };
+}
+
+<span class="hljs-addition">+export function useNavigate() {</span>
+<span class="hljs-addition">+    let { navigator } = React.useContext(NavigationContext);</span>
+<span class="hljs-addition">+    let navigate = React.useCallback((to) =&gt; {</span>
+<span class="hljs-addition">+        navigator.push(to);</span>
+<span class="hljs-addition">+    }, [navigator]);</span>
+<span class="hljs-addition">+    return navigate;</span>
+<span class="hljs-addition">+}</span>
+</code></pre>
+<h2 id="t368. &#x652F;&#x6301;&#x5D4C;&#x5957;&#x8DEF;&#x7531;&#x548C;Outlet">8. &#x652F;&#x6301;&#x5D4C;&#x5957;&#x8DEF;&#x7531;&#x548C;Outlet <a href="#t368. &#x652F;&#x6301;&#x5D4C;&#x5957;&#x8DEF;&#x7531;&#x548C;Outlet"> # </a></h2>
+<h3 id="t378.1 src\index.js">8.1 src\index.js <a href="#t378.1 src\index.js"> # </a></h3>
+<p>src\index.js</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import ReactDOM from &apos;react-dom&apos;;
+<span class="hljs-addition">+import { BrowserRouter, Routes, Route, Link } from &apos;./react-router-dom&apos;;</span>
+import Home from &apos;./components/Home&apos;;
+import User from &apos;./components/User&apos;;
+<span class="hljs-addition">+import UserAdd from &apos;./components/UserAdd&apos;;</span>
+<span class="hljs-addition">+import UserList from &apos;./components/UserList&apos;;</span>
+<span class="hljs-addition">+import UserDetail from &apos;./components/UserDetail&apos;;</span>
+import Profile from &apos;./components/Profile&apos;;
+import Post from &apos;./components/Post&apos;;
+ReactDOM.render(
+    &lt;BrowserRouter&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;Link to=&quot;/&quot;&gt;&#x9996;&#x9875;&lt;/Link&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;Link to=&quot;/user&quot; &gt;&#x7528;&#x6237;&#x7BA1;&#x7406;&lt;/Link&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;Link to=&quot;/profile&quot; &gt;&#x4E2A;&#x4EBA;&#x4E2D;&#x5FC3;&lt;/Link&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;Routes&gt;
+            &lt;Route path=&quot;/&quot; element={&lt;Home /&gt;} /&gt;
+<span class="hljs-addition">+           &lt;Route path=&quot;/user/*&quot; element={&lt;User /&gt;} &gt;</span>
+<span class="hljs-addition">+               &lt;Route path=&quot;add&quot; element={&lt;UserAdd /&gt;} /&gt;</span>
+<span class="hljs-addition">+               &lt;Route path=&quot;list&quot; element={&lt;UserList /&gt;} /&gt;</span>
+<span class="hljs-addition">+               &lt;Route path=&quot;detail/:id&quot; element={&lt;UserDetail /&gt;} /&gt;</span>
+<span class="hljs-addition">+           &lt;/Route&gt;</span>
+            &lt;Route path=&quot;/profile&quot; element={&lt;Profile /&gt;} /&gt;
+            &lt;Route path=&quot;/post/:id&quot; element={&lt;Post /&gt;} /&gt;
+        &lt;/Routes&gt;
+    &lt;/BrowserRouter&gt;
+    , document.getElementById(&apos;root&apos;));
+</code></pre>
+<h3 id="t388.2 User.js">8.2 User.js <a href="#t388.2 User.js"> # </a></h3>
+<p>src\components\User.js</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+<span class="hljs-addition">+import { Link, Outlet } from &apos;../react-router-dom&apos;;</span>
+function User() {
+    return (
+<span class="hljs-addition">+       &lt;div&gt;</span>
+<span class="hljs-addition">+           &lt;ul&gt;</span>
+<span class="hljs-addition">+               &lt;li&gt;&lt;Link to=&quot;/user/list&quot;&gt;&#x7528;&#x6237;&#x5217;&#x8868;&lt;/Link&gt;&lt;/li&gt;</span>
+<span class="hljs-addition">+               &lt;li&gt;&lt;Link to=&quot;/user/add&quot;&gt;&#x6DFB;&#x52A0;&#x7528;&#x6237;&lt;/Link&gt;&lt;/li&gt;</span>
+<span class="hljs-addition">+           &lt;/ul&gt;</span>
+<span class="hljs-addition">+           &lt;div&gt;</span>
+<span class="hljs-addition">+               &lt;Outlet /&gt;</span>
+<span class="hljs-addition">+           &lt;/div&gt;</span>
+<span class="hljs-addition">+       &lt;/div&gt;</span>
+    )
+}
+export default User;
+</code></pre>
+<h3 id="t398.3 src\utils.js">8.3 src\utils.js <a href="#t398.3 src\utils.js"> # </a></h3>
+<p>src\utils.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> UserAPI = {
+    list() {
+        <span class="hljs-keyword">let</span> usersStr = localStorage.getItem(<span class="hljs-string">&apos;users&apos;</span>);
+        <span class="hljs-keyword">let</span> users = usersStr ? <span class="hljs-built_in">JSON</span>.parse(usersStr) : [];
+        <span class="hljs-keyword">return</span> users;
+    },
+    add(user) {
+        <span class="hljs-keyword">let</span> users = UserAPI.list();
+        users.push(user);
+        localStorage.setItem(<span class="hljs-string">&apos;users&apos;</span>, <span class="hljs-built_in">JSON</span>.stringify(users));
+    },
+    find(id) {
+        <span class="hljs-keyword">let</span> users = UserAPI.list();
+        <span class="hljs-keyword">return</span> users.find(<span class="hljs-function">(<span class="hljs-params">user</span>) =&gt;</span> user.id === id);
+    }
+}
+</code></pre>
+<h3 id="t408.4 UserAdd.js">8.4 UserAdd.js <a href="#t408.4 UserAdd.js"> # </a></h3>
+<p>src\components\UserAdd.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { useNavigate } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../react-router-dom&apos;</span>;
+<span class="hljs-keyword">import</span> { UserAPI } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../utils&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">UserAdd</span>(<span class="hljs-params">props</span>) </span>{
+    <span class="hljs-keyword">const</span> usernameRef = React.useRef();
+    <span class="hljs-keyword">const</span> navigate = useNavigate();
+    <span class="hljs-keyword">const</span> handleSubmit = <span class="hljs-function">(<span class="hljs-params">event</span>) =&gt;</span> {
+        event.preventDefault();
+        <span class="hljs-keyword">let</span> username = usernameRef.current.value;
+        UserAPI.add({ <span class="hljs-attr">id</span>: <span class="hljs-built_in">Date</span>.now() + <span class="hljs-string">&apos;&apos;</span>, username });
+        navigate(<span class="hljs-string">&apos;/user/list&apos;</span>);
+    }
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">onSubmit</span>=<span class="hljs-string">{handleSubmit}</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">{usernameRef}</span> /&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> &gt;</span>&#x63D0;&#x4EA4;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></span>
+    )
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> UserAdd;
+</code></pre>
+<h3 id="t418.5 UserDetail.js">8.5 UserDetail.js <a href="#t418.5 UserDetail.js"> # </a></h3>
+<p>src\components\UserDetail.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { UserAPI } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../utils&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">UserList</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> [user, setUser] = React.useState({});
+    React.useEffect(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+        <span class="hljs-keyword">let</span> user = <span class="hljs-keyword">this</span>.props.location.state;
+        <span class="hljs-keyword">if</span> (!user) {
+            <span class="hljs-keyword">let</span> id = <span class="hljs-keyword">this</span>.props.match.params.id;
+            user = UserAPI.find(id);
+        }
+        <span class="hljs-keyword">if</span> (user) setUser({ user });
+    }, []);
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+            {user.id}:{user.username}
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> UserList;
+</code></pre>
+<h3 id="t428.6 UserList.js">8.6 UserList.js <a href="#t428.6 UserList.js"> # </a></h3>
+<p>src\components\UserList.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+<span class="hljs-keyword">import</span> { Link } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../react-router-dom&apos;</span>;
+<span class="hljs-keyword">import</span> { UserAPI } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../utils&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">UserList</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> [users, setUsers] = React.useState([]);
+    React.useEffect(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+        <span class="hljs-keyword">let</span> users = UserAPI.list();
+        setUsers(users);
+    }, []);
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> &gt;</span>
+            {
+                users.map((user, index) =&gt; (
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{index}</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">to</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">pathname:</span> `/<span class="hljs-attr">user</span>/<span class="hljs-attr">detail</span>/${<span class="hljs-attr">user.id</span>}`, <span class="hljs-attr">state:</span> <span class="hljs-attr">user</span> }}&gt;</span>{user.username}<span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                ))
+            }
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></span>
+    )
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> UserList;
+</code></pre>
+<h3 id="t438.7 react-router\index.js">8.7 react-router\index.js <a href="#t438.7 react-router\index.js"> # </a></h3>
+<p>src\react-router\index.js</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+//&#x5BFC;&#x822A;&#x4E0A;&#x4E0B;&#x6587;
+const NavigationContext = React.createContext({});
+//&#x8DEF;&#x5F84;&#x4E0A;&#x4E0B;&#x6587;
+const LocationContext = React.createContext({});
+<span class="hljs-addition">+//&#x8DEF;&#x7531;&#x4E0A;&#x4E0B;&#x6587;</span>
+<span class="hljs-addition">+const RouteContext = React.createContext({</span>
+<span class="hljs-addition">+    outlet: null,</span>
+<span class="hljs-addition">+    matches: []</span>
+<span class="hljs-addition">+});</span>
+<span class="hljs-addition">+const OutletContext = React.createContext();</span>
+<span class="hljs-addition">+const joinPaths = paths =&gt; paths.join(&quot;/&quot;).replace(/\/\/+/g, &quot;/&quot;);</span>
+<span class="hljs-addition">+export function Outlet(props) {</span>
+<span class="hljs-addition">+    return useOutlet(props.context);</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+export function useOutlet(context) {</span>
+<span class="hljs-addition">+    let outlet = React.useContext(RouteContext).outlet;</span>
+<span class="hljs-addition">+    if (outlet) {</span>
+<span class="hljs-addition">+        return &lt;OutletContext.Provider value={context} children={outlet} /&gt;;</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    return outlet;</span>
+<span class="hljs-addition">+}</span>
+export function Router({ children, location, navigator }) {
+    let navigationContext = React.useMemo(
+        () =&gt; ({ navigator }),
+        [navigator]
+    );
+    return (
+        &lt;NavigationContext.Provider value={navigationContext}&gt;
+            &lt;LocationContext.Provider
+                children={children}
+                value={{ location }}
+            /&gt;
+        &lt;/NavigationContext.Provider&gt;
+    );
+}
+export function Routes({ children }) {
+    return useRoutes(createRoutesFromChildren(children));
+}
+export function useLocation() {
+    return React.useContext(LocationContext).location;
+}
+<span class="hljs-addition">+export function useParams() {</span>
+<span class="hljs-addition">+  let {matches} = React.useContext(RouteContext);</span>
+<span class="hljs-addition">+  let routeMatch = matches[matches.length - 1];</span>
+<span class="hljs-addition">+  return routeMatch ? routeMatch.params : {};</span>
+<span class="hljs-addition">+}</span>
+
+export function useRoutes(routes) {
+<span class="hljs-addition">+   //&#x5F53;&#x524D;&#x7684;&#x8DEF;&#x5F84;&#x5BF9;&#x8C61;</span>
+<span class="hljs-addition">+   let location = useLocation();</span>
+<span class="hljs-addition">+   //&#x5F53;&#x524D;&#x7684;&#x8DEF;&#x5F84;&#x5B57;&#x7B26;&#x4E32;</span>
+<span class="hljs-addition">+   let pathname = location.pathname || &quot;/&quot;;</span>
+<span class="hljs-addition">+   //&#x5339;&#x914D;&#x8DEF;&#x5F84;</span>
+<span class="hljs-addition">+   let matches = matchRoutes(routes, { pathname });</span>
+<span class="hljs-addition">+   //&#x6E32;&#x67D3;&#x5339;&#x914D;&#x7684;&#x7ED3;&#x679C;</span>
+<span class="hljs-addition">+   return _renderMatches(matches);</span>
+}
+<span class="hljs-addition">+function _renderMatches(matches, parentMatches = []) {</span>
+<span class="hljs-addition">+    if (matches == null) return null;</span>
+<span class="hljs-addition">+    return matches.reduceRight((outlet, match, index) =&gt; {</span>
+<span class="hljs-addition">+        return (</span>
+<span class="hljs-addition">+            &lt;RouteContext.Provider children={match.route.element || &lt;Outlet /&gt;} value={{</span>
+<span class="hljs-addition">+                outlet,</span>
+<span class="hljs-addition">+                matches: parentMatches.concat(matches.slice(0, index + 1))</span>
+<span class="hljs-addition">+            }} /&gt;</span>
+<span class="hljs-addition">+        );</span>
+<span class="hljs-addition">+    }, null);</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+export function matchRoutes(routes, location) {</span>
+<span class="hljs-addition">+    //&#x83B7;&#x53D6;&#x8DEF;&#x5F84;</span>
+<span class="hljs-addition">+    let pathname = location.pathname || &quot;/&quot;;</span>
+<span class="hljs-addition">+    //&#x6253;&#x5E73;&#x6240;&#x6709;&#x7684;&#x5206;&#x652F;</span>
+<span class="hljs-addition">+    let branches = flattenRoutes(routes);</span>
+<span class="hljs-addition">+    rankRouteBranches(branches);</span>
+<span class="hljs-addition">+    //&#x5339;&#x914D;&#x8DEF;&#x7531;&#x5206;&#x652F;</span>
+<span class="hljs-addition">+    let matches = null;</span>
+<span class="hljs-addition">+    for (let i = 0; matches == null &amp;&amp; i &lt; branches.length; ++i) {</span>
+<span class="hljs-addition">+        matches = matchRouteBranch(branches[i], pathname);</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    return matches;</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+const paramRe = /^:\w+$/;</span>
+<span class="hljs-addition">+const dynamicSegmentValue = 3;</span>
+<span class="hljs-addition">+const indexRouteValue = 2;</span>
+<span class="hljs-addition">+const emptySegmentValue = 1;</span>
+<span class="hljs-addition">+const staticSegmentValue = 10;</span>
+<span class="hljs-addition">+const splatPenalty = -2;</span>
+<span class="hljs-addition">+</span>
+<span class="hljs-addition">+const isSplat = s =&gt; s === &quot;*&quot;;</span>
+<span class="hljs-addition">+</span>
+<span class="hljs-addition">+function computeScore(path, index) {</span>
+<span class="hljs-addition">+  let segments = path.split(&quot;/&quot;);</span>
+<span class="hljs-addition">+  let initialScore = segments.length;</span>
+<span class="hljs-addition">+</span>
+<span class="hljs-addition">+  if (segments.some(isSplat)) {</span>
+<span class="hljs-addition">+    initialScore += splatPenalty;</span>
+<span class="hljs-addition">+  }</span>
+<span class="hljs-addition">+</span>
+<span class="hljs-addition">+  if (index) {</span>
+<span class="hljs-addition">+    initialScore += indexRouteValue;</span>
+<span class="hljs-addition">+  }</span>
+<span class="hljs-addition">+  return segments.filter(s =&gt; !isSplat(s)).reduce((score, segment) =&gt; score + (paramRe.test(segment) ? dynamicSegmentValue : segment === &quot;&quot; ? emptySegmentValue : staticSegmentValue), initialScore);</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+function flattenRoutes(routes, branches = [], parentsMeta = [], parentPath = &quot;&quot;) {</span>
+<span class="hljs-addition">+    routes.forEach((route) =&gt; {</span>
+<span class="hljs-addition">+        let meta = {</span>
+<span class="hljs-addition">+            relativePath: route.path || &quot;&quot;,//&#x8DEF;&#x7531;&#x7684;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;</span>
+<span class="hljs-addition">+            route //&#x8DEF;&#x7531;&#x5BF9;&#x8C61;</span>
+<span class="hljs-addition">+        };</span>
+<span class="hljs-addition">+        //&#x7236;&#x8DEF;&#x5F84;&#x548C;&#x5B50;&#x8DEF;&#x5F84;&#x62FC;&#x5728;&#x4E00;&#x8D77;&#x6210;&#x4E3A;&#x5F53;&#x524D;&#x7684;&#x8DEF;&#x5F84;</span>
+<span class="hljs-addition">+        let path = joinPaths([parentPath, meta.relativePath]);</span>
+<span class="hljs-addition">+        //&#x5404;&#x7236;Meta&#x6570;&#x7EC4;&#x4E2D;&#x6DFB;&#x52A0;&#x5F53;&#x524D;&#x7684;meta</span>
+<span class="hljs-addition">+        let routesMeta = parentsMeta.concat(meta);</span>
+<span class="hljs-addition">+        if (route.children &amp;&amp; route.children.length &gt; 0) {</span>
+<span class="hljs-addition">+            flattenRoutes(route.children, branches, routesMeta, path);</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+        branches.push({</span>
+<span class="hljs-addition">+            path,//&#x6B64;&#x914D;&#x7F6E;&#x7684;&#x5B8C;&#x6574;&#x8DEF;&#x5F84;</span>
+<span class="hljs-addition">+            score: computeScore(path, route.index),  rankRouteBranches(branches);</span>
+<span class="hljs-addition">+            routesMeta //&#x6B64;&#x914D;&#x7F6E;&#x7684;meta&#x6570;&#x636E;</span>
+<span class="hljs-addition">+        });</span>
+<span class="hljs-addition">+    });</span>
+<span class="hljs-addition">+    return branches;</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+function rankRouteBranches(branches) {</span>
+<span class="hljs-addition">+  branches.sort((a, b) =&gt; a.score !== b.score ? b.score - a.score : compareIndexes(a.routesMeta.map(meta =&gt; meta.childrenIndex), b.routesMeta.map(meta =&gt; meta.childrenIndex)));</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+function compareIndexes(a, b) {</span>
+<span class="hljs-addition">+    let siblings = a.length === b.length &amp;&amp; a.slice(0, -1).every((n, i) =&gt; n === b[i]);</span>
+<span class="hljs-addition">+    return siblings ? a[a.length - 1] - b[b.length - 1] : 0;</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+/**</span>
+<span class="hljs-addition">+ * &#x5339;&#x914D;&#x8DEF;&#x7531;&#x7684;&#x5206;&#x652F;</span>
+<span class="hljs-addition">+ * @param {*} branch  /user/&#x661F;/add</span>
+<span class="hljs-addition">+ * @param {*} pathname </span>
+<span class="hljs-addition">+ * @returns </span>
+<span class="hljs-addition">+ */</span>
+<span class="hljs-addition">+function matchRouteBranch(branch, pathname) {</span>
+<span class="hljs-addition">+    let { routesMeta } = branch;</span>
+<span class="hljs-addition">+    let matchedParams = {};</span>
+<span class="hljs-addition">+    let matchedPathname = &quot;/&quot;;</span>
+<span class="hljs-addition">+    let matches = [];</span>
+<span class="hljs-addition">+    for (let i = 0; i &lt; routesMeta.length; ++i) {</span>
+<span class="hljs-addition">+        //&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x7684;meta</span>
+<span class="hljs-addition">+        let meta = routesMeta[i];</span>
+<span class="hljs-addition">+        //&#x662F;&#x5426;&#x662F;&#x6700;&#x540E;&#x4E00;&#x4E2A;</span>
+<span class="hljs-addition">+        let end = i === routesMeta.length - 1;</span>
+<span class="hljs-addition">+        //&#x83B7;&#x53D6;&#x5269;&#x4E0B;&#x7684;&#x8DEF;&#x5F84;</span>
+<span class="hljs-addition">+        let remainingPathname = matchedPathname === &quot;/&quot; ? pathname : pathname.slice(matchedPathname.length) || &quot;/&quot;;</span>
+<span class="hljs-addition">+        //&#x5224;&#x65AD;&#x8DEF;&#x5F84;&#x662F;&#x5426;&#x5339;&#x914D;</span>
+<span class="hljs-addition">+        let match = matchPath({</span>
+<span class="hljs-addition">+            path: meta.relativePath,</span>
+<span class="hljs-addition">+            end</span>
+<span class="hljs-addition">+        }, remainingPathname);</span>
+<span class="hljs-addition">+        if (!match) return null;</span>
+<span class="hljs-addition">+        Object.assign(matchedParams, match.params);</span>
+<span class="hljs-addition">+        let route = meta.route;</span>
+<span class="hljs-addition">+        matches.push({</span>
+<span class="hljs-addition">+            params: matchedParams,</span>
+<span class="hljs-addition">+            pathname: joinPaths([matchedPathname, match.pathname]),</span>
+<span class="hljs-addition">+            pathnameBase: joinPaths([matchedPathname, match.pathnameBase]),</span>
+<span class="hljs-addition">+            route</span>
+<span class="hljs-addition">+        });</span>
+<span class="hljs-addition">+        if (match.pathnameBase !== &quot;/&quot;) {</span>
+<span class="hljs-addition">+            matchedPathname = joinPaths([matchedPathname, match.pathnameBase]);</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    return matches;</span>
+<span class="hljs-addition">+}</span>
+
+
+export function createRoutesFromChildren(children) {
+    let routes = [];
+    React.Children.forEach(children, element =&gt; {
+        let route = {
+            path: element.props.path,
+            element: element.props.element
+        };
+<span class="hljs-addition">+       if (element.props.children) {</span>
+<span class="hljs-addition">+           route.children = createRoutesFromChildren(element.props.children);</span>
+<span class="hljs-addition">+       }</span>
+        routes.push(route);
+    });
+    return routes;
+}
+
+export function Route(props) {
+
+}
+function compilePath(path, end) {
+    let paramNames = [];
+    let regexpSource = &quot;^&quot; + path
+<span class="hljs-addition">+       .replace(/\/*\*?$/, &quot;&quot;)</span>
+<span class="hljs-addition">+       .replace(/^\/*/, &quot;/&quot;)</span>
+        .replace(/:(\w+)/g, (_, key) =&gt; {
+            paramNames.push(key);
+            return &quot;([^\\/]+)&quot;;
+        });
+<span class="hljs-addition">+   if (path.endsWith(&quot;*&quot;)) {</span>
+<span class="hljs-addition">+       paramNames.push(&quot;*&quot;);</span>
+<span class="hljs-addition">+       regexpSource += &quot;(?:\\/(.+)|\\/*)$&quot;;</span>
+<span class="hljs-addition">+   } else {</span>
+<span class="hljs-addition">+       regexpSource += end ? &quot;\\/*$&quot; : &quot;(?:\\b|\\/|$)&quot;;</span>
+<span class="hljs-addition">+   }</span>
+    let matcher = new RegExp(regexpSource);
+    return [matcher, paramNames];
+}
+<span class="hljs-addition">+export function matchPath(pattern, pathname) {</span>
+<span class="hljs-addition">+    let [matcher, paramNames] = compilePath(pattern.path, pattern.end);</span>
+<span class="hljs-addition">+    //&#x83B7;&#x53D6;&#x5339;&#x914D;&#x7ED3;&#x679C;</span>
+<span class="hljs-addition">+    let match = pathname.match(matcher);</span>
+<span class="hljs-addition">+    if (!match) return null;</span>
+<span class="hljs-addition">+    //&#x83B7;&#x53D6;&#x5339;&#x914D;&#x7684;&#x8DEF;&#x5F84;</span>
+<span class="hljs-addition">+    let matchedPathname = match[0];</span>
+<span class="hljs-addition">+    //&#x53EA;&#x8981;&#x5F53;&#x524D;&#x7684;&#x8DEF;&#x5F84;</span>
+<span class="hljs-addition">+    let pathnameBase = matchedPathname.replace(/(.)\/+$/, &quot;$1&quot;);</span>
+<span class="hljs-addition">+    //&#x83B7;&#x53D6;&#x540E;&#x9762;&#x7684;&#x5206;&#x7EC4;&#x7684;&#x503C;</span>
+<span class="hljs-addition">+    let values = match.slice(1);</span>
+<span class="hljs-addition">+    //&#x83B7;&#x53D6;&#x6355;&#x83B7;&#x7684;&#x5206;&#x7EC4;</span>
+<span class="hljs-addition">+    let captureGroups = match.slice(1);</span>
+<span class="hljs-addition">+    //&#x904D;&#x5386;&#x53C2;&#x6570;&#x540D;&#x79F0;</span>
+<span class="hljs-addition">+    let params = paramNames.reduce(</span>
+<span class="hljs-addition">+        (memo, paramName, index) =&gt; {</span>
+<span class="hljs-addition">+            if (paramName === &quot;*&quot;) {</span>
+<span class="hljs-addition">+                let splatValue = captureGroups[index] || &quot;&quot;;</span>
+<span class="hljs-addition">+                pathnameBase = matchedPathname.slice(0, matchedPathname.length - splatValue.length).replace(/(.)\/+$/, &quot;$1&quot;);</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+            memo[paramName] = values[index];</span>
+<span class="hljs-addition">+            return memo;</span>
+<span class="hljs-addition">+        },</span>
+<span class="hljs-addition">+        {}</span>
+<span class="hljs-addition">+    );</span>
+<span class="hljs-addition">+    return {</span>
+<span class="hljs-addition">+        params,</span>
+<span class="hljs-addition">+        pathname: matchedPathname,</span>
+<span class="hljs-addition">+        pathnameBase,</span>
+<span class="hljs-addition">+        pattern</span>
+<span class="hljs-addition">+    };</span>
+<span class="hljs-addition">+}</span>
+
+export function useNavigate() {
+    let { navigator } = React.useContext(NavigationContext);
+    let navigate = React.useCallback((to) =&gt; {
+        navigator.push(to);
+    }, [navigator]);
+    return navigate;
+}
+</code></pre>
+<p>pathnameBase</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> pathname = <span class="hljs-string">&apos;/user/*&apos;</span>;
+<span class="hljs-keyword">let</span> matcher = <span class="hljs-regexp">/^\/user(?:\/(.+)|\/*)$/i</span>;
+<span class="hljs-keyword">let</span> match = pathname.match(matcher);
+<span class="hljs-keyword">let</span> matchedPathname = match[<span class="hljs-number">0</span>];
+<span class="hljs-keyword">let</span> pathnameBase = matchedPathname.replace(<span class="hljs-regexp">/(.)\/+$/</span>, <span class="hljs-string">&quot;$1&quot;</span>);
+<span class="hljs-keyword">let</span> captureGroups = match.slice(<span class="hljs-number">1</span>);
+<span class="hljs-keyword">let</span> paramNames = [<span class="hljs-string">&quot;*&quot;</span>];
+<span class="hljs-keyword">let</span> params = paramNames.reduce(<span class="hljs-function">(<span class="hljs-params">memo, paramName, index</span>) =&gt;</span> {
+    <span class="hljs-keyword">if</span> (paramName === <span class="hljs-string">&quot;*&quot;</span>) {
+        <span class="hljs-keyword">let</span> splatValue = captureGroups[index];<span class="hljs-comment">//add</span>
+        pathnameBase = matchedPathname.slice(<span class="hljs-number">0</span>, matchedPathname.length - splatValue.length).replace(<span class="hljs-regexp">/(.)\/+$/</span>, <span class="hljs-string">&quot;$1&quot;</span>);
+    }
+    memo[paramName] = captureGroups[index];
+    <span class="hljs-keyword">return</span> memo;
+}, {});
+<span class="hljs-built_in">console</span>.log(params);
+<span class="hljs-built_in">console</span>.log(pathnameBase);
+</code></pre>
+<h2 id="t449. &#x5B9E;&#x73B0;NavLink">9. &#x5B9E;&#x73B0;NavLink <a href="#t449. &#x5B9E;&#x73B0;NavLink"> # </a></h2>
+<h3 id="t459.1 public\index.html">9.1 public\index.html <a href="#t459.1 public\index.html"> # </a></h3>
+<p>public\index.html</p>
+<pre><code class="lang-diff">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot; /&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;
+  &lt;meta name=&quot;theme-color&quot; content=&quot;#000000&quot; /&gt;
+  &lt;meta name=&quot;description&quot; content=&quot;Web site created using create-react-app&quot; /&gt;
+  &lt;title&gt;React App&lt;/title&gt;
+<span class="hljs-addition">+ &lt;style&gt;</span>
+<span class="hljs-addition">+   .active {</span>
+<span class="hljs-addition">+     text-decoration: line-through;</span>
+<span class="hljs-addition">+   }</span>
+<span class="hljs-addition">+ &lt;/style&gt;</span>
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<h3 id="t469.2 src\index.js">9.2 src\index.js <a href="#t469.2 src\index.js"> # </a></h3>
+<p>src\index.js</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import ReactDOM from &apos;react-dom&apos;;
+<span class="hljs-addition">+import { BrowserRouter, Routes, Route, NavLink } from &apos;./react-router-dom&apos;;</span>
+import Home from &apos;./components/Home&apos;;
+import User from &apos;./components/User&apos;;
+import UserAdd from &apos;./components/UserAdd&apos;;
+import UserList from &apos;./components/UserList&apos;;
+import UserDetail from &apos;./components/UserDetail&apos;;
+import Profile from &apos;./components/Profile&apos;;
+import Post from &apos;./components/Post&apos;;
+<span class="hljs-addition">+const activeStyle = { backgroundColor: &quot;red&quot; };</span>
+<span class="hljs-addition">+const activeClassName = &apos;active&apos;;</span>
+ReactDOM.render(
+    &lt;BrowserRouter&gt;
+        &lt;ul&gt;
+<span class="hljs-addition">+           &lt;li&gt;</span>
+<span class="hljs-addition">+               &lt;NavLink to=&quot;/&quot;</span>
+<span class="hljs-addition">+                   style={({ isActive }) =&gt; isActive ? activeStyle : {}}</span>
+<span class="hljs-addition">+                   className={({ isActive }) =&gt; isActive ? activeClassName : &apos;&apos;}</span>
+<span class="hljs-addition">+               &gt;&#x9996;&#x9875;&lt;/NavLink&gt;</span>
+<span class="hljs-addition">+           &lt;/li&gt;</span>
+<span class="hljs-addition">+           &lt;li&gt;&lt;NavLink to=&quot;/user&quot; &gt;&#x7528;&#x6237;&#x7BA1;&#x7406;&lt;/NavLink&gt;&lt;/li&gt;</span>
+<span class="hljs-addition">+           &lt;li&gt;&lt;NavLink to=&quot;/profile&quot; &gt;&#x4E2A;&#x4EBA;&#x4E2D;&#x5FC3;&lt;/NavLink&gt;&lt;/li&gt;</span>
+        &lt;/ul&gt;
+        &lt;Routes&gt;
+            &lt;Route path=&quot;/&quot; element={&lt;Home /&gt;} /&gt;
+            &lt;Route path=&quot;/user/*&quot; element={&lt;User /&gt;} &gt;
+                &lt;Route path=&quot;add&quot; element={&lt;UserAdd /&gt;} /&gt;
+                &lt;Route path=&quot;list&quot; element={&lt;UserList /&gt;} /&gt;
+                &lt;Route path=&quot;detail/:id&quot; element={&lt;UserDetail /&gt;} /&gt;
+            &lt;/Route&gt;
+            &lt;Route path=&quot;/profile&quot; element={&lt;Profile /&gt;} /&gt;
+            &lt;Route path=&quot;/post/:id&quot; element={&lt;Post /&gt;} /&gt;
+        &lt;/Routes&gt;
+    &lt;/BrowserRouter&gt;
+    , document.getElementById(&apos;root&apos;));
+</code></pre>
+<h3 id="t479.3 src\react-router-dom\index.js">9.3 src\react-router-dom\index.js <a href="#t479.3 src\react-router-dom\index.js"> # </a></h3>
+<p>src\react-router-dom\index.js</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;
+<span class="hljs-addition">+import { Router, useNavigate, useLocation } from &apos;../react-router&apos;;</span>
+import { createHashHistory, createBrowserHistory } from &quot;../history&quot;;
+export * from &apos;../react-router&apos;;
+
+export function HashRouter({ children }) {
+    let historyRef = React.useRef();
+    if (historyRef.current == null) {
+        historyRef.current = createHashHistory();
+    }
+    let history = historyRef.current;
+    let [state, setState] = React.useState({
+        action: history.action,
+        location: history.location
+    });
+    React.useLayoutEffect(() =&gt; history.listen(setState), [history]);
+    return (
+        &lt;Router
+            children={children}
+            location={state.location}
+            navigationType={state.action}
+            navigator={history}
+        /&gt;
+    );
+}
+
+export function BrowserRouter({ children }) {
+    let historyRef = React.useRef();
+    if (historyRef.current == null) {
+        historyRef.current = createBrowserHistory();
+    }
+    let history = historyRef.current;
+    let [state, setState] = React.useState({
+        action: history.action,
+        location: history.location
+    });
+    React.useLayoutEffect(() =&gt; history.listen(setState), [history]);
+    return (
+        &lt;Router
+            children={children}
+            location={state.location}
+            navigationType={state.action}
+            navigator={history}
+        /&gt;
+    );
+}
+export function Link({ to, ...rest }) {
+    let navigate = useNavigate();
+    function handleClick() {
+        navigate(to);
+    }
+    return (
+        &lt;a
+            {...rest}
+            href={to}
+            onClick={handleClick}
+        /&gt;
+    );
+}
+<span class="hljs-addition">+export const NavLink = function ({</span>
+<span class="hljs-addition">+    className: classNameProp = &quot;&quot;,</span>
+<span class="hljs-addition">+    end = false,</span>
+<span class="hljs-addition">+    style: styleProp = {},</span>
+<span class="hljs-addition">+    to,</span>
+<span class="hljs-addition">+    children,</span>
+<span class="hljs-addition">+    ...rest</span>
+<span class="hljs-addition">+}) {</span>
+<span class="hljs-addition">+    let location = useLocation();</span>
+<span class="hljs-addition">+    let path = { pathname: to };</span>
+<span class="hljs-addition">+    let locationPathname = location.pathname;</span>
+<span class="hljs-addition">+    let toPathname = path.pathname;</span>
+<span class="hljs-addition">+    let isActive = locationPathname === toPathname || (!end &amp;&amp; locationPathname.startsWith(toPathname) &amp;&amp; locationPathname.charAt(toPathname.length) === &quot;/&quot;);</span>
+<span class="hljs-addition">+    let className;</span>
+<span class="hljs-addition">+    if (typeof classNameProp === &quot;function&quot;) {</span>
+<span class="hljs-addition">+        debugger</span>
+<span class="hljs-addition">+        className = classNameProp({</span>
+<span class="hljs-addition">+            isActive</span>
+<span class="hljs-addition">+        });</span>
+<span class="hljs-addition">+    } else {</span>
+<span class="hljs-addition">+        className = [classNameProp, isActive ? &quot;active&quot; : null].filter(Boolean).join(&quot; &quot;);</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    let style = typeof styleProp === &quot;function&quot; ? styleProp({</span>
+<span class="hljs-addition">+        isActive</span>
+<span class="hljs-addition">+    }) : styleProp;</span>
+<span class="hljs-addition">+    return (</span>
+<span class="hljs-addition">+        &lt;Link {...rest} className={className} style={style} to={to}&gt;</span>
+<span class="hljs-addition">+            {children}</span>
+<span class="hljs-addition">+        &lt;/Link&gt;</span>
+<span class="hljs-addition">+    );</span>
+<span class="hljs-addition">+}</span>
+</code></pre>
+<h2 id="t4810. &#x8DF3;&#x8F6C;&#x548C;&#x91CD;&#x5B9A;&#x5411;">10. &#x8DF3;&#x8F6C;&#x548C;&#x91CD;&#x5B9A;&#x5411; <a href="#t4810. &#x8DF3;&#x8F6C;&#x548C;&#x91CD;&#x5B9A;&#x5411;"> # </a></h2>
+<h3 id="t4910.1 src\index.js">10.1 src\index.js <a href="#t4910.1 src\index.js"> # </a></h3>
+<p>src\index.js</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import ReactDOM from &apos;react-dom&apos;;
+<span class="hljs-addition">+import { BrowserRouter, Routes, Route, NavLink, Navigate } from &apos;./react-router-dom&apos;;</span>
+import Home from &apos;./components/Home&apos;;
+import User from &apos;./components/User&apos;;
+import UserAdd from &apos;./components/UserAdd&apos;;
+import UserList from &apos;./components/UserList&apos;;
+import UserDetail from &apos;./components/UserDetail&apos;;
+import Profile from &apos;./components/Profile&apos;;
+import Post from &apos;./components/Post&apos;;
+const activeStyle = { backgroundColor: &quot;red&quot; };
+const activeClassName = &apos;active&apos;;
+ReactDOM.render(
+    &lt;BrowserRouter&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;NavLink to=&quot;/&quot;
+                    style={({ isActive }) =&gt; isActive ? activeStyle : {}}
+                    className={({ isActive }) =&gt; isActive ? activeClassName : &apos;&apos;}
+                &gt;&#x9996;&#x9875;&lt;/NavLink&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;NavLink to=&quot;/user&quot; &gt;&#x7528;&#x6237;&#x7BA1;&#x7406;&lt;/NavLink&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;NavLink to=&quot;/profile&quot; &gt;&#x4E2A;&#x4EBA;&#x4E2D;&#x5FC3;&lt;/NavLink&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;Routes&gt;
+            &lt;Route path=&quot;/&quot; element={&lt;Home /&gt;} /&gt;
+            &lt;Route path=&quot;/user/*&quot; element={&lt;User /&gt;} &gt;
+                &lt;Route path=&quot;add&quot; element={&lt;UserAdd /&gt;} /&gt;
+                &lt;Route path=&quot;list&quot; element={&lt;UserList /&gt;} /&gt;
+                &lt;Route path=&quot;detail/:id&quot; element={&lt;UserDetail /&gt;} /&gt;
+            &lt;/Route&gt;
+            &lt;Route path=&quot;/profile&quot; element={&lt;Profile /&gt;} /&gt;
+            &lt;Route path=&quot;/post/:id&quot; element={&lt;Post /&gt;} /&gt;
+<span class="hljs-addition">+           &lt;Route path=&quot;*&quot; element={&lt;Navigate to=&quot;/&quot; /&gt;} /&gt;</span>
+        &lt;/Routes&gt;
+    &lt;/BrowserRouter&gt;
+    , document.getElementById(&apos;root&apos;));
+</code></pre>
+<h3 id="t5010.2 Home.js">10.2 Home.js <a href="#t5010.2 Home.js"> # </a></h3>
+<p>src\components\Home.js</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+<span class="hljs-addition">+import { useNavigate } from &apos;../react-router-dom&apos;;</span>
+function Home(props) {
+<span class="hljs-addition">+   let navigate = useNavigate();</span>
+<span class="hljs-addition">+   function navigateTo() {</span>
+<span class="hljs-addition">+       navigate(&apos;/profile&apos;);</span>
+<span class="hljs-addition">+   };</span>
+    return (
+        &lt;div&gt;
+            &lt;p&gt;Home&lt;/p&gt;
+<span class="hljs-addition">+           &lt;button onClick={navigateTo}&gt;&#x8DF3;&#x8F6C;&#x5230;/profile&lt;/button&gt;</span>
+        &lt;/div&gt;
+    )
+}
+export default Home;
+</code></pre>
+<h3 id="t5110.3 react-router\index.js">10.3 react-router\index.js <a href="#t5110.3 react-router\index.js"> # </a></h3>
+<p>src\react-router\index.js</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+//&#x5BFC;&#x822A;&#x4E0A;&#x4E0B;&#x6587;
+const NavigationContext = React.createContext({});
+//&#x8DEF;&#x5F84;&#x4E0A;&#x4E0B;&#x6587;
+const LocationContext = React.createContext({});
+//&#x8DEF;&#x7531;&#x4E0A;&#x4E0B;&#x6587;
+const RouteContext = React.createContext({
+    outlet: null,
+    matches: []
+});
+const OutletContext = React.createContext();
+const joinPaths = paths =&gt; paths.join(&quot;/&quot;).replace(/\/\/+/g, &quot;/&quot;);
+export function Outlet(props) {
+    return useOutlet(props.context);
+}
+export function useOutlet(context) {
+    let outlet = React.useContext(RouteContext).outlet;
+    if (outlet) {
+        return &lt;OutletContext.Provider value={context} children={outlet} /&gt;;
+    }
+    return outlet;
+}
+export function Router({ children, location, navigator }) {
+    let navigationContext = React.useMemo(
+        () =&gt; ({ navigator }),
+        [navigator]
+    );
+    return (
+        &lt;NavigationContext.Provider value={navigationContext}&gt;
+            &lt;LocationContext.Provider
+                children={children}
+                value={{ location }}
+            /&gt;
+        &lt;/NavigationContext.Provider&gt;
+    );
+}
+export function Routes({ children }) {
+    return useRoutes(createRoutesFromChildren(children));
+}
+export function useLocation() {
+    return React.useContext(LocationContext).location;
+}
+export function useRoutes(routes) {
+    //&#x5F53;&#x524D;&#x7684;&#x8DEF;&#x5F84;&#x5BF9;&#x8C61;
+    let location = useLocation();
+    //&#x5F53;&#x524D;&#x7684;&#x8DEF;&#x5F84;&#x5B57;&#x7B26;&#x4E32;
+    let pathname = location.pathname || &quot;/&quot;;
+    //&#x5339;&#x914D;&#x8DEF;&#x5F84;
+    let matches = matchRoutes(routes, { pathname });
+    //&#x6E32;&#x67D3;&#x5339;&#x914D;&#x7684;&#x7ED3;&#x679C;
+    return _renderMatches(matches);
+}
+function _renderMatches(matches, parentMatches = []) {
+    if (matches == null) return null;
+    return matches.reduceRight((outlet, match, index) =&gt; {
+        return (
+            &lt;RouteContext.Provider children={match.route.element || &lt;Outlet /&gt;} value={{
+                outlet,
+                matches: parentMatches.concat(matches.slice(0, index + 1))
+            }} /&gt;
+        );
+    }, null);
+}
+export function matchRoutes(routes, location) {
+    //&#x83B7;&#x53D6;&#x8DEF;&#x5F84;
+    let pathname = location.pathname || &quot;/&quot;;
+    //&#x6253;&#x5E73;&#x6240;&#x6709;&#x7684;&#x5206;&#x652F;
+    let branches = flattenRoutes(routes);
+    //&#x5339;&#x914D;&#x8DEF;&#x7531;&#x5206;&#x652F;
+    let matches = null;
+    for (let i = 0; matches == null &amp;&amp; i &lt; branches.length; ++i) {
+        matches = matchRouteBranch(branches[i], pathname);
+    }
+    return matches;
+}
+function flattenRoutes(routes, branches = [], parentsMeta = [], parentPath = &quot;&quot;) {
+    routes.forEach((route) =&gt; {
+        let meta = {
+            relativePath: route.path || &quot;&quot;,//&#x8DEF;&#x7531;&#x7684;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;
+            route //&#x8DEF;&#x7531;&#x5BF9;&#x8C61;
+        };
+        //&#x7236;&#x8DEF;&#x5F84;&#x548C;&#x5B50;&#x8DEF;&#x5F84;&#x62FC;&#x5728;&#x4E00;&#x8D77;&#x6210;&#x4E3A;&#x5F53;&#x524D;&#x7684;&#x8DEF;&#x5F84;
+        let path = joinPaths([parentPath, meta.relativePath]);
+        //&#x5404;&#x7236;Meta&#x6570;&#x7EC4;&#x4E2D;&#x6DFB;&#x52A0;&#x5F53;&#x524D;&#x7684;meta
+        let routesMeta = parentsMeta.concat(meta);
+        if (route.children &amp;&amp; route.children.length &gt; 0) {
+            flattenRoutes(route.children, branches, routesMeta, path);
+        }
+        branches.push({
+            path,//&#x6B64;&#x914D;&#x7F6E;&#x7684;&#x5B8C;&#x6574;&#x8DEF;&#x5F84;
+            routesMeta //&#x6B64;&#x914D;&#x7F6E;&#x7684;meta&#x6570;&#x636E;
+        });
+    });
+    return branches;
+}
+
+/**
+ * &#x5339;&#x914D;&#x8DEF;&#x7531;&#x7684;&#x5206;&#x652F;
+ * @param {*} branch  /user/&#x661F;/add
+ * @param {*} pathname 
+ * @returns 
+ */
+function matchRouteBranch(branch, pathname) {
+    let { routesMeta } = branch;
+    let matchedParams = {};
+    let matchedPathname = &quot;/&quot;;
+    let matches = [];
+    for (let i = 0; i &lt; routesMeta.length; ++i) {
+        //&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x7684;meta
+        let meta = routesMeta[i];
+        //&#x662F;&#x5426;&#x662F;&#x6700;&#x540E;&#x4E00;&#x4E2A;
+        let end = i <span class="hljs-comment">=== routesMeta.length - 1;</span>
+        //&#x83B7;&#x53D6;&#x5269;&#x4E0B;&#x7684;&#x8DEF;&#x5F84;
+        let remainingPathname = matchedPathname <span class="hljs-comment">=== &quot;/&quot; ? pathname : pathname.slice(matchedPathname.length) || &quot;/&quot;;</span>
+        //&#x5224;&#x65AD;&#x8DEF;&#x5F84;&#x662F;&#x5426;&#x5339;&#x914D;
+        let match = matchPath({
+            path: meta.relativePath,
+            end
+        }, remainingPathname);
+        if (!match) return null;
+        Object.assign(matchedParams, match.params);
+        let route = meta.route;
+        matches.push({
+            params: matchedParams,
+            pathname: joinPaths([matchedPathname, match.pathname]),
+            pathnameBase: joinPaths([matchedPathname, match.pathnameBase]),
+            route
+        });
+        if (match.pathnameBase !== &quot;/&quot;) {
+            matchedPathname = joinPaths([matchedPathname, match.pathnameBase]);
+        }
+    }
+    return matches;
+}
+
+
+export function createRoutesFromChildren(children) {
+    let routes = [];
+    React.Children.forEach(children, element =&gt; {
+        let route = {
+            path: element.props.path,
+            element: element.props.element
+        };
+        if (element.props.children) {
+            route.children = createRoutesFromChildren(element.props.children);
+        }
+        routes.push(route);
+    });
+    return routes;
+}
+
+export function Route(props) {
+
+}
+function compilePath(path, end) {
+    let paramNames = [];
+    let regexpSource = &quot;^&quot; + path
+        .replace(/^\/*/, &quot;/&quot;)
+        .replace(/:(\w+)/g, (_, key) =&gt; {
+            paramNames.push(key);
+            return &quot;([^\\/]+)&quot;;
+        });
+    if (path.endsWith(&quot;*&quot;)) {
+        paramNames.push(&quot;*&quot;);
+        regexpSource += &quot;(?:\\/(.+)|\\/*)$&quot;;
+    } else {
+        regexpSource += end ? &quot;\\/*$&quot; : &quot;(?:\\b|\\/|$)&quot;;
+    }
+    let matcher = new RegExp(regexpSource);
+    return [matcher, paramNames];
+}
+export function matchPath(pattern, pathname) {
+    let [matcher, paramNames] = compilePath(pattern.path, pattern.end);
+    //&#x83B7;&#x53D6;&#x5339;&#x914D;&#x7ED3;&#x679C;
+    let match = pathname.match(matcher);
+    if (!match) return null;
+    //&#x83B7;&#x53D6;&#x5339;&#x914D;&#x7684;&#x8DEF;&#x5F84;
+    let matchedPathname = match[0];
+    //&#x53EA;&#x8981;&#x5F53;&#x524D;&#x7684;&#x8DEF;&#x5F84;
+    let pathnameBase = matchedPathname.replace(/(.)\/+$/, &quot;$1&quot;);
+    //&#x83B7;&#x53D6;&#x540E;&#x9762;&#x7684;&#x5206;&#x7EC4;&#x7684;&#x503C;
+    let values = match.slice(1);
+    //&#x83B7;&#x53D6;&#x6355;&#x83B7;&#x7684;&#x5206;&#x7EC4;
+    let captureGroups = match.slice(1);
+    //&#x904D;&#x5386;&#x53C2;&#x6570;&#x540D;&#x79F0;
+    let params = paramNames.reduce(
+        (memo, paramName, index) =&gt; {
+            if (paramName <span class="hljs-comment">=== &quot;*&quot;) {</span>
+                let splatValue = captureGroups[index] || &quot;&quot;;
+                pathnameBase = matchedPathname.slice(0, matchedPathname.length - splatValue.length).replace(/(.)\/+$/, &quot;$1&quot;);
+            }
+            memo[paramName] = values[index];
+            return memo;
+        },
+        {}
+    );
+    return {
+        params,
+        pathname: matchedPathname,
+        pathnameBase,
+        pattern
+    };
+}
+
+export function useNavigate() {
+    let { navigator } = React.useContext(NavigationContext);
+    let navigate = React.useCallback((to) =&gt; {
+        navigator.push(to);
+    }, [navigator]);
+    return navigate;
+}
+
+<span class="hljs-addition">+export function Navigate({ to }) {</span>
+<span class="hljs-addition">+    let navigate = useNavigate();</span>
+<span class="hljs-addition">+    React.useEffect(() =&gt; {</span>
+<span class="hljs-addition">+        debugger</span>
+<span class="hljs-addition">+        navigate(to);</span>
+<span class="hljs-addition">+    });</span>
+<span class="hljs-addition">+    return null;</span>
+<span class="hljs-addition">+}</span>
+</code></pre>
+<h2 id="t5211. &#x53D7;&#x4FDD;&#x62A4;&#x8DEF;&#x7531;">11. &#x53D7;&#x4FDD;&#x62A4;&#x8DEF;&#x7531; <a href="#t5211. &#x53D7;&#x4FDD;&#x62A4;&#x8DEF;&#x7531;"> # </a></h2>
+<h3 id="t5311.1 src\index.js">11.1 src\index.js <a href="#t5311.1 src\index.js"> # </a></h3>
+<p>src\index.js</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import ReactDOM from &apos;react-dom&apos;;
+import { BrowserRouter, Routes, Route, NavLink, Navigate } from &apos;./react-router-dom&apos;;
+import Home from &apos;./components/Home&apos;;
+import User from &apos;./components/User&apos;;
+import UserAdd from &apos;./components/UserAdd&apos;;
+import UserList from &apos;./components/UserList&apos;;
+import UserDetail from &apos;./components/UserDetail&apos;;
+import Profile from &apos;./components/Profile&apos;;
+import Post from &apos;./components/Post&apos;;
+<span class="hljs-addition">+import Protected from &apos;./components/Protected&apos;;</span>
+<span class="hljs-addition">+import Login from &apos;./components/Login&apos;;</span>
+const activeStyle = { backgroundColor: &quot;red&quot; };
+const activeClassName = &apos;active&apos;;
+ReactDOM.render(
+    &lt;BrowserRouter&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;NavLink to=&quot;/&quot;
+                    style={({ isActive }) =&gt; isActive ? activeStyle : {}}
+                    className={({ isActive }) =&gt; isActive ? activeClassName : &apos;&apos;}
+                &gt;&#x9996;&#x9875;&lt;/NavLink&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;NavLink to=&quot;/user&quot; &gt;&#x7528;&#x6237;&#x7BA1;&#x7406;&lt;/NavLink&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;NavLink to=&quot;/profile&quot; &gt;&#x4E2A;&#x4EBA;&#x4E2D;&#x5FC3;&lt;/NavLink&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;Routes&gt;
+            &lt;Route path=&quot;/&quot; element={&lt;Home /&gt;} /&gt;
+            &lt;Route path=&quot;/user/*&quot; element={&lt;User /&gt;} &gt;
+                &lt;Route path=&quot;add&quot; element={&lt;UserAdd /&gt;} /&gt;
+                &lt;Route path=&quot;list&quot; element={&lt;UserList /&gt;} /&gt;
+                &lt;Route path=&quot;detail/:id&quot; element={&lt;UserDetail /&gt;} /&gt;
+            &lt;/Route&gt;
+            &lt;Route path=&quot;/post/:id&quot; element={&lt;Post /&gt;} /&gt;
+<span class="hljs-addition">+           &lt;Route path=&quot;/profile&quot; element={&lt;Protected component={Profile} /&gt;} /&gt;</span>
+<span class="hljs-addition">+           &lt;Route path=&quot;/login&quot; element={&lt;Login /&gt;} /&gt;</span>
+            &lt;Route path=&quot;*&quot; element={&lt;Navigate to=&quot;/&quot; /&gt;} /&gt;
+        &lt;/Routes&gt;
+    &lt;/BrowserRouter&gt;
+    , document.getElementById(&apos;root&apos;));
+</code></pre>
+<h3 id="t5411.2 Login.js">11.2 Login.js <a href="#t5411.2 Login.js"> # </a></h3>
+<p>src\components\Login.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { useNavigate, useLocation } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../react-router-dom&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Login</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">let</span> navigation = useNavigate();
+    <span class="hljs-keyword">let</span> location = useLocation();
+    <span class="hljs-keyword">const</span> login = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+        localStorage.setItem(<span class="hljs-string">&apos;login&apos;</span>, <span class="hljs-string">&apos;true&apos;</span>);
+        <span class="hljs-keyword">let</span> to = <span class="hljs-string">&apos;/&apos;</span>;
+        <span class="hljs-keyword">if</span> (location.state) {
+            to = location.state.from || <span class="hljs-string">&apos;/&apos;</span>;
+        }
+        navigation(to);
+    }
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{login}</span>&gt;</span>&#x767B;&#x5F55;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
+    )
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Login;
+</code></pre>
+<h3 id="t5511.3 Protected.js">11.3 Protected.js <a href="#t5511.3 Protected.js"> # </a></h3>
+<p>src\components\Protected.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { Navigate } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../react-router-dom&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Protected</span>(<span class="hljs-params">props</span>) </span>{
+    <span class="hljs-keyword">let</span> { <span class="hljs-attr">component</span>: RouteComponent, path } = props;
+    <span class="hljs-keyword">return</span> localStorage.getItem(<span class="hljs-string">&apos;login&apos;</span>) ? <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">RouteComponent</span> /&gt;</span></span> :
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Navigate</span> <span class="hljs-attr">to</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">pathname:</span> &apos;/<span class="hljs-attr">login</span>&apos;, <span class="hljs-attr">state:</span> { <span class="hljs-attr">from:</span> <span class="hljs-attr">path</span> } }} /&gt;</span></span>
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Protected;
+</code></pre>
+<h2 id="t5612. &#x914D;&#x7F6E;&#x5F0F;&#x8DEF;&#x7531;&#x548C;&#x61D2;&#x52A0;&#x8F7D;">12. &#x914D;&#x7F6E;&#x5F0F;&#x8DEF;&#x7531;&#x548C;&#x61D2;&#x52A0;&#x8F7D; <a href="#t5612. &#x914D;&#x7F6E;&#x5F0F;&#x8DEF;&#x7531;&#x548C;&#x61D2;&#x52A0;&#x8F7D;"> # </a></h2>
+<h3 id="t5712.1 src\index.js">12.1 src\index.js <a href="#t5712.1 src\index.js"> # </a></h3>
+<p>src\index.js</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import ReactDOM from &apos;react-dom&apos;;
+import { BrowserRouter, Routes, Route, NavLink, Navigate, useRoutes } from &apos;./react-router-dom&apos;;
+<span class="hljs-deletion">-import Home from &apos;./components/Home&apos;;</span>
+<span class="hljs-deletion">-import User from &apos;./components/User&apos;;</span>
+<span class="hljs-deletion">-import UserAdd from &apos;./components/UserAdd&apos;;</span>
+<span class="hljs-deletion">-import UserList from &apos;./components/UserList&apos;;</span>
+<span class="hljs-deletion">-import UserDetail from &apos;./components/UserDetail&apos;;</span>
+<span class="hljs-deletion">-import Profile from &apos;./components/Profile&apos;;</span>
+<span class="hljs-deletion">-import Post from &apos;./components/Post&apos;;</span>
+<span class="hljs-deletion">-import Protected from &apos;./components/Protected&apos;;</span>
+<span class="hljs-deletion">-import Login from &apos;./components/Login&apos;;</span>
+<span class="hljs-addition">+import routesConfig from &apos;./routesConfig&apos;;</span>
+<span class="hljs-addition">+const activeStyle = { backgroundColor: &quot;red&quot; };</span>
+<span class="hljs-addition">+const activeClassName = &apos;active&apos;;</span>
+<span class="hljs-addition">+const LazyPost = React.lazy(() =&gt; import(&apos;./components/Post&apos;));</span>
+<span class="hljs-addition">+function App() {</span>
+<span class="hljs-addition">+    let [routes, setRoutes] = React.useState(routesConfig);</span>
+<span class="hljs-addition">+    const addRoute = () =&gt; {</span>
+<span class="hljs-addition">+        setRoutes([...routes, {</span>
+<span class="hljs-addition">+            path: &apos;/foo&apos;, element: (</span>
+<span class="hljs-addition">+                &lt;React.Suspense fallback={&lt;div&gt;loading...&lt;/div&gt;}&gt;</span>
+<span class="hljs-addition">+                    &lt;LazyPost /&gt;</span>
+<span class="hljs-addition">+                &lt;/React.Suspense&gt;</span>
+<span class="hljs-addition">+            )</span>
+<span class="hljs-addition">+        }]);</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    return (</span>
+<span class="hljs-addition">+        &lt;div&gt;</span>
+<span class="hljs-addition">+            {useRoutes(routes)}</span>
+<span class="hljs-addition">+            &lt;button onClick={addRoute}&gt;addRoute&lt;/button&gt;</span>
+<span class="hljs-addition">+        &lt;/div&gt;</span>
+<span class="hljs-addition">+    )</span>
+<span class="hljs-addition">+}</span>
+ReactDOM.render(
+    &lt;BrowserRouter&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;NavLink to=&quot;/&quot;
+                    style={({ isActive }) =&gt; isActive ? activeStyle : {}}
+                    className={({ isActive }) =&gt; isActive ? activeClassName : &apos;&apos;}
+                &gt;&#x9996;&#x9875;&lt;/NavLink&gt;
+            &lt;/li&gt;
+            &lt;li&gt;&lt;NavLink to=&quot;/user&quot; &gt;&#x7528;&#x6237;&#x7BA1;&#x7406;&lt;/NavLink&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;NavLink to=&quot;/profile&quot; &gt;&#x4E2A;&#x4EBA;&#x4E2D;&#x5FC3;&lt;/NavLink&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+<span class="hljs-addition">+       &lt;App /&gt;</span>
+    &lt;/BrowserRouter&gt;
+    , document.getElementById(&apos;root&apos;));
+</code></pre>
+<h3 id="t5812.2 src\routesConfig.js">12.2 src\routesConfig.js <a href="#t5812.2 src\routesConfig.js"> # </a></h3>
+<p>src\routesConfig.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> Home <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./components/Home&apos;</span>;
+<span class="hljs-keyword">import</span> User <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./components/User&apos;</span>;
+<span class="hljs-keyword">import</span> Profile <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./components/Profile&apos;</span>;
+<span class="hljs-keyword">import</span> UserAdd <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./components/UserAdd&apos;</span>;
+<span class="hljs-keyword">import</span> UserDetail <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./components/UserDetail&apos;</span>;
+<span class="hljs-keyword">import</span> UserList <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./components/UserList&apos;</span>;
+<span class="hljs-keyword">import</span> NotFound <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./components/NotFound&apos;</span>;
+<span class="hljs-keyword">import</span> Login <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./components/Login&apos;</span>;
+<span class="hljs-keyword">import</span> Protected <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./components/Protected&apos;</span>;
+<span class="hljs-keyword">const</span> routes = [
+    { <span class="hljs-attr">path</span>: <span class="hljs-string">&apos;/&apos;</span>, <span class="hljs-attr">element</span>: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Home</span> /&gt;</span></span> },
+    { <span class="hljs-attr">path</span>: <span class="hljs-string">&apos;/profile&apos;</span>, <span class="hljs-attr">element</span>: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Profile</span> /&gt;</span></span> },
+    {
+        <span class="hljs-attr">path</span>: <span class="hljs-string">&apos;user&apos;</span>,
+        <span class="hljs-attr">element</span>: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">User</span> /&gt;</span></span>,
+        <span class="hljs-attr">children</span>: [
+            { <span class="hljs-attr">path</span>: <span class="hljs-string">&apos;add&apos;</span>, <span class="hljs-attr">element</span>: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">UserAdd</span> /&gt;</span></span> },
+            { <span class="hljs-attr">path</span>: <span class="hljs-string">&apos;list&apos;</span>, <span class="hljs-attr">element</span>: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">UserList</span> /&gt;</span></span> },
+            { <span class="hljs-attr">path</span>: <span class="hljs-string">&apos;detail/:id&apos;</span>, <span class="hljs-attr">element</span>: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">UserDetail</span> /&gt;</span></span> }
+        ]
+    },
+    { <span class="hljs-attr">path</span>: <span class="hljs-string">&apos;/profile&apos;</span>, <span class="hljs-attr">element</span>: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Protected</span> <span class="hljs-attr">component</span>=<span class="hljs-string">{Profile}</span> /&gt;</span></span> },
+    { <span class="hljs-attr">path</span>: <span class="hljs-string">&apos;/login&apos;</span>, <span class="hljs-attr">element</span>: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Login</span> /&gt;</span></span> },
+    { <span class="hljs-attr">path</span>: <span class="hljs-string">&apos;*&apos;</span>, <span class="hljs-attr">element</span>: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">NotFound</span> /&gt;</span></span> }
+];
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> routes;
+</code></pre>
+<h3 id="t5912.3 NotFound.js">12.3 NotFound.js <a href="#t5912.3 NotFound.js"> # </a></h3>
+<p>src\components\NotFound.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">NotFound</span>(<span class="hljs-params">props</span>) </span>{
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>NotFound<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> NotFound;
+</code></pre>
+
+    </div>
+</div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+    aria-labelledby="loginModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="loginModalLabel">请登录</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="username" class="control-label">姓名:</label>
+                        <input type="text" class="form-control" id="username" placeholder="珠峰架构VIP会员系统用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">密码:</label>
+                        <input type="text" class="form-control" id="password" placeholder="珠峰架构VIP会员系统密码">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                    data-dismiss="modal">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

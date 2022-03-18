@@ -1,0 +1,1626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+   
+                      
+
+                        
+<div class="warpper">
+    <div class="page-toc">
+        <ul><li><a href="#t01. React Hooks">1. React Hooks</a></li><li><a href="#t12. 解决的问题">2. 解决的问题</a></li><li><a href="#t23. 注意事项">3. 注意事项</a></li><li><a href="#t34. useState">4. useState</a><ul><li><a href="#t44.1 计数器">4.1 计数器</a></li><li><a href="#t54.2 每次渲染都是独立的闭包">4.2 每次渲染都是独立的闭包</a></li><li><a href="#t64.3 函数式更新">4.3 函数式更新</a></li><li><a href="#t74.4 惰性初始 state">4.4 惰性初始 state</a></li><li><a href="#t84.5 性能优化">4.5 性能优化</a><ul><li><a href="#t94.5.1 Object.is">4.5.1 Object.is</a></li><li><a href="#t104.5.2 减少渲染次数">4.5.2 减少渲染次数</a></li></ul></li><li><a href="#t114.6 注意事项">4.6 注意事项</a></li></ul></li><li><a href="#t125. useReducer">5. useReducer</a><ul><li><a href="#t135.1 基本用法">5.1 基本用法</a></li></ul></li><li><a href="#t146. useContext">6. useContext</a></li><li><a href="#t157. effect">7. effect</a><ul><li><a href="#t167.1 通过class实现修标题">7.1 通过class实现修标题</a></li><li><a href="#t177.2 通过effect实现">7.2 通过effect实现</a></li><li><a href="#t187.3 跳过 Effect 进行性能优化">7.3 跳过 Effect 进行性能优化</a></li><li><a href="#t197.4 清除副作用">7.4 清除副作用</a></li><li><a href="#t207.5 useRef">7.5 useRef</a><ul><li><a href="#t217.5.1 useRef">7.5.1 useRef</a></li><li><a href="#t227.5.2 forwardRef">7.5.2 forwardRef</a></li><li><a href="#t237.5.3 useImperativeHandle">7.5.3 useImperativeHandle</a></li></ul></li></ul></li><li><a href="#t248. useLayoutEffect">8. useLayoutEffect</a></li><li><a href="#t259. 自定义 Hook">9. 自定义 Hook</a><ul><li><a href="#t269.1.自定义计数器">9.1.自定义计数器</a></li><li><a href="#t279.2 中间件">9.2 中间件</a><ul><li><a href="#t289.2.1 logger">9.2.1 logger</a></li><li><a href="#t299.2.2 promise">9.2.2 promise</a></li><li><a href="#t309.2.3 thunk">9.2.3 thunk</a></li></ul></li><li><a href="#t319.3 ajax">9.3 ajax</a></li><li><a href="#t329.4 动画">9.4 动画</a></li></ul></li><li><a href="#t3310.路由hooks">10.路由hooks</a><ul><li><a href="#t3410.1 useParams">10.1 useParams</a><ul><li><a href="#t3510.1.1 老版">10.1.1 老版</a></li><li><a href="#t3610.1.2.新版">10.1.2.新版</a></li></ul></li><li><a href="#t3710.2.useLocation">10.2.useLocation</a><ul><li><a href="#t3810.2.1.老版">10.2.1.老版</a></li><li><a href="#t3910.2.2 新版">10.2.2 新版</a></li></ul></li><li><a href="#t4010.3.useHistory">10.3.useHistory</a><ul><li><a href="#t4110.3.1 老版">10.3.1 老版</a></li><li><a href="#t4210.3.2 新版">10.3.2 新版</a></li></ul></li><li><a href="#t4310.4 useRouteMatch">10.4 useRouteMatch</a><ul><li><a href="#t4410.4.1 旧版">10.4.1 旧版</a></li><li><a href="#t4510.4.2 新版">10.4.2 新版</a></li></ul></li></ul></li></ul>
+    </div>
+    <div class="content markdown-body">
+        <h2 id="t01. React Hooks">1. React Hooks <a href="#t01. React Hooks"> # </a></h2>
+<ul>
+<li>Hook &#x662F; React 16.8 &#x7684;&#x65B0;&#x589E;&#x7279;&#x6027;&#x3002;&#x5B83;&#x53EF;&#x4EE5;&#x8BA9;&#x4F60;&#x5728;&#x4E0D;&#x7F16;&#x5199; class &#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x4F7F;&#x7528; state &#x4EE5;&#x53CA;&#x5176;&#x4ED6;&#x7684; React &#x7279;&#x6027;</li>
+<li>&#x5982;&#x679C;&#x4F60;&#x5728;&#x7F16;&#x5199;&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#x5E76;&#x610F;&#x8BC6;&#x5230;&#x9700;&#x8981;&#x5411;&#x5176;&#x6DFB;&#x52A0;&#x4E00;&#x4E9B; state&#xFF0C;&#x4EE5;&#x524D;&#x7684;&#x505A;&#x6CD5;&#x662F;&#x5FC5;&#x987B;&#x5C06;&#x5176;&#x5B83;&#x8F6C;&#x5316;&#x4E3A; class&#x3002;&#x73B0;&#x5728;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x73B0;&#x6709;&#x7684;&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528; Hook</li>
+</ul>
+<h2 id="t12. &#x89E3;&#x51B3;&#x7684;&#x95EE;&#x9898;">2. &#x89E3;&#x51B3;&#x7684;&#x95EE;&#x9898; <a href="#t12. &#x89E3;&#x51B3;&#x7684;&#x95EE;&#x9898;"> # </a></h2>
+<ul>
+<li>&#x5728;&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x590D;&#x7528;&#x72B6;&#x6001;&#x903B;&#x8F91;&#x5F88;&#x96BE;,&#x53EF;&#x80FD;&#x8981;&#x7528;&#x5230;render props&#x548C;&#x9AD8;&#x9636;&#x7EC4;&#x4EF6;&#xFF0C;React &#x9700;&#x8981;&#x4E3A;&#x5171;&#x4EAB;&#x72B6;&#x6001;&#x903B;&#x8F91;&#x63D0;&#x4F9B;&#x66F4;&#x597D;&#x7684;&#x539F;&#x751F;&#x9014;&#x5F84;&#xFF0C;Hook &#x4F7F;&#x4F60;&#x5728;&#x65E0;&#x9700;&#x4FEE;&#x6539;&#x7EC4;&#x4EF6;&#x7ED3;&#x6784;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x590D;&#x7528;&#x72B6;&#x6001;&#x903B;&#x8F91;</li>
+<li>&#x590D;&#x6742;&#x7EC4;&#x4EF6;&#x53D8;&#x5F97;&#x96BE;&#x4EE5;&#x7406;&#x89E3;&#xFF0C;Hook &#x5C06;&#x7EC4;&#x4EF6;&#x4E2D;&#x76F8;&#x4E92;&#x5173;&#x8054;&#x7684;&#x90E8;&#x5206;&#x62C6;&#x5206;&#x6210;&#x66F4;&#x5C0F;&#x7684;&#x51FD;&#x6570;&#xFF08;&#x6BD4;&#x5982;&#x8BBE;&#x7F6E;&#x8BA2;&#x9605;&#x6216;&#x8BF7;&#x6C42;&#x6570;&#x636E;&#xFF09;</li>
+<li>&#x96BE;&#x4EE5;&#x7406;&#x89E3;&#x7684; class,&#x5305;&#x62EC;&#x96BE;&#x4EE5;&#x6349;&#x6478;&#x7684;<code>this</code></li>
+</ul>
+<h2 id="t23. &#x6CE8;&#x610F;&#x4E8B;&#x9879;">3. &#x6CE8;&#x610F;&#x4E8B;&#x9879; <a href="#t23. &#x6CE8;&#x610F;&#x4E8B;&#x9879;"> # </a></h2>
+<ul>
+<li>&#x53EA;&#x80FD;&#x5728;&#x51FD;&#x6570;&#x6700;&#x5916;&#x5C42;&#x8C03;&#x7528; Hook&#x3002;&#x4E0D;&#x8981;&#x5728;&#x5FAA;&#x73AF;&#x3001;&#x6761;&#x4EF6;&#x5224;&#x65AD;&#x6216;&#x8005;&#x5B50;&#x51FD;&#x6570;&#x4E2D;&#x8C03;&#x7528;&#x3002;</li>
+<li>&#x53EA;&#x80FD;&#x5728; React &#x7684;&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#x4E2D;&#x8C03;&#x7528; Hook&#x3002;&#x4E0D;&#x8981;&#x5728;&#x5176;&#x4ED6; JavaScript &#x51FD;&#x6570;&#x4E2D;&#x8C03;&#x7528;</li>
+</ul>
+<h2 id="t34. useState">4. useState <a href="#t34. useState"> # </a></h2>
+<ul>
+<li>useState &#x5C31;&#x662F;&#x4E00;&#x4E2A; Hook</li>
+<li>&#x901A;&#x8FC7;&#x5728;&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#x91CC;&#x8C03;&#x7528;&#x5B83;&#x6765;&#x7ED9;&#x7EC4;&#x4EF6;&#x6DFB;&#x52A0;&#x4E00;&#x4E9B;&#x5185;&#x90E8; state,React &#x4F1A;&#x5728;&#x91CD;&#x590D;&#x6E32;&#x67D3;&#x65F6;&#x4FDD;&#x7559;&#x8FD9;&#x4E2A; state</li>
+<li>useState &#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x5BF9;&#x503C;&#xFF1A;&#x5F53;&#x524D;&#x72B6;&#x6001;&#x548C;&#x4E00;&#x4E2A;&#x8BA9;&#x4F60;&#x66F4;&#x65B0;&#x5B83;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;&#x4E2D;&#x6216;&#x5176;&#x4ED6;&#x4E00;&#x4E9B;&#x5730;&#x65B9;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x3002;&#x5B83;&#x7C7B;&#x4F3C; class &#x7EC4;&#x4EF6;&#x7684; this.setState&#xFF0C;&#x4F46;&#x662F;&#x5B83;&#x4E0D;&#x4F1A;&#x628A;&#x65B0;&#x7684; state &#x548C;&#x65E7;&#x7684; state &#x8FDB;&#x884C;&#x5408;&#x5E76;</li>
+<li>useState &#x552F;&#x4E00;&#x7684;&#x53C2;&#x6570;&#x5C31;&#x662F;&#x521D;&#x59CB; state</li>
+<li>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; state&#xFF0C;&#x4EE5;&#x53CA;&#x66F4;&#x65B0; state &#x7684;&#x51FD;&#x6570;<ul>
+<li>&#x5728;&#x521D;&#x59CB;&#x6E32;&#x67D3;&#x671F;&#x95F4;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x72B6;&#x6001; (state) &#x4E0E;&#x4F20;&#x5165;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570; (initialState) &#x503C;&#x76F8;&#x540C;</li>
+<li>setState &#x51FD;&#x6570;&#x7528;&#x4E8E;&#x66F4;&#x65B0; state&#x3002;&#x5B83;&#x63A5;&#x6536;&#x4E00;&#x4E2A;&#x65B0;&#x7684; state &#x503C;&#x5E76;&#x5C06;&#x7EC4;&#x4EF6;&#x7684;&#x4E00;&#x6B21;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x52A0;&#x5165;&#x961F;&#x5217;</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> [state, setState] = useState(initialState);
+</code></pre>
+<h3 id="t44.1 &#x8BA1;&#x6570;&#x5668;">4.1 &#x8BA1;&#x6570;&#x5668; <a href="#t44.1 &#x8BA1;&#x6570;&#x5668;"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React,{useState} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Counter</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  <span class="hljs-keyword">constructor</span>(props) {
+      <span class="hljs-keyword">super</span>(props);
+      <span class="hljs-keyword">this</span>.state = {
+          <span class="hljs-attr">number</span>: <span class="hljs-number">0</span>
+      };
+  }
+  render() {
+      <span class="hljs-keyword">return</span> (
+          <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{this.state.number}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> this.setState({ number: this.state.number + 1 })}&gt;
+                  +
+        <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+      );
+  }
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Counter2</span>(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-keyword">const</span> [number,setNumber] = useState(<span class="hljs-number">0</span>);
+  <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{number}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span>=&gt;</span>setNumber(number+1)}&gt;+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/&gt;</span></span>
+  )
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Counter2;
+</code></pre>
+<h3 id="t54.2 &#x6BCF;&#x6B21;&#x6E32;&#x67D3;&#x90FD;&#x662F;&#x72EC;&#x7ACB;&#x7684;&#x95ED;&#x5305;">4.2 &#x6BCF;&#x6B21;&#x6E32;&#x67D3;&#x90FD;&#x662F;&#x72EC;&#x7ACB;&#x7684;&#x95ED;&#x5305; <a href="#t54.2 &#x6BCF;&#x6B21;&#x6E32;&#x67D3;&#x90FD;&#x662F;&#x72EC;&#x7ACB;&#x7684;&#x95ED;&#x5305;"> # </a></h3>
+<ul>
+<li>&#x6BCF;&#x4E00;&#x6B21;&#x6E32;&#x67D3;&#x90FD;&#x6709;&#x5B83;&#x81EA;&#x5DF1;&#x7684; Props and State</li>
+<li>&#x6BCF;&#x4E00;&#x6B21;&#x6E32;&#x67D3;&#x90FD;&#x6709;&#x5B83;&#x81EA;&#x5DF1;&#x7684;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;</li>
+<li>alert&#x4F1A;&#x201C;&#x6355;&#x83B7;&#x201D;&#x6211;&#x70B9;&#x51FB;&#x6309;&#x94AE;&#x65F6;&#x5019;&#x7684;&#x72B6;&#x6001;&#x3002;</li>
+<li>&#x6211;&#x4EEC;&#x7684;&#x7EC4;&#x4EF6;&#x51FD;&#x6570;&#x6BCF;&#x6B21;&#x6E32;&#x67D3;&#x90FD;&#x4F1A;&#x88AB;&#x8C03;&#x7528;&#xFF0C;&#x4F46;&#x662F;&#x6BCF;&#x4E00;&#x6B21;&#x8C03;&#x7528;&#x4E2D;number&#x503C;&#x90FD;&#x662F;&#x5E38;&#x91CF;&#xFF0C;&#x5E76;&#x4E14;&#x5B83;&#x88AB;&#x8D4B;&#x4E88;&#x4E86;&#x5F53;&#x524D;&#x6E32;&#x67D3;&#x4E2D;&#x7684;&#x72B6;&#x6001;&#x503C;</li>
+<li>&#x5728;&#x5355;&#x6B21;&#x6E32;&#x67D3;&#x7684;&#x8303;&#x56F4;&#x5185;&#xFF0C;props&#x548C;state&#x59CB;&#x7EC8;&#x4FDD;&#x6301;&#x4E0D;&#x53D8;</li>
+<li><a href="https://overreacted.io/making-setinterval-declarative-with-react-hooks/">making-setinterval-declarative-with-react-hooks</a></li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Counter2</span>(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-keyword">const</span> [number,setNumber] = useState(<span class="hljs-number">0</span>);
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">alertNumber</span>(<span class="hljs-params"></span>)</span>{
+    setTimeout(<span class="hljs-function"><span class="hljs-params">()</span>=&gt;</span>{
+      alert(number);
+    },<span class="hljs-number">3000</span>);
+  }
+  <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{number}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span>=&gt;</span>setNumber(number+1)}&gt;+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{alertNumber}</span>&gt;</span>alertNumber<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/&gt;</span></span>
+  )
+}
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Counter</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> [number, setNumber] = useState(<span class="hljs-number">0</span>);
+    <span class="hljs-keyword">const</span> savedCallback = useRef();
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">alertNumber</span>(<span class="hljs-params"></span>) </span>{
+        setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+            alert(savedCallback.current);
+        }, <span class="hljs-number">3000</span>);
+    }
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{number}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> {
+                setNumber(number + 1);
+                savedCallback.current = number + 1;
+            }}&gt;+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{alertNumber}</span>&gt;</span>alertNumber<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/&gt;</span></span>
+    )
+}
+</code></pre>
+<h3 id="t64.3 &#x51FD;&#x6570;&#x5F0F;&#x66F4;&#x65B0;">4.3 &#x51FD;&#x6570;&#x5F0F;&#x66F4;&#x65B0; <a href="#t64.3 &#x51FD;&#x6570;&#x5F0F;&#x66F4;&#x65B0;"> # </a></h3>
+<ul>
+<li>&#x5982;&#x679C;&#x65B0;&#x7684; state &#x9700;&#x8981;&#x901A;&#x8FC7;&#x4F7F;&#x7528;&#x5148;&#x524D;&#x7684; state &#x8BA1;&#x7B97;&#x5F97;&#x51FA;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x5C06;&#x51FD;&#x6570;&#x4F20;&#x9012;&#x7ED9; setState&#x3002;&#x8BE5;&#x51FD;&#x6570;&#x5C06;&#x63A5;&#x6536;&#x5148;&#x524D;&#x7684; state&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x66F4;&#x65B0;&#x540E;&#x7684;&#x503C;</li>
+</ul>
+<pre><code class="lang-diff">function Counter2(){
+  const [number,setNumber] = useState(0);
+  let numberRef = useRef(number);
+  numberRef.current = number;
+  function alertNumber(){
+    setTimeout(()=&gt;{
+      alert(numberRef.current);
+    },3000);
+  }
+<span class="hljs-addition">+  function lazy(){</span>
+<span class="hljs-addition">+    setTimeout(()=&gt;{</span>
+<span class="hljs-addition">+      setNumber(number+1);</span>
+<span class="hljs-addition">+    },3000);</span>
+<span class="hljs-addition">+  }</span>
+<span class="hljs-addition">+  function lazyFunc(){</span>
+<span class="hljs-addition">+    setTimeout(()=&gt;{</span>
+<span class="hljs-addition">+      setNumber(number=&gt;number+1);</span>
+<span class="hljs-addition">+    },3000);</span>
+<span class="hljs-addition">+  }</span>
+  return (
+      &lt;&gt;
+          &lt;p&gt;{number}&lt;/p&gt;
+          &lt;button onClick={()=&gt;setNumber(number+1)}&gt;+&lt;/button&gt;
+          &lt;button onClick={lazy}&gt;lazy+&lt;/button&gt;
+          &lt;button onClick={lazyFunc}&gt;lazyFunc+&lt;/button&gt;
+          &lt;button onClick={alertNumber}&gt;alertNumber&lt;/button&gt;
+      &lt;/&gt;
+  )
+}
+</code></pre>
+<h3 id="t74.4 &#x60F0;&#x6027;&#x521D;&#x59CB; state">4.4 &#x60F0;&#x6027;&#x521D;&#x59CB; state <a href="#t74.4 &#x60F0;&#x6027;&#x521D;&#x59CB; state"> # </a></h3>
+<ul>
+<li>initialState &#x53C2;&#x6570;&#x53EA;&#x4F1A;&#x5728;&#x7EC4;&#x4EF6;&#x7684;&#x521D;&#x59CB;&#x6E32;&#x67D3;&#x4E2D;&#x8D77;&#x4F5C;&#x7528;&#xFF0C;&#x540E;&#x7EED;&#x6E32;&#x67D3;&#x65F6;&#x4F1A;&#x88AB;&#x5FFD;&#x7565;</li>
+<li>&#x5982;&#x679C;&#x521D;&#x59CB; state &#x9700;&#x8981;&#x901A;&#x8FC7;&#x590D;&#x6742;&#x8BA1;&#x7B97;&#x83B7;&#x5F97;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x5728;&#x51FD;&#x6570;&#x4E2D;&#x8BA1;&#x7B97;&#x5E76;&#x8FD4;&#x56DE;&#x521D;&#x59CB;&#x7684; state&#xFF0C;&#x6B64;&#x51FD;&#x6570;&#x53EA;&#x5728;&#x521D;&#x59CB;&#x6E32;&#x67D3;&#x65F6;&#x88AB;&#x8C03;&#x7528;</li>
+<li>&#x4E0E; class &#x7EC4;&#x4EF6;&#x4E2D;&#x7684; setState &#x65B9;&#x6CD5;&#x4E0D;&#x540C;&#xFF0C;useState &#x4E0D;&#x4F1A;&#x81EA;&#x52A8;&#x5408;&#x5E76;&#x66F4;&#x65B0;&#x5BF9;&#x8C61;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x7528;&#x51FD;&#x6570;&#x5F0F;&#x7684; setState &#x7ED3;&#x5408;&#x5C55;&#x5F00;&#x8FD0;&#x7B97;&#x7B26;&#x6765;&#x8FBE;&#x5230;&#x5408;&#x5E76;&#x66F4;&#x65B0;&#x5BF9;&#x8C61;&#x7684;&#x6548;&#x679C;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Counter3</span>(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-keyword">const</span> [{name,number},setValue] = useState(<span class="hljs-function"><span class="hljs-params">()</span>=&gt;</span>{
+    <span class="hljs-keyword">return</span> {<span class="hljs-attr">name</span>:<span class="hljs-string">&apos;&#x8BA1;&#x6570;&#x5668;&apos;</span>,<span class="hljs-attr">number</span>:<span class="hljs-number">0</span>};
+  });
+  <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{name}:{number}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span>=&gt;</span>setValue({number:number+1})}&gt;+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/&gt;</span></span>
+  )
+}
+</code></pre>
+<h3 id="t84.5 &#x6027;&#x80FD;&#x4F18;&#x5316;">4.5 &#x6027;&#x80FD;&#x4F18;&#x5316; <a href="#t84.5 &#x6027;&#x80FD;&#x4F18;&#x5316;"> # </a></h3>
+<h4 id="t94.5.1 Object.is">4.5.1 Object.is <a href="#t94.5.1 Object.is"> # </a></h4>
+<ul>
+<li>&#x8C03;&#x7528; State Hook &#x7684;&#x66F4;&#x65B0;&#x51FD;&#x6570;&#x5E76;&#x4F20;&#x5165;&#x5F53;&#x524D;&#x7684; state &#x65F6;&#xFF0C;React &#x5C06;&#x8DF3;&#x8FC7;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x6E32;&#x67D3;&#x53CA; effect &#x7684;&#x6267;&#x884C;&#x3002;&#xFF08;React &#x4F7F;&#x7528; Object.is &#x6BD4;&#x8F83;&#x7B97;&#x6CD5; &#x6765;&#x6BD4;&#x8F83; state&#x3002;&#xFF09;<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Counter4</span>(<span class="hljs-params"></span>)</span>{
+<span class="hljs-keyword">const</span> [counter,setCounter] = useState({<span class="hljs-attr">name</span>:<span class="hljs-string">&apos;&#x8BA1;&#x6570;&#x5668;&apos;</span>,<span class="hljs-attr">number</span>:<span class="hljs-number">0</span>});
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;render Counter&apos;</span>)
+<span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{counter.name}:{counter.number}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span>=&gt;</span>setCounter({...counter,number:counter.number+1})}&gt;+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span>=&gt;</span>setCounter(counter)}&gt;-<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/&gt;</span></span>
+)
+}
+</code></pre>
+</li>
+</ul>
+<h4 id="t104.5.2 &#x51CF;&#x5C11;&#x6E32;&#x67D3;&#x6B21;&#x6570;">4.5.2 &#x51CF;&#x5C11;&#x6E32;&#x67D3;&#x6B21;&#x6570; <a href="#t104.5.2 &#x51CF;&#x5C11;&#x6E32;&#x67D3;&#x6B21;&#x6570;"> # </a></h4>
+<ul>
+<li>&#x628A;&#x5185;&#x8054;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x53CA;&#x4F9D;&#x8D56;&#x9879;&#x6570;&#x7EC4;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4F20;&#x5165; <code>useCallback</code>&#xFF0C;&#x5B83;&#x5C06;&#x8FD4;&#x56DE;&#x8BE5;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7684; memoized &#x7248;&#x672C;&#xFF0C;&#x8BE5;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x4EC5;&#x5728;&#x67D0;&#x4E2A;&#x4F9D;&#x8D56;&#x9879;&#x6539;&#x53D8;&#x65F6;&#x624D;&#x4F1A;&#x66F4;&#x65B0;</li>
+<li>&#x628A;&#x521B;&#x5EFA;&#x51FD;&#x6570;&#x548C;&#x4F9D;&#x8D56;&#x9879;&#x6570;&#x7EC4;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4F20;&#x5165; <code>useMemo</code>&#xFF0C;&#x5B83;&#x4EC5;&#x4F1A;&#x5728;&#x67D0;&#x4E2A;&#x4F9D;&#x8D56;&#x9879;&#x6539;&#x53D8;&#x65F6;&#x624D;&#x91CD;&#x65B0;&#x8BA1;&#x7B97; memoized &#x503C;&#x3002;&#x8FD9;&#x79CD;&#x4F18;&#x5316;&#x6709;&#x52A9;&#x4E8E;&#x907F;&#x514D;&#x5728;&#x6BCF;&#x6B21;&#x6E32;&#x67D3;&#x65F6;&#x90FD;&#x8FDB;&#x884C;&#x9AD8;&#x5F00;&#x9500;&#x7684;&#x8BA1;&#x7B97;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Child</span>(<span class="hljs-params">{onButtonClick,data}</span>)</span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Child render&apos;</span>);
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{onButtonClick}</span> &gt;</span>{data.number}<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
+  )
+}
+Child = memo(Child);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">App</span>(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-keyword">const</span> [number,setNumber] = useState(<span class="hljs-number">0</span>);
+  <span class="hljs-keyword">const</span> [name,setName] = useState(<span class="hljs-string">&apos;zhufeng&apos;</span>);
+  <span class="hljs-keyword">const</span> addClick = useCallback(<span class="hljs-function"><span class="hljs-params">()</span>=&gt;</span>setNumber(number+<span class="hljs-number">1</span>),[number]);
+  <span class="hljs-keyword">const</span>  data = useMemo(<span class="hljs-function"><span class="hljs-params">()</span>=&gt;</span>({number}),[number]);
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{name}</span> <span class="hljs-attr">onChange</span>=<span class="hljs-string">{e</span>=&gt;</span>setName(e.target.value)}/&gt;
+      <span class="hljs-tag">&lt;<span class="hljs-name">Child</span> <span class="hljs-attr">onButtonClick</span>=<span class="hljs-string">{addClick}</span> <span class="hljs-attr">data</span>=<span class="hljs-string">{data}/</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  )
+}
+</code></pre>
+<h3 id="t114.6 &#x6CE8;&#x610F;&#x4E8B;&#x9879;">4.6 &#x6CE8;&#x610F;&#x4E8B;&#x9879; <a href="#t114.6 &#x6CE8;&#x610F;&#x4E8B;&#x9879;"> # </a></h3>
+<ul>
+<li>&#x53EA;&#x80FD;&#x5728;&#x51FD;&#x6570;&#x6700;&#x5916;&#x5C42;&#x8C03;&#x7528; Hook&#x3002;&#x4E0D;&#x8981;&#x5728;&#x5FAA;&#x73AF;&#x3001;&#x6761;&#x4EF6;&#x5224;&#x65AD;&#x6216;&#x8005;&#x5B50;&#x51FD;&#x6570;&#x4E2D;&#x8C03;&#x7528;&#x3002;<pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { useEffect, useState, useReducer } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">App</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> [number, setNumber] = useState(<span class="hljs-number">0</span>);
+  <span class="hljs-keyword">const</span> [visible, setVisible] = useState(<span class="hljs-literal">false</span>);
+  <span class="hljs-keyword">if</span> (number % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>) {
+      useEffect(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+          setVisible(<span class="hljs-literal">true</span>);
+      }, [number]);
+  } <span class="hljs-keyword">else</span> {
+      useEffect(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+          setVisible(<span class="hljs-literal">false</span>);
+      }, [number]);
+  }
+  <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{number}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{visible &amp;&amp; <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>visible<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> setNumber(number + 1)}&gt;+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  )
+}
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">App</span> /&gt;</span></span>, <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;root&apos;</span>));
+</code></pre>
+</li>
+</ul>
+<h2 id="t125. useReducer">5. useReducer <a href="#t125. useReducer"> # </a></h2>
+<ul>
+<li>useState &#x7684;&#x66FF;&#x4EE3;&#x65B9;&#x6848;&#x3002;&#x5B83;&#x63A5;&#x6536;&#x4E00;&#x4E2A;&#x5F62;&#x5982; (state, action) =&gt; newState &#x7684; reducer&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x7684; state &#x4EE5;&#x53CA;&#x4E0E;&#x5176;&#x914D;&#x5957;&#x7684; dispatch &#x65B9;&#x6CD5;</li>
+<li>&#x5728;&#x67D0;&#x4E9B;&#x573A;&#x666F;&#x4E0B;&#xFF0C;useReducer &#x4F1A;&#x6BD4; useState &#x66F4;&#x9002;&#x7528;&#xFF0C;&#x4F8B;&#x5982; state &#x903B;&#x8F91;&#x8F83;&#x590D;&#x6742;&#x4E14;&#x5305;&#x542B;&#x591A;&#x4E2A;&#x5B50;&#x503C;&#xFF0C;&#x6216;&#x8005;&#x4E0B;&#x4E00;&#x4E2A; state &#x4F9D;&#x8D56;&#x4E8E;&#x4E4B;&#x524D;&#x7684; state &#x7B49;</li>
+</ul>
+<h3 id="t135.1 &#x57FA;&#x672C;&#x7528;&#x6CD5;">5.1 &#x57FA;&#x672C;&#x7528;&#x6CD5; <a href="#t135.1 &#x57FA;&#x672C;&#x7528;&#x6CD5;"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> [state, dispatch] = useReducer(reducer, initialArg, init);
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> initialState = <span class="hljs-number">0</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">reducer</span>(<span class="hljs-params">state, action</span>) </span>{
+  <span class="hljs-keyword">switch</span> (action.type) {
+    <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;increment&apos;</span>:
+      <span class="hljs-keyword">return</span> {<span class="hljs-attr">number</span>: state.number + <span class="hljs-number">1</span>};
+    <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;decrement&apos;</span>:
+      <span class="hljs-keyword">return</span> {<span class="hljs-attr">number</span>: state.number - <span class="hljs-number">1</span>};
+    <span class="hljs-keyword">default</span>:
+      <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>();
+  }
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">init</span>(<span class="hljs-params">initialState</span>)</span>{
+    <span class="hljs-keyword">return</span> {<span class="hljs-attr">number</span>:initialState};
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Counter</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-keyword">const</span> [state, dispatch] = useReducer(reducer, initialState,init);
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;&gt;</span>
+          Count: {state.number}
+          <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> dispatch({type: &apos;increment&apos;})}&gt;+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> dispatch({type: &apos;decrement&apos;})}&gt;-<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/&gt;</span></span>
+    )
+}
+</code></pre>
+<h2 id="t146. useContext">6. useContext <a href="#t146. useContext"> # </a></h2>
+<ul>
+<li>&#x63A5;&#x6536;&#x4E00;&#x4E2A; context &#x5BF9;&#x8C61;&#xFF08;React.createContext &#x7684;&#x8FD4;&#x56DE;&#x503C;&#xFF09;&#x5E76;&#x8FD4;&#x56DE;&#x8BE5; context &#x7684;&#x5F53;&#x524D;&#x503C;</li>
+<li>&#x5F53;&#x524D;&#x7684; context &#x503C;&#x7531;&#x4E0A;&#x5C42;&#x7EC4;&#x4EF6;&#x4E2D;&#x8DDD;&#x79BB;&#x5F53;&#x524D;&#x7EC4;&#x4EF6;&#x6700;&#x8FD1;&#x7684; &lt;MyContext.Provider&gt; &#x7684; value prop &#x51B3;&#x5B9A;</li>
+<li>&#x5F53;&#x7EC4;&#x4EF6;&#x4E0A;&#x5C42;&#x6700;&#x8FD1;&#x7684; &lt;MyContext.Provider&gt; &#x66F4;&#x65B0;&#x65F6;&#xFF0C;&#x8BE5; Hook &#x4F1A;&#x89E6;&#x53D1;&#x91CD;&#x6E32;&#x67D3;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;&#x6700;&#x65B0;&#x4F20;&#x9012;&#x7ED9; MyContext provider &#x7684; context value &#x503C;</li>
+<li>useContext(MyContext) &#x76F8;&#x5F53;&#x4E8E; class &#x7EC4;&#x4EF6;&#x4E2D;&#x7684; <code>static contextType = MyContext</code> &#x6216;&#x8005; <code>&lt;MyContext.Consumer&gt;</code></li>
+<li>useContext(MyContext) &#x53EA;&#x662F;&#x8BA9;&#x4F60;&#x80FD;&#x591F;&#x8BFB;&#x53D6; context &#x7684;&#x503C;&#x4EE5;&#x53CA;&#x8BA2;&#x9605; context &#x7684;&#x53D8;&#x5316;&#x3002;&#x4F60;&#x4ECD;&#x7136;&#x9700;&#x8981;&#x5728;&#x4E0A;&#x5C42;&#x7EC4;&#x4EF6;&#x6811;&#x4E2D;&#x4F7F;&#x7528; &lt;MyContext.Provider&gt; &#x6765;&#x4E3A;&#x4E0B;&#x5C42;&#x7EC4;&#x4EF6;&#x63D0;&#x4F9B; context</li>
+</ul>
+<pre><code class="lang-js">
+<span class="hljs-keyword">const</span> CounterContext = React.createContext();
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">reducer</span>(<span class="hljs-params">state, action</span>) </span>{
+  <span class="hljs-keyword">switch</span> (action.type) {
+    <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;increment&apos;</span>:
+      <span class="hljs-keyword">return</span> {<span class="hljs-attr">number</span>: state.number + <span class="hljs-number">1</span>};
+    <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;decrement&apos;</span>:
+      <span class="hljs-keyword">return</span> {<span class="hljs-attr">number</span>: state.number - <span class="hljs-number">1</span>};
+    <span class="hljs-keyword">default</span>:
+      <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>();
+  }
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Counter</span>(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-keyword">let</span> {state,dispatch} = useContext(CounterContext);
+  <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{state.number}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> dispatch({type: &apos;increment&apos;})}&gt;+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> dispatch({type: &apos;decrement&apos;})}&gt;-<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/&gt;</span></span>
+  )
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">App</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-keyword">const</span> [state, dispatch] = useReducer(reducer, {<span class="hljs-attr">number</span>:<span class="hljs-number">0</span>});
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">CounterContext.Provider</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{{state,dispatch}}</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">Counter</span>/&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">CounterContext.Provider</span>&gt;</span></span>
+    )
+
+}
+</code></pre>
+<h2 id="t157. effect">7. effect <a href="#t157. effect"> # </a></h2>
+<ul>
+<li>&#x5728;&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#x4E3B;&#x4F53;&#x5185;&#xFF08;&#x8FD9;&#x91CC;&#x6307;&#x5728; React &#x6E32;&#x67D3;&#x9636;&#x6BB5;&#xFF09;&#x6539;&#x53D8; DOM&#x3001;&#x6DFB;&#x52A0;&#x8BA2;&#x9605;&#x3001;&#x8BBE;&#x7F6E;&#x5B9A;&#x65F6;&#x5668;&#x3001;&#x8BB0;&#x5F55;&#x65E5;&#x5FD7;&#x4EE5;&#x53CA;&#x6267;&#x884C;&#x5176;&#x4ED6;&#x5305;&#x542B;&#x526F;&#x4F5C;&#x7528;&#x7684;&#x64CD;&#x4F5C;&#x90FD;&#x662F;&#x4E0D;&#x88AB;&#x5141;&#x8BB8;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x53EF;&#x80FD;&#x4F1A;&#x4EA7;&#x751F;&#x83AB;&#x540D;&#x5176;&#x5999;&#x7684; bug &#x5E76;&#x7834;&#x574F; UI &#x7684;&#x4E00;&#x81F4;&#x6027;</li>
+<li>&#x4F7F;&#x7528; useEffect &#x5B8C;&#x6210;&#x526F;&#x4F5C;&#x7528;&#x64CD;&#x4F5C;&#x3002;&#x8D4B;&#x503C;&#x7ED9; useEffect &#x7684;&#x51FD;&#x6570;&#x4F1A;&#x5728;&#x7EC4;&#x4EF6;&#x6E32;&#x67D3;&#x5230;&#x5C4F;&#x5E55;&#x4E4B;&#x540E;&#x6267;&#x884C;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x628A; effect &#x770B;&#x4F5C;&#x4ECE; React &#x7684;&#x7EAF;&#x51FD;&#x6570;&#x5F0F;&#x4E16;&#x754C;&#x901A;&#x5F80;&#x547D;&#x4EE4;&#x5F0F;&#x4E16;&#x754C;&#x7684;&#x9003;&#x751F;&#x901A;&#x9053;</li>
+<li>useEffect &#x5C31;&#x662F;&#x4E00;&#x4E2A; Effect Hook&#xFF0C;&#x7ED9;&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#x589E;&#x52A0;&#x4E86;&#x64CD;&#x4F5C;&#x526F;&#x4F5C;&#x7528;&#x7684;&#x80FD;&#x529B;&#x3002;&#x5B83;&#x8DDF; class &#x7EC4;&#x4EF6;&#x4E2D;&#x7684; <code>componentDidMount</code>&#x3001;<code>componentDidUpdate</code> &#x548C; <code>componentWillUnmount</code> &#x5177;&#x6709;&#x76F8;&#x540C;&#x7684;&#x7528;&#x9014;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#x88AB;&#x5408;&#x5E76;&#x6210;&#x4E86;&#x4E00;&#x4E2A; API</li>
+<li>&#x8BE5; Hook &#x63A5;&#x6536;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x547D;&#x4EE4;&#x5F0F;&#x3001;&#x4E14;&#x53EF;&#x80FD;&#x6709;&#x526F;&#x4F5C;&#x7528;&#x4EE3;&#x7801;&#x7684;&#x51FD;&#x6570;</li>
+</ul>
+<pre><code class="lang-js">useEffect(didUpdate);
+</code></pre>
+<h3 id="t167.1 &#x901A;&#x8FC7;class&#x5B9E;&#x73B0;&#x4FEE;&#x6807;&#x9898;">7.1 &#x901A;&#x8FC7;class&#x5B9E;&#x73B0;&#x4FEE;&#x6807;&#x9898; <a href="#t167.1 &#x901A;&#x8FC7;class&#x5B9E;&#x73B0;&#x4FEE;&#x6807;&#x9898;"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Counter</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+    <span class="hljs-keyword">constructor</span>(props) {
+      <span class="hljs-keyword">super</span>(props);
+      <span class="hljs-keyword">this</span>.state = {
+        <span class="hljs-attr">number</span>: <span class="hljs-number">0</span>
+      };
+    }
+
+    componentDidMount() {
+        <span class="hljs-built_in">document</span>.title = <span class="hljs-string">`&#x4F60;&#x70B9;&#x51FB;&#x4E86;<span class="hljs-subst">${<span class="hljs-keyword">this</span>.state.number}</span>&#x6B21;`</span>;
+    }
+
+    componentDidUpdate() {
+        <span class="hljs-built_in">document</span>.title = <span class="hljs-string">`&#x4F60;&#x70B9;&#x51FB;&#x4E86;<span class="hljs-subst">${<span class="hljs-keyword">this</span>.state.number}</span>&#x6B21;`</span>;
+    }
+
+    render() {
+      <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{this.state.number}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> this.setState({ number: this.state.number + 1 })}&gt;
+            +
+          <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+      );
+    }
+  }
+</code></pre>
+<blockquote>
+<p>&#x5728;&#x8FD9;&#x4E2A; class &#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5728;&#x4E24;&#x4E2A;&#x751F;&#x547D;&#x5468;&#x671F;&#x51FD;&#x6570;&#x4E2D;&#x7F16;&#x5199;&#x91CD;&#x590D;&#x7684;&#x4EE3;&#x7801;,&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x5F88;&#x591A;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x5728;&#x7EC4;&#x4EF6;&#x52A0;&#x8F7D;&#x548C;&#x66F4;&#x65B0;&#x65F6;&#x6267;&#x884C;&#x540C;&#x6837;&#x7684;&#x64CD;&#x4F5C;&#x3002;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x5B83;&#x5728;&#x6BCF;&#x6B21;&#x6E32;&#x67D3;&#x4E4B;&#x540E;&#x6267;&#x884C;&#xFF0C;&#x4F46; React &#x7684; class &#x7EC4;&#x4EF6;&#x6CA1;&#x6709;&#x63D0;&#x4F9B;&#x8FD9;&#x6837;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x5373;&#x4F7F;&#x6211;&#x4EEC;&#x63D0;&#x53D6;&#x51FA;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x662F;&#x8981;&#x5728;&#x4E24;&#x4E2A;&#x5730;&#x65B9;&#x8C03;&#x7528;&#x5B83;&#x3002;useEffect&#x4F1A;&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x6E32;&#x67D3;&#x4E4B;&#x540E;&#x548C;&#x6BCF;&#x6B21;&#x66F4;&#x65B0;&#x4E4B;&#x540E;&#x90FD;&#x4F1A;&#x6267;&#x884C;</p>
+</blockquote>
+<h3 id="t177.2 &#x901A;&#x8FC7;effect&#x5B9E;&#x73B0;">7.2 &#x901A;&#x8FC7;effect&#x5B9E;&#x73B0; <a href="#t177.2 &#x901A;&#x8FC7;effect&#x5B9E;&#x73B0;"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React,{Component,useState,useEffect} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Counter</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-keyword">const</span> [number,setNumber] = useState(<span class="hljs-number">0</span>);
+    <span class="hljs-comment">// &#x76F8;&#x5F53;&#x4E8E; componentDidMount &#x548C; componentDidUpdate:</span>
+    useEffect(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+        <span class="hljs-comment">// &#x4F7F;&#x7528;&#x6D4F;&#x89C8;&#x5668;&#x7684; API &#x66F4;&#x65B0;&#x9875;&#x9762;&#x6807;&#x9898;</span>
+        <span class="hljs-built_in">document</span>.title = <span class="hljs-string">`&#x4F60;&#x70B9;&#x51FB;&#x4E86;<span class="hljs-subst">${number}</span>&#x6B21;`</span>;
+    });
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{number}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span>=&gt;</span>setNumber(number+1)}&gt;+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/&gt;</span></span>
+    )
+}
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Counter</span> /&gt;</span></span>, <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;root&apos;</span>));
+</code></pre>
+<blockquote>
+<p>&#x6BCF;&#x6B21;&#x6211;&#x4EEC;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#xFF0C;&#x90FD;&#x4F1A;&#x751F;&#x6210;&#x65B0;&#x7684; effect&#xFF0C;&#x66FF;&#x6362;&#x6389;&#x4E4B;&#x524D;&#x7684;&#x3002;&#x67D0;&#x79CD;&#x610F;&#x4E49;&#x4E0A;&#x8BB2;&#xFF0C;effect &#x66F4;&#x50CF;&#x662F;&#x6E32;&#x67D3;&#x7ED3;&#x679C;&#x7684;&#x4E00;&#x90E8;&#x5206; &#x2014;&#x2014; &#x6BCF;&#x4E2A; effect &#x5C5E;&#x4E8E;&#x4E00;&#x6B21;&#x7279;&#x5B9A;&#x7684;&#x6E32;&#x67D3;&#x3002;</p>
+</blockquote>
+<h3 id="t187.3 &#x8DF3;&#x8FC7; Effect &#x8FDB;&#x884C;&#x6027;&#x80FD;&#x4F18;&#x5316;">7.3 &#x8DF3;&#x8FC7; Effect &#x8FDB;&#x884C;&#x6027;&#x80FD;&#x4F18;&#x5316; <a href="#t187.3 &#x8DF3;&#x8FC7; Effect &#x8FDB;&#x884C;&#x6027;&#x80FD;&#x4F18;&#x5316;"> # </a></h3>
+<ul>
+<li>&#x5982;&#x679C;&#x67D0;&#x4E9B;&#x7279;&#x5B9A;&#x503C;&#x5728;&#x4E24;&#x6B21;&#x91CD;&#x6E32;&#x67D3;&#x4E4B;&#x95F4;&#x6CA1;&#x6709;&#x53D1;&#x751F;&#x53D8;&#x5316;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x77E5; React &#x8DF3;&#x8FC7;&#x5BF9; effect &#x7684;&#x8C03;&#x7528;&#xFF0C;&#x53EA;&#x8981;&#x4F20;&#x9012;&#x6570;&#x7EC4;&#x4F5C;&#x4E3A; useEffect &#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x53EF;&#x9009;&#x53C2;&#x6570;&#x5373;&#x53EF;</li>
+<li>&#x5982;&#x679C;&#x60F3;&#x6267;&#x884C;&#x53EA;&#x8FD0;&#x884C;&#x4E00;&#x6B21;&#x7684; effect&#xFF08;&#x4EC5;&#x5728;&#x7EC4;&#x4EF6;&#x6302;&#x8F7D;&#x548C;&#x5378;&#x8F7D;&#x65F6;&#x6267;&#x884C;&#xFF09;&#xFF0C;&#x53EF;&#x4EE5;&#x4F20;&#x9012;&#x4E00;&#x4E2A;&#x7A7A;&#x6570;&#x7EC4;&#xFF08;[]&#xFF09;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x3002;&#x8FD9;&#x5C31;&#x544A;&#x8BC9; React &#x4F60;&#x7684; effect &#x4E0D;&#x4F9D;&#x8D56;&#x4E8E; props &#x6216; state &#x4E2D;&#x7684;&#x4EFB;&#x4F55;&#x503C;&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x6C38;&#x8FDC;&#x90FD;&#x4E0D;&#x9700;&#x8981;&#x91CD;&#x590D;&#x6267;&#x884C;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Counter</span>(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-keyword">const</span> [number,setNumber] = useState(<span class="hljs-number">0</span>);
+  <span class="hljs-comment">// &#x76F8;&#x5F53;&#x4E8E;componentDidMount &#x548C; componentDidUpdate</span>
+  useEffect(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x5F00;&#x542F;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5B9A;&#x65F6;&#x5668;&apos;</span>)
+     <span class="hljs-keyword">const</span> $timer = setInterval(<span class="hljs-function"><span class="hljs-params">()</span>=&gt;</span>{
+      setNumber(<span class="hljs-function"><span class="hljs-params">number</span>=&gt;</span>number+<span class="hljs-number">1</span>);
+     },<span class="hljs-number">1000</span>);
+  },[]);
+  <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{number}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/&gt;</span></span>
+  )
+}
+</code></pre>
+<h3 id="t197.4 &#x6E05;&#x9664;&#x526F;&#x4F5C;&#x7528;">7.4 &#x6E05;&#x9664;&#x526F;&#x4F5C;&#x7528; <a href="#t197.4 &#x6E05;&#x9664;&#x526F;&#x4F5C;&#x7528;"> # </a></h3>
+<ul>
+<li>&#x526F;&#x4F5C;&#x7528;&#x51FD;&#x6570;&#x8FD8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x6765;&#x6307;&#x5B9A;&#x5982;&#x4F55;&#x6E05;&#x9664;&#x526F;&#x4F5C;&#x7528;</li>
+<li>&#x4E3A;&#x9632;&#x6B62;&#x5185;&#x5B58;&#x6CC4;&#x6F0F;&#xFF0C;&#x6E05;&#x9664;&#x51FD;&#x6570;&#x4F1A;&#x5728;&#x7EC4;&#x4EF6;&#x5378;&#x8F7D;&#x524D;&#x6267;&#x884C;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x5982;&#x679C;&#x7EC4;&#x4EF6;&#x591A;&#x6B21;&#x6E32;&#x67D3;&#xFF0C;&#x5219;&#x5728;&#x6267;&#x884C;&#x4E0B;&#x4E00;&#x4E2A; effect &#x4E4B;&#x524D;&#xFF0C;&#x4E0A;&#x4E00;&#x4E2A; effect &#x5C31;&#x5DF2;&#x88AB;&#x6E05;&#x9664;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { useEffect, useState, useReducer } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Counter</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> [number, setNumber] = useState(<span class="hljs-number">0</span>);
+    useEffect(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x5F00;&#x542F;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5B9A;&#x65F6;&#x5668;&apos;</span>)
+        <span class="hljs-keyword">const</span> $timer = setInterval(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+            setNumber(<span class="hljs-function"><span class="hljs-params">number</span> =&gt;</span> number + <span class="hljs-number">1</span>);
+        }, <span class="hljs-number">1000</span>);
+        <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+            <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x9500;&#x6BC1;&#x8001;&#x7684;&#x5B9A;&#x65F6;&#x5668;&apos;</span>);
+            clearInterval($timer);
+        }
+    });
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{number}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/&gt;</span></span>
+    )
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">App</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">let</span> [visible, setVisible] = useState(<span class="hljs-literal">true</span>);
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+            {visible &amp;&amp; <span class="hljs-tag">&lt;<span class="hljs-name">Counter</span> /&gt;</span>}
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> setVisible(false)}&gt;stop<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+}
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">App</span> /&gt;</span></span>, <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;root&apos;</span>));
+</code></pre>
+<h3 id="t207.5 useRef">7.5 useRef <a href="#t207.5 useRef"> # </a></h3>
+<ul>
+<li>useRef &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x53EF;&#x53D8;&#x7684; ref &#x5BF9;&#x8C61;&#xFF0C;&#x5176; <code>.current</code> &#x5C5E;&#x6027;&#x88AB;&#x521D;&#x59CB;&#x5316;&#x4E3A;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#xFF08;initialValue&#xFF09;</li>
+<li>&#x8FD4;&#x56DE;&#x7684; ref &#x5BF9;&#x8C61;&#x5728;&#x7EC4;&#x4EF6;&#x7684;&#x6574;&#x4E2A;&#x751F;&#x547D;&#x5468;&#x671F;&#x5185;&#x4FDD;&#x6301;&#x4E0D;&#x53D8;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> refContainer = useRef(initialValue);
+</code></pre>
+<h4 id="t217.5.1 useRef">7.5.1 useRef <a href="#t217.5.1 useRef"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { useState, useEffect, useRef } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Parent</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">let</span> [number, setNumber] = useState(<span class="hljs-number">0</span>);
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">Child</span> /&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> setNumber({ number: number + 1 })}&gt;+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/&gt;</span></span>
+    )
+}
+<span class="hljs-keyword">let</span> input;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Child</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> inputRef = useRef();
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;input===inputRef&apos;</span>, input === inputRef);
+    input = inputRef;
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getFocus</span>(<span class="hljs-params"></span>) </span>{
+        inputRef.current.focus();
+    }
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">{inputRef}</span> /&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{getFocus}</span>&gt;</span>&#x83B7;&#x5F97;&#x7126;&#x70B9;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/&gt;</span></span>
+    )
+}
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Parent</span> /&gt;</span></span>, <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;root&apos;</span>));
+</code></pre>
+<h4 id="t227.5.2 forwardRef">7.5.2 forwardRef <a href="#t227.5.2 forwardRef"> # </a></h4>
+<ul>
+<li>&#x5C06;ref&#x4ECE;&#x7236;&#x7EC4;&#x4EF6;&#x4E2D;&#x8F6C;&#x53D1;&#x5230;&#x5B50;&#x7EC4;&#x4EF6;&#x4E2D;&#x7684;dom&#x5143;&#x7D20;&#x4E0A;</li>
+<li>&#x5B50;&#x7EC4;&#x4EF6;&#x63A5;&#x53D7;props&#x548C;ref&#x4F5C;&#x4E3A;&#x53C2;&#x6570;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Child</span>(<span class="hljs-params">props,ref</span>)</span>{
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">{ref}/</span>&gt;</span></span>
+  )
+}
+Child = forwardRef(Child);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Parent</span>(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-keyword">let</span> [number,setNumber] = useState(<span class="hljs-number">0</span>); 
+  <span class="hljs-keyword">const</span> inputRef = useRef();
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getFocus</span>(<span class="hljs-params"></span>)</span>{
+    inputRef.current.value = <span class="hljs-string">&apos;focus&apos;</span>;
+    inputRef.current.focus();
+  }
+  <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Child</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">{inputRef}/</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span>=&gt;</span>setNumber({number:number+1})}&gt;+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{getFocus}</span>&gt;</span>&#x83B7;&#x5F97;&#x7126;&#x70B9;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/&gt;</span></span>
+  )
+}
+</code></pre>
+<h4 id="t237.5.3 useImperativeHandle">7.5.3 useImperativeHandle <a href="#t237.5.3 useImperativeHandle"> # </a></h4>
+<ul>
+<li><code>useImperativeHandle</code> &#x53EF;&#x4EE5;&#x8BA9;&#x4F60;&#x5728;&#x4F7F;&#x7528; ref &#x65F6;&#x81EA;&#x5B9A;&#x4E49;&#x66B4;&#x9732;&#x7ED9;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x5B9E;&#x4F8B;&#x503C;</li>
+<li>&#x5728;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5E94;&#x5F53;&#x907F;&#x514D;&#x4F7F;&#x7528; ref &#x8FD9;&#x6837;&#x7684;&#x547D;&#x4EE4;&#x5F0F;&#x4EE3;&#x7801;&#x3002;useImperativeHandle &#x5E94;&#x5F53;&#x4E0E; forwardRef &#x4E00;&#x8D77;&#x4F7F;&#x7528;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Child</span>(<span class="hljs-params">props,ref</span>)</span>{
+  <span class="hljs-keyword">const</span> inputRef = useRef();
+  useImperativeHandle(ref,()=&gt;(
+    {
+      focus(){
+        inputRef.current.focus();
+      }
+    }
+  ));
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">{inputRef}/</span>&gt;</span></span>
+  )
+}
+Child = forwardRef(Child);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Parent</span>(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-keyword">let</span> [number,setNumber] = useState(<span class="hljs-number">0</span>); 
+  <span class="hljs-keyword">const</span> inputRef = useRef();
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getFocus</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-built_in">console</span>.log(inputRef.current);
+    inputRef.current.value = <span class="hljs-string">&apos;focus&apos;</span>;
+    inputRef.current.focus();
+  }
+  <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Child</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">{inputRef}/</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span>=&gt;</span>setNumber({number:number+1})}&gt;+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{getFocus}</span>&gt;</span>&#x83B7;&#x5F97;&#x7126;&#x70B9;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;/&gt;</span></span>
+  )
+}
+</code></pre>
+<h2 id="t248. useLayoutEffect">8. useLayoutEffect <a href="#t248. useLayoutEffect"> # </a></h2>
+<ul>
+<li>&#x5176;&#x51FD;&#x6570;&#x7B7E;&#x540D;&#x4E0E; useEffect &#x76F8;&#x540C;&#xFF0C;&#x4F46;&#x5B83;&#x4F1A;&#x5728;&#x6240;&#x6709;&#x7684; DOM &#x53D8;&#x66F4;&#x4E4B;&#x540E;&#x540C;&#x6B65;&#x8C03;&#x7528; effect</li>
+<li>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5B83;&#x6765;&#x8BFB;&#x53D6; DOM &#x5E03;&#x5C40;&#x5E76;&#x540C;&#x6B65;&#x89E6;&#x53D1;&#x91CD;&#x6E32;&#x67D3;</li>
+<li>&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x6267;&#x884C;&#x7ED8;&#x5236;&#x4E4B;&#x524D;useLayoutEffect&#x5185;&#x90E8;&#x7684;&#x66F4;&#x65B0;&#x8BA1;&#x5212;&#x5C06;&#x88AB;&#x540C;&#x6B65;&#x5237;&#x65B0;</li>
+<li>&#x5C3D;&#x53EF;&#x80FD;&#x4F7F;&#x7528;&#x6807;&#x51C6;&#x7684; useEffect &#x4EE5;&#x907F;&#x514D;&#x963B;&#x585E;&#x89C6;&#x56FE;&#x66F4;&#x65B0;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/domrender.jpg" alt="domrender"></p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">LayoutEffect</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> [color, setColor] = useState(<span class="hljs-string">&apos;red&apos;</span>);
+    useLayoutEffect(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+        alert(color);
+    });
+    useEffect(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;color&apos;</span>, color);
+    });
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;myDiv&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">background:</span> <span class="hljs-attr">color</span> }}&gt;</span>&#x989C;&#x8272;<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> setColor(&apos;red&apos;)}&gt;&#x7EA2;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> setColor(&apos;yellow&apos;)}&gt;&#x9EC4;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> setColor(&apos;blue&apos;)}&gt;&#x84DD;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/&gt;</span></span>
+    );
+}
+</code></pre>
+<h2 id="t259. &#x81EA;&#x5B9A;&#x4E49; Hook">9. &#x81EA;&#x5B9A;&#x4E49; Hook <a href="#t259. &#x81EA;&#x5B9A;&#x4E49; Hook"> # </a></h2>
+<ul>
+<li>&#x6709;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x4F1A;&#x60F3;&#x8981;&#x5728;&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x91CD;&#x7528;&#x4E00;&#x4E9B;&#x72B6;&#x6001;&#x903B;&#x8F91;</li>
+<li>&#x81EA;&#x5B9A;&#x4E49; Hook &#x53EF;&#x4EE5;&#x8BA9;&#x4F60;&#x5728;&#x4E0D;&#x589E;&#x52A0;&#x7EC4;&#x4EF6;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x8FBE;&#x5230;&#x540C;&#x6837;&#x7684;&#x76EE;&#x7684;</li>
+<li>Hook &#x662F;&#x4E00;&#x79CD;&#x590D;&#x7528;&#x72B6;&#x6001;&#x903B;&#x8F91;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5B83;&#x4E0D;&#x590D;&#x7528; state &#x672C;&#x8EAB;</li>
+<li>&#x4E8B;&#x5B9E;&#x4E0A; Hook &#x7684;&#x6BCF;&#x6B21;&#x8C03;&#x7528;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x5B8C;&#x5168;&#x72EC;&#x7ACB;&#x7684; state</li>
+<li>&#x81EA;&#x5B9A;&#x4E49; Hook &#x66F4;&#x50CF;&#x662F;&#x4E00;&#x79CD;&#x7EA6;&#x5B9A;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4E00;&#x79CD;&#x529F;&#x80FD;&#x3002;&#x5982;&#x679C;&#x51FD;&#x6570;&#x7684;&#x540D;&#x5B57;&#x4EE5; use &#x5F00;&#x5934;&#xFF0C;&#x5E76;&#x4E14;&#x8C03;&#x7528;&#x4E86;&#x5176;&#x4ED6;&#x7684; Hook&#xFF0C;&#x5219;&#x5C31;&#x79F0;&#x5176;&#x4E3A;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49; Hook</li>
+</ul>
+<h3 id="t269.1.&#x81EA;&#x5B9A;&#x4E49;&#x8BA1;&#x6570;&#x5668;">9.1.&#x81EA;&#x5B9A;&#x4E49;&#x8BA1;&#x6570;&#x5668; <a href="#t269.1.&#x81EA;&#x5B9A;&#x4E49;&#x8BA1;&#x6570;&#x5668;"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useNumber</span>(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-keyword">const</span> [number,setNumber] = useState(<span class="hljs-number">0</span>);
+  useEffect(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x5F00;&#x542F;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5B9A;&#x65F6;&#x5668;&apos;</span>)
+     <span class="hljs-keyword">const</span> $timer = setInterval(<span class="hljs-function"><span class="hljs-params">()</span>=&gt;</span>{
+      setNumber(number+<span class="hljs-number">1</span>);
+     },<span class="hljs-number">1000</span>);
+     <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-params">()</span>=&gt;</span>{
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x9500;&#x6BC1;&#x8001;&#x7684;&#x5B9A;&#x65F6;&#x5668;&apos;</span>)
+         clearInterval($timer);
+     }
+  });
+  <span class="hljs-keyword">return</span> number;
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Counter1</span>(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-keyword">let</span> number1 = useNumber();
+  <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{number1}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/&gt;</span></span>
+  )
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Counter2</span>(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-keyword">let</span> number = useNumber();
+  <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{number}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/&gt;</span></span>
+  )
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">App</span>(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">Counter1</span>/&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">Counter2</span>/&gt;</span><span class="hljs-tag">&lt;/&gt;</span></span>
+}
+</code></pre>
+<h3 id="t279.2 &#x4E2D;&#x95F4;&#x4EF6;">9.2 &#x4E2D;&#x95F4;&#x4EF6; <a href="#t279.2 &#x4E2D;&#x95F4;&#x4EF6;"> # </a></h3>
+<h4 id="t289.2.1 logger">9.2.1 logger <a href="#t289.2.1 logger"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { useEffect, useState, useReducer } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+<span class="hljs-keyword">const</span> initialState = <span class="hljs-number">0</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">reducer</span>(<span class="hljs-params">state, action</span>) </span>{
+    <span class="hljs-keyword">switch</span> (action.type) {
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;increment&apos;</span>:
+            <span class="hljs-keyword">return</span> { <span class="hljs-attr">number</span>: state.number + <span class="hljs-number">1</span> };
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;decrement&apos;</span>:
+            <span class="hljs-keyword">return</span> { <span class="hljs-attr">number</span>: state.number - <span class="hljs-number">1</span> };
+        <span class="hljs-keyword">default</span>:
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>();
+    }
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">init</span>(<span class="hljs-params">initialState</span>) </span>{
+    <span class="hljs-keyword">return</span> { <span class="hljs-attr">number</span>: initialState };
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useLogger</span>(<span class="hljs-params">reducer, initialState, init</span>) </span>{
+    <span class="hljs-keyword">const</span> [state, dispatch] = useReducer(reducer, initialState, init);
+    <span class="hljs-keyword">let</span> dispatchWithLogger = <span class="hljs-function">(<span class="hljs-params">action</span>) =&gt;</span> {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x8001;&#x72B6;&#x6001;&apos;</span>, state);
+        dispatch(action);
+    }
+    useEffect(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x65B0;&#x72B6;&#x6001;&apos;</span>, state);
+    }, [state]);
+    <span class="hljs-keyword">return</span> [state, dispatchWithLogger];
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Counter</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> [state, dispatch] = useLogger(reducer, initialState, init);
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;&gt;</span>
+            Count: {state.number}
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> dispatch({ type: &apos;increment&apos; })}&gt;+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> dispatch({ type: &apos;decrement&apos; })}&gt;-<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/&gt;</span></span>
+    )
+}
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Counter</span> /&gt;</span></span>, <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;root&apos;</span>));
+</code></pre>
+<h4 id="t299.2.2 promise">9.2.2 promise <a href="#t299.2.2 promise"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { useEffect, useState, useReducer } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+<span class="hljs-keyword">const</span> initialState = <span class="hljs-number">0</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">reducer</span>(<span class="hljs-params">state, action</span>) </span>{
+    <span class="hljs-keyword">switch</span> (action.type) {
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;increment&apos;</span>:
+            <span class="hljs-keyword">return</span> { <span class="hljs-attr">number</span>: state.number + <span class="hljs-number">1</span> };
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;decrement&apos;</span>:
+            <span class="hljs-keyword">return</span> { <span class="hljs-attr">number</span>: state.number - <span class="hljs-number">1</span> };
+        <span class="hljs-keyword">default</span>:
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>();
+    }
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">init</span>(<span class="hljs-params">initialState</span>) </span>{
+    <span class="hljs-keyword">return</span> { <span class="hljs-attr">number</span>: initialState };
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useLogger</span>(<span class="hljs-params">reducer, initialState, init</span>) </span>{
+    <span class="hljs-keyword">const</span> [state, dispatch] = useReducer(reducer, initialState, init);
+    <span class="hljs-keyword">let</span> dispatchWithLogger = <span class="hljs-function">(<span class="hljs-params">action</span>) =&gt;</span> {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x8001;&#x72B6;&#x6001;&apos;</span>, state);
+        dispatch(action);
+    }
+    useEffect(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x65B0;&#x72B6;&#x6001;&apos;</span>, state);
+    }, [state]);
+    <span class="hljs-keyword">return</span> [state, dispatchWithLogger];
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">usePromise</span>(<span class="hljs-params">reducer, initialState, init</span>) </span>{
+    <span class="hljs-keyword">const</span> [state, dispatch] = useReducer(reducer, initialState, init);
+    <span class="hljs-keyword">let</span> dispatchPromise = <span class="hljs-function">(<span class="hljs-params">action</span>) =&gt;</span> {
+        <span class="hljs-keyword">if</span> (action.payload &amp;&amp; action.payload.then) {
+            action.payload.then(<span class="hljs-function">(<span class="hljs-params">payload</span>) =&gt;</span> dispatch({ ...action, payload }));
+        } <span class="hljs-keyword">else</span> {
+            dispatch(action);
+        }
+    }
+    <span class="hljs-keyword">return</span> [state, dispatchPromise];
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Counter</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> [state, dispatch] = usePromise(reducer, initialState, init);
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;&gt;</span>
+            Count: {state.number}
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> dispatch({ type: &apos;increment&apos; })}&gt;+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> dispatch({
+                type: &apos;increment&apos;,
+                payload: new Promise(resolve =&gt; {
+                    setTimeout(resolve, 1000);
+                })
+            })}&gt;delay<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/&gt;</span></span>
+    )
+}
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Counter</span> /&gt;</span></span>, <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;root&apos;</span>));
+</code></pre>
+<h4 id="t309.2.3 thunk">9.2.3 thunk <a href="#t309.2.3 thunk"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { useEffect, useState, useReducer } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+<span class="hljs-keyword">import</span> { resolve } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;dns&apos;</span>;
+<span class="hljs-keyword">const</span> initialState = <span class="hljs-number">0</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">reducer</span>(<span class="hljs-params">state, action</span>) </span>{
+    <span class="hljs-keyword">switch</span> (action.type) {
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;increment&apos;</span>:
+            <span class="hljs-keyword">return</span> { <span class="hljs-attr">number</span>: state.number + <span class="hljs-number">1</span> };
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;decrement&apos;</span>:
+            <span class="hljs-keyword">return</span> { <span class="hljs-attr">number</span>: state.number - <span class="hljs-number">1</span> };
+        <span class="hljs-keyword">default</span>:
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>();
+    }
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">init</span>(<span class="hljs-params">initialState</span>) </span>{
+    <span class="hljs-keyword">return</span> { <span class="hljs-attr">number</span>: initialState };
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useLogger</span>(<span class="hljs-params">reducer, initialState, init</span>) </span>{
+    <span class="hljs-keyword">const</span> [state, dispatch] = useReducer(reducer, initialState, init);
+    <span class="hljs-keyword">let</span> dispatchWithLogger = <span class="hljs-function">(<span class="hljs-params">action</span>) =&gt;</span> {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x8001;&#x72B6;&#x6001;&apos;</span>, state);
+        dispatch(action);
+    }
+    useEffect(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x65B0;&#x72B6;&#x6001;&apos;</span>, state);
+    }, [state]);
+    <span class="hljs-keyword">return</span> [state, dispatchWithLogger];
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">usePromise</span>(<span class="hljs-params">reducer, initialState, init</span>) </span>{
+    <span class="hljs-keyword">const</span> [state, dispatch] = useReducer(reducer, initialState, init);
+    <span class="hljs-keyword">let</span> dispatchPromise = <span class="hljs-function">(<span class="hljs-params">action</span>) =&gt;</span> {
+        <span class="hljs-keyword">if</span> (action.payload &amp;&amp; action.payload.then) {
+            action.payload.then(<span class="hljs-function">(<span class="hljs-params">payload</span>) =&gt;</span> dispatch({ ...action, payload }));
+        } <span class="hljs-keyword">else</span> {
+            dispatch(action);
+        }
+    }
+    <span class="hljs-keyword">return</span> [state, dispatchPromise];
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useThunk</span>(<span class="hljs-params">reducer, initialState, init</span>) </span>{
+    <span class="hljs-keyword">const</span> [state, dispatch] = useReducer(reducer, initialState, init);
+    <span class="hljs-keyword">let</span> dispatchPromise = <span class="hljs-function">(<span class="hljs-params">action</span>) =&gt;</span> {
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> action === <span class="hljs-string">&apos;function&apos;</span>) {
+            action(dispatchPromise, () =&gt; state);
+        } <span class="hljs-keyword">else</span> {
+            dispatch(action)
+        }
+    }
+    <span class="hljs-keyword">return</span> [state, dispatchPromise];
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Counter</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> [state, dispatch] = useThunk(reducer, initialState, init);
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;&gt;</span>
+            Count: {state.number}
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> dispatch({ type: &apos;increment&apos; })}&gt;+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> dispatch(function (dispatch, getState) {
+                setTimeout(function () {
+                    dispatch({ type: &apos;increment&apos; });
+                }, 1000);
+            })}&gt;delay<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/&gt;</span></span>
+    )
+}
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Counter</span> /&gt;</span></span>, <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;root&apos;</span>));
+</code></pre>
+<h3 id="t319.3 ajax">9.3 ajax <a href="#t319.3 ajax"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { useState, useEffect, useLayoutEffect } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useRequest</span>(<span class="hljs-params">url</span>) </span>{
+    <span class="hljs-keyword">let</span> limit = <span class="hljs-number">5</span>;
+    <span class="hljs-keyword">let</span> [offset, setOffset] = useState(<span class="hljs-number">0</span>);
+    <span class="hljs-keyword">let</span> [data, setData] = useState([]);
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loadMore</span>(<span class="hljs-params"></span>) </span>{
+        setData(<span class="hljs-literal">null</span>);
+        fetch(<span class="hljs-string">`<span class="hljs-subst">${url}</span>?offset=<span class="hljs-subst">${offset}</span>&amp;limit=<span class="hljs-subst">${limit}</span>`</span>)
+            .then(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> response.json())
+            .then(<span class="hljs-function"><span class="hljs-params">pageData</span> =&gt;</span> {
+                setData([...data, ...pageData]);
+                setOffset(offset + pageData.length);
+            });
+    }
+    useEffect(loadMore, []);
+    <span class="hljs-keyword">return</span> [data, loadMore];
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">App</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> [users, loadMore] = useRequest(<span class="hljs-string">&apos;http://localhost:8000/api/users&apos;</span>);
+    <span class="hljs-keyword">if</span> (users === <span class="hljs-literal">null</span>) {
+        <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>&#x6B63;&#x5728;&#x52A0;&#x8F7D;&#x4E2D;....<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    }
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+                {
+                    users.map((item, index) =&gt; <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{index}</span>&gt;</span>{item.id}:{item.name}<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>)
+                }
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{loadMore}</span>&gt;</span>&#x52A0;&#x8F7D;&#x66F4;&#x591A;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/&gt;</span></span>
+    )
+}
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">App</span> /&gt;</span></span>, <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;root&apos;</span>));
+</code></pre>
+<p>async+await </p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { useState, useEffect, useLayoutEffect } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useRequest</span>(<span class="hljs-params">url</span>) </span>{
+    <span class="hljs-keyword">let</span> limit = <span class="hljs-number">5</span>;
+    <span class="hljs-keyword">let</span> [offset, setOffset] = useState(<span class="hljs-number">0</span>);
+    <span class="hljs-keyword">let</span> [data, setData] = useState([]);
+    <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loadMore</span>(<span class="hljs-params"></span>) </span>{
+        setData(<span class="hljs-literal">null</span>);
+        <span class="hljs-keyword">let</span> pageData = <span class="hljs-keyword">await</span> fetch(<span class="hljs-string">`<span class="hljs-subst">${url}</span>?offset=<span class="hljs-subst">${offset}</span>&amp;limit=<span class="hljs-subst">${limit}</span>`</span>)
+            .then(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> response.json());
+        setData([...data, ...pageData]);
+        setOffset(offset + pageData.length);
+    }
+    useEffect(loadMore, []);
+    <span class="hljs-keyword">return</span> [data, loadMore];
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">App</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> [users, loadMore] = useRequest(<span class="hljs-string">&apos;http://localhost:8000/api/users&apos;</span>);
+    <span class="hljs-keyword">if</span> (users === <span class="hljs-literal">null</span>) {
+        <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>&#x6B63;&#x5728;&#x52A0;&#x8F7D;&#x4E2D;....<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    }
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+                {
+                    users.map((item, index) =&gt; <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{index}</span>&gt;</span>{item.id}:{item.name}<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>)
+                }
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{loadMore}</span>&gt;</span>&#x52A0;&#x8F7D;&#x66F4;&#x591A;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/&gt;</span></span>
+    )
+}
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">App</span> /&gt;</span></span>, <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;root&apos;</span>));
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express&apos;</span>);
+<span class="hljs-keyword">let</span> app = express();
+app.use(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">req, res, next</span>) </span>{
+    res.header(<span class="hljs-string">&apos;Access-Control-Allow-Origin&apos;</span>, <span class="hljs-string">&apos;http://localhost:3000&apos;</span>);
+    next();
+});
+app.get(<span class="hljs-string">&apos;/api/users&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">req, res</span>) </span>{
+    <span class="hljs-keyword">let</span> offset = <span class="hljs-built_in">parseInt</span>(req.query.offset);
+    <span class="hljs-keyword">let</span> limit = <span class="hljs-built_in">parseInt</span>(req.query.limit);
+    <span class="hljs-keyword">let</span> result = [];
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = offset; i &lt; offset + limit; i++) {
+        result.push({ <span class="hljs-attr">id</span>: i + <span class="hljs-number">1</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;name&apos;</span> + (i + <span class="hljs-number">1</span>) });
+    }
+    res.json(result);
+});
+app.listen(<span class="hljs-number">8000</span>);
+</code></pre>
+<h3 id="t329.4 &#x52A8;&#x753B;">9.4 &#x52A8;&#x753B; <a href="#t329.4 &#x52A8;&#x753B;"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { useState, useEffect, useLayoutEffect } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;./index.css&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useMove</span>(<span class="hljs-params">initialClassName</span>) </span>{
+    <span class="hljs-keyword">const</span> [className, setClassName] = useState(initialClassName);
+    <span class="hljs-keyword">const</span> [state, setState] = useState(<span class="hljs-string">&apos;&apos;</span>);
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">start</span>(<span class="hljs-params"></span>) </span>{
+        setState(<span class="hljs-string">&apos;bigger&apos;</span>);
+    }
+    useEffect(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+        <span class="hljs-keyword">if</span> (state === <span class="hljs-string">&apos;bigger&apos;</span>) {
+            setClassName(<span class="hljs-string">`<span class="hljs-subst">${initialClassName}</span> <span class="hljs-subst">${initialClassName}</span>-bigger`</span>);
+        }
+    }, [state]);
+    <span class="hljs-keyword">return</span> [className, start];
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">App</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> [className, start] = useMove(<span class="hljs-string">&apos;circle&apos;</span>);
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{start}</span>&gt;</span>start<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">{className}</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+}
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">App</span> /&gt;</span></span>, <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;root&apos;</span>));
+</code></pre>
+<pre><code class="lang-css"><span class="hljs-selector-class">.circle</span> {
+    <span class="hljs-attribute">width </span>: <span class="hljs-number">50px</span>;
+    <span class="hljs-attribute">height </span>: <span class="hljs-number">50px</span>;
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span>;
+    <span class="hljs-attribute">background </span>: red;
+    <span class="hljs-attribute">transition</span>: all .<span class="hljs-number">5s</span>;
+  }
+<span class="hljs-selector-class">.circle-bigger</span> {
+    <span class="hljs-attribute">width </span>: <span class="hljs-number">200px</span>;
+    <span class="hljs-attribute">height </span>: <span class="hljs-number">200px</span>;
+}
+</code></pre>
+<h2 id="t3310.&#x8DEF;&#x7531;hooks">10.&#x8DEF;&#x7531;hooks <a href="#t3310.&#x8DEF;&#x7531;hooks"> # </a></h2>
+<h3 id="t3410.1 useParams">10.1 useParams <a href="#t3410.1 useParams"> # </a></h3>
+<ul>
+<li>&#x83B7;&#x53D6;&#x8DEF;&#x7531;&#x4E2D;&#x7684;params</li>
+</ul>
+<h4 id="t3510.1.1 &#x8001;&#x7248;">10.1.1 &#x8001;&#x7248; <a href="#t3510.1.1 &#x8001;&#x7248;"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react&quot;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react-dom&quot;</span>;
+<span class="hljs-keyword">import</span> { BrowserRouter <span class="hljs-keyword">as</span> Router, Route, Switch } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react-router-dom&quot;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Post</span>(<span class="hljs-params">{ match }</span>) </span>{
+  <span class="hljs-keyword">let</span> { title } = match.params;
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>{title}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>;
+}
+
+ReactDOM.render(
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Router</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Switch</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&quot;/post/:title&quot;</span> <span class="hljs-attr">component</span>=<span class="hljs-string">{Post}</span> /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">Switch</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">Router</span>&gt;</span></span>,
+  <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;root&quot;</span>)
+);
+</code></pre>
+<h4 id="t3610.1.2.&#x65B0;&#x7248;">10.1.2.&#x65B0;&#x7248; <a href="#t3610.1.2.&#x65B0;&#x7248;"> # </a></h4>
+<pre><code class="lang-diff">import React from &quot;react&quot;;
+import ReactDOM from &quot;react-dom&quot;;
+<span class="hljs-addition">+import { BrowserRouter as Router, Route, Switch, useParams } from &quot;react-router-dom&quot;;</span>
+
+<span class="hljs-addition">+function Post() {</span>
+<span class="hljs-addition">+  let { title } = useParams();</span>
+<span class="hljs-addition">+  return &lt;div&gt;{title}&lt;/div&gt;;</span>
+<span class="hljs-addition">+}</span>
+
+ReactDOM.render(
+  &lt;Router&gt;
+    &lt;div&gt;
+      &lt;Switch&gt;
+<span class="hljs-addition">+        &lt;Route path=&quot;/post/:title&quot;&gt;&lt;Post /&gt;&lt;/Route&gt;</span>
+      &lt;/Switch&gt;
+    &lt;/div&gt;
+  &lt;/Router&gt;,
+  document.getElementById(&quot;root&quot;)
+);
+</code></pre>
+<h3 id="t3710.2.useLocation">10.2.useLocation <a href="#t3710.2.useLocation"> # </a></h3>
+<ul>
+<li>&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x5F53;&#x524D;&#x8DEF;&#x7531;</li>
+</ul>
+<h4 id="t3810.2.1.&#x8001;&#x7248;">10.2.1.&#x8001;&#x7248; <a href="#t3810.2.1.&#x8001;&#x7248;"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react&quot;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react-dom&quot;</span>;
+<span class="hljs-keyword">import</span> { BrowserRouter <span class="hljs-keyword">as</span> Router, Route, Switch } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react-router-dom&quot;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Post</span>(<span class="hljs-params">{ match, location }</span>) </span>{
+  <span class="hljs-keyword">let</span> { title } = match.params;
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>{title}{JSON.stringify(location)}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>;
+}
+
+ReactDOM.render(
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Router</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Switch</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&quot;/post/:title&quot;</span> <span class="hljs-attr">component</span>=<span class="hljs-string">{Post}</span> /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">Switch</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">Router</span>&gt;</span></span>,
+  <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;root&quot;</span>)
+);
+</code></pre>
+<h4 id="t3910.2.2 &#x65B0;&#x7248;">10.2.2 &#x65B0;&#x7248; <a href="#t3910.2.2 &#x65B0;&#x7248;"> # </a></h4>
+<pre><code class="lang-diff">import React from &quot;react&quot;;
+import ReactDOM from &quot;react-dom&quot;;
+import { BrowserRouter as Router, Route, Switch, useParams, useLocation } from &quot;react-router-dom&quot;;
+
+function Post() {
+   let { title } = useParams();
+<span class="hljs-addition">+  const location = useLocation();</span>
+<span class="hljs-addition">+  return &lt;div&gt;{title}&lt;hr /&gt;{JSON.stringify(location)}&lt;/div&gt;;</span>
+}
+
+ReactDOM.render(
+  &lt;Router&gt;
+    &lt;div&gt;
+      &lt;Switch&gt;
+        &lt;Route path=&quot;/post/:title&quot;&gt;&lt;Post /&gt;&lt;/Route&gt;
+      &lt;/Switch&gt;
+    &lt;/div&gt;
+  &lt;/Router&gt;,
+  document.getElementById(&quot;root&quot;)
+);
+</code></pre>
+<h3 id="t4010.3.useHistory">10.3.useHistory <a href="#t4010.3.useHistory"> # </a></h3>
+<ul>
+<li>&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x4E0A;&#x4E00;&#x4E2A;&#x7F51;&#x9875;</li>
+</ul>
+<h4 id="t4110.3.1 &#x8001;&#x7248;">10.3.1 &#x8001;&#x7248; <a href="#t4110.3.1 &#x8001;&#x7248;"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react&quot;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react-dom&quot;</span>;
+<span class="hljs-keyword">import</span> { BrowserRouter <span class="hljs-keyword">as</span> Router, Route, Switch, useHistory } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react-router-dom&quot;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Post</span>(<span class="hljs-params">{ match, history }</span>) </span>{
+  <span class="hljs-keyword">let</span> { title } = match.params;
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      {title}
+      <span class="hljs-tag">&lt;<span class="hljs-name">hr</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> history.goBack()}&gt;
+        &#x56DE;&#x53BB;
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Home</span>(<span class="hljs-params">{ history }</span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> history.push(&quot;/post/hello&quot;)}&gt;
+        title
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/&gt;</span></span>
+  )
+}
+ReactDOM.render(
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Router</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Switch</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">exact</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&quot;/&quot;</span> <span class="hljs-attr">component</span>=<span class="hljs-string">{Home}</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&quot;/post/:title&quot;</span> <span class="hljs-attr">component</span>=<span class="hljs-string">{Post}</span> /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">Switch</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">Router</span>&gt;</span></span>,
+  <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;root&quot;</span>)
+);
+</code></pre>
+<h4 id="t4210.3.2 &#x65B0;&#x7248;">10.3.2 &#x65B0;&#x7248; <a href="#t4210.3.2 &#x65B0;&#x7248;"> # </a></h4>
+<pre><code class="lang-diff">import React from &quot;react&quot;;
+import ReactDOM from &quot;react-dom&quot;;
+<span class="hljs-addition">+import { BrowserRouter as Router, Route, Switch, useParams, useHistory } from &quot;react-router-dom&quot;;</span>
+
+function Post() {
+<span class="hljs-addition">+  let { title } = useParams();</span>
+<span class="hljs-addition">+  let history = useHistory();</span>
+  return (
+    &lt;div&gt;
+      {title}
+      &lt;hr /&gt;
+<span class="hljs-addition">+      &lt;button type=&quot;button&quot; onClick={() =&gt; history.goBack()}&gt;</span>
+<span class="hljs-addition">+        &#x56DE;&#x53BB;</span>
+<span class="hljs-addition">+      &lt;/button&gt;</span>
+    &lt;/div&gt;
+  );
+}
+function Home() {
+<span class="hljs-addition">+  let history = useHistory();</span>
+  return (
+    &lt;&gt;
+<span class="hljs-addition">+      &lt;button type=&quot;button&quot; onClick={() =&gt; history.push(&quot;/post/hello&quot;)}&gt;</span>
+<span class="hljs-addition">+        title</span>
+<span class="hljs-addition">+      &lt;/button&gt;</span>
+    &lt;/&gt;
+  )
+}
+ReactDOM.render(
+  &lt;Router&gt;
+    &lt;div&gt;
+      &lt;Switch&gt;
+<span class="hljs-addition">+        &lt;Route exact path=&quot;/&quot; component={Home} /&gt;</span>
+<span class="hljs-addition">+        &lt;Route path=&quot;/post/:title&quot; component={Post} /&gt;</span>
+      &lt;/Switch&gt;
+    &lt;/div&gt;
+  &lt;/Router&gt;,
+  document.getElementById(&quot;root&quot;)
+);
+</code></pre>
+<h3 id="t4310.4 useRouteMatch">10.4 useRouteMatch <a href="#t4310.4 useRouteMatch"> # </a></h3>
+<ul>
+<li><code>useRouteMatch</code>&#x6302;&#x94A9;&#x5C1D;&#x8BD5;&#x4EE5;&#x4E0E;<code>Route</code>&#x76F8;&#x540C;&#x7684;&#x65B9;&#x5F0F;&#x5339;&#x914D;&#x5F53;&#x524D;<code>URL</code></li>
+<li>&#x5728;&#x65E0;&#x9700;&#x5B9E;&#x9645;&#x5448;&#x73B0;<code>Route</code>&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x8BBF;&#x95EE;&#x5339;&#x914D;&#x6570;&#x636E;&#x6700;&#x6709;&#x7528;</li>
+</ul>
+<h4 id="t4410.4.1 &#x65E7;&#x7248;">10.4.1 &#x65E7;&#x7248; <a href="#t4410.4.1 &#x65E7;&#x7248;"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+<span class="hljs-keyword">import</span> { BrowserRouter <span class="hljs-keyword">as</span> Router, Route } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router-dom&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">NotFound</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Not Found<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Post</span>(<span class="hljs-params">props</span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>{props.match.params.title}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  )
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">App</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Route</span>
+        <span class="hljs-attr">path</span>=<span class="hljs-string">&quot;/post/:title&quot;</span>
+        <span class="hljs-attr">strict</span>
+        <span class="hljs-attr">sensitive</span>
+        <span class="hljs-attr">render</span>=<span class="hljs-string">{({</span> <span class="hljs-attr">match</span> }) =&gt;</span> match ? <span class="hljs-tag">&lt;<span class="hljs-name">Post</span> <span class="hljs-attr">match</span>=<span class="hljs-string">{match}</span> /&gt;</span> : <span class="hljs-tag">&lt;<span class="hljs-name">NotFound</span> /&gt;</span>}
+      /&gt;
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  )
+}
+
+ReactDOM.render(
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Router</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">App</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">Router</span>&gt;</span></span>,
+  <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;root&quot;</span>)
+);
+
+</code></pre>
+<h4 id="t4510.4.2 &#x65B0;&#x7248;">10.4.2 &#x65B0;&#x7248; <a href="#t4510.4.2 &#x65B0;&#x7248;"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+<span class="hljs-keyword">import</span> { BrowserRouter <span class="hljs-keyword">as</span> Router, Route, useRouteMatch } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router-dom&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">NotFound</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Not Found<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Post</span>(<span class="hljs-params">props</span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>{props.match.params.title}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  )
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">App</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">let</span> match = useRouteMatch({
+    <span class="hljs-attr">path</span>: <span class="hljs-string">&apos;/post/:title&apos;</span>,
+    <span class="hljs-attr">strict</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">sensitive</span>: <span class="hljs-literal">true</span>
+  })
+  <span class="hljs-built_in">console</span>.log(match);
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      {match ? <span class="hljs-tag">&lt;<span class="hljs-name">Post</span> <span class="hljs-attr">match</span>=<span class="hljs-string">{match}</span> /&gt;</span> : <span class="hljs-tag">&lt;<span class="hljs-name">NotFound</span> /&gt;</span>}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  )
+}
+
+ReactDOM.render(
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Router</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">App</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">Router</span>&gt;</span></span>,
+  <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;root&quot;</span>)
+);
+</code></pre>
+
+    </div>
+</div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+    aria-labelledby="loginModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="loginModalLabel">请登录</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="username" class="control-label">姓名:</label>
+                        <input type="text" class="form-control" id="username" placeholder="珠峰架构VIP会员系统用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">密码:</label>
+                        <input type="text" class="form-control" id="password" placeholder="珠峰架构VIP会员系统密码">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                    data-dismiss="modal">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

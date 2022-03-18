@@ -1,0 +1,1935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+
+
+
+
+<div class="warpper">
+
+    <div class="page-toc">
+        <ul><li><a href="#t01.为什么要做前端监控">1.为什么要做前端监控</a></li><li><a href="#t12.前端监控目标">2.前端监控目标</a><ul><li><a href="#t22.1 稳定性(stability)">2.1 稳定性(stability)</a></li><li><a href="#t32.2 用户体验(experience)">2.2 用户体验(experience)</a></li><li><a href="#t42.3 业务(business)">2.3 业务(business)</a></li></ul></li><li><a href="#t53.前端监控流程">3.前端监控流程</a><ul><li><a href="#t63.1 常见的埋点方案">3.1 常见的埋点方案</a><ul><li><a href="#t73.1.1 代码埋点">3.1.1 代码埋点</a></li><li><a href="#t83.1.2 可视化埋点">3.1.2 可视化埋点</a></li><li><a href="#t93.1.3 无痕埋点">3.1.3 无痕埋点</a></li></ul></li></ul></li><li><a href="#t104.编写监控采集脚本">4.编写监控采集脚本</a><ul><li><a href="#t114.1 开通日志服务">4.1 开通日志服务</a></li><li><a href="#t124.2 监控错误">4.2 监控错误</a><ul><li><a href="#t134.2.1  错误分类">4.2.1  错误分类</a></li><li><a href="#t144.2.2 数据结构设计">4.2.2 数据结构设计</a><ul><li><a href="#t151. jsError">1. jsError</a></li><li><a href="#t162. promiseError">2. promiseError</a></li><li><a href="#t173. resourceError">3. resourceError</a></li></ul></li><li><a href="#t184.2.3 报表">4.2.3 报表</a></li><li><a href="#t194.2.4 实现">4.2.4 实现</a><ul><li><a href="#t201. webpack.config.js">1. webpack.config.js</a></li><li><a href="#t212. index.html">2. index.html</a></li><li><a href="#t223. src\index.js">3. src\index.js</a></li><li><a href="#t234. monitor\index.js">4. monitor\index.js</a></li><li><a href="#t245. jsError.js">5. jsError.js</a></li><li><a href="#t256. formatTime.js">6. formatTime.js</a></li><li><a href="#t267. getLastEvent.js">7. getLastEvent.js</a></li><li><a href="#t278. getSelector.js">8. getSelector.js</a></li><li><a href="#t289. tracker.js">9. tracker.js</a></li></ul></li></ul></li><li><a href="#t294.3.接口异常采集脚本">4.3.接口异常采集脚本</a><ul><li><a href="#t304.3.1 数据设计">4.3.1 数据设计</a></li><li><a href="#t314.3.2 实现">4.3.2 实现</a><ul><li><a href="#t321. src\index.html">1. src\index.html</a></li><li><a href="#t332. monitor\index.js">2. monitor\index.js</a></li><li><a href="#t343. webpack.config.js">3. webpack.config.js</a></li><li><a href="#t354. xhr.js">4. xhr.js</a></li></ul></li></ul></li><li><a href="#t364.4 白屏">4.4 白屏</a><ul><li><a href="#t374.4.1 数据设计">4.4.1 数据设计</a></li><li><a href="#t384.4.2 实现">4.4.2 实现</a><ul><li><a href="#t391. src\index.html">1. src\index.html</a></li><li><a href="#t402. monitor\index.js">2. monitor\index.js</a></li><li><a href="#t413. onload.js">3. onload.js</a></li><li><a href="#t424. blankScreen.js">4. blankScreen.js</a></li></ul></li></ul></li><li><a href="#t434.5 加载时间">4.5 加载时间</a><ul><li><a href="#t444.5.1 阶段含义">4.5.1 阶段含义</a></li><li><a href="#t454.5.2 阶段计算">4.5.2 阶段计算</a></li><li><a href="#t464.5.3 数据结构">4.5.3 数据结构</a></li><li><a href="#t474.5.4 实现">4.5.4 实现</a><ul><li><a href="#t481. src\index.html">1. src\index.html</a></li><li><a href="#t492. monitor\index.js">2. monitor\index.js</a></li><li><a href="#t503. timing.js">3. timing.js</a></li></ul></li></ul></li><li><a href="#t514.6 性能指标">4.6 性能指标</a><ul><li><a href="#t524.6.1 数据结构设计">4.6.1 数据结构设计</a><ul><li><a href="#t531. paint">1. paint</a></li><li><a href="#t542. firstInputDelay">2. firstInputDelay</a></li></ul></li><li><a href="#t554.6.2  实现">4.6.2  实现</a><ul><li><a href="#t561. src\index.html">1. src\index.html</a></li><li><a href="#t572. timing.js">2. timing.js</a></li></ul></li></ul></li><li><a href="#t584.7 卡顿">4.7 卡顿</a><ul><li><a href="#t594.7.1 数据设计">4.7.1 数据设计</a></li><li><a href="#t604.7.2 实现">4.7.2 实现</a><ul><li><a href="#t611.  src\index.html">1.  src\index.html</a></li><li><a href="#t622. monitor\index.js">2. monitor\index.js</a></li><li><a href="#t633. longTask.js">3. longTask.js</a></li></ul></li></ul></li><li><a href="#t644.8 pv">4.8 pv</a><ul><li><a href="#t654.8.1 数据结构">4.8.1 数据结构</a></li><li><a href="#t664.8.2 实现">4.8.2 实现</a><ul><li><a href="#t671. src\index.html">1. src\index.html</a></li><li><a href="#t682. src\monitor\index.js">2. src\monitor\index.js</a></li><li><a href="#t693. pv.js">3. pv.js</a></li></ul></li></ul></li></ul></li><li><a href="#t705.查询报表">5.查询报表</a><ul><li><a href="#t715.1 监控项分布">5.1 监控项分布</a></li><li><a href="#t725.2 浏览器分布">5.2 浏览器分布</a></li><li><a href="#t735.3 页面分辨率分布">5.3 页面分辨率分布</a></li></ul></li><li><a href="#t746.参考">6.参考</a><ul><li><a href="#t756.1 第三方">6.1 第三方</a><ul><li><a href="#t766.1.1 商业产品">6.1.1 商业产品</a></li><li><a href="#t776.1.2 开源产品">6.1.2 开源产品</a></li></ul></li><li><a href="#t786.2 defer 和 async">6.2 defer 和 async</a></li></ul></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <h2 id="t01.&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x505A;&#x524D;&#x7AEF;&#x76D1;&#x63A7;">1.&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x505A;&#x524D;&#x7AEF;&#x76D1;&#x63A7; <a href="#t01.&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x505A;&#x524D;&#x7AEF;&#x76D1;&#x63A7;"> # </a></h2>
+<ul>
+<li>&#x66F4;&#x5FEB;&#x53D1;&#x73B0;&#x95EE;&#x9898;&#x548C;&#x89E3;&#x51B3;&#x95EE;&#x9898;</li>
+<li>&#x505A;&#x4EA7;&#x54C1;&#x7684;&#x51B3;&#x7B56;&#x4F9D;&#x636E;</li>
+<li>&#x63D0;&#x5347;&#x524D;&#x7AEF;&#x5DE5;&#x7A0B;&#x5E08;&#x7684;&#x6280;&#x672F;&#x6DF1;&#x5EA6;&#x548C;&#x5E7F;&#x5EA6;,&#x6253;&#x9020;&#x7B80;&#x5386;&#x4EAE;&#x70B9;</li>
+<li>&#x4E3A;&#x4E1A;&#x52A1;&#x6269;&#x5C55;&#x63D0;&#x4F9B;&#x4E86;&#x66F4;&#x591A;&#x53EF;&#x80FD;&#x6027;</li>
+</ul>
+<h2 id="t12.&#x524D;&#x7AEF;&#x76D1;&#x63A7;&#x76EE;&#x6807;">2.&#x524D;&#x7AEF;&#x76D1;&#x63A7;&#x76EE;&#x6807; <a href="#t12.&#x524D;&#x7AEF;&#x76D1;&#x63A7;&#x76EE;&#x6807;"> # </a></h2>
+<h3 id="t22.1 &#x7A33;&#x5B9A;&#x6027;(stability)">2.1 &#x7A33;&#x5B9A;&#x6027;(stability) <a href="#t22.1 &#x7A33;&#x5B9A;&#x6027;(stability)"> # </a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x9519;&#x8BEF;&#x540D;&#x79F0;</th>
+<th style="text-align:left">&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">JS&#x9519;&#x8BEF;</td>
+<td style="text-align:left">JS&#x6267;&#x884C;&#x9519;&#x8BEF;&#x6216;&#x8005;promise&#x5F02;&#x5E38;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x8D44;&#x6E90;&#x5F02;&#x5E38;</td>
+<td style="text-align:left">script&#x3001;link&#x7B49;&#x8D44;&#x6E90;&#x52A0;&#x8F7D;&#x5F02;&#x5E38;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x63A5;&#x53E3;&#x9519;&#x8BEF;</td>
+<td style="text-align:left">ajax&#x6216;fetch&#x8BF7;&#x6C42;&#x63A5;&#x53E3;&#x5F02;&#x5E38;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x767D;&#x5C4F;</td>
+<td style="text-align:left">&#x9875;&#x9762;&#x7A7A;&#x767D;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t32.2 &#x7528;&#x6237;&#x4F53;&#x9A8C;(experience)">2.2 &#x7528;&#x6237;&#x4F53;&#x9A8C;(experience) <a href="#t32.2 &#x7528;&#x6237;&#x4F53;&#x9A8C;(experience)"> # </a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x9519;&#x8BEF;&#x540D;&#x79F0;</th>
+<th style="text-align:left">&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x52A0;&#x8F7D;&#x65F6;&#x95F4;</td>
+<td style="text-align:left">&#x5404;&#x4E2A;&#x9636;&#x6BB5;&#x7684;&#x52A0;&#x8F7D;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td style="text-align:left">TTFB(time to first byte)(&#x9996;&#x5B57;&#x8282;&#x65F6;&#x95F4;)</td>
+<td style="text-align:left">&#x662F;&#x6307;&#x6D4F;&#x89C8;&#x5668;&#x53D1;&#x8D77;&#x7B2C;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#x5230;&#x6570;&#x636E;&#x8FD4;&#x56DE;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x6240;&#x6D88;&#x8017;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x95F4;&#x5305;&#x542B;&#x4E86;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x65F6;&#x95F4;&#x3001;&#x540E;&#x7AEF;&#x5904;&#x7406;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td style="text-align:left">FP(First Paint)(&#x9996;&#x6B21;&#x7ED8;&#x5236;)</td>
+<td style="text-align:left">&#x9996;&#x6B21;&#x7ED8;&#x5236;&#x5305;&#x62EC;&#x4E86;&#x4EFB;&#x4F55;&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x80CC;&#x666F;&#x7ED8;&#x5236;&#xFF0C;&#x5B83;&#x662F;&#x5C06;&#x7B2C;&#x4E00;&#x4E2A;&#x50CF;&#x7D20;&#x70B9;&#x7ED8;&#x5236;&#x5230;&#x5C4F;&#x5E55;&#x7684;&#x65F6;&#x523B;</td>
+</tr>
+<tr>
+<td style="text-align:left">FCP(First Content Paint)(&#x9996;&#x6B21;&#x5185;&#x5BB9;&#x7ED8;&#x5236;)</td>
+<td style="text-align:left">&#x9996;&#x6B21;&#x5185;&#x5BB9;&#x7ED8;&#x5236;&#x662F;&#x6D4F;&#x89C8;&#x5668;&#x5C06;&#x7B2C;&#x4E00;&#x4E2A;DOM&#x6E32;&#x67D3;&#x5230;&#x5C4F;&#x5E55;&#x7684;&#x65F6;&#x95F4;,&#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x4F55;&#x6587;&#x672C;&#x3001;&#x56FE;&#x50CF;&#x3001;SVG&#x7B49;&#x7684;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td style="text-align:left">FMP(First Meaningful paint)(&#x9996;&#x6B21;&#x6709;&#x610F;&#x4E49;&#x7ED8;&#x5236;)</td>
+<td style="text-align:left">&#x9996;&#x6B21;&#x6709;&#x610F;&#x4E49;&#x7ED8;&#x5236;&#x662F;&#x9875;&#x9762;&#x53EF;&#x7528;&#x6027;&#x7684;&#x91CF;&#x5EA6;&#x6807;&#x51C6;</td>
+</tr>
+<tr>
+<td style="text-align:left">FID(First Input Delay)(&#x9996;&#x6B21;&#x8F93;&#x5165;&#x5EF6;&#x8FDF;)</td>
+<td style="text-align:left">&#x7528;&#x6237;&#x9996;&#x6B21;&#x548C;&#x9875;&#x9762;&#x4EA4;&#x4E92;&#x5230;&#x9875;&#x9762;&#x54CD;&#x5E94;&#x4EA4;&#x4E92;&#x7684;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x5361;&#x987F;</td>
+<td style="text-align:left">&#x8D85;&#x8FC7;50ms&#x7684;&#x957F;&#x4EFB;&#x52A1;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t42.3 &#x4E1A;&#x52A1;(business)">2.3 &#x4E1A;&#x52A1;(business) <a href="#t42.3 &#x4E1A;&#x52A1;(business)"> # </a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x9519;&#x8BEF;&#x540D;&#x79F0;</th>
+<th style="text-align:left">&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">PV</td>
+<td style="text-align:left">page view &#x5373;&#x9875;&#x9762;&#x6D4F;&#x89C8;&#x91CF;&#x6216;&#x70B9;&#x51FB;&#x91CF;</td>
+</tr>
+<tr>
+<td style="text-align:left">UV</td>
+<td style="text-align:left">&#x6307;&#x8BBF;&#x95EE;&#x67D0;&#x4E2A;&#x7AD9;&#x70B9;&#x7684;&#x4E0D;&#x540C;IP&#x5730;&#x5740;&#x7684;&#x4EBA;&#x6570;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x9875;&#x9762;&#x7684;&#x505C;&#x7559;&#x65F6;&#x95F4;</td>
+<td style="text-align:left">&#x7528;&#x6237;&#x5728;&#x6BCF;&#x4E00;&#x4E2A;&#x9875;&#x9762;&#x7684;&#x505C;&#x7559;&#x65F6;&#x95F4;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="t53.&#x524D;&#x7AEF;&#x76D1;&#x63A7;&#x6D41;&#x7A0B;">3.&#x524D;&#x7AEF;&#x76D1;&#x63A7;&#x6D41;&#x7A0B; <a href="#t53.&#x524D;&#x7AEF;&#x76D1;&#x63A7;&#x6D41;&#x7A0B;"> # </a></h2>
+<ul>
+<li>&#x524D;&#x7AEF;&#x57CB;&#x70B9;</li>
+<li>&#x6570;&#x636E;&#x4E0A;&#x62A5;</li>
+<li>&#x5206;&#x6790;&#x548C;&#x8BA1;&#x7B97; &#x5C06;&#x91C7;&#x96C6;&#x5230;&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x52A0;&#x5DE5;&#x6C47;&#x603B;</li>
+<li>&#x53EF;&#x89C6;&#x5316;&#x5C55;&#x793A; &#x5C06;&#x6570;&#x636E;&#x6309;&#x5404;&#x79CD;&#x7EF4;&#x5EA6;&#x8FDB;&#x884C;&#x5C55;&#x793A;</li>
+<li>&#x76D1;&#x63A7;&#x62A5;&#x8B66;  &#x53D1;&#x73B0;&#x95EE;&#x9898;&#x540E;&#x6309;&#x4E00;&#x5B9A;&#x7684;&#x6761;&#x4EF6;&#x89E6;&#x53D1;&#x62A5;&#x8B66;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/monitorplatform.jpg" alt="monitorplatform"></p>
+<h3 id="t63.1 &#x5E38;&#x89C1;&#x7684;&#x57CB;&#x70B9;&#x65B9;&#x6848;">3.1 &#x5E38;&#x89C1;&#x7684;&#x57CB;&#x70B9;&#x65B9;&#x6848; <a href="#t63.1 &#x5E38;&#x89C1;&#x7684;&#x57CB;&#x70B9;&#x65B9;&#x6848;"> # </a></h3>
+<h5 id="t73.1.1 &#x4EE3;&#x7801;&#x57CB;&#x70B9;">3.1.1 &#x4EE3;&#x7801;&#x57CB;&#x70B9; <a href="#t73.1.1 &#x4EE3;&#x7801;&#x57CB;&#x70B9;"> # </a></h5>
+<ul>
+<li>&#x4EE3;&#x7801;&#x57CB;&#x70B9;&#xFF0C;&#x5C31;&#x662F;&#x4EE5;&#x5D4C;&#x5165;&#x4EE3;&#x7801;&#x7684;&#x5F62;&#x5F0F;&#x8FDB;&#x884C;&#x57CB;&#x70B9;,&#x6BD4;&#x5982;&#x9700;&#x8981;&#x76D1;&#x63A7;&#x7528;&#x6237;&#x7684;&#x70B9;&#x51FB;&#x4E8B;&#x4EF6;,&#x4F1A;&#x9009;&#x62E9;&#x5728;&#x7528;&#x6237;&#x70B9;&#x51FB;&#x65F6;,&#x63D2;&#x5165;&#x4E00;&#x6BB5;&#x4EE3;&#x7801;&#xFF0C;&#x4FDD;&#x5B58;&#x8FD9;&#x4E2A;&#x76D1;&#x542C;&#x884C;&#x4E3A;&#x6216;&#x8005;&#x76F4;&#x63A5;&#x5C06;&#x76D1;&#x542C;&#x884C;&#x4E3A;&#x4EE5;&#x67D0;&#x4E00;&#x79CD;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x76F4;&#x63A5;&#x4F20;&#x9012;&#x7ED9;&#x670D;&#x52A1;&#x5668;&#x7AEF;</li>
+<li>&#x4F18;&#x70B9;&#x662F;&#x53EF;&#x4EE5;&#x5728;&#x4EFB;&#x610F;&#x65F6;&#x523B;&#xFF0C;&#x7CBE;&#x786E;&#x7684;&#x53D1;&#x9001;&#x6216;&#x4FDD;&#x5B58;&#x6240;&#x9700;&#x8981;&#x7684;&#x6570;&#x636E;&#x4FE1;&#x606F;</li>
+<li>&#x7F3A;&#x70B9;&#x662F;&#x5DE5;&#x4F5C;&#x91CF;&#x8F83;&#x5927;</li>
+</ul>
+<h5 id="t83.1.2 &#x53EF;&#x89C6;&#x5316;&#x57CB;&#x70B9;">3.1.2 &#x53EF;&#x89C6;&#x5316;&#x57CB;&#x70B9; <a href="#t83.1.2 &#x53EF;&#x89C6;&#x5316;&#x57CB;&#x70B9;"> # </a></h5>
+<ul>
+<li>&#x901A;&#x8FC7;&#x53EF;&#x89C6;&#x5316;&#x4EA4;&#x4E92;&#x7684;&#x624B;&#x6BB5;&#xFF0C;&#x4EE3;&#x66FF;&#x4EE3;&#x7801;&#x57CB;&#x70B9;</li>
+<li>&#x5C06;&#x4E1A;&#x52A1;&#x4EE3;&#x7801;&#x548C;&#x57CB;&#x70B9;&#x4EE3;&#x7801;&#x5206;&#x79BB;&#xFF0C;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x53EF;&#x89C6;&#x5316;&#x4EA4;&#x4E92;&#x7684;&#x9875;&#x9762;&#xFF0C;&#x8F93;&#x5165;&#x4E3A;&#x4E1A;&#x52A1;&#x4EE3;&#x7801;&#xFF0C;&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x53EF;&#x89C6;&#x5316;&#x7CFB;&#x7EDF;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x4E1A;&#x52A1;&#x4EE3;&#x7801;&#x4E2D;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x589E;&#x52A0;&#x57CB;&#x70B9;&#x4E8B;&#x4EF6;&#x7B49;&#x7B49;,&#x6700;&#x540E;&#x8F93;&#x51FA;&#x7684;&#x4EE3;&#x7801;&#x8026;&#x5408;&#x4E86;&#x4E1A;&#x52A1;&#x4EE3;&#x7801;&#x548C;&#x57CB;&#x70B9;&#x4EE3;&#x7801;</li>
+<li>&#x53EF;&#x89C6;&#x5316;&#x57CB;&#x70B9;&#x5176;&#x5B9E;&#x662F;&#x7528;&#x7CFB;&#x7EDF;&#x6765;&#x4EE3;&#x66FF;&#x624B;&#x5DE5;&#x63D2;&#x5165;&#x57CB;&#x70B9;&#x4EE3;&#x7801;</li>
+</ul>
+<h5 id="t93.1.3 &#x65E0;&#x75D5;&#x57CB;&#x70B9;">3.1.3 &#x65E0;&#x75D5;&#x57CB;&#x70B9; <a href="#t93.1.3 &#x65E0;&#x75D5;&#x57CB;&#x70B9;"> # </a></h5>
+<ul>
+<li>&#x524D;&#x7AEF;&#x7684;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;&#x90FD;&#x88AB;&#x7ED1;&#x5B9A;&#x4E00;&#x4E2A;&#x6807;&#x8BC6;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x4E8B;&#x4EF6;&#x90FD;&#x522B;&#x8BB0;&#x5F55;&#x4E0B;&#x6765;</li>
+<li>&#x901A;&#x8FC7;&#x5B9A;&#x671F;&#x4E0A;&#x4F20;&#x8BB0;&#x5F55;&#x6587;&#x4EF6;,&#x914D;&#x5408;&#x6587;&#x4EF6;&#x89E3;&#x6790;&#xFF0C;&#x89E3;&#x6790;&#x51FA;&#x6765;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x751F;&#x6210;&#x53EF;&#x89C6;&#x5316;&#x62A5;&#x544A;&#x4F9B;&#x4E13;&#x4E1A;&#x4EBA;&#x5458;&#x5206;&#x6790;</li>
+<li>&#x65E0;&#x75D5;&#x57CB;&#x70B9;&#x7684;&#x4F18;&#x70B9;&#x662F;&#x91C7;&#x96C6;&#x5168;&#x91CF;&#x6570;&#x636E;,&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x6F0F;&#x57CB;&#x548C;&#x8BEF;&#x57CB;&#x7B49;&#x73B0;&#x8C61;</li>
+<li>&#x7F3A;&#x70B9;&#x662F;&#x7ED9;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x548C;&#x670D;&#x52A1;&#x5668;&#x589E;&#x52A0;&#x538B;&#x529B;&#xFF0C;&#x4E5F;&#x65E0;&#x6CD5;&#x7075;&#x6D3B;&#x5B9A;&#x5236;&#x6570;&#x636E;&#x7ED3;&#x6784;</li>
+</ul>
+<h2 id="t104.&#x7F16;&#x5199;&#x76D1;&#x63A7;&#x91C7;&#x96C6;&#x811A;&#x672C;">4.&#x7F16;&#x5199;&#x76D1;&#x63A7;&#x91C7;&#x96C6;&#x811A;&#x672C; <a href="#t104.&#x7F16;&#x5199;&#x76D1;&#x63A7;&#x91C7;&#x96C6;&#x811A;&#x672C;"> # </a></h2>
+<h3 id="t114.1 &#x5F00;&#x901A;&#x65E5;&#x5FD7;&#x670D;&#x52A1;">4.1 &#x5F00;&#x901A;&#x65E5;&#x5FD7;&#x670D;&#x52A1; <a href="#t114.1 &#x5F00;&#x901A;&#x65E5;&#x5FD7;&#x670D;&#x52A1;"> # </a></h3>
+<ul>
+<li><a href="https://sls.console.aliyun.com/lognext/profile">&#x65E5;&#x5FD7;&#x670D;&#x52A1;(Log Service,&#x7B80;&#x79F0; SLS)</a>&#x662F;&#x9488;&#x5BF9;&#x65E5;&#x5FD7;&#x7C7B;&#x6570;&#x636E;&#x4E00;&#x7AD9;&#x5F0F;&#x670D;&#x52A1;&#xFF0C;&#x7528;&#x6237;&#x65E0;&#x9700;&#x5F00;&#x53D1;&#x5C31;&#x80FD;&#x5FEB;&#x6377;&#x5B8C;&#x6210;&#x6570;&#x636E;&#x91C7;&#x96C6;&#x3001;&#x6D88;&#x8D39;&#x3001;&#x6295;&#x9012;&#x4EE5;&#x53CA;&#x67E5;&#x8BE2;&#x5206;&#x6790;&#x7B49;&#x529F;&#x80FD;&#xFF0C;&#x5E2E;&#x52A9;&#x63D0;&#x5347;&#x8FD0;&#x7EF4;&#x3001;&#x8FD0;&#x8425;&#x6548;&#x7387;&#xFF0C;&#x5EFA;&#x7ACB; DT &#x65F6;&#x4EE3;&#x6D77;&#x91CF;&#x65E5;&#x5FD7;&#x5904;&#x7406;&#x80FD;&#x529B;</li>
+<li><a href="https://help.aliyun.com/product/28958.html">&#x65E5;&#x5FD7;&#x670D;&#x52A1;&#x5E2E;&#x52A9;&#x6587;&#x6863;</a></li>
+<li><a href="https://help.aliyun.com/document_detail/31752.html">Web Tracking</a></li>
+</ul>
+<h3 id="t124.2 &#x76D1;&#x63A7;&#x9519;&#x8BEF;">4.2 &#x76D1;&#x63A7;&#x9519;&#x8BEF; <a href="#t124.2 &#x76D1;&#x63A7;&#x9519;&#x8BEF;"> # </a></h3>
+<h4 id="t134.2.1  &#x9519;&#x8BEF;&#x5206;&#x7C7B;">4.2.1  &#x9519;&#x8BEF;&#x5206;&#x7C7B; <a href="#t134.2.1  &#x9519;&#x8BEF;&#x5206;&#x7C7B;"> # </a></h4>
+<ul>
+<li>JS&#x9519;&#x8BEF;<ul>
+<li>JS&#x9519;&#x8BEF;</li>
+<li>Promise&#x5F02;&#x5E38;</li>
+</ul>
+</li>
+<li>&#x8D44;&#x6E90;&#x5F02;&#x5E38;<ul>
+<li>&#x76D1;&#x542C;error</li>
+</ul>
+</li>
+</ul>
+<h4 id="t144.2.2 &#x6570;&#x636E;&#x7ED3;&#x6784;&#x8BBE;&#x8BA1;">4.2.2 &#x6570;&#x636E;&#x7ED3;&#x6784;&#x8BBE;&#x8BA1; <a href="#t144.2.2 &#x6570;&#x636E;&#x7ED3;&#x6784;&#x8BBE;&#x8BA1;"> # </a></h4>
+<h5 id="t151. jsError">1. jsError <a href="#t151. jsError"> # </a></h5>
+<pre><code class="lang-json">{
+  <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;&#x524D;&#x7AEF;&#x76D1;&#x63A7;&#x7CFB;&#x7EDF;&quot;</span>,<span class="hljs-comment">//&#x9875;&#x9762;&#x6807;&#x9898;</span>
+  <span class="hljs-attr">&quot;url&quot;</span>: <span class="hljs-string">&quot;http://localhost:8080/&quot;</span>,<span class="hljs-comment">//&#x9875;&#x9762;URL</span>
+  <span class="hljs-attr">&quot;timestamp&quot;</span>: <span class="hljs-string">&quot;1590815288710&quot;</span>,<span class="hljs-comment">//&#x8BBF;&#x95EE;&#x65F6;&#x95F4;&#x6233;</span>
+  <span class="hljs-attr">&quot;userAgent&quot;</span>: <span class="hljs-string">&quot;Chrome&quot;</span>,<span class="hljs-comment">//&#x7528;&#x6237;&#x6D4F;&#x89C8;&#x5668;&#x7C7B;&#x578B;</span>
+  <span class="hljs-attr">&quot;kind&quot;</span>: <span class="hljs-string">&quot;stability&quot;</span>,<span class="hljs-comment">//&#x5927;&#x7C7B;</span>
+  <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;error&quot;</span>,<span class="hljs-comment">//&#x5C0F;&#x7C7B;</span>
+  <span class="hljs-attr">&quot;errorType&quot;</span>: <span class="hljs-string">&quot;jsError&quot;</span>,<span class="hljs-comment">//&#x9519;&#x8BEF;&#x7C7B;&#x578B;</span>
+  <span class="hljs-attr">&quot;message&quot;</span>: <span class="hljs-string">&quot;Uncaught TypeError: Cannot set property &apos;error&apos; of undefined&quot;</span>,<span class="hljs-comment">//&#x7C7B;&#x578B;&#x8BE6;&#x60C5;</span>
+  <span class="hljs-attr">&quot;filename&quot;</span>: <span class="hljs-string">&quot;http://localhost:8080/&quot;</span>,<span class="hljs-comment">//&#x8BBF;&#x95EE;&#x7684;&#x6587;&#x4EF6;&#x540D;</span>
+  <span class="hljs-attr">&quot;position&quot;</span>: <span class="hljs-string">&quot;0:0&quot;</span>,<span class="hljs-comment">//&#x884C;&#x5217;&#x4FE1;&#x606F;</span>
+  <span class="hljs-attr">&quot;stack&quot;</span>: <span class="hljs-string">&quot;btnClick (http://localhost:8080/:20:39)^HTMLInputElement.onclick (http://localhost:8080/:14:72)&quot;</span>,<span class="hljs-comment">//&#x5806;&#x6808;&#x4FE1;&#x606F;</span>
+  <span class="hljs-attr">&quot;selector&quot;</span>: <span class="hljs-string">&quot;HTML BODY #container .content INPUT&quot;</span><span class="hljs-comment">//&#x9009;&#x62E9;&#x5668;</span>
+}
+</code></pre>
+<h5 id="t162. promiseError">2. promiseError <a href="#t162. promiseError"> # </a></h5>
+<pre><code class="lang-json">{
+  <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;&#x524D;&#x7AEF;&#x76D1;&#x63A7;&#x7CFB;&#x7EDF;&quot;</span>,<span class="hljs-comment">//&#x9875;&#x9762;&#x6807;&#x9898;</span>
+  <span class="hljs-attr">&quot;url&quot;</span>: <span class="hljs-string">&quot;http://localhost:8080/&quot;</span>,<span class="hljs-comment">//&#x9875;&#x9762;URL</span>
+  <span class="hljs-attr">&quot;timestamp&quot;</span>: <span class="hljs-string">&quot;1590815290600&quot;</span>,<span class="hljs-comment">//&#x8BBF;&#x95EE;&#x65F6;&#x95F4;&#x6233;</span>
+  <span class="hljs-attr">&quot;userAgent&quot;</span>: <span class="hljs-string">&quot;Chrome&quot;</span>,<span class="hljs-comment">//&#x7528;&#x6237;&#x6D4F;&#x89C8;&#x5668;&#x7C7B;&#x578B;</span>
+  <span class="hljs-attr">&quot;kind&quot;</span>: <span class="hljs-string">&quot;stability&quot;</span>,<span class="hljs-comment">//&#x5927;&#x7C7B;</span>
+  <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;error&quot;</span>,<span class="hljs-comment">//&#x5C0F;&#x7C7B;</span>
+  <span class="hljs-attr">&quot;errorType&quot;</span>: <span class="hljs-string">&quot;promiseError&quot;</span>,<span class="hljs-comment">//&#x9519;&#x8BEF;&#x7C7B;&#x578B;</span>
+  <span class="hljs-attr">&quot;message&quot;</span>: <span class="hljs-string">&quot;someVar is not defined&quot;</span>,<span class="hljs-comment">//&#x7C7B;&#x578B;&#x8BE6;&#x60C5;</span>
+  <span class="hljs-attr">&quot;filename&quot;</span>: <span class="hljs-string">&quot;http://localhost:8080/&quot;</span>,<span class="hljs-comment">//&#x8BBF;&#x95EE;&#x7684;&#x6587;&#x4EF6;&#x540D;</span>
+  <span class="hljs-attr">&quot;position&quot;</span>: <span class="hljs-string">&quot;24:29&quot;</span>,<span class="hljs-comment">//&#x884C;&#x5217;&#x4FE1;&#x606F;</span>
+  <span class="hljs-attr">&quot;stack&quot;</span>: <span class="hljs-string">&quot;http://localhost:8080/:24:29^new Promise (&lt;anonymous&gt;)^btnPromiseClick (http://localhost:8080/:23:13)^HTMLInputElement.onclick (http://localhost:8080/:15:86)&quot;</span>,<span class="hljs-comment">//&#x5806;&#x6808;&#x4FE1;&#x606F;</span>
+  <span class="hljs-attr">&quot;selector&quot;</span>: <span class="hljs-string">&quot;HTML BODY #container .content INPUT&quot;</span><span class="hljs-comment">//&#x9009;&#x62E9;&#x5668;</span>
+}
+</code></pre>
+<h5 id="t173. resourceError">3. resourceError <a href="#t173. resourceError"> # </a></h5>
+<pre><code class="lang-json">{
+  <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;&#x524D;&#x7AEF;&#x76D1;&#x63A7;&#x7CFB;&#x7EDF;&quot;</span>,<span class="hljs-comment">//&#x9875;&#x9762;&#x6807;&#x9898;</span>
+  <span class="hljs-attr">&quot;url&quot;</span>: <span class="hljs-string">&quot;http://localhost:8080/&quot;</span>,<span class="hljs-comment">//&#x9875;&#x9762;URL</span>
+  <span class="hljs-attr">&quot;timestamp&quot;</span>: <span class="hljs-string">&quot;1590816168643&quot;</span>,<span class="hljs-comment">//&#x8BBF;&#x95EE;&#x65F6;&#x95F4;&#x6233;</span>
+  <span class="hljs-attr">&quot;userAgent&quot;</span>: <span class="hljs-string">&quot;Chrome&quot;</span>,<span class="hljs-comment">//&#x7528;&#x6237;&#x6D4F;&#x89C8;&#x5668;&#x7C7B;&#x578B;</span>
+  <span class="hljs-attr">&quot;kind&quot;</span>: <span class="hljs-string">&quot;stability&quot;</span>,<span class="hljs-comment">//&#x5927;&#x7C7B;</span>
+  <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;error&quot;</span>,<span class="hljs-comment">//&#x5C0F;&#x7C7B;</span>
+  <span class="hljs-attr">&quot;errorType&quot;</span>: <span class="hljs-string">&quot;resourceError&quot;</span>,<span class="hljs-comment">//&#x9519;&#x8BEF;&#x7C7B;&#x578B;</span>
+  <span class="hljs-attr">&quot;filename&quot;</span>: <span class="hljs-string">&quot;http://localhost:8080/error.js&quot;</span>,<span class="hljs-comment">//&#x8BBF;&#x95EE;&#x7684;&#x6587;&#x4EF6;&#x540D;</span>
+  <span class="hljs-attr">&quot;tagName&quot;</span>: <span class="hljs-string">&quot;SCRIPT&quot;</span>,<span class="hljs-comment">//&#x6807;&#x7B7E;&#x540D;</span>
+  <span class="hljs-attr">&quot;timeStamp&quot;</span>: <span class="hljs-string">&quot;76&quot;</span>,<span class="hljs-comment">//&#x65F6;&#x95F4;</span>
+  <span class="hljs-attr">&quot;selector&quot;</span>: <span class="hljs-string">&quot;HTML BODY SCRIPT&quot;</span><span class="hljs-comment">//&#x9009;&#x62E9;&#x5668;</span>
+}
+</code></pre>
+<h4 id="t184.2.3 &#x62A5;&#x8868;">4.2.3 &#x62A5;&#x8868; <a href="#t184.2.3 &#x62A5;&#x8868;"> # </a></h4>
+<ul>
+<li><a href="https://help.aliyun.com/document_detail/29060.html?spm=5176.2020520112.0.0.636c34c07HzVho">&#x67E5;&#x8BE2;&#x8BED;&#x53E5;</a></li>
+</ul>
+<pre><code class="lang-js">* | SELECT kind,count(*) <span class="hljs-keyword">as</span> number GROUP BY kind
+</code></pre>
+<h4 id="t194.2.4 &#x5B9E;&#x73B0;">4.2.4 &#x5B9E;&#x73B0; <a href="#t194.2.4 &#x5B9E;&#x73B0;"> # </a></h4>
+<h5 id="t201. webpack.config.js">1. webpack.config.js <a href="#t201. webpack.config.js"> # </a></h5>
+<p>webpack.config.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
+<span class="hljs-keyword">const</span> HtmlWebpackPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;html-webpack-plugin&apos;</span>);
+<span class="hljs-built_in">module</span>.exports = {
+    <span class="hljs-attr">mode</span>: <span class="hljs-string">&apos;development&apos;</span>,
+    <span class="hljs-attr">context</span>: process.cwd(),
+    <span class="hljs-attr">entry</span>: <span class="hljs-string">&apos;./src/index.js&apos;</span>,
+    <span class="hljs-attr">output</span>: {
+        <span class="hljs-attr">path</span>: path.resolve(__dirname, <span class="hljs-string">&apos;dist&apos;</span>),
+        <span class="hljs-attr">filename</span>: <span class="hljs-string">&apos;monitor.js&apos;</span>
+    },
+    <span class="hljs-attr">devServer</span>: {
+        <span class="hljs-attr">contentBase</span>: path.resolve(__dirname, <span class="hljs-string">&apos;dist&apos;</span>)
+    },
+    <span class="hljs-attr">module</span>: {},
+    <span class="hljs-attr">plugins</span>: [
+        <span class="hljs-keyword">new</span> HtmlWebpackPlugin({
+            <span class="hljs-attr">template</span>: <span class="hljs-string">&apos;./src/index.html&apos;</span>,
+            <span class="hljs-attr">inject</span>: <span class="hljs-string">&apos;head&apos;</span>
+        })
+    ]
+}
+</code></pre>
+<h5 id="t212. index.html">2. index.html <a href="#t212. index.html"> # </a></h5>
+<p>src\index.html</p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>monitor<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;container&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;content&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&#x70B9;&#x51FB;&#x629B;&#x51FA;&#x9519;&#x8BEF;&quot;</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;btnClick()&quot;</span> /&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&#x70B9;&#x51FB;&#x629B;&#x51FA;promise&#x9519;&#x8BEF;&quot;</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;btnPromiseClick()&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">btnClick</span>(<span class="hljs-params"></span>) </span>{
+            <span class="hljs-built_in">window</span>.someVariable.error = <span class="hljs-string">&apos;someVariable&apos;</span>;
+        }
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">btnPromiseClick</span>(<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">resolve, reject</span>) </span>{
+                <span class="hljs-built_in">console</span>.log(someVar.some);
+            });
+        }
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;error.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h5 id="t223. src\index.js">3. src\index.js <a href="#t223. src\index.js"> # </a></h5>
+<p>src\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> <span class="hljs-string">&apos;./monitor&apos;</span>
+</code></pre>
+<h5 id="t234. monitor\index.js">4. monitor\index.js <a href="#t234. monitor\index.js"> # </a></h5>
+<p>src\monitor\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { injectJsError } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./lib/jsError&apos;</span>;
+injectJsError();
+</code></pre>
+<h5 id="t245. jsError.js">5. jsError.js <a href="#t245. jsError.js"> # </a></h5>
+<p>src\monitor\lib\jsError.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> tracker <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../util/tracker&apos;</span>;
+<span class="hljs-keyword">import</span> getLastEvent <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../util/getLastEvent&apos;</span>;
+<span class="hljs-keyword">import</span> getSelector <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../util/getSelector&apos;</span>;
+<span class="hljs-keyword">import</span> formatTime <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../util/formatTime&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">injectJsError</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-comment">//&#x4E00;&#x822C;JS&#x8FD0;&#x884C;&#x65F6;&#x9519;&#x8BEF;&#x4F7F;&#x7528;window.onerror&#x6355;&#x83B7;&#x5904;&#x7406;</span>
+    <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">&apos;error&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">event</span>) </span>{
+        <span class="hljs-keyword">let</span> lastEvent = getLastEvent();
+        <span class="hljs-keyword">if</span> (event.target &amp;&amp; (event.target.src || event.target.href)) {
+            tracker.send({<span class="hljs-comment">//&#x8D44;&#x6E90;&#x52A0;&#x8F7D;&#x9519;&#x8BEF;</span>
+                <span class="hljs-attr">kind</span>: <span class="hljs-string">&apos;stability&apos;</span>,<span class="hljs-comment">//&#x7A33;&#x5B9A;&#x6027;&#x6307;&#x6807;</span>
+                <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;error&apos;</span>,<span class="hljs-comment">//resource</span>
+                <span class="hljs-attr">errorType</span>: <span class="hljs-string">&apos;resourceError&apos;</span>,
+                <span class="hljs-attr">filename</span>: event.target.src || event.target.href,<span class="hljs-comment">//&#x52A0;&#x8F7D;&#x5931;&#x8D25;&#x7684;&#x8D44;&#x6E90;</span>
+                <span class="hljs-attr">tagName</span>: event.target.tagName,<span class="hljs-comment">//&#x6807;&#x7B7E;&#x540D;</span>
+                <span class="hljs-attr">timeStamp</span>: formatTime(event.timeStamp),<span class="hljs-comment">//&#x65F6;&#x95F4;</span>
+                <span class="hljs-attr">selector</span>: getSelector(event.path || event.target),<span class="hljs-comment">//&#x9009;&#x62E9;&#x5668;</span>
+            })
+        } <span class="hljs-keyword">else</span> {
+            tracker.send({
+                <span class="hljs-attr">kind</span>: <span class="hljs-string">&apos;stability&apos;</span>,<span class="hljs-comment">//&#x7A33;&#x5B9A;&#x6027;&#x6307;&#x6807;</span>
+                <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;error&apos;</span>,<span class="hljs-comment">//error</span>
+                <span class="hljs-attr">errorType</span>: <span class="hljs-string">&apos;jsError&apos;</span>,<span class="hljs-comment">//jsError</span>
+                <span class="hljs-attr">message</span>: event.message,<span class="hljs-comment">//&#x62A5;&#x9519;&#x4FE1;&#x606F;</span>
+                <span class="hljs-attr">filename</span>: event.filename,<span class="hljs-comment">//&#x62A5;&#x9519;&#x94FE;&#x63A5;</span>
+                <span class="hljs-attr">position</span>: (event.lineNo || <span class="hljs-number">0</span>) + <span class="hljs-string">&quot;:&quot;</span> + (event.columnNo || <span class="hljs-number">0</span>),<span class="hljs-comment">//&#x884C;&#x5217;&#x53F7;</span>
+                <span class="hljs-attr">stack</span>: getLines(event.error.stack),<span class="hljs-comment">//&#x9519;&#x8BEF;&#x5806;&#x6808;</span>
+                <span class="hljs-attr">selector</span>: lastEvent ? getSelector(lastEvent.path || lastEvent.target) : <span class="hljs-string">&apos;&apos;</span><span class="hljs-comment">//CSS&#x9009;&#x62E9;&#x5668;</span>
+            })
+        }
+    }, <span class="hljs-literal">true</span>);<span class="hljs-comment">// true&#x4EE3;&#x8868;&#x5728;&#x6355;&#x83B7;&#x9636;&#x6BB5;&#x8C03;&#x7528;,false&#x4EE3;&#x8868;&#x5728;&#x5192;&#x6CE1;&#x9636;&#x6BB5;&#x6355;&#x83B7;,&#x4F7F;&#x7528;true&#x6216;false&#x90FD;&#x53EF;&#x4EE5;</span>
+
+    <span class="hljs-comment">//&#x5F53;Promise &#x88AB; reject &#x4E14;&#x6CA1;&#x6709; reject &#x5904;&#x7406;&#x5668;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x89E6;&#x53D1; unhandledrejection &#x4E8B;&#x4EF6;</span>
+    <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">&apos;unhandledrejection&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">event</span>) </span>{
+        <span class="hljs-keyword">let</span> lastEvent = getLastEvent();
+        <span class="hljs-keyword">let</span> message = <span class="hljs-string">&apos;&apos;</span>;
+        <span class="hljs-keyword">let</span> line = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">let</span> column = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">let</span> file = <span class="hljs-string">&apos;&apos;</span>;
+        <span class="hljs-keyword">let</span> stack = <span class="hljs-string">&apos;&apos;</span>;
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> event.reason === <span class="hljs-string">&apos;string&apos;</span>) {
+            message = event.reason;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> event.reason === <span class="hljs-string">&apos;object&apos;</span>) {
+            message = event.reason.message;
+        }
+        <span class="hljs-keyword">let</span> reason = event.reason;
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> reason === <span class="hljs-string">&apos;object&apos;</span>) {
+            <span class="hljs-keyword">if</span> (reason.stack) {
+                <span class="hljs-keyword">var</span> matchResult = reason.stack.match(<span class="hljs-regexp">/at\s+(.+):(\d+):(\d+)/</span>);
+                <span class="hljs-keyword">if</span> (matchResult) {
+                    file = matchResult[<span class="hljs-number">1</span>];
+                    line = matchResult[<span class="hljs-number">2</span>];
+                    column = matchResult[<span class="hljs-number">3</span>];
+                }
+                stack = getLines(reason.stack);
+            }
+        }
+        tracker.send({<span class="hljs-comment">//&#x672A;&#x6355;&#x83B7;&#x7684;promise&#x9519;&#x8BEF;</span>
+            <span class="hljs-attr">kind</span>: <span class="hljs-string">&apos;stability&apos;</span>,<span class="hljs-comment">//&#x7A33;&#x5B9A;&#x6027;&#x6307;&#x6807;</span>
+            <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;error&apos;</span>,<span class="hljs-comment">//jsError</span>
+            <span class="hljs-attr">errorType</span>: <span class="hljs-string">&apos;promiseError&apos;</span>,<span class="hljs-comment">//unhandledrejection</span>
+            <span class="hljs-attr">message</span>: message,<span class="hljs-comment">//&#x6807;&#x7B7E;&#x540D;</span>
+            <span class="hljs-attr">filename</span>: file,
+            <span class="hljs-attr">position</span>: line + <span class="hljs-string">&apos;:&apos;</span> + column,<span class="hljs-comment">//&#x884C;&#x5217;</span>
+            stack,
+            <span class="hljs-attr">selector</span>: lastEvent ? getSelector(lastEvent.path || lastEvent.target) : <span class="hljs-string">&apos;&apos;</span>
+        })
+    }, <span class="hljs-literal">true</span>);<span class="hljs-comment">// true&#x4EE3;&#x8868;&#x5728;&#x6355;&#x83B7;&#x9636;&#x6BB5;&#x8C03;&#x7528;,false&#x4EE3;&#x8868;&#x5728;&#x5192;&#x6CE1;&#x9636;&#x6BB5;&#x6355;&#x83B7;,&#x4F7F;&#x7528;true&#x6216;false&#x90FD;&#x53EF;&#x4EE5;</span>
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getLines</span>(<span class="hljs-params">stack</span>) </span>{
+    <span class="hljs-keyword">if</span> (!stack) {
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&apos;</span>;
+    }
+    <span class="hljs-keyword">return</span> stack.split(<span class="hljs-string">&apos;\n&apos;</span>).slice(<span class="hljs-number">1</span>).map(<span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> item.replace(<span class="hljs-regexp">/^\s+at\s+/g</span>, <span class="hljs-string">&apos;&apos;</span>)).join(<span class="hljs-string">&apos;^&apos;</span>);
+}
+</code></pre>
+<h5 id="t256. formatTime.js">6. formatTime.js <a href="#t256. formatTime.js"> # </a></h5>
+<p>src\monitor\util\formatTime.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> (time) =&gt; {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${time}</span>`</span>.split(<span class="hljs-string">&quot;.&quot;</span>)[<span class="hljs-number">0</span>]
+}
+</code></pre>
+<h5 id="t267. getLastEvent.js">7. getLastEvent.js <a href="#t267. getLastEvent.js"> # </a></h5>
+<p>src\monitor\util\getLastEvent.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> lastEvent;
+[<span class="hljs-string">&apos;click&apos;</span>,<span class="hljs-string">&apos;pointerdown&apos;</span>, <span class="hljs-string">&apos;touchstart&apos;</span>, <span class="hljs-string">&apos;mousedown&apos;</span>, <span class="hljs-string">&apos;keydown&apos;</span>, <span class="hljs-string">&apos;mouseover&apos;</span>].forEach(<span class="hljs-function"><span class="hljs-params">event</span> =&gt;</span> {
+    <span class="hljs-built_in">document</span>.addEventListener(event, (event) =&gt; {
+        lastEvent = event;
+    }, {
+        <span class="hljs-attr">capture</span>: <span class="hljs-literal">true</span>,<span class="hljs-comment">//capture &#x63A7;&#x5236;&#x76D1;&#x542C;&#x5668;&#x662F;&#x5728;&#x6355;&#x83B7;&#x9636;&#x6BB5;&#x6267;&#x884C;&#x8FD8;&#x662F;&#x5728;&#x5192;&#x6CE1;&#x9636;&#x6BB5;&#x6267;&#x884C; </span>
+        <span class="hljs-attr">passive</span>: <span class="hljs-literal">true</span> <span class="hljs-comment">//passive &#x7684;&#x610F;&#x601D;&#x662F;&#x987A;&#x4ECE;&#x7684;&#xFF0C;&#x8868;&#x793A;&#x5B83;&#x4E0D;&#x4F1A;&#x5BF9;&#x4E8B;&#x4EF6;&#x7684;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#x8BF4; no</span>
+    });
+});
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> lastEvent;
+};
+</code></pre>
+<h5 id="t278. getSelector.js">8. getSelector.js <a href="#t278. getSelector.js"> # </a></h5>
+<p>src\monitor\util\getSelector.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> getSelector = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">path</span>) </span>{
+    <span class="hljs-keyword">return</span> path.reverse().filter(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">element</span>) </span>{
+        <span class="hljs-keyword">return</span> element !== <span class="hljs-built_in">window</span> &amp;&amp; element !== <span class="hljs-built_in">document</span>;
+    }).map(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">element</span>) </span>{
+        <span class="hljs-keyword">var</span> selector;
+        <span class="hljs-keyword">if</span> (element.id) {
+            selector = <span class="hljs-string">`#<span class="hljs-subst">${element.id}</span>`</span>;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (element.className &amp;&amp; <span class="hljs-keyword">typeof</span> element.className === <span class="hljs-string">&apos;string&apos;</span>) {
+            selector = <span class="hljs-string">&apos;.&apos;</span> + element.className.split(<span class="hljs-string">&apos; &apos;</span>).filter(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">item</span>) </span>{ <span class="hljs-keyword">return</span> !!item }).join(<span class="hljs-string">&apos;.&apos;</span>);
+        } <span class="hljs-keyword">else</span> {
+            selector = element.nodeName;
+        }
+        <span class="hljs-keyword">return</span> selector;
+    }).join(<span class="hljs-string">&apos; &apos;</span>);
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">pathsOrTarget</span>) </span>{
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">Array</span>.isArray(pathsOrTarget)) {
+        <span class="hljs-keyword">return</span> getSelector(pathsOrTarget);
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">var</span> paths = [];
+        <span class="hljs-keyword">var</span> element = pathsOrTarget;
+        <span class="hljs-keyword">while</span> (element) {
+            paths.push(element);
+            element = element.parentNode;
+        }
+        <span class="hljs-keyword">return</span> getSelector(paths);
+    }
+}
+</code></pre>
+<h5 id="t289. tracker.js">9. tracker.js <a href="#t289. tracker.js"> # </a></h5>
+<p>src\monitor\util\tracker.js</p>
+<ul>
+<li><a href="https://help.aliyun.com/document_detail/120218.html">PutWebtracking</a></li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> host = <span class="hljs-string">&apos;cn-beijing.log.aliyuncs.com&apos;</span>;
+<span class="hljs-keyword">let</span> project = <span class="hljs-string">&apos;zhufengmonitor&apos;</span>;
+<span class="hljs-keyword">let</span> logstore = <span class="hljs-string">&apos;zhufengmonitor-store&apos;</span>;
+<span class="hljs-keyword">var</span> userAgent = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;user-agent&apos;</span>)
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getExtraData</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">title</span>: <span class="hljs-built_in">document</span>.title,
+        <span class="hljs-attr">url</span>: location.href,
+        <span class="hljs-attr">timestamp</span>: <span class="hljs-built_in">Date</span>.now(),
+        <span class="hljs-attr">userAgent</span>: userAgent.parse(navigator.userAgent).name
+    };
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SendTracker</span> </span>{
+    <span class="hljs-keyword">constructor</span>() {
+        <span class="hljs-keyword">this</span>.url = <span class="hljs-string">`http://<span class="hljs-subst">${project}</span>.<span class="hljs-subst">${host}</span>/logstores/<span class="hljs-subst">${logstore}</span>/track`</span>;
+        <span class="hljs-keyword">this</span>.xhr = <span class="hljs-keyword">new</span> XMLHttpRequest();
+    }
+    send(data = {}, callback) {
+        <span class="hljs-keyword">let</span> extraData = getExtraData();
+        <span class="hljs-keyword">let</span> logs = { ...extraData, ...data };
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> key <span class="hljs-keyword">in</span> logs) {
+            <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> logs[key] === <span class="hljs-string">&apos;number&apos;</span>) {
+                logs[key] = <span class="hljs-string">&quot;&quot;</span> + logs[key];
+            }
+        }
+        <span class="hljs-built_in">console</span>.log(logs);
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(logs, <span class="hljs-literal">null</span>, <span class="hljs-number">2</span>));
+        <span class="hljs-keyword">let</span> body = <span class="hljs-built_in">JSON</span>.stringify({
+            <span class="hljs-attr">__logs__</span>: [logs]
+        });
+        <span class="hljs-keyword">this</span>.xhr.open(<span class="hljs-string">&quot;POST&quot;</span>, <span class="hljs-keyword">this</span>.url, <span class="hljs-literal">true</span>);
+        <span class="hljs-keyword">this</span>.xhr.setRequestHeader(<span class="hljs-string">&quot;Content-Type&quot;</span>, <span class="hljs-string">&quot;application/json;charset=UTF-8&quot;</span>);
+        <span class="hljs-keyword">this</span>.xhr.setRequestHeader(<span class="hljs-string">&apos;x-log-apiversion&apos;</span>, <span class="hljs-string">&apos;0.6.0&apos;</span>);
+        <span class="hljs-keyword">this</span>.xhr.setRequestHeader(<span class="hljs-string">&apos;x-log-bodyrawsize&apos;</span>, body.length);
+        <span class="hljs-keyword">this</span>.xhr.onload = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            <span class="hljs-keyword">if</span> ((<span class="hljs-keyword">this</span>.status &gt;= <span class="hljs-number">200</span> &amp;&amp; <span class="hljs-keyword">this</span>.status &lt;= <span class="hljs-number">300</span>) || <span class="hljs-keyword">this</span>.status == <span class="hljs-number">304</span>) {
+                callback &amp;&amp; callback();
+            }
+        }
+        <span class="hljs-keyword">this</span>.xhr.onerror = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{
+            <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;error&apos;</span>, error);
+        }
+        <span class="hljs-keyword">this</span>.xhr.send(body);
+    }
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">new</span> SendTracker();
+</code></pre>
+<h3 id="t294.3.&#x63A5;&#x53E3;&#x5F02;&#x5E38;&#x91C7;&#x96C6;&#x811A;&#x672C;">4.3.&#x63A5;&#x53E3;&#x5F02;&#x5E38;&#x91C7;&#x96C6;&#x811A;&#x672C; <a href="#t294.3.&#x63A5;&#x53E3;&#x5F02;&#x5E38;&#x91C7;&#x96C6;&#x811A;&#x672C;"> # </a></h3>
+<h4 id="t304.3.1 &#x6570;&#x636E;&#x8BBE;&#x8BA1;">4.3.1 &#x6570;&#x636E;&#x8BBE;&#x8BA1; <a href="#t304.3.1 &#x6570;&#x636E;&#x8BBE;&#x8BA1;"> # </a></h4>
+<pre><code class="lang-json">{
+  <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;&#x524D;&#x7AEF;&#x76D1;&#x63A7;&#x7CFB;&#x7EDF;&quot;</span>, <span class="hljs-comment">//&#x6807;&#x9898;</span>
+  <span class="hljs-attr">&quot;url&quot;</span>: <span class="hljs-string">&quot;http://localhost:8080/&quot;</span>, <span class="hljs-comment">//url</span>
+  <span class="hljs-attr">&quot;timestamp&quot;</span>: <span class="hljs-string">&quot;1590817024490&quot;</span>, <span class="hljs-comment">//timestamp</span>
+  <span class="hljs-attr">&quot;userAgent&quot;</span>: <span class="hljs-string">&quot;Chrome&quot;</span>, <span class="hljs-comment">//&#x6D4F;&#x89C8;&#x5668;&#x7248;&#x672C;</span>
+  <span class="hljs-attr">&quot;kind&quot;</span>: <span class="hljs-string">&quot;stability&quot;</span>, <span class="hljs-comment">//&#x5927;&#x7C7B;</span>
+  <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;xhr&quot;</span>, <span class="hljs-comment">//&#x5C0F;&#x7C7B;</span>
+  <span class="hljs-attr">&quot;eventType&quot;</span>: <span class="hljs-string">&quot;load&quot;</span>, <span class="hljs-comment">//&#x4E8B;&#x4EF6;&#x7C7B;&#x578B;</span>
+  <span class="hljs-attr">&quot;pathname&quot;</span>: <span class="hljs-string">&quot;/success&quot;</span>, <span class="hljs-comment">//&#x8DEF;&#x5F84;</span>
+  <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;200-OK&quot;</span>, <span class="hljs-comment">//&#x72B6;&#x6001;&#x7801;</span>
+  <span class="hljs-attr">&quot;duration&quot;</span>: <span class="hljs-string">&quot;7&quot;</span>, <span class="hljs-comment">//&#x6301;&#x7EED;&#x65F6;&#x95F4;</span>
+  <span class="hljs-attr">&quot;response&quot;</span>: <span class="hljs-string">&quot;{\&quot;id\&quot;:1}&quot;</span>, <span class="hljs-comment">//&#x54CD;&#x5E94;&#x5185;&#x5BB9;</span>
+  <span class="hljs-attr">&quot;params&quot;</span>: <span class="hljs-string">&quot;&quot;</span>  <span class="hljs-comment">//&#x53C2;&#x6570;</span>
+}
+</code></pre>
+<pre><code class="lang-json">{
+  <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;&#x524D;&#x7AEF;&#x76D1;&#x63A7;&#x7CFB;&#x7EDF;&quot;</span>,
+  <span class="hljs-attr">&quot;url&quot;</span>: <span class="hljs-string">&quot;http://localhost:8080/&quot;</span>,
+  <span class="hljs-attr">&quot;timestamp&quot;</span>: <span class="hljs-string">&quot;1590817025617&quot;</span>,
+  <span class="hljs-attr">&quot;userAgent&quot;</span>: <span class="hljs-string">&quot;Chrome&quot;</span>,
+  <span class="hljs-attr">&quot;kind&quot;</span>: <span class="hljs-string">&quot;stability&quot;</span>,
+  <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;xhr&quot;</span>,
+  <span class="hljs-attr">&quot;eventType&quot;</span>: <span class="hljs-string">&quot;load&quot;</span>,
+  <span class="hljs-attr">&quot;pathname&quot;</span>: <span class="hljs-string">&quot;/error&quot;</span>,
+  <span class="hljs-attr">&quot;status&quot;</span>: <span class="hljs-string">&quot;500-Internal Server Error&quot;</span>,
+  <span class="hljs-attr">&quot;duration&quot;</span>: <span class="hljs-string">&quot;7&quot;</span>,
+  <span class="hljs-attr">&quot;response&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+  <span class="hljs-attr">&quot;params&quot;</span>: <span class="hljs-string">&quot;name=zhufeng&quot;</span>
+}
+</code></pre>
+<h4 id="t314.3.2 &#x5B9E;&#x73B0;">4.3.2 &#x5B9E;&#x73B0; <a href="#t314.3.2 &#x5B9E;&#x73B0;"> # </a></h4>
+<h5 id="t321. src\index.html">1. src\index.html <a href="#t321. src\index.html"> # </a></h5>
+<p>src\index.html</p>
+<pre><code class="lang-diff">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;monitor&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div id=&quot;container&quot;&gt;
+        &lt;div class=&quot;content&quot;&gt;
+<span class="hljs-addition">+            &lt;input type=&quot;button&quot; value=&quot;&#x53D1;&#x8D77;ajax&#x6210;&#x529F;&#x8BF7;&#x6C42;&quot; onclick=&quot;sendAjaxSuccess()&quot; /&gt;</span>
+<span class="hljs-addition">+            &lt;input type=&quot;button&quot; value=&quot;&#x53D1;&#x8D77;ajax&#x5931;&#x8D25;&#x8BF7;&#x6C42;&quot; onclick=&quot;sendAjaxError()&quot; /&gt;</span>
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script&gt;
+<span class="hljs-addition">+        function sendAjaxSuccess() {</span>
+<span class="hljs-addition">+            let xhr = new XMLHttpRequest;</span>
+<span class="hljs-addition">+            xhr.open(&apos;GET&apos;, &apos;/success&apos;, true);</span>
+<span class="hljs-addition">+            xhr.responseType = &apos;json&apos;;</span>
+<span class="hljs-addition">+            xhr.onload = function () {</span>
+<span class="hljs-addition">+                console.log(xhr.response);</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+            xhr.send();</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+        function sendAjaxError() {</span>
+<span class="hljs-addition">+            let xhr = new XMLHttpRequest;</span>
+<span class="hljs-addition">+            xhr.open(&apos;POST&apos;, &apos;/error&apos;, true);</span>
+<span class="hljs-addition">+            xhr.responseType = &apos;json&apos;;</span>
+<span class="hljs-addition">+            xhr.onload = function () {</span>
+<span class="hljs-addition">+                console.log(xhr.response);</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+            xhr.onerror = function (error) {</span>
+<span class="hljs-addition">+                console.log(error);</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+            xhr.send(&quot;name=zhufeng&quot;);</span>
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<h5 id="t332. monitor\index.js">2. monitor\index.js <a href="#t332. monitor\index.js"> # </a></h5>
+<p>src\monitor\index.js</p>
+<pre><code class="lang-diff">import { injectJsError } from &apos;./lib/jsError&apos;;
+<span class="hljs-addition">+import { injectXHR } from &apos;./lib/xhr&apos;;</span>
+injectJsError();
+<span class="hljs-addition">+injectXHR();</span>
+</code></pre>
+<h5 id="t343. webpack.config.js">3. webpack.config.js <a href="#t343. webpack.config.js"> # </a></h5>
+<p>webpack.config.js</p>
+<pre><code class="lang-diff">const path = require(&apos;path&apos;);
+const HtmlWebpackPlugin = require(&apos;html-webpack-plugin&apos;);
+module.exports = {
+    mode: &apos;development&apos;,
+    context: process.cwd(),
+    entry: &apos;./src/index.js&apos;,
+    output: {
+        path: path.resolve(__dirname, &apos;dist&apos;),
+        filename: &apos;monitor.js&apos;
+    },
+    devServer: {
+        contentBase: path.resolve(__dirname, &apos;dist&apos;),
+<span class="hljs-addition">+        before(router) {</span>
+<span class="hljs-addition">+            router.get(&apos;/success&apos;, function (req, res) {</span>
+<span class="hljs-addition">+                res.json({ id: 1 });</span>
+<span class="hljs-addition">+            });</span>
+<span class="hljs-addition">+            router.post(&apos;/error&apos;, function (req, res) {</span>
+<span class="hljs-addition">+                res.sendStatus(500);</span>
+<span class="hljs-addition">+            });</span>
+<span class="hljs-addition">+        }</span>
+    },
+    module: {},
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: &apos;./src/index.html&apos;,
+            inject: &apos;head&apos;
+        })
+    ],
+
+}
+</code></pre>
+<h5 id="t354. xhr.js">4. xhr.js <a href="#t354. xhr.js"> # </a></h5>
+<p>src\monitor\lib\xhr.js</p>
+<pre><code class="lang-js">
+<span class="hljs-keyword">import</span> tracker <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../util/tracker&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">injectXHR</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">let</span> XMLHttpRequest = <span class="hljs-built_in">window</span>.XMLHttpRequest;
+    <span class="hljs-keyword">let</span> oldOpen = XMLHttpRequest.prototype.open;
+    XMLHttpRequest.prototype.open = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">method, url, async, username, password</span>) </span>{
+        <span class="hljs-keyword">if</span> (!url.match(<span class="hljs-regexp">/logstores/</span>) &amp;&amp; !url.match(<span class="hljs-regexp">/sockjs/</span>)) {
+            <span class="hljs-keyword">this</span>.logData = {
+                method, url, <span class="hljs-keyword">async</span>, username, password
+            }
+        }
+        <span class="hljs-keyword">return</span> oldOpen.apply(<span class="hljs-keyword">this</span>, <span class="hljs-built_in">arguments</span>);
+    }
+    <span class="hljs-keyword">let</span> oldSend = XMLHttpRequest.prototype.send;
+    <span class="hljs-keyword">let</span> start;
+    XMLHttpRequest.prototype.send = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">body</span>) </span>{
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.logData) {
+            start = <span class="hljs-built_in">Date</span>.now();
+            <span class="hljs-keyword">let</span> handler = <span class="hljs-function">(<span class="hljs-params">type</span>) =&gt;</span> <span class="hljs-function">(<span class="hljs-params">event</span>) =&gt;</span> {
+                <span class="hljs-keyword">let</span> duration = <span class="hljs-built_in">Date</span>.now() - start;
+                <span class="hljs-keyword">let</span> status = <span class="hljs-keyword">this</span>.status;
+                <span class="hljs-keyword">let</span> statusText = <span class="hljs-keyword">this</span>.statusText;
+                tracker.send({<span class="hljs-comment">//&#x672A;&#x6355;&#x83B7;&#x7684;promise&#x9519;&#x8BEF;</span>
+                    <span class="hljs-attr">kind</span>: <span class="hljs-string">&apos;stability&apos;</span>,<span class="hljs-comment">//&#x7A33;&#x5B9A;&#x6027;&#x6307;&#x6807;</span>
+                    <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;xhr&apos;</span>,<span class="hljs-comment">//xhr</span>
+                    <span class="hljs-attr">eventType</span>: type,<span class="hljs-comment">//load error abort</span>
+                    <span class="hljs-attr">pathname</span>: <span class="hljs-keyword">this</span>.logData.url,<span class="hljs-comment">//&#x63A5;&#x53E3;&#x7684;url&#x5730;&#x5740;</span>
+                    <span class="hljs-attr">status</span>: status + <span class="hljs-string">&quot;-&quot;</span> + statusText,
+                    <span class="hljs-attr">duration</span>: <span class="hljs-string">&quot;&quot;</span> + duration,<span class="hljs-comment">//&#x63A5;&#x53E3;&#x8017;&#x65F6;</span>
+                    <span class="hljs-attr">response</span>: <span class="hljs-keyword">this</span>.response ? <span class="hljs-built_in">JSON</span>.stringify(<span class="hljs-keyword">this</span>.response) : <span class="hljs-string">&quot;&quot;</span>,
+                    <span class="hljs-attr">params</span>: body || <span class="hljs-string">&apos;&apos;</span>
+                })
+            }
+            <span class="hljs-keyword">this</span>.addEventListener(<span class="hljs-string">&apos;load&apos;</span>, handler(<span class="hljs-string">&apos;load&apos;</span>), <span class="hljs-literal">false</span>);
+            <span class="hljs-keyword">this</span>.addEventListener(<span class="hljs-string">&apos;error&apos;</span>, handler(<span class="hljs-string">&apos;error&apos;</span>), <span class="hljs-literal">false</span>);
+            <span class="hljs-keyword">this</span>.addEventListener(<span class="hljs-string">&apos;abort&apos;</span>, handler(<span class="hljs-string">&apos;abort&apos;</span>), <span class="hljs-literal">false</span>);
+        }
+        oldSend.apply(<span class="hljs-keyword">this</span>, <span class="hljs-built_in">arguments</span>);
+    };
+}
+</code></pre>
+<h3 id="t364.4 &#x767D;&#x5C4F;">4.4 &#x767D;&#x5C4F; <a href="#t364.4 &#x767D;&#x5C4F;"> # </a></h3>
+<ul>
+<li>&#x767D;&#x5C4F;&#x5C31;&#x662F;&#x9875;&#x9762;&#x4E0A;&#x4EC0;&#x4E48;&#x90FD;&#x6CA1;&#x6709;</li>
+</ul>
+<h4 id="t374.4.1 &#x6570;&#x636E;&#x8BBE;&#x8BA1;">4.4.1 &#x6570;&#x636E;&#x8BBE;&#x8BA1; <a href="#t374.4.1 &#x6570;&#x636E;&#x8BBE;&#x8BA1;"> # </a></h4>
+<pre><code class="lang-json">{
+  <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;&#x524D;&#x7AEF;&#x76D1;&#x63A7;&#x7CFB;&#x7EDF;&quot;</span>,
+  <span class="hljs-attr">&quot;url&quot;</span>: <span class="hljs-string">&quot;http://localhost:8080/&quot;</span>,
+  <span class="hljs-attr">&quot;timestamp&quot;</span>: <span class="hljs-string">&quot;1590822618759&quot;</span>,
+  <span class="hljs-attr">&quot;userAgent&quot;</span>: <span class="hljs-string">&quot;chrome&quot;</span>,
+  <span class="hljs-attr">&quot;kind&quot;</span>: <span class="hljs-string">&quot;stability&quot;</span>,      <span class="hljs-comment">//&#x5927;&#x7C7B;</span>
+  <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;blank&quot;</span>,          <span class="hljs-comment">//&#x5C0F;&#x7C7B;</span>
+  <span class="hljs-attr">&quot;emptyPoints&quot;</span>: <span class="hljs-string">&quot;0&quot;</span>,       <span class="hljs-comment">//&#x7A7A;&#x767D;&#x70B9;</span>
+  <span class="hljs-attr">&quot;screen&quot;</span>: <span class="hljs-string">&quot;2049x1152&quot;</span>,    <span class="hljs-comment">//&#x5206;&#x8FA8;&#x7387;</span>
+  <span class="hljs-attr">&quot;viewPoint&quot;</span>: <span class="hljs-string">&quot;2048x994&quot;</span>,  <span class="hljs-comment">//&#x89C6;&#x53E3;</span>
+  <span class="hljs-attr">&quot;selector&quot;</span>: <span class="hljs-string">&quot;HTML BODY #container&quot;</span> <span class="hljs-comment">//&#x9009;&#x62E9;&#x5668;</span>
+}
+</code></pre>
+<h4 id="t384.4.2 &#x5B9E;&#x73B0;">4.4.2 &#x5B9E;&#x73B0; <a href="#t384.4.2 &#x5B9E;&#x73B0;"> # </a></h4>
+<ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/screen">screen</a> &#x8FD4;&#x56DE;&#x5F53;&#x524D;window&#x7684;screen&#x5BF9;&#x8C61;,&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x6E32;&#x67D3;&#x7A97;&#x53E3;&#x4E2D;&#x548C;&#x5C4F;&#x5E55;&#x6709;&#x5173;&#x7684;&#x5C5E;&#x6027;</li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/innerWidth">innerWidth</a> &#x53EA;&#x8BFB;&#x7684; Window &#x5C5E;&#x6027; innerWidth &#x8FD4;&#x56DE;&#x4EE5;&#x50CF;&#x7D20;&#x4E3A;&#x5355;&#x4F4D;&#x7684;&#x7A97;&#x53E3;&#x7684;&#x5185;&#x90E8;&#x5BBD;&#x5EA6;</li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/innerHeight">innerHeight</a> &#x7A97;&#x53E3;&#x7684;&#x5185;&#x90E8;&#x9AD8;&#x5EA6;(&#x5E03;&#x5C40;&#x89C6;&#x53E3;)&#x7684;&#x9AD8;&#x5EA6;</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Glossary/layout_viewport">layout_viewport</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/elementsFromPoint">elementsFromPoint</a>&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x5230;&#x5F53;&#x524D;&#x89C6;&#x53E3;&#x5185;&#x6307;&#x5B9A;&#x5750;&#x6807;&#x5904;&#xFF0C;&#x7531;&#x91CC;&#x5230;&#x5916;&#x6392;&#x5217;&#x7684;&#x6240;&#x6709;&#x5143;&#x7D20;</li>
+</ul>
+<h5 id="t391. src\index.html">1. src\index.html <a href="#t391. src\index.html"> # </a></h5>
+<pre><code class="lang-diff">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;monitor&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;container&quot;&gt;
+        &lt;div class=&quot;content&quot; style=&quot;width:600px;word-wrap:break-word;&quot;&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script&gt;
+<span class="hljs-addition">+        let content = document.getElementsByClassName(&apos;content&apos;)[0];</span>
+<span class="hljs-addition">+        content.innerHTML = &apos;@&apos;.repeat(10000);</span>
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h5 id="t402. monitor\index.js">2. monitor\index.js <a href="#t402. monitor\index.js"> # </a></h5>
+<p>src\monitor\index.js</p>
+<pre><code class="lang-diff">import { injectJsError } from &apos;./lib/jsError&apos;;
+import { injectXHR } from &apos;./lib/xhr&apos;;
+<span class="hljs-addition">+import { blankScreen } from &apos;./lib/blankScreen&apos;;</span>
+injectJsError();
+injectXHR();
+<span class="hljs-addition">+blankScreen();</span>
+</code></pre>
+<h5 id="t413. onload.js">3. onload.js <a href="#t413. onload.js"> # </a></h5>
+<p>src\monitor\util\onload.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">callback</span>) </span>{
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">document</span>.readyState === <span class="hljs-string">&apos;complete&apos;</span>) {
+        callback();
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">&apos;load&apos;</span>, callback);
+    }
+};
+</code></pre>
+<h5 id="t424. blankScreen.js">4. blankScreen.js <a href="#t424. blankScreen.js"> # </a></h5>
+<p>src\monitor\lib\blankScreen.js</p>
+<pre><code class="lang-js">
+<span class="hljs-keyword">import</span> tracker <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../util/tracker&apos;</span>;
+<span class="hljs-keyword">import</span> onload <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../util/onload&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getSelector</span>(<span class="hljs-params">element</span>) </span>{
+    <span class="hljs-keyword">var</span> selector;
+    <span class="hljs-keyword">if</span> (element.id) {
+        selector = <span class="hljs-string">`#<span class="hljs-subst">${element.id}</span>`</span>;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (element.className &amp;&amp; <span class="hljs-keyword">typeof</span> element.className === <span class="hljs-string">&apos;string&apos;</span>) {
+        selector = <span class="hljs-string">&apos;.&apos;</span> + element.className.split(<span class="hljs-string">&apos; &apos;</span>).filter(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">item</span>) </span>{ <span class="hljs-keyword">return</span> !!item }).join(<span class="hljs-string">&apos;.&apos;</span>);
+    } <span class="hljs-keyword">else</span> {
+        selector = element.nodeName.toLowerCase();
+    }
+    <span class="hljs-keyword">return</span> selector;
+}
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">blankScreen</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> wrapperSelectors = [<span class="hljs-string">&apos;body&apos;</span>, <span class="hljs-string">&apos;html&apos;</span>, <span class="hljs-string">&apos;#container&apos;</span>, <span class="hljs-string">&apos;.content&apos;</span>];
+    <span class="hljs-keyword">let</span> emptyPoints = <span class="hljs-number">0</span>;
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">isWrapper</span>(<span class="hljs-params">element</span>) </span>{
+        <span class="hljs-keyword">let</span> selector = getSelector(element);
+        <span class="hljs-keyword">if</span> (wrapperSelectors.indexOf(selector) &gt;= <span class="hljs-number">0</span>) {
+            emptyPoints++;
+        }
+    }
+    onload(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">let</span> xElements, yElements;
+        <span class="hljs-keyword">debugger</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span>; i &lt;= <span class="hljs-number">9</span>; i++) {
+            xElements = <span class="hljs-built_in">document</span>.elementsFromPoint(<span class="hljs-built_in">window</span>.innerWidth * i / <span class="hljs-number">10</span>, <span class="hljs-built_in">window</span>.innerHeight / <span class="hljs-number">2</span>)
+            yElements = <span class="hljs-built_in">document</span>.elementsFromPoint(<span class="hljs-built_in">window</span>.innerWidth / <span class="hljs-number">2</span>, <span class="hljs-built_in">window</span>.innerHeight * i / <span class="hljs-number">10</span>)
+            isWrapper(xElements[<span class="hljs-number">0</span>]);
+            isWrapper(yElements[<span class="hljs-number">0</span>]);
+        }
+        <span class="hljs-keyword">if</span> (emptyPoints &gt;= <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">let</span> centerElements = <span class="hljs-built_in">document</span>.elementsFromPoint(<span class="hljs-built_in">window</span>.innerWidth / <span class="hljs-number">2</span>, <span class="hljs-built_in">window</span>.innerHeight / <span class="hljs-number">2</span>)
+            tracker.send({
+                <span class="hljs-attr">kind</span>: <span class="hljs-string">&apos;stability&apos;</span>,
+                <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;blank&apos;</span>,
+                <span class="hljs-attr">emptyPoints</span>: <span class="hljs-string">&quot;&quot;</span> + emptyPoints,
+                <span class="hljs-attr">screen</span>: <span class="hljs-built_in">window</span>.screen.width + <span class="hljs-string">&quot;x&quot;</span> + <span class="hljs-built_in">window</span>.screen.height,
+                <span class="hljs-attr">viewPoint</span>: <span class="hljs-built_in">window</span>.innerWidth + <span class="hljs-string">&apos;x&apos;</span> + <span class="hljs-built_in">window</span>.innerHeight,
+                <span class="hljs-attr">selector</span>: getSelector(centerElements[<span class="hljs-number">0</span>]),
+            })
+        }
+    });
+}
+<span class="hljs-comment">//screen.width  &#x5C4F;&#x5E55;&#x7684;&#x5BBD;&#x5EA6;   screen.height &#x5C4F;&#x5E55;&#x7684;&#x9AD8;&#x5EA6;</span>
+<span class="hljs-comment">//window.innerWidth &#x53BB;&#x9664;&#x5DE5;&#x5177;&#x6761;&#x4E0E;&#x6EDA;&#x52A8;&#x6761;&#x7684;&#x7A97;&#x53E3;&#x5BBD;&#x5EA6; window.innerHeight &#x53BB;&#x9664;&#x5DE5;&#x5177;&#x6761;&#x4E0E;&#x6EDA;&#x52A8;&#x6761;&#x7684;&#x7A97;&#x53E3;&#x9AD8;&#x5EA6;</span>
+</code></pre>
+<h3 id="t434.5 &#x52A0;&#x8F7D;&#x65F6;&#x95F4;">4.5 &#x52A0;&#x8F7D;&#x65F6;&#x95F4; <a href="#t434.5 &#x52A0;&#x8F7D;&#x65F6;&#x95F4;"> # </a></h3>
+<ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/PerformanceTiming">PerformanceTiming</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/Events/DOMContentLoaded">DOMContentLoaded</a></li>
+<li><a href="https://docs.google.com/document/d/1BR94tJdZLsin5poeet0XoTW60M0SjvOJQttKT-JK8HI/view#">FMP</a></li>
+</ul>
+<h4 id="t444.5.1 &#x9636;&#x6BB5;&#x542B;&#x4E49;">4.5.1 &#x9636;&#x6BB5;&#x542B;&#x4E49; <a href="#t444.5.1 &#x9636;&#x6BB5;&#x542B;&#x4E49;"> # </a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">navigationStart</td>
+<td style="text-align:left">&#x521D;&#x59CB;&#x5316;&#x9875;&#x9762;&#xFF0C;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x6D4F;&#x89C8;&#x5668;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x524D;&#x4E00;&#x4E2A;&#x9875;&#x9762;unload&#x7684;&#x65F6;&#x95F4;&#x6233;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x524D;&#x4E00;&#x4E2A;&#x9875;&#x9762;&#x7684;unload,&#x5219;&#x4E0E;fetchStart&#x503C;&#x76F8;&#x7B49;</td>
+</tr>
+<tr>
+<td style="text-align:left">redirectStart</td>
+<td style="text-align:left">&#x7B2C;&#x4E00;&#x4E2A;HTTP&#x91CD;&#x5B9A;&#x5411;&#x53D1;&#x751F;&#x7684;&#x65F6;&#x95F4;,&#x6709;&#x8DF3;&#x8F6C;&#x4E14;&#x662F;&#x540C;&#x57DF;&#x7684;&#x91CD;&#x5B9A;&#x5411;,&#x5426;&#x5219;&#x4E3A;0</td>
+</tr>
+<tr>
+<td style="text-align:left">redirectEnd</td>
+<td style="text-align:left">&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x91CD;&#x5B9A;&#x5411;&#x5B8C;&#x6210;&#x65F6;&#x7684;&#x65F6;&#x95F4;,&#x5426;&#x5219;&#x4E3A;0</td>
+</tr>
+<tr>
+<td style="text-align:left">fetchStart</td>
+<td style="text-align:left">&#x6D4F;&#x89C8;&#x5668;&#x51C6;&#x5907;&#x597D;&#x4F7F;&#x7528;http&#x8BF7;&#x6C42;&#x83B7;&#x53D6;&#x6587;&#x6863;&#x7684;&#x65F6;&#x95F4;,&#x8FD9;&#x53D1;&#x751F;&#x5728;&#x68C0;&#x67E5;&#x7F13;&#x5B58;&#x4E4B;&#x524D;</td>
+</tr>
+<tr>
+<td style="text-align:left">domainLookupStart</td>
+<td style="text-align:left">DNS&#x57DF;&#x540D;&#x5F00;&#x59CB;&#x67E5;&#x8BE2;&#x7684;&#x65F6;&#x95F4;,&#x5982;&#x679C;&#x6709;&#x672C;&#x5730;&#x7684;&#x7F13;&#x5B58;&#x6216;keep-alive&#x5219;&#x65F6;&#x95F4;&#x4E3A;0</td>
+</tr>
+<tr>
+<td style="text-align:left">domainLookupEnd</td>
+<td style="text-align:left">DNS&#x57DF;&#x540D;&#x7ED3;&#x675F;&#x67E5;&#x8BE2;&#x7684;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td style="text-align:left">connectStart</td>
+<td style="text-align:left">TCP&#x5F00;&#x59CB;&#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;&#x7684;&#x65F6;&#x95F4;,&#x5982;&#x679C;&#x662F;&#x6301;&#x4E45;&#x8FDE;&#x63A5;,&#x5219;&#x4E0E;<code>fetchStart</code>&#x503C;&#x76F8;&#x7B49;</td>
+</tr>
+<tr>
+<td style="text-align:left">secureConnectionStart</td>
+<td style="text-align:left">https &#x8FDE;&#x63A5;&#x5F00;&#x59CB;&#x7684;&#x65F6;&#x95F4;,&#x5982;&#x679C;&#x4E0D;&#x662F;&#x5B89;&#x5168;&#x8FDE;&#x63A5;&#x5219;&#x4E3A;0</td>
+</tr>
+<tr>
+<td style="text-align:left">connectEnd</td>
+<td style="text-align:left">TCP&#x5B8C;&#x6210;&#x63E1;&#x624B;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x6301;&#x4E45;&#x8FDE;&#x63A5;&#x5219;&#x4E0E;<code>fetchStart</code>&#x503C;&#x76F8;&#x7B49;</td>
+</tr>
+<tr>
+<td style="text-align:left">requestStart</td>
+<td style="text-align:left">HTTP&#x8BF7;&#x6C42;&#x8BFB;&#x53D6;&#x771F;&#x5B9E;&#x6587;&#x6863;&#x5F00;&#x59CB;&#x7684;&#x65F6;&#x95F4;,&#x5305;&#x62EC;&#x4ECE;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8BFB;&#x53D6;</td>
+</tr>
+<tr>
+<td style="text-align:left">requestEnd</td>
+<td style="text-align:left">HTTP&#x8BF7;&#x6C42;&#x8BFB;&#x53D6;&#x771F;&#x5B9E;&#x6587;&#x6863;&#x7ED3;&#x675F;&#x7684;&#x65F6;&#x95F4;,&#x5305;&#x62EC;&#x4ECE;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8BFB;&#x53D6;</td>
+</tr>
+<tr>
+<td style="text-align:left">responseStart</td>
+<td style="text-align:left">&#x8FD4;&#x56DE;&#x6D4F;&#x89C8;&#x5668;&#x4ECE;&#x670D;&#x52A1;&#x5668;&#x6536;&#x5230;&#xFF08;&#x6216;&#x4ECE;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8BFB;&#x53D6;&#xFF09;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x65F6;&#x7684;Unix&#x6BEB;&#x79D2;&#x65F6;&#x95F4;&#x6233;</td>
+</tr>
+<tr>
+<td style="text-align:left">responseEnd</td>
+<td style="text-align:left">&#x8FD4;&#x56DE;&#x6D4F;&#x89C8;&#x5668;&#x4ECE;&#x670D;&#x52A1;&#x5668;&#x6536;&#x5230;&#xFF08;&#x6216;&#x4ECE;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x8BFB;&#x53D6;&#xFF0C;&#x6216;&#x4ECE;&#x672C;&#x5730;&#x8D44;&#x6E90;&#x8BFB;&#x53D6;&#xFF09;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x65F6;&#x7684;Unix&#x6BEB;&#x79D2;&#x65F6;&#x95F4;&#x6233;</td>
+</tr>
+<tr>
+<td style="text-align:left">unloadEventStart</td>
+<td style="text-align:left">&#x524D;&#x4E00;&#x4E2A;&#x9875;&#x9762;&#x7684;unload&#x7684;&#x65F6;&#x95F4;&#x6233; &#x5982;&#x679C;&#x6CA1;&#x6709;&#x5219;&#x4E3A;0</td>
+</tr>
+<tr>
+<td style="text-align:left">unloadEventEnd</td>
+<td style="text-align:left">&#x4E0E;<code>unloadEventStart</code>&#x76F8;&#x5BF9;&#x5E94;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x662F;<code>unload</code>&#x51FD;&#x6570;&#x6267;&#x884C;&#x5B8C;&#x6210;&#x7684;&#x65F6;&#x95F4;&#x6233;</td>
+</tr>
+<tr>
+<td style="text-align:left">domLoading</td>
+<td style="text-align:left">&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x7F51;&#x9875;DOM&#x7ED3;&#x6784;&#x5F00;&#x59CB;&#x89E3;&#x6790;&#x65F6;&#x7684;&#x65F6;&#x95F4;&#x6233;,&#x6B64;&#x65F6;<code>document.readyState</code>&#x53D8;&#x6210;loading,&#x5E76;&#x5C06;&#x629B;&#x51FA;<code>readyStateChange</code>&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td style="text-align:left">domInteractive</td>
+<td style="text-align:left">&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x7F51;&#x9875;DOM&#x7ED3;&#x6784;&#x7ED3;&#x675F;&#x89E3;&#x6790;&#x3001;&#x5F00;&#x59CB;&#x52A0;&#x8F7D;&#x5185;&#x5D4C;&#x8D44;&#x6E90;&#x65F6;&#x65F6;&#x95F4;&#x6233;,<code>document.readyState</code> &#x53D8;&#x6210;<code>interactive</code>&#xFF0C;&#x5E76;&#x5C06;&#x629B;&#x51FA;<code>readyStateChange</code>&#x4E8B;&#x4EF6;(&#x6CE8;&#x610F;&#x53EA;&#x662F;DOM&#x6811;&#x89E3;&#x6790;&#x5B8C;&#x6210;,&#x8FD9;&#x65F6;&#x5019;&#x5E76;&#x6CA1;&#x6709;&#x5F00;&#x59CB;&#x52A0;&#x8F7D;&#x7F51;&#x9875;&#x5185;&#x7684;&#x8D44;&#x6E90;)</td>
+</tr>
+<tr>
+<td style="text-align:left">domContentLoadedEventStart</td>
+<td style="text-align:left">&#x7F51;&#x9875;domContentLoaded&#x4E8B;&#x4EF6;&#x53D1;&#x751F;&#x7684;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td style="text-align:left">domContentLoadedEventEnd</td>
+<td style="text-align:left">&#x7F51;&#x9875;domContentLoaded&#x4E8B;&#x4EF6;&#x811A;&#x672C;&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#x7684;&#x65F6;&#x95F4;,domReady&#x7684;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td style="text-align:left">domComplete</td>
+<td style="text-align:left">DOM&#x6811;&#x89E3;&#x6790;&#x5B8C;&#x6210;,&#x4E14;&#x8D44;&#x6E90;&#x4E5F;&#x51C6;&#x5907;&#x5C31;&#x7EEA;&#x7684;&#x65F6;&#x95F4;,<code>document.readyState</code>&#x53D8;&#x6210;<code>complete</code>.&#x5E76;&#x5C06;&#x629B;&#x51FA;<code>readystatechange</code>&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td style="text-align:left">loadEventStart</td>
+<td style="text-align:left">load &#x4E8B;&#x4EF6;&#x53D1;&#x9001;&#x7ED9;&#x6587;&#x6863;&#xFF0C;&#x4E5F;&#x5373;load&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5F00;&#x59CB;&#x6267;&#x884C;&#x7684;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td style="text-align:left">loadEventEnd</td>
+<td style="text-align:left">load&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x6267;&#x884C;&#x5B8C;&#x6210;&#x7684;&#x65F6;&#x95F4;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="t454.5.2 &#x9636;&#x6BB5;&#x8BA1;&#x7B97;">4.5.2 &#x9636;&#x6BB5;&#x8BA1;&#x7B97; <a href="#t454.5.2 &#x9636;&#x6BB5;&#x8BA1;&#x7B97;"> # </a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x63CF;&#x8FF0;</th>
+<th style="text-align:left">&#x8BA1;&#x7B97;&#x65B9;&#x5F0F;</th>
+<th style="text-align:left">&#x610F;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">unload</td>
+<td style="text-align:left">&#x524D;&#x4E00;&#x4E2A;&#x9875;&#x9762;&#x5378;&#x8F7D;&#x8017;&#x65F6;</td>
+<td style="text-align:left">unloadEventEnd &#x2013; unloadEventStart</td>
+<td style="text-align:left">-</td>
+</tr>
+<tr>
+<td style="text-align:left">redirect</td>
+<td style="text-align:left">&#x91CD;&#x5B9A;&#x5411;&#x8017;&#x65F6;</td>
+<td style="text-align:left">redirectEnd &#x2013; redirectStart</td>
+<td style="text-align:left">&#x91CD;&#x5B9A;&#x5411;&#x7684;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td style="text-align:left">appCache</td>
+<td style="text-align:left">&#x7F13;&#x5B58;&#x8017;&#x65F6;</td>
+<td style="text-align:left">domainLookupStart &#x2013; fetchStart</td>
+<td style="text-align:left">&#x8BFB;&#x53D6;&#x7F13;&#x5B58;&#x7684;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td style="text-align:left">dns</td>
+<td style="text-align:left">DNS &#x89E3;&#x6790;&#x8017;&#x65F6;</td>
+<td style="text-align:left">domainLookupEnd &#x2013; domainLookupStart</td>
+<td style="text-align:left">&#x53EF;&#x89C2;&#x5BDF;&#x57DF;&#x540D;&#x89E3;&#x6790;&#x670D;&#x52A1;&#x662F;&#x5426;&#x6B63;&#x5E38;</td>
+</tr>
+<tr>
+<td style="text-align:left">tcp</td>
+<td style="text-align:left">TCP &#x8FDE;&#x63A5;&#x8017;&#x65F6;</td>
+<td style="text-align:left">connectEnd &#x2013; connectStart</td>
+<td style="text-align:left">&#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;&#x7684;&#x8017;&#x65F6;</td>
+</tr>
+<tr>
+<td style="text-align:left">ssl</td>
+<td style="text-align:left">SSL &#x5B89;&#x5168;&#x8FDE;&#x63A5;&#x8017;&#x65F6;</td>
+<td style="text-align:left">connectEnd &#x2013; secureConnectionStart</td>
+<td style="text-align:left">&#x53CD;&#x6620;&#x6570;&#x636E;&#x5B89;&#x5168;&#x8FDE;&#x63A5;&#x5EFA;&#x7ACB;&#x8017;&#x65F6;</td>
+</tr>
+<tr>
+<td style="text-align:left">ttfb</td>
+<td style="text-align:left">Time to First Byte(TTFB)&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x8017;&#x65F6;</td>
+<td style="text-align:left">responseStart &#x2013; requestStart</td>
+<td style="text-align:left">TTFB&#x662F;&#x53D1;&#x51FA;&#x9875;&#x9762;&#x8BF7;&#x6C42;&#x5230;&#x63A5;&#x6536;&#x5230;&#x5E94;&#x7B54;&#x6570;&#x636E;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x6240;&#x82B1;&#x8D39;&#x7684;&#x6BEB;&#x79D2;&#x6570;</td>
+</tr>
+<tr>
+<td style="text-align:left">response</td>
+<td style="text-align:left">&#x54CD;&#x5E94;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x8017;&#x65F6;</td>
+<td style="text-align:left">responseEnd &#x2013; responseStart</td>
+<td style="text-align:left">&#x89C2;&#x5BDF;&#x7F51;&#x7EDC;&#x662F;&#x5426;&#x6B63;&#x5E38;</td>
+</tr>
+<tr>
+<td style="text-align:left">dom</td>
+<td style="text-align:left">DOM&#x89E3;&#x6790;&#x8017;&#x65F6;</td>
+<td style="text-align:left">domInteractive &#x2013; responseEnd</td>
+<td style="text-align:left">&#x89C2;&#x5BDF;DOM&#x7ED3;&#x6784;&#x662F;&#x5426;&#x5408;&#x7406;&#xFF0C;&#x662F;&#x5426;&#x6709;JS&#x963B;&#x585E;&#x9875;&#x9762;&#x89E3;&#x6790;</td>
+</tr>
+<tr>
+<td style="text-align:left">dcl</td>
+<td style="text-align:left">DOMContentLoaded &#x4E8B;&#x4EF6;&#x8017;&#x65F6;</td>
+<td style="text-align:left">domContentLoadedEventEnd &#x2013; domContentLoadedEventStart</td>
+<td style="text-align:left">&#x5F53; HTML &#x6587;&#x6863;&#x88AB;&#x5B8C;&#x5168;&#x52A0;&#x8F7D;&#x548C;&#x89E3;&#x6790;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#xFF0C;DOMContentLoaded &#x4E8B;&#x4EF6;&#x88AB;&#x89E6;&#x53D1;&#xFF0C;&#x65E0;&#x9700;&#x7B49;&#x5F85;&#x6837;&#x5F0F;&#x8868;&#x3001;&#x56FE;&#x50CF;&#x548C;&#x5B50;&#x6846;&#x67B6;&#x7684;&#x5B8C;&#x6210;&#x52A0;&#x8F7D;</td>
+</tr>
+<tr>
+<td style="text-align:left">resources</td>
+<td style="text-align:left">&#x8D44;&#x6E90;&#x52A0;&#x8F7D;&#x8017;&#x65F6;</td>
+<td style="text-align:left">domComplete &#x2013; domContentLoadedEventEnd</td>
+<td style="text-align:left">&#x53EF;&#x89C2;&#x5BDF;&#x6587;&#x6863;&#x6D41;&#x662F;&#x5426;&#x8FC7;&#x5927;</td>
+</tr>
+<tr>
+<td style="text-align:left">domReady</td>
+<td style="text-align:left">DOM&#x9636;&#x6BB5;&#x6E32;&#x67D3;&#x8017;&#x65F6;</td>
+<td style="text-align:left">domContentLoadedEventEnd &#x2013; fetchStart</td>
+<td style="text-align:left">DOM&#x6811;&#x548C;&#x9875;&#x9762;&#x8D44;&#x6E90;&#x52A0;&#x8F7D;&#x5B8C;&#x6210;&#x65F6;&#x95F4;&#xFF0C;&#x4F1A;&#x89E6;&#x53D1;<code>domContentLoaded</code>&#x4E8B;&#x4EF6;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x9996;&#x6B21;&#x6E32;&#x67D3;&#x8017;&#x65F6;</td>
+<td style="text-align:left">&#x9996;&#x6B21;&#x6E32;&#x67D3;&#x8017;&#x65F6;</td>
+<td style="text-align:left">responseEnd-fetchStart</td>
+<td style="text-align:left">&#x52A0;&#x8F7D;&#x6587;&#x6863;&#x5230;&#x770B;&#x5230;&#x7B2C;&#x4E00;&#x5E27;&#x975E;&#x7A7A;&#x56FE;&#x50CF;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x4E5F;&#x53EB;&#x767D;&#x5C4F;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x9996;&#x6B21;&#x53EF;&#x4EA4;&#x4E92;&#x65F6;&#x95F4;</td>
+<td style="text-align:left">&#x9996;&#x6B21;&#x53EF;&#x4EA4;&#x4E92;&#x65F6;&#x95F4;</td>
+<td style="text-align:left">domInteractive-fetchStart</td>
+<td style="text-align:left">DOM&#x6811;&#x89E3;&#x6790;&#x5B8C;&#x6210;&#x65F6;&#x95F4;&#xFF0C;&#x6B64;&#x65F6;document.readyState&#x4E3A;interactive</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x9996;&#x5305;&#x65F6;&#x95F4;&#x8017;&#x65F6;</td>
+<td style="text-align:left">&#x9996;&#x5305;&#x65F6;&#x95F4;</td>
+<td style="text-align:left">responseStart-domainLookupStart</td>
+<td style="text-align:left">DNS&#x89E3;&#x6790;&#x5230;&#x54CD;&#x5E94;&#x8FD4;&#x56DE;&#x7ED9;&#x6D4F;&#x89C8;&#x5668;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x7684;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x9875;&#x9762;&#x5B8C;&#x5168;&#x52A0;&#x8F7D;&#x65F6;&#x95F4;</td>
+<td style="text-align:left">&#x9875;&#x9762;&#x5B8C;&#x5168;&#x52A0;&#x8F7D;&#x65F6;&#x95F4;</td>
+<td style="text-align:left">loadEventStart - fetchStart</td>
+<td style="text-align:left">-</td>
+</tr>
+<tr>
+<td style="text-align:left">onLoad</td>
+<td style="text-align:left">onLoad&#x4E8B;&#x4EF6;&#x8017;&#x65F6;</td>
+<td style="text-align:left">loadEventEnd &#x2013; loadEventStart</td>
+</tr>
+</tbody>
+</table>
+<p><img src="http://img.zhufengpeixun.cn/renderscope3.jpg" alt="renderscope3"></p>
+<p><img src="http://img.zhufengpeixun.cn/browerrender.jpg" alt="browerrender"></p>
+<h4 id="t464.5.3 &#x6570;&#x636E;&#x7ED3;&#x6784;">4.5.3 &#x6570;&#x636E;&#x7ED3;&#x6784; <a href="#t464.5.3 &#x6570;&#x636E;&#x7ED3;&#x6784;"> # </a></h4>
+<pre><code class="lang-json">{
+  <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;&#x524D;&#x7AEF;&#x76D1;&#x63A7;&#x7CFB;&#x7EDF;&quot;</span>,
+  <span class="hljs-attr">&quot;url&quot;</span>: <span class="hljs-string">&quot;http://localhost:8080/&quot;</span>,
+  <span class="hljs-attr">&quot;timestamp&quot;</span>: <span class="hljs-string">&quot;1590828364183&quot;</span>,
+  <span class="hljs-attr">&quot;userAgent&quot;</span>: <span class="hljs-string">&quot;chrome&quot;</span>,
+  <span class="hljs-attr">&quot;kind&quot;</span>: <span class="hljs-string">&quot;experience&quot;</span>,
+  <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;timing&quot;</span>,
+  <span class="hljs-attr">&quot;connectTime&quot;</span>: <span class="hljs-string">&quot;0&quot;</span>,
+  <span class="hljs-attr">&quot;ttfbTime&quot;</span>: <span class="hljs-string">&quot;1&quot;</span>,
+  <span class="hljs-attr">&quot;responseTime&quot;</span>: <span class="hljs-string">&quot;1&quot;</span>,
+  <span class="hljs-attr">&quot;parseDOMTime&quot;</span>: <span class="hljs-string">&quot;80&quot;</span>,
+  <span class="hljs-attr">&quot;domContentLoadedTime&quot;</span>: <span class="hljs-string">&quot;0&quot;</span>,
+  <span class="hljs-attr">&quot;timeToInteractive&quot;</span>: <span class="hljs-string">&quot;88&quot;</span>,
+  <span class="hljs-attr">&quot;loadTime&quot;</span>: <span class="hljs-string">&quot;89&quot;</span>
+}
+</code></pre>
+<h4 id="t474.5.4 &#x5B9E;&#x73B0;">4.5.4 &#x5B9E;&#x73B0; <a href="#t474.5.4 &#x5B9E;&#x73B0;"> # </a></h4>
+<h5 id="t481. src\index.html">1. src\index.html <a href="#t481. src\index.html"> # </a></h5>
+<p>src\index.html</p>
+<pre><code class="lang-diff">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;monitor&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div id=&quot;container&quot;&gt;
+        &lt;div class=&quot;content&quot; style=&quot;width:600px;word-wrap:break-word;&quot;&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script&gt;
+        let content = document.getElementsByClassName(&apos;content&apos;)[0];
+        //content.innerHTML = &apos;@&apos;.repeat(10000);
+        document.addEventListener(&apos;DOMContentLoaded&apos;, function () {
+<span class="hljs-addition">+            let start = Date.now();</span>
+<span class="hljs-addition">+            while ((Date.now() - start) &lt; 1000) {}</span>
+<span class="hljs-addition">+        });</span>
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<h5 id="t492. monitor\index.js">2. monitor\index.js <a href="#t492. monitor\index.js"> # </a></h5>
+<p>src\monitor\index.js</p>
+<pre><code class="lang-diff">import { injectJsError } from &apos;./lib/jsError&apos;;
+import { injectXHR } from &apos;./lib/xhr&apos;;
+import { blankScreen } from &apos;./lib/blankScreen&apos;;
+<span class="hljs-addition">+import { timing } from &apos;./lib/timing&apos;;</span>
+injectJsError();
+injectXHR();
+blankScreen();
+<span class="hljs-addition">+timing();</span>
+</code></pre>
+<h5 id="t503. timing.js">3. timing.js <a href="#t503. timing.js"> # </a></h5>
+<p>src\monitor\lib\timing.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> onload <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../util/onload&apos;</span>;
+<span class="hljs-keyword">import</span> tracker <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../util/tracker&apos;</span>;
+<span class="hljs-keyword">import</span> formatTime <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../util/formatTime&apos;</span>;
+<span class="hljs-keyword">import</span> getLastEvent <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../util/getLastEvent&apos;</span>;
+<span class="hljs-keyword">import</span> getSelector <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../util/getSelector&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">timing</span>(<span class="hljs-params"></span>) </span>{
+    onload(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+            <span class="hljs-keyword">const</span> {
+                fetchStart,
+                connectStart,
+                connectEnd,
+                requestStart,
+                responseStart,
+                responseEnd,
+                domLoading,
+                domInteractive,
+                domContentLoadedEventStart,
+                domContentLoadedEventEnd,
+                loadEventStart } = performance.timing;
+            tracker.send({
+                <span class="hljs-attr">kind</span>: <span class="hljs-string">&apos;experience&apos;</span>,
+                <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;timing&apos;</span>,
+                <span class="hljs-attr">connectTime</span>: connectEnd - connectStart,<span class="hljs-comment">//TCP&#x8FDE;&#x63A5;&#x8017;&#x65F6;</span>
+                <span class="hljs-attr">ttfbTime</span>: responseStart - requestStart,<span class="hljs-comment">//ttfb</span>
+                <span class="hljs-attr">responseTime</span>: responseEnd - responseStart,<span class="hljs-comment">//Response&#x54CD;&#x5E94;&#x8017;&#x65F6;</span>
+                <span class="hljs-attr">parseDOMTime</span>: loadEventStart - domLoading,<span class="hljs-comment">//DOM&#x89E3;&#x6790;&#x6E32;&#x67D3;&#x8017;&#x65F6;</span>
+                <span class="hljs-attr">domContentLoadedTime</span>: domContentLoadedEventEnd - domContentLoadedEventStart,<span class="hljs-comment">//DOMContentLoaded&#x4E8B;&#x4EF6;&#x56DE;&#x8C03;&#x8017;&#x65F6;</span>
+                <span class="hljs-attr">timeToInteractive</span>: domInteractive - fetchStart,<span class="hljs-comment">//&#x9996;&#x6B21;&#x53EF;&#x4EA4;&#x4E92;&#x65F6;&#x95F4;</span>
+                <span class="hljs-attr">loadTime</span>: loadEventStart - fetchStart<span class="hljs-comment">//&#x5B8C;&#x6574;&#x7684;&#x52A0;&#x8F7D;&#x65F6;&#x95F4;</span>
+            });
+
+        }, <span class="hljs-number">3000</span>);
+    });
+}
+</code></pre>
+<h3 id="t514.6 &#x6027;&#x80FD;&#x6307;&#x6807;">4.6 &#x6027;&#x80FD;&#x6307;&#x6807; <a href="#t514.6 &#x6027;&#x80FD;&#x6307;&#x6807;"> # </a></h3>
+<ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/PerformanceObserver/observe">PerformanceObserver.observe</a>&#x65B9;&#x6CD5;&#x7528;&#x4E8E;&#x89C2;&#x5BDF;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#x4E2D;&#x6307;&#x5B9A;&#x7684;&#x6027;&#x80FD;&#x6761;&#x76EE;&#x7C7B;&#x578B;&#x7684;&#x96C6;&#x5408;&#x3002;&#x5F53;&#x8BB0;&#x5F55;&#x4E00;&#x4E2A;&#x6307;&#x5B9A;&#x7C7B;&#x578B;&#x7684;&#x6027;&#x80FD;&#x6761;&#x76EE;&#x65F6;&#xFF0C;&#x6027;&#x80FD;&#x76D1;&#x6D4B;&#x5BF9;&#x8C61;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5C06;&#x4F1A;&#x88AB;&#x8C03;&#x7528;</li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/PerformanceEntry/entryType">entryType</a></li>
+<li><a href="https://w3c.github.io/paint-timing/">paint-timing</a></li>
+<li><a href="https://wicg.github.io/event-timing/">event-timing</a></li>
+<li><a href="https://wicg.github.io/largest-contentful-paint/">LCP</a></li>
+<li><a href="https://docs.google.com/document/d/1BR94tJdZLsin5poeet0XoTW60M0SjvOJQttKT-JK8HI/view">FMP</a></li>
+<li><a href="https://github.com/WICG/time-to-interactive">time-to-interactive</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x63CF;&#x8FF0;</th>
+<th style="text-align:left">&#x5907;&#x6CE8;</th>
+<th style="text-align:left">&#x8BA1;&#x7B97;&#x65B9;&#x5F0F;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">FP</td>
+<td style="text-align:left">First Paint(&#x9996;&#x6B21;&#x7ED8;&#x5236;)</td>
+<td style="text-align:left">&#x5305;&#x62EC;&#x4E86;&#x4EFB;&#x4F55;&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x80CC;&#x666F;&#x7ED8;&#x5236;&#xFF0C;&#x5B83;&#x662F;&#x9996;&#x5148;&#x5C06;&#x50CF;&#x7D20;&#x7ED8;&#x5236;&#x5230;&#x5C4F;&#x5E55;&#x7684;&#x65F6;&#x523B;</td>
+</tr>
+<tr>
+<td style="text-align:left">FCP</td>
+<td style="text-align:left">First Content Paint(&#x9996;&#x6B21;&#x5185;&#x5BB9;&#x7ED8;&#x5236;)</td>
+<td style="text-align:left">&#x662F;&#x6D4F;&#x89C8;&#x5668;&#x5C06;&#x7B2C;&#x4E00;&#x4E2A; DOM &#x6E32;&#x67D3;&#x5230;&#x5C4F;&#x5E55;&#x7684;&#x65F6;&#x95F4;,&#x53EF;&#x80FD;&#x662F;&#x6587;&#x672C;&#x3001;&#x56FE;&#x50CF;&#x3001;SVG&#x7B49;,&#x8FD9;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x767D;&#x5C4F;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td style="text-align:left">FMP</td>
+<td style="text-align:left">First Meaningful  Paint(&#x9996;&#x6B21;&#x6709;&#x610F;&#x4E49;&#x7ED8;&#x5236;)</td>
+<td style="text-align:left">&#x9875;&#x9762;&#x6709;&#x610F;&#x4E49;&#x7684;&#x5185;&#x5BB9;&#x6E32;&#x67D3;&#x7684;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td style="text-align:left">LCP</td>
+<td style="text-align:left">(Largest Contentful Paint)(&#x6700;&#x5927;&#x5185;&#x5BB9;&#x6E32;&#x67D3;)</td>
+<td style="text-align:left">&#x4EE3;&#x8868;&#x5728;viewport&#x4E2D;&#x6700;&#x5927;&#x7684;&#x9875;&#x9762;&#x5143;&#x7D20;&#x52A0;&#x8F7D;&#x7684;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td style="text-align:left">DCL</td>
+<td style="text-align:left">(DomContentLoaded)(DOM&#x52A0;&#x8F7D;&#x5B8C;&#x6210;)</td>
+<td style="text-align:left">&#x5F53; HTML &#x6587;&#x6863;&#x88AB;&#x5B8C;&#x5168;&#x52A0;&#x8F7D;&#x548C;&#x89E3;&#x6790;&#x5B8C;&#x6210;&#x4E4B;&#x540E;,<code>DOMContentLoaded</code> &#x4E8B;&#x4EF6;&#x88AB;&#x89E6;&#x53D1;&#xFF0C;&#x65E0;&#x9700;&#x7B49;&#x5F85;&#x6837;&#x5F0F;&#x8868;&#x3001;&#x56FE;&#x50CF;&#x548C;&#x5B50;&#x6846;&#x67B6;&#x7684;&#x5B8C;&#x6210;&#x52A0;&#x8F7D;</td>
+</tr>
+<tr>
+<td style="text-align:left">L</td>
+<td style="text-align:left">(onLoad)</td>
+<td style="text-align:left">&#x5F53;&#x4F9D;&#x8D56;&#x7684;&#x8D44;&#x6E90;&#x5168;&#x90E8;&#x52A0;&#x8F7D;&#x5B8C;&#x6BD5;&#x4E4B;&#x540E;&#x624D;&#x4F1A;&#x89E6;&#x53D1;</td>
+</tr>
+<tr>
+<td style="text-align:left">TTI</td>
+<td style="text-align:left">(Time to Interactive) &#x53EF;&#x4EA4;&#x4E92;&#x65F6;&#x95F4;</td>
+<td style="text-align:left">&#x7528;&#x4E8E;&#x6807;&#x8BB0;&#x5E94;&#x7528;&#x5DF2;&#x8FDB;&#x884C;&#x89C6;&#x89C9;&#x6E32;&#x67D3;&#x5E76;&#x80FD;&#x53EF;&#x9760;&#x54CD;&#x5E94;&#x7528;&#x6237;&#x8F93;&#x5165;&#x7684;&#x65F6;&#x95F4;&#x70B9;</td>
+</tr>
+<tr>
+<td style="text-align:left">FID</td>
+<td style="text-align:left">First Input Delay(&#x9996;&#x6B21;&#x8F93;&#x5165;&#x5EF6;&#x8FDF;)</td>
+<td style="text-align:left">&#x7528;&#x6237;&#x9996;&#x6B21;&#x548C;&#x9875;&#x9762;&#x4EA4;&#x4E92;(&#x5355;&#x51FB;&#x94FE;&#x63A5;&#xFF0C;&#x70B9;&#x51FB;&#x6309;&#x94AE;&#x7B49;)&#x5230;&#x9875;&#x9762;&#x54CD;&#x5E94;&#x4EA4;&#x4E92;&#x7684;&#x65F6;&#x95F4;</td>
+</tr>
+</tbody>
+</table>
+<p><img src="http://img.zhufengpeixun.cn/baidurender.png" alt="baidurender"></p>
+<p><img src="http://img.zhufengpeixun.cn/lcp.jpg" alt="lcp"></p>
+<h4 id="t524.6.1 &#x6570;&#x636E;&#x7ED3;&#x6784;&#x8BBE;&#x8BA1;">4.6.1 &#x6570;&#x636E;&#x7ED3;&#x6784;&#x8BBE;&#x8BA1; <a href="#t524.6.1 &#x6570;&#x636E;&#x7ED3;&#x6784;&#x8BBE;&#x8BA1;"> # </a></h4>
+<h5 id="t531. paint">1. paint <a href="#t531. paint"> # </a></h5>
+<pre><code class="lang-json">{
+  <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;&#x524D;&#x7AEF;&#x76D1;&#x63A7;&#x7CFB;&#x7EDF;&quot;</span>,
+  <span class="hljs-attr">&quot;url&quot;</span>: <span class="hljs-string">&quot;http://localhost:8080/&quot;</span>,
+  <span class="hljs-attr">&quot;timestamp&quot;</span>: <span class="hljs-string">&quot;1590828364186&quot;</span>,
+  <span class="hljs-attr">&quot;userAgent&quot;</span>: <span class="hljs-string">&quot;chrome&quot;</span>,
+  <span class="hljs-attr">&quot;kind&quot;</span>: <span class="hljs-string">&quot;experience&quot;</span>,
+  <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;paint&quot;</span>,
+  <span class="hljs-attr">&quot;firstPaint&quot;</span>: <span class="hljs-string">&quot;102&quot;</span>,
+  <span class="hljs-attr">&quot;firstContentPaint&quot;</span>: <span class="hljs-string">&quot;2130&quot;</span>,
+  <span class="hljs-attr">&quot;firstMeaningfulPaint&quot;</span>: <span class="hljs-string">&quot;2130&quot;</span>,
+  <span class="hljs-attr">&quot;largestContentfulPaint&quot;</span>: <span class="hljs-string">&quot;2130&quot;</span>
+}
+</code></pre>
+<h5 id="t542. firstInputDelay">2. firstInputDelay <a href="#t542. firstInputDelay"> # </a></h5>
+<pre><code class="lang-json">{
+  <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;&#x524D;&#x7AEF;&#x76D1;&#x63A7;&#x7CFB;&#x7EDF;&quot;</span>,
+  <span class="hljs-attr">&quot;url&quot;</span>: <span class="hljs-string">&quot;http://localhost:8080/&quot;</span>,
+  <span class="hljs-attr">&quot;timestamp&quot;</span>: <span class="hljs-string">&quot;1590828477284&quot;</span>,
+  <span class="hljs-attr">&quot;userAgent&quot;</span>: <span class="hljs-string">&quot;chrome&quot;</span>,
+  <span class="hljs-attr">&quot;kind&quot;</span>: <span class="hljs-string">&quot;experience&quot;</span>,
+  <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;firstInputDelay&quot;</span>,
+  <span class="hljs-attr">&quot;inputDelay&quot;</span>: <span class="hljs-string">&quot;3&quot;</span>,
+  <span class="hljs-attr">&quot;duration&quot;</span>: <span class="hljs-string">&quot;8&quot;</span>,
+  <span class="hljs-attr">&quot;startTime&quot;</span>: <span class="hljs-string">&quot;4812.344999983907&quot;</span>,
+  <span class="hljs-attr">&quot;selector&quot;</span>: <span class="hljs-string">&quot;HTML BODY #container .content H1&quot;</span>
+}
+</code></pre>
+<h4 id="t554.6.2  &#x5B9E;&#x73B0;">4.6.2  &#x5B9E;&#x73B0; <a href="#t554.6.2  &#x5B9E;&#x73B0;"> # </a></h4>
+<h5 id="t561. src\index.html">1. src\index.html <a href="#t561. src\index.html"> # </a></h5>
+<p>src\index.html</p>
+<pre><code class="lang-diff">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;monitor&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body style=&quot;background-color: green;&quot;&gt;
+    &lt;div id=&quot;container&quot;&gt;
+        &lt;div class=&quot;content&quot; style=&quot;width:600px;height:600px;word-wrap:break-word;&quot;&gt;
+            &lt;input /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script&gt;
+        let content = document.getElementsByClassName(&apos;content&apos;)[0];
+        //content.innerHTML = &apos;@&apos;.repeat(10000);
+<span class="hljs-addition">+        setTimeout(() =&gt; {</span>
+<span class="hljs-addition">+            let h1 = document.createElement(&apos;h1&apos;);</span>
+<span class="hljs-addition">+            h1.innerHTML = &apos;&#x6211;&#x662F;&#x6700;&#x6709;&#x91CD;&#x8981;&#x7684;&#x5185;&#x5BB9;&apos;;</span>
+<span class="hljs-addition">+            h1.setAttribute(&apos;elementtiming&apos;, &apos;meaningful&apos;);</span>
+<span class="hljs-addition">+            content.appendChild(h1);</span>
+<span class="hljs-addition">+        }, 2000);</span>
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<h5 id="t572. timing.js">2. timing.js <a href="#t572. timing.js"> # </a></h5>
+<p>src\monitor\lib\timing.js</p>
+<pre><code class="lang-diff">import onload from &apos;../util/onload&apos;;
+import tracker from &apos;../util/tracker&apos;;
+import formatTime from &apos;../util/formatTime&apos;;
+import getLastEvent from &apos;../util/getLastEvent&apos;;
+import getSelector from &apos;../util/getSelector&apos;;
+export function timing() {
+<span class="hljs-addition">+    let FMP, LCP;</span>
+<span class="hljs-addition">+    new PerformanceObserver((entryList, observer) =&gt; {</span>
+<span class="hljs-addition">+        let perfEntries = entryList.getEntries();</span>
+<span class="hljs-addition">+        FMP = perfEntries[0];</span>
+<span class="hljs-addition">+        observer.disconnect();</span>
+<span class="hljs-addition">+    }).observe({ entryTypes: [&apos;element&apos;] });</span>
+
+<span class="hljs-addition">+    new PerformanceObserver((entryList, observer) =&gt; {</span>
+<span class="hljs-addition">+        const perfEntries = entryList.getEntries();</span>
+<span class="hljs-addition">+        const lastEntry = perfEntries[perfEntries.length - 1];</span>
+<span class="hljs-addition">+        LCP = lastEntry;</span>
+<span class="hljs-addition">+        observer.disconnect();</span>
+<span class="hljs-addition">+    }).observe({ entryTypes: [&apos;largest-contentful-paint&apos;] });</span>
+
+<span class="hljs-addition">+    new PerformanceObserver(function (entryList, observer) {</span>
+<span class="hljs-addition">+        let lastEvent = getLastEvent();</span>
+<span class="hljs-addition">+        const firstInput = entryList.getEntries()[0];</span>
+<span class="hljs-addition">+        if (firstInput) {</span>
+<span class="hljs-addition">+            let inputDelay = firstInput.processingStart - firstInput.startTime;//&#x5904;&#x7406;&#x5EF6;&#x8FDF;</span>
+<span class="hljs-addition">+            let duration = firstInput.duration;//&#x5904;&#x7406;&#x8017;&#x65F6;</span>
+<span class="hljs-addition">+            if (firstInput &gt; 0 || duration &gt; 0) {</span>
+<span class="hljs-addition">+                tracker.send({</span>
+<span class="hljs-addition">+                    kind: &apos;experience&apos;,</span>
+<span class="hljs-addition">+                    type: &apos;firstInputDelay&apos;,</span>
+<span class="hljs-addition">+                    inputDelay: inputDelay ? formatTime(inputDelay) : 0,</span>
+<span class="hljs-addition">+                    duration: duration ? formatTime(duration) : 0,</span>
+<span class="hljs-addition">+                    startTime: firstInput.startTime,</span>
+<span class="hljs-addition">+                    selector: lastEvent ? getSelector(lastEvent.path || lastEvent.target) : &apos;&apos;</span>
+<span class="hljs-addition">+                });</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+        observer.disconnect();</span>
+<span class="hljs-addition">+    }).observe({ type: &apos;first-input&apos;, buffered: true });</span>
+
+
+    onload(function () {
+        setTimeout(() =&gt; {
+            const {
+                fetchStart,
+                connectStart,
+                connectEnd,
+                requestStart,
+                responseStart,
+                responseEnd,
+                domLoading,
+                domInteractive,
+                domContentLoadedEventStart,
+                domContentLoadedEventEnd,
+                loadEventStart } = performance.timing;
+            tracker.send({
+                kind: &apos;experience&apos;,
+                type: &apos;timing&apos;,
+                connectTime: connectEnd - connectStart,//TCP&#x8FDE;&#x63A5;&#x8017;&#x65F6;
+                ttfbTime: responseStart - requestStart,//ttfb
+                responseTime: responseEnd - responseStart,//Response&#x54CD;&#x5E94;&#x8017;&#x65F6;
+                parseDOMTime: loadEventStart - domLoading,//DOM&#x89E3;&#x6790;&#x6E32;&#x67D3;&#x8017;&#x65F6;
+                domContentLoadedTime: domContentLoadedEventEnd - domContentLoadedEventStart,//DOMContentLoaded&#x4E8B;&#x4EF6;&#x56DE;&#x8C03;&#x8017;&#x65F6;
+                timeToInteractive: domInteractive - fetchStart,//&#x9996;&#x6B21;&#x53EF;&#x4EA4;&#x4E92;&#x65F6;&#x95F4;
+                loadTime: loadEventStart - fetchStart//&#x5B8C;&#x6574;&#x7684;&#x52A0;&#x8F7D;&#x65F6;&#x95F4;
+            });
+<span class="hljs-addition">+            const FP = performance.getEntriesByName(&apos;first-paint&apos;)[0];</span>
+<span class="hljs-addition">+            const FCP = performance.getEntriesByName(&apos;first-contentful-paint&apos;)[0];</span>
+<span class="hljs-addition">+            console.log(&apos;FP&apos;, FP);</span>
+<span class="hljs-addition">+            console.log(&apos;FCP&apos;, FCP);</span>
+<span class="hljs-addition">+            console.log(&apos;FMP&apos;, FMP);</span>
+<span class="hljs-addition">+            console.log(&apos;LCP&apos;, LCP);</span>
+<span class="hljs-addition">+            tracker.send({</span>
+<span class="hljs-addition">+                kind: &apos;experience&apos;,</span>
+<span class="hljs-addition">+                type: &apos;paint&apos;,</span>
+<span class="hljs-addition">+                firstPaint: FP ? formatTime(FP.startTime) : 0,</span>
+<span class="hljs-addition">+                firstContentPaint: FCP ? formatTime(FCP.startTime) : 0,</span>
+<span class="hljs-addition">+                firstMeaningfulPaint: FMP ? formatTime(FMP.startTime) : 0,</span>
+<span class="hljs-addition">+                largestContentfulPaint: LCP ? formatTime(LCP.renderTime || LCP.loadTime) : 0</span>
+<span class="hljs-addition">+            });</span>
+        }, 3000);
+    });
+}
+</code></pre>
+<h3 id="t584.7 &#x5361;&#x987F;">4.7 &#x5361;&#x987F; <a href="#t584.7 &#x5361;&#x987F;"> # </a></h3>
+<ul>
+<li>&#x54CD;&#x5E94;&#x7528;&#x6237;&#x4EA4;&#x4E92;&#x7684;&#x54CD;&#x5E94;&#x65F6;&#x95F4;&#x5982;&#x679C;&#x5927;&#x4E8E;100ms,&#x7528;&#x6237;&#x5C31;&#x4F1A;&#x611F;&#x89C9;&#x5361;&#x987F;</li>
+</ul>
+<h4 id="t594.7.1 &#x6570;&#x636E;&#x8BBE;&#x8BA1;">4.7.1 &#x6570;&#x636E;&#x8BBE;&#x8BA1; <a href="#t594.7.1 &#x6570;&#x636E;&#x8BBE;&#x8BA1;"> # </a></h4>
+<pre><code class="lang-json">{
+  <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;&#x524D;&#x7AEF;&#x76D1;&#x63A7;&#x7CFB;&#x7EDF;&quot;</span>,
+  <span class="hljs-attr">&quot;url&quot;</span>: <span class="hljs-string">&quot;http://localhost:8080/&quot;</span>,
+  <span class="hljs-attr">&quot;timestamp&quot;</span>: <span class="hljs-string">&quot;1590828656781&quot;</span>,
+  <span class="hljs-attr">&quot;userAgent&quot;</span>: <span class="hljs-string">&quot;chrome&quot;</span>,
+  <span class="hljs-attr">&quot;kind&quot;</span>: <span class="hljs-string">&quot;experience&quot;</span>,
+  <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;longTask&quot;</span>,
+  <span class="hljs-attr">&quot;eventType&quot;</span>: <span class="hljs-string">&quot;mouseover&quot;</span>,
+  <span class="hljs-attr">&quot;startTime&quot;</span>: <span class="hljs-string">&quot;9331&quot;</span>,
+  <span class="hljs-attr">&quot;duration&quot;</span>: <span class="hljs-string">&quot;200&quot;</span>,
+  <span class="hljs-attr">&quot;selector&quot;</span>: <span class="hljs-string">&quot;HTML BODY #container .content&quot;</span>
+}
+</code></pre>
+<h4 id="t604.7.2 &#x5B9E;&#x73B0;">4.7.2 &#x5B9E;&#x73B0; <a href="#t604.7.2 &#x5B9E;&#x73B0;"> # </a></h4>
+<h5 id="t611.  src\index.html">1.  src\index.html <a href="#t611.  src\index.html"> # </a></h5>
+<p>src\index.html</p>
+<pre><code class="lang-diff">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;monitor&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body style=&quot;background-color: green;&quot;&gt;
+    &lt;div id=&quot;container&quot;&gt;
+        &lt;div class=&quot;content&quot; style=&quot;width:600px;height:600px;word-wrap:break-word;&quot;&gt;
+<span class="hljs-addition">+            &lt;button id=&quot;longTaskBtn&quot;&gt;&#x6267;&#x884C;longTask&lt;/button&gt;</span>
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script&gt;
+        let content = document.getElementsByClassName(&apos;content&apos;)[0];
+<span class="hljs-addition">+        let longTaskBtn = document.getElementById(&apos;longTaskBtn&apos;);</span>
+<span class="hljs-addition">+        longTaskBtn.addEventListener(&apos;click&apos;, longTask);</span>
+<span class="hljs-addition">+        function longTask() {</span>
+<span class="hljs-addition">+            let start = Date.now();</span>
+<span class="hljs-addition">+            console.log(&apos;longTask&#x5F00;&#x59CB; start&apos;, start);</span>
+<span class="hljs-addition">+            while (Date.now() &lt; (200 + start)) { }</span>
+<span class="hljs-addition">+            console.log(&apos;longTask&#x7ED3;&#x675F; end&apos;, (Date.now() - start));</span>
+<span class="hljs-addition">+        }</span>
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<h5 id="t622. monitor\index.js">2. monitor\index.js <a href="#t622. monitor\index.js"> # </a></h5>
+<p>src\monitor\index.js</p>
+<pre><code class="lang-diff">import { injectJsError } from &apos;./lib/jsError&apos;;
+import { injectXHR } from &apos;./lib/xhr&apos;;
+import { blankScreen } from &apos;./lib/blankScreen&apos;;
+import { timing } from &apos;./lib/timing&apos;;
+<span class="hljs-addition">+import { longTask } from &apos;./lib/longTask&apos;;</span>
+injectJsError();
+injectXHR();
+blankScreen();
+timing();
+<span class="hljs-addition">+longTask();</span>
+</code></pre>
+<h5 id="t633. longTask.js">3. longTask.js <a href="#t633. longTask.js"> # </a></h5>
+<p>src\monitor\lib\longTask.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> tracker <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../util/tracker&apos;</span>;
+<span class="hljs-keyword">import</span> formatTime <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../util/formatTime&apos;</span>;
+<span class="hljs-keyword">import</span> getLastEvent <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../util/getLastEvent&apos;</span>;
+<span class="hljs-keyword">import</span> getSelector <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../util/getSelector&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">longTask</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">new</span> PerformanceObserver(<span class="hljs-function">(<span class="hljs-params">list</span>) =&gt;</span> {
+        list.getEntries().forEach(<span class="hljs-function"><span class="hljs-params">entry</span> =&gt;</span> {
+            <span class="hljs-keyword">if</span> (entry.duration &gt; <span class="hljs-number">100</span>) {
+                <span class="hljs-keyword">let</span> lastEvent = getLastEvent();
+                requestIdleCallback(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+                    tracker.send({
+                        <span class="hljs-attr">kind</span>: <span class="hljs-string">&apos;experience&apos;</span>,
+                        <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;longTask&apos;</span>,
+                        <span class="hljs-attr">eventType</span>: lastEvent.type,
+                        <span class="hljs-attr">startTime</span>: formatTime(entry.startTime),<span class="hljs-comment">// &#x5F00;&#x59CB;&#x65F6;&#x95F4;</span>
+                        <span class="hljs-attr">duration</span>: formatTime(entry.duration),<span class="hljs-comment">// &#x6301;&#x7EED;&#x65F6;&#x95F4;</span>
+                        <span class="hljs-attr">selector</span>: lastEvent ? getSelector(lastEvent.path || lastEvent.target) : <span class="hljs-string">&apos;&apos;</span>
+                    });
+                });
+            }
+        });
+    }).observe({ <span class="hljs-attr">entryTypes</span>: [<span class="hljs-string">&quot;longtask&quot;</span>] });
+}
+</code></pre>
+<h3 id="t644.8 pv">4.8 pv <a href="#t644.8 pv"> # </a></h3>
+<ul>
+<li><a href="http://wicg.github.io/netinfo">netinfo</a></li>
+<li>RTT(Round Trip Time)&#x4E00;&#x4E2A;&#x8FDE;&#x63A5;&#x7684;&#x5F80;&#x8FD4;&#x65F6;&#x95F4;&#xFF0C;&#x5373;&#x6570;&#x636E;&#x53D1;&#x9001;&#x65F6;&#x523B;&#x5230;&#x63A5;&#x6536;&#x5230;&#x786E;&#x8BA4;&#x7684;&#x65F6;&#x523B;&#x7684;&#x5DEE;&#x503C;</li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator/sendBeacon">navigator.sendBeacon()</a> &#x65B9;&#x6CD5;&#x53EF;&#x7528;&#x4E8E;&#x901A;&#x8FC7;HTTP&#x5C06;&#x5C11;&#x91CF;&#x6570;&#x636E;&#x5F02;&#x6B65;&#x4F20;&#x8F93;&#x5230;Web&#x670D;&#x52A1;&#x5668;&#x3002;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/rtttime2.jpg" alt="rtttime2"></p>
+<h4 id="t654.8.1 &#x6570;&#x636E;&#x7ED3;&#x6784;">4.8.1 &#x6570;&#x636E;&#x7ED3;&#x6784; <a href="#t654.8.1 &#x6570;&#x636E;&#x7ED3;&#x6784;"> # </a></h4>
+<pre><code class="lang-json">{
+  <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;&#x524D;&#x7AEF;&#x76D1;&#x63A7;&#x7CFB;&#x7EDF;&quot;</span>,
+  <span class="hljs-attr">&quot;url&quot;</span>: <span class="hljs-string">&quot;http://localhost:8080/&quot;</span>,
+  <span class="hljs-attr">&quot;timestamp&quot;</span>: <span class="hljs-string">&quot;1590829304423&quot;</span>,
+  <span class="hljs-attr">&quot;userAgent&quot;</span>: <span class="hljs-string">&quot;chrome&quot;</span>,
+  <span class="hljs-attr">&quot;kind&quot;</span>: <span class="hljs-string">&quot;business&quot;</span>,
+  <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;pv&quot;</span>,
+  <span class="hljs-attr">&quot;effectiveType&quot;</span>: <span class="hljs-string">&quot;4g&quot;</span>,
+  <span class="hljs-attr">&quot;rtt&quot;</span>: <span class="hljs-string">&quot;50&quot;</span>,
+  <span class="hljs-attr">&quot;screen&quot;</span>: <span class="hljs-string">&quot;2049x1152&quot;</span>
+}
+</code></pre>
+<h4 id="t664.8.2 &#x5B9E;&#x73B0;">4.8.2 &#x5B9E;&#x73B0; <a href="#t664.8.2 &#x5B9E;&#x73B0;"> # </a></h4>
+<h5 id="t671. src\index.html">1. src\index.html <a href="#t671. src\index.html"> # </a></h5>
+<p>src\index.html</p>
+<pre><code class="lang-diff">&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;&#x524D;&#x7AEF;&#x76D1;&#x63A7;SDK&lt;/title&gt;
+&lt;/head&gt;
+</code></pre>
+<h5 id="t682. src\monitor\index.js">2. src\monitor\index.js <a href="#t682. src\monitor\index.js"> # </a></h5>
+<p>src\monitor\index.js</p>
+<pre><code class="lang-diff">import { injectJsError } from &apos;./lib/jsError&apos;;
+import { injectXHR } from &apos;./lib/xhr&apos;;
+import { blankScreen } from &apos;./lib/blankScreen&apos;;
+import { timing } from &apos;./lib/timing&apos;;
+import { longTask } from &apos;./lib/longTask&apos;;
+<span class="hljs-addition">+import { pv } from &apos;./lib/pv&apos;;</span>
+injectJsError();
+injectXHR();
+blankScreen();
+timing();
+longTask();
+<span class="hljs-addition">+pv();</span>
+</code></pre>
+<h5 id="t693. pv.js">3. pv.js <a href="#t693. pv.js"> # </a></h5>
+<p>src\monitor\lib\pv.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> tracker <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../util/tracker&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">pv</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> connection = navigator.connection;
+    tracker.send({
+        <span class="hljs-attr">kind</span>: <span class="hljs-string">&apos;business&apos;</span>,
+        <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;pv&apos;</span>,
+        <span class="hljs-attr">effectiveType</span>: connection.effectiveType, <span class="hljs-comment">//&#x7F51;&#x7EDC;&#x73AF;&#x5883;</span>
+        <span class="hljs-attr">rtt</span>: connection.rtt,<span class="hljs-comment">//&#x5F80;&#x8FD4;&#x65F6;&#x95F4;</span>
+        <span class="hljs-attr">screen</span>: <span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-built_in">window</span>.screen.width}</span>x<span class="hljs-subst">${<span class="hljs-built_in">window</span>.screen.height}</span>`</span><span class="hljs-comment">//&#x8BBE;&#x5907;&#x5206;&#x8FA8;&#x7387;</span>
+    });
+    <span class="hljs-keyword">let</span> startTime = <span class="hljs-built_in">Date</span>.now();
+    <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">&apos;unload&apos;</span>, () =&gt; {
+        <span class="hljs-keyword">let</span> stayTime = <span class="hljs-built_in">Date</span>.now() - startTime;
+        tracker.send({
+            <span class="hljs-attr">kind</span>: <span class="hljs-string">&apos;business&apos;</span>,
+            <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;stayTime&apos;</span>,
+            stayTime
+        });
+    }, <span class="hljs-literal">false</span>);
+
+}
+</code></pre>
+<h2 id="t705.&#x67E5;&#x8BE2;&#x62A5;&#x8868;">5.&#x67E5;&#x8BE2;&#x62A5;&#x8868; <a href="#t705.&#x67E5;&#x8BE2;&#x62A5;&#x8868;"> # </a></h2>
+<ul>
+<li><a href="https://help.aliyun.com/document_detail/69313.html">&#x56FE;&#x8868;&#x8BF4;&#x660E;</a></li>
+<li>&#x67E5;&#x8BE2;&#x65E5;&#x5FD7;&#x6570;&#x636E;</li>
+<li>&#x805A;&#x7C7B;&#x5206;&#x6790;</li>
+<li>&#x6570;&#x636E;&#x53EF;&#x89C6;&#x5316;<ul>
+<li>&#x8D8B;&#x52BF; &#x67F1;&#x72B6;&#x56FE;&#x3001;&#x62C6;&#x7EBF;&#x56FE;&#x3001;&#x66F2;&#x7EBF;&#x56FE;</li>
+<li>&#x6BD4;&#x4F8B; &#x997C;&#x56FE;&#x3001;&#x73AF;&#x72B6;&#x56FE;&#x3001;&#x9762;&#x79EF;&#x56FE;</li>
+</ul>
+</li>
+<li>&#x4EEA;&#x8868;&#x76D8;</li>
+</ul>
+<h3 id="t715.1 &#x76D1;&#x63A7;&#x9879;&#x5206;&#x5E03;">5.1 &#x76D1;&#x63A7;&#x9879;&#x5206;&#x5E03; <a href="#t715.1 &#x76D1;&#x63A7;&#x9879;&#x5206;&#x5E03;"> # </a></h3>
+<pre><code class="lang-js">* | SELECT type, COUNT(*) <span class="hljs-keyword">as</span> number GROUP BY type LIMIT <span class="hljs-number">10</span>
+</code></pre>
+<h3 id="t725.2 &#x6D4F;&#x89C8;&#x5668;&#x5206;&#x5E03;">5.2 &#x6D4F;&#x89C8;&#x5668;&#x5206;&#x5E03; <a href="#t725.2 &#x6D4F;&#x89C8;&#x5668;&#x5206;&#x5E03;"> # </a></h3>
+<pre><code class="lang-js">* | SELECT userAgent, COUNT(*) <span class="hljs-keyword">as</span> number GROUP BY userAgent LIMIT <span class="hljs-number">10</span>
+</code></pre>
+<h3 id="t735.3 &#x9875;&#x9762;&#x5206;&#x8FA8;&#x7387;&#x5206;&#x5E03;">5.3 &#x9875;&#x9762;&#x5206;&#x8FA8;&#x7387;&#x5206;&#x5E03; <a href="#t735.3 &#x9875;&#x9762;&#x5206;&#x8FA8;&#x7387;&#x5206;&#x5E03;"> # </a></h3>
+<pre><code class="lang-js">* | SELECT screen, COUNT(*) <span class="hljs-keyword">as</span> number GROUP BY screen LIMIT <span class="hljs-number">10</span>
+</code></pre>
+<h2 id="t746.&#x53C2;&#x8003;">6.&#x53C2;&#x8003; <a href="#t746.&#x53C2;&#x8003;"> # </a></h2>
+<h3 id="t756.1 &#x7B2C;&#x4E09;&#x65B9;">6.1 &#x7B2C;&#x4E09;&#x65B9; <a href="#t756.1 &#x7B2C;&#x4E09;&#x65B9;"> # </a></h3>
+<h4 id="t766.1.1 &#x5546;&#x4E1A;&#x4EA7;&#x54C1;">6.1.1 &#x5546;&#x4E1A;&#x4EA7;&#x54C1; <a href="#t766.1.1 &#x5546;&#x4E1A;&#x4EA7;&#x54C1;"> # </a></h4>
+<ul>
+<li><a href="https://www.sensorsdata.cn/">&#x795E;&#x7B56;&#x6570;&#x636E;</a></li>
+<li><a href="https://www.growingio.com/">GrowingIO</a></li>
+</ul>
+<h4 id="t776.1.2 &#x5F00;&#x6E90;&#x4EA7;&#x54C1;">6.1.2 &#x5F00;&#x6E90;&#x4EA7;&#x54C1; <a href="#t776.1.2 &#x5F00;&#x6E90;&#x4EA7;&#x54C1;"> # </a></h4>
+<ul>
+<li><a href="https://www.fundebug.com/">fundebug</a></li>
+<li><a href="https://github.com/BetterJS/doc">BetterJS</a></li>
+<li><a href="https://sentry.io">Sentry</a></li>
+<li><a href="https://sentry.io/onboarding/zhufeng/get-started/">@sentry/browser</a></li>
+</ul>
+<h3 id="t786.2 defer &#x548C; async">6.2 defer &#x548C; async <a href="#t786.2 defer &#x548C; async"> # </a></h3>
+<ul>
+<li>defer&#x5F02;&#x6B65;&#x4E0B;&#x8F7D;JavaScript&#x6587;&#x4EF6;,&#x4F1A;&#x5728;HTML&#x89E3;&#x6790;&#x5B8C;&#x6210;&#x4E4B;&#x540E;<code>DOMContentLoaded</code>&#x4E8B;&#x4EF6;&#x8C03;&#x7528;&#x524D;&#x6267;&#x884C;,&#x4E0D;&#x4F1A;&#x963B;&#x585E;&#x9875;&#x9762;&#x6E32;&#x67D3;<ul>
+<li>&#x5982;&#x679C;script&#x6807;&#x7B7E;&#x8BBE;&#x7F6E;&#x4E86;&#x8BE5;&#x5C5E;&#x6027;&#xFF0C;&#x5219;&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x5F02;&#x6B65;&#x7684;&#x4E0B;&#x8F7D;&#x8BE5;&#x6587;&#x4EF6;&#x5E76;&#x4E14;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x5230;&#x540E;&#x7EED;DOM&#x7684;&#x6E32;&#x67D3;</li>
+<li>&#x5982;&#x679C;&#x6709;&#x591A;&#x4E2A;&#x8BBE;&#x7F6E;&#x4E86;defer&#x7684;script&#x6807;&#x7B7E;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x4F1A;&#x6309;&#x7167;&#x987A;&#x5E8F;&#x6267;&#x884C;&#x6240;&#x6709;&#x7684;script</li>
+<li>defer&#x811A;&#x672C;&#x4F1A;&#x5728;&#x6587;&#x6863;&#x6E32;&#x67D3;&#x5B8C;&#x6BD5;&#x540E;&#xFF0C;<code>DOMContentLoaded</code>&#x4E8B;&#x4EF6;&#x8C03;&#x7528;&#x524D;&#x6267;&#x884C;</li>
+</ul>
+</li>
+<li>async&#x5F02;&#x6B65;&#x4E0B;&#x8F7D;JavaScript&#x6587;&#x4EF6;&#xFF0C;&#x4E0B;&#x8F7D;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#x4F1A;&#x7ACB;&#x5373;&#x6267;&#x884C;&#xFF0C;&#x6709;&#x53EF;&#x80FD;&#x4F1A;&#x963B;&#x585E;&#x9875;&#x9762;&#x6E32;&#x67D3;<ul>
+<li>async&#x7684;&#x8BBE;&#x7F6E;,&#x4F1A;&#x4F7F;&#x5F97;script&#x811A;&#x672C;&#x5F02;&#x6B65;&#x7684;&#x52A0;&#x8F7D;&#x5E76;&#x5728;&#x5141;&#x8BB8;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x6267;&#x884C;</li>
+<li>async&#x7684;&#x6267;&#x884C;,&#x5E76;&#x4E0D;&#x4F1A;&#x6309;&#x7740;script&#x5728;&#x9875;&#x9762;&#x4E2D;&#x7684;&#x987A;&#x5E8F;&#x6765;&#x6267;&#x884C;&#xFF0C;&#x800C;&#x662F;&#x8C01;&#x5148;&#x52A0;&#x8F7D;&#x5B8C;&#x8C01;&#x6267;&#x884C;</li>
+</ul>
+</li>
+</ul>
+
+        <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
+    </div>
+    
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,2278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+
+
+
+
+<div class="warpper">
+
+    <div class="page-toc">
+        <ul><li><a href="#t01. 初始化项目">1. 初始化项目</a></li><li><a href="#t12.配置文件">2.配置文件</a><ul><li><a href="#t22.1 src\index.js">2.1 src\index.js</a></li><li><a href="#t32.2 webpack.config.js">2.2 webpack.config.js</a></li></ul></li><li><a href="#t43.可执行命令">3.可执行命令</a><ul><li><a href="#t53.1 直接调用">3.1 直接调用</a></li><li><a href="#t63.2 如何生成调试文件">3.2 如何生成调试文件</a></li><li><a href="#t73.2 webpack.cmd">3.2 webpack.cmd</a></li><li><a href="#t83.3 webpack.js">3.3 webpack.js</a></li><li><a href="#t93.4 阅读思路">3.4 阅读思路</a></li><li><a href="#t103.5 重要文件">3.5 重要文件</a></li></ul></li><li><a href="#t114.启动编译">4.启动编译</a></li><li><a href="#t125.钩子">5.钩子</a><ul><li><a href="#t135.1 Compiler">5.1 Compiler</a></li><li><a href="#t145.2 Compilation">5.2 Compilation</a></li></ul></li><li><a href="#t155.Stats 对象">5.Stats 对象</a></li><li><a href="#t166. 主要工作流程">6. 主要工作流程</a><ul><li><a href="#t176.1 初始化阶段">6.1 初始化阶段</a></li><li><a href="#t186.2 编译阶段">6.2 编译阶段</a></li><li><a href="#t196.3 结束阶段">6.3 结束阶段</a></li></ul></li><li><a href="#t207. 参考">7. 参考</a></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <p>&#xFEFF;</p>
+<h2 id="t01. &#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;">1. &#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE; <a href="#t01. &#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;"> # </a></h2>
+<pre><code class="lang-js">doskey /history
+mkdir webpack-source
+cd webpack-source
+npm init -y
+cnpm i webpack webpack-cli -D
+cnpm i lodash -S
+npx webpack
+</code></pre>
+<h2 id="t12.&#x914D;&#x7F6E;&#x6587;&#x4EF6;">2.&#x914D;&#x7F6E;&#x6587;&#x4EF6; <a href="#t12.&#x914D;&#x7F6E;&#x6587;&#x4EF6;"> # </a></h2>
+<h3 id="t22.1 src\index.js">2.1 src\index.js <a href="#t22.1 src\index.js"> # </a></h3>
+<p>src\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> _ <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;lodash&apos;</span>;
+<span class="hljs-built_in">console</span>.log(_.isArray([]));
+</code></pre>
+<h3 id="t32.2 webpack.config.js">2.2 webpack.config.js <a href="#t32.2 webpack.config.js"> # </a></h3>
+<p>webpack.config.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
+<span class="hljs-built_in">module</span>.exports = {
+    <span class="hljs-attr">mode</span>:<span class="hljs-string">&apos;development&apos;</span>,
+    <span class="hljs-attr">entry</span>: <span class="hljs-string">&apos;./src/index.js&apos;</span>,
+    <span class="hljs-attr">output</span>: {
+        <span class="hljs-attr">path</span>:path.join(__dirname,<span class="hljs-string">&apos;dist&apos;</span>),
+        <span class="hljs-attr">filename</span>: <span class="hljs-string">&apos;bundle.js&apos;</span>
+    }
+};
+</code></pre>
+<h2 id="t43.&#x53EF;&#x6267;&#x884C;&#x547D;&#x4EE4;">3.&#x53EF;&#x6267;&#x884C;&#x547D;&#x4EE4; <a href="#t43.&#x53EF;&#x6267;&#x884C;&#x547D;&#x4EE4;"> # </a></h2>
+<ul>
+<li><a href="https://webpack.js.org/api/cli/">cli</a></li>
+</ul>
+<h3 id="t53.1 &#x76F4;&#x63A5;&#x8C03;&#x7528;">3.1 &#x76F4;&#x63A5;&#x8C03;&#x7528; <a href="#t53.1 &#x76F4;&#x63A5;&#x8C03;&#x7528;"> # </a></h3>
+<ul>
+<li>&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x6253;&#x5F00;<code>node_modules\webpack-cli\bin\cli.js</code>&#x6587;&#x4EF6;</li>
+<li>&#x7136;&#x540E;&#x76F4;&#x63A5;&#x6253;&#x5F00;&#x8C03;&#x8BD5;&#x7A97;&#x53E3;&#xFF0C;&#x7136;&#x540E;&#x70B9;&#x51FB;&#x542F;&#x52A8;&#x7F16;&#x8BD1;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;</li>
+</ul>
+<h3 id="t63.2 &#x5982;&#x4F55;&#x751F;&#x6210;&#x8C03;&#x8BD5;&#x6587;&#x4EF6;">3.2 &#x5982;&#x4F55;&#x751F;&#x6210;&#x8C03;&#x8BD5;&#x6587;&#x4EF6; <a href="#t63.2 &#x5982;&#x4F55;&#x751F;&#x6210;&#x8C03;&#x8BD5;&#x6587;&#x4EF6;"> # </a></h3>
+<ul>
+<li>&#x6253;&#x5F00;&#x5DE5;&#x7A0B;&#x76EE;&#x5F55;&#xFF0C;&#x70B9;&#x51FB;&#x8C03;&#x8BD5;&#x6309;&#x94AE;&#xFF0C;&#x518D;&#x70B9;&#x51FB;&#x5C0F;&#x9F7F;&#x8F6E;&#x7684;&#x914D;&#x7F6E;&#x6309;&#x94AE;&#x7CFB;&#x7EDF;&#x5C31;&#x4F1A;&#x751F;&#x6210;launch.json&#x914D;&#x7F6E;&#x6587;&#x4EF6;</li>
+<li>&#x4FEE;&#x6539;&#x597D;&#x4E86;&#x4EE5;&#x540E;&#x76F4;&#x63A5;&#x70B9;&#x51FB;F5&#x5C31;&#x53EF;&#x4EE5;&#x542F;&#x52A8;&#x8C03;&#x8BD5;</li>
+</ul>
+<p>.vscode\launch.json</p>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">&quot;version&quot;</span>: <span class="hljs-string">&quot;0.2.0&quot;</span>,
+    <span class="hljs-attr">&quot;configurations&quot;</span>: [
+        {
+            <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;node&quot;</span>,
+            <span class="hljs-attr">&quot;request&quot;</span>: <span class="hljs-string">&quot;launch&quot;</span>,
+            <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;debug webpack&quot;</span>,
+            <span class="hljs-attr">&quot;cwd&quot;</span>: <span class="hljs-string">&quot;${workspaceFolder}&quot;</span>,
+            <span class="hljs-attr">&quot;program&quot;</span>: <span class="hljs-string">&quot;${workspaceFolder}/node_modules/_webpack-cli@3.3.10@webpack-cli/bin/cli.js&quot;</span>
+        }
+    ]
+}
+</code></pre>
+<h3 id="t73.2 webpack.cmd">3.2 webpack.cmd <a href="#t73.2 webpack.cmd"> # </a></h3>
+<p>webpack-source\node_modules.bin\webpack.cmd</p>
+<ul>
+<li><code>%~dp0</code>&#x662F;&#x6279;&#x5904;&#x7406;&#x6587;&#x4EF6;&#x6240;&#x5728;&#x7684;&#x76D8;&#x7B26;:+&#x8DEF;&#x5F84;(%~dp0 C:\vipdata\vipproject\webpack-source\node_modules.bin)</li>
+<li><code>SETLOCAL</code>&#x4E3B;&#x8981;&#x9488;&#x5BF9;&#x4E34;&#x65F6;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x5230;&#x7CFB;&#x7EDF;&#x7684;&#x53D8;&#x91CF;&#x73AF;&#x5883;&#x8BBE;&#x7F6E;&#xFF0C;&#x5E94;&#x4E0E;endlocal&#x8054;&#x7528;</li>
+<li><code>PATHEXT</code>&#x5F53;&#x5728;&#x4E00;&#x4E2A;&#x76F8;&#x540C;&#x7684;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x4E0B;&#xFF0C;&#x6709;&#x76F8;&#x540C;&#x7684;&#x591A;&#x4E2A;&#x4E3B;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x6587;&#x4EF6;&#x540E;&#x7F00;&#x540D;&#x65F6;&#xFF0C;&#x7CFB;&#x7EDF;&#x4F1A;&#x6839;&#x636E;PATHEXT&#x4E2D;&#x7684;&#x540E;&#x7F00;&#x540D;&#xFF0C;&#x9009;&#x62E9;&#x5176;&#x4E2D;&#x987A;&#x5E8F;&#x6700;&#x9760;&#x524D;&#x7684;&#x90A3;&#x4E00;&#x4E2A;<pre><code class="lang-js">@IF EXIST <span class="hljs-string">&quot;%~dp0\node.exe&quot;</span> (<span class="hljs-comment">//&#x5982;&#x679C;&#x5F53;&#x524D;&#x76D8;&#x7B26;&#x7684;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x5B58;&#x5728;node.exe,&#x7528;&#x5F53;&#x524D;&#x7684;node&#x6267;&#x884C;</span>
+<span class="hljs-string">&quot;%~dp0\node.exe&quot;</span>  <span class="hljs-string">&quot;%~dp0\..\_webpack@4.39.3@webpack\bin\webpack.js&quot;</span> %*
+) ELSE (<span class="hljs-comment">//&#x5982;&#x679C;&#x5F53;&#x524D;&#x7684;&#x76D8;&#x7B26;&#x6CA1;&#x6709;node.exe</span>
+@SETLOCAL
+@SET PATHEXT=%PATHEXT:;.JS;=;%
+node  <span class="hljs-string">&quot;%~dp0\..\_webpack@4.39.3@webpack\bin\webpack.js&quot;</span> %*
+)
+</code></pre>
+</li>
+</ul>
+<h3 id="t83.3 webpack.js">3.3 webpack.js <a href="#t83.3 webpack.js"> # </a></h3>
+<p>node_modules\webpack\bin\webpack.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;path&quot;</span>);
+<span class="hljs-keyword">const</span> pkgPath = <span class="hljs-built_in">require</span>.resolve(<span class="hljs-string">`<span class="hljs-subst">${installedClis[<span class="hljs-number">0</span>].package}</span>/package.json`</span>);
+    <span class="hljs-comment">// eslint-disable-next-line node/no-missing-require</span>
+<span class="hljs-keyword">const</span> pkg = <span class="hljs-built_in">require</span>(pkgPath);
+    <span class="hljs-comment">// eslint-disable-next-line node/no-missing-require</span>
+<span class="hljs-built_in">require</span>(path.resolve(
+    path.dirname(pkgPath),
+    pkg.bin[installedClis[<span class="hljs-number">0</span>].binName]
+));
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;path&quot;</span>);
+<span class="hljs-keyword">const</span> pkgPath = <span class="hljs-built_in">require</span>.resolve(<span class="hljs-string">`webpack-cli/package.json`</span>);
+<span class="hljs-keyword">const</span> pkg = <span class="hljs-built_in">require</span>(pkgPath);
+<span class="hljs-built_in">require</span>(path.resolve(path.dirname(pkgPath),pkg.bin[<span class="hljs-string">&apos;webpack-cli&apos;</span>]));
+</code></pre>
+<ul>
+<li>npx webpack&#x5C31;&#x76F8;&#x5F53;&#x4E8E;&#x7528;node&#x6267;&#x884C;cli.js&#x811A;&#x672C;</li>
+</ul>
+<pre><code class="lang-js">npx webpack = node ./node_modules/webpack-cli/bin/cli.js
+</code></pre>
+<h3 id="t93.4 &#x9605;&#x8BFB;&#x601D;&#x8DEF;">3.4 &#x9605;&#x8BFB;&#x601D;&#x8DEF; <a href="#t93.4 &#x9605;&#x8BFB;&#x601D;&#x8DEF;"> # </a></h3>
+<ul>
+<li>&#x5148;&#x6298;&#x53E0;&#x65E0;&#x5173;&#x7684;&#x5206;&#x652F;&#x7684;&#x903B;&#x8F91;&#xFF0C;&#x53EA;&#x770B;&#x4E3B;&#x4F53;&#x6D41;&#x7A0B;&#x4EE3;&#x7801;</li>
+<li>&#x5BFB;&#x627E;&#x5173;&#x952E;&#x8DEF;&#x5F84;&#xFF0C;&#x6839;&#x636E;&#x53D8;&#x91CF;&#x540D;&#x548C;&#x65B9;&#x6CD5;&#x540D;&#x731C;&#x6D4B;&#x610F;&#x56FE;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;&#x9605;&#x8BFB;&#x6E90;&#x7801;&#x6765;&#x9A8C;&#x8BC1;&#x60F3;&#x6CD5;</li>
+<li>debugger&#x5173;&#x952E;&#x8DEF;&#x5F84;&#xFF0C;&#x7406;&#x89E3;&#x6574;&#x4E2A;&#x6267;&#x884C;&#x8FC7;&#x7A0B; </li>
+</ul>
+<h3 id="t103.5 &#x91CD;&#x8981;&#x6587;&#x4EF6;">3.5 &#x91CD;&#x8981;&#x6587;&#x4EF6; <a href="#t103.5 &#x91CD;&#x8981;&#x6587;&#x4EF6;"> # </a></h3>
+<ul>
+<li>Webpack &#x7C7B;&#x4F3C;&#x4E8E;&#x4E00;&#x4E2A;&#x516C;&#x53F8;</li>
+<li>Compiler &#x7C7B;&#x4F3C;&#x4E8E;&#x516C;&#x53F8;&#x7684;&#x8463;&#x4E8B;&#x957F;&#xFF0C;&#x53EA;&#x628A;&#x63E1;&#x6218;&#x7565;&#x65B9;&#x5411;</li>
+<li>Compilation &#x5C31;&#x50CF;&#x5404;&#x4E2A;&#x4E8B;&#x4E1A;&#x90E8;&#x7684;&#x603B;&#x76D1;,&#x8D1F;&#x8D23;&#x5404;&#x4E2A;&#x90E8;&#x95E8;&#x7684;&#x7BA1;&#x7406;</li>
+<li>ModuleFactory &#x5C31;&#x50CF;&#x5404;&#x4E2A;&#x5177;&#x4F53;&#x90E8;&#x95E8;&#x4E86;,&#x8D1F;&#x8D23;&#x5177;&#x4F53;&#x5DE5;&#x4F5C;&#x4EA7;&#x51FA;&#x4EA7;&#x54C1;</li>
+</ul>
+<h2 id="t114.&#x542F;&#x52A8;&#x7F16;&#x8BD1;">4.&#x542F;&#x52A8;&#x7F16;&#x8BD1; <a href="#t114.&#x542F;&#x52A8;&#x7F16;&#x8BD1;"> # </a></h2>
+<ul>
+<li>Compiler&#x548C;Compilation&#x90FD;&#x7EE7;&#x627F;&#x81EA;Tapable</li>
+<li>Compiler&#x662F;&#x6BCF;&#x4E2A;Webpack&#x914D;&#x7F6E;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;Compiler&#x5BF9;&#x8C61;&#xFF0C;&#x8BB0;&#x5F55;&#x7740;Webpack&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;</li>
+<li>&#x5728;&#x6784;&#x5EFA;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x6BCF;&#x6B21;&#x6784;&#x5EFA;&#x90FD;&#x4F1A;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;Compilation,Compilation&#x662F;&#x6784;&#x5EFA;&#x5468;&#x671F;&#x7684;&#x4EA7;&#x7269;</li>
+<li>Compiler&#x6A21;&#x5757;&#x662F;Webpack&#x6700;&#x6838;&#x5FC3;&#x7684;&#x6A21;&#x5757;</li>
+<li>&#x6BCF;&#x6B21;&#x6267;&#x884C;&#x6784;&#x5EFA;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x90FD;&#x4F1A;&#x5148;&#x5B9E;&#x4F8B;&#x5316;&#x4E00;&#x4E2A; Compiler&#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528;&#x5B83;&#x7684;<code>run</code>&#x65B9;&#x6CD5;&#x6765;&#x5F00;&#x542F;&#x4E00;&#x6B21;&#x5B8C;&#x6574;&#x7684;&#x7F16;&#x8BD1;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x8BF4;&#x660E;</th>
+<th style="text-align:left">&#x4EE3;&#x7801;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1.&#x8BFB;&#x53D6;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack-cli/blob/v3.3.7/bin/utils/convert-argv.js#L125">requireConfig</a></td>
+</tr>
+<tr>
+<td style="text-align:left">2.&#x521B;&#x5EFA;compiler</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack-cli/blob/v3.3.7/bin/cli.js#L272">webpack(options)</a></td>
+</tr>
+<tr>
+<td style="text-align:left">3.&#x5F00;&#x59CB;&#x7F16;&#x8BD1;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack-cli/blob/v3.3.7/bin/cli.js#L352">compiler.run</a></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-js">node debug.js
+</code></pre>
+<p>debug.js</p>
+<pre><code class="lang-js"> <span class="hljs-keyword">const</span> webpack = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;webpack&quot;</span>);
+ <span class="hljs-keyword">const</span> config = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./webpack.config.js&apos;</span>);<span class="hljs-comment">//1.&#x8BFB;&#x53D6;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</span>
+ <span class="hljs-keyword">const</span> compiler = webpack(config);
+ <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">compilerCallback</span>(<span class="hljs-params">err, stats</span>) </span>{
+     <span class="hljs-keyword">const</span> statsString = stats.toString();
+     <span class="hljs-built_in">console</span>.log(statsString);
+ }
+ compiler.run(<span class="hljs-function">(<span class="hljs-params">err,stats</span>)=&gt;</span>{
+     compilerCallback(err, stats);
+ });
+
+</code></pre>
+<h2 id="t125.&#x94A9;&#x5B50;">5.&#x94A9;&#x5B50; <a href="#t125.&#x94A9;&#x5B50;"> # </a></h2>
+<h3 id="t135.1 Compiler">5.1 Compiler <a href="#t135.1 Compiler"> # </a></h3>
+<ul>
+<li>L106</li>
+</ul>
+<pre><code class="lang-diff">            entryOption: new SyncBailHook([&quot;context&quot;, &quot;entry&quot;])
+        };
+<span class="hljs-addition">+        Object.keys(this.hooks).forEach(hookName =&gt; {</span>
+<span class="hljs-addition">+            const hook = this.hooks[hookName];</span>
+<span class="hljs-addition">+            if (hook.tap) {</span>
+<span class="hljs-addition">+                hook.tap(&apos;flow&apos;, () =&gt; {</span>
+<span class="hljs-addition">+                    console.log(`|compiler|${hookName}|${Object.getPrototypeOf(hook).constructor.name}|${hook._args}|`);</span>
+<span class="hljs-addition">+                });</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+        });</span>
+</code></pre>
+<h3 id="t145.2 Compilation">5.2 Compilation <a href="#t145.2 Compilation"> # </a></h3>
+<ul>
+<li>L437</li>
+</ul>
+<pre><code class="lang-diff">            afterOptimizeExtractedChunks: new SyncHook([&quot;chunks&quot;])
+        };
+<span class="hljs-addition">+        Object.keys(this.hooks).forEach(hookName =&gt; {</span>
+<span class="hljs-addition">+            const hook = this.hooks[hookName];</span>
+<span class="hljs-addition">+            if (hook.tap) {</span>
+<span class="hljs-addition">+                hook.tap(&apos;flow&apos;, () =&gt; {</span>
+<span class="hljs-addition">+                    console.log(`|compilation|${hookName}|${Object.getPrototypeOf(hook).constructor.name}|${hook._args}|`);</span>
+<span class="hljs-addition">+                });</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+        });</span>
+        this._pluginCompat.tap(&quot;Compilation&quot;, options =&gt; {
+</code></pre>
+<pre><code class="lang-js">|compiler|environment|SyncHook||
+|compiler|afterEnvironment|SyncHook||
+|compiler|entryOption|SyncBailHook|context,entry|
+|compiler|afterPlugins|SyncHook|compiler|
+|compiler|afterResolvers|SyncHook|compiler|
+|compiler|beforeRun|AsyncSeriesHook|compiler|
+|compiler|run|AsyncSeriesHook|compiler|
+|compiler|normalModuleFactory|SyncHook|normalModuleFactory|
+|compiler|contextModuleFactory|SyncHook|contextModulefactory|
+|compiler|beforeCompile|AsyncSeriesHook|params|
+|compiler|compile|SyncHook|params|
+|compiler|thisCompilation|SyncHook|compilation,params|
+|compiler|compilation|SyncHook|compilation,params|
+|compiler|make|AsyncParallelHook|compilation|
+|compilation|addEntry|SyncHook|entry,name|
+|compilation|buildModule|SyncHook|<span class="hljs-built_in">module</span>|
+|compilation|normalModuleLoader|SyncHook|loaderContext,<span class="hljs-built_in">module</span>|
+|compilation|succeedModule|SyncHook|<span class="hljs-built_in">module</span>|
+|compilation|buildModule|SyncHook|<span class="hljs-built_in">module</span>|
+|compilation|normalModuleLoader|SyncHook|loaderContext,<span class="hljs-built_in">module</span>|
+|compilation|succeedModule|SyncHook|<span class="hljs-built_in">module</span>|
+|compilation|buildModule|SyncHook|<span class="hljs-built_in">module</span>|
+|compilation|normalModuleLoader|SyncHook|loaderContext,<span class="hljs-built_in">module</span>|
+|compilation|buildModule|SyncHook|<span class="hljs-built_in">module</span>|
+|compilation|normalModuleLoader|SyncHook|loaderContext,<span class="hljs-built_in">module</span>|
+|compilation|succeedModule|SyncHook|<span class="hljs-built_in">module</span>|
+|compilation|succeedModule|SyncHook|<span class="hljs-built_in">module</span>|
+|compilation|succeedEntry|SyncHook|entry,name,<span class="hljs-built_in">module</span>|
+|compilation|finishModules|AsyncSeriesHook|modules|
+|compilation|seal|SyncHook||
+|compilation|optimizeDependenciesBasic|SyncBailHook|modules|
+|compilation|optimizeDependencies|SyncBailHook|modules|
+|compilation|optimizeDependenciesAdvanced|SyncBailHook|modules|
+|compilation|afterOptimizeDependencies|SyncHook|modules|
+|compilation|beforeChunks|SyncHook||
+|compilation|dependencyReference|SyncWaterfallHook|dependencyReference,d
+|compilation|dependencyReference|SyncWaterfallHook|dependencyReference,d
+|compilation|dependencyReference|SyncWaterfallHook|dependencyReference,d
+|compilation|dependencyReference|SyncWaterfallHook|dependencyReference,d
+|compilation|log|SyncBailHook|origin,logEntry|
+|compilation|log|SyncBailHook|origin,logEntry|
+|compilation|afterChunks|SyncHook|chunks|
+|compilation|optimize|SyncHook||
+|compilation|optimizeModulesBasic|SyncBailHook|modules|
+|compilation|optimizeModules|SyncBailHook|modules|
+|compilation|optimizeModulesAdvanced|SyncBailHook|modules|
+|compilation|afterOptimizeModules|SyncHook|modules|
+|compilation|optimizeChunksBasic|SyncBailHook|chunks,chunkGroups|
+|compilation|optimizeChunks|SyncBailHook|chunks,chunkGroups|
+|compilation|optimizeChunksAdvanced|SyncBailHook|chunks,chunkGroups|
+|compilation|afterOptimizeChunks|SyncHook|chunks,chunkGroups|
+|compilation|optimizeTree|AsyncSeriesHook|chunks,modules|
+|compilation|afterOptimizeTree|SyncHook|chunks,modules|
+|compilation|optimizeChunkModulesBasic|SyncBailHook|chunks,modules|
+|compilation|optimizeChunkModules|SyncBailHook|chunks,modules|
+|compilation|optimizeChunkModulesAdvanced|SyncBailHook|chunks,modules|
+|compilation|afterOptimizeChunkModules|SyncHook|chunks,modules|
+|compilation|shouldRecord|SyncBailHook||
+|compilation|reviveModules|SyncHook|modules,records|
+|compilation|optimizeModuleOrder|SyncHook|modules|
+|compilation|advancedOptimizeModuleOrder|SyncHook|modules|
+|compilation|beforeModuleIds|SyncHook|modules|
+|compilation|moduleIds|SyncHook|modules|
+|compilation|optimizeModuleIds|SyncHook|modules|
+|compilation|afterOptimizeModuleIds|SyncHook|modules|
+|compilation|reviveChunks|SyncHook|chunks,records|
+|compilation|optimizeChunkOrder|SyncHook|chunks|
+|compilation|beforeChunkIds|SyncHook|chunks|
+|compilation|optimizeChunkIds|SyncHook|chunks|
+|compilation|afterOptimizeChunkIds|SyncHook|chunks|
+|compilation|recordModules|SyncHook|modules,records|
+|compilation|recordChunks|SyncHook|chunks,records|
+|compilation|beforeHash|SyncHook||
+|compilation|chunkHash|SyncHook|chunk,chunkHash|
+|compilation|contentHash|SyncHook|chunk|
+|compilation|afterHash|SyncHook||
+|compilation|recordHash|SyncHook|records|
+|compilation|beforeModuleAssets|SyncHook||
+|compilation|shouldGenerateChunkAssets|SyncBailHook||
+|compilation|beforeChunkAssets|SyncHook||
+|compilation|chunkAsset|SyncHook|chunk,filename|
+|compilation|additionalChunkAssets|SyncHook|chunks|
+|compilation|record|SyncHook|compilation,records|
+|compilation|additionalAssets|AsyncSeriesHook||
+|compilation|optimizeChunkAssets|AsyncSeriesHook|chunks|
+|compilation|afterOptimizeChunkAssets|SyncHook|chunks|
+|compilation|optimizeAssets|AsyncSeriesHook|assets|
+|compilation|afterOptimizeAssets|SyncHook|assets|
+|compilation|needAdditionalSeal|SyncBailHook||
+|compilation|afterSeal|AsyncSeriesHook||
+|compiler|afterCompile|AsyncSeriesHook|compilation|
+|compiler|shouldEmit|SyncBailHook|compilation|
+|compiler|emit|AsyncSeriesHook|compilation|
+|compiler|assetEmitted|AsyncSeriesHook|file,content|
+|compiler|afterEmit|AsyncSeriesHook|compilation|
+|compilation|needAdditionalPass|SyncBailHook||
+|compiler|done|AsyncSeriesHook|stats|
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x4E8B;&#x4EF6;&#x540D;&#x79F0;</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x53C2;&#x6570;</th>
+<th style="text-align:left">&#x8BF4;&#x660E;</th>
+<th style="text-align:left">&#x53D1;&#x5C04;&#x4E8B;&#x4EF6;&#x4EE3;&#x7801;</th>
+<th style="text-align:left">&#x5BF9;&#x5E94;&#x63D2;&#x4EF6;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">compiler</td>
+<td style="text-align:left">environment</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">&#x7A7A;</td>
+<td style="text-align:left">&#x51C6;&#x5907;&#x7F16;&#x8BD1;&#x73AF;&#x5883;&#xFF0C;webpack plugins&#x914D;&#x7F6E;&#x521D;&#x59CB;&#x5316;&#x5B8C;&#x6210;&#x4E4B;&#x540E;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/webpack.js#L55">webpack.js#L55</a></td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/node/NodeEnvironmentPlugin.js">NodeEnvironmentPlugin</a></td>
+</tr>
+<tr>
+<td style="text-align:left">compiler</td>
+<td style="text-align:left">afterEnvironment</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">&#x7A7A;</td>
+<td style="text-align:left">&#x7F16;&#x8BD1;&#x73AF;&#x5883;&#x51C6;&#x5907;&#x597D;&#x4E4B;&#x540E;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/webpack.js#L56">webpack.js#L56</a></td>
+</tr>
+<tr>
+<td style="text-align:left">compiler</td>
+<td style="text-align:left">entryOption</td>
+<td style="text-align:left">SyncBailHook</td>
+<td style="text-align:left">context,entry</td>
+<td style="text-align:left">&#x5728; webpack &#x4E2D;&#x7684; entry &#x914D;&#x7F6E;&#x5904;&#x7406;&#x8FC7;&#x4E4B;&#x540E;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/WebpackOptionsApply.js#L291">WebpackOptionsApply.js#L291</a></td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/EntryOptionPlugin.js">EntryOptionPlugin</a>,<a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/SingleEntryPlugin.js">SingleEntryPlugin</a></td>
+</tr>
+<tr>
+<td style="text-align:left">compiler</td>
+<td style="text-align:left">afterPlugins</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">compiler</td>
+<td style="text-align:left">&#x521D;&#x59CB;&#x5316;&#x5B8C;&#x5185;&#x7F6E;&#x63D2;&#x4EF6;&#x4E4B;&#x540E;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/WebpackOptionsApply.js#L506">WebpackOptionsApply.js#L506</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compiler</td>
+<td style="text-align:left">afterResolvers</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">compiler</td>
+<td style="text-align:left">resolver &#x5B8C;&#x6210;&#x4E4B;&#x540E;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/WebpackOptionsApply.js#L541">WebpackOptionsApply.js#L541</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compiler</td>
+<td style="text-align:left">beforeRun</td>
+<td style="text-align:left">AsyncSeriesHook</td>
+<td style="text-align:left">compiler</td>
+<td style="text-align:left">&#x5F00;&#x59CB;&#x6B63;&#x5F0F;&#x7F16;&#x8BD1;&#x4E4B;&#x524D;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compiler.js#L312">Compiler.js#L312</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compiler</td>
+<td style="text-align:left">run</td>
+<td style="text-align:left">AsyncSeriesHook</td>
+<td style="text-align:left">compiler</td>
+<td style="text-align:left">&#x5F00;&#x59CB;&#x7F16;&#x8BD1;&#x4E4B;&#x540E;&#xFF0C;&#x8BFB;&#x53D6; records &#x4E4B;&#x524D;&#xFF1B;&#x76D1;&#x542C;&#x6A21;&#x5F0F;&#x89E6;&#x53D1;watch-run</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compiler.js#L315">Compiler.js#L315</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compiler</td>
+<td style="text-align:left">normalModuleFactory</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">normalModuleFactory</td>
+<td style="text-align:left">NormalModuleFactory &#x521B;&#x5EFA;&#x4E4B;&#x540E;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compiler.js#L631">Compiler.js#L631</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compiler</td>
+<td style="text-align:left">contextModuleFactory</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">contextModulefactory</td>
+<td style="text-align:left">ContextModuleFactory &#x521B;&#x5EFA;&#x4E4B;&#x540E;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compiler.js#L637">Compiler.js#L631</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compiler</td>
+<td style="text-align:left">beforeCompile</td>
+<td style="text-align:left">AsyncSeriesHook</td>
+<td style="text-align:left">params</td>
+<td style="text-align:left">compilation &#x5B9E;&#x4F8B;&#x5316;&#x9700;&#x8981;&#x7684;&#x53C2;&#x6570;&#x521B;&#x5EFA;&#x5B8C;&#x6BD5;&#x4E4B;&#x540E;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compiler.js#L652">Compiler.js#L652</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compiler</td>
+<td style="text-align:left">compile</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">params</td>
+<td style="text-align:left">&#x4E00;&#x6B21; compilation &#x7F16;&#x8BD1;&#x521B;&#x5EFA;&#x4E4B;&#x524D;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compiler.js#L652">Compiler.js#L652</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compiler</td>
+<td style="text-align:left">thisCompilation</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">compilation,params</td>
+<td style="text-align:left">&#x89E6;&#x53D1; compilation &#x4E8B;&#x4EF6;&#x4E4B;&#x524D;&#x6267;&#x884C;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compiler.js#L620">Compiler.js#L620</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compiler</td>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">compilation,params</td>
+<td style="text-align:left">compilation&#x521B;&#x5EFA;&#x6210;&#x529F;&#x4E4B;&#x540E;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compiler.js#L620">Compiler.js#L620</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compiler</td>
+<td style="text-align:left">make</td>
+<td style="text-align:left">AsyncParallelHook</td>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">&#x5B8C;&#x6210;&#x7F16;&#x8BD1;&#x4E4B;&#x524D;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compiler.js#L659">Compiler.js#L659</a></td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/SingleEntryPlugin.js">SingleEntryPlugin</a></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">addEntry</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">entry,name</td>
+<td style="text-align:left">&#x589E;&#x52A0;&#x5165;&#x53E3;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/master/lib/Compilation.js#L1106">Compilation.js#L1106</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">buildModule</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">module</td>
+<td style="text-align:left">&#x5728;&#x6A21;&#x5757;&#x6784;&#x5EFA;&#x5F00;&#x59CB;&#x4E4B;&#x524D;&#x89E6;&#x53D1;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/master/lib/Compilation.js#L701">Compilation.js#L701</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">normalModuleLoader</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">loaderContext,module</td>
+<td style="text-align:left">&#x666E;&#x901A;&#x6A21;&#x5757; loader&#xFF0C;&#x771F;&#x6B63;&#xFF08;&#x4E00;&#x4E2A;&#x63A5;&#x4E00;&#x4E2A;&#x5730;&#xFF09;&#x52A0;&#x8F7D;&#x6A21;&#x5757;&#x56FE;&#xFF08;graph&#xFF09;&#x4E2D;&#x6240;&#x6709;&#x6A21;&#x5757;&#x7684;&#x51FD;&#x6570;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/master/lib/NormalModule.js#L233">NormalModule.js#L233</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">succeedModule</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">module</td>
+<td style="text-align:left">&#x6A21;&#x5757;&#x6784;&#x5EFA;&#x6210;&#x529F;&#x65F6;&#x6267;&#x884C;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#744">Compilation.js#744</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">succeedEntry</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">entry,name,module</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1147">Compilation.js#L1147</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">finishModules</td>
+<td style="text-align:left">AsyncSeriesHook</td>
+<td style="text-align:left">modules</td>
+<td style="text-align:left">&#x6240;&#x6709;&#x6A21;&#x5757;&#x90FD;&#x5B8C;&#x6210;&#x6784;&#x5EFA;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1216">Compilation.js#L1216</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">seal</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">&#x7F16;&#x8BD1;&#xFF08;compilation&#xFF09;&#x505C;&#x6B62;&#x63A5;&#x6536;&#x65B0;&#x6A21;&#x5757;&#x65F6;&#x89E6;&#x53D1;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1246">Compilation.js#L1246</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">optimizeDependenciesBasic</td>
+<td style="text-align:left">SyncBailHook</td>
+<td style="text-align:left">modules</td>
+<td style="text-align:left">&#x57FA;&#x7840;&#x4F9D;&#x8D56;&#x4F18;&#x5316;&#x5F00;&#x59CB;&#x65F6;&#x89E6;&#x53D1;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1249">Compilation.js#L1249</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">optimizeDependencies</td>
+<td style="text-align:left">SyncBailHook</td>
+<td style="text-align:left">modules</td>
+<td style="text-align:left">&#x4F9D;&#x8D56;&#x4F18;&#x5316;&#x5F00;&#x59CB;&#x65F6;&#x89E6;&#x53D1;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1250">Compilation.js#L1250</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">optimizeDependenciesAdvanced</td>
+<td style="text-align:left">SyncBailHook</td>
+<td style="text-align:left">modules</td>
+<td style="text-align:left">&#x9AD8;&#x7EA7;&#x4F9D;&#x8D56;&#x4F18;&#x5316;&#x5F00;&#x59CB;&#x65F6;&#x89E6;&#x53D1;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1251">Compilation.js#L1251</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">afterOptimizeDependencies</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">modules</td>
+<td style="text-align:left">&#x4F18;&#x5316;&#x7ED3;&#x675F;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1255">Compilation.js#L1255</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">beforeChunks</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">&#x5F00;&#x59CB;&#x751F;&#x6210;&#x4EE3;&#x7801;&#x5757;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1257">Compilation.js#L1257</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">dependencyReference</td>
+<td style="text-align:left">SyncWaterfallHook</td>
+<td style="text-align:left">dependencyReference,dependency,module</td>
+<td style="text-align:left">&#x4F9D;&#x8D56;&#x5F15;&#x7528;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1565">Compilation.js#L1565</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">log</td>
+<td style="text-align:left">SyncBailHook</td>
+<td style="text-align:left">origin,logEntry</td>
+<td style="text-align:left">&#x6253;&#x5370;&#x65E5;&#x5FD7;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L542">Compilation.js#L542</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">afterChunks</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">chunks</td>
+<td style="text-align:left">&#x4EE3;&#x7801;&#x5757;&#x751F;&#x6210;&#x4E4B;&#x540E;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1282">Compilation.js#L1282</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">optimize</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">&#x4F18;&#x5316;&#x9636;&#x6BB5;&#x5F00;&#x59CB;&#x65F6;&#x89E6;&#x53D1;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1284">Compilation.js#L1284</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">optimizeModulesBasic</td>
+<td style="text-align:left">SyncBailHook</td>
+<td style="text-align:left">modules</td>
+<td style="text-align:left">&#x57FA;&#x7840;&#x6A21;&#x5757;&#x7684;&#x4F18;&#x5316;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1287">Compilation.js#L1284</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">optimizeModules</td>
+<td style="text-align:left">SyncBailHook</td>
+<td style="text-align:left">modules</td>
+<td style="text-align:left">&#x6A21;&#x5757;&#x7684;&#x4F18;&#x5316;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1288">Compilation.js#L1284</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">optimizeModulesAdvanced</td>
+<td style="text-align:left">SyncBailHook</td>
+<td style="text-align:left">modules</td>
+<td style="text-align:left">&#x9AD8;&#x7EA7;&#x6A21;&#x5757;&#x7684;&#x4F18;&#x5316;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1289">Compilation.js#L1284</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">afterOptimizeModules</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">modules</td>
+<td style="text-align:left">&#x6A21;&#x5757;&#x4F18;&#x5316;&#x7ED3;&#x675F;&#x65F6;&#x89E6;&#x53D1;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1293">Compilation.js#L1293</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">optimizeChunksBasic</td>
+<td style="text-align:left">SyncBailHook</td>
+<td style="text-align:left">chunks,chunkGroups</td>
+<td style="text-align:left">&#x57FA;&#x7840;chunk&#x4F18;&#x5316;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1287">Compilation.js#L1296</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">optimizeChunks</td>
+<td style="text-align:left">SyncBailHook</td>
+<td style="text-align:left">chunks,chunkGroups</td>
+<td style="text-align:left">&#x4F18;&#x5316; chunks</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1297">Compilation.js#L1297</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">optimizeChunksAdvanced</td>
+<td style="text-align:left">SyncBailHook</td>
+<td style="text-align:left">chunks,chunkGroups</td>
+<td style="text-align:left">&#x9AD8;&#x7EA7;chunk&#x4F18;&#x5316;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1298">Compilation.js#L1298</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">afterOptimizeChunks</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">chunks,chunkGroups</td>
+<td style="text-align:left">chunk &#x4F18;&#x5316;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#x89E6;&#x53D1;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1302">Compilation.js#L1302</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">optimizeTree</td>
+<td style="text-align:left">AsyncSeriesHook</td>
+<td style="text-align:left">chunks,modules</td>
+<td style="text-align:left">&#x5F02;&#x6B65;&#x4F18;&#x5316;&#x4F9D;&#x8D56;&#x6811;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1304">Compilation.js#L1304</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">afterOptimizeTree</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">chunks,modules</td>
+<td style="text-align:left">&#x5F02;&#x6B65;&#x4F18;&#x5316;&#x4F9D;&#x8D56;&#x6811;&#x5B8C;&#x6210;&#x65F6;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1309">Compilation.js#L1309</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">optimizeChunkModulesBasic</td>
+<td style="text-align:left">SyncBailHook</td>
+<td style="text-align:left">chunks,modules</td>
+<td style="text-align:left">&#x57FA;&#x7840;&#x4F18;&#x5316;&#x5355;&#x4E2A;chunk&#x4E2D;&#x7684; modules &#x5F00;&#x59CB;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1312">Compilation.js#L1312</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">optimizeChunkModules</td>
+<td style="text-align:left">SyncBailHook</td>
+<td style="text-align:left">chunks,modules</td>
+<td style="text-align:left">&#x4F18;&#x5316;&#x5355;&#x4E2A;chunk&#x4E2D;&#x7684; modules &#x5F00;&#x59CB;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1313">Compilation.js#L1313</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">optimizeChunkModulesAdvanced</td>
+<td style="text-align:left">SyncBailHook</td>
+<td style="text-align:left">chunks,modules</td>
+<td style="text-align:left">&#x9AD8;&#x7EA7;&#x4F18;&#x5316;&#x5355;&#x4E2A;chunk&#x4E2D;&#x7684; modules &#x5F00;&#x59CB;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1314">Compilation.js#L1314</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">afterOptimizeChunkModules</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">chunks,modules</td>
+<td style="text-align:left">&#x4F18;&#x5316;&#x5355;&#x4E2A;chunk&#x4E2D;&#x7684; modules&#x7ED3;&#x675F;&#x540E;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1318">Compilation.js#L1318</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">shouldRecord</td>
+<td style="text-align:left">SyncBailHook</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">&#x662F;&#x5426;&#x5E94;&#x8BE5;&#x8BB0;&#x5F55;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1320">Compilation.js#L1320</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">reviveModules</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">modules,records</td>
+<td style="text-align:left">&#x4ECE; records &#x4E2D;&#x6062;&#x590D;&#x6A21;&#x5757;&#x4FE1;&#x606F;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1322">Compilation.js#L1322</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">optimizeModuleOrder</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">modules</td>
+<td style="text-align:left">&#x5C06;&#x6A21;&#x5757;&#x4ECE;&#x6700;&#x91CD;&#x8981;&#x7684;&#x5230;&#x6700;&#x4E0D;&#x91CD;&#x8981;&#x7684;&#x8FDB;&#x884C;&#x6392;&#x5E8F;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1323">Compilation.js#L1323</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">advancedOptimizeModuleOrder</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">modules</td>
+<td style="text-align:left">&#x9AD8;&#x7EA7;&#x5C06;&#x6A21;&#x5757;&#x4ECE;&#x6700;&#x91CD;&#x8981;&#x7684;&#x5230;&#x6700;&#x4E0D;&#x91CD;&#x8981;&#x7684;&#x8FDB;&#x884C;&#x6392;&#x5E8F;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1324">Compilation.js#L1324</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">beforeModuleIds</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">modules</td>
+<td style="text-align:left">&#x5904;&#x7406; modulesId &#x4E4B;&#x524D;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1325">Compilation.js#L1325</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">moduleIds</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">modules</td>
+<td style="text-align:left">&#x5904;&#x7406; modulesId</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1326">Compilation.js#L1326</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">optimizeModuleIds</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">modules</td>
+<td style="text-align:left">&#x4F18;&#x5316; modulesId</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1328">Compilation.js#L1328</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">afterOptimizeModuleIds</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">modules</td>
+<td style="text-align:left">&#x4F18;&#x5316; modulesId&#x4E4B;&#x540E;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1329">Compilation.js#L1329</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">reviveChunks</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">chunks,records</td>
+<td style="text-align:left">&#x4ECE; records &#x4E2D;&#x6062;&#x590D; chunk &#x4FE1;&#x606F;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1333">Compilation.js#L1333</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">optimizeChunkOrder</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">chunks</td>
+<td style="text-align:left">&#x5C06; chunk &#x4ECE;&#x6700;&#x91CD;&#x8981;&#x7684;&#x5230;&#x6700;&#x4E0D;&#x91CD;&#x8981;&#x7684;&#x8FDB;&#x884C;&#x6392;&#x5E8F;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1334">Compilation.js#L1334</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">beforeChunkIds</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">chunks</td>
+<td style="text-align:left">chunk id &#x4F18;&#x5316;&#x4E4B;&#x524D;&#x89E6;&#x53D1;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1335">Compilation.js#L1335</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">optimizeChunkIds</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">chunks</td>
+<td style="text-align:left">chunk id &#x4F18;&#x5316;&#x5F00;&#x59CB;&#x89E6;&#x53D1;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1337">Compilation.js#L1337</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">afterOptimizeChunkIds</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">chunks</td>
+<td style="text-align:left">chunk id &#x4F18;&#x5316;&#x7ED3;&#x675F;&#x89E6;&#x53D1;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1338">Compilation.js#L1338</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">recordModules</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">modules,records</td>
+<td style="text-align:left">&#x5C06;&#x6A21;&#x5757;&#x4FE1;&#x606F;&#x5B58;&#x50A8;&#x5230; records</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1343">Compilation.js#L1343</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">recordChunks</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">chunks,records</td>
+<td style="text-align:left">&#x5C06; chunk &#x4FE1;&#x606F;&#x5B58;&#x50A8;&#x5230; records</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1344">Compilation.js#L1344</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">beforeHash</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">&#x5728;&#x7F16;&#x8BD1;&#x88AB;&#x54C8;&#x5E0C;&#xFF08;hashed&#xFF09;&#x4E4B;&#x524D;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1347">Compilation.js#L1347</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">chunkHash</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">chunk,chunkHash</td>
+<td style="text-align:left">&#x751F;&#x6210;chunkHash</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1937">Compilation.js#L1937</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">contentHash</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">chunk</td>
+<td style="text-align:left">&#x751F;&#x6210;contentHash</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1941">Compilation.js#L1941</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">afterHash</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">&#x5728;&#x7F16;&#x8BD1;&#x88AB;&#x54C8;&#x5E0C;&#xFF08;hashed&#xFF09;&#x4E4B;&#x540E;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1349">Compilation.js#L1349</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">recordHash</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">records</td>
+<td style="text-align:left">&#x8BB0;&#x5F55;hash</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1352">Compilation.js#L1352</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">beforeModuleAssets</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">&#x5728;&#x521B;&#x5EFA;&#x6A21;&#x5757;&#x7684;&#x8D44;&#x6E90;&#x4E4B;&#x524D;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1355">Compilation.js#L1355</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">shouldGenerateChunkAssets</td>
+<td style="text-align:left">SyncBailHook</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">&#x662F;&#x5426;&#x8981;&#x751F;&#x6210;chunk&#x8D44;&#x6E90;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1357">Compilation.js#L1357</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">beforeChunkAssets</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">&#x5728;&#x521B;&#x5EFA; chunk &#x8D44;&#x6E90;&#xFF08;asset&#xFF09;&#x4E4B;&#x524D;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1358">Compilation.js#L1358</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">chunkAsset</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">chunk,filename</td>
+<td style="text-align:left">&#x4E00;&#x4E2A; chunk &#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x8D44;&#x6E90;&#x88AB;&#x6DFB;&#x52A0;&#x5230;&#x7F16;&#x8BD1;&#x4E2D;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L2019">Compilation.js#L2019</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">additionalChunkAssets</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">chunks</td>
+<td style="text-align:left">additionalChunkAssets</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1361">Compilation.js#L1361</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">record</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">compilation,records</td>
+<td style="text-align:left">&#x5C06; compilation &#x76F8;&#x5173;&#x4FE1;&#x606F;&#x5B58;&#x50A8;&#x5230; records &#x4E2D;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1364">Compilation.js#L1364</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">additionalAssets</td>
+<td style="text-align:left">AsyncSeriesHook</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">&#x4E3A;&#x7F16;&#x8BD1;&#xFF08;compilation&#xFF09;&#x521B;&#x5EFA;&#x9644;&#x52A0;&#x8D44;&#x6E90;&#xFF08;asset&#xFF09;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1367">Compilation.js#L1367</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">optimizeChunkAssets</td>
+<td style="text-align:left">AsyncSeriesHook</td>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">&#x4F18;&#x5316;&#x6240;&#x6709; chunk &#x8D44;&#x6E90;&#xFF08;asset&#xFF09;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1343">Compilation.js#L1343</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">afterOptimizeChunkAssets</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">chunks</td>
+<td style="text-align:left">chunk &#x8D44;&#x6E90;&#xFF08;asset&#xFF09;&#x5DF2;&#x7ECF;&#x88AB;&#x4F18;&#x5316;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1343">Compilation.js#L1371</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">optimizeAssets</td>
+<td style="text-align:left">AsyncSeriesHook</td>
+<td style="text-align:left">assets</td>
+<td style="text-align:left">&#x4F18;&#x5316;&#x5B58;&#x50A8;&#x5728; compilation.assets &#x4E2D;&#x7684;&#x6240;&#x6709;&#x8D44;&#x6E90;&#xFF08;asset&#xFF09;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1343">Compilation.js#L1371</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">afterOptimizeAssets</td>
+<td style="text-align:left">SyncHook</td>
+<td style="text-align:left">assets</td>
+<td style="text-align:left">&#x4F18;&#x5316;compilation.assets &#x4E2D;&#x7684;&#x6240;&#x6709;&#x8D44;&#x6E90;&#xFF08;asset&#xFF09;&#x4E4B;&#x540E;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1380">Compilation.js#L1380</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">needAdditionalSeal</td>
+<td style="text-align:left">SyncBailHook</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">&#x662F;&#x5426;&#x9700;&#x8981;&#x989D;&#x5916;&#x7684;seal</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1381">Compilation.js#L1381</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">afterSeal</td>
+<td style="text-align:left">AsyncSeriesHook</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">seal&#x4E4B;&#x540E;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compilation.js#L1383">Compilation.js#L1383</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compiler</td>
+<td style="text-align:left">afterCompile</td>
+<td style="text-align:left">AsyncSeriesHook</td>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">&#x5B8C;&#x6210;&#x7F16;&#x8BD1;&#x548C;&#x5C01;&#x5B58;&#xFF08;seal&#xFF09;&#x7F16;&#x8BD1;&#x4EA7;&#x51FA;&#x4E4B;&#x540E;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compiler.js#L668">Compiler.js#L668</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compiler</td>
+<td style="text-align:left">shouldEmit</td>
+<td style="text-align:left">SyncBailHook</td>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">&#x53D1;&#x5E03;&#x6784;&#x5EFA;&#x540E;&#x8D44;&#x6E90;&#x4E4B;&#x524D;&#x89E6;&#x53D1;&#xFF0C;&#x56DE;&#x8C03;&#x5FC5;&#x987B;&#x8FD4;&#x56DE;true/false&#xFF0C;true&#x5219;&#x7EE7;&#x7EED;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compiler.js#L267">Compiler.js#L267</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compiler</td>
+<td style="text-align:left">emit</td>
+<td style="text-align:left">AsyncSeriesHook</td>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">&#x751F;&#x6210;&#x8D44;&#x6E90;&#x5230; output &#x76EE;&#x5F55;&#x4E4B;&#x524D;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compiler.js#L481">Compiler.js#L481</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compiler</td>
+<td style="text-align:left">assetEmitted</td>
+<td style="text-align:left">AsyncSeriesHook</td>
+<td style="text-align:left">file,content</td>
+<td style="text-align:left">assetEmitted</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compiler.js#L437">Compiler.js#L437</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compiler</td>
+<td style="text-align:left">afterEmit</td>
+<td style="text-align:left">AsyncSeriesHook</td>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">&#x751F;&#x6210;&#x8D44;&#x6E90;&#x5230; output &#x76EE;&#x5F55;&#x4E4B;&#x540E;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compiler.js#L472">Compiler.js#L472</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">needAdditionalPass</td>
+<td style="text-align:left">SyncBailHook</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">&#x662F;&#x5426;&#x9700;&#x8981;&#x989D;&#x5916;&#x7684;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compiler.js#L281">Compiler.js#L281</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">compiler</td>
+<td style="text-align:left">done</td>
+<td style="text-align:left">AsyncSeriesHook</td>
+<td style="text-align:left">stats</td>
+<td style="text-align:left">compilation&#x5B8C;&#x6210;&#x4E4B;&#x540E;</td>
+<td style="text-align:left"><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Compiler.js#L304">Compiler.js#L304</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="t155.Stats &#x5BF9;&#x8C61;">5.Stats &#x5BF9;&#x8C61; <a href="#t155.Stats &#x5BF9;&#x8C61;"> # </a></h2>
+<ul>
+<li>&#x5728; Webpack &#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x4E2D;&#x4F1A;&#x5F97;&#x5230;stats&#x5BF9;&#x8C61;</li>
+<li>&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x5B9E;&#x9645;&#x6765;&#x81EA;&#x4E8E;<code>Compilation.getStats()</code>&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E3B;&#x8981;&#x542B;&#x6709;<code>modules</code>&#x3001;<code>chunks</code>&#x548C;<code>assets</code>&#x4E09;&#x4E2A;&#x5C5E;&#x6027;&#x503C;&#x7684;&#x5BF9;&#x8C61;&#x3002;</li>
+<li>Stats&#x5BF9;&#x8C61;&#x672C;&#x8D28;&#x4E0A;&#x6765;&#x81EA;&#x4E8E;<a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/Stats.js">lib/Stats.js</a>&#x7684;&#x7C7B;&#x5B9E;&#x4F8B;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">modules</td>
+<td style="text-align:left">&#x8BB0;&#x5F55;&#x4E86;&#x6240;&#x6709;&#x89E3;&#x6790;&#x540E;&#x7684;&#x6A21;&#x5757;</td>
+</tr>
+<tr>
+<td style="text-align:left">chunks</td>
+<td style="text-align:left">&#x8BB0;&#x5F55;&#x4E86;&#x6240;&#x6709;chunk</td>
+</tr>
+<tr>
+<td style="text-align:left">assets</td>
+<td style="text-align:left">&#x8BB0;&#x5F55;&#x4E86;&#x6240;&#x6709;&#x8981;&#x751F;&#x6210;&#x7684;&#x6587;&#x4EF6;</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-js">npx webpack --profile --json &gt; stats.json
+</code></pre>
+<pre><code class="lang-json">{
+  <span class="hljs-attr">&quot;errors&quot;</span>: [],<span class="hljs-comment">// &#x9519;&#x8BEF;&#x5B57;&#x7B26;&#x4E32; (error string) &#x7684;&#x6570;&#x7EC4;</span>
+  <span class="hljs-attr">&quot;warnings&quot;</span>: [],<span class="hljs-comment">//&#x8B66;&#x544A;&#x5B57;&#x7B26;&#x4E32; (warning string) &#x7684;&#x6570;&#x7EC4;</span>
+  <span class="hljs-attr">&quot;version&quot;</span>: <span class="hljs-string">&quot;4.39.3&quot;</span>,<span class="hljs-comment">// &#x7528;&#x6765;&#x7F16;&#x8BD1;&#x7684; webpack &#x7684;&#x7248;&#x672C;</span>
+  <span class="hljs-attr">&quot;hash&quot;</span>: <span class="hljs-string">&quot;3e945ec6b2c56d0b010e&quot;</span>,<span class="hljs-comment">//&#x7F16;&#x8BD1;&#x4F7F;&#x7528;&#x7684; hash</span>
+  <span class="hljs-attr">&quot;time&quot;</span>: <span class="hljs-number">66</span>, <span class="hljs-comment">// &#x7F16;&#x8BD1;&#x8017;&#x65F6; (ms)</span>
+  <span class="hljs-attr">&quot;builtAt&quot;</span>: <span class="hljs-number">1567225465347</span>,<span class="hljs-comment">//&#x7F16;&#x8BD1;&#x7684;&#x65F6;&#x95F4;</span>
+  <span class="hljs-attr">&quot;publicPath&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,<span class="hljs-comment">//&#x8D44;&#x6E90;&#x8BBF;&#x95EE;&#x8DEF;&#x5F84;</span>
+  <span class="hljs-attr">&quot;outputPath&quot;</span>: <span class="hljs-string">&quot;C:\\vipdata\\vipproject\\webpack-source\\dist&quot;</span>,<span class="hljs-comment">//webpack&#x8F93;&#x51FA;&#x76EE;&#x5F55;</span>
+  <span class="hljs-attr">&quot;assetsByChunkName&quot;</span>: {<span class="hljs-comment">//&#x7528;&#x4F5C;&#x6620;&#x5C04;&#x7684; chunk &#x7684;&#x540D;&#x79F0;</span>
+    <span class="hljs-attr">&quot;lazy&quot;</span>: <span class="hljs-string">&quot;lazy.bundle.js&quot;</span>,<span class="hljs-comment">//chunk&#x7684;&#x540D;&#x5B57;&#x53EB;lazy,lazy.bundle.js</span>
+    <span class="hljs-attr">&quot;main&quot;</span>: <span class="hljs-string">&quot;bundle.js&quot;</span><span class="hljs-comment">//chunk&#x7684;&#x540D;&#x5B57;&#x53EB;main,&#x6253;&#x5305;&#x51FA;&#x6765;&#x4E86;bundle.js</span>
+  },
+  <span class="hljs-attr">&quot;assets&quot;</span>: [<span class="hljs-comment">//asset &#x5BF9;&#x8C61; (asset objects) &#x7684;&#x6570;&#x7EC4;</span>
+    {
+      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;bundle.js&quot;</span>,<span class="hljs-comment">//&#x6587;&#x4EF6;&#x540D;</span>
+      <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">9043</span>,<span class="hljs-comment">//&#x5927;&#x5C0F;</span>
+      <span class="hljs-attr">&quot;chunks&quot;</span>: [<span class="hljs-comment">//&#x5305;&#x542B;&#x7684;&#x4EE3;&#x7801;&#x5757;</span>
+        <span class="hljs-string">&quot;main&quot;</span>
+      ],
+      <span class="hljs-attr">&quot;chunkNames&quot;</span>: [<span class="hljs-comment">//&#x5305;&#x542B;&#x7684;&#x4EE3;&#x7801;&#x5757;&#x540D;&#x79F0;</span>
+        <span class="hljs-string">&quot;main&quot;</span>
+      ],
+      <span class="hljs-attr">&quot;emitted&quot;</span>: <span class="hljs-literal">true</span><span class="hljs-comment">//&#x662F;&#x5426;&#x8981;&#x751F;&#x6210;</span>
+    },
+    {
+      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;lazy.bundle.js&quot;</span>, <span class="hljs-comment">// &#x8F93;&#x51FA;&#x7684;&#x6587;&#x4EF6;&#x540D;</span>
+      <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">336</span>,<span class="hljs-comment">// &#x6587;&#x4EF6;&#x7684;&#x5927;&#x5C0F;</span>
+      <span class="hljs-attr">&quot;chunks&quot;</span>: [ <span class="hljs-comment">// &#x8FD9;&#x4E2A; asset &#x5305;&#x542B;&#x7684; chunk &#x7684; id</span>
+        <span class="hljs-string">&quot;lazy&quot;</span>
+      ],
+      <span class="hljs-attr">&quot;chunkNames&quot;</span>: [<span class="hljs-comment">// &#x8FD9;&#x4E2A; asset &#x5305;&#x542B;&#x7684; chunk</span>
+        <span class="hljs-string">&quot;lazy&quot;</span>
+      ],
+      <span class="hljs-attr">&quot;emitted&quot;</span>: <span class="hljs-literal">true</span>  <span class="hljs-comment">// &#x8868;&#x793A;&#x8FD9;&#x4E2A; asset &#x662F;&#x5426;&#x4F1A;&#x8BA9;&#x5B83;&#x8F93;&#x51FA;&#x5230; output &#x76EE;&#x5F55;</span>
+    }
+  ],
+  <span class="hljs-attr">&quot;filteredAssets&quot;</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-attr">&quot;entrypoints&quot;</span>: {
+    <span class="hljs-attr">&quot;main&quot;</span>: {
+      <span class="hljs-attr">&quot;chunks&quot;</span>: [
+        <span class="hljs-string">&quot;main&quot;</span>
+      ],
+      <span class="hljs-attr">&quot;assets&quot;</span>: [
+        <span class="hljs-string">&quot;bundle.js&quot;</span>
+      ],
+      <span class="hljs-attr">&quot;children&quot;</span>: {},
+      <span class="hljs-attr">&quot;childAssets&quot;</span>: {}
+    }
+  },
+  <span class="hljs-attr">&quot;namedChunkGroups&quot;</span>: {
+    <span class="hljs-attr">&quot;main&quot;</span>: {
+      <span class="hljs-attr">&quot;chunks&quot;</span>: [
+        <span class="hljs-string">&quot;main&quot;</span>
+      ],
+      <span class="hljs-attr">&quot;assets&quot;</span>: [
+        <span class="hljs-string">&quot;bundle.js&quot;</span>
+      ],
+      <span class="hljs-attr">&quot;children&quot;</span>: {},
+      <span class="hljs-attr">&quot;childAssets&quot;</span>: {}
+    },
+    <span class="hljs-attr">&quot;lazy&quot;</span>: {
+      <span class="hljs-attr">&quot;chunks&quot;</span>: [
+        <span class="hljs-string">&quot;lazy&quot;</span>
+      ],
+      <span class="hljs-attr">&quot;assets&quot;</span>: [
+        <span class="hljs-string">&quot;lazy.bundle.js&quot;</span>
+      ],
+      <span class="hljs-attr">&quot;children&quot;</span>: {},
+      <span class="hljs-attr">&quot;childAssets&quot;</span>: {}
+    }
+  },
+  <span class="hljs-attr">&quot;chunks&quot;</span>: [ <span class="hljs-comment">//chunk &#x5BF9;&#x8C61; (chunk objects) &#x7684;&#x6570;&#x7EC4;</span>
+    {
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;lazy&quot;</span>, <span class="hljs-comment">// &#x8FD9;&#x4E2A; chunk &#x7684;id</span>
+      <span class="hljs-attr">&quot;rendered&quot;</span>: <span class="hljs-literal">true</span>,<span class="hljs-comment">// &#x8868;&#x793A;&#x8FD9;&#x4E2A; chunk &#x662F;&#x5426;&#x4F1A;&#x53C2;&#x4E0E;&#x8FDB;&#x7F16;&#x8BD1;</span>
+      <span class="hljs-attr">&quot;initial&quot;</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-attr">&quot;entry&quot;</span>: <span class="hljs-literal">false</span>,<span class="hljs-comment">// &#x8868;&#x793A;&#x8FD9;&#x4E2A; chunk &#x662F;&#x5426;&#x5305;&#x542B; webpack &#x7684;&#x8FD0;&#x884C;&#x65F6;</span>
+      <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">24</span>,<span class="hljs-comment">//&#x9884;&#x4F30;&#x7684;&#x6A21;&#x5757;&#x5927;&#x5C0F;</span>
+      <span class="hljs-attr">&quot;names&quot;</span>: [<span class="hljs-comment">// &#x5305;&#x542B;&#x5728;&#x8FD9;&#x4E2A; chunk &#x5185;&#x7684; chunk &#x7684;&#x540D;&#x5B57;&#x7684;&#x6570;&#x7EC4;</span>
+        <span class="hljs-string">&quot;lazy&quot;</span>
+      ],
+      <span class="hljs-attr">&quot;files&quot;</span>: [
+        <span class="hljs-string">&quot;lazy.bundle.js&quot;</span>
+      ],
+      <span class="hljs-attr">&quot;hash&quot;</span>: <span class="hljs-string">&quot;d08a8b502d30324f81e1&quot;</span>,
+      <span class="hljs-attr">&quot;siblings&quot;</span>: [],
+      <span class="hljs-attr">&quot;parents&quot;</span>: [<span class="hljs-comment">// &#x7236; chunk &#x7684; ids</span>
+        <span class="hljs-string">&quot;main&quot;</span>
+      ],
+      <span class="hljs-attr">&quot;children&quot;</span>: [],
+      <span class="hljs-attr">&quot;childrenByOrder&quot;</span>: {},
+      <span class="hljs-attr">&quot;modules&quot;</span>: [
+        {
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;./src/lazy.js&quot;</span>,
+          <span class="hljs-attr">&quot;identifier&quot;</span>: <span class="hljs-string">&quot;C:\\vipdata\\vipproject\\webpack-source\\src\\lazy.js&quot;</span>,
+          <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;./src/lazy.js&quot;</span>,
+          <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-number">2</span>,
+          <span class="hljs-attr">&quot;index2&quot;</span>: <span class="hljs-number">2</span>,
+          <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">24</span>,
+          <span class="hljs-attr">&quot;cacheable&quot;</span>: <span class="hljs-literal">true</span>,
+          <span class="hljs-attr">&quot;built&quot;</span>: <span class="hljs-literal">true</span>,
+          <span class="hljs-attr">&quot;optional&quot;</span>: <span class="hljs-literal">false</span>,
+          <span class="hljs-attr">&quot;prefetched&quot;</span>: <span class="hljs-literal">false</span>,
+          <span class="hljs-attr">&quot;chunks&quot;</span>: [
+            <span class="hljs-string">&quot;lazy&quot;</span>
+          ],
+          <span class="hljs-attr">&quot;issuer&quot;</span>: <span class="hljs-string">&quot;C:\\vipdata\\vipproject\\webpack-source\\src\\index.js&quot;</span>,
+          <span class="hljs-attr">&quot;issuerId&quot;</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,
+          <span class="hljs-attr">&quot;issuerName&quot;</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,
+          <span class="hljs-attr">&quot;issuerPath&quot;</span>: [
+            {
+              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,
+              <span class="hljs-attr">&quot;identifier&quot;</span>: <span class="hljs-string">&quot;C:\\vipdata\\vipproject\\webpack-source\\src\\index.js&quot;</span>,
+              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,
+              <span class="hljs-attr">&quot;profile&quot;</span>: {
+                <span class="hljs-attr">&quot;factory&quot;</span>: <span class="hljs-number">18</span>,
+                <span class="hljs-attr">&quot;building&quot;</span>: <span class="hljs-number">14</span>
+              }
+            }
+          ],
+          <span class="hljs-attr">&quot;profile&quot;</span>: {
+            <span class="hljs-attr">&quot;factory&quot;</span>: <span class="hljs-number">4</span>,
+            <span class="hljs-attr">&quot;building&quot;</span>: <span class="hljs-number">2</span>
+          },
+          <span class="hljs-attr">&quot;failed&quot;</span>: <span class="hljs-literal">false</span>,
+          <span class="hljs-attr">&quot;errors&quot;</span>: <span class="hljs-number">0</span>,
+          <span class="hljs-attr">&quot;warnings&quot;</span>: <span class="hljs-number">0</span>,
+          <span class="hljs-attr">&quot;assets&quot;</span>: [],
+          <span class="hljs-attr">&quot;reasons&quot;</span>: [<span class="hljs-comment">// &#x751F;&#x6210; assets &#x7684;&#x539F;&#x56E0;</span>
+            {
+              <span class="hljs-attr">&quot;moduleId&quot;</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,<span class="hljs-comment">//&#x6A21;&#x5757;&#x7684;ID</span>
+              <span class="hljs-attr">&quot;moduleIdentifier&quot;</span>: <span class="hljs-string">&quot;C:\\vipdata\\vipproject\\webpack-source\\src\\index.js&quot;</span>,<span class="hljs-comment">//&#x552F;&#x4E00;&#x6807;&#x8BC6;</span>
+              <span class="hljs-attr">&quot;module&quot;</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,<span class="hljs-comment">//&#x6A21;&#x5757;</span>
+              <span class="hljs-attr">&quot;moduleName&quot;</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,<span class="hljs-comment">//&#x6A21;&#x5757;&#x540D;&#x79F0;</span>
+              <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;import()&quot;</span>,<span class="hljs-comment">//&#x7C7B;&#x578B;</span>
+              <span class="hljs-attr">&quot;userRequest&quot;</span>: <span class="hljs-string">&quot;./lazy&quot;</span>,<span class="hljs-comment">//&#x7528;&#x6237;&#x8BF7;&#x6C42;&#x65B9;&#x5F0F;</span>
+              <span class="hljs-attr">&quot;loc&quot;</span>: <span class="hljs-string">&quot;2:0-46&quot;</span><span class="hljs-comment">//&#x5728;&#x7236;&#x6A21;&#x5757;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;</span>
+            }
+          ],
+          <span class="hljs-attr">&quot;providedExports&quot;</span>: <span class="hljs-literal">null</span>,
+          <span class="hljs-attr">&quot;optimizationBailout&quot;</span>: [],
+          <span class="hljs-attr">&quot;depth&quot;</span>: <span class="hljs-number">1</span>,
+          <span class="hljs-attr">&quot;source&quot;</span>: <span class="hljs-string">&quot;module.exports = &apos;lazy&apos;;&quot;</span>
+        }
+      ],
+      <span class="hljs-attr">&quot;filteredModules&quot;</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-attr">&quot;origins&quot;</span>: [
+        {
+          <span class="hljs-attr">&quot;moduleId&quot;</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,<span class="hljs-comment">// &#x6A21;&#x5757;&#x7684;ID</span>
+          <span class="hljs-attr">&quot;module&quot;</span>: <span class="hljs-string">&quot;C:\\vipdata\\vipproject\\webpack-source\\src\\index.js&quot;</span>,<span class="hljs-comment">// &#x6A21;&#x5757;&#x7684;&#x4F4D;&#x7F6E;</span>
+          <span class="hljs-attr">&quot;moduleIdentifier&quot;</span>: <span class="hljs-string">&quot;C:\\vipdata\\vipproject\\webpack-source\\src\\index.js&quot;</span>,<span class="hljs-comment">// &#x6A21;&#x5757;&#x7684;&#x5730;&#x5740;</span>
+          <span class="hljs-attr">&quot;moduleName&quot;</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,<span class="hljs-comment">//&#x6A21;&#x5757;&#x7684;&#x76F8;&#x5BF9;&#x5730;&#x5740;</span>
+          <span class="hljs-attr">&quot;loc&quot;</span>: <span class="hljs-string">&quot;2:0-46&quot;</span>,
+          <span class="hljs-attr">&quot;request&quot;</span>: <span class="hljs-string">&quot;./lazy&quot;</span>,
+          <span class="hljs-attr">&quot;reasons&quot;</span>: [] <span class="hljs-comment">// &#x5177;&#x4F53;&#x662F;&#x54EA;&#x884C;&#x751F;&#x6210;&#x4E86;&#x8FD9;&#x4E2A;chunk</span>
+        }
+      ]
+    },
+    {
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;main&quot;</span>,
+      <span class="hljs-attr">&quot;rendered&quot;</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">&quot;initial&quot;</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">&quot;entry&quot;</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">162</span>,
+      <span class="hljs-attr">&quot;names&quot;</span>: [
+        <span class="hljs-string">&quot;main&quot;</span>
+      ],
+      <span class="hljs-attr">&quot;files&quot;</span>: [
+        <span class="hljs-string">&quot;bundle.js&quot;</span>
+      ],
+      <span class="hljs-attr">&quot;hash&quot;</span>: <span class="hljs-string">&quot;263cadc0459e8470151b&quot;</span>,
+      <span class="hljs-attr">&quot;siblings&quot;</span>: [],
+      <span class="hljs-attr">&quot;parents&quot;</span>: [],
+      <span class="hljs-attr">&quot;children&quot;</span>: [<span class="hljs-comment">// &#x81EA;&#x5DF1;&#x5F15;&#x7528;&#x54EA;&#x4E9B;chunk</span>
+        <span class="hljs-string">&quot;lazy&quot;</span>
+      ],
+      <span class="hljs-attr">&quot;childrenByOrder&quot;</span>: {}, <span class="hljs-comment">// &#x5F15;&#x7528;&#x7684;&#x987A;&#x5E8F;</span>
+      <span class="hljs-attr">&quot;modules&quot;</span>: [
+        {
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;./src/hello.js&quot;</span>,
+          <span class="hljs-attr">&quot;identifier&quot;</span>: <span class="hljs-string">&quot;C:\\vipdata\\vipproject\\webpack-source\\src\\hello.js&quot;</span>,
+          <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;./src/hello.js&quot;</span>,
+          <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-number">1</span>,
+          <span class="hljs-attr">&quot;index2&quot;</span>: <span class="hljs-number">0</span>,
+          <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">25</span>,
+          <span class="hljs-attr">&quot;cacheable&quot;</span>: <span class="hljs-literal">true</span>,
+          <span class="hljs-attr">&quot;built&quot;</span>: <span class="hljs-literal">true</span>,
+          <span class="hljs-attr">&quot;optional&quot;</span>: <span class="hljs-literal">false</span>,
+          <span class="hljs-attr">&quot;prefetched&quot;</span>: <span class="hljs-literal">false</span>,
+          <span class="hljs-attr">&quot;chunks&quot;</span>: [
+            <span class="hljs-string">&quot;main&quot;</span>
+          ],
+          <span class="hljs-attr">&quot;issuer&quot;</span>: <span class="hljs-string">&quot;C:\\vipdata\\vipproject\\webpack-source\\src\\index.js&quot;</span>,
+          <span class="hljs-attr">&quot;issuerId&quot;</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,
+          <span class="hljs-attr">&quot;issuerName&quot;</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,
+          <span class="hljs-attr">&quot;issuerPath&quot;</span>: [
+            {
+              <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,
+              <span class="hljs-attr">&quot;identifier&quot;</span>: <span class="hljs-string">&quot;C:\\vipdata\\vipproject\\webpack-source\\src\\index.js&quot;</span>,
+              <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,
+              <span class="hljs-attr">&quot;profile&quot;</span>: {
+                <span class="hljs-attr">&quot;factory&quot;</span>: <span class="hljs-number">18</span>,
+                <span class="hljs-attr">&quot;building&quot;</span>: <span class="hljs-number">14</span>
+              }
+            }
+          ],
+          <span class="hljs-attr">&quot;profile&quot;</span>: {
+            <span class="hljs-attr">&quot;factory&quot;</span>: <span class="hljs-number">4</span>,
+            <span class="hljs-attr">&quot;building&quot;</span>: <span class="hljs-number">2</span>
+          },
+          <span class="hljs-attr">&quot;failed&quot;</span>: <span class="hljs-literal">false</span>,
+          <span class="hljs-attr">&quot;errors&quot;</span>: <span class="hljs-number">0</span>,
+          <span class="hljs-attr">&quot;warnings&quot;</span>: <span class="hljs-number">0</span>,
+          <span class="hljs-attr">&quot;assets&quot;</span>: [],
+          <span class="hljs-attr">&quot;reasons&quot;</span>: [
+            {
+              <span class="hljs-attr">&quot;moduleId&quot;</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,
+              <span class="hljs-attr">&quot;moduleIdentifier&quot;</span>: <span class="hljs-string">&quot;C:\\vipdata\\vipproject\\webpack-source\\src\\index.js&quot;</span>,
+              <span class="hljs-attr">&quot;module&quot;</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,
+              <span class="hljs-attr">&quot;moduleName&quot;</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,
+              <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;cjs require&quot;</span>,
+              <span class="hljs-attr">&quot;userRequest&quot;</span>: <span class="hljs-string">&quot;./hello&quot;</span>,
+              <span class="hljs-attr">&quot;loc&quot;</span>: <span class="hljs-string">&quot;1:12-30&quot;</span>
+            }
+          ],
+          <span class="hljs-attr">&quot;providedExports&quot;</span>: <span class="hljs-literal">null</span>,
+          <span class="hljs-attr">&quot;optimizationBailout&quot;</span>: [],
+          <span class="hljs-attr">&quot;depth&quot;</span>: <span class="hljs-number">1</span>,
+          <span class="hljs-attr">&quot;source&quot;</span>: <span class="hljs-string">&quot;module.exports = &apos;hello&apos;;&quot;</span>
+        },
+        {
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,
+          <span class="hljs-attr">&quot;identifier&quot;</span>: <span class="hljs-string">&quot;C:\\vipdata\\vipproject\\webpack-source\\src\\index.js&quot;</span>,
+          <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,
+          <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-number">0</span>,
+          <span class="hljs-attr">&quot;index2&quot;</span>: <span class="hljs-number">1</span>,
+          <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">137</span>,
+          <span class="hljs-attr">&quot;cacheable&quot;</span>: <span class="hljs-literal">true</span>,
+          <span class="hljs-attr">&quot;built&quot;</span>: <span class="hljs-literal">true</span>,
+          <span class="hljs-attr">&quot;optional&quot;</span>: <span class="hljs-literal">false</span>,
+          <span class="hljs-attr">&quot;prefetched&quot;</span>: <span class="hljs-literal">false</span>,
+          <span class="hljs-attr">&quot;chunks&quot;</span>: [
+            <span class="hljs-string">&quot;main&quot;</span>
+          ],
+          <span class="hljs-attr">&quot;issuer&quot;</span>: <span class="hljs-literal">null</span>,
+          <span class="hljs-attr">&quot;issuerId&quot;</span>: <span class="hljs-literal">null</span>,
+          <span class="hljs-attr">&quot;issuerName&quot;</span>: <span class="hljs-literal">null</span>,
+          <span class="hljs-attr">&quot;issuerPath&quot;</span>: <span class="hljs-literal">null</span>,
+          <span class="hljs-attr">&quot;profile&quot;</span>: {
+            <span class="hljs-attr">&quot;factory&quot;</span>: <span class="hljs-number">18</span>,
+            <span class="hljs-attr">&quot;building&quot;</span>: <span class="hljs-number">14</span>
+          },
+          <span class="hljs-attr">&quot;failed&quot;</span>: <span class="hljs-literal">false</span>,
+          <span class="hljs-attr">&quot;errors&quot;</span>: <span class="hljs-number">0</span>,
+          <span class="hljs-attr">&quot;warnings&quot;</span>: <span class="hljs-number">0</span>,
+          <span class="hljs-attr">&quot;assets&quot;</span>: [],
+          <span class="hljs-attr">&quot;reasons&quot;</span>: [
+            {
+              <span class="hljs-attr">&quot;moduleId&quot;</span>: <span class="hljs-literal">null</span>,
+              <span class="hljs-attr">&quot;moduleIdentifier&quot;</span>: <span class="hljs-literal">null</span>,
+              <span class="hljs-attr">&quot;module&quot;</span>: <span class="hljs-literal">null</span>,
+              <span class="hljs-attr">&quot;moduleName&quot;</span>: <span class="hljs-literal">null</span>,
+              <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;single entry&quot;</span>,
+              <span class="hljs-attr">&quot;userRequest&quot;</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,
+              <span class="hljs-attr">&quot;loc&quot;</span>: <span class="hljs-string">&quot;main&quot;</span>
+            }
+          ],
+          <span class="hljs-attr">&quot;providedExports&quot;</span>: <span class="hljs-literal">null</span>,
+          <span class="hljs-attr">&quot;optimizationBailout&quot;</span>: [],
+          <span class="hljs-attr">&quot;depth&quot;</span>: <span class="hljs-number">0</span>,
+          <span class="hljs-attr">&quot;source&quot;</span>: <span class="hljs-string">&quot;let hello = require(&apos;./hello&apos;);\r\nimport(/* webpackChunkName: \&quot;lazy\&quot; */&apos;./lazy&apos;).then(result=&gt;{\r\n    console.log(hello,resut.default)\r\n});&quot;</span>
+        }
+      ],
+      <span class="hljs-attr">&quot;filteredModules&quot;</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-attr">&quot;origins&quot;</span>: [
+        {
+          <span class="hljs-attr">&quot;module&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+          <span class="hljs-attr">&quot;moduleIdentifier&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+          <span class="hljs-attr">&quot;moduleName&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+          <span class="hljs-attr">&quot;loc&quot;</span>: <span class="hljs-string">&quot;main&quot;</span>,
+          <span class="hljs-attr">&quot;request&quot;</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,
+          <span class="hljs-attr">&quot;reasons&quot;</span>: []
+        }
+      ]
+    }
+  ],
+  <span class="hljs-attr">&quot;modules&quot;</span>: [<span class="hljs-comment">// &#x6A21;&#x5757;&#x5BF9;&#x8C61; (module objects) &#x7684;&#x6570;&#x7EC4;</span>
+    {
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;./src/hello.js&quot;</span>,<span class="hljs-comment">//&#x6A21;&#x5757;ID</span>
+      <span class="hljs-attr">&quot;identifier&quot;</span>: <span class="hljs-string">&quot;C:\\vipdata\\vipproject\\webpack-source\\src\\hello.js&quot;</span>,<span class="hljs-comment">//webpack&#x5185;&#x90E8;&#x4F7F;&#x7528;&#x7684;&#x552F;&#x4E00;&#x7684;&#x6807;&#x8BC6;</span>
+      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;./src/hello.js&quot;</span>,<span class="hljs-comment">// &#x5B9E;&#x9645;&#x6587;&#x4EF6;&#x7684;&#x5730;&#x5740;</span>
+      <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-number">1</span>,<span class="hljs-comment">//&#x7D22;&#x5F15;</span>
+      <span class="hljs-attr">&quot;index2&quot;</span>: <span class="hljs-number">0</span>,<span class="hljs-comment">//&#x7D22;&#x5F15;</span>
+      <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">25</span>,<span class="hljs-comment">// &#x9884;&#x4F30;&#x6A21;&#x5757;&#x7684;&#x5927;&#x5C0F; (byte)</span>
+      <span class="hljs-attr">&quot;cacheable&quot;</span>: <span class="hljs-literal">true</span>,<span class="hljs-comment">// &#x8868;&#x793A;&#x8FD9;&#x4E2A;&#x6A21;&#x5757;&#x662F;&#x5426;&#x4F1A;&#x88AB;&#x7F13;&#x5B58;</span>
+      <span class="hljs-attr">&quot;built&quot;</span>: <span class="hljs-literal">true</span>,<span class="hljs-comment">// &#x8868;&#x793A;&#x8FD9;&#x4E2A;&#x6A21;&#x5757;&#x4F1A;&#x53C2;&#x4E0E; Loaders , &#x89E3;&#x6790;, &#x5E76;&#x88AB;&#x7F16;&#x8BD1;</span>
+      <span class="hljs-attr">&quot;optional&quot;</span>: <span class="hljs-literal">false</span>,<span class="hljs-comment">// &#x6BCF;&#x4E00;&#x4E2A;&#x5BF9;&#x8FD9;&#x4E2A;&#x6A21;&#x5757;&#x7684;&#x8BF7;&#x6C42;&#x90FD;&#x4F1A;&#x5305;&#x88F9;&#x5728; `try... catch` &#x5185;</span>
+      <span class="hljs-attr">&quot;prefetched&quot;</span>: <span class="hljs-literal">false</span>,<span class="hljs-comment">// &#x8868;&#x793A;&#x8FD9;&#x4E2A;&#x6A21;&#x5757;&#x662F;&#x5426;&#x4F1A;&#x88AB; prefetched</span>
+      <span class="hljs-attr">&quot;chunks&quot;</span>: [<span class="hljs-comment">//&#x6B64;&#x6A21;&#x5757;&#x5728;&#x54EA;&#x4E2A;&#x4EE3;&#x7801;&#x5757;&#x5185;</span>
+        <span class="hljs-string">&quot;main&quot;</span>
+      ],
+      <span class="hljs-attr">&quot;issuer&quot;</span>: <span class="hljs-string">&quot;C:\\vipdata\\vipproject\\webpack-source\\src\\index.js&quot;</span>,<span class="hljs-comment">//&#x4F7F;&#x7528;&#x8005;&#x552F;&#x4E00;&#x6807;&#x8BC6;</span>
+      <span class="hljs-attr">&quot;issuerId&quot;</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,<span class="hljs-comment">//&#x4F7F;&#x7528;&#x8005;ID</span>
+      <span class="hljs-attr">&quot;issuerName&quot;</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,<span class="hljs-comment">//&#x4F7F;&#x7528;&#x8005;&#x540D;&#x79F0;</span>
+      <span class="hljs-attr">&quot;issuerPath&quot;</span>: [<span class="hljs-comment">//&#x4F7F;&#x7528;&#x8005;&#x8DEF;&#x5F84;</span>
+        {
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,
+          <span class="hljs-attr">&quot;identifier&quot;</span>: <span class="hljs-string">&quot;C:\\vipdata\\vipproject\\webpack-source\\src\\index.js&quot;</span>,
+          <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,
+          <span class="hljs-attr">&quot;profile&quot;</span>: { <span class="hljs-comment">//&#x8FD9;&#x4E2A;&#x6A21;&#x5757;&#x7279;&#x6709;&#x7684;&#x7F16;&#x8BD1;&#x65F6;&#x95F4;&#x6570;&#x636E;(ms)</span>
+            <span class="hljs-attr">&quot;factory&quot;</span>: <span class="hljs-number">18</span>,<span class="hljs-comment">// &#x89E3;&#x51B3;&#x4F9D;&#x8D56;&#x7684;&#x65F6;&#x95F4;</span>
+            <span class="hljs-attr">&quot;building&quot;</span>: <span class="hljs-number">14</span> <span class="hljs-comment">// &#x8F7D;&#x5165;&#x548C;&#x89E3;&#x6790;&#x7684;&#x65F6;&#x95F4;</span>
+          }
+        }
+      ],
+      <span class="hljs-attr">&quot;profile&quot;</span>: {
+        <span class="hljs-attr">&quot;factory&quot;</span>: <span class="hljs-number">4</span>,<span class="hljs-comment">// &#x89E3;&#x51B3;&#x4F9D;&#x8D56;&#x7684;&#x65F6;&#x95F4;</span>
+        <span class="hljs-attr">&quot;building&quot;</span>: <span class="hljs-number">2</span><span class="hljs-comment">// &#x8F7D;&#x5165;&#x548C;&#x89E3;&#x6790;&#x7684;&#x65F6;&#x95F4;</span>
+      },
+      <span class="hljs-attr">&quot;failed&quot;</span>: <span class="hljs-literal">false</span>,<span class="hljs-comment">//&#x662F;&#x5426;&#x5931;&#x8D25;</span>
+      <span class="hljs-attr">&quot;errors&quot;</span>: <span class="hljs-number">0</span>,<span class="hljs-comment">// &#x5904;&#x7406;&#x6A21;&#x5757;&#x65F6;&#x9519;&#x8BEF;&#x7684;&#x6570;&#x91CF;</span>
+      <span class="hljs-attr">&quot;warnings&quot;</span>: <span class="hljs-number">0</span>,<span class="hljs-comment">// &#x5904;&#x7406;&#x6A21;&#x5757;&#x65F6;&#x8B66;&#x544A;&#x7684;&#x6570;&#x91CF;</span>
+      <span class="hljs-attr">&quot;assets&quot;</span>: [],<span class="hljs-comment">//&#x5728;&#x54EA;&#x4E2A;&#x8D44;&#x6E90;&#x5185;</span>
+      <span class="hljs-attr">&quot;reasons&quot;</span>: [
+        {
+          <span class="hljs-attr">&quot;moduleId&quot;</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,<span class="hljs-comment">// &#x6A21;&#x5757;&#x7684; ID</span>
+          <span class="hljs-attr">&quot;moduleIdentifier&quot;</span>: <span class="hljs-string">&quot;C:\\vipdata\\vipproject\\webpack-source\\src\\index.js&quot;</span>,<span class="hljs-comment">// &#x6A21;&#x5757;&#x7684;&#x5730;&#x5740;</span>
+          <span class="hljs-attr">&quot;module&quot;</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,<span class="hljs-comment">// &#x6240;&#x57FA;&#x4E8E;&#x6A21;&#x5757;&#x7684;&#x76F8;&#x5BF9;&#x5730;&#x5740; context</span>
+          <span class="hljs-attr">&quot;moduleName&quot;</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,
+          <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;cjs require&quot;</span>,<span class="hljs-comment">// &#x4F7F;&#x7528;&#x7684;&#x8BF7;&#x6C42;&#x7684;&#x79CD;&#x7C7B; (require&#x6216;import)</span>
+          <span class="hljs-attr">&quot;userRequest&quot;</span>: <span class="hljs-string">&quot;./hello&quot;</span>,<span class="hljs-comment">// &#x7528;&#x6765; `import` &#x6216;&#x8005; `require` &#x7684;&#x6E90;&#x5B57;&#x7B26;&#x4E32;</span>
+          <span class="hljs-attr">&quot;loc&quot;</span>: <span class="hljs-string">&quot;1:12-30&quot;</span> <span class="hljs-comment">// &#x5BFC;&#x81F4;&#x8FD9;&#x4E2A;&#x88AB;&#x52A0;&#x5165;&#x4F9D;&#x8D56;&#x56FE;&#x6807;&#x7684;&#x4EE3;&#x7801;&#x884C;&#x6570;</span>
+        }
+      ],
+      <span class="hljs-attr">&quot;providedExports&quot;</span>: <span class="hljs-literal">null</span>,<span class="hljs-comment">//&#x63D0;&#x4F9B;&#x7684;&#x5BFC;&#x51FA;&#x5BF9;&#x8C61;</span>
+      <span class="hljs-attr">&quot;optimizationBailout&quot;</span>: [],<span class="hljs-comment">//&#x5931;&#x8D25;&#x65F6;&#x7684;&#x4F18;&#x5316;</span>
+      <span class="hljs-attr">&quot;depth&quot;</span>: <span class="hljs-number">1</span>,<span class="hljs-comment">//&#x6A21;&#x5757;&#x6DF1;&#x5EA6;</span>
+      <span class="hljs-attr">&quot;source&quot;</span>: <span class="hljs-string">&quot;module.exports = &apos;hello&apos;;&quot;</span><span class="hljs-comment">// &#x5B57;&#x7B26;&#x4E32;&#x5316;&#x7684;&#x8F93;&#x5165;</span>
+    },
+    {
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,
+      <span class="hljs-attr">&quot;identifier&quot;</span>: <span class="hljs-string">&quot;C:\\vipdata\\vipproject\\webpack-source\\src\\index.js&quot;</span>,
+      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,
+      <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-attr">&quot;index2&quot;</span>: <span class="hljs-number">1</span>,
+      <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">137</span>,
+      <span class="hljs-attr">&quot;cacheable&quot;</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">&quot;built&quot;</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">&quot;optional&quot;</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-attr">&quot;prefetched&quot;</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-attr">&quot;chunks&quot;</span>: [
+        <span class="hljs-string">&quot;main&quot;</span>
+      ],
+      <span class="hljs-attr">&quot;issuer&quot;</span>: <span class="hljs-literal">null</span>,
+      <span class="hljs-attr">&quot;issuerId&quot;</span>: <span class="hljs-literal">null</span>,
+      <span class="hljs-attr">&quot;issuerName&quot;</span>: <span class="hljs-literal">null</span>,
+      <span class="hljs-attr">&quot;issuerPath&quot;</span>: <span class="hljs-literal">null</span>,
+      <span class="hljs-attr">&quot;profile&quot;</span>: {
+        <span class="hljs-attr">&quot;factory&quot;</span>: <span class="hljs-number">18</span>,
+        <span class="hljs-attr">&quot;building&quot;</span>: <span class="hljs-number">14</span>
+      },
+      <span class="hljs-attr">&quot;failed&quot;</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-attr">&quot;errors&quot;</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-attr">&quot;warnings&quot;</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-attr">&quot;assets&quot;</span>: [],
+      <span class="hljs-attr">&quot;reasons&quot;</span>: [
+        {
+          <span class="hljs-attr">&quot;moduleId&quot;</span>: <span class="hljs-literal">null</span>,
+          <span class="hljs-attr">&quot;moduleIdentifier&quot;</span>: <span class="hljs-literal">null</span>,
+          <span class="hljs-attr">&quot;module&quot;</span>: <span class="hljs-literal">null</span>,
+          <span class="hljs-attr">&quot;moduleName&quot;</span>: <span class="hljs-literal">null</span>,
+          <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;single entry&quot;</span>,
+          <span class="hljs-attr">&quot;userRequest&quot;</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,
+          <span class="hljs-attr">&quot;loc&quot;</span>: <span class="hljs-string">&quot;main&quot;</span>
+        }
+      ],
+      <span class="hljs-attr">&quot;providedExports&quot;</span>: <span class="hljs-literal">null</span>,
+      <span class="hljs-attr">&quot;optimizationBailout&quot;</span>: [],
+      <span class="hljs-attr">&quot;depth&quot;</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-attr">&quot;source&quot;</span>: <span class="hljs-string">&quot;let hello = require(&apos;./hello&apos;);\r\nimport(/* webpackChunkName: \&quot;lazy\&quot; */&apos;./lazy&apos;).then(result=&gt;{\r\n    console.log(hello,resut.default)\r\n});&quot;</span>
+    },
+    {
+      <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;./src/lazy.js&quot;</span>,
+      <span class="hljs-attr">&quot;identifier&quot;</span>: <span class="hljs-string">&quot;C:\\vipdata\\vipproject\\webpack-source\\src\\lazy.js&quot;</span>,
+      <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;./src/lazy.js&quot;</span>,
+      <span class="hljs-attr">&quot;index&quot;</span>: <span class="hljs-number">2</span>,
+      <span class="hljs-attr">&quot;index2&quot;</span>: <span class="hljs-number">2</span>,
+      <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">24</span>,
+      <span class="hljs-attr">&quot;cacheable&quot;</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">&quot;built&quot;</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">&quot;optional&quot;</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-attr">&quot;prefetched&quot;</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-attr">&quot;chunks&quot;</span>: [
+        <span class="hljs-string">&quot;lazy&quot;</span>
+      ],
+      <span class="hljs-attr">&quot;issuer&quot;</span>: <span class="hljs-string">&quot;C:\\vipdata\\vipproject\\webpack-source\\src\\index.js&quot;</span>,
+      <span class="hljs-attr">&quot;issuerId&quot;</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,
+      <span class="hljs-attr">&quot;issuerName&quot;</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,
+      <span class="hljs-attr">&quot;issuerPath&quot;</span>: [
+        {
+          <span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,
+          <span class="hljs-attr">&quot;identifier&quot;</span>: <span class="hljs-string">&quot;C:\\vipdata\\vipproject\\webpack-source\\src\\index.js&quot;</span>,
+          <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,
+          <span class="hljs-attr">&quot;profile&quot;</span>: {
+            <span class="hljs-attr">&quot;factory&quot;</span>: <span class="hljs-number">18</span>,
+            <span class="hljs-attr">&quot;building&quot;</span>: <span class="hljs-number">14</span>
+          }
+        }
+      ],
+      <span class="hljs-attr">&quot;profile&quot;</span>: {
+        <span class="hljs-attr">&quot;factory&quot;</span>: <span class="hljs-number">4</span>,
+        <span class="hljs-attr">&quot;building&quot;</span>: <span class="hljs-number">2</span>
+      },
+      <span class="hljs-attr">&quot;failed&quot;</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-attr">&quot;errors&quot;</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-attr">&quot;warnings&quot;</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-attr">&quot;assets&quot;</span>: [],
+      <span class="hljs-attr">&quot;reasons&quot;</span>: [
+        {
+          <span class="hljs-attr">&quot;moduleId&quot;</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,
+          <span class="hljs-attr">&quot;moduleIdentifier&quot;</span>: <span class="hljs-string">&quot;C:\\vipdata\\vipproject\\webpack-source\\src\\index.js&quot;</span>,
+          <span class="hljs-attr">&quot;module&quot;</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,
+          <span class="hljs-attr">&quot;moduleName&quot;</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,
+          <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;import()&quot;</span>,
+          <span class="hljs-attr">&quot;userRequest&quot;</span>: <span class="hljs-string">&quot;./lazy&quot;</span>,
+          <span class="hljs-attr">&quot;loc&quot;</span>: <span class="hljs-string">&quot;2:0-46&quot;</span>
+        }
+      ],
+      <span class="hljs-attr">&quot;providedExports&quot;</span>: <span class="hljs-literal">null</span>,
+      <span class="hljs-attr">&quot;optimizationBailout&quot;</span>: [],
+      <span class="hljs-attr">&quot;depth&quot;</span>: <span class="hljs-number">1</span>,
+      <span class="hljs-attr">&quot;source&quot;</span>: <span class="hljs-string">&quot;module.exports = &apos;lazy&apos;;&quot;</span>
+    }
+  ],
+  <span class="hljs-attr">&quot;filteredModules&quot;</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-attr">&quot;logging&quot;</span>: {
+    <span class="hljs-attr">&quot;webpack.buildChunkGraph.visitModules&quot;</span>: {
+      <span class="hljs-attr">&quot;entries&quot;</span>: [],
+      <span class="hljs-attr">&quot;filteredEntries&quot;</span>: <span class="hljs-number">5</span>,
+      <span class="hljs-attr">&quot;debug&quot;</span>: <span class="hljs-literal">false</span>
+    }
+  },
+  <span class="hljs-attr">&quot;children&quot;</span>: []
+}
+
+</code></pre>
+<h2 id="t166. &#x4E3B;&#x8981;&#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;">6. &#x4E3B;&#x8981;&#x5DE5;&#x4F5C;&#x6D41;&#x7A0B; <a href="#t166. &#x4E3B;&#x8981;&#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;"> # </a></h2>
+<ul>
+<li>Webpack &#x7684;&#x8FD0;&#x884C;&#x6D41;&#x7A0B;&#x662F;&#x4E00;&#x4E2A;&#x4E32;&#x884C;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x4ECE;&#x542F;&#x52A8;&#x5230;&#x7ED3;&#x675F;&#x4F1A;&#x4F9D;&#x6B21;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x6D41;&#x7A0B;&#xFF1A;</li>
+<li><code>&#x521D;&#x59CB;&#x5316;&#x53C2;&#x6570;</code>&#xFF1A;&#x4ECE;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x548C; Shell &#x8BED;&#x53E5;&#x4E2D;&#x8BFB;&#x53D6;&#x4E0E;&#x5408;&#x5E76;&#x53C2;&#x6570;&#xFF0C;&#x5F97;&#x51FA;&#x6700;&#x7EC8;&#x7684;&#x53C2;&#x6570;&#xFF1B;</li>
+<li>&#x5F00;&#x59CB;&#x7F16;&#x8BD1;&#xFF1A;&#x7528;&#x4E0A;&#x4E00;&#x6B65;&#x5F97;&#x5230;&#x7684;&#x53C2;&#x6570;&#x521D;&#x59CB;&#x5316; Compiler &#x5BF9;&#x8C61;&#xFF0C;&#x52A0;&#x8F7D;&#x6240;&#x6709;&#x914D;&#x7F6E;&#x7684;&#x63D2;&#x4EF6;&#xFF0C;&#x6267;&#x884C;&#x5BF9;&#x8C61;&#x7684;run&#x65B9;&#x6CD5;&#x5F00;&#x59CB;&#x6267;&#x884C;&#x7F16;&#x8BD1;&#xFF1B;
+&#x786E;&#x5B9A;&#x5165;&#x53E3;&#xFF1A;&#x6839;&#x636E;&#x914D;&#x7F6E;&#x4E2D;&#x7684; entry &#x627E;&#x51FA;&#x6240;&#x6709;&#x7684;&#x5165;&#x53E3;&#x6587;&#x4EF6;</li>
+<li>&#x7F16;&#x8BD1;&#x6A21;&#x5757;&#xFF1A;&#x4ECE;&#x5165;&#x53E3;&#x6587;&#x4EF6;&#x51FA;&#x53D1;&#xFF0C;&#x8C03;&#x7528;&#x6240;&#x6709;&#x914D;&#x7F6E;&#x7684; Loader &#x5BF9;&#x6A21;&#x5757;&#x8FDB;&#x884C;&#x7F16;&#x8BD1;&#xFF0C;&#x518D;&#x627E;&#x51FA;&#x8BE5;&#x6A21;&#x5757;&#x4F9D;&#x8D56;&#x7684;&#x6A21;&#x5757;&#xFF0C;&#x518D;&#x9012;&#x5F52;&#x672C;&#x6B65;&#x9AA4;&#x76F4;&#x5230;&#x6240;&#x6709;&#x5165;&#x53E3;&#x4F9D;&#x8D56;&#x7684;&#x6587;&#x4EF6;&#x90FD;&#x7ECF;&#x8FC7;&#x4E86;&#x672C;&#x6B65;&#x9AA4;&#x7684;&#x5904;&#x7406;&#xFF1B;</li>
+<li>&#x5B8C;&#x6210;&#x6A21;&#x5757;&#x7F16;&#x8BD1;&#xFF1A;&#x5728;&#x7ECF;&#x8FC7;&#x7B2C;4&#x6B65;&#x4F7F;&#x7528; Loader &#x7FFB;&#x8BD1;&#x5B8C;&#x6240;&#x6709;&#x6A21;&#x5757;&#x540E;&#xFF0C;&#x5F97;&#x5230;&#x4E86;&#x6BCF;&#x4E2A;&#x6A21;&#x5757;&#x88AB;&#x7FFB;&#x8BD1;&#x540E;&#x7684;&#x6700;&#x7EC8;&#x5185;&#x5BB9;&#x4EE5;&#x53CA;&#x5B83;&#x4EEC;&#x4E4B;&#x95F4;&#x7684;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#xFF1B;</li>
+<li>&#x8F93;&#x51FA;&#x8D44;&#x6E90;&#xFF1A;&#x6839;&#x636E;&#x5165;&#x53E3;&#x548C;&#x6A21;&#x5757;&#x4E4B;&#x95F4;&#x7684;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#xFF0C;&#x7EC4;&#x88C5;&#x6210;&#x4E00;&#x4E2A;&#x4E2A;&#x5305;&#x542B;&#x591A;&#x4E2A;&#x6A21;&#x5757;&#x7684; Chunk&#xFF0C;&#x518D;&#x628A;&#x6BCF;&#x4E2A; Chunk &#x8F6C;&#x6362;&#x6210;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x6587;&#x4EF6;&#x52A0;&#x5165;&#x5230;&#x8F93;&#x51FA;&#x5217;&#x8868;&#xFF0C;&#x8FD9;&#x6B65;&#x662F;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x8F93;&#x51FA;&#x5185;&#x5BB9;&#x7684;&#x6700;&#x540E;&#x673A;&#x4F1A;&#xFF1B;</li>
+<li>&#x8F93;&#x51FA;&#x5B8C;&#x6210;&#xFF1A;&#x5728;&#x786E;&#x5B9A;&#x597D;&#x8F93;&#x51FA;&#x5185;&#x5BB9;&#x540E;&#xFF0C;&#x6839;&#x636E;&#x914D;&#x7F6E;&#x786E;&#x5B9A;&#x8F93;&#x51FA;&#x7684;&#x8DEF;&#x5F84;&#x548C;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x628A;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x5199;&#x5165;&#x5230;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>&#x5728;&#x4EE5;&#x4E0A;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;Webpack &#x4F1A;&#x5728;&#x7279;&#x5B9A;&#x7684;&#x65F6;&#x95F4;&#x70B9;&#x5E7F;&#x64AD;&#x51FA;&#x7279;&#x5B9A;&#x7684;&#x4E8B;&#x4EF6;&#xFF0C;&#x63D2;&#x4EF6;&#x5728;&#x76D1;&#x542C;&#x5230;&#x611F;&#x5174;&#x8DA3;&#x7684;&#x4E8B;&#x4EF6;&#x540E;&#x4F1A;&#x6267;&#x884C;&#x7279;&#x5B9A;&#x7684;&#x903B;&#x8F91;&#xFF0C;&#x5E76;&#x4E14;&#x63D2;&#x4EF6;&#x53EF;&#x4EE5;&#x8C03;&#x7528; Webpack &#x63D0;&#x4F9B;&#x7684; API &#x6539;&#x53D8; Webpack &#x7684;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x3002;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/webpackcode.jpg" alt="webpackcode"></p>
+<h3 id="t176.1 &#x521D;&#x59CB;&#x5316;&#x9636;&#x6BB5;">6.1 &#x521D;&#x59CB;&#x5316;&#x9636;&#x6BB5; <a href="#t176.1 &#x521D;&#x59CB;&#x5316;&#x9636;&#x6BB5;"> # </a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x4E8B;&#x4EF6;&#x540D;</th>
+<th style="text-align:left">&#x89E3;&#x91CA;</th>
+<th style="text-align:left">&#x4EE3;&#x7801;&#x4F4D;&#x7F6E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x8BFB;&#x53D6;&#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570;</td>
+<td style="text-align:left">&#x4ECE;&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x8BFB;&#x53D6;&#x7528;&#x6237;&#x8F93;&#x5165;&#x7684;&#x53C2;&#x6570;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/webpack-cli/bin/cli.js#L241"> require(&quot;./convert-argv&quot;)(argv)</a></td>
+</tr>
+<tr>
+<td style="text-align:left">&#x5B9E;&#x4F8B;&#x5316; Compiler</td>
+<td style="text-align:left">1.&#x7528;&#x4E0A;&#x4E00;&#x6B65;&#x5F97;&#x5230;&#x7684;&#x53C2;&#x6570;&#x521D;&#x59CB;&#x5316; Compiler &#x5B9E;&#x4F8B;<br>2.Compiler &#x8D1F;&#x8D23;&#x6587;&#x4EF6;&#x76D1;&#x542C;&#x548C;&#x542F;&#x52A8;&#x7F16;&#x8BD1;<br>3.Compiler &#x5B9E;&#x4F8B;&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x5B8C;&#x6574;&#x7684; Webpack &#x914D;&#x7F6E;&#xFF0C;&#x5168;&#x5C40;&#x53EA;&#x6709;&#x4E00;&#x4E2A; Compiler &#x5B9E;&#x4F8B;&#x3002;<br></td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/webpack-cli/bin/cli.js#L443">compiler = webpack(options);</a></td>
+</tr>
+<tr>
+<td style="text-align:left">&#x52A0;&#x8F7D;&#x63D2;&#x4EF6;</td>
+<td style="text-align:left">1.&#x4F9D;&#x6B21;&#x8C03;&#x7528;&#x63D2;&#x4EF6;&#x7684; apply &#x65B9;&#x6CD5;&#xFF0C;&#x8BA9;&#x63D2;&#x4EF6;&#x53EF;&#x4EE5;&#x76D1;&#x542C;&#x540E;&#x7EED;&#x7684;&#x6240;&#x6709;&#x4E8B;&#x4EF6;&#x8282;&#x70B9;&#x3002;<br>&#x540C;&#x65F6;&#x7ED9;&#x63D2;&#x4EF6;&#x4F20;&#x5165; compiler &#x5B9E;&#x4F8B;&#x7684;&#x5F15;&#x7528;&#xFF0C;&#x4EE5;&#x65B9;&#x4FBF;&#x63D2;&#x4EF6;&#x901A;&#x8FC7; compiler &#x8C03;&#x7528; Webpack &#x63D0;&#x4F9B;&#x7684; API&#x3002;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/webpack.js#L42-L50">plugin.apply(compiler)</a></td>
+</tr>
+<tr>
+<td style="text-align:left">&#x5904;&#x7406;&#x5165;&#x53E3;</td>
+<td style="text-align:left">&#x8BFB;&#x53D6;&#x914D;&#x7F6E;&#x7684; Entrys&#xFF0C;&#x4E3A;&#x6BCF;&#x4E2A; Entry &#x5B9E;&#x4F8B;&#x5316;&#x4E00;&#x4E2A;&#x5BF9;&#x5E94;&#x7684; EntryPlugin&#xFF0C;&#x4E3A;&#x540E;&#x9762;&#x8BE5; Entry &#x7684;&#x9012;&#x5F52;&#x89E3;&#x6790;&#x5DE5;&#x4F5C;&#x505A;&#x51C6;&#x5907;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/WebpackOptionsApply.js#L306">new EntryOptionPlugin().apply(compiler)</a><br><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/EntryOptionPlugin.js#L24">new SingleEntryPlugin(context, item, name)</a><br><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/SingleEntryPlugin.js#L40-L48">compiler.hooks.make.tapAsync</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="t186.2 &#x7F16;&#x8BD1;&#x9636;&#x6BB5;">6.2 &#x7F16;&#x8BD1;&#x9636;&#x6BB5; <a href="#t186.2 &#x7F16;&#x8BD1;&#x9636;&#x6BB5;"> # </a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x4E8B;&#x4EF6;&#x540D;</th>
+<th style="text-align:left">&#x89E3;&#x91CA;</th>
+<th style="text-align:left">&#x4EE3;&#x7801;&#x4F4D;&#x7F6E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">run</td>
+<td style="text-align:left">&#x542F;&#x52A8;&#x4E00;&#x6B21;&#x65B0;&#x7684;&#x7F16;&#x8BD1;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/Compiler.js#L263-L271">this.hooks.run.callAsync</a></td>
+</tr>
+<tr>
+<td style="text-align:left">compile</td>
+<td style="text-align:left">&#x8BE5;&#x4E8B;&#x4EF6;&#x662F;&#x4E3A;&#x4E86;&#x544A;&#x8BC9;&#x63D2;&#x4EF6;&#x4E00;&#x6B21;&#x65B0;&#x7684;&#x7F16;&#x8BD1;&#x5C06;&#x8981;&#x542F;&#x52A8;&#xFF0C;&#x540C;&#x65F6;&#x4F1A;&#x7ED9;&#x63D2;&#x4EF6;&#x4F20;&#x5165;compiler &#x5BF9;&#x8C61;&#x3002;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/Compiler.js#L529-L555">compile(callback)</a></td>
+</tr>
+<tr>
+<td style="text-align:left">compilation</td>
+<td style="text-align:left">&#x5F53; Webpack &#x4EE5;&#x5F00;&#x53D1;&#x6A21;&#x5F0F;&#x8FD0;&#x884C;&#x65F6;&#xFF0C;&#x6BCF;&#x5F53;&#x68C0;&#x6D4B;&#x5230;&#x6587;&#x4EF6;&#x53D8;&#x5316;&#xFF0C;&#x4E00;&#x6B21;&#x65B0;&#x7684; Compilation &#x5C06;&#x88AB;&#x521B;&#x5EFA;&#x3002;<br>&#x4E00;&#x4E2A; Compilation &#x5BF9;&#x8C61;&#x5305;&#x542B;&#x4E86;&#x5F53;&#x524D;&#x7684;&#x6A21;&#x5757;&#x8D44;&#x6E90;&#x3001;&#x7F16;&#x8BD1;&#x751F;&#x6210;&#x8D44;&#x6E90;&#x3001;&#x53D8;&#x5316;&#x7684;&#x6587;&#x4EF6;&#x7B49;&#x3002;<br>Compilation &#x5BF9;&#x8C61;&#x4E5F;&#x63D0;&#x4F9B;&#x4E86;&#x5F88;&#x591A;&#x4E8B;&#x4EF6;&#x56DE;&#x8C03;&#x4F9B;&#x63D2;&#x4EF6;&#x505A;&#x6269;&#x5C55;&#x3002;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/Compiler.js#L491-L501">newCompilation(params)</a></td>
+</tr>
+<tr>
+<td style="text-align:left">make</td>
+<td style="text-align:left">&#x4E00;&#x4E2A;&#x65B0;&#x7684; Compilation &#x521B;&#x5EFA;&#x5B8C;&#x6BD5;&#x4E3B;&#x5F00;&#x59CB;&#x7F16;&#x8BD1;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/Compiler.js#L544">this.hooks.make.callAsync</a></td>
+</tr>
+<tr>
+<td style="text-align:left">addEntry</td>
+<td style="text-align:left">&#x5373;&#x5C06;&#x4ECE; Entry &#x5F00;&#x59CB;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/Compilation.js#L1027">compilation.addEntry</a><br><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/Compilation.js#L1047">this._addModuleChain</a></td>
+</tr>
+<tr>
+<td style="text-align:left">moduleFactory</td>
+<td style="text-align:left">&#x521B;&#x5EFA;&#x6A21;&#x5757;&#x5DE5;&#x5382;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/Compilation.js#L933">const moduleFactory = this.dependencyFactories.get(Dep)</a></td>
+</tr>
+<tr>
+<td style="text-align:left">create</td>
+<td style="text-align:left">&#x521B;&#x5EFA;&#x6A21;&#x5757;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/NormalModuleFactory.js#L369-L409">moduleFactory.create</a></td>
+</tr>
+<tr>
+<td style="text-align:left">factory</td>
+<td style="text-align:left">&#x5F00;&#x59CB;&#x521B;&#x5EFA;&#x6A21;&#x5757;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/NormalModuleFactory.js#L396-L406">factory(result, (err, module)</a><br><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/NormalModuleFactory.js#L129">resolver(result</a><br><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/NormalModuleFactory.js#L159">this.hooks.resolver.tap(&quot;NormalModuleFactory&quot;</a></td>
+</tr>
+<tr>
+<td style="text-align:left">resolveRequestArray</td>
+<td style="text-align:left">&#x89E3;&#x6790;loader&#x8DEF;&#x5F84;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/NormalModuleFactory.js#L411">resolveRequestArray</a></td>
+</tr>
+<tr>
+<td style="text-align:left">resolve</td>
+<td style="text-align:left">&#x89E3;&#x6790;&#x8D44;&#x6E90;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_enhanced-resolve%404.1.0%40enhanced-resolve/lib/Resolver.js#L136">resolve</a></td>
+</tr>
+<tr>
+<td style="text-align:left">userRequest</td>
+<td style="text-align:left">&#x5F97;&#x5230;&#x5305;&#x62EC;loader&#x5728;&#x5185;&#x7684;&#x8D44;&#x6E90;&#x6587;&#x4EF6;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x7528;!&#x62FC;&#x8D77;&#x6765;&#x7684;&#x5B57;&#x7B26;&#x4E32;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/NormalModuleFactory.js#L254-L259">userRequest</a></td>
+</tr>
+<tr>
+<td style="text-align:left">ruleSet.exec</td>
+<td style="text-align:left">&#x5B83;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x6A21;&#x5757;&#x8DEF;&#x5F84;&#x540D;&#xFF0C;&#x5339;&#x914D;&#x51FA;&#x6A21;&#x5757;&#x6240;&#x9700;&#x7684;loader</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/NormalModuleFactory.js#L270-L279">this.ruleSet.exec</a></td>
+</tr>
+<tr>
+<td style="text-align:left">_run</td>
+<td style="text-align:left">&#x5B83;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x6A21;&#x5757;&#x8DEF;&#x5F84;&#x540D;&#xFF0C;&#x5339;&#x914D;&#x51FA;&#x6A21;&#x5757;&#x6240;&#x9700;&#x7684;loader</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/RuleSet.js#L485-L558">_run</a></td>
+</tr>
+<tr>
+<td style="text-align:left">loaders</td>
+<td style="text-align:left">&#x5F97;&#x5230;&#x6240;&#x6709;&#x7684;loader&#x6570;&#x7EC4;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/NormalModuleFactory.js#L338">results[0].concat(loaders, results[1], results[2])</a></td>
+</tr>
+<tr>
+<td style="text-align:left">getParser</td>
+<td style="text-align:left">&#x83B7;&#x53D6;AST&#x89E3;&#x6790;&#x5668;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/NormalModuleFactory.js#L357">this.getParser(type, settings.parser)</a></td>
+</tr>
+<tr>
+<td style="text-align:left">buildModule</td>
+<td style="text-align:left">&#x5F00;&#x59CB;&#x7F16;&#x8BD1;&#x6A21;&#x5757;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/Compilation.js#L996-L1009">this.buildModule(module</a><br><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/Compilation.js#L602-L656">buildModule(module, optional, origin, dependencies, thisCallback)</a></td>
+</tr>
+<tr>
+<td style="text-align:left">build</td>
+<td style="text-align:left">&#x5F00;&#x59CB;&#x771F;&#x6B63;&#x7F16;&#x8BD1;&#x5165;&#x53E3;&#x6A21;&#x5757;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/NormalModule.js#L396-L469">build(options</a></td>
+</tr>
+<tr>
+<td style="text-align:left">doBuild</td>
+<td style="text-align:left">&#x5F00;&#x59CB;&#x771F;&#x6B63;&#x7F16;&#x8BD1;&#x5165;&#x53E3;&#x6A21;&#x5757;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/NormalModule.js#L257-L330">doBuild</a></td>
+</tr>
+<tr>
+<td style="text-align:left">&#x6267;&#x884C;loader</td>
+<td style="text-align:left">&#x4F7F;&#x7528;loader&#x8FDB;&#x884C;&#x8F6C;&#x6362;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/NormalModule.js#L265">runLoaders</a><br><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_loader-runner%402.3.1%40loader-runner/lib/LoaderRunner.js#L242">runLoaders</a></td>
+</tr>
+<tr>
+<td style="text-align:left">iteratePitchingLoaders</td>
+<td style="text-align:left">&#x5F00;&#x59CB;&#x9012;&#x5F52;&#x6267;&#x884C;pitch loader</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_loader-runner%402.3.1%40loader-runner/lib/LoaderRunner.js#L362">iteratePitchingLoaders</a></td>
+</tr>
+<tr>
+<td style="text-align:left">loadLoader</td>
+<td style="text-align:left">&#x52A0;&#x8F7D;loader</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_loader-runner%402.3.1%40loader-runner/lib/loadLoader.js#L13">loadLoader</a></td>
+</tr>
+<tr>
+<td style="text-align:left">runSyncOrAsync</td>
+<td style="text-align:left">&#x6267;&#x884C;pitchLoader</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_loader-runner%402.3.1%40loader-runner/lib/LoaderRunner.js#L175-L188">runSyncOrAsync</a></td>
+</tr>
+<tr>
+<td style="text-align:left">processResource</td>
+<td style="text-align:left">&#x5F00;&#x59CB;&#x5904;&#x7406;&#x8D44;&#x6E90;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_loader-runner%402.3.1%40loader-runner/lib/LoaderRunner.js#L192">processResource</a><br><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_loader-runner%402.3.1%40loader-runner/lib/LoaderRunner.js#L199">options.readResource</a><br><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_loader-runner%402.3.1%40loader-runner/lib/LoaderRunner.js#L202">iterateNormalLoaders</a><br><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_loader-runner%402.3.1%40loader-runner/lib/LoaderRunner.js#L209-L235">iterateNormalLoaders</a></td>
+</tr>
+<tr>
+<td style="text-align:left">createSource</td>
+<td style="text-align:left">&#x521B;&#x5EFA;&#x6E90;&#x4EE3;&#x7801;&#x5BF9;&#x8C61;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/NormalModule.js#L316"> this.createSource</a></td>
+</tr>
+<tr>
+<td style="text-align:left">parse</td>
+<td style="text-align:left">&#x4F7F;&#x7528;parser&#x8F6C;&#x6362;&#x62BD;&#x8C61;&#x8BED;&#x6CD5;&#x6811;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/NormalModule.js#L445-L467">this.parser.parse</a></td>
+</tr>
+<tr>
+<td style="text-align:left">parse</td>
+<td style="text-align:left">&#x89E3;&#x6790;&#x62BD;&#x8C61;&#x8BED;&#x6CD5;&#x6811;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/Parser.js#2022">parse(source, initialState)</a></td>
+</tr>
+<tr>
+<td style="text-align:left">acorn.parse</td>
+<td style="text-align:left">&#x89E3;&#x6790;&#x8BED;&#x6CD5;&#x6811;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/Parser.js#L2158">acorn.parse(code, parserOptions)</a></td>
+</tr>
+<tr>
+<td style="text-align:left">ImportDependency</td>
+<td style="text-align:left">&#x904D;&#x5386;&#x5E76;&#x6DFB;&#x52A0;&#x6DFB;&#x52A0;&#x4F9D;&#x8D56;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/dependencies/HarmonyImportDependencyParserPlugin.js#L28">parser.state.module.addDependency(clearDep)</a></td>
+</tr>
+<tr>
+<td style="text-align:left">succeedModule</td>
+<td style="text-align:left">&#x751F;&#x6210;&#x8BED;&#x6CD5;&#x6811;&#x540E;&#x5C31;&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x6A21;&#x5757;&#x7F16;&#x8BD1;&#x5B8C;&#x6210;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/Compilation.js#L652">this.hooks.succeedModule.call(module)</a></td>
+</tr>
+<tr>
+<td style="text-align:left">processModuleDependencies</td>
+<td style="text-align:left">&#x9012;&#x5F52;&#x7F16;&#x8BD1;&#x4F9D;&#x8D56;&#x7684;&#x6A21;&#x5757;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/Compilation.js#L980">this.processModuleDependencies(module</a><br><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/Compilation.js#L663">processModuleDependencies(module, callback)</a><br><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/Compilation.js#L716">this.addModuleDependencies</a><br><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/Compilation.js#L859">buildModule</a></td>
+</tr>
+<tr>
+<td style="text-align:left">make&#x540E;</td>
+<td style="text-align:left">&#x7ED3;&#x675F;make</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/Compiler.js#L545">this.hooks.make.callAsync(compilation, err =&gt; {}</a></td>
+</tr>
+<tr>
+<td style="text-align:left">finish</td>
+<td style="text-align:left">&#x7F16;&#x8BD1;&#x5B8C;&#x6210;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/Compiler.js#L547">compilation.finish();</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="t196.3 &#x7ED3;&#x675F;&#x9636;&#x6BB5;">6.3 &#x7ED3;&#x675F;&#x9636;&#x6BB5; <a href="#t196.3 &#x7ED3;&#x675F;&#x9636;&#x6BB5;"> # </a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x4E8B;&#x4EF6;&#x540D;</th>
+<th style="text-align:left">&#x89E3;&#x91CA;</th>
+<th style="text-align:left">&#x4EE3;&#x7801;&#x4F4D;&#x7F6E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">seal</td>
+<td style="text-align:left">&#x5C01;&#x88C5;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/Compiler.js#L549">compilation.seal</a><br><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/Compilation.js#L1159-L1301">seal(callback)</a></td>
+</tr>
+<tr>
+<td style="text-align:left">addChunk</td>
+<td style="text-align:left">&#x751F;&#x6210;&#x8D44;&#x6E90;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/Compilation.js#L1400">addChunk(name)</a></td>
+</tr>
+<tr>
+<td style="text-align:left">createChunkAssets</td>
+<td style="text-align:left">&#x521B;&#x5EFA;&#x8D44;&#x6E90;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/Compilation.js#L1270">this.createChunkAssets()</a></td>
+</tr>
+<tr>
+<td style="text-align:left">getRenderManifest</td>
+<td style="text-align:left">&#x83B7;&#x5F97;&#x8981;&#x6E32;&#x67D3;&#x7684;&#x63CF;&#x8FF0;&#x6587;&#x4EF6;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/MainTemplate.js#L355-L360">getRenderManifest(options)</a></td>
+</tr>
+<tr>
+<td style="text-align:left">render</td>
+<td style="text-align:left">&#x6E32;&#x67D3;&#x6E90;&#x7801;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/Compilation.js#L2369">source = fileManifest.render();</a></td>
+</tr>
+<tr>
+<td style="text-align:left">afterCompile</td>
+<td style="text-align:left">&#x7F16;&#x8BD1;&#x7ED3;&#x675F;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/Compiler.js##L552">this.hooks.afterCompile</a></td>
+</tr>
+<tr>
+<td style="text-align:left">shouldEmit</td>
+<td style="text-align:left">&#x6240;&#x6709;&#x9700;&#x8981;&#x8F93;&#x51FA;&#x7684;&#x6587;&#x4EF6;&#x5DF2;&#x7ECF;&#x751F;&#x6210;&#x597D;&#xFF0C;&#x8BE2;&#x95EE;&#x63D2;&#x4EF6;&#x54EA;&#x4E9B;&#x6587;&#x4EF6;&#x9700;&#x8981;&#x8F93;&#x51FA;&#xFF0C;&#x54EA;&#x4E9B;&#x4E0D;&#x9700;&#x8981;&#x3002;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/Compiler.js##L215">this.hooks.shouldEmit</a></td>
+</tr>
+<tr>
+<td style="text-align:left">emit</td>
+<td style="text-align:left">&#x786E;&#x5B9A;&#x597D;&#x8981;&#x8F93;&#x51FA;&#x54EA;&#x4E9B;&#x6587;&#x4EF6;&#x540E;&#xFF0C;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x8F93;&#x51FA;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x8FD9;&#x91CC;&#x83B7;&#x53D6;&#x548C;&#x4FEE;&#x6539;&#x8F93;&#x51FA;&#x5185;&#x5BB9;&#x3002;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/Compiler.js##L228">this.emitAssets(compilation</a><br><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/Compiler.js##L363-L367">this.hooks.emit.callAsync</a><br><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/Compiler.js##L308-L361">const emitFiles = err</a><br><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/Compiler.js##L338">this.outputFileSystem.writeFile</a></td>
+</tr>
+<tr>
+<td style="text-align:left">this.emitRecords</td>
+<td style="text-align:left">&#x5199;&#x5165;&#x8BB0;&#x5F55;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/Compiler.js##L249">this.emitRecords</a></td>
+</tr>
+<tr>
+<td style="text-align:left">done</td>
+<td style="text-align:left">&#x5168;&#x90E8;&#x5B8C;&#x6210;</td>
+<td style="text-align:left"><a href="https://github.com/zhufengnodejs/webpack-analysis/blob/master/node_modules/_webpack%404.20.2%40webpack/lib/Compiler.js##L255">this.hooks.done.callAsync</a></td>
+</tr>
+</tbody>
+</table>
+<p><img src="http://img.zhufengpeixun.cn/dependency.jpg" alt="dependency"></p>
+<h2 id="t207. &#x53C2;&#x8003;">7. &#x53C2;&#x8003; <a href="#t207. &#x53C2;&#x8003;"> # </a></h2>
+<ul>
+<li><a href="https://github.com/zhufengnodejs/webpack-analysis">webpack-analysis</a></li>
+<li><a href="https://alienzhou.github.io/webpack-internal-plugin-relation/">webpack-internal-plugin-relation</a></li>
+</ul>
+
+        <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
+    </div>
+    
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

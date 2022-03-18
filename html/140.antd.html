@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+
+                        
+<div class="warpper">
+    <div class="page-toc">
+        <ul><li><a href="#t00.AntDesign">0.AntDesign</a><ul><li><a href="#t10.1 技术栈">0.1 技术栈</a></li><li><a href="#t20.2 源码目录">0.2 源码目录</a></li><li><a href="#t30.3 课程内容">0.3 课程内容</a></li></ul></li><li><a href="#t41.创建项目">1.创建项目</a><ul><li><a href="#t51.创建文件夹">1.创建文件夹</a></li><li><a href="#t62.package.json">2.package.json</a></li></ul></li><li><a href="#t72.配置webpack">2.配置webpack</a><ul><li><a href="#t82.1 安装依赖">2.1 安装依赖</a></li><li><a href="#t92.2 webpack.config.js">2.2 webpack.config.js</a></li><li><a href="#t102.3 babel.config.js">2.3 babel.config.js</a></li><li><a href="#t112.4 .gitignore">2.4 .gitignore</a></li><li><a href="#t122.5 tsconfig.json">2.5 tsconfig.json</a></li><li><a href="#t132.6 index.js">2.6 index.js</a></li><li><a href="#t142.7 components\index.tsx">2.7 components\index.tsx</a></li><li><a href="#t152.8 button\index.tsx">2.8 button\index.tsx</a></li><li><a href="#t162.9 button.tsx">2.9 button.tsx</a></li></ul></li><li><a href="#t173.storybook">3.storybook</a><ul><li><a href="#t183.1 安装">3.1 安装</a></li><li><a href="#t193.2 .storybook\main.js">3.2 .storybook\main.js</a></li><li><a href="#t203.3 Introduction.stories.mdx">3.3 Introduction.stories.mdx</a></li><li><a href="#t213.4 Install.stories.mdx">3.4 Install.stories.mdx</a></li><li><a href="#t223.5 Components.stories.mdx">3.5 Components.stories.mdx</a></li><li><a href="#t233.6  button.stories.tsx">3.6  button.stories.tsx</a></li><li><a href="#t243.7 package.json">3.7 package.json</a></li></ul></li><li><a href="#t254.测试">4.测试</a><ul><li><a href="#t264.1 安装">4.1 安装</a></li><li><a href="#t274.2 tests\setup.js">4.2 tests\setup.js</a></li><li><a href="#t284.3 tests\index.html">4.3 tests\index.html</a></li><li><a href="#t294.4 unit.jest.js">4.4 unit.jest.js</a></li><li><a href="#t304.5 e2e.jest.js">4.5 e2e.jest.js</a></li><li><a href="#t314.6 unit\index.test.tsx">4.6 unit\index.test.tsx</a></li><li><a href="#t324.7 snapshot.spec.tsx">4.7 snapshot.spec.tsx</a></li><li><a href="#t334.8 jest-puppeteer.config.js">4.8 jest-puppeteer.config.js</a></li><li><a href="#t344.9 package.json">4.9 package.json</a></li></ul></li><li><a href="#t355.eslint">5.eslint</a><ul><li><a href="#t365.1 安装">5.1 安装</a></li><li><a href="#t375.2 .eslintrc.js">5.2 .eslintrc.js</a></li><li><a href="#t385.3 .eslintignore">5.3 .eslintignore</a></li><li><a href="#t395.4 package.json">5.4 package.json</a></li></ul></li><li><a href="#t406.prettier">6.prettier</a><ul><li><a href="#t416.1 安装依赖">6.1 安装依赖</a></li><li><a href="#t426.2 .eslintrc.js">6.2 .eslintrc.js</a></li><li><a href="#t436.3 .prettierrc">6.3 .prettierrc</a></li><li><a href="#t446.4 button\index.tsx">6.4 button\index.tsx</a></li><li><a href="#t456.5 settings.json">6.5 settings.json</a></li></ul></li><li><a href="#t467.editorconfig">7.editorconfig</a><ul><li><a href="#t477.1 .editorconfig">7.1 .editorconfig</a></li></ul></li><li><a href="#t488. git hook">8. git hook</a><ul><li><a href="#t498.1 安装">8.1 安装</a></li><li><a href="#t508.2 pre-commit">8.2 pre-commit</a><ul><li><a href="#t518.2.1 安装脚本">8.2.1 安装脚本</a></li><li><a href="#t528.2.2 .lintstagedrc">8.2.2 .lintstagedrc</a></li></ul></li><li><a href="#t538.3 commit-msg">8.3 commit-msg</a><ul><li><a href="#t548.3.1 安装依赖">8.3.1 安装依赖</a></li><li><a href="#t558.3.2 安装脚本">8.3.2 安装脚本</a></li><li><a href="#t568.3.3 .cz-config.js">8.3.3 .cz-config.js</a></li><li><a href="#t578.3.4 commitlint.config.js">8.3.4 commitlint.config.js</a></li></ul></li><li><a href="#t588.4 pre-push">8.4 pre-push</a><ul><li><a href="#t598.4.1 安装脚本">8.4.1 安装脚本</a></li></ul></li></ul></li><li><a href="#t609. 编译发布">9. 编译发布</a><ul><li><a href="#t619.1 安装依赖">9.1 安装依赖</a></li><li><a href="#t629.2 gulpfile.js">9.2 gulpfile.js</a></li><li><a href="#t639.3 package.json">9.3 package.json</a></li></ul></li><li><a href="#t6410. 持续集成">10. 持续集成</a><ul><li><a href="#t6510.1 .travis.yml">10.1 .travis.yml</a></li></ul></li></ul>
+    </div>
+    <div class="content markdown-body">
+        <h2 id="t00.AntDesign">0.AntDesign <a href="#t00.AntDesign"> # </a></h2>
+<ul>
+<li><a href="https://ant.design/docs/react/introduce-cn">ant.design</a> &#x662F;&#x57FA;&#x4E8E; Ant Design &#x8BBE;&#x8BA1;&#x4F53;&#x7CFB;&#x7684; React UI &#x7EC4;&#x4EF6;&#x5E93;&#xFF0C;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x7814;&#x53D1;&#x4F01;&#x4E1A;&#x7EA7;&#x4E2D;&#x540E;&#x53F0;&#x4EA7;&#x54C1;</li>
+</ul>
+<h3 id="t10.1 &#x6280;&#x672F;&#x6808;">0.1 &#x6280;&#x672F;&#x6808; <a href="#t10.1 &#x6280;&#x672F;&#x6808;"> # </a></h3>
+<ul>
+<li>&#x6846;&#x67B6; react</li>
+<li>&#x6D4B;&#x8BD5; jest+enzyme</li>
+<li>&#x68C0;&#x67E5; eslint</li>
+<li>&#x6253;&#x5305; webpack+gulp</li>
+<li>&#x6587;&#x6863; bisheng</li>
+<li>&#x94A9;&#x5B50; husky</li>
+</ul>
+<h3 id="t20.2 &#x6E90;&#x7801;&#x76EE;&#x5F55;">0.2 &#x6E90;&#x7801;&#x76EE;&#x5F55; <a href="#t20.2 &#x6E90;&#x7801;&#x76EE;&#x5F55;"> # </a></h3>
+<ul>
+<li>.husky git&#x94A9;&#x5B50;</li>
+<li>_site &#x7F51;&#x7AD9;</li>
+<li>components &#x7EC4;&#x4EF6;</li>
+<li>docs &#x6587;&#x6863;</li>
+<li>dist &#x6253;&#x5305;&#x751F;&#x6210;&#x7684;&#x6587;&#x4EF6;</li>
+<li>es ES6</li>
+<li>lib ES5</li>
+<li>scripts &#x811A;&#x672C;</li>
+<li>site &#x7EC4;&#x4EF6;&#x9884;&#x89C8;&#x9879;&#x76EE;</li>
+<li>tests &#x6D4B;&#x8BD5;</li>
+<li>typings &#x7C7B;&#x578B;&#x5B9A;&#x4E49;</li>
+</ul>
+<h3 id="t30.3 &#x8BFE;&#x7A0B;&#x5185;&#x5BB9;">0.3 &#x8BFE;&#x7A0B;&#x5185;&#x5BB9; <a href="#t30.3 &#x8BFE;&#x7A0B;&#x5185;&#x5BB9;"> # </a></h3>
+<ul>
+<li>webpack&#x914D;&#x7F6E;</li>
+<li>storybook&#x6587;&#x6863;&#x548C;&#x7EC4;&#x4EF6;&#x7F16;&#x5199;</li>
+<li>&#x5355;&#x5143;&#x6D4B;&#x8BD5;+E2E&#x5FEB;&#x7167;&#x6D4B;&#x8BD5;+&#x4EE3;&#x7801;&#x8986;&#x76D6;&#x7387;</li>
+<li>eslint+prettier+editorconfig</li>
+<li>git hook</li>
+<li>&#x7F16;&#x8BD1;&#x53D1;&#x5E03;</li>
+<li>&#x6301;&#x7EED;&#x96C6;&#x6210;</li>
+</ul>
+<h2 id="t41.&#x521B;&#x5EFA;&#x9879;&#x76EE;">1.&#x521B;&#x5EFA;&#x9879;&#x76EE; <a href="#t41.&#x521B;&#x5EFA;&#x9879;&#x76EE;"> # </a></h2>
+<h3 id="t51.&#x521B;&#x5EFA;&#x6587;&#x4EF6;&#x5939;">1.&#x521B;&#x5EFA;&#x6587;&#x4EF6;&#x5939; <a href="#t51.&#x521B;&#x5EFA;&#x6587;&#x4EF6;&#x5939;"> # </a></h3>
+<pre><code class="lang-js">mkdir ant
+cd ant
+npm init -y
+</code></pre>
+<h3 id="t62.package.json">2.package.json <a href="#t62.package.json"> # </a></h3>
+<pre><code class="lang-json">{
+  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;@zhangry/ant&quot;</span>,
+  <span class="hljs-attr">&quot;version&quot;</span>: <span class="hljs-string">&quot;1.0.0&quot;</span>,
+  <span class="hljs-attr">&quot;description&quot;</span>: <span class="hljs-string">&quot;React&#x7EC4;&#x4EF6;&#x7684;&#x4F01;&#x4E1A;&#x7EA7;UI&#x8BBE;&#x8BA1;&quot;</span>,
+  <span class="hljs-attr">&quot;main&quot;</span>: <span class="hljs-string">&quot;lib/index.js&quot;</span>,
+  <span class="hljs-attr">&quot;scripts&quot;</span>: {
+    <span class="hljs-attr">&quot;build&quot;</span>: <span class="hljs-string">&quot;webpack&quot;</span>
+  },
+  <span class="hljs-attr">&quot;publishConfig&quot;</span>: {
+    <span class="hljs-attr">&quot;access&quot;</span>: <span class="hljs-string">&quot;public&quot;</span>,
+    <span class="hljs-attr">&quot;registry&quot;</span>: <span class="hljs-string">&quot;http://registry.npmjs.org&quot;</span>
+  },
+  <span class="hljs-attr">&quot;homepage&quot;</span>: <span class="hljs-string">&quot;https://zhangrenyang.github.io/ant&quot;</span>,
+  <span class="hljs-attr">&quot;repository&quot;</span>: {
+    <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;git&quot;</span>,
+    <span class="hljs-attr">&quot;url&quot;</span>: <span class="hljs-string">&quot;git+https://github.com/zhangrenyang/ant.git&quot;</span>
+  },
+  <span class="hljs-attr">&quot;keywords&quot;</span>: [
+    <span class="hljs-string">&quot;ant&quot;</span>,
+    <span class="hljs-string">&quot;component&quot;</span>,
+    <span class="hljs-string">&quot;components&quot;</span>,
+    <span class="hljs-string">&quot;design&quot;</span>,
+    <span class="hljs-string">&quot;framework&quot;</span>,
+    <span class="hljs-string">&quot;frontend&quot;</span>,
+    <span class="hljs-string">&quot;react&quot;</span>,
+    <span class="hljs-string">&quot;react-component&quot;</span>,
+    <span class="hljs-string">&quot;ui&quot;</span>
+  ],
+  <span class="hljs-attr">&quot;author&quot;</span>: <span class="hljs-string">&quot;zhangrenyang&quot;</span>,
+  <span class="hljs-attr">&quot;license&quot;</span>: <span class="hljs-string">&quot;MIT&quot;</span>,
+  <span class="hljs-attr">&quot;dependencies&quot;</span>: {
+    <span class="hljs-attr">&quot;react&quot;</span>: <span class="hljs-string">&quot;^17.0.2&quot;</span>,
+    <span class="hljs-attr">&quot;react-dom&quot;</span>: <span class="hljs-string">&quot;^17.0.2&quot;</span>
+  },
+  <span class="hljs-attr">&quot;peerDependencies&quot;</span>: {
+    <span class="hljs-attr">&quot;react&quot;</span>: <span class="hljs-string">&quot;^17.0.2&quot;</span>,
+    <span class="hljs-attr">&quot;react-dom&quot;</span>: <span class="hljs-string">&quot;^17.0.2&quot;</span>
+  },
+  <span class="hljs-attr">&quot;devDependencies&quot;</span>: {
+    <span class="hljs-attr">&quot;@typescript-eslint/parser&quot;</span>: <span class="hljs-string">&quot;^4.31.1&quot;</span>,
+    <span class="hljs-attr">&quot;and&quot;</span>: <span class="hljs-string">&quot;^0.0.3&quot;</span>,
+    <span class="hljs-attr">&quot;eslint&quot;</span>: <span class="hljs-string">&quot;^7.32.0&quot;</span>,
+    <span class="hljs-attr">&quot;eslint-config-airbnb&quot;</span>: <span class="hljs-string">&quot;^18.2.1&quot;</span>,
+    <span class="hljs-attr">&quot;eslint-plugin-import&quot;</span>: <span class="hljs-string">&quot;^2.24.2&quot;</span>,
+    <span class="hljs-attr">&quot;eslint-plugin-jsx-a11y&quot;</span>: <span class="hljs-string">&quot;^6.4.1&quot;</span>,
+    <span class="hljs-attr">&quot;eslint-plugin-react&quot;</span>: <span class="hljs-string">&quot;^7.25.2&quot;</span>,
+    <span class="hljs-attr">&quot;eslint-plugin-react-hooks&quot;</span>: <span class="hljs-string">&quot;^4.2.0&quot;</span>,
+    <span class="hljs-attr">&quot;husky&quot;</span>: <span class="hljs-string">&quot;^7.0.2&quot;</span>,
+    <span class="hljs-attr">&quot;@babel/core&quot;</span>: <span class="hljs-string">&quot;^7.15.5&quot;</span>,
+    <span class="hljs-attr">&quot;@babel/plugin-transform-runtime&quot;</span>: <span class="hljs-string">&quot;^7.15.0&quot;</span>,
+    <span class="hljs-attr">&quot;@babel/plugin-transform-typescript&quot;</span>: <span class="hljs-string">&quot;^7.15.4&quot;</span>,
+    <span class="hljs-attr">&quot;@babel/preset-env&quot;</span>: <span class="hljs-string">&quot;^7.15.6&quot;</span>,
+    <span class="hljs-attr">&quot;@babel/preset-react&quot;</span>: <span class="hljs-string">&quot;^7.14.5&quot;</span>,
+    <span class="hljs-attr">&quot;@commitlint/cli&quot;</span>: <span class="hljs-string">&quot;^13.1.0&quot;</span>,
+    <span class="hljs-attr">&quot;@commitlint/config-conventional&quot;</span>: <span class="hljs-string">&quot;^13.1.0&quot;</span>,
+    <span class="hljs-attr">&quot;@storybook/addon-essentials&quot;</span>: <span class="hljs-string">&quot;^6.3.8&quot;</span>,
+    <span class="hljs-attr">&quot;@storybook/react&quot;</span>: <span class="hljs-string">&quot;^6.3.8&quot;</span>,
+    <span class="hljs-attr">&quot;@types/enzyme&quot;</span>: <span class="hljs-string">&quot;^3.10.9&quot;</span>,
+    <span class="hljs-attr">&quot;@types/jest&quot;</span>: <span class="hljs-string">&quot;^27.0.1&quot;</span>,
+    <span class="hljs-attr">&quot;@types/jest-environment-puppeteer&quot;</span>: <span class="hljs-string">&quot;^4.4.1&quot;</span>,
+    <span class="hljs-attr">&quot;@types/jest-image-snapshot&quot;</span>: <span class="hljs-string">&quot;^4.3.1&quot;</span>,
+    <span class="hljs-attr">&quot;@types/node&quot;</span>: <span class="hljs-string">&quot;^16.9.2&quot;</span>,
+    <span class="hljs-attr">&quot;@types/puppeteer&quot;</span>: <span class="hljs-string">&quot;^5.4.4&quot;</span>,
+    <span class="hljs-attr">&quot;@types/react&quot;</span>: <span class="hljs-string">&quot;^17.0.21&quot;</span>,
+    <span class="hljs-attr">&quot;@types/react-dom&quot;</span>: <span class="hljs-string">&quot;^17.0.9&quot;</span>,
+    <span class="hljs-attr">&quot;@wojtekmaj/enzyme-adapter-react-17&quot;</span>: <span class="hljs-string">&quot;^0.6.3&quot;</span>,
+    <span class="hljs-attr">&quot;autoprefixer&quot;</span>: <span class="hljs-string">&quot;^10.3.4&quot;</span>,
+    <span class="hljs-attr">&quot;babel-loader&quot;</span>: <span class="hljs-string">&quot;^8.2.2&quot;</span>,
+    <span class="hljs-attr">&quot;commitizen&quot;</span>: <span class="hljs-string">&quot;^4.2.4&quot;</span>,
+    <span class="hljs-attr">&quot;css-loader&quot;</span>: <span class="hljs-string">&quot;^6.2.0&quot;</span>,
+    <span class="hljs-attr">&quot;cz-customizable&quot;</span>: <span class="hljs-string">&quot;^6.3.0&quot;</span>,
+    <span class="hljs-attr">&quot;enzyme&quot;</span>: <span class="hljs-string">&quot;^3.11.0&quot;</span>,
+    <span class="hljs-attr">&quot;eslint-config-prettier&quot;</span>: <span class="hljs-string">&quot;^8.3.0&quot;</span>,
+    <span class="hljs-attr">&quot;eslint-plugin-prettier&quot;</span>: <span class="hljs-string">&quot;^4.0.0&quot;</span>,
+    <span class="hljs-attr">&quot;gulp&quot;</span>: <span class="hljs-string">&quot;^4.0.2&quot;</span>,
+    <span class="hljs-attr">&quot;gulp-babel&quot;</span>: <span class="hljs-string">&quot;^8.0.0&quot;</span>,
+    <span class="hljs-attr">&quot;gulp-typescript&quot;</span>: <span class="hljs-string">&quot;^6.0.0-alpha.1&quot;</span>,
+    <span class="hljs-attr">&quot;jest&quot;</span>: <span class="hljs-string">&quot;^27.2.0&quot;</span>,
+    <span class="hljs-attr">&quot;jest-environment-puppeteer&quot;</span>: <span class="hljs-string">&quot;^5.0.4&quot;</span>,
+    <span class="hljs-attr">&quot;jest-image-snapshot&quot;</span>: <span class="hljs-string">&quot;^4.5.1&quot;</span>,
+    <span class="hljs-attr">&quot;jest-puppeteer&quot;</span>: <span class="hljs-string">&quot;^5.0.4&quot;</span>,
+    <span class="hljs-attr">&quot;less&quot;</span>: <span class="hljs-string">&quot;^4.1.1&quot;</span>,
+    <span class="hljs-attr">&quot;less-loader&quot;</span>: <span class="hljs-string">&quot;^10.0.1&quot;</span>,
+    <span class="hljs-attr">&quot;merge2&quot;</span>: <span class="hljs-string">&quot;^1.4.1&quot;</span>,
+    <span class="hljs-attr">&quot;mini-css-extract-plugin&quot;</span>: <span class="hljs-string">&quot;^2.3.0&quot;</span>,
+    <span class="hljs-attr">&quot;postcss-loader&quot;</span>: <span class="hljs-string">&quot;^6.1.1&quot;</span>,
+    <span class="hljs-attr">&quot;prettier&quot;</span>: <span class="hljs-string">&quot;^2.4.1&quot;</span>,
+    <span class="hljs-attr">&quot;puppeteer&quot;</span>: <span class="hljs-string">&quot;^10.2.0&quot;</span>,
+    <span class="hljs-attr">&quot;rimraf&quot;</span>: <span class="hljs-string">&quot;^3.0.2&quot;</span>,
+    <span class="hljs-attr">&quot;typescript&quot;</span>: <span class="hljs-string">&quot;^4.4.3&quot;</span>,
+    <span class="hljs-attr">&quot;webpack&quot;</span>: <span class="hljs-string">&quot;^5.53.0&quot;</span>,
+    <span class="hljs-attr">&quot;webpack-cli&quot;</span>: <span class="hljs-string">&quot;^4.8.0&quot;</span>
+  }
+}
+</code></pre>
+<h2 id="t72.&#x914D;&#x7F6E;webpack">2.&#x914D;&#x7F6E;webpack <a href="#t72.&#x914D;&#x7F6E;webpack"> # </a></h2>
+<h3 id="t82.1 &#x5B89;&#x88C5;&#x4F9D;&#x8D56;">2.1 &#x5B89;&#x88C5;&#x4F9D;&#x8D56; <a href="#t82.1 &#x5B89;&#x88C5;&#x4F9D;&#x8D56;"> # </a></h3>
+<pre><code class="lang-js">yarn add webpack webpack-cli webpack-dev-server mini-css-extract-plugin babel-loader css-loader autoprefixer postcss-loader less-loader less @babel/core @babel/preset-react @babel/preset-env  @babel/runtime @babel/plugin-transform-typescript  typescript @babel/plugin-transform-runtime @types/node --dev
+
+yarn add react react-dom 
+yarn add @types/react @types/react-dom --dev
+</code></pre>
+<h3 id="t92.2 webpack.config.js">2.2 webpack.config.js <a href="#t92.2 webpack.config.js"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
+<span class="hljs-keyword">const</span> MiniCssExtractPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;mini-css-extract-plugin&apos;</span>);
+
+<span class="hljs-keyword">const</span> cwd = process.cwd();
+<span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-attr">mode</span>: <span class="hljs-string">&apos;development&apos;</span>,
+  <span class="hljs-attr">devtool</span>: <span class="hljs-literal">false</span>,
+  <span class="hljs-attr">entry</span>: {
+    <span class="hljs-attr">ant</span>: <span class="hljs-string">&apos;./index.js&apos;</span>,
+  },
+  <span class="hljs-attr">output</span>: {
+    <span class="hljs-attr">path</span>: path.resolve(<span class="hljs-string">&apos;dist&apos;</span>),
+    <span class="hljs-attr">filename</span>: <span class="hljs-string">&apos;[name].js&apos;</span>,
+    <span class="hljs-attr">library</span>: <span class="hljs-string">&apos;ant&apos;</span>,
+    <span class="hljs-attr">libraryTarget</span>: <span class="hljs-string">&apos;umd&apos;</span>,
+  },
+  <span class="hljs-attr">externals</span>: {
+    <span class="hljs-attr">react</span>: {
+      <span class="hljs-attr">root</span>: <span class="hljs-string">&apos;React&apos;</span>,
+      <span class="hljs-attr">commonjs2</span>: <span class="hljs-string">&apos;react&apos;</span>,
+      <span class="hljs-attr">commonjs</span>: <span class="hljs-string">&apos;react&apos;</span>,
+      <span class="hljs-attr">amd</span>: <span class="hljs-string">&apos;react&apos;</span>,
+    },
+    <span class="hljs-string">&apos;react-dom&apos;</span>: {
+      <span class="hljs-attr">root</span>: <span class="hljs-string">&apos;ReactDOM&apos;</span>,
+      <span class="hljs-attr">commonjs2</span>: <span class="hljs-string">&apos;react-dom&apos;</span>,
+      <span class="hljs-attr">commonjs</span>: <span class="hljs-string">&apos;react-dom&apos;</span>,
+      <span class="hljs-attr">amd</span>: <span class="hljs-string">&apos;react-dom&apos;</span>,
+    },
+  },
+  <span class="hljs-attr">resolve</span>: {
+    <span class="hljs-attr">extensions</span>: [<span class="hljs-string">&apos;.ts&apos;</span>, <span class="hljs-string">&apos;.tsx&apos;</span>, <span class="hljs-string">&apos;.js&apos;</span>, <span class="hljs-string">&apos;.jsx&apos;</span>, <span class="hljs-string">&apos;.json&apos;</span>],
+    <span class="hljs-attr">alias</span>: {
+      <span class="hljs-attr">antdesign</span>: cwd,
+    },
+  },
+  <span class="hljs-attr">module</span>: {
+    <span class="hljs-attr">rules</span>: [
+      {
+        <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.(j|t)sx?$/</span>,
+        <span class="hljs-attr">exclude</span>: <span class="hljs-regexp">/node_modules/</span>,
+        <span class="hljs-attr">loader</span>: <span class="hljs-string">&apos;babel-loader&apos;</span>,
+      },
+      {
+        <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.css$/</span>,
+        <span class="hljs-attr">use</span>: [
+          MiniCssExtractPlugin.loader,
+          {
+            <span class="hljs-attr">loader</span>: <span class="hljs-string">&apos;css-loader&apos;</span>,
+            <span class="hljs-attr">options</span>: {
+              <span class="hljs-attr">sourceMap</span>: <span class="hljs-literal">true</span>,
+            },
+          },
+          {
+            <span class="hljs-attr">loader</span>: <span class="hljs-string">&apos;postcss-loader&apos;</span>,
+            <span class="hljs-attr">options</span>: {
+              <span class="hljs-attr">postcssOptions</span>: {
+                <span class="hljs-attr">plugins</span>: [<span class="hljs-string">&apos;autoprefixer&apos;</span>],
+              },
+              <span class="hljs-attr">sourceMap</span>: <span class="hljs-literal">true</span>,
+            },
+          },
+        ],
+      },
+      {
+        <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.less$/</span>,
+        <span class="hljs-attr">use</span>: [
+          MiniCssExtractPlugin.loader,
+          {
+            <span class="hljs-attr">loader</span>: <span class="hljs-string">&apos;css-loader&apos;</span>,
+            <span class="hljs-attr">options</span>: {
+              <span class="hljs-attr">sourceMap</span>: <span class="hljs-literal">true</span>,
+            },
+          },
+          {
+            <span class="hljs-attr">loader</span>: <span class="hljs-string">&apos;postcss-loader&apos;</span>,
+            <span class="hljs-attr">options</span>: {
+              <span class="hljs-attr">postcssOptions</span>: {
+                <span class="hljs-attr">plugins</span>: [<span class="hljs-string">&apos;autoprefixer&apos;</span>],
+              },
+              <span class="hljs-attr">sourceMap</span>: <span class="hljs-literal">true</span>,
+            },
+          },
+          {
+            <span class="hljs-attr">loader</span>: <span class="hljs-string">&apos;less-loader&apos;</span>,
+            <span class="hljs-attr">options</span>: {
+              <span class="hljs-attr">lessOptions</span>: {
+                <span class="hljs-attr">javascriptEnabled</span>: <span class="hljs-literal">true</span>,
+              },
+              <span class="hljs-attr">sourceMap</span>: <span class="hljs-literal">true</span>,
+            },
+          },
+        ],
+      },
+      {
+        <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.(png|jpg|jpeg|gif|svg)(\?v=\d+\.\d+\.\d+)?$/i</span>,
+        <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;asset&apos;</span>,
+      },
+    ],
+  },
+  <span class="hljs-attr">plugins</span>: [
+    <span class="hljs-keyword">new</span> MiniCssExtractPlugin({
+      <span class="hljs-attr">filename</span>: <span class="hljs-string">&apos;[name].css&apos;</span>,
+    }),
+  ],
+};
+</code></pre>
+<h3 id="t102.3 babel.config.js">2.3 babel.config.js <a href="#t102.3 babel.config.js"> # </a></h3>
+<p>babel.config.js</p>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-attr">presets</span>: [
+    <span class="hljs-string">&apos;@babel/preset-react&apos;</span>,
+    [
+      <span class="hljs-string">&apos;@babel/preset-env&apos;</span>,
+      {
+        <span class="hljs-attr">modules</span>: <span class="hljs-string">&apos;auto&apos;</span>,
+        <span class="hljs-attr">targets</span>: {
+          <span class="hljs-attr">browsers</span>: [<span class="hljs-string">&apos;last 2 versions&apos;</span>, <span class="hljs-string">&apos;Firefox ESR&apos;</span>, <span class="hljs-string">&apos;&gt; 1%&apos;</span>, <span class="hljs-string">&apos;ie &gt;= 11&apos;</span>],
+        },
+      },
+    ],
+  ],
+  <span class="hljs-attr">plugins</span>: [
+    [
+      <span class="hljs-string">&apos;@babel/plugin-transform-typescript&apos;</span>,
+      {
+        <span class="hljs-attr">isTSX</span>: <span class="hljs-literal">true</span>,
+      },
+    ],
+    [<span class="hljs-string">&apos;@babel/plugin-transform-runtime&apos;</span>],
+  ],
+};
+
+</code></pre>
+<h3 id="t112.4 .gitignore">2.4 .gitignore <a href="#t112.4 .gitignore"> # </a></h3>
+<p>.gitignore</p>
+<pre><code class="lang-js">*.iml
+.idea/
+.ipr
+.iws
+*~
+~*
+*.diff
+*.patch
+*.bak
+.DS_Store
+Thumbs.db
+.project
+.*proj
+.svn/
+*.swp
+*.swo
+*.log
+*.log.*
+*.json.gzip
+node_modules/
+.buildpath
+.settings
+npm-debug.log
+nohup.out
+_site
+_data
+dist
+report.html
+/lib
+/es
+elasticsearch-*
+config/base.yaml
+/.vscode/
+/coverage
+yarn.lock
+package-lock.json
+components/**/*.js
+components/**/*.jsx
+!components/**/__tests__/**/*.js
+!components/**/__tests__/**/*.js.snap
+/.history
+*.tmp
+
+# Docs templates
+site/theme/template/Color/ColorPicker.jsx
+site/theme/template/IconDisplay/*.js
+site/theme/template/IconDisplay/*.jsx
+site/theme/template/IconDisplay/fields.js
+site/theme/template/Home/**/*.jsx
+site/theme/template/utils.jsx
+site/theme/template/Layout/Footer.jsx
+site/theme/template/Layout/Header/**/*.jsx
+site/theme/template/Layout/SiteContext.jsx
+site/theme/template/Content/Article.jsx
+site/theme/template/Content/EditButton.jsx
+site/theme/template/Resources/*.jsx
+site/theme/template/Resources/**/*.jsx
+site/theme/template/NotFound.jsx
+scripts/previewEditor/index.html
+components/version/version.tsx
+
+# Image snapshot diff
+__diff_output__/
+__image_snapshots__/
+/jest-stare
+/imageSnapshots
+/imageDiffSnapshots
+storybook-static
+
+sh.exe.stackdump
+/snapshots
+/diffSnapshots
+</code></pre>
+<h3 id="t122.5 tsconfig.json">2.5 tsconfig.json <a href="#t122.5 tsconfig.json"> # </a></h3>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">&quot;compilerOptions&quot;</span>: {
+      <span class="hljs-attr">&quot;strictNullChecks&quot;</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">&quot;module&quot;</span>: <span class="hljs-string">&quot;esnext&quot;</span>,
+      <span class="hljs-attr">&quot;moduleResolution&quot;</span>: <span class="hljs-string">&quot;node&quot;</span>,
+      <span class="hljs-attr">&quot;esModuleInterop&quot;</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">&quot;experimentalDecorators&quot;</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">&quot;jsx&quot;</span>: <span class="hljs-string">&quot;react&quot;</span>,
+      <span class="hljs-attr">&quot;noUnusedParameters&quot;</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">&quot;noUnusedLocals&quot;</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">&quot;noImplicitAny&quot;</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">&quot;target&quot;</span>: <span class="hljs-string">&quot;es6&quot;</span>,
+      <span class="hljs-attr">&quot;lib&quot;</span>: [<span class="hljs-string">&quot;dom&quot;</span>, <span class="hljs-string">&quot;es2017&quot;</span>],
+      <span class="hljs-attr">&quot;skipLibCheck&quot;</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">&quot;types&quot;</span>: [<span class="hljs-string">&quot;node&quot;</span>]
+    },
+    <span class="hljs-attr">&quot;exclude&quot;</span>: [<span class="hljs-string">&quot;node_modules&quot;</span>, <span class="hljs-string">&quot;lib&quot;</span>, <span class="hljs-string">&quot;es&quot;</span>]
+}
+</code></pre>
+<h3 id="t132.6 index.js">2.6 index.js <a href="#t132.6 index.js"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./components&apos;</span>);
+</code></pre>
+<h3 id="t142.7 components\index.tsx">2.7 components\index.tsx <a href="#t142.7 components\index.tsx"> # </a></h3>
+<p>components\index.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> Button <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./button&apos;</span>;
+
+<span class="hljs-keyword">export</span> type { ButtonProps } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./button&apos;</span>;
+<span class="hljs-keyword">export</span> { Button };
+</code></pre>
+<h3 id="t152.8 button\index.tsx">2.8 button\index.tsx <a href="#t152.8 button\index.tsx"> # </a></h3>
+<p>components\button\index.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> Button <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./button&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Button;
+<span class="hljs-keyword">export</span> type { ButtonProps } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./button&apos;</span>;
+</code></pre>
+<h3 id="t162.9 button.tsx">2.9 button.tsx <a href="#t162.9 button.tsx"> # </a></h3>
+<p>components\button\button.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { ButtonHTMLAttributes } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+interface ButtonProps extends ButtonHTMLAttributes&lt;HTMLButtonElement&gt; {}
+<span class="hljs-keyword">const</span> Button: React.FC&lt;ButtonProps&gt; = <span class="hljs-function">(<span class="hljs-params">props</span>) =&gt;</span> {
+  <span class="hljs-keyword">const</span> { children } = props;
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span>&gt;</span>{children}<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>;
+};
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Button;
+<span class="hljs-keyword">export</span> type { ButtonProps };
+</code></pre>
+<h2 id="t173.storybook">3.storybook <a href="#t173.storybook"> # </a></h2>
+<ul>
+<li><a href="https://storybook.js.org">storybook</a>&#x662F;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x5F00;&#x53D1;UI&#x7EC4;&#x4EF6;&#x7684;&#x5F00;&#x6E90;&#x5DE5;&#x5177;&#xFF0C;&#x662F;UI&#x7EC4;&#x4EF6;&#x7684;&#x5F00;&#x53D1;&#x73AF;&#x5883;</li>
+<li><a href="https://www.npmjs.com/package/@storybook/react">@storybook/react</a>&#x662F;React&#x7684;&#x8FD0;&#x884C;&#x73AF;&#x5883;</li>
+<li><a href="https://www.npmjs.com/package/@storybook/addon-essentials">@storybook/addon-essentials</a>&#x662F;storybook&#x6700;&#x597D;&#x63D2;&#x4EF6;&#x7684;&#x5408;&#x96C6;</li>
+</ul>
+<h3 id="t183.1 &#x5B89;&#x88C5;">3.1 &#x5B89;&#x88C5; <a href="#t183.1 &#x5B89;&#x88C5;"> # </a></h3>
+<pre><code class="lang-js">yarn add @storybook/react   @storybook/addon-essentials --dev
+</code></pre>
+<h3 id="t193.2 .storybook\main.js">3.2 .storybook\main.js <a href="#t193.2 .storybook\main.js"> # </a></h3>
+<p>.storybook\main.js</p>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
+    <span class="hljs-attr">stories</span>: [
+        <span class="hljs-string">&quot;../components/Introduction.stories.mdx&quot;</span>,
+        <span class="hljs-string">&quot;../components/Install.stories.mdx&quot;</span>,
+        <span class="hljs-string">&quot;../components/Components.stories.mdx&quot;</span>,
+        <span class="hljs-string">&quot;../components/**/*.stories.mdx&quot;</span>,
+        <span class="hljs-string">&quot;../components/**/*.stories.@(js|jsx|ts|tsx)&quot;</span>
+    ],
+    <span class="hljs-attr">addons</span>: [<span class="hljs-string">&apos;@storybook/addon-essentials&apos;</span>],
+};
+</code></pre>
+<h3 id="t203.3 Introduction.stories.mdx">3.3 Introduction.stories.mdx <a href="#t203.3 Introduction.stories.mdx"> # </a></h3>
+<p>components\Introduction.stories.mdx</p>
+<pre><code class="lang-js">&lt;Meta title=&quot;&#x5F00;&#x59CB;/&#x4ECB;&#x7ECD;&quot; /&gt;
+
+## Ant Design of React
+antd &#x662F;&#x57FA;&#x4E8E; Ant Design &#x8BBE;&#x8BA1;&#x4F53;&#x7CFB;&#x7684; React UI &#x7EC4;&#x4EF6;&#x5E93;&#xFF0C;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x7814;&#x53D1;&#x4F01;&#x4E1A;&#x7EA7;&#x4E2D;&#x540E;&#x53F0;&#x4EA7;&#x54C1;&#x3002;
+</code></pre>
+<h3 id="t213.4 Install.stories.mdx">3.4 Install.stories.mdx <a href="#t213.4 Install.stories.mdx"> # </a></h3>
+<p>components\Install.stories.mdx</p>
+<pre><code class="lang-js">&lt;Meta title=&quot;&#x5F00;&#x59CB;/&#x5B89;&#x88C5;&#x4F7F;&#x7528;&quot; /&gt;
+
+## &#x5B89;&#x88C5;
+&#x4F7F;&#x7528; npm &#x6216; yarn &#x5B89;&#x88C5;
+
+
+npm install ant --save
+
+
+
+yarn add ant
+
+
+## &#x6D4F;&#x89C8;&#x5668;&#x5F15;&#x5165;
+&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x4F7F;&#x7528; script &#x548C; link &#x6807;&#x7B7E;&#x76F4;&#x63A5;&#x5F15;&#x5165;&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;&#x5168;&#x5C40;&#x53D8;&#x91CF; ant
+&#x6211;&#x4EEC;&#x5728; npm &#x53D1;&#x5E03;&#x5305;&#x5185;&#x7684; antdesign/dist &#x76EE;&#x5F55;&#x4E0B;&#x63D0;&#x4F9B;&#x4E86; ant.js
+
+## &#x793A;&#x4F8B;
+
+
+import { Button } from &apos;antdesign&apos;;
+ReactDOM.render(&lt;Button&gt;&#x6309;&#x94AE;&lt;/Button&gt;, mountNode);
+</code></pre>
+<h3 id="t223.5 Components.stories.mdx">3.5 Components.stories.mdx <a href="#t223.5 Components.stories.mdx"> # </a></h3>
+<p>components\Components.stories.mdx</p>
+<pre><code class="lang-js">&lt;Meta title=&quot;&#x5F00;&#x59CB;/&#x7EC4;&#x4EF6;&#x603B;&#x89C8;&quot; /&gt;
+
+## &#x7EC4;&#x4EF6;&#x603B;&#x89C8;
+antd &#x662F;&#x57FA;&#x4E8E; Ant Design &#x8BBE;&#x8BA1;&#x4F53;&#x7CFB;&#x7684; React UI &#x7EC4;&#x4EF6;&#x5E93;&#xFF0C;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x7814;&#x53D1;&#x4F01;&#x4E1A;&#x7EA7;&#x4E2D;&#x540E;&#x53F0;&#x4EA7;&#x54C1;&#x3002;
+
+## &#x901A;&#x7528;
+- Button &#x6309;&#x94AE;
+- Icon &#x56FE;&#x6807;
+- Typography &#x6392;&#x7248;
+
+## &#x5E03;&#x5C40;
+- Divider &#x5206;&#x5272;&#x7EBF;
+- Grid &#x6805;&#x683C;
+- Layout &#x5E03;&#x5C40;
+- Space &#x95F4;&#x8DDD;
+
+## &#x5BFC;&#x822A;
+- Affix &#x56FA;&#x9489;
+- Breadcrumb &#x9762;&#x5305;&#x5C51;
+- Dropdown &#x4E0B;&#x62C9;&#x83DC;&#x5355;
+- Menu &#x5BFC;&#x822A;&#x83DC;&#x5355;
+- Pagination &#x5206;&#x9875;
+- PageHeader &#x9875;&#x5934;
+- Steps &#x6B65;&#x9AA4;&#x6761;
+
+## &#x6570;&#x636E;&#x5F55;&#x5165;
+- AutoComplete &#x81EA;&#x52A8;&#x5B8C;&#x6210;
+- Checkbox &#x591A;&#x9009;&#x6846;
+- Cascader &#x7EA7;&#x8054;&#x9009;&#x62E9;
+- DatePicker &#x65E5;&#x671F;&#x9009;&#x62E9;&#x6846;
+- Form &#x8868;&#x5355;
+- InputNumber &#x6570;&#x5B57;&#x8F93;&#x5165;&#x6846;
+- Input &#x8F93;&#x5165;&#x6846;
+- Mentions &#x63D0;&#x53CA;
+- Rate &#x8BC4;&#x5206;
+- Radio &#x5355;&#x9009;&#x6846;
+- Switch &#x5F00;&#x5173;
+- Slider &#x6ED1;&#x52A8;&#x8F93;&#x5165;&#x6761;
+- Select &#x9009;&#x62E9;&#x5668;
+- TreeSelect &#x6811;&#x9009;&#x62E9;
+- Transfer &#x7A7F;&#x68AD;&#x6846;
+- TimePicker &#x65F6;&#x95F4;&#x9009;&#x62E9;&#x6846;
+- Upload &#x4E0A;&#x4F20;
+
+## &#x6570;&#x636E;&#x5C55;&#x793A;
+- Avatar &#x5934;&#x50CF;
+- Badge &#x5FBD;&#x6807;&#x6570;
+- Comment &#x8BC4;&#x8BBA;
+- Collapse &#x6298;&#x53E0;&#x9762;&#x677F;
+- Carousel &#x8D70;&#x9A6C;&#x706F;
+- Card &#x5361;&#x7247;
+- Calendar &#x65E5;&#x5386;
+- Descriptions &#x63CF;&#x8FF0;&#x5217;&#x8868;
+- Empty &#x7A7A;&#x72B6;&#x6001;
+- Image &#x56FE;&#x7247;
+- List &#x5217;&#x8868;
+- Popover &#x6C14;&#x6CE1;&#x5361;&#x7247;
+- Statistic &#x7EDF;&#x8BA1;&#x6570;&#x503C;
+- Tree &#x6811;&#x5F62;&#x63A7;&#x4EF6;
+- Tooltip &#x6587;&#x5B57;&#x63D0;&#x793A;
+- Timeline &#x65F6;&#x95F4;&#x8F74;
+- Tag &#x6807;&#x7B7E;
+- Tabs &#x6807;&#x7B7E;&#x9875;
+- Table &#x8868;&#x683C;
+
+
+## &#x53CD;&#x9988;
+- Alert &#x8B66;&#x544A;&#x63D0;&#x793A;
+- Drawer &#x62BD;&#x5C49;
+- Modal &#x5BF9;&#x8BDD;&#x6846;
+- Message &#x5168;&#x5C40;&#x63D0;&#x793A;
+- Notification &#x901A;&#x77E5;&#x63D0;&#x9192;&#x6846;
+- Progress &#x8FDB;&#x5EA6;&#x6761;
+- Popconfirm &#x6C14;&#x6CE1;&#x786E;&#x8BA4;&#x6846;
+- Result &#x7ED3;&#x679C;
+- Spin &#x52A0;&#x8F7D;&#x4E2D;
+- Skeleton &#x9AA8;&#x67B6;&#x5C4F;
+
+## &#x5176;&#x4ED6;
+- Anchor &#x951A;&#x70B9;
+- BackTop &#x56DE;&#x5230;&#x9876;&#x90E8;
+- ConfigProvider &#x5168;&#x5C40;&#x5316;&#x914D;&#x7F6E;
+</code></pre>
+<h3 id="t233.6  button.stories.tsx">3.6  button.stories.tsx <a href="#t233.6  button.stories.tsx"> # </a></h3>
+<p>components\button\button.stories.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react&quot;</span>;
+<span class="hljs-keyword">import</span> { ComponentStory, ComponentMeta } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;@storybook/react&quot;</span>;
+
+<span class="hljs-keyword">import</span> Button <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;.&quot;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  <span class="hljs-attr">title</span>: <span class="hljs-string">&quot;&#x901A;&#x7528;/Button(&#x6309;&#x94AE;)&quot;</span>,
+  <span class="hljs-attr">component</span>: Button,
+} <span class="hljs-keyword">as</span> ComponentMeta&lt;<span class="hljs-keyword">typeof</span> Button&gt;;
+
+<span class="hljs-keyword">const</span> Template: ComponentStory&lt;<span class="hljs-keyword">typeof</span> Button&gt; = <span class="hljs-function">(<span class="hljs-params">args</span>) =&gt;</span> (
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Button</span>  {<span class="hljs-attr">...args</span>} /&gt;</span></span>
+);
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> Basic = Template.bind({});
+Basic.args = {
+  <span class="hljs-attr">children</span>: <span class="hljs-string">&quot;&#x6309;&#x94AE;&quot;</span>,
+};
+</code></pre>
+<h3 id="t243.7 package.json">3.7 package.json <a href="#t243.7 package.json"> # </a></h3>
+<pre><code class="lang-diff">  &quot;scripts&quot;: {
+    &quot;build&quot;: &quot;webpack&quot;,
+<span class="hljs-addition">+   &quot;storybook&quot;: &quot;start-storybook -p 6006&quot;,</span>
+<span class="hljs-addition">+   &quot;build-storybook&quot;: &quot;build-storybook&quot;</span>
+  },
+</code></pre>
+<h2 id="t254.&#x6D4B;&#x8BD5;">4.&#x6D4B;&#x8BD5; <a href="#t254.&#x6D4B;&#x8BD5;"> # </a></h2>
+<ul>
+<li><a href="https://jestjs.io/docs/configuration">configuration</a></li>
+<li><a href="https://jestjs.io/docs/code-transformation">code-transformation</a></li>
+</ul>
+<h3 id="t264.1 &#x5B89;&#x88C5;">4.1 &#x5B89;&#x88C5; <a href="#t264.1 &#x5B89;&#x88C5;"> # </a></h3>
+<ul>
+<li><a href="https://www.jestjs.cn/">jest</a>&#x662F;&#x4E00;&#x4E2A;&#x4EE4;&#x4EBA;&#x6109;&#x5FEB;&#x7684; JavaScript &#x6D4B;&#x8BD5;&#x6846;&#x67B6;</li>
+<li><a href="https://www.npmjs.com/package/enzyme">Enzyme</a> &#x7528;&#x4E8E; React &#x7684; JS &#x6D4B;&#x8BD5;&#x5DE5;&#x5177;</li>
+<li><a href="https://www.npmjs.com/package/puppeteer">puppeteer</a>&#x662F;&#x4E00;&#x4E2A;&#x63A7;&#x5236; headless Chrome &#x7684; Node.js API</li>
+<li><a href="https://www.npmjs.com/package/jest-image-snapshot">jest-image-snapshot</a>&#x6267;&#x884C;&#x56FE;&#x50CF;&#x6BD4;&#x8F83;&#x7684;Jest&#x5339;&#x914D;&#x5668;,&#x5BF9;&#x4E8E;&#x89C6;&#x89C9;&#x56DE;&#x5F52;&#x6D4B;&#x8BD5;&#x975E;&#x5E38;&#x6709;&#x7528;</li>
+</ul>
+<pre><code class="lang-js">yarn add jest @types/jest  @wojtekmaj/enzyme-adapter-react<span class="hljs-number">-17</span> puppeteer @types/puppeteer jest-environment-puppeteer  @types/jest-environment-puppeteer jest-puppeteer  jest-image-snapshot @types/jest-image-snapshot --dev
+yarn add enzyme  @types/enzyme  --dev
+</code></pre>
+<h3 id="t274.2 tests\setup.js">4.2 tests\setup.js <a href="#t274.2 tests\setup.js"> # </a></h3>
+<p>tests\setup.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> React = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;react&apos;</span>);
+<span class="hljs-keyword">const</span> Enzyme = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;enzyme&apos;</span>);
+
+<span class="hljs-keyword">const</span> Adapter = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@wojtekmaj/enzyme-adapter-react-17&apos;</span>)
+Enzyme.configure({ <span class="hljs-attr">adapter</span>: <span class="hljs-keyword">new</span> Adapter() });
+</code></pre>
+<h3 id="t284.3 tests\index.html">4.3 tests\index.html <a href="#t284.3 tests\index.html"> # </a></h3>
+<p>tests\index.html</p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Amazing Antd<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+      <span class="hljs-selector-tag">body</span> {
+        <span class="hljs-attribute">border</span>: <span class="hljs-number">5px</span> solid <span class="hljs-number">#1890ff</span>;
+      }
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;root&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h3 id="t294.4 unit.jest.js">4.4 unit.jest.js <a href="#t294.4 unit.jest.js"> # </a></h3>
+<p>unit.jest.js</p>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-attr">verbose</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">testEnvironment</span>: <span class="hljs-string">&apos;jsdom&apos;</span>,
+  <span class="hljs-attr">setupFiles</span>: [<span class="hljs-string">&apos;./tests/setup.js&apos;</span>],
+  <span class="hljs-attr">testMatch</span>: [<span class="hljs-string">&apos;**/unit/**/*.(spec|test).(js|ts|jsx|tsx)&apos;</span>],
+  <span class="hljs-attr">collectCoverage</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">collectCoverageFrom</span>: [
+    <span class="hljs-string">&apos;components/**/*.(js|ts|jsx|tsx)&apos;</span>,
+    <span class="hljs-string">&apos;!components/**/*.stories.(js|ts|jsx|tsx)&apos;</span>,
+    <span class="hljs-string">&apos;!components/**/*.(spec|test).(js|ts|jsx|tsx)&apos;</span>,
+  ],
+};
+</code></pre>
+<h3 id="t304.5 e2e.jest.js">4.5 e2e.jest.js <a href="#t304.5 e2e.jest.js"> # </a></h3>
+<p>e2e.jest.js</p>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-attr">verbose</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">testEnvironment</span>: <span class="hljs-string">&apos;jest-environment-puppeteer&apos;</span>,
+  <span class="hljs-attr">setupFiles</span>: [<span class="hljs-string">&apos;./tests/setup.js&apos;</span>],
+  <span class="hljs-attr">preset</span>: <span class="hljs-string">&apos;jest-puppeteer&apos;</span>,
+  <span class="hljs-attr">testMatch</span>: [<span class="hljs-string">&apos;**/e2e/**/*.(spec|test).(j|t)sx&apos;</span>],
+};
+</code></pre>
+<h3 id="t314.6 unit\index.test.tsx">4.6 unit\index.test.tsx <a href="#t314.6 unit\index.test.tsx"> # </a></h3>
+<p>components\button\unit\index.test.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { mount } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;enzyme&apos;</span>;
+<span class="hljs-keyword">import</span> Button <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;..&apos;</span>;
+
+describe(<span class="hljs-string">&apos;Button&apos;</span>, () =&gt; {
+  it(<span class="hljs-string">&apos;mount correctly&apos;</span>, () =&gt; {
+    expect(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> mount(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Button</span>&gt;</span>Follow<span class="hljs-tag">&lt;/<span class="hljs-name">Button</span>&gt;</span></span>)).not.toThrow();
+  });
+});
+
+</code></pre>
+<h3 id="t324.7 snapshot.spec.tsx">4.7 snapshot.spec.tsx <a href="#t324.7 snapshot.spec.tsx"> # </a></h3>
+<p>components\button\e2e\snapshot.spec.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> ReactDOMServer <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom/server&apos;</span>;
+<span class="hljs-keyword">import</span> { configureToMatchImageSnapshot } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;jest-image-snapshot&apos;</span>;
+<span class="hljs-keyword">import</span> Button <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;..&apos;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;jest-environment-puppeteer&apos;</span>;
+<span class="hljs-keyword">const</span> toMatchSnapshot = configureToMatchImageSnapshot({
+  <span class="hljs-attr">customSnapshotsDir</span>: <span class="hljs-string">`<span class="hljs-subst">${process.cwd()}</span>/snapshots`</span>,
+  <span class="hljs-attr">customDiffDir</span>: <span class="hljs-string">`<span class="hljs-subst">${process.cwd()}</span>/diffSnapshots`</span>,
+});
+expect.extend({ toMatchSnapshot });
+describe(<span class="hljs-string">&apos;Button snapshot&apos;</span>, () =&gt; {
+  it(<span class="hljs-string">&apos;screenshot should correct&apos;</span>, <span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">await</span> jestPuppeteer.resetPage();
+    <span class="hljs-keyword">await</span> page.goto(<span class="hljs-string">`file://<span class="hljs-subst">${process.cwd()}</span>/tests/index.html`</span>);
+    <span class="hljs-keyword">const</span> html = ReactDOMServer.renderToString(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Button</span>&gt;</span>&#x6309;&#x94AE;<span class="hljs-tag">&lt;/<span class="hljs-name">Button</span>&gt;</span></span>);
+    <span class="hljs-keyword">await</span> page.evaluate(<span class="hljs-function">(<span class="hljs-params">innerHTML:string</span>) =&gt;</span> {
+      <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&apos;#root&apos;</span>)!.innerHTML = innerHTML;
+    }, html);
+    <span class="hljs-keyword">const</span> screenshot = <span class="hljs-keyword">await</span> page.screenshot();
+    expect(screenshot).toMatchSnapshot();
+  });
+});
+
+</code></pre>
+<h3 id="t334.8 jest-puppeteer.config.js">4.8 jest-puppeteer.config.js <a href="#t334.8 jest-puppeteer.config.js"> # </a></h3>
+<p>jest-puppeteer.config.js</p>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-attr">launch</span>: {
+    <span class="hljs-attr">dumpio</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">headless</span>: process.env.HEADLESS !== <span class="hljs-string">&apos;false&apos;</span>,
+  },
+  <span class="hljs-attr">browserContext</span>: <span class="hljs-string">&apos;default&apos;</span>,
+};
+</code></pre>
+<h3 id="t344.9 package.json">4.9 package.json <a href="#t344.9 package.json"> # </a></h3>
+<p>package.json</p>
+<pre><code class="lang-diff">{
+  &quot;scripts&quot;: {
+    &quot;build&quot;: &quot;webpack&quot;,
+    &quot;storybook&quot;: &quot;start-storybook -p 6006&quot;,
+    &quot;build-storybook&quot;: &quot;build-storybook&quot;,
+<span class="hljs-addition">+   &quot;test:unit&quot;: &quot;jest --config unit.jest.js&quot;,</span>
+<span class="hljs-addition">+   &quot;test:e2e&quot;: &quot;jest --config e2e.jest.js&quot;,</span>
+<span class="hljs-addition">+   &quot;test&quot;: &quot;npm run test:unit &amp;&amp; npm run test:e2e&quot;</span>
+  },
+}
+</code></pre>
+<h2 id="t355.eslint">5.eslint <a href="#t355.eslint"> # </a></h2>
+<ul>
+<li><a href="https://eslint.bootcss.com/">eslint</a>&#x662F;&#x4E00;&#x4E2A;&#x63D2;&#x4EF6;&#x5316;&#x5E76;&#x4E14;&#x53EF;&#x914D;&#x7F6E;&#x7684; JavaScript &#x8BED;&#x6CD5;&#x89C4;&#x5219;&#x548C;&#x4EE3;&#x7801;&#x98CE;&#x683C;&#x7684;&#x68C0;&#x67E5;&#x5DE5;&#x5177;</li>
+<li><a href="https://www.npmjs.com/package/eslint-config-airbnb">eslint-config-airbnb</a>Airbnb&#x63D0;&#x4F9B;&#x7684;eslint&#x914D;&#x7F6E;</li>
+</ul>
+<h3 id="t365.1 &#x5B89;&#x88C5;">5.1 &#x5B89;&#x88C5; <a href="#t365.1 &#x5B89;&#x88C5;"> # </a></h3>
+<pre><code class="lang-js">yarn add @typescript-eslint/parser eslint eslint-plugin-<span class="hljs-keyword">import</span> eslint-plugin-react eslint-plugin-react-hooks and eslint-plugin-jsx-a11y eslint-config-airbnb --dev
+</code></pre>
+<h3 id="t375.2 .eslintrc.js">5.2 .eslintrc.js <a href="#t375.2 .eslintrc.js"> # </a></h3>
+<p>.eslintrc.js</p>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-attr">parser</span>: <span class="hljs-string">&apos;@typescript-eslint/parser&apos;</span>,
+  <span class="hljs-attr">extends</span>: [<span class="hljs-string">&apos;airbnb&apos;</span>],
+  <span class="hljs-attr">env</span>: {
+    <span class="hljs-attr">browser</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">node</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">jasmine</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">jest</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">es6</span>: <span class="hljs-literal">true</span>,
+  },
+  <span class="hljs-attr">rules</span>: {
+    <span class="hljs-string">&apos;import/extensions&apos;</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-string">&apos;import/no-unresolved&apos;</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-string">&apos;react/jsx-filename-extension&apos;</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-comment">// https://github.com/typescript-eslint/typescript-eslint/issues/2540#issuecomment-692866111</span>
+    <span class="hljs-string">&apos;no-use-before-define&apos;</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-string">&apos;import/prefer-default-export&apos;</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-string">&apos;import/no-named-default&apos;</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-string">&apos;no-console&apos;</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-string">&apos;no-param-reassign&apos;</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-string">&apos;func-names&apos;</span>: <span class="hljs-number">0</span>,
+  }
+};
+</code></pre>
+<h3 id="t385.3 .eslintignore">5.3 .eslintignore <a href="#t385.3 .eslintignore"> # </a></h3>
+<p>.eslintignore</p>
+<pre><code class="lang-js">components<span class="hljs-comment">/**/e2e/*
+components/**/</span>unit<span class="hljs-comment">/*
+components/**/</span>*.stories.*
+lib
+es
+umd
+dist
+.storybook
+gulpfile.js
+</code></pre>
+<h3 id="t395.4 package.json">5.4 package.json <a href="#t395.4 package.json"> # </a></h3>
+<p>package.json</p>
+<pre><code class="lang-diff">{
+  &quot;scripts&quot;: {
+    &quot;build&quot;: &quot;webpack&quot;,
+    &quot;storybook&quot;: &quot;start-storybook -p 6006&quot;,
+    &quot;build-storybook&quot;: &quot;build-storybook&quot;,
+    &quot;test:unit&quot;: &quot;jest --config unit.jest.js&quot;,
+    &quot;test:e2e&quot;: &quot;jest --config e2e.jest.js&quot;,
+    &quot;test&quot;: &quot;npm run test:unit &amp;&amp; npm run test:e2e&quot;,
+<span class="hljs-addition">+   &quot;lint&quot;: &quot;eslint --ext .js,.jsx,.ts,.tsx components&quot;,</span>
+<span class="hljs-addition">+   &quot;lint:fix&quot;: &quot;eslint --fix --ext .js,.jsx,.ts,.tsx components&quot;</span>
+  }
+}
+</code></pre>
+<h2 id="t406.prettier">6.prettier <a href="#t406.prettier"> # </a></h2>
+<ul>
+<li><a href="https://www.npmjs.com/package/prettier">prettier</a> &#x662F;&#x4E00;&#x4E2A;&#x6709;&#x4E3B;&#x89C1;&#x7684;&#x4EE3;&#x7801;&#x683C;&#x5F0F;&#x5316;&#x5DE5;&#x5177;</li>
+<li><a href="https://www.npmjs.com/package/eslint-config-prettier">eslint-config-prettier</a>&#x5173;&#x95ED;&#x548C;prettier&#x51B2;&#x7A81;&#x7684;&#x89C4;&#x5219; </li>
+<li><a href="https://www.npmjs.com/package/eslint-plugin-prettier">eslint-plugin-prettier</a>&#x628A;Prettier&#x5F53;Eslint&#x89C4;&#x5219;&#x6765;&#x8FD0;&#x884C;&#x5E76;&#x4E14;&#x8FDB;&#x884C;&#x62A5;&#x544A;</li>
+</ul>
+<h3 id="t416.1 &#x5B89;&#x88C5;&#x4F9D;&#x8D56;">6.1 &#x5B89;&#x88C5;&#x4F9D;&#x8D56; <a href="#t416.1 &#x5B89;&#x88C5;&#x4F9D;&#x8D56;"> # </a></h3>
+<pre><code class="lang-js">yarn add prettier eslint-config-prettier eslint-plugin-prettier --dev
+</code></pre>
+<h3 id="t426.2 .eslintrc.js">6.2 .eslintrc.js <a href="#t426.2 .eslintrc.js"> # </a></h3>
+<p>.eslintrc.js</p>
+<pre><code class="lang-diff">module.exports = {
+  parser: &apos;@typescript-eslint/parser&apos;,
+<span class="hljs-addition">+ extends: [&apos;airbnb&apos;,&apos;prettier&apos;],</span>
+  env: {
+    browser: true,
+    node: true,
+    jasmine: true,
+    jest: true,
+    es6: true,
+  },
+<span class="hljs-addition">+ plugins: [&apos;prettier&apos;],</span>
+  rules: {
+<span class="hljs-addition">+   &apos;prettier/prettier&apos;: [&apos;error&apos;, { endOfLine: &apos;auto&apos; }],</span>
+    &apos;import/extensions&apos;: 0,
+    &apos;import/no-unresolved&apos;: 0,
+    &apos;react/jsx-filename-extension&apos;: 0,
+    // https://github.com/typescript-eslint/typescript-eslint/issues/2540#issuecomment-692866111
+    &apos;no-use-before-define&apos;: 0,
+    &apos;import/prefer-default-export&apos;: 0,
+    &apos;import/no-named-default&apos;: 0,
+    &apos;no-console&apos;: 0,
+    &apos;no-param-reassign&apos;: 0,
+    &apos;func-names&apos;: 0,
+  }
+};
+
+</code></pre>
+<h3 id="t436.3 .prettierrc">6.3 .prettierrc <a href="#t436.3 .prettierrc"> # </a></h3>
+<p>.prettierrc</p>
+<pre><code class="lang-js">{
+    <span class="hljs-string">&quot;singleQuote&quot;</span>: <span class="hljs-literal">true</span>
+}  
+</code></pre>
+<h3 id="t446.4 button\index.tsx">6.4 button\index.tsx <a href="#t446.4 button\index.tsx"> # </a></h3>
+<p>components\button\index.tsx</p>
+<pre><code class="lang-diff"><span class="hljs-addition">+            const title = &quot;hello&quot;;</span>
+</code></pre>
+<h3 id="t456.5 settings.json">6.5 settings.json <a href="#t456.5 settings.json"> # </a></h3>
+<p>.vscode\settings.json</p>
+<pre><code class="lang-json">{
+  <span class="hljs-attr">&quot;editor.codeActionsOnSave&quot;</span>: {
+    <span class="hljs-attr">&quot;source.fixAll.eslint&quot;</span>: <span class="hljs-literal">true</span>
+  },
+  <span class="hljs-attr">&quot;files.autoSave&quot;</span>: <span class="hljs-string">&quot;afterDelay&quot;</span>
+}
+</code></pre>
+<h2 id="t467.editorconfig">7.editorconfig <a href="#t467.editorconfig"> # </a></h2>
+<ul>
+<li><a href="https://github.com/editorconfig/">EditorConfig</a>&#x7531;&#x7528;&#x4E8E;&#x5B9A;&#x4E49;&#x7F16;&#x7801;&#x6837;&#x5F0F;&#x7684;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x548C;&#x4E00;&#x7EC4;&#x6587;&#x672C;&#x7F16;&#x8F91;&#x5668;&#x63D2;&#x4EF6;&#x7EC4;&#x6210;&#xFF0C;&#x8FD9;&#x4E9B;&#x63D2;&#x4EF6;&#x4F7F;&#x7F16;&#x8F91;&#x5668;&#x80FD;&#x591F;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x5E76;&#x9075;&#x5FAA;&#x5B9A;&#x4E49;&#x7684;&#x6837;&#x5F0F;</li>
+</ul>
+<h3 id="t477.1 .editorconfig">7.1 .editorconfig <a href="#t477.1 .editorconfig"> # </a></h3>
+<pre><code class="lang-js"># top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*.{js,css}]
+end_of_line = lf
+insert_final_newline = true
+indent_style = space
+indent_size = 2
+</code></pre>
+<h2 id="t488. git hook">8. git hook <a href="#t488. git hook"> # </a></h2>
+<ul>
+<li><a href="https://www.git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-Git-%E9%92%A9%E5%AD%90">Git &#x94A9;&#x5B50;</a>&#x80FD;&#x5728;&#x7279;&#x5B9A;&#x7684;&#x91CD;&#x8981;&#x52A8;&#x4F5C;&#x53D1;&#x751F;&#x65F6;&#x89E6;&#x53D1;&#x81EA;&#x5B9A;&#x4E49;&#x811A;&#x672C;</li>
+<li><a href="https://www.npmjs.com/package/husky">husky</a>&#x53EF;&#x4EE5;&#x8BA9;&#x6211;&#x4EEC;&#x5411;&#x9879;&#x76EE;&#x4E2D;&#x65B9;&#x4FBF;&#x6DFB;&#x52A0; git hooks</li>
+<li><a href="https://www.npmjs.com/package/lint-staged">lint-staged</a>&#x7528;&#x4E8E;&#x5B9E;&#x73B0;&#x6BCF;&#x6B21;&#x63D0;&#x4EA4;&#x53EA;&#x68C0;&#x67E5;&#x672C;&#x6B21;&#x63D0;&#x4EA4;&#x6240;&#x4FEE;&#x6539;&#x7684;&#x6587;&#x4EF6;</li>
+</ul>
+<h3 id="t498.1 &#x5B89;&#x88C5;">8.1 &#x5B89;&#x88C5; <a href="#t498.1 &#x5B89;&#x88C5;"> # </a></h3>
+<pre><code class="lang-js">yarn add husky --dev
+npm <span class="hljs-keyword">set</span>-script prepare &quot;husky install&quot;
+npm run prepare
+</code></pre>
+<h3 id="t508.2 pre-commit">8.2 pre-commit <a href="#t508.2 pre-commit"> # </a></h3>
+<ul>
+<li>pre-commit&#x5728;git add&#x63D0;&#x4EA4;&#x4E4B;&#x540E;&#xFF0C;&#x7136;&#x540E;&#x6267;&#x884C;git commit&#x65F6;&#x6267;&#x884C;&#xFF0C;&#x811A;&#x672C;&#x6267;&#x884C;&#x6CA1;&#x62A5;&#x9519;&#x5C31;&#x7EE7;&#x7EED;&#x63D0;&#x4EA4;&#xFF0C;&#x53CD;&#x4E4B;&#x5C31;&#x9A73;&#x56DE;&#x63D0;&#x4EA4;&#x7684;&#x64CD;&#x4F5C;</li>
+<li>&#x53EF;&#x4EE5;&#x5728; git commit &#x4E4B;&#x524D;&#x68C0;&#x67E5;&#x4EE3;&#x7801;&#xFF0C;&#x4FDD;&#x8BC1;&#x6240;&#x6709;&#x63D0;&#x4EA4;&#x5230;&#x7248;&#x672C;&#x5E93;&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#x90FD;&#x662F;&#x7B26;&#x5408;&#x89C4;&#x8303;&#x7684;</li>
+</ul>
+<h4 id="t518.2.1 &#x5B89;&#x88C5;&#x811A;&#x672C;">8.2.1 &#x5B89;&#x88C5;&#x811A;&#x672C; <a href="#t518.2.1 &#x5B89;&#x88C5;&#x811A;&#x672C;"> # </a></h4>
+<pre><code class="lang-js">npx husky add .husky/pre-commit <span class="hljs-string">&quot;npx lint-staged&quot;</span>
+</code></pre>
+<h4 id="t528.2.2 .lintstagedrc">8.2.2 .lintstagedrc <a href="#t528.2.2 .lintstagedrc"> # </a></h4>
+<pre><code class="lang-js">{
+    <span class="hljs-string">&quot;*.{js,ts,jsx,tsx}&quot;</span>: <span class="hljs-string">&quot;eslint&quot;</span>
+}
+</code></pre>
+<h3 id="t538.3 commit-msg">8.3 commit-msg <a href="#t538.3 commit-msg"> # </a></h3>
+<ul>
+<li><a href="https://github.com/conventional-changelog-archived-repos/validate-commit-msg">validate-commit-msg</a> &#x7528;&#x4E8E;&#x68C0;&#x67E5; Node &#x9879;&#x76EE;&#x7684; Commit message &#x662F;&#x5426;&#x7B26;&#x5408;&#x683C;&#x5F0F;</li>
+<li><a href="https://www.npmjs.com/package/commitizen">commitizen</a>&#x63D2;&#x4EF6;&#x53EF;&#x5E2E;&#x52A9;&#x5B9E;&#x73B0;&#x4E00;&#x81F4;&#x7684;&#x63D0;&#x4EA4;&#x6D88;&#x606F;</li>
+<li><a href="https://www.npmjs.com/package/cz-customizable">cz-customizable</a>&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x63D0;&#x4EA4;</li>
+<li><a href="https://www.npmjs.com/package/@commitlint/cli">@commitlint/cli</a>&#x53EF;&#x4EE5;&#x68C0;&#x67E5;&#x63D0;&#x4EA4;&#x4FE1;&#x606F;</li>
+<li><a href="https://www.npmjs.com/package/@commitlint/config-conventional">@commitlint/config-conventional</a>&#x68C0;&#x67E5;&#x60A8;&#x7684;&#x5E38;&#x89C4;&#x63D0;&#x4EA4;</li>
+</ul>
+<h4 id="t548.3.1 &#x5B89;&#x88C5;&#x4F9D;&#x8D56;">8.3.1 &#x5B89;&#x88C5;&#x4F9D;&#x8D56; <a href="#t548.3.1 &#x5B89;&#x88C5;&#x4F9D;&#x8D56;"> # </a></h4>
+<pre><code class="lang-js">yarn add commitizen cz-customizable @commitlint/cli @commitlint/config-conventional --dev
+</code></pre>
+<h4 id="t558.3.2 &#x5B89;&#x88C5;&#x811A;&#x672C;">8.3.2 &#x5B89;&#x88C5;&#x811A;&#x672C; <a href="#t558.3.2 &#x5B89;&#x88C5;&#x811A;&#x672C;"> # </a></h4>
+<pre><code class="lang-js">npx husky add .husky/commit-msg <span class="hljs-string">&quot;npx --no-install commitlint --edit $1&quot;</span>
+</code></pre>
+<h4 id="t568.3.3 .cz-config.js">8.3.3 .cz-config.js <a href="#t568.3.3 .cz-config.js"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-attr">types</span>: [
+    { <span class="hljs-attr">value</span>: <span class="hljs-string">&quot;feat&quot;</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;feat:&#x4E00;&#x4E2A;&#x65B0;&#x7279;&#x6027;&quot;</span> },
+    { <span class="hljs-attr">value</span>: <span class="hljs-string">&quot;fix&quot;</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;fix:&#x4FEE;&#x590D;BUG&quot;</span> },
+  ],
+  <span class="hljs-attr">scopes</span>: [{ <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;admin&quot;</span> }, { <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;user&quot;</span> }],
+};
+</code></pre>
+<h4 id="t578.3.4 commitlint.config.js">8.3.4 commitlint.config.js <a href="#t578.3.4 commitlint.config.js"> # </a></h4>
+<p>commitlint.config.js</p>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-attr">extends</span>: [<span class="hljs-string">&apos;@commitlint/config-conventional&apos;</span>],
+};
+</code></pre>
+<h3 id="t588.4 pre-push">8.4 pre-push <a href="#t588.4 pre-push"> # </a></h3>
+<ul>
+<li>&#x53EF;&#x4EE5;&#x5728; git push &#x4E4B;&#x524D;&#x6267;&#x884C;&#x5355;&#x5143;&#x6D4B;&#x8BD5;,&#x4FDD;&#x8BC1;&#x6240;&#x6709;&#x7684;&#x63D0;&#x4EA4;&#x7684;&#x4EE3;&#x7801;&#x7ECF;&#x8FC7;&#x7684;&#x5355;&#x5143;&#x6D4B;&#x8BD5;</li>
+</ul>
+<h4 id="t598.4.1 &#x5B89;&#x88C5;&#x811A;&#x672C;">8.4.1 &#x5B89;&#x88C5;&#x811A;&#x672C; <a href="#t598.4.1 &#x5B89;&#x88C5;&#x811A;&#x672C;"> # </a></h4>
+<pre><code class="lang-js">npx husky add .husky/pre-push <span class="hljs-string">&quot;npm run test&quot;</span>
+
+npm pubish
+</code></pre>
+<h2 id="t609. &#x7F16;&#x8BD1;&#x53D1;&#x5E03;">9. &#x7F16;&#x8BD1;&#x53D1;&#x5E03; <a href="#t609. &#x7F16;&#x8BD1;&#x53D1;&#x5E03;"> # </a></h2>
+<ul>
+<li><a href="https://www.npmjs.com/package/rimraf">rimraf</a>&#x662F; node&#x7248;&#x672C;&#x7684; <code>rm -rf</code></li>
+<li><a href="https://www.gulpjs.com.cn/">gulp</a>&#x5C06;&#x5F00;&#x53D1;&#x6D41;&#x7A0B;&#x4E2D;&#x8BA9;&#x4EBA;&#x75DB;&#x82E6;&#x6216;&#x8017;&#x65F6;&#x7684;&#x4EFB;&#x52A1;&#x81EA;&#x52A8;&#x5316;&#xFF0C;&#x4ECE;&#x800C;&#x51CF;&#x5C11;&#x4F60;&#x6240;&#x6D6A;&#x8D39;&#x7684;&#x65F6;&#x95F4;&#x3001;&#x521B;&#x9020;&#x66F4;&#x5927;&#x4EF7;&#x503C;&#x3002;</li>
+<li><a href="https://www.npmjs.com/package/merge2">merge2</a>&#x5408;&#x5E76;&#x591A;&#x4E2A;&#x6D41;&#x4E3A;&#x540C;&#x4E00;&#x4E2A;</li>
+</ul>
+<h3 id="t619.1 &#x5B89;&#x88C5;&#x4F9D;&#x8D56;">9.1 &#x5B89;&#x88C5;&#x4F9D;&#x8D56; <a href="#t619.1 &#x5B89;&#x88C5;&#x4F9D;&#x8D56;"> # </a></h3>
+<pre><code class="lang-js">yarn add rimraf gulp gulp-typescript gulp-babel merge2 --dev
+
+npm version patch
+npm publish
+cat ~/.npmrc
+</code></pre>
+<h3 id="t629.2 gulpfile.js">9.2 gulpfile.js <a href="#t629.2 gulpfile.js"> # </a></h3>
+<p>gulpfile.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> gulp = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;gulp&apos;</span>);
+<span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
+<span class="hljs-keyword">const</span> rimraf = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;rimraf&apos;</span>);
+<span class="hljs-keyword">const</span> ts = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;gulp-typescript&apos;</span>);
+<span class="hljs-keyword">const</span> babel = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;gulp-babel&apos;</span>);
+<span class="hljs-keyword">const</span> merge2 = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;merge2&apos;</span>);
+<span class="hljs-keyword">const</span> { compilerOptions } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./tsconfig.json&apos;</span>);
+
+<span class="hljs-keyword">const</span> tsConfig = {
+  <span class="hljs-attr">noUnusedParameters</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">noUnusedLocals</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">strictNullChecks</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">target</span>: <span class="hljs-string">&apos;es6&apos;</span>,
+  <span class="hljs-attr">jsx</span>: <span class="hljs-string">&apos;preserve&apos;</span>,
+  <span class="hljs-attr">moduleResolution</span>: <span class="hljs-string">&apos;node&apos;</span>,
+  <span class="hljs-attr">declaration</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">allowSyntheticDefaultImports</span>: <span class="hljs-literal">true</span>,
+  ...compilerOptions,
+};
+<span class="hljs-keyword">const</span> babelConfig = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./babel.config&apos;</span>);
+
+<span class="hljs-keyword">const</span> source = [
+  <span class="hljs-string">&apos;components/**/*.{js,ts,jsx,tsx}&apos;</span>,
+  <span class="hljs-string">&apos;!components/**/*.stories.{js,ts,jsx,tsx}&apos;</span>,
+  <span class="hljs-string">&apos;!components/**/e2e/*&apos;</span>,
+  <span class="hljs-string">&apos;!components/**/unit/*&apos;</span>,
+];
+<span class="hljs-keyword">const</span> base = path.join(process.cwd(), <span class="hljs-string">&apos;components&apos;</span>);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getProjectPath</span>(<span class="hljs-params">filePath</span>) </span>{
+  <span class="hljs-keyword">return</span> path.join(process.cwd(), filePath);
+}
+<span class="hljs-keyword">const</span> libDir = getProjectPath(<span class="hljs-string">&apos;lib&apos;</span>);
+<span class="hljs-keyword">const</span> esDir = getProjectPath(<span class="hljs-string">&apos;es&apos;</span>);
+
+gulp.task(<span class="hljs-string">&apos;compile-with-es&apos;</span>, (done) =&gt; {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Compile to es...&apos;</span>);
+  compile(<span class="hljs-literal">false</span>).on(<span class="hljs-string">&apos;finish&apos;</span>, done);
+});
+
+gulp.task(<span class="hljs-string">&apos;compile-with-lib&apos;</span>, (done) =&gt; {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Compile to js...&apos;</span>);
+  compile().on(<span class="hljs-string">&apos;finish&apos;</span>, done);
+});
+gulp.task(<span class="hljs-string">&apos;compile&apos;</span>, gulp.parallel(<span class="hljs-string">&apos;compile-with-es&apos;</span>, <span class="hljs-string">&apos;compile-with-lib&apos;</span>));
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">compile</span>(<span class="hljs-params">modules</span>) </span>{
+  <span class="hljs-keyword">const</span> targetDir = modules === <span class="hljs-literal">false</span> ? esDir : libDir;
+  rimraf.sync(targetDir);
+  <span class="hljs-keyword">const</span> { js, dts } = gulp.src(source, { base }).pipe(ts(tsConfig));
+  <span class="hljs-keyword">const</span> dtsFilesStream = dts.pipe(gulp.dest(targetDir));
+  <span class="hljs-keyword">let</span> jsFilesStream = js;
+  <span class="hljs-keyword">if</span> (modules) {
+    jsFilesStream = js.pipe(babel(babelConfig));
+  }
+  jsFilesStream = jsFilesStream.pipe(gulp.dest(targetDir));
+  <span class="hljs-keyword">return</span> merge2([jsFilesStream, dtsFilesStream]);
+}
+</code></pre>
+<h3 id="t639.3 package.json">9.3 package.json <a href="#t639.3 package.json"> # </a></h3>
+<p>package.json</p>
+<pre><code class="lang-diff">{
+<span class="hljs-addition">+ &quot;main&quot;: &quot;lib/index.js&quot;,</span>
+<span class="hljs-addition">+ &quot;module&quot;: &quot;es/index.js&quot;,</span>
+<span class="hljs-addition">+ &quot;unpkg&quot;: &quot;dist/antd.js&quot;,</span>
+<span class="hljs-addition">+ &quot;typings&quot;: &quot;lib/index.d.ts&quot;,</span>
+<span class="hljs-addition">+ &quot;files&quot;: [</span>
+<span class="hljs-addition">+   &quot;dist&quot;,</span>
+<span class="hljs-addition">+   &quot;es&quot;,</span>
+<span class="hljs-addition">+   &quot;lib&quot;</span>
+<span class="hljs-addition">+ ],</span>
+}
+</code></pre>
+<h2 id="t6410. &#x6301;&#x7EED;&#x96C6;&#x6210;">10. &#x6301;&#x7EED;&#x96C6;&#x6210; <a href="#t6410. &#x6301;&#x7EED;&#x96C6;&#x6210;"> # </a></h2>
+<ul>
+<li><a href="https://www.travis-ci.com/">Travis CI</a>&#x63D0;&#x4F9B;&#x7684;&#x662F;&#x6301;&#x7EED;&#x96C6;&#x6210;&#x670D;&#x52A1;&#xFF08;Continuous Integration&#xFF0C;&#x7B80;&#x79F0; CI&#xFF09;&#x3002;&#x5B83;&#x7ED1;&#x5B9A; Github &#x4E0A;&#x9762;&#x7684;&#x9879;&#x76EE;&#xFF0C;&#x53EA;&#x8981;&#x6709;&#x65B0;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x5C31;&#x4F1A;&#x81EA;&#x52A8;&#x6293;&#x53D6;&#x3002;&#x7136;&#x540E;&#xFF0C;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x8FD0;&#x884C;&#x73AF;&#x5883;&#xFF0C;&#x6267;&#x884C;&#x6D4B;&#x8BD5;&#xFF0C;&#x5B8C;&#x6210;&#x6784;&#x5EFA;&#xFF0C;&#x8FD8;&#x80FD;&#x90E8;&#x7F72;&#x5230;&#x670D;&#x52A1;&#x5668;</li>
+</ul>
+<h3 id="t6510.1 .travis.yml">10.1 .travis.yml <a href="#t6510.1 .travis.yml"> # </a></h3>
+<pre><code class="lang-js">language: node_js
+<span class="hljs-attr">node_js</span>:
+  - <span class="hljs-string">&quot;stable&quot;</span>
+<span class="hljs-attr">cache</span>:
+  directories:
+  - node_modules
+<span class="hljs-attr">env</span>:
+  - CI=<span class="hljs-literal">true</span>
+<span class="hljs-attr">install</span>:
+  - yarn config <span class="hljs-keyword">set</span> registry https://registry.npm.taobao.org  
+  - yarn install
+script:
+  - npm run build-storybook
+  - npm version patch
+deploy:
+  - provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    local_dir: storybook-static
+    on:
+      branch: master 
+  - provider: npm
+    email: zhang_renyang@126.com  
+    api_key: &quot;$NPM_TOKEN&quot;
+    skip_cleanup: true
+    on:
+      branch: master
+</code></pre>
+
+    </div>
+</div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+    aria-labelledby="loginModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="loginModalLabel">请登录</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="username" class="control-label">姓名:</label>
+                        <input type="text" class="form-control" id="username" placeholder="珠峰架构VIP会员系统用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">密码:</label>
+                        <input type="text" class="form-control" id="password" placeholder="珠峰架构VIP会员系统密码">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                    data-dismiss="modal">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+let zhufengjiagou = localStorage.getItem('zhufengjiagou');
+const host = 'http://login.zhufengpeixun.com';
+if(zhufengjiagou){
+  fetch(host+'/check',{method:"GET",mode: 'cors',
+　　headers: {'Content-Type': 'application/json', authorization: `Bearer ${zhufengjiagou}`}}).then(response => response.json()).then(res => {
+    if(res.success){
+     
+    }else{
+      $('#loginModal').modal('show')
+    }
+  }) 
+}else{
+   $('#loginModal').modal('show')
+}
+
+$('#loginModal').on('hidden.bs.modal', function (event) {
+  var modal = $(this)
+  let username = modal.find('.modal-body #username').val();
+  let password = modal.find('.modal-body #password').val();
+  fetch(host+'/login',{method:"POST",mode: 'cors',
+　　headers: {'Content-Type': 'application/json'},
+　　body:JSON.stringify({username,password})}).then(response => response.json()).then(res => {
+  console.log(res);
+    if(res.success){
+      localStorage.setItem('zhufengjiagou',res.zhufengjiagou);
+    }else{
+      window.location.href = 'http://www.zhufengpeixun.cn';
+    }
+  })
+})
+</script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

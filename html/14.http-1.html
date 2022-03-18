@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+
+
+
+
+<div class="warpper">
+
+    <div class="page-toc">
+        <ul><li><a href="#t01.HTTP协议和TCP协议">1.HTTP协议和TCP协议</a></li><li><a href="#t11.1 长链接">1.1 长链接</a></li><li><a href="#t21.2 管线化">1.2 管线化</a></li><li><a href="#t32. URI和URL">2. URI和URL</a><ul><li><a href="#t42.1 URI">2.1 URI</a></li><li><a href="#t52.2 URL">2.2 URL</a></li><li><a href="#t62.2.1 URL的格式">2.2.1 URL的格式</a></li></ul></li><li><a href="#t73. HTTP">3. HTTP</a><ul><li><a href="#t83.1 请求报文">3.1 请求报文</a></li><li><a href="#t93.2 响应报文">3.2 响应报文</a></li><li><a href="#t103.3 编码">3.3 编码</a></li><li><a href="#t113.3.1  编码压缩">3.3.1  编码压缩</a></li><li><a href="#t123.3.2  分割发送的分块传输编码">3.3.2  分割发送的分块传输编码</a></li><li><a href="#t133.3.3 多部分对象集合">3.3.3 多部分对象集合</a><ul><li><a href="#t143.3.3.1 multiparty/form-data">3.3.3.1 multiparty/form-data</a></li><li><a href="#t153.3.3.2 multipart/byteranges 206(Particial Content)">3.3.3.2 multipart/byteranges 206(Particial Content)</a></li></ul></li><li><a href="#t163.3.4 获取部分内容的范围请求">3.3.4 获取部分内容的范围请求</a></li><li><a href="#t173.4 内容协商">3.4 内容协商</a></li><li><a href="#t183.5 状态码">3.5 状态码</a><ul><li><a href="#t193.5.1 状态码类别">3.5.1 状态码类别</a></li><li><a href="#t203.5.2 2XX 成功">3.5.2 2XX 成功</a></li><li><a href="#t213.5.3 3XX 重定向">3.5.3 3XX 重定向</a></li><li><a href="#t223.5.4 4XX 客户端错误">3.5.4 4XX 客户端错误</a></li><li><a href="#t233.5.5 5XX 服务器端错误">3.5.5 5XX 服务器端错误</a></li></ul></li></ul></li><li><a href="#t244. Web服务器">4. Web服务器</a><ul><li><a href="#t254.1 虚拟主机(Virtual Host)">4.1 虚拟主机(Virtual Host)</a></li><li><a href="#t264.2 通信转发程序:代理、网关">4.2 通信转发程序:代理、网关</a><ul><li><a href="#t274.2.1 代理">4.2.1 代理</a><ul><li><a href="#t284.2.1.1 为啥使用代理">4.2.1.1 为啥使用代理</a></li><li><a href="#t294.2.1.2 代理的分类">4.2.1.2 代理的分类</a></li></ul></li><li><a href="#t304.2.2 网关">4.2.2 网关</a></li></ul></li></ul></li><li><a href="#t315. 首部">5. 首部</a><ul><li><a href="#t325.1 通用首部字段">5.1 通用首部字段</a></li><li><a href="#t335.2 请求首部字段">5.2 请求首部字段</a></li><li><a href="#t345.3 响应首部字段">5.3 响应首部字段</a></li><li><a href="#t355.4 实体首部字段">5.4 实体首部字段</a></li></ul></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <h2 id="t01.HTTP&#x534F;&#x8BAE;&#x548C;TCP&#x534F;&#x8BAE;">1.HTTP&#x534F;&#x8BAE;&#x548C;TCP&#x534F;&#x8BAE; <a href="#t01.HTTP&#x534F;&#x8BAE;&#x548C;TCP&#x534F;&#x8BAE;"> # </a></h2>
+<p><img src="http://img.zhufengpeixun.cn/tpchttp.png" alt="tcp-http"></p>
+<h2 id="t11.1 &#x957F;&#x94FE;&#x63A5;">1.1 &#x957F;&#x94FE;&#x63A5; <a href="#t11.1 &#x957F;&#x94FE;&#x63A5;"> # </a></h2>
+<p><img src="http://img.zhufengpeixun.cn/connection.png" alt="long"></p>
+<p><img src="http://img.zhufengpeixun.cn/keepalive.png" alt="keepalive"></p>
+<h2 id="t21.2 &#x7BA1;&#x7EBF;&#x5316;">1.2 &#x7BA1;&#x7EBF;&#x5316; <a href="#t21.2 &#x7BA1;&#x7EBF;&#x5316;"> # </a></h2>
+<p><img src="http://img.zhufengpeixun.cn/pipeline.png" alt="pipeline"></p>
+<h2 id="t32. URI&#x548C;URL">2. URI&#x548C;URL <a href="#t32. URI&#x548C;URL"> # </a></h2>
+<h3 id="t42.1 URI">2.1 URI <a href="#t42.1 URI"> # </a></h3>
+<p>URI(Uniform Resource Identifier)&#x662F;&#x7EDF;&#x4E00;&#x8D44;&#x6E90;&#x6807;&#x8BC6;&#x7B26;,&#x5728;&#x67D0;&#x4E2A;&#x89C4;&#x5219;&#x4E0B;&#x80FD;&#x628A;&#x8FD9;&#x4E2A;&#x8D44;&#x6E90;&#x72EC;&#x4E00;&#x65E0;&#x4E8C;&#x6807;&#x793A;&#x51FA;&#x6765;&#xFF0C;&#x6BD4;&#x5982;&#x4EBA;&#x7684;&#x8EAB;&#x4EFD;&#x8BC1;&#x53F7;</p>
+<ul>
+<li>Uniform &#x4E0D;&#x7528;&#x6839;&#x636E;&#x4E0A;&#x4E0B;&#x6587;&#x6765;&#x8BC6;&#x522B;&#x8D44;&#x6E90;&#x6307;&#x5B9A;&#x7684;&#x8BBF;&#x95EE;&#x65B9;&#x5F0F;</li>
+<li>Resource &#x53EF;&#x4EE5;&#x6807;&#x8BC6;&#x7684;&#x4EFB;&#x4F55;&#x4E1C;&#x897F;</li>
+<li>Identifier &#x8868;&#x793A;&#x53EF;&#x6807;&#x8BC6;&#x7684;&#x5BF9;&#x8C61;</li>
+</ul>
+<h3 id="t52.2 URL">2.2 URL <a href="#t52.2 URL"> # </a></h3>
+<p>&#x7EDF;&#x4E00;&#x8D44;&#x6E90;&#x5B9A;&#x4F4D;&#x7B26;&#xFF0C;&#x8868;&#x793A;&#x8D44;&#x6E90;&#x7684;&#x5730;&#x70B9;&#xFF0C;URL&#x65F6;&#x4F7F;&#x7528;&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;WEB&#x9875;&#x9762;&#x65F6;&#x9700;&#x8981;&#x8F93;&#x5165;&#x7684;&#x7F51;&#x9875;&#x5730;&#x5740;</p>
+<ul>
+<li>Uniform &#x4E0D;&#x7528;&#x6839;&#x636E;&#x4E0A;&#x4E0B;&#x6587;&#x6765;&#x8BC6;&#x522B;&#x8D44;&#x6E90;&#x6307;&#x5B9A;&#x7684;&#x8BBF;&#x95EE;&#x65B9;&#x5F0F;</li>
+<li>Resource &#x53EF;&#x4EE5;&#x6807;&#x8BC6;&#x7684;&#x4EFB;&#x4F55;&#x4E1C;&#x897F;</li>
+<li>Location &#x5B9A;&#x4F4D;</li>
+</ul>
+<h3 id="t62.2.1 URL&#x7684;&#x683C;&#x5F0F;">2.2.1 URL&#x7684;&#x683C;&#x5F0F; <a href="#t62.2.1 URL&#x7684;&#x683C;&#x5F0F;"> # </a></h3>
+<p><img src="http://img.zhufengpeixun.cn/urlformat.png" alt="url"></p>
+<ul>
+<li>&#x534F;&#x8BAE;&#x7C7B;&#x578B;</li>
+<li>&#x767B;&#x5F55;&#x4FE1;&#x606F;</li>
+<li>&#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;</li>
+<li>&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x53E3;&#x53F7;</li>
+<li>&#x5E26;&#x5C42;&#x6B21;&#x7684;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</li>
+<li>&#x67E5;&#x8BE2;&#x5B57;&#x7B26;&#x4E32;</li>
+<li>&#x7247;&#x6BB5;&#x6807;&#x8BC6;&#x7B26;</li>
+</ul>
+<h2 id="t73. HTTP">3. HTTP <a href="#t73. HTTP"> # </a></h2>
+<ul>
+<li>&#x8BF7;&#x6C42;&#x7684;&#x4E00;&#x65B9;&#x53EB;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x54CD;&#x5E94;&#x7684;&#x4E00;&#x65B9;&#x53EB;&#x670D;&#x52A1;&#x5668;&#x7AEF;</li>
+<li>&#x901A;&#x8FC7;&#x8BF7;&#x6C42;&#x548C;&#x54CD;&#x5E94;&#x8FBE;&#x6210;&#x901A;&#x4FE1;</li>
+<li>HTTP&#x662F;&#x4E00;&#x79CD;&#x4E0D;&#x4FDD;&#x5B58;&#x72B6;&#x6001;&#x7684;&#x534F;&#x8BAE;</li>
+</ul>
+<h3 id="t83.1 &#x8BF7;&#x6C42;&#x62A5;&#x6587;">3.1 &#x8BF7;&#x6C42;&#x62A5;&#x6587; <a href="#t83.1 &#x8BF7;&#x6C42;&#x62A5;&#x6587;"> # </a></h3>
+<p><img src="http://img.zhufengpeixun.cn/request.png" alt="request"></p>
+<p><img src="http://img.zhufengpeixun.cn/requestheader.png" alt="request-header"></p>
+<ul>
+<li><p>&#x8BF7;&#x6C42;&#x884C;</p>
+<ul>
+<li><p>&#x65B9;&#x6CD5;</p>
+<ul>
+<li>GET &#x83B7;&#x53D6;&#x8D44;&#x6E90;</li>
+<li>POST &#x5411;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x53D1;&#x9001;&#x6570;&#x636E;&#xFF0C;&#x4F20;&#x8F93;&#x5B9E;&#x4F53;&#x4E3B;&#x4F53;</li>
+<li>PUT &#x4F20;&#x8F93;&#x6587;&#x4EF6;</li>
+<li>HEAD &#x83B7;&#x53D6;&#x62A5;&#x6587;&#x9996;&#x90E8;</li>
+<li>DELETE &#x5220;&#x9664;&#x6587;&#x4EF6;</li>
+<li>OPTIONS &#x8BE2;&#x95EE;&#x652F;&#x6301;&#x7684;&#x65B9;&#x6CD5;</li>
+<li><p>TRACE &#x8FFD;&#x8E2A;&#x8DEF;&#x5F84;</p>
+</li>
+<li><p><img src="http://img.zhufengpeixun.cn/trace.png" alt="trace"></p>
+</li>
+</ul>
+</li>
+<li>&#x534F;&#x8BAE;/&#x7248;&#x672C;&#x53F7;</li>
+<li>URL</li>
+</ul>
+</li>
+<li>&#x8BF7;&#x6C42;&#x5934;<ul>
+<li>&#x901A;&#x7528;&#x9996;&#x90E8;(General Header)</li>
+<li>&#x8BF7;&#x6C42;&#x9996;&#x90E8;(Request Header)</li>
+<li>&#x54CD;&#x5E94;&#x9996;&#x90E8;(Response Header)</li>
+<li>&#x5B9E;&#x4F53;&#x9996;&#x90E8;(Entity Header Fields)</li>
+</ul>
+</li>
+<li>&#x8BF7;&#x6C42;&#x4F53;</li>
+</ul>
+<h3 id="t93.2 &#x54CD;&#x5E94;&#x62A5;&#x6587;">3.2 &#x54CD;&#x5E94;&#x62A5;&#x6587; <a href="#t93.2 &#x54CD;&#x5E94;&#x62A5;&#x6587;"> # </a></h3>
+<ul>
+<li><img src="http://img.zhufengpeixun.cn/response.png" alt="response"></li>
+<li><img src="http://img.zhufengpeixun.cn/responseheader.png" alt="responseheader"></li>
+<li>&#x54CD;&#x5E94;&#x884C;</li>
+<li>&#x54CD;&#x5E94;&#x5934;</li>
+<li>&#x54CD;&#x5E94;&#x4F53;</li>
+</ul>
+<h3 id="t103.3 &#x7F16;&#x7801;">3.3 &#x7F16;&#x7801; <a href="#t103.3 &#x7F16;&#x7801;"> # </a></h3>
+<p>HTTP&#x53EF;&#x4EE5;&#x5728;&#x4F20;&#x8F93;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x901A;&#x8FC7;&#x7F16;&#x7801;&#x63D0;&#x5347;&#x4F20;&#x8F93;&#x6548;&#x7387;&#xFF0C;&#x4F46;&#x662F;&#x4F1A;&#x6D88;&#x8017;&#x66F4;&#x591A;&#x7684;CPU&#x65F6;&#x95F4;&#x3002;</p>
+<h3 id="t113.3.1  &#x7F16;&#x7801;&#x538B;&#x7F29;">3.3.1  &#x7F16;&#x7801;&#x538B;&#x7F29; <a href="#t113.3.1  &#x7F16;&#x7801;&#x538B;&#x7F29;"> # </a></h3>
+<p>&#x53D1;&#x9001;&#x6587;&#x4EF6;&#x65F6;&#x53EF;&#x4EE5;&#x5148;&#x7528;ZIP&#x538B;&#x7F29;&#x529F;&#x80FD;&#x540E;&#x518D;&#x53D1;&#x9001;&#x6587;&#x4EF6;</p>
+<p><img src="http://img.zhufengpeixun.cn/compress.png" alt="encoding"></p>
+<ul>
+<li>gzip</li>
+<li>compress</li>
+<li>deflate</li>
+<li>identify</li>
+</ul>
+<h3 id="t123.3.2  &#x5206;&#x5272;&#x53D1;&#x9001;&#x7684;&#x5206;&#x5757;&#x4F20;&#x8F93;&#x7F16;&#x7801;">3.3.2  &#x5206;&#x5272;&#x53D1;&#x9001;&#x7684;&#x5206;&#x5757;&#x4F20;&#x8F93;&#x7F16;&#x7801; <a href="#t123.3.2  &#x5206;&#x5272;&#x53D1;&#x9001;&#x7684;&#x5206;&#x5757;&#x4F20;&#x8F93;&#x7F16;&#x7801;"> # </a></h3>
+<p>&#x8BF7;&#x6C42;&#x7684;&#x5B9E;&#x4F53;&#x5728;&#x5C1A;&#x672A;&#x4F20;&#x8F93;&#x5B8C;&#x6210;&#x524D;&#x6D4F;&#x89C8;&#x5668;&#x4E0D;&#x80FD;&#x663E;&#x793A;&#x3002;&#x6240;&#x4EE5;&#x5728;&#x4F20;&#x8F93;&#x5927;&#x5BB9;&#x91CF;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x901A;&#x8FC7;&#x628A;&#x6570;&#x636E;&#x5206;&#x5272;&#x6210;&#x591A;&#x5757;&#xFF0C;&#x80FD;&#x8BA9;&#x6D4F;&#x89C8;&#x5668;&#x9010;&#x6B65;&#x663E;&#x793A;&#x9875;&#x9762;&#x3002;</p>
+<p><img src="http://img.zhufengpeixun.cn/encoding.png" alt="encoding"></p>
+<h3 id="t133.3.3 &#x591A;&#x90E8;&#x5206;&#x5BF9;&#x8C61;&#x96C6;&#x5408;">3.3.3 &#x591A;&#x90E8;&#x5206;&#x5BF9;&#x8C61;&#x96C6;&#x5408; <a href="#t133.3.3 &#x591A;&#x90E8;&#x5206;&#x5BF9;&#x8C61;&#x96C6;&#x5408;"> # </a></h3>
+<ul>
+<li>&#x4E00;&#x4EFD;&#x62A5;&#x6587;&#x4E3B;&#x4F53;&#x4E2D;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x591A;&#x7C7B;&#x578B;&#x5B9E;&#x4F53;&#x3002;</li>
+<li>&#x4F7F;&#x7528;boundary&#x5B57;&#x7B26;&#x4E32;&#x6765;&#x5212;&#x5206;&#x591A;&#x90E8;&#x5206;&#x5BF9;&#x8C61;&#x6307;&#x660E;&#x7684;&#x5404;&#x7C7B;&#x5B9E;&#x4F53;&#x3002;&#x5728;&#x5404;&#x4E2A;&#x5B9E;&#x4F53;&#x8D77;&#x59CB;&#x884C;&#x4E4B;&#x524D;&#x63D2;&#x5165;<strong>--</strong>&#x6807;&#x8BB0;,&#x591A;&#x90E8;&#x5206;&#x5BF9;&#x8C61;&#x96C6;&#x5408;&#x6700;&#x540E;&#x63D2;&#x5165;<strong>--</strong>&#x6807;&#x8BB0;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/mime.png" alt="mime"></p>
+<h4 id="t143.3.3.1 multiparty/form-data">3.3.3.1 multiparty/form-data <a href="#t143.3.3.1 multiparty/form-data"> # </a></h4>
+<p>&#x4E0A;&#x4F20;&#x8868;&#x5355;&#x65F6;&#x4F7F;&#x7528;multiparty/form-data</p>
+<p><img src="http://img.zhufengpeixun.cn/form-data.png" alt="form-data"></p>
+<h4 id="t153.3.3.2 multipart/byteranges 206(Particial Content)">3.3.3.2 multipart/byteranges 206(Particial Content) <a href="#t153.3.3.2 multipart/byteranges 206(Particial Content)"> # </a></h4>
+<p>&#x72B6;&#x6001;&#x7801;(Partical Content)&#x54CD;&#x5E94;&#x62A5;&#x6587;&#x4E2D;&#x5305;&#x542B;&#x591A;&#x4E2A;&#x8303;&#x56F4;&#x65F6;&#x4F7F;&#x7528;</p>
+<ul>
+<li><img src="http://img.zhufengpeixun.cn/byteranges.png" alt="byteranges"></li>
+</ul>
+<h3 id="t163.3.4 &#x83B7;&#x53D6;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x7684;&#x8303;&#x56F4;&#x8BF7;&#x6C42;">3.3.4 &#x83B7;&#x53D6;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x7684;&#x8303;&#x56F4;&#x8BF7;&#x6C42; <a href="#t163.3.4 &#x83B7;&#x53D6;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x7684;&#x8303;&#x56F4;&#x8BF7;&#x6C42;"> # </a></h3>
+<p>&#x4E3A;&#x4E86;&#x5B9E;&#x73B0;&#x4E2D;&#x65AD;&#x6062;&#x590D;&#x4E0B;&#x8F7D;&#x7684;&#x9700;&#x6C42;&#xFF0C;&#x9700;&#x8981;&#x80FD;&#x4E0B;&#x8F7D;&#x6307;&#x5B9A;&#x4E0B;&#x8F7D;&#x7684;&#x5B9E;&#x4F53;&#x8303;&#x56F4;</p>
+<ul>
+<li>&#x8BF7;&#x6C42;&#x5934;&#x4E2D;&#x7684;Range&#x6765;&#x6307;&#x5B9A; &#x8D44;&#x6E90;&#x7684;byte&#x8303;&#x56F4;</li>
+<li>&#x54CD;&#x5E94;&#x4F1A;&#x8FD4;&#x56DE;&#x72B6;&#x6001;&#x7801;206&#x54CD;&#x5E94;&#x62A5;&#x6587;</li>
+<li>&#x5BF9;&#x4E8E;&#x591A;&#x91CD;&#x8303;&#x56F4;&#x7684;&#x8303;&#x56F4;&#x8BF7;&#x6C42;&#xFF0C;&#x54CD;&#x5E94;&#x4F1A;&#x5728;&#x9996;&#x90E8;&#x5B57;&#x6BB5;<code>Content-Type</code>&#x4E2D;&#x6807;&#x660E;<code>multipart/byteranges</code></li>
+<li><img src="http://img.zhufengpeixun.cn/partial.png" alt="partial"></li>
+<li><img src="http://img.zhufengpeixun.cn/bytes.png" alt="bytes"></li>
+</ul>
+<h3 id="t173.4 &#x5185;&#x5BB9;&#x534F;&#x5546;">3.4 &#x5185;&#x5BB9;&#x534F;&#x5546; <a href="#t173.4 &#x5185;&#x5BB9;&#x534F;&#x5546;"> # </a></h3>
+<ul>
+<li>&#x9996;&#x90E8;&#x5B57;&#x6BB5;<ul>
+<li>Accept</li>
+<li>Accept-Charset</li>
+<li>Accept-Encoding</li>
+<li>Accept-Language</li>
+<li>Content-Language</li>
+</ul>
+</li>
+<li>&#x534F;&#x5546;&#x7C7B;&#x578B;<ul>
+<li>&#x670D;&#x52A1;&#x5668;&#x9A71;&#x52A8;</li>
+<li>&#x5BA2;&#x6237;&#x7AEF;&#x9A71;&#x52A8;&#x534F;&#x5546;</li>
+<li>&#x900F;&#x660E;&#x534F;&#x5546;</li>
+</ul>
+</li>
+</ul>
+<h3 id="t183.5 &#x72B6;&#x6001;&#x7801;">3.5 &#x72B6;&#x6001;&#x7801; <a href="#t183.5 &#x72B6;&#x6001;&#x7801;"> # </a></h3>
+<p>&#x72B6;&#x6001;&#x7801;&#x8D1F;&#x8D23;&#x8868;&#x793A;&#x5BA2;&#x6237;&#x7AEF;&#x8BF7;&#x6C42;&#x7684;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x3001;&#x6807;&#x8BB0;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x662F;&#x5426;&#x6B63;&#x5E38;&#x3001;&#x901A;&#x77E5;&#x51FA;&#x73B0;&#x7684;&#x9519;&#x8BEF;</p>
+<h4 id="t193.5.1 &#x72B6;&#x6001;&#x7801;&#x7C7B;&#x522B;">3.5.1 &#x72B6;&#x6001;&#x7801;&#x7C7B;&#x522B; <a href="#t193.5.1 &#x72B6;&#x6001;&#x7801;&#x7C7B;&#x522B;"> # </a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x7C7B;&#x522B;</th>
+<th style="text-align:left">&#x539F;&#x56E0;&#x77ED;&#x8BED;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1XX</td>
+<td style="text-align:left">Informational(&#x4FE1;&#x606F;&#x6027;&#x72B6;&#x6001;&#x7801;)</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">2XX</td>
+<td style="text-align:left">Success(&#x6210;&#x529F;&#x72B6;&#x6001;&#x7801;)</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">3XX</td>
+<td style="text-align:left">Redirection(&#x91CD;&#x5B9A;&#x5411;)</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">4XX</td>
+<td style="text-align:left">Client Error(&#x5BA2;&#x6237;&#x7AEF;&#x9519;&#x8BEF;&#x72B6;&#x6001;&#x7801;)</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left">5XX</td>
+<td style="text-align:left">Server Error(&#x670D;&#x52A1;&#x5668;&#x9519;&#x8BEF;&#x72B6;&#x6001;&#x5417;)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="t203.5.2 2XX &#x6210;&#x529F;">3.5.2 2XX &#x6210;&#x529F; <a href="#t203.5.2 2XX &#x6210;&#x529F;"> # </a></h4>
+<ul>
+<li>200(OK &#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x8FC7;&#x6765;&#x7684;&#x6570;&#x636E;&#x88AB;&#x6B63;&#x5E38;&#x5904;&#x7406;</li>
+<li>204(Not Content &#x6B63;&#x5E38;&#x54CD;&#x5E94;&#xFF0C;&#x6CA1;&#x6709;&#x5B9E;&#x4F53;</li>
+<li>206(Partial Content &#x8303;&#x56F4;&#x8BF7;&#x6C42;&#xFF0C;&#x8FD4;&#x56DE;&#x90E8;&#x5206;&#x6570;&#x636E;&#xFF0C;&#x54CD;&#x5E94;&#x62A5;&#x6587;&#x4E2D;&#x7531;Content-Range&#x6307;&#x5B9A;&#x5B9E;&#x4F53;&#x5185;&#x5BB9;</li>
+</ul>
+<h4 id="t213.5.3 3XX &#x91CD;&#x5B9A;&#x5411;">3.5.3 3XX &#x91CD;&#x5B9A;&#x5411; <a href="#t213.5.3 3XX &#x91CD;&#x5B9A;&#x5411;"> # </a></h4>
+<ul>
+<li>301(Moved Permanently) &#x6C38;&#x4E45;&#x91CD;&#x5B9A;&#x5411;</li>
+<li>302(Found) &#x4E34;&#x65F6;&#x91CD;&#x5B9A;&#x5411;&#xFF0C;&#x89C4;&#x8303;&#x8981;&#x6C42;&#x65B9;&#x6CD5;&#x540D;&#x4E0D;&#x53D8;&#xFF0C;&#x4F46;&#x662F;&#x90FD;&#x4F1A;&#x6539;&#x53D8;</li>
+<li>303(See Other) &#x548C;302&#x7C7B;&#x4F3C;&#xFF0C;&#x4F46;&#x5FC5;&#x987B;&#x7528;GET&#x65B9;&#x6CD5;</li>
+<li>304(Not Modified) &#x72B6;&#x6001;&#x672A;&#x6539;&#x53D8; &#x914D;&#x5408;(If-Match&#x3001;If-Modified-Since&#x3001;If-None_Match&#x3001;If-Range&#x3001;If-Unmodified-Since)</li>
+<li>307(Temporary Redirect) &#x4E34;&#x65F6;&#x91CD;&#x5B9A;&#x5411;&#xFF0C;&#x4E0D;&#x8BE5;&#x6539;&#x53D8;&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;</li>
+</ul>
+<h4 id="t223.5.4 4XX &#x5BA2;&#x6237;&#x7AEF;&#x9519;&#x8BEF;">3.5.4 4XX &#x5BA2;&#x6237;&#x7AEF;&#x9519;&#x8BEF; <a href="#t223.5.4 4XX &#x5BA2;&#x6237;&#x7AEF;&#x9519;&#x8BEF;"> # </a></h4>
+<ul>
+<li>400(Bad Request) &#x8BF7;&#x6C42;&#x62A5;&#x6587;&#x8BED;&#x6CD5;&#x9519;&#x8BEF;</li>
+<li>401 (unauthorized) &#x9700;&#x8981;&#x8BA4;&#x8BC1;</li>
+<li>403(Forbidden) &#x670D;&#x52A1;&#x5668;&#x62D2;&#x7EDD;&#x8BBF;&#x95EE;&#x5BF9;&#x5E94;&#x7684;&#x8D44;&#x6E90;</li>
+<li>404(Not Found) &#x670D;&#x52A1;&#x5668;&#x4E0A;&#x65E0;&#x6CD5;&#x627E;&#x5230;&#x8D44;&#x6E90;</li>
+</ul>
+<h4 id="t233.5.5 5XX &#x670D;&#x52A1;&#x5668;&#x7AEF;&#x9519;&#x8BEF;">3.5.5 5XX &#x670D;&#x52A1;&#x5668;&#x7AEF;&#x9519;&#x8BEF; <a href="#t233.5.5 5XX &#x670D;&#x52A1;&#x5668;&#x7AEF;&#x9519;&#x8BEF;"> # </a></h4>
+<ul>
+<li>500(Internal Server Error)&#x670D;&#x52A1;&#x5668;&#x6545;&#x969C;</li>
+<li>503(Service Unavailable) &#x670D;&#x52A1;&#x5668;&#x5904;&#x4E8E;&#x8D85;&#x8D1F;&#x8F7D;&#x6216;&#x6B63;&#x5728;&#x505C;&#x673A;&#x7EF4;&#x62A4;</li>
+</ul>
+<h2 id="t244. Web&#x670D;&#x52A1;&#x5668;">4. Web&#x670D;&#x52A1;&#x5668; <a href="#t244. Web&#x670D;&#x52A1;&#x5668;"> # </a></h2>
+<h3 id="t254.1 &#x865A;&#x62DF;&#x4E3B;&#x673A;(Virtual Host)">4.1 &#x865A;&#x62DF;&#x4E3B;&#x673A;(Virtual Host) <a href="#t254.1 &#x865A;&#x62DF;&#x4E3B;&#x673A;(Virtual Host)"> # </a></h3>
+<p>&#x4E00;&#x53F0;HTTP&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x642D;&#x5EFA;&#x591A;&#x4E2A;Web&#x7AD9;&#x70B9;,&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x65F6;&#x5FC5;&#x987B;&#x5728;Host&#x9996;&#x90E8;&#x5B8C;&#x6574;&#x6307;&#x5B9A;&#x4E3B;&#x673A;&#x540D;&#x6216;&#x57DF;&#x540D;&#x7684;URL</p>
+<h3 id="t264.2 &#x901A;&#x4FE1;&#x8F6C;&#x53D1;&#x7A0B;&#x5E8F;:&#x4EE3;&#x7406;&#x3001;&#x7F51;&#x5173;">4.2 &#x901A;&#x4FE1;&#x8F6C;&#x53D1;&#x7A0B;&#x5E8F;:&#x4EE3;&#x7406;&#x3001;&#x7F51;&#x5173; <a href="#t264.2 &#x901A;&#x4FE1;&#x8F6C;&#x53D1;&#x7A0B;&#x5E8F;:&#x4EE3;&#x7406;&#x3001;&#x7F51;&#x5173;"> # </a></h3>
+<h4 id="t274.2.1 &#x4EE3;&#x7406;">4.2.1 &#x4EE3;&#x7406; <a href="#t274.2.1 &#x4EE3;&#x7406;"> # </a></h4>
+<p>&#x4EE3;&#x7406;&#x5C31;&#x662F;&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x670D;&#x52A1;&#x5668;&#x7684;&#x4E2D;&#x95F4;&#x4EBA;</p>
+<p><img src="http://img.zhufengpeixun.cn/proxy.png" alt="proxy"></p>
+<h5 id="t284.2.1.1 &#x4E3A;&#x5565;&#x4F7F;&#x7528;&#x4EE3;&#x7406;">4.2.1.1 &#x4E3A;&#x5565;&#x4F7F;&#x7528;&#x4EE3;&#x7406; <a href="#t284.2.1.1 &#x4E3A;&#x5565;&#x4F7F;&#x7528;&#x4EE3;&#x7406;"> # </a></h5>
+<ul>
+<li>&#x5229;&#x7528;&#x7F13;&#x5B58;&#x6280;&#x672F;&#x51CF;&#x5C11;&#x7F51;&#x7EDC;&#x6D41;&#x91CF;</li>
+<li>&#x7EC4;&#x7EC7;&#x5185;&#x90E8;&#x9488;&#x5BF9;&#x7F51;&#x7AD9;&#x8FDB;&#x884C;&#x8BBF;&#x95EE;&#x63A7;&#x5236;</li>
+<li>&#x83B7;&#x53D6;&#x8BBF;&#x95EE;&#x65E5;&#x5FD7;<h5 id="t294.2.1.2 &#x4EE3;&#x7406;&#x7684;&#x5206;&#x7C7B;">4.2.1.2 &#x4EE3;&#x7406;&#x7684;&#x5206;&#x7C7B; <a href="#t294.2.1.2 &#x4EE3;&#x7406;&#x7684;&#x5206;&#x7C7B;"> # </a></h5>
+</li>
+<li>&#x7F13;&#x5B58;&#x4EE3;&#x7406; &#x4F1A;&#x9884;&#x5148;&#x628A;&#x8D44;&#x6E90;&#x526F;&#x672C;&#x4FDD;&#x5B58;&#x5728;&#x670D;&#x52A1;&#x5668;&#x4E0A;</li>
+<li>&#x900F;&#x660E;&#x4EE3;&#x7406; &#x4E0D;&#x5BF9;&#x62A5;&#x6587;&#x8FDB;&#x884C;&#x4EFB;&#x4F55;&#x52A0;&#x5DE5;</li>
+</ul>
+<h4 id="t304.2.2 &#x7F51;&#x5173;">4.2.2 &#x7F51;&#x5173; <a href="#t304.2.2 &#x7F51;&#x5173;"> # </a></h4>
+<p>&#x63A5;&#x6536;&#x4ECE;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x6765;&#x7684;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x4F1A;&#x8F6C;&#x53D1;&#x7ED9;&#x5176;&#x4ED6;&#x670D;&#x52A1;&#x5668;&#x5904;&#x7406;&#xFF0C;&#x518D;&#x7531;&#x81EA;&#x5DF1;&#x8FD4;&#x56DE;</p>
+<ul>
+<li>&#x4F7F;&#x901A;&#x4FE1;&#x7EBF;&#x8DEF;&#x4E0A;&#x7684;&#x670D;&#x52A1;&#x5668;&#x63D0;&#x4F9B;&#x975E;HTTP&#x534F;&#x8BAE;&#x670D;&#x52A1;</li>
+<li>&#x63D0;&#x9AD8;&#x901A;&#x4FE1;&#x5B89;&#x5168;&#x6027;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/gate-way.png" alt="encoding"></p>
+<h2 id="t315. &#x9996;&#x90E8;">5. &#x9996;&#x90E8; <a href="#t315. &#x9996;&#x90E8;"> # </a></h2>
+<h3 id="t325.1 &#x901A;&#x7528;&#x9996;&#x90E8;&#x5B57;&#x6BB5;">5.1 &#x901A;&#x7528;&#x9996;&#x90E8;&#x5B57;&#x6BB5; <a href="#t325.1 &#x901A;&#x7528;&#x9996;&#x90E8;&#x5B57;&#x6BB5;"> # </a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x9996;&#x90E8;&#x5B57;&#x6BB5;&#x540D;</th>
+<th style="text-align:left">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Cache-Control</td>
+<td style="text-align:left">&#x63A7;&#x5236;&#x7F13;&#x5B58;&#x884C;&#x4E3A;</td>
+</tr>
+<tr>
+<td style="text-align:left">Connection</td>
+<td style="text-align:left">&#x94FE;&#x63A5;&#x7684;&#x7BA1;&#x7406;</td>
+</tr>
+<tr>
+<td style="text-align:left">Date</td>
+<td style="text-align:left">&#x62A5;&#x6587;&#x65E5;&#x671F;</td>
+</tr>
+<tr>
+<td style="text-align:left">Pragma</td>
+<td style="text-align:left">&#x62A5;&#x6587;&#x6307;&#x4EE4;</td>
+</tr>
+<tr>
+<td style="text-align:left">Trailer</td>
+<td style="text-align:left">&#x62A5;&#x6587;&#x5C3E;&#x90E8;&#x7684;&#x9996;&#x90E8;</td>
+</tr>
+<tr>
+<td style="text-align:left">Trasfer-Encoding</td>
+<td style="text-align:left">&#x6307;&#x5B9A;&#x62A5;&#x6587;&#x4E3B;&#x4F53;&#x7684;&#x4F20;&#x8F93;&#x7F16;&#x7801;&#x65B9;&#x5F0F;</td>
+</tr>
+<tr>
+<td style="text-align:left">Upgrade</td>
+<td style="text-align:left">&#x5347;&#x7EA7;&#x4E3A;&#x5176;&#x4ED6;&#x534F;&#x8BAE;</td>
+</tr>
+<tr>
+<td style="text-align:left">Via</td>
+<td style="text-align:left">&#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5668;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td style="text-align:left">Warning</td>
+<td style="text-align:left">&#x9519;&#x8BEF;&#x901A;&#x77E5;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t335.2 &#x8BF7;&#x6C42;&#x9996;&#x90E8;&#x5B57;&#x6BB5;">5.2 &#x8BF7;&#x6C42;&#x9996;&#x90E8;&#x5B57;&#x6BB5; <a href="#t335.2 &#x8BF7;&#x6C42;&#x9996;&#x90E8;&#x5B57;&#x6BB5;"> # </a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x9996;&#x90E8;&#x5B57;&#x6BB5;&#x540D;</th>
+<th style="text-align:left">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Accept</td>
+<td style="text-align:left">&#x7528;&#x6237;&#x4EE3;&#x7406;&#x53EF;&#x5904;&#x7406;&#x7684;&#x5A92;&#x4F53;&#x7C7B;&#x578B;</td>
+</tr>
+<tr>
+<td style="text-align:left">Accept-Charset</td>
+<td style="text-align:left">&#x4F18;&#x5148;&#x7684;&#x5B57;&#x7B26;&#x96C6;</td>
+</tr>
+<tr>
+<td style="text-align:left">Accept-Encoding</td>
+<td style="text-align:left">&#x4F18;&#x5148;&#x7684;&#x7F16;&#x7801;</td>
+</tr>
+<tr>
+<td style="text-align:left">Accept-Langulage</td>
+<td style="text-align:left">&#x4F18;&#x5148;&#x7684;&#x8BED;&#x8A00;</td>
+</tr>
+<tr>
+<td style="text-align:left">Authorization</td>
+<td style="text-align:left">Web&#x8BA4;&#x8BC1;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td style="text-align:left">Expect</td>
+<td style="text-align:left">&#x671F;&#x5F85;&#x670D;&#x52A1;&#x5668;&#x7684;&#x7279;&#x5B9A;&#x884C;&#x4E3A;</td>
+</tr>
+<tr>
+<td style="text-align:left">From</td>
+<td style="text-align:left">&#x7528;&#x6237;&#x7684;&#x7535;&#x5B50;&#x90AE;&#x7BB1;&#x5730;&#x5740;</td>
+</tr>
+<tr>
+<td style="text-align:left">Host</td>
+<td style="text-align:left">&#x8BF7;&#x6C42;&#x8D44;&#x6E90;&#x6240;&#x5728;&#x7684;&#x670D;&#x52A1;&#x5668;</td>
+</tr>
+<tr>
+<td style="text-align:left">If-Match</td>
+<td style="text-align:left">&#x6BD4;&#x8F83;&#x5B9E;&#x4F53;&#x6807;&#x8BB0;</td>
+</tr>
+<tr>
+<td style="text-align:left">If-Modified-Since</td>
+<td style="text-align:left">&#x6BD4;&#x8F83;&#x8D44;&#x6E90;&#x7684;&#x66F4;&#x65B0;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td style="text-align:left">If-None-Match</td>
+<td style="text-align:left">&#x6BD4;&#x8F83;&#x5B9E;&#x4F53;&#x6807;&#x8BB0;</td>
+</tr>
+<tr>
+<td style="text-align:left">If-Range</td>
+<td style="text-align:left">&#x8D44;&#x6E90;&#x672A;&#x66F4;&#x65B0;&#x65F6;&#x53D1;&#x9001;&#x5B9E;&#x4F53;Byte&#x7684;&#x8303;&#x56F4;&#x8BF7;&#x6C42;</td>
+</tr>
+<tr>
+<td style="text-align:left">If-Unmodified-Since</td>
+<td style="text-align:left">&#x6BD4;&#x8F83;&#x8D44;&#x6E90;&#x7684;&#x66F4;&#x65B0;&#x65F6;&#x95F4;(&#x548C;If-Modified-Since&#x76F8;&#x53CD;)</td>
+</tr>
+<tr>
+<td style="text-align:left">Max-Forwards</td>
+<td style="text-align:left">&#x6700;&#x5927;&#x4F20;&#x8F93;&#x8DF3;&#x6570;</td>
+</tr>
+<tr>
+<td style="text-align:left">Proxy-Authorization</td>
+<td style="text-align:left">&#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5668;&#x9700;&#x8981;&#x5BA2;&#x6237;&#x7AEF;&#x8BA4;&#x8BC1;</td>
+</tr>
+<tr>
+<td style="text-align:left">Range</td>
+<td style="text-align:left">&#x5B9E;&#x4F53;&#x5B57;&#x8282;&#x8303;&#x56F4;&#x8BF7;&#x6C42;</td>
+</tr>
+<tr>
+<td style="text-align:left">Referer</td>
+<td style="text-align:left">&#x8BF7;&#x6C42;&#x4E2D;&#x7684;URI&#x7684;&#x539F;&#x59CB;&#x83B7;&#x53D6;&#x65B9;</td>
+</tr>
+<tr>
+<td style="text-align:left">TE</td>
+<td style="text-align:left">&#x4F20;&#x8F93;&#x7F16;&#x7801;&#x7684;&#x4F18;&#x5148;&#x7EA7;</td>
+</tr>
+<tr>
+<td style="text-align:left">User-Agent</td>
+<td style="text-align:left">HTTP&#x5BA2;&#x6237;&#x7AEF;&#x7A0B;&#x5E8F;&#x7684;&#x4FE1;&#x606F;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t345.3 &#x54CD;&#x5E94;&#x9996;&#x90E8;&#x5B57;&#x6BB5;">5.3 &#x54CD;&#x5E94;&#x9996;&#x90E8;&#x5B57;&#x6BB5; <a href="#t345.3 &#x54CD;&#x5E94;&#x9996;&#x90E8;&#x5B57;&#x6BB5;"> # </a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x9996;&#x90E8;&#x5B57;&#x6BB5;&#x540D;</th>
+<th style="text-align:left">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Accept-Ranges</td>
+<td style="text-align:left">&#x662F;&#x5426;&#x63A5;&#x53D7;&#x5B57;&#x8282;&#x8303;&#x56F4;</td>
+</tr>
+<tr>
+<td style="text-align:left">Age</td>
+<td style="text-align:left">&#x8D44;&#x6E90;&#x7684;&#x521B;&#x5EFA;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td style="text-align:left">ETag</td>
+<td style="text-align:left">&#x8D44;&#x6E90;&#x7684;&#x5339;&#x914D;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td style="text-align:left">Location</td>
+<td style="text-align:left">&#x5BA2;&#x6237;&#x7AEF;&#x91CD;&#x5B9A;&#x5411;&#x81F3;&#x6307;&#x5B9A;&#x7684;URI</td>
+</tr>
+<tr>
+<td style="text-align:left">Proxy-Authenticate</td>
+<td style="text-align:left">&#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5668;&#x5BF9;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x8BA4;&#x8BC1;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td style="text-align:left">Retry-After</td>
+<td style="text-align:left">&#x518D;&#x6B21;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x7684;&#x65F6;&#x673A;</td>
+</tr>
+<tr>
+<td style="text-align:left">Server</td>
+<td style="text-align:left">&#x670D;&#x52A1;&#x5668;&#x7684;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td style="text-align:left">Vary</td>
+<td style="text-align:left">&#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5668;&#x7F13;&#x5B58;&#x7684;&#x7BA1;&#x7406;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td style="text-align:left">www-Authenticate</td>
+<td style="text-align:left">&#x670D;&#x52A1;&#x5668;&#x5BF9;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x8BA4;&#x8BC1;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t355.4 &#x5B9E;&#x4F53;&#x9996;&#x90E8;&#x5B57;&#x6BB5;">5.4 &#x5B9E;&#x4F53;&#x9996;&#x90E8;&#x5B57;&#x6BB5; <a href="#t355.4 &#x5B9E;&#x4F53;&#x9996;&#x90E8;&#x5B57;&#x6BB5;"> # </a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x9996;&#x90E8;&#x5B57;&#x6BB5;&#x540D;</th>
+<th style="text-align:left">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Allow</td>
+<td style="text-align:left">&#x8D44;&#x6E90;&#x53EF;&#x652F;&#x6301;&#x7684;HTTP&#x65B9;&#x6CD5;</td>
+</tr>
+<tr>
+<td style="text-align:left">Content-Encoding</td>
+<td style="text-align:left">&#x5B9E;&#x4F53;&#x7684;&#x7F16;&#x7801;&#x65B9;&#x5F0F;</td>
+</tr>
+<tr>
+<td style="text-align:left">Content-Language</td>
+<td style="text-align:left">&#x5B9E;&#x4F53;&#x7684;&#x81EA;&#x7136;&#x8BED;&#x8A00;</td>
+</tr>
+<tr>
+<td style="text-align:left">Content-Length</td>
+<td style="text-align:left">&#x5B9E;&#x4F53;&#x7684;&#x5185;&#x5BB9;&#x5927;&#x5C0F;(&#x5B57;&#x8282;&#x4E3A;&#x5355;&#x4F4D;)</td>
+</tr>
+<tr>
+<td style="text-align:left">Content-Location</td>
+<td style="text-align:left">&#x66FF;&#x4EE3;&#x5BF9;&#x5E94;&#x8D44;&#x6E90;&#x7684;URI</td>
+</tr>
+<tr>
+<td style="text-align:left">Content-MD5</td>
+<td style="text-align:left">&#x5B9E;&#x4F53;&#x7684;&#x62A5;&#x6587;&#x6458;&#x8981;</td>
+</tr>
+<tr>
+<td style="text-align:left">Content-Range</td>
+<td style="text-align:left">&#x5B9E;&#x4F53;&#x7684;&#x4F4D;&#x7F6E;&#x8303;&#x56F4;</td>
+</tr>
+<tr>
+<td style="text-align:left">Content-Type</td>
+<td style="text-align:left">&#x5B9E;&#x4F53;&#x4E3B;&#x4F53;&#x7684;&#x5A92;&#x4F53;&#x7C7B;&#x578B;</td>
+</tr>
+<tr>
+<td style="text-align:left">Expires</td>
+<td style="text-align:left">&#x5B9E;&#x4F53;&#x8FC7;&#x671F;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td style="text-align:left">Last-Modified</td>
+<td style="text-align:left">&#x8D44;&#x6E90;&#x7684;&#x6700;&#x540E;&#x4FEE;&#x6539;&#x65F6;&#x95F4;</td>
+</tr>
+</tbody>
+</table>
+
+        <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
+    </div>
+    
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

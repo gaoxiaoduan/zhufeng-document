@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+   
+                    
+
+                        
+<div class="warpper">
+    <div class="page-toc">
+        <ul><li><a href="#t01. React Hooks">1. React Hooks</a><ul><li><a href="#t11.1 Hooks 优点">1.1 Hooks 优点</a></li><li><a href="#t21.2 自定义 Hook">1.2 自定义 Hook</a></li><li><a href="#t31.3 初始化项目">1.3 初始化项目</a></li></ul></li><li><a href="#t42.useRequest">2.useRequest</a><ul><li><a href="#t52.1 index.js">2.1 index.js</a></li><li><a href="#t62.2 Table.js">2.2 Table.js</a></li><li><a href="#t72.3 useRequest.js">2.3 useRequest.js</a></li><li><a href="#t82.4 api.js">2.4 api.js</a></li></ul></li><li><a href="#t93.useDrag">3.useDrag</a><ul><li><a href="#t103.1 基础">3.1 基础</a><ul><li><a href="#t113.1.1 触摸事件">3.1.1 触摸事件</a></li><li><a href="#t123.1.2 触摸列表">3.1.2 触摸列表</a></li><li><a href="#t133.1.3  Touch对象">3.1.3  Touch对象</a></li></ul></li><li><a href="#t143.2 实现">3.2 实现</a><ul><li><a href="#t153.2.1 index.js">3.2.1 index.js</a></li><li><a href="#t163.2.2 src\Drag.js">3.2.2 src\Drag.js</a></li><li><a href="#t173.2.3 useDrag.js">3.2.3 useDrag.js</a></li></ul></li></ul></li><li><a href="#t184.useForm">4.useForm</a><ul><li><a href="#t194.1 src\index.js">4.1 src\index.js</a></li><li><a href="#t204.2 src\Form.js">4.2 src\Form.js</a></li><li><a href="#t214.3 useForm.js">4.3 useForm.js</a></li></ul></li><li><a href="#t225.useAnimation">5.useAnimation</a><ul><li><a href="#t235.1 src\index.js">5.1 src\index.js</a></li><li><a href="#t245.2 src\Circle.js">5.2 src\Circle.js</a></li><li><a href="#t255.3 Circle.css">5.3 Circle.css</a></li><li><a href="#t265.4 useAnimation.js">5.4 useAnimation.js</a></li></ul></li></ul>
+    </div>
+    <div class="content markdown-body">
+        <h2 id="t01. React Hooks">1. React Hooks <a href="#t01. React Hooks"> # </a></h2>
+<ul>
+<li>Hook &#x662F; React 16.8 &#x7684;&#x65B0;&#x589E;&#x7279;&#x6027;&#x3002;&#x5B83;&#x53EF;&#x4EE5;&#x8BA9;&#x4F60;&#x5728;&#x4E0D;&#x7F16;&#x5199; class &#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x4F7F;&#x7528; state &#x4EE5;&#x53CA;&#x5176;&#x4ED6;&#x7684; React &#x7279;&#x6027;</li>
+</ul>
+<h3 id="t11.1 Hooks &#x4F18;&#x70B9;">1.1 Hooks &#x4F18;&#x70B9; <a href="#t11.1 Hooks &#x4F18;&#x70B9;"> # </a></h3>
+<ul>
+<li>&#x53EF;&#x4EE5;&#x62BD;&#x79BB;&#x516C;&#x5171;&#x65B9;&#x6CD5;&#x548C;&#x903B;&#x8F91;&#xFF0C;&#x63D0;&#x9AD8;&#x4EE3;&#x7801;&#x7684;&#x53EF;&#x590D;&#x7528;&#x6027;</li>
+<li>&#x51FD;&#x6570;&#x5F0F;&#x7EC4;&#x4EF6;&#x66F4;&#x7B80;&#x6D01;&#xFF0C;&#x5F00;&#x53D1;&#x6548;&#x7387;&#x66F4;&#x9AD8;</li>
+</ul>
+<h3 id="t21.2 &#x81EA;&#x5B9A;&#x4E49; Hook">1.2 &#x81EA;&#x5B9A;&#x4E49; Hook <a href="#t21.2 &#x81EA;&#x5B9A;&#x4E49; Hook"> # </a></h3>
+<ul>
+<li>&#x901A;&#x8FC7;&#x81EA;&#x5B9A;&#x4E49; Hook&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x7EC4;&#x4EF6;&#x903B;&#x8F91;&#x63D0;&#x53D6;&#x5230;&#x53EF;&#x91CD;&#x7528;&#x7684;&#x51FD;&#x6570;&#x4E2D;</li>
+<li>&#x81EA;&#x5B9A;&#x4E49; Hook &#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x5176;&#x540D;&#x79F0;&#x4EE5; <code>use</code> &#x5F00;&#x5934;&#xFF0C;&#x51FD;&#x6570;&#x5185;&#x90E8;&#x53EF;&#x4EE5;&#x8C03;&#x7528;&#x5176;&#x4ED6;&#x7684; <code>Hook</code></li>
+</ul>
+<p><img src="https://img.zhufengpeixun.com/e4fa49ed9ad67984a49e90cbe1d0b111" alt="e4fa49ed9ad67984a49e90cbe1d0b111"></p>
+<h3 id="t31.3 &#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;">1.3 &#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE; <a href="#t31.3 &#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;"> # </a></h3>
+<pre><code class="lang-js">create-react-app zhufeng_custom_hooks
+cd zhufeng_custom_hooks
+npm i express cors morgan bootstrap@<span class="hljs-number">3</span> react-router-dom --save
+</code></pre>
+<h2 id="t42.useRequest">2.useRequest <a href="#t42.useRequest"> # </a></h2>
+<h3 id="t52.1 index.js">2.1 index.js <a href="#t52.1 index.js"> # </a></h3>
+<p>src\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;bootstrap/dist/css/bootstrap.css&apos;</span>
+<span class="hljs-keyword">import</span> {BrowserRouter,Route,Link} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router-dom&apos;</span>;
+<span class="hljs-keyword">import</span> Table <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./Table&apos;</span>;
+<span class="hljs-keyword">import</span> Drag <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./Drag&apos;</span>;
+<span class="hljs-keyword">import</span> Form <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./Form&apos;</span>;
+<span class="hljs-keyword">import</span> Circle <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./Circle&apos;</span>;
+ReactDOM.render(
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;container&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;col-md-12&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">padding:</span> <span class="hljs-attr">10</span> }}&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">BrowserRouter</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;nav nav-tabs&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&quot;/table&quot;</span>&gt;</span>Table<span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&quot;/drag&quot;</span>&gt;</span>Drag<span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&quot;/form&quot;</span>&gt;</span>Form<span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&quot;/circle&quot;</span>&gt;</span>Circle<span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&quot;/table&quot;</span> <span class="hljs-attr">component</span>=<span class="hljs-string">{Table}/</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&quot;/drag&quot;</span> <span class="hljs-attr">component</span>=<span class="hljs-string">{Drag}/</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&quot;/form&quot;</span> <span class="hljs-attr">component</span>=<span class="hljs-string">{Form}/</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&quot;/circle&quot;</span> <span class="hljs-attr">component</span>=<span class="hljs-string">{Circle}/</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">BrowserRouter</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>,
+  <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;root&apos;</span>)
+);
+</code></pre>
+<h3 id="t62.2 Table.js">2.2 Table.js <a href="#t62.2 Table.js"> # </a></h3>
+<p>src\Table.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> useRequest <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./hooks/useRequest&apos;</span>;
+<span class="hljs-keyword">const</span> URL = <span class="hljs-string">&apos;http://localhost:8000/api/users&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Table</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> [data, options,setOptions] = useRequest(URL);
+    <span class="hljs-keyword">const</span> { currentPage, totalPage, list } = data;
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;table table-striped&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>ID<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>&#x59D3;&#x540D;<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">thead</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
+                    {
+                        list.map(item =&gt; (<span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{item.id}</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>{item.id}<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>{item.name}<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>))
+                    }
+                <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">nav</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;pagination&quot;</span>&gt;</span>
+                    {currentPage&gt;1&amp;&amp;(
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;btn btn-default&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> setOptions({ ...options,currentPage: currentPage - 1 })}&gt;
+                                <span class="hljs-tag">&lt;<span class="hljs-name">span</span> &gt;</span><span class="hljs-symbol">&amp;laquo;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    )}
+                    {
+                        new Array(totalPage).fill(0).map((item, index) =&gt; (
+                            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">className</span>=<span class="hljs-string">{index+1</span>===<span class="hljs-string">currentPage?</span>&apos;<span class="hljs-attr">btn</span> <span class="hljs-attr">btn-success</span>&apos;<span class="hljs-attr">:</span>&apos;<span class="hljs-attr">btn</span> <span class="hljs-attr">btn-default</span>&apos;} <span class="hljs-attr">key</span>=<span class="hljs-string">{item.id}</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> setOptions({ ...options,currentPage: index + 1 })}&gt;{index + 1}<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        ))
+                    }
+                    {
+                        currentPage<span class="hljs-tag">&lt;<span class="hljs-name">totalPage&amp;&amp;(</span>
+                            &lt;<span class="hljs-attr">li</span>&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;btn btn-default&quot;</span>  <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> setOptions({...options, currentPage: currentPage + 1 })}&gt;
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span><span class="hljs-symbol">&amp;raquo;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                        )
+                    }
+                <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span>
+        <span class="hljs-tag">&lt;/&gt;</span>
+    )
+}
+</span></code></pre>
+<h3 id="t72.3 useRequest.js">2.3 useRequest.js <a href="#t72.3 useRequest.js"> # </a></h3>
+<p>src\hooks\useRequest.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { useState, useEffect } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useRequest</span>(<span class="hljs-params">url</span>) </span>{
+    <span class="hljs-keyword">let</span> [options, setOptions] = useState({
+        <span class="hljs-attr">currentPage</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-attr">pageSize</span>: <span class="hljs-number">5</span>
+    });
+    <span class="hljs-keyword">let</span> [data, setData] = useState({
+        <span class="hljs-attr">totalPage</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">list</span>: []
+    });
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getData</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">let</span> { currentPage, pageSize } = options;
+        fetch(<span class="hljs-string">`<span class="hljs-subst">${url}</span>?currentPage=<span class="hljs-subst">${currentPage}</span>&amp;pageSize=<span class="hljs-subst">${pageSize}</span>`</span>)
+            .then(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> response.json())
+            .then(<span class="hljs-function"><span class="hljs-params">result</span> =&gt;</span> {
+                setData({...result});
+            });
+    }
+    useEffect(getData, [options, url]);
+    <span class="hljs-keyword">return</span> [data,options, setOptions];
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> useRequest;
+</code></pre>
+<h3 id="t82.4 api.js">2.4 api.js <a href="#t82.4 api.js"> # </a></h3>
+<p>api.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express&apos;</span>);
+<span class="hljs-keyword">let</span> cors = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;cors&apos;</span>);
+<span class="hljs-keyword">let</span> logger = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;morgan&apos;</span>);
+<span class="hljs-keyword">let</span> app = express();
+app.use(logger(<span class="hljs-string">&apos;dev&apos;</span>));
+app.use(cors());
+app.get(<span class="hljs-string">&apos;/api/users&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">req, res</span>) </span>{
+    <span class="hljs-keyword">let</span> currentPage = <span class="hljs-built_in">parseInt</span>(req.query.currentPage);
+    <span class="hljs-keyword">let</span> pageSize = <span class="hljs-built_in">parseInt</span>(req.query.pageSize);
+    <span class="hljs-keyword">let</span> total=<span class="hljs-number">25</span>;
+    <span class="hljs-keyword">let</span> list = [];
+    <span class="hljs-keyword">let</span> offset = (currentPage<span class="hljs-number">-1</span>)*pageSize;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = offset; i &lt; offset + pageSize; i++) {
+        list.push({ <span class="hljs-attr">id</span>: i + <span class="hljs-number">1</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;name&apos;</span> + (i + <span class="hljs-number">1</span>) });
+    }
+    res.json({
+        currentPage,
+        pageSize,
+        <span class="hljs-attr">totalPage</span>:<span class="hljs-built_in">Math</span>.ceil(total/pageSize),
+        list
+    });
+});
+app.listen(<span class="hljs-number">8000</span>,()=&gt;{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;sever started at port 8000&apos;</span>);
+});
+</code></pre>
+<h2 id="t93.useDrag">3.useDrag <a href="#t93.useDrag"> # </a></h2>
+<p><img src="https://img.zhufengpeixun.com/c81b23738e0b951ad11d4a395795b7ff" alt="c81b23738e0b951ad11d4a395795b7ff"></p>
+<h3 id="t103.1 &#x57FA;&#x7840;">3.1 &#x57FA;&#x7840; <a href="#t103.1 &#x57FA;&#x7840;"> # </a></h3>
+<h4 id="t113.1.1 &#x89E6;&#x6478;&#x4E8B;&#x4EF6;">3.1.1 &#x89E6;&#x6478;&#x4E8B;&#x4EF6; <a href="#t113.1.1 &#x89E6;&#x6478;&#x4E8B;&#x4EF6;"> # </a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x4E8B;&#x4EF6;&#x540D;&#x79F0;</th>
+<th style="text-align:left">&#x63CF;&#x8FF0;</th>
+<th style="text-align:left">&#x662F;&#x5426;&#x5305;&#x542B; touches &#x6570;&#x7EC4;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">touchstart</td>
+<td style="text-align:left">&#x89E6;&#x6478;&#x5F00;&#x59CB;&#x53D1;</td>
+<td style="text-align:left">&#x662F;</td>
+</tr>
+<tr>
+<td style="text-align:left">touchmove</td>
+<td style="text-align:left">&#x6ED1;&#x52A8;&#x65F6;&#x63A5;&#x89E6;&#x70B9;&#x6539;&#x53D8;</td>
+<td style="text-align:left">&#x662F;</td>
+</tr>
+<tr>
+<td style="text-align:left">touchend</td>
+<td style="text-align:left">&#x624B;&#x6307;&#x79BB;&#x5F00;&#x5C4F;&#x5E55;&#x65F6;&#x89E6;&#x6478;&#x7ED3;&#x675F;</td>
+<td style="text-align:left">&#x662F;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="t123.1.2 &#x89E6;&#x6478;&#x5217;&#x8868;">3.1.2 &#x89E6;&#x6478;&#x5217;&#x8868; <a href="#t123.1.2 &#x89E6;&#x6478;&#x5217;&#x8868;"> # </a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x53C2;&#x6570;</th>
+<th style="text-align:left">&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">touches</td>
+<td style="text-align:left">&#x5F53;&#x524D;&#x4F4D;&#x4E8E;&#x5C4F;&#x5E55;&#x4E0A;&#x7684;&#x6240;&#x6709;&#x624B;&#x6307;&#x7684;&#x5217;&#x8868;</td>
+</tr>
+<tr>
+<td style="text-align:left">targetTouches</td>
+<td style="text-align:left">&#x4F4D;&#x4E8E;&#x5F53;&#x524D;DOM&#x5143;&#x7D20;&#x4E0A;&#x624B;&#x6307;&#x7684;&#x5217;&#x8868;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="t133.1.3  Touch&#x5BF9;&#x8C61;">3.1.3  Touch&#x5BF9;&#x8C61; <a href="#t133.1.3  Touch&#x5BF9;&#x8C61;"> # </a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x53C2;&#x6570;</th>
+<th style="text-align:left">&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">clientX</td>
+<td style="text-align:left">&#x89E6;&#x6478;&#x76EE;&#x6807;&#x5728;&#x89C6;&#x53E3;&#x4E2D;&#x7684;x&#x5750;&#x6807;</td>
+</tr>
+<tr>
+<td style="text-align:left">clientY</td>
+<td style="text-align:left">&#x89E6;&#x6478;&#x76EE;&#x6807;&#x5728;&#x89C6;&#x53E3;&#x4E2D;&#x7684;y&#x5750;&#x6807;</td>
+</tr>
+<tr>
+<td style="text-align:left">pageX</td>
+<td style="text-align:left">&#x89E6;&#x6478;&#x76EE;&#x6807;&#x5728;&#x9875;&#x9762;&#x4E2D;&#x7684;x&#x5750;&#x6807;</td>
+</tr>
+<tr>
+<td style="text-align:left">pageY</td>
+<td style="text-align:left">&#x89E6;&#x6478;&#x76EE;&#x6807;&#x5728;&#x9875;&#x9762;&#x4E2D;&#x7684;y&#x5750;&#x6807;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t143.2 &#x5B9E;&#x73B0;">3.2 &#x5B9E;&#x73B0; <a href="#t143.2 &#x5B9E;&#x73B0;"> # </a></h3>
+<h4 id="t153.2.1 index.js">3.2.1 index.js <a href="#t153.2.1 index.js"> # </a></h4>
+<p>src\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;bootstrap/dist/css/bootstrap.css&apos;</span>
+<span class="hljs-keyword">import</span> Drag <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./Drag&apos;</span>;
+ReactDOM.render(
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;container&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;col-md-12&quot;</span>&gt;</span>
+        {<span class="hljs-tag">&lt;<span class="hljs-name">Drag</span> /&gt;</span>}
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>,
+  <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;root&apos;</span>)
+);
+</code></pre>
+<h4 id="t163.2.2 src\Drag.js">3.2.2 src\Drag.js <a href="#t163.2.2 src\Drag.js"> # </a></h4>
+<p>src\Drag.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> useDrag <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./hooks/useDrag&apos;</span>;
+<span class="hljs-keyword">let</span> style = {<span class="hljs-attr">width</span>:<span class="hljs-string">&apos;100px&apos;</span>,<span class="hljs-attr">height</span>:<span class="hljs-string">&apos;100px&apos;</span>,<span class="hljs-attr">borderRadius</span>:<span class="hljs-string">&apos;50%&apos;</span>};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Drag</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> [style1, dragRef1] = useDrag()
+    <span class="hljs-keyword">const</span> [style2, dragRef2] = useDrag()
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span>
+                <span class="hljs-attr">ref</span>=<span class="hljs-string">{dragRef1}</span>
+                <span class="hljs-attr">style</span>=<span class="hljs-string">{{...style,backgroundColor:</span>&apos;<span class="hljs-attr">red</span>&apos;,<span class="hljs-attr">transform:</span> `<span class="hljs-attr">translate</span>(${<span class="hljs-attr">style1.x</span>}<span class="hljs-attr">px</span>, ${<span class="hljs-attr">style1.y</span>}<span class="hljs-attr">px</span>)` }}
+            &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+             <span class="hljs-tag">&lt;<span class="hljs-name">div</span>
+                <span class="hljs-attr">ref</span>=<span class="hljs-string">{dragRef2}</span>
+                <span class="hljs-attr">style</span>=<span class="hljs-string">{{...style,backgroundColor:</span>&apos;<span class="hljs-attr">green</span>&apos;,<span class="hljs-attr">transform:</span> `<span class="hljs-attr">translate</span>(${<span class="hljs-attr">style2.x</span>}<span class="hljs-attr">px</span>, ${<span class="hljs-attr">style2.y</span>}<span class="hljs-attr">px</span>)` }}
+            &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/&gt;</span></span>
+    )
+}
+</code></pre>
+<h4 id="t173.2.3 useDrag.js">3.2.3 useDrag.js <a href="#t173.2.3 useDrag.js"> # </a></h4>
+<p>src\hooks\useDrag.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { useLayoutEffect, useState, useRef } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useDrag</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> positionRef = useRef({
+        <span class="hljs-attr">currentX</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">currentY</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-attr">lastX</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">lastY</span>: <span class="hljs-number">0</span>
+    })
+    <span class="hljs-keyword">const</span> moveElement = useRef(<span class="hljs-literal">null</span>);
+    <span class="hljs-keyword">const</span> [, forceUpdate] = useState({});
+    useLayoutEffect(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+        <span class="hljs-keyword">let</span> startX, startY;
+        <span class="hljs-keyword">const</span> start = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">event</span>) </span>{
+            <span class="hljs-keyword">const</span> { clientX, clientY } =  event.targetTouches[<span class="hljs-number">0</span>];
+            startX = clientX;
+            startY = clientY;
+            moveElement.current.addEventListener(<span class="hljs-string">&apos;touchmove&apos;</span>, move);
+            moveElement.current.addEventListener(<span class="hljs-string">&apos;touchend&apos;</span>, end);
+
+        }
+        <span class="hljs-keyword">const</span> move = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">event</span>) </span>{
+            <span class="hljs-keyword">const</span> { clientX, clientY } = event.targetTouches[<span class="hljs-number">0</span>];
+            positionRef.current.currentX = positionRef.current.lastX + (clientX - startX);
+            positionRef.current.currentY = positionRef.current.lastY + (clientY - startY);
+            forceUpdate({});
+        }
+        <span class="hljs-keyword">const</span> end = <span class="hljs-function">(<span class="hljs-params">event</span>) =&gt;</span> {
+            positionRef.current.lastX = positionRef.current.currentX;
+            positionRef.current.lastY = positionRef.current.currentY;
+            moveElement.current.removeEventListener(<span class="hljs-string">&apos;touchmove&apos;</span>, move);
+                moveElement.current.removeEventListener(<span class="hljs-string">&apos;touchend&apos;</span>, end);
+        }
+        moveElement.current.addEventListener(<span class="hljs-string">&apos;touchstart&apos;</span>, start);
+
+    }, []);
+    <span class="hljs-keyword">return</span> [{ <span class="hljs-attr">x</span>: positionRef.current.currentX, <span class="hljs-attr">y</span>: positionRef.current.currentY }, moveElement]
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> useDrag;
+</code></pre>
+<h2 id="t184.useForm">4.useForm <a href="#t184.useForm"> # </a></h2>
+<h3 id="t194.1 src\index.js">4.1 src\index.js <a href="#t194.1 src\index.js"> # </a></h3>
+<p>src\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;bootstrap/dist/css/bootstrap.css&apos;</span>
+<span class="hljs-keyword">import</span> Form <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./Form&apos;</span>;
+ReactDOM.render(
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;container&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;col-md-12&quot;</span>&gt;</span>
+        {<span class="hljs-tag">&lt;<span class="hljs-name">Form</span> /&gt;</span>}
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>,
+  <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;root&apos;</span>)
+);
+</code></pre>
+<h3 id="t204.2 src\Form.js">4.2 src\Form.js <a href="#t204.2 src\Form.js"> # </a></h3>
+<p>src\Form.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> useForm <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./hooks/useForm&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Form</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> [formData, setFormValue, resetFormValues] = useForm({<span class="hljs-attr">username</span>:<span class="hljs-string">&apos;&apos;</span>,<span class="hljs-attr">email</span>:<span class="hljs-string">&apos;&apos;</span>});
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;panel&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;panel-body&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;form-group&quot;</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> &gt;</span>&#x7528;&#x6237;&#x540D;<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">input</span>
+                            <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;form-control&quot;</span>
+                            <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x7528;&#x6237;&#x540D;&quot;</span>
+                            <span class="hljs-attr">value</span>=<span class="hljs-string">{formData.username}</span>
+                            <span class="hljs-attr">onChange</span>=<span class="hljs-string">{(event)</span> =&gt;</span> setFormValue(&apos;username&apos;, event.target.value)} /&gt;
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;form-group&quot;</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">label</span> &gt;</span>&#x90AE;&#x7BB1;<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">input</span>
+                            <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;form-control&quot;</span>
+                            <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x90AE;&#x7BB1;&quot;</span>
+                            <span class="hljs-attr">value</span>=<span class="hljs-string">{formData.email}</span>
+                            <span class="hljs-attr">onChange</span>=<span class="hljs-string">{(event)</span> =&gt;</span> setFormValue(&apos;email&apos;, event.target.value)}
+                        /&gt;
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;btn btn-default&quot;</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> console.log(formData)}&gt;&#x63D0;&#x4EA4;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">button</span>  <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;btn btn-default&quot;</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{resetFormValues}</span>&gt;</span>&#x91CD;&#x7F6E;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+}
+</code></pre>
+<h3 id="t214.3 useForm.js">4.3 useForm.js <a href="#t214.3 useForm.js"> # </a></h3>
+<p>src\hooks\useForm.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useForm</span>(<span class="hljs-params">values</span>) </span>{
+    <span class="hljs-keyword">const</span> [formData, setFormData] = useState(values);
+    <span class="hljs-keyword">const</span> setFormValue = <span class="hljs-function">(<span class="hljs-params">key, value</span>) =&gt;</span> {
+        setFormData({...formData,[key]:value});
+    }
+    <span class="hljs-keyword">const</span> resetFormValues = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+        setFormData(values);
+    }
+    <span class="hljs-keyword">return</span> [formData, setFormValue, resetFormValues];
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> useForm;
+</code></pre>
+<h2 id="t225.useAnimation">5.useAnimation <a href="#t225.useAnimation"> # </a></h2>
+<h3 id="t235.1 src\index.js">5.1 src\index.js <a href="#t235.1 src\index.js"> # </a></h3>
+<p>src\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;bootstrap/dist/css/bootstrap.css&apos;</span>
+<span class="hljs-keyword">import</span> Circle <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./Circle&apos;</span>;
+ReactDOM.render(
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;container&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;col-md-12&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">padding:</span> <span class="hljs-attr">10</span> }}&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Circle</span>/&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>,
+  <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;root&apos;</span>)
+);
+</code></pre>
+<h3 id="t245.2 src\Circle.js">5.2 src\Circle.js <a href="#t245.2 src\Circle.js"> # </a></h3>
+<p>src\Circle.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> useAnimation <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./hooks/useAnimation&apos;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;./Circle.css&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Circle</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> [className, start] = useAnimation(<span class="hljs-string">&apos;circle&apos;</span>,<span class="hljs-string">&apos;active&apos;</span>);
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">{className}</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{start}</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    );
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Circle;;
+</code></pre>
+<h3 id="t255.3 Circle.css">5.3 Circle.css <a href="#t255.3 Circle.css"> # </a></h3>
+<p>src\Circle.css</p>
+<pre><code class="lang-css"><span class="hljs-selector-class">.circle</span> {
+    <span class="hljs-attribute">width </span>: <span class="hljs-number">200px</span>;
+    <span class="hljs-attribute">height </span>: <span class="hljs-number">200px</span>;
+    <span class="hljs-attribute">background-color </span>: gray;
+    <span class="hljs-attribute">transition</span>: all <span class="hljs-number">2s</span>;
+}
+<span class="hljs-selector-class">.circle</span><span class="hljs-selector-class">.active</span> {
+    <span class="hljs-attribute">background-color </span>: green;
+}
+</code></pre>
+<h3 id="t265.4 useAnimation.js">5.4 useAnimation.js <a href="#t265.4 useAnimation.js"> # </a></h3>
+<p>src\hooks\useAnimation.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> {useState} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useAnimation</span>(<span class="hljs-params">initialClassName,activeClassName</span>) </span>{
+    <span class="hljs-keyword">const</span> [className, setClassName] = useState(initialClassName);
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">start</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">if</span> (className === initialClassName) {
+            setClassName(<span class="hljs-string">`<span class="hljs-subst">${initialClassName}</span> <span class="hljs-subst">${activeClassName}</span>`</span>);
+        }<span class="hljs-keyword">else</span>{
+            setClassName(<span class="hljs-string">`<span class="hljs-subst">${initialClassName}</span>`</span>);
+        }
+    }
+    <span class="hljs-keyword">return</span> [className, start];
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> useAnimation;
+</code></pre>
+
+    </div>
+</div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+    aria-labelledby="loginModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="loginModalLabel">请登录</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="username" class="control-label">姓名:</label>
+                        <input type="text" class="form-control" id="username" placeholder="珠峰架构VIP会员系统用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">密码:</label>
+                        <input type="text" class="form-control" id="password" placeholder="珠峰架构VIP会员系统密码">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                    data-dismiss="modal">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

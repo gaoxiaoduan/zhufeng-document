@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+   
+                    
+
+                        
+<div class="warpper">
+    <div class="page-toc">
+        <ul><li><a href="#t01. 约定式路由">1. 约定式路由</a><ul><li><a href="#t11.1 初始化项目">1.1 初始化项目</a></li><li><a href="#t21.2  运行项目">1.2  运行项目</a><ul><li><a href="#t31.2.1 pages\index.js">1.2.1 pages\index.js</a></li><li><a href="#t41.2.2 pages\profile.js">1.2.2 pages\profile.js</a></li><li><a href="#t51.2.3 pages\user\_layout.js">1.2.3 pages\user\_layout.js</a></li><li><a href="#t61.2.4 pages\user\add.js">1.2.4 pages\user\add.js</a></li><li><a href="#t71.2.5 pages\user\list.js">1.2.5 pages\user\list.js</a></li><li><a href="#t81.2.6 package.json">1.2.6 package.json</a></li><li><a href="#t91.2.7 启动">1.2.7 启动</a></li></ul></li></ul></li><li><a href="#t102. 调试">2. 调试</a><ul><li><a href="#t112.1 NPM调试">2.1 NPM调试</a></li><li><a href="#t122.1.1 launch.json">2.1.1 launch.json</a></li><li><a href="#t132.2 attach调试">2.2 attach调试</a><ul><li><a href="#t142.2.1 package.json">2.2.1 package.json</a></li><li><a href="#t152.2.2 launch.json">2.2.2 launch.json</a></li></ul></li></ul></li><li><a href="#t163. 运行时">3. 运行时</a><ul><li><a href="#t173.1 安装">3.1 安装</a></li><li><a href="#t183.2 .umi2\core\history.js">3.2 .umi2\core\history.js</a></li><li><a href="#t193.3 .umi2\core\routes.js">3.3 .umi2\core\routes.js</a></li><li><a href="#t203.4 .umi2\umi.js">3.4 .umi2\umi.js</a></li><li><a href="#t213.5 src.umi2\index.html">3.5 src.umi2\index.html</a></li><li><a href="#t223.6 webpack.config.js">3.6 webpack.config.js</a></li><li><a href="#t233.7 启动">3.7 启动</a></li></ul></li><li><a href="#t244. 编译时插件">4. 编译时插件</a><ul><li><a href="#t254.1 bin\umi.js">4.1 bin\umi.js</a></li><li><a href="#t264.2 lib\cli.js">4.2 lib\cli.js</a></li><li><a href="#t274.3 lib\PluginAPI.js">4.3 lib\PluginAPI.js</a></li><li><a href="#t284.4 lib\Service.js">4.4 lib\Service.js</a></li><li><a href="#t294.5 commands\dev.js">4.5 commands\dev.js</a></li><li><a href="#t304.6 lib\Server.js">4.6 lib\Server.js</a></li><li><a href="#t314.7 启动服务">4.7 启动服务</a></li></ul></li><li><a href="#t325. 生成临时目录">5. 生成临时目录</a><ul><li><a href="#t335.1 lib\Service.js">5.1 lib\Service.js</a></li><li><a href="#t345.2 lib\PluginAPI.js">5.2 lib\PluginAPI.js</a></li><li><a href="#t355.3 lib\cli.js">5.3 lib\cli.js</a></li><li><a href="#t365.4 webpack.config.js">5.4 webpack.config.js</a></li><li><a href="#t375.5 lib\plugins\commands\dev.js">5.5 lib\plugins\commands\dev.js</a></li><li><a href="#t385.6 lib\getPaths.js">5.6 lib\getPaths.js</a></li><li><a href="#t395.7 lib\utils.js">5.7 lib\utils.js</a></li><li><a href="#t405.8 lib\writeTmpFile.js">5.8 lib\writeTmpFile.js</a></li><li><a href="#t415.9 generateFiles\history.js">5.9 generateFiles\history.js</a></li><li><a href="#t425.10  generateFiles\history.tpl">5.10  generateFiles\history.tpl</a></li><li><a href="#t435.11  generateFiles\umi.js">5.11  generateFiles\umi.js</a></li><li><a href="#t445.12 generateFiles\umi.tpl">5.12 generateFiles\umi.tpl</a></li><li><a href="#t455.13 lib\getRoutes.js">5.13 lib\getRoutes.js</a></li><li><a href="#t465.14 generateFiles\routes.js">5.14 generateFiles\routes.js</a></li><li><a href="#t475.15  generateFiles\routes.tpl">5.15  generateFiles\routes.tpl</a></li><li><a href="#t485.16 启动">5.16 启动</a></li></ul></li><li><a href="#t496. 启动服务器">6. 启动服务器</a><ul><li><a href="#t506.1 lib\Service.js">6.1 lib\Service.js</a></li><li><a href="#t516.2 lib\index.html">6.2 lib\index.html</a></li><li><a href="#t526.3 lib\webpack.config.js">6.3 lib\webpack.config.js</a></li></ul></li><li><a href="#t537. 运行时插件">7. 运行时插件</a><ul><li><a href="#t547.1 src\app.js">7.1 src\app.js</a></li><li><a href="#t557.2 src\foo.js">7.2 src\foo.js</a></li><li><a href="#t567.3 src.umi3\core\plugin.js">7.3 src.umi3\core\plugin.js</a></li><li><a href="#t577.4 src.umi3\core\routes.js">7.4 src.umi3\core\routes.js</a></li></ul></li><li><a href="#t588. 实现运行时插件">8. 实现运行时插件</a><ul><li><a href="#t598.1 plugin.js">8.1 plugin.js</a></li><li><a href="#t608.2 plugin.tpl">8.2 plugin.tpl</a></li><li><a href="#t618.3 routes.tpl">8.3 routes.tpl</a></li></ul></li></ul>
+    </div>
+    <div class="content markdown-body">
+        <h2 id="t01. &#x7EA6;&#x5B9A;&#x5F0F;&#x8DEF;&#x7531;">1. &#x7EA6;&#x5B9A;&#x5F0F;&#x8DEF;&#x7531; <a href="#t01. &#x7EA6;&#x5B9A;&#x5F0F;&#x8DEF;&#x7531;"> # </a></h2>
+<ul>
+<li><a href="https://umijs.org/zh-CN">umijs</a>&#x662F;&#x53EF;&#x6269;&#x5C55;&#x7684;&#x4F01;&#x4E1A;&#x7EA7;&#x524D;&#x7AEF;&#x5E94;&#x7528;&#x6846;&#x67B6;&#x3002;Umi &#x4EE5;<code>&#x8DEF;&#x7531;</code>&#x4E3A;&#x57FA;&#x7840;&#x7684;&#xFF0C;&#x5E76;&#x4EE5;&#x6B64;&#x8FDB;&#x884C;&#x529F;&#x80FD;&#x6269;&#x5C55;&#x3002;&#x7136;&#x540E;&#x914D;&#x4EE5;&#x751F;&#x547D;&#x5468;&#x671F;&#x5B8C;&#x5584;&#x7684;&#x63D2;&#x4EF6;&#x4F53;&#x7CFB;&#xFF0C;&#x652F;&#x6301;&#x5404;&#x79CD;&#x529F;&#x80FD;&#x6269;&#x5C55;&#x548C;&#x4E1A;&#x52A1;&#x9700;&#x6C42;</li>
+<li><a href="https://umijs.org/zh-CN/docs/convention-routing">&#x7EA6;&#x5B9A;&#x5F0F;&#x8DEF;&#x7531;</a></li>
+<li><a href="https://github.com/umijs/umi">umi</a></li>
+</ul>
+<h3 id="t11.1 &#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;">1.1 &#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE; <a href="#t11.1 &#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;"> # </a></h3>
+<pre><code class="lang-js">mkdir zhufeng-umi3
+npm init -y
+cnpm i umi -D
+</code></pre>
+<h3 id="t21.2  &#x8FD0;&#x884C;&#x9879;&#x76EE;">1.2  &#x8FD0;&#x884C;&#x9879;&#x76EE; <a href="#t21.2  &#x8FD0;&#x884C;&#x9879;&#x76EE;"> # </a></h3>
+<h4 id="t31.2.1 pages\index.js">1.2.1 pages\index.js <a href="#t31.2.1 pages\index.js"> # </a></h4>
+<p>src\pages\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">const</span> Index = <span class="hljs-function"><span class="hljs-params">()</span>=&gt;</span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>&#x9996;&#x9875;<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Index
+</code></pre>
+<h4 id="t41.2.2 pages\profile.js">1.2.2 pages\profile.js <a href="#t41.2.2 pages\profile.js"> # </a></h4>
+<p>src\pages\profile.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">const</span> Profile = <span class="hljs-function"><span class="hljs-params">()</span>=&gt;</span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>&#x4E2A;&#x4EBA;&#x4E2D;&#x5FC3;<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Profile;
+</code></pre>
+<h4 id="t51.2.3 pages\user\_layout.js">1.2.3 pages\user\_layout.js <a href="#t51.2.3 pages\user\_layout.js"> # </a></h4>
+<p>src\pages\user\_layout.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">const</span> UserLayout = <span class="hljs-function">(<span class="hljs-params">props</span>)=&gt;</span>(
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/user/add&quot;</span>&gt;</span>&#x6DFB;&#x52A0;&#x7528;&#x6237;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/user/list&quot;</span>&gt;</span>&#x7528;&#x6237;&#x5217;&#x8868;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>{props.children}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+)
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> UserLayout;
+</code></pre>
+<h4 id="t61.2.4 pages\user\add.js">1.2.4 pages\user\add.js <a href="#t61.2.4 pages\user\add.js"> # </a></h4>
+<p>src\pages\user\add.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">const</span> UserAdd = <span class="hljs-function"><span class="hljs-params">()</span>=&gt;</span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>&#x6DFB;&#x52A0;&#x7528;&#x6237;<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> UserAdd;
+</code></pre>
+<h4 id="t71.2.5 pages\user\list.js">1.2.5 pages\user\list.js <a href="#t71.2.5 pages\user\list.js"> # </a></h4>
+<p>src\pages\user\list.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">const</span> UserList = <span class="hljs-function"><span class="hljs-params">()</span>=&gt;</span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>&#x7528;&#x6237;&#x5217;&#x8868;<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> UserList;
+</code></pre>
+<h4 id="t81.2.6 package.json">1.2.6 package.json <a href="#t81.2.6 package.json"> # </a></h4>
+<p>package.json</p>
+<pre><code class="lang-json">  &quot;scripts&quot;: {
+    &quot;dev&quot;: &quot;umi dev&quot;
+  }
+</code></pre>
+<h4 id="t91.2.7 &#x542F;&#x52A8;">1.2.7 &#x542F;&#x52A8; <a href="#t91.2.7 &#x542F;&#x52A8;"> # </a></h4>
+<pre><code class="lang-js">npm run dev
+</code></pre>
+<h2 id="t102. &#x8C03;&#x8BD5;">2. &#x8C03;&#x8BD5; <a href="#t102. &#x8C03;&#x8BD5;"> # </a></h2>
+<ul>
+<li><a href="https://nodejs.org/en/docs/guides/debugging-getting-started/">debugging</a><ul>
+<li><code>--inspect-brk</code> &#x6307;&#x5B9A;&#x5728;&#x7B2C;&#x4E00;&#x884C;&#x5C31;&#x8BBE;&#x7F6E;&#x65AD;&#x70B9;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x4E00;&#x5F00;&#x59CB;&#x8FD0;&#x884C;&#xFF0C;&#x5C31;&#x662F;&#x6682;&#x505C;&#x7684;&#x72B6;&#x6001;</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://img.zhufengpeixun.com/vscodedebug.jpg" alt="vscodedebug"></p>
+<h3 id="t112.1 NPM&#x8C03;&#x8BD5;">2.1 NPM&#x8C03;&#x8BD5; <a href="#t112.1 NPM&#x8C03;&#x8BD5;"> # </a></h3>
+<h3 id="t122.1.1 launch.json">2.1.1 launch.json <a href="#t122.1.1 launch.json"> # </a></h3>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">&quot;version&quot;</span>: <span class="hljs-string">&quot;0.2.0&quot;</span>,
+    <span class="hljs-attr">&quot;configurations&quot;</span>: [
+        {
+            <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Launch via NPM&quot;</span>,
+            <span class="hljs-attr">&quot;request&quot;</span>: <span class="hljs-string">&quot;launch&quot;</span>,
+            <span class="hljs-attr">&quot;runtimeArgs&quot;</span>: [
+                <span class="hljs-string">&quot;run-script&quot;</span>,
+                <span class="hljs-string">&quot;dev&quot;</span>
+            ],
+            <span class="hljs-attr">&quot;runtimeExecutable&quot;</span>: <span class="hljs-string">&quot;npm&quot;</span>,
+            <span class="hljs-attr">&quot;skipFiles&quot;</span>: [
+                <span class="hljs-string">&quot;&lt;node_internals&gt;/**&quot;</span>
+            ],
+            <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;pwa-node&quot;</span>
+        }
+    ]
+}
+</code></pre>
+<h3 id="t132.2 attach&#x8C03;&#x8BD5;">2.2 attach&#x8C03;&#x8BD5; <a href="#t132.2 attach&#x8C03;&#x8BD5;"> # </a></h3>
+<h4 id="t142.2.1 package.json">2.2.1 package.json <a href="#t142.2.1 package.json"> # </a></h4>
+<p>package.json</p>
+<pre><code class="lang-diff">  &quot;scripts&quot;: {
+    &quot;dev&quot;: &quot;umi dev&quot;,
+<span class="hljs-addition">+   &quot;debug&quot;: &quot;node --inspect-brk=9229  ./node_modules/_umi@3.3.1@umi/bin/umi.js dev&quot;</span>
+  }
+</code></pre>
+<h4 id="t152.2.2 launch.json">2.2.2 launch.json <a href="#t152.2.2 launch.json"> # </a></h4>
+<p>.vscode\launch.json</p>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">&quot;version&quot;</span>: <span class="hljs-string">&quot;0.2.0&quot;</span>,
+    <span class="hljs-attr">&quot;configurations&quot;</span>: [
+        {
+            <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Attach to UMI&quot;</span>,
+            <span class="hljs-attr">&quot;port&quot;</span>: <span class="hljs-number">9230</span>,
+            <span class="hljs-attr">&quot;request&quot;</span>: <span class="hljs-string">&quot;attach&quot;</span>,
+            <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;node&quot;</span>
+        }
+    ]
+}
+</code></pre>
+<p>.vscode\launch.json</p>
+<pre><code class="lang-json">{
+    <span class="hljs-attr">&quot;version&quot;</span>: <span class="hljs-string">&quot;0.2.0&quot;</span>,
+    <span class="hljs-attr">&quot;configurations&quot;</span>: [
+        {
+            <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Attach to Remote&quot;</span>,
+            <span class="hljs-attr">&quot;port&quot;</span>: <span class="hljs-number">9230</span>,
+            <span class="hljs-attr">&quot;request&quot;</span>: <span class="hljs-string">&quot;attach&quot;</span>,
+            <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;node&quot;</span>
+        }
+    ]
+}
+</code></pre>
+<h2 id="t163. &#x8FD0;&#x884C;&#x65F6;">3. &#x8FD0;&#x884C;&#x65F6; <a href="#t163. &#x8FD0;&#x884C;&#x65F6;"> # </a></h2>
+<h3 id="t173.1 &#x5B89;&#x88C5;">3.1 &#x5B89;&#x88C5; <a href="#t173.1 &#x5B89;&#x88C5;"> # </a></h3>
+<pre><code class="lang-js">cnpm i webpack webpack-cli webpack-dev-server html-webpack-plugin  babel-loader @babel/core @babel/preset-env @babel/preset-react webpack-dev-middleware express mustache cnpm react react-dom react-router-dom -S
+</code></pre>
+<h3 id="t183.2 .umi2\core\history.js">3.2 .umi2\core\history.js <a href="#t183.2 .umi2\core\history.js"> # </a></h3>
+<p>src.umi2\core\history.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { createBrowserHistory } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;history&apos;</span>;
+<span class="hljs-keyword">let</span> history = createBrowserHistory();
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> history;
+</code></pre>
+<h3 id="t193.3 .umi2\core\routes.js">3.3 .umi2\core\routes.js <a href="#t193.3 .umi2\core\routes.js"> # </a></h3>
+<p>src.umi2\core\routes.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getRoutes</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> routes = [
+    {
+      <span class="hljs-string">&quot;path&quot;</span>: <span class="hljs-string">&quot;/&quot;</span>,
+      <span class="hljs-string">&quot;exact&quot;</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-string">&quot;component&quot;</span>: <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@/pages/index.js&apos;</span>).default
+    },
+    {
+      <span class="hljs-string">&quot;path&quot;</span>: <span class="hljs-string">&quot;/profile&quot;</span>,
+      <span class="hljs-string">&quot;exact&quot;</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-string">&quot;component&quot;</span>: <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@/pages/profile.js&apos;</span>).default
+    },
+    {
+      <span class="hljs-string">&quot;path&quot;</span>: <span class="hljs-string">&quot;/user&quot;</span>,
+      <span class="hljs-string">&quot;routes&quot;</span>: [
+        {
+          <span class="hljs-string">&quot;path&quot;</span>: <span class="hljs-string">&quot;/user/add&quot;</span>,
+          <span class="hljs-string">&quot;exact&quot;</span>: <span class="hljs-literal">true</span>,
+          <span class="hljs-string">&quot;component&quot;</span>: <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@/pages/user/add.js&apos;</span>).default
+        },
+        {
+          <span class="hljs-string">&quot;path&quot;</span>: <span class="hljs-string">&quot;/user/list&quot;</span>,
+          <span class="hljs-string">&quot;exact&quot;</span>: <span class="hljs-literal">true</span>,
+          <span class="hljs-string">&quot;component&quot;</span>: <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@/pages/user/list.js&apos;</span>).default
+        }
+      ],
+      <span class="hljs-string">&quot;component&quot;</span>: <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@/pages/user/_layout.js&apos;</span>).default
+    }
+  ];
+  <span class="hljs-keyword">return</span> routes;
+}
+</code></pre>
+<h3 id="t203.4 .umi2\umi.js">3.4 .umi2\umi.js <a href="#t203.4 .umi2\umi.js"> # </a></h3>
+<p>src.umi2\umi.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { render } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+<span class="hljs-keyword">import</span> { Router,Route,Switch } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router-dom&apos;</span>;
+<span class="hljs-keyword">import</span> history <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./core/history&apos;</span>;
+<span class="hljs-keyword">import</span> { getRoutes } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./core/routes&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">renderRoutes</span>(<span class="hljs-params">routes</span>)</span>{
+  <span class="hljs-keyword">return</span> routes.map(<span class="hljs-function">(<span class="hljs-params">{path,exact,component:Component,routes:childRoutes=[]},index</span>)=&gt;</span>(
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{index}</span> <span class="hljs-attr">path</span>=<span class="hljs-string">{path}</span> <span class="hljs-attr">exact</span>=<span class="hljs-string">{exact}</span> <span class="hljs-attr">render</span>=<span class="hljs-string">{</span>
+      <span class="hljs-attr">props</span>=&gt;</span>(
+        <span class="hljs-tag">&lt;<span class="hljs-name">Component</span> {<span class="hljs-attr">...props</span>}&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">Switch</span>&gt;</span>
+            {renderRoutes(childRoutes)}
+          <span class="hljs-tag">&lt;/<span class="hljs-name">Switch</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">Component</span>&gt;</span>
+      )
+    }/&gt;</span>
+  ))
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">renderClient</span>(<span class="hljs-params">opts</span>) </span>{
+  render(
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Router</span> <span class="hljs-attr">history</span>=<span class="hljs-string">{opts.history}</span>&gt;</span>
+   {renderRoutes(opts.routes)}
+  <span class="hljs-tag">&lt;/<span class="hljs-name">Router</span>&gt;</span></span>
+  ,<span class="hljs-built_in">document</span>.getElementById(opts.rootElement));
+}
+<span class="hljs-keyword">const</span> opts = {
+  <span class="hljs-attr">routes</span>:getRoutes(),
+  history,
+  <span class="hljs-attr">rootElement</span>: <span class="hljs-string">&apos;root&apos;</span>
+}
+renderClient(opts);
+</code></pre>
+<h3 id="t213.5 src.umi2\index.html">3.5 src.umi2\index.html <a href="#t213.5 src.umi2\index.html"> # </a></h3>
+<p>src.umi2\index.html</p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>umi3<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;root&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h3 id="t223.6 webpack.config.js">3.6 webpack.config.js <a href="#t223.6 webpack.config.js"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;path&quot;</span>);
+<span class="hljs-keyword">const</span> HtmlWebpackPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;html-webpack-plugin&quot;</span>);
+<span class="hljs-keyword">const</span> cwd = process.cwd();
+<span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-attr">mode</span>: <span class="hljs-string">&quot;development&quot;</span>,
+  <span class="hljs-attr">entry</span>:<span class="hljs-string">&apos;./src/.umi2/umi.js&apos;</span>,
+  <span class="hljs-attr">output</span>: {
+    <span class="hljs-attr">path</span>: path.join(__dirname, <span class="hljs-string">&quot;dist&quot;</span>),
+    <span class="hljs-attr">filename</span>: <span class="hljs-string">&quot;[name].js&quot;</span>,
+    <span class="hljs-attr">publicPath</span>:<span class="hljs-string">&apos;/&apos;</span>
+  },
+  <span class="hljs-attr">devtool</span>: <span class="hljs-literal">false</span>,
+  <span class="hljs-attr">resolve</span>:{
+    <span class="hljs-attr">alias</span>:{
+      <span class="hljs-string">&apos;@&apos;</span>:path.join(cwd,<span class="hljs-string">&apos;src&apos;</span>)
+    }
+  },
+  <span class="hljs-attr">devServer</span>:{
+    <span class="hljs-attr">historyApiFallback</span>:{
+      <span class="hljs-attr">index</span>:<span class="hljs-string">&apos;index.html&apos;</span>
+    }
+  },
+  <span class="hljs-attr">module</span>:{
+    <span class="hljs-attr">rules</span>:[
+      {
+        <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.js$/</span>,
+        <span class="hljs-attr">loader</span>: <span class="hljs-string">&quot;babel-loader&quot;</span>,
+        <span class="hljs-attr">options</span>: {
+          <span class="hljs-attr">presets</span>:[<span class="hljs-string">&apos;@babel/preset-env&apos;</span>,<span class="hljs-string">&apos;@babel/preset-react&apos;</span>]
+        },
+        <span class="hljs-attr">exclude</span>:<span class="hljs-regexp">/node_modules/</span>
+      },
+    ]
+  },
+  <span class="hljs-attr">plugins</span>: [
+    <span class="hljs-keyword">new</span> HtmlWebpackPlugin({
+      <span class="hljs-attr">template</span>:<span class="hljs-string">&apos;./src/.umi2/index.html&apos;</span>
+    })
+  ]
+};
+</code></pre>
+<h3 id="t233.7 &#x542F;&#x52A8;">3.7 &#x542F;&#x52A8; <a href="#t233.7 &#x542F;&#x52A8;"> # </a></h3>
+<pre><code class="lang-js">webpack serve 
+</code></pre>
+<h2 id="t244. &#x7F16;&#x8BD1;&#x65F6;&#x63D2;&#x4EF6;">4. &#x7F16;&#x8BD1;&#x65F6;&#x63D2;&#x4EF6; <a href="#t244. &#x7F16;&#x8BD1;&#x65F6;&#x63D2;&#x4EF6;"> # </a></h2>
+<ul>
+<li><a href="https://umijs.org/zh-CN/plugins/api">&#x63D2;&#x4EF6; API</a></li>
+<li><a href="https://github.com/umijs/umi/blob/master/packages/core/src/Service/Service.ts">Service.ts</a></li>
+<li><a href="https://github.com/umijs/umi/blob/master/packages/core/src/Service/PluginAPI.ts">PluginAPI.ts</a></li>
+<li><a href="https://umijs.org/zh-CN/plugins/api#registercommand-name-string-alias-string-fn-function-">registerCommand</a></li>
+</ul>
+<h3 id="t254.1 bin\umi.js">4.1 bin\umi.js <a href="#t254.1 bin\umi.js"> # </a></h3>
+<p>bin\umi.js</p>
+<pre><code class="lang-js"><span class="hljs-meta">#!/usr/bin/env node</span>
+<span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../lib/cli&apos;</span>);
+</code></pre>
+<h3 id="t264.2 lib\cli.js">4.2 lib\cli.js <a href="#t264.2 lib\cli.js"> # </a></h3>
+<p>lib\cli.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> Service = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./Service&apos;</span>);
+<span class="hljs-keyword">let</span> dev = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./plugins/commands/dev&apos;</span>);
+<span class="hljs-function">(<span class="hljs-params"><span class="hljs-keyword">async</span>(</span>)=&gt;</span>{
+    <span class="hljs-keyword">const</span> service = <span class="hljs-keyword">new</span> Service({
+        <span class="hljs-attr">plugins</span>:[{<span class="hljs-attr">id</span>:<span class="hljs-string">&apos;dev&apos;</span>,<span class="hljs-attr">apply</span>:dev}]
+    });
+    <span class="hljs-keyword">await</span> service.run({<span class="hljs-attr">name</span>: <span class="hljs-string">&apos;dev&apos;</span>});
+})();
+</code></pre>
+<h3 id="t274.3 lib\PluginAPI.js">4.3 lib\PluginAPI.js <a href="#t274.3 lib\PluginAPI.js"> # </a></h3>
+<p>lib\PluginAPI.js</p>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PluginAPI</span> </span>{
+    <span class="hljs-keyword">constructor</span>(opts) {
+        <span class="hljs-keyword">this</span>.id = opts.id;
+        <span class="hljs-keyword">this</span>.service = opts.service;
+    }
+    registerCommand(command) {
+      <span class="hljs-keyword">const</span> { name } = command;
+      <span class="hljs-keyword">this</span>.service.commands[name] = command;
+    }
+}
+<span class="hljs-built_in">module</span>.exports = PluginAPI;
+</code></pre>
+<h3 id="t284.4 lib\Service.js">4.4 lib\Service.js <a href="#t284.4 lib\Service.js"> # </a></h3>
+<p>lib\Service.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> PluginAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./PluginAPI&apos;</span>);
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Service</span> </span>{
+  <span class="hljs-keyword">constructor</span>(opts) {
+    <span class="hljs-keyword">this</span>.commands={};
+    <span class="hljs-keyword">this</span>.plugins = opts.plugins;
+  }
+  <span class="hljs-keyword">async</span> init() {
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> plugin <span class="hljs-keyword">of</span> <span class="hljs-keyword">this</span>.plugins){
+      <span class="hljs-keyword">const</span> pluginAPI = <span class="hljs-keyword">new</span> PluginAPI({<span class="hljs-attr">id</span>:plugin.id,<span class="hljs-attr">service</span>: <span class="hljs-keyword">this</span> });
+      plugin.apply(pluginAPI);
+    }
+  }
+  <span class="hljs-keyword">async</span> run(args) {
+    <span class="hljs-keyword">this</span>.init();
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.runCommand(args);
+  }
+  <span class="hljs-keyword">async</span> runCommand({name}) {
+    <span class="hljs-keyword">const</span> command = <span class="hljs-keyword">this</span>.commands[name];
+    <span class="hljs-keyword">const</span> { fn } = command;
+    <span class="hljs-keyword">return</span> fn();
+  }
+}
+<span class="hljs-built_in">module</span>.exports = Service;
+</code></pre>
+<h3 id="t294.5 commands\dev.js">4.5 commands\dev.js <a href="#t294.5 commands\dev.js"> # </a></h3>
+<p>lib\plugins\commands\dev.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> Server = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../../Server&apos;</span>);
+<span class="hljs-keyword">const</span> dev = <span class="hljs-function">(<span class="hljs-params">api</span>) =&gt;</span> {
+  api.registerCommand({
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;dev&quot;</span>,
+    <span class="hljs-attr">description</span>: <span class="hljs-string">&quot;&#x542F;&#x52A8;&#x5F00;&#x53D1;&#x670D;&#x52A1;&#x5668;&quot;</span>,
+    <span class="hljs-attr">fn</span>: <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+      <span class="hljs-keyword">new</span> Server().start();
+    }
+  });
+};
+<span class="hljs-built_in">module</span>.exports = dev;
+</code></pre>
+<h3 id="t304.6 lib\Server.js">4.6 lib\Server.js <a href="#t304.6 lib\Server.js"> # </a></h3>
+<p>lib\Server.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express&apos;</span>);
+<span class="hljs-keyword">let</span> http = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;http&apos;</span>);
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Service</span> </span>{
+    <span class="hljs-keyword">constructor</span>(){
+        <span class="hljs-keyword">this</span>.app = express();
+    }
+    <span class="hljs-keyword">async</span> start() {
+        <span class="hljs-keyword">this</span>.listeningApp = http.createServer(<span class="hljs-keyword">this</span>.app);
+        <span class="hljs-keyword">this</span>.listeningApp.listen(<span class="hljs-number">8000</span>, () =&gt; {
+            <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`http server started at port 8000`</span>);
+        })
+    }
+}
+<span class="hljs-built_in">module</span>.exports = Service;
+</code></pre>
+<h3 id="t314.7 &#x542F;&#x52A8;&#x670D;&#x52A1;">4.7 &#x542F;&#x52A8;&#x670D;&#x52A1; <a href="#t314.7 &#x542F;&#x52A8;&#x670D;&#x52A1;"> # </a></h3>
+<pre><code class="lang-sh">node ./bin/umi.js
+</code></pre>
+<h2 id="t325. &#x751F;&#x6210;&#x4E34;&#x65F6;&#x76EE;&#x5F55;">5. &#x751F;&#x6210;&#x4E34;&#x65F6;&#x76EE;&#x5F55; <a href="#t325. &#x751F;&#x6210;&#x4E34;&#x65F6;&#x76EE;&#x5F55;"> # </a></h2>
+<h3 id="t335.1 lib\Service.js">5.1 lib\Service.js <a href="#t335.1 lib\Service.js"> # </a></h3>
+<p>lib\Service.js</p>
+<pre><code class="lang-diff">const PluginAPI = require(&apos;./PluginAPI&apos;);
+<span class="hljs-addition">+const {AsyncParallelHook} = require(&apos;tapable&apos;);</span>
+class Service {
+  constructor(opts) {
+    this.commands={};
+    this.plugins = opts.plugins;
+<span class="hljs-addition">+    this.hooksByPluginId = {};</span>
+<span class="hljs-addition">+    this.hooks = {};</span>
+  }
+  async init() {
+    for(let plugin of this.plugins){
+      const pluginAPI = new PluginAPI({id:plugin.id,service: this });
+<span class="hljs-addition">+      pluginAPI.onGenerateFiles=(fn)=&gt;{</span>
+<span class="hljs-addition">+        pluginAPI.register({pluginId:plugin.id,key:&quot;onGenerateFiles&quot;,fn})</span>
+<span class="hljs-addition">+      }</span>
+      plugin.apply(pluginAPI);
+    }
+
+<span class="hljs-addition">+    Object.keys(this.hooksByPluginId).forEach((id) =&gt; {</span>
+<span class="hljs-addition">+      const hooks = this.hooksByPluginId[id];</span>
+<span class="hljs-addition">+      hooks.forEach((hook) =&gt; {</span>
+<span class="hljs-addition">+        const { key } = hook;</span>
+<span class="hljs-addition">+        hook.pluginId = id;</span>
+<span class="hljs-addition">+        this.hooks[key] = (this.hooks[key] || []).concat(hook);</span>
+<span class="hljs-addition">+      });</span>
+<span class="hljs-addition">+    });</span>
+  }
+<span class="hljs-addition">+  async applyPlugins(opts) {</span>
+<span class="hljs-addition">+    const hooks = this.hooks[opts.key] || [];</span>
+<span class="hljs-addition">+    const tEvent = new AsyncParallelHook([&quot;_&quot;]);</span>
+<span class="hljs-addition">+    for (const hook of hooks) {</span>
+<span class="hljs-addition">+      tEvent.tapPromise({ name: hook.pluginId },hook.fn);</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    return await tEvent.promise();</span>
+<span class="hljs-addition">+  }</span>
+  async run(args) {
+    this.init();
+    return this.runCommand(args);
+  }
+  async runCommand({name}) {
+    const command = this.commands[name];
+    const { fn } = command;
+    return fn();
+  }
+}
+module.exports = Service;
+</code></pre>
+<h3 id="t345.2 lib\PluginAPI.js">5.2 lib\PluginAPI.js <a href="#t345.2 lib\PluginAPI.js"> # </a></h3>
+<p>lib\PluginAPI.js</p>
+<pre><code class="lang-diff">class PluginAPI {
+    constructor(opts) {
+        this.id = opts.id;
+        this.service = opts.service;
+    }
+    registerCommand(command) {
+      const { name } = command;
+      this.service.commands[name] = command;
+    }
+<span class="hljs-addition">+   register(hook) {</span>
+<span class="hljs-addition">+      this.service.hooksByPluginId[this.id] = (</span>
+<span class="hljs-addition">+        this.service.hooksByPluginId[this.id] || []</span>
+<span class="hljs-addition">+      ).concat(hook);</span>
+<span class="hljs-addition">+   }</span>
+}
+module.exports = PluginAPI;
+</code></pre>
+<h3 id="t355.3 lib\cli.js">5.3 lib\cli.js <a href="#t355.3 lib\cli.js"> # </a></h3>
+<p>lib\cli.js</p>
+<pre><code class="lang-diff">let Service = require(&apos;./Service&apos;);
+let dev = require(&apos;./plugins/commands/dev&apos;);
+<span class="hljs-addition">+let history = require(&apos;./plugins/generateFiles/history&apos;);</span>
+<span class="hljs-addition">+let routes = require(&apos;./plugins/generateFiles/routes&apos;);</span>
+<span class="hljs-addition">+let umi = require(&apos;./plugins/generateFiles/umi&apos;);</span>
+(async()=&gt;{
+    const service = new Service({
+        plugins:[
+            {id:&apos;dev&apos;,apply:dev},
+<span class="hljs-addition">+           {id:&apos;history&apos;,apply:history},</span>
+<span class="hljs-addition">+           {id:&apos;routes&apos;,apply:routes},</span>
+<span class="hljs-addition">+           {id:&apos;umi&apos;,apply:umi}</span>
+        ]
+    });
+    await service.run({name: &apos;dev&apos;});
+})();
+</code></pre>
+<h3 id="t365.4 webpack.config.js">5.4 webpack.config.js <a href="#t365.4 webpack.config.js"> # </a></h3>
+<p>webpack.config.js</p>
+<pre><code class="lang-diff">module.exports = {
+   mode: &quot;development&quot;,
+<span class="hljs-addition">+  entry:&apos;./src/.umi3/umi.js&apos;</span>
+}
+</code></pre>
+<h3 id="t375.5 lib\plugins\commands\dev.js">5.5 lib\plugins\commands\dev.js <a href="#t375.5 lib\plugins\commands\dev.js"> # </a></h3>
+<p>lib\plugins\commands\dev.js</p>
+<pre><code class="lang-diff">let Server = require(&apos;../../Server&apos;);
+const dev = (api) =&gt; {
+  api.registerCommand({
+    name: &quot;dev&quot;,
+    description: &quot;&#x542F;&#x52A8;&#x5F00;&#x53D1;&#x670D;&#x52A1;&#x5668;&quot;,
+    fn: async function () {
+<span class="hljs-addition">+      await api.service.applyPlugins({</span>
+<span class="hljs-addition">+        key: &apos;onGenerateFiles&apos;</span>
+<span class="hljs-addition">+      });</span>
+      new Server().start();
+    }
+  });
+};
+
+module.exports = dev;
+</code></pre>
+<h3 id="t385.6 lib\getPaths.js">5.6 lib\getPaths.js <a href="#t385.6 lib\getPaths.js"> # </a></h3>
+<p>lib\getPaths.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> {existsSync,statSync} = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs&apos;</span>);
+<span class="hljs-keyword">const</span> {join} = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">isDirectoryAndExist</span>(<span class="hljs-params">path</span>) </span>{
+    <span class="hljs-keyword">return</span> existsSync(path) &amp;&amp; statSync(path).isDirectory();
+}
+<span class="hljs-keyword">let</span> cwd = process.cwd();
+<span class="hljs-keyword">let</span> absSrcPath = cwd;
+<span class="hljs-keyword">if</span> (isDirectoryAndExist(join(cwd, <span class="hljs-string">&apos;src&apos;</span>))) {
+    absSrcPath = join(cwd, <span class="hljs-string">&apos;src&apos;</span>);
+}
+<span class="hljs-keyword">const</span> absPagesPath=join(absSrcPath,<span class="hljs-string">&apos;pages&apos;</span>);
+<span class="hljs-keyword">const</span> tmpDir = <span class="hljs-string">&apos;.umi3&apos;</span>;
+<span class="hljs-keyword">const</span> absTmpPath = join(absSrcPath, tmpDir);
+<span class="hljs-built_in">module</span>.exports = {
+    absSrcPath,
+    absPagesPath,
+    tmpDir,
+    absTmpPath
+}
+</code></pre>
+<h3 id="t395.7 lib\utils.js">5.7 lib\utils.js <a href="#t395.7 lib\utils.js"> # </a></h3>
+<p>lib\utils.js</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">winPath</span>(<span class="hljs-params">path</span>) </span>{
+    <span class="hljs-keyword">return</span> path.replace(<span class="hljs-regexp">/\\/g</span>, <span class="hljs-string">&quot;/&quot;</span>);
+}
+exports.winPath = winPath;
+
+</code></pre>
+<h3 id="t405.8 lib\writeTmpFile.js">5.8 lib\writeTmpFile.js <a href="#t405.8 lib\writeTmpFile.js"> # </a></h3>
+<p>lib\writeTmpFile.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> mkdirp = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;mkdirp&apos;</span>);
+<span class="hljs-keyword">let</span> {writeFileSync} = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs&apos;</span>);
+<span class="hljs-keyword">let</span> {dirname,join} = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
+<span class="hljs-keyword">const</span> {absTmpPath} = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./getPaths&apos;</span>);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">writeTmpFile</span>(<span class="hljs-params">{path,content}</span>) </span>{
+    <span class="hljs-keyword">const</span> absPath = join(absTmpPath, path);
+    mkdirp.sync(dirname(absPath));
+    writeFileSync(absPath, content, <span class="hljs-string">&apos;utf8&apos;</span>);
+}
+<span class="hljs-built_in">module</span>.exports = writeTmpFile;
+</code></pre>
+<h3 id="t415.9 generateFiles\history.js">5.9 generateFiles\history.js <a href="#t415.9 generateFiles\history.js"> # </a></h3>
+<p>lib\plugins\generateFiles\history.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> { readFileSync } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;fs&quot;</span>);
+<span class="hljs-keyword">let</span> { join } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;path&quot;</span>);
+<span class="hljs-keyword">let</span> writeTmpFile = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;../../writeTmpFile&quot;</span>);
+<span class="hljs-keyword">let</span> Mustache = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;mustache&quot;</span>);
+
+<span class="hljs-keyword">const</span> plugin = <span class="hljs-function">(<span class="hljs-params">api</span>) =&gt;</span> {
+  api.onGenerateFiles(<span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">const</span> historyTpl = readFileSync(join(__dirname, <span class="hljs-string">&quot;history.tpl&quot;</span>), <span class="hljs-string">&quot;utf8&quot;</span>);
+    writeTmpFile({
+      <span class="hljs-attr">path</span>: <span class="hljs-string">&quot;core/history.js&quot;</span>,
+      <span class="hljs-attr">content</span>: Mustache.render(historyTpl),
+    });
+  });
+};
+
+<span class="hljs-built_in">module</span>.exports = plugin;
+</code></pre>
+<h3 id="t425.10  generateFiles\history.tpl">5.10  generateFiles\history.tpl <a href="#t425.10  generateFiles\history.tpl"> # </a></h3>
+<p>lib\plugins\generateFiles\history.tpl</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { createBrowserHistory } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;history&apos;</span>;
+<span class="hljs-keyword">let</span> history = createBrowserHistory();
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> history;
+</code></pre>
+<h3 id="t435.11  generateFiles\umi.js">5.11  generateFiles\umi.js <a href="#t435.11  generateFiles\umi.js"> # </a></h3>
+<p>lib\plugins\generateFiles\umi.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> { readFileSync } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;fs&quot;</span>);
+<span class="hljs-keyword">let</span> { join } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;path&quot;</span>);
+<span class="hljs-keyword">let</span> writeTmpFile = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;../../writeTmpFile&quot;</span>);
+<span class="hljs-keyword">let</span> Mustache = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;mustache&quot;</span>);
+
+<span class="hljs-keyword">const</span> plugin = <span class="hljs-function">(<span class="hljs-params">api</span>) =&gt;</span> {
+  api.onGenerateFiles(<span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">const</span> umiTpl = readFileSync(join(__dirname, <span class="hljs-string">&quot;umi.tpl&quot;</span>), <span class="hljs-string">&quot;utf8&quot;</span>);
+    writeTmpFile({
+      <span class="hljs-attr">path</span>: <span class="hljs-string">&quot;umi.js&quot;</span>,
+      <span class="hljs-attr">content</span>: Mustache.render(umiTpl),
+    });
+  });
+};
+<span class="hljs-built_in">module</span>.exports = plugin;
+</code></pre>
+<h3 id="t445.12 generateFiles\umi.tpl">5.12 generateFiles\umi.tpl <a href="#t445.12 generateFiles\umi.tpl"> # </a></h3>
+<p>lib\plugins\generateFiles\umi.tpl</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { render } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+<span class="hljs-keyword">import</span> { Router,Route,Switch } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router-dom&apos;</span>;
+<span class="hljs-keyword">import</span> history <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./core/history&apos;</span>;
+<span class="hljs-keyword">import</span> { getRoutes } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./core/routes&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">renderRoutes</span>(<span class="hljs-params">routes</span>)</span>{
+  <span class="hljs-keyword">return</span> routes.map(<span class="hljs-function">(<span class="hljs-params">{path,exact,component:Component,routes:childRoutes=[]},index</span>)=&gt;</span>(
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{index}</span> <span class="hljs-attr">path</span>=<span class="hljs-string">{path}</span> <span class="hljs-attr">exact</span>=<span class="hljs-string">{exact}</span> <span class="hljs-attr">render</span>=<span class="hljs-string">{</span>
+      <span class="hljs-attr">props</span>=&gt;</span>(
+        <span class="hljs-tag">&lt;<span class="hljs-name">Component</span> {<span class="hljs-attr">...props</span>}&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">Switch</span>&gt;</span>
+            {renderRoutes(childRoutes)}
+          <span class="hljs-tag">&lt;/<span class="hljs-name">Switch</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">Component</span>&gt;</span>
+      )
+    }/&gt;</span>
+  ))
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">renderClient</span>(<span class="hljs-params">opts</span>) </span>{
+  render(
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Router</span> <span class="hljs-attr">history</span>=<span class="hljs-string">{opts.history}</span>&gt;</span>
+   {renderRoutes(opts.routes)}
+  <span class="hljs-tag">&lt;/<span class="hljs-name">Router</span>&gt;</span></span>
+  ,<span class="hljs-built_in">document</span>.getElementById(opts.rootElement));
+}
+<span class="hljs-keyword">const</span> opts = {
+  <span class="hljs-attr">routes</span>:getRoutes(),
+  history,
+  <span class="hljs-attr">rootElement</span>: <span class="hljs-string">&apos;root&apos;</span>
+}
+renderClient(opts);
+</code></pre>
+<h3 id="t455.13 lib\getRoutes.js">5.13 lib\getRoutes.js <a href="#t455.13 lib\getRoutes.js"> # </a></h3>
+<p>lib\getRoutes.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> { existsSync, readdirSync, readFileSync, statSync } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;fs&quot;</span>);
+<span class="hljs-keyword">const</span> { basename,extname,join,relative } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;path&quot;</span>);
+<span class="hljs-keyword">const</span> {winPath} = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./utils&apos;</span>);
+<span class="hljs-keyword">const</span> {absPagesPath} = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./getPaths&apos;</span>);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getRoutes</span>(<span class="hljs-params">opts={}</span>) </span>{
+  <span class="hljs-keyword">const</span> { root, relDir = <span class="hljs-string">&quot;&quot;</span> } = opts;
+  <span class="hljs-keyword">const</span> files = getFiles(join(root, relDir));
+  <span class="hljs-keyword">const</span> routes = files.reduce(fileToRouteReducer.bind(<span class="hljs-literal">null</span>, opts), []);
+  <span class="hljs-keyword">return</span> routes;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fileToRouteReducer</span>(<span class="hljs-params">opts, routes, file</span>) </span>{
+  <span class="hljs-keyword">const</span> { root, relDir = <span class="hljs-string">&quot;&quot;</span> } = opts;
+  <span class="hljs-keyword">const</span> absFile = join(root, relDir, file);
+  <span class="hljs-keyword">const</span> stats = statSync(absFile);
+  <span class="hljs-keyword">if</span> (stats.isDirectory()) {
+    <span class="hljs-keyword">const</span> relFile = join(relDir, file);
+    <span class="hljs-keyword">const</span> layoutFile = join(root,relFile,<span class="hljs-string">&apos;_layout.js&apos;</span>);
+    routes.push({
+        <span class="hljs-attr">path</span>: normalizePath(relFile),
+        <span class="hljs-attr">routes</span>: getRoutes({
+          ...opts,
+          <span class="hljs-attr">relDir</span>: relFile
+        }),
+        ...(existsSync(layoutFile)?{ <span class="hljs-attr">component</span>: toComponentPath(root,layoutFile)}:{})
+      });
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-keyword">const</span> bName = basename(file, extname(file));
+    routes.push(
+        {
+            <span class="hljs-attr">path</span>: normalizePath(join(relDir, bName)),
+            <span class="hljs-attr">exact</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-attr">component</span>: toComponentPath(root,absFile),
+        }
+    );
+  }
+  <span class="hljs-keyword">return</span> routes;
+}
+<span class="hljs-keyword">const</span> normalizePath = <span class="hljs-function">(<span class="hljs-params">path</span>)=&gt;</span>{
+  path= winPath(path);
+  path = <span class="hljs-string">`/<span class="hljs-subst">${path}</span>`</span>;
+  path = path.replace(<span class="hljs-regexp">/\/index$/</span>, <span class="hljs-string">&apos;/&apos;</span>);
+  <span class="hljs-keyword">return</span> path;
+}
+<span class="hljs-keyword">const</span> toComponentPath= <span class="hljs-function">(<span class="hljs-params">root,absFile</span>)=&gt;</span>{
+   <span class="hljs-keyword">return</span> <span class="hljs-string">`@/<span class="hljs-subst">${winPath(relative(join(root, <span class="hljs-string">&quot;..&quot;</span>), absFile))}</span>`</span>;
+}
+
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getFiles</span>(<span class="hljs-params">root</span>) </span>{
+  <span class="hljs-keyword">if</span> (!existsSync(root)) <span class="hljs-keyword">return</span> [];
+  <span class="hljs-keyword">return</span> readdirSync(root).filter(<span class="hljs-function">(<span class="hljs-params">file</span>) =&gt;</span> {
+    <span class="hljs-keyword">if</span> (file.charAt(<span class="hljs-number">0</span>) === <span class="hljs-string">&apos;_&apos;</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+  });
+}
+
+<span class="hljs-keyword">let</span> routes = getRoutes({<span class="hljs-attr">root</span>:absPagesPath});
+<span class="hljs-built_in">module</span>.exports = routes;
+
+</code></pre>
+<h3 id="t465.14 generateFiles\routes.js">5.14 generateFiles\routes.js <a href="#t465.14 generateFiles\routes.js"> # </a></h3>
+<p>lib\plugins\generateFiles\routes.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> { readFileSync } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;fs&quot;</span>);
+<span class="hljs-keyword">let</span> { join } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;path&quot;</span>);
+<span class="hljs-keyword">let</span> writeTmpFile = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;../../writeTmpFile&quot;</span>);
+<span class="hljs-keyword">let</span> Mustache = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;mustache&quot;</span>);
+<span class="hljs-keyword">let</span> routes = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../../getRoutes&apos;</span>);
+<span class="hljs-keyword">const</span> plugin = <span class="hljs-function">(<span class="hljs-params">api</span>) =&gt;</span> {
+  api.onGenerateFiles(<span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">const</span> routesTpl = readFileSync(join(__dirname, <span class="hljs-string">&quot;routes.tpl&quot;</span>), <span class="hljs-string">&quot;utf8&quot;</span>);
+    writeTmpFile({
+      <span class="hljs-attr">path</span>: <span class="hljs-string">&quot;core/routes.js&quot;</span>,
+      <span class="hljs-attr">content</span>: Mustache.render(routesTpl, {
+        <span class="hljs-attr">routes</span>: <span class="hljs-built_in">JSON</span>.stringify(routes, replacer, <span class="hljs-number">2</span>).replace(<span class="hljs-regexp">/\&quot;component\&quot;: (\&quot;(.+?)\&quot;)/g</span>, (global, m1, m2) =&gt; {
+          <span class="hljs-keyword">return</span> <span class="hljs-string">`&quot;component&quot;: <span class="hljs-subst">${m2.replace(<span class="hljs-regexp">/\^/g</span>, <span class="hljs-string">&apos;&quot;&apos;</span>)}</span>`</span>;
+        }),
+      }),
+    });
+  });
+};
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">replacer</span>(<span class="hljs-params">key, value</span>) </span>{
+  <span class="hljs-keyword">switch</span> (key) {
+    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;component&quot;</span>:
+      <span class="hljs-keyword">return</span> <span class="hljs-string">`require(&apos;<span class="hljs-subst">${value}</span>&apos;).default`</span>;
+    <span class="hljs-keyword">default</span>:
+      <span class="hljs-keyword">return</span> value;
+  }
+}
+<span class="hljs-built_in">module</span>.exports = plugin;
+</code></pre>
+<h3 id="t475.15  generateFiles\routes.tpl">5.15  generateFiles\routes.tpl <a href="#t475.15  generateFiles\routes.tpl"> # </a></h3>
+<p>lib\plugins\generateFiles\routes.tpl</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getRoutes</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> routes = {{{ routes }}};
+  <span class="hljs-keyword">return</span> routes;
+}
+</code></pre>
+<h3 id="t485.16 &#x542F;&#x52A8;">5.16 &#x542F;&#x52A8; <a href="#t485.16 &#x542F;&#x52A8;"> # </a></h3>
+<pre><code class="lang-sh">webpack serve 
+</code></pre>
+<h2 id="t496. &#x542F;&#x52A8;&#x670D;&#x52A1;&#x5668;">6. &#x542F;&#x52A8;&#x670D;&#x52A1;&#x5668; <a href="#t496. &#x542F;&#x52A8;&#x670D;&#x52A1;&#x5668;"> # </a></h2>
+<h3 id="t506.1 lib\Service.js">6.1 lib\Service.js <a href="#t506.1 lib\Service.js"> # </a></h3>
+<pre><code class="lang-diff">const express = require(&apos;express&apos;);
+const http = require(&apos;http&apos;);
+<span class="hljs-addition">+const webpack = require(&apos;webpack&apos;);</span>
+<span class="hljs-addition">+const {join} = require(&apos;path&apos;);</span>
+<span class="hljs-addition">+const webpackDevMiddleware = require(&apos;webpack-dev-middleware&apos;);</span>
+<span class="hljs-addition">+const HtmlWebpackPlugin = require(&quot;html-webpack-plugin&quot;);</span>
+<span class="hljs-addition">+const webpackConfig = require(&apos;./webpack.config.js&apos;);</span>
+<span class="hljs-addition">+const {absTmpPath,absSrcPath} = require(&apos;./getPaths&apos;);</span>
+class Service {
+    constructor(){
+        this.app = express();
+    }
+<span class="hljs-addition">+    setupDevMiddleware(){</span>
+<span class="hljs-addition">+        webpackConfig.entry = join(absTmpPath, &apos;umi.js&apos;);</span>
+<span class="hljs-addition">+        webpackConfig.resolve.alias[&apos;@&apos;]=absSrcPath;</span>
+<span class="hljs-addition">+        webpackConfig.plugins.push(new HtmlWebpackPlugin({template:join(__dirname, &quot;index.html&quot;)}));</span>
+<span class="hljs-addition">+        const compiler = webpack(webpackConfig);</span>
+<span class="hljs-addition">+        const devMiddleware = webpackDevMiddleware(compiler,{writeToDisk:true});</span>
+<span class="hljs-addition">+        this.app.use(devMiddleware);</span>
+<span class="hljs-addition">+        this.app.use((req,res)=&gt;{</span>
+<span class="hljs-addition">+            res.send(compiler.outputFileSystem.readFileSync(join(__dirname,&apos;dist/index.html&apos;),&apos;utf8&apos;));</span>
+<span class="hljs-addition">+        });</span>
+<span class="hljs-addition">+        return devMiddleware;</span>
+<span class="hljs-addition">+    }</span>
+    async start() {
+<span class="hljs-addition">+        const devMiddleware = this.setupDevMiddleware();</span>
+<span class="hljs-addition">+        devMiddleware.waitUntilValid(() =&gt; {</span>
+<span class="hljs-addition">+            this.listeningApp = http.createServer(this.app);</span>
+<span class="hljs-addition">+            this.listeningApp.listen(8000, () =&gt; {</span>
+<span class="hljs-addition">+                console.log(`http server started at port 8000`);</span>
+<span class="hljs-addition">+            })</span>
+<span class="hljs-addition">+        });</span>
+    }
+}
+module.exports = Service;
+</code></pre>
+<h3 id="t516.2 lib\index.html">6.2 lib\index.html <a href="#t516.2 lib\index.html"> # </a></h3>
+<pre><code class="lang-diff">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;umi3&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="t526.3 lib\webpack.config.js">6.3 lib\webpack.config.js <a href="#t526.3 lib\webpack.config.js"> # </a></h3>
+<p>lib\webpack.config.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;path&quot;</span>);
+<span class="hljs-keyword">const</span> HtmlWebpackPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;html-webpack-plugin&quot;</span>);
+<span class="hljs-keyword">const</span> cwd = process.cwd();
+<span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-attr">mode</span>: <span class="hljs-string">&quot;development&quot;</span>,
+  <span class="hljs-attr">output</span>: {
+    <span class="hljs-attr">path</span>: path.join(__dirname, <span class="hljs-string">&quot;dist&quot;</span>),
+    <span class="hljs-attr">filename</span>: <span class="hljs-string">&quot;[name].js&quot;</span>,
+    <span class="hljs-attr">publicPath</span>:<span class="hljs-string">&apos;/&apos;</span>
+  },
+  <span class="hljs-attr">devtool</span>: <span class="hljs-literal">false</span>,
+  <span class="hljs-attr">resolve</span>:{
+    <span class="hljs-attr">alias</span>:{}
+  },
+  <span class="hljs-attr">devServer</span>:{
+    <span class="hljs-attr">historyApiFallback</span>:{
+      <span class="hljs-attr">index</span>:<span class="hljs-string">&apos;index.html&apos;</span>
+    }
+  },
+  <span class="hljs-attr">module</span>:{
+    <span class="hljs-attr">rules</span>:[
+      {
+        <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.js$/</span>,
+        <span class="hljs-attr">loader</span>: <span class="hljs-string">&quot;babel-loader&quot;</span>,
+        <span class="hljs-attr">options</span>: {
+          <span class="hljs-attr">presets</span>:[<span class="hljs-string">&apos;@babel/preset-env&apos;</span>,<span class="hljs-string">&apos;@babel/preset-react&apos;</span>]
+        },
+        <span class="hljs-attr">exclude</span>:<span class="hljs-regexp">/node_modules/</span>
+      },
+    ]
+  },
+  <span class="hljs-attr">plugins</span>: []
+};
+</code></pre>
+<h2 id="t537. &#x8FD0;&#x884C;&#x65F6;&#x63D2;&#x4EF6;">7. &#x8FD0;&#x884C;&#x65F6;&#x63D2;&#x4EF6; <a href="#t537. &#x8FD0;&#x884C;&#x65F6;&#x63D2;&#x4EF6;"> # </a></h2>
+<h3 id="t547.1 src\app.js">7.1 src\app.js <a href="#t547.1 src\app.js"> # </a></h3>
+<p>src\app.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">patchRoutes</span>(<span class="hljs-params">{routes}</span>) </span>{
+  routes.unshift({
+    <span class="hljs-attr">path</span>: <span class="hljs-string">&apos;/foo&apos;</span>,
+    <span class="hljs-attr">exact</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">component</span>: <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@/foo&apos;</span>).default,
+  });
+}
+</code></pre>
+<h3 id="t557.2 src\foo.js">7.2 src\foo.js <a href="#t557.2 src\foo.js"> # </a></h3>
+<p>src\foo.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">const</span> Foo = <span class="hljs-function">(<span class="hljs-params">props</span>) =&gt;</span> {
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Foo<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  )
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Foo;
+</code></pre>
+<h3 id="t567.3 src.umi3\core\plugin.js">7.3 src.umi3\core\plugin.js <a href="#t567.3 src.umi3\core\plugin.js"> # </a></h3>
+<p>src.umi3\core\plugin.js</p>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Plugin</span> </span>{
+    <span class="hljs-keyword">constructor</span>(){
+        <span class="hljs-keyword">this</span>.hooks = {};
+    }
+    register(plugin) {
+        <span class="hljs-built_in">Object</span>.keys(plugin.apply).forEach(<span class="hljs-function">(<span class="hljs-params">key</span>) =&gt;</span> {
+            <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>.hooks[key]) <span class="hljs-keyword">this</span>.hooks[key] = [];
+            <span class="hljs-keyword">this</span>.hooks[key] = <span class="hljs-keyword">this</span>.hooks[key].concat(plugin.apply[key]);
+        });
+    }
+    applyPlugins({ key, args }) {
+        <span class="hljs-keyword">const</span> hooks = <span class="hljs-keyword">this</span>.hooks[key]  || [];
+        hooks.forEach(<span class="hljs-function">(<span class="hljs-params">hook</span>) =&gt;</span> {
+            hook(args);
+        });
+    }
+}
+
+<span class="hljs-keyword">const</span> plugin = <span class="hljs-keyword">new</span> Plugin();
+<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> PluginApp <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;C:/aprepare/zhufeng-umi3-prepare3/src/app.js&apos;</span>;
+plugin.register({
+    <span class="hljs-attr">apply</span>: PluginApp,
+    <span class="hljs-attr">path</span>: <span class="hljs-string">&apos;C:/aprepare/zhufeng-umi3-prepare3/src/app.js&apos;</span>,
+});
+
+<span class="hljs-keyword">export</span> { plugin }
+</code></pre>
+<h3 id="t577.4 src.umi3\core\routes.js">7.4 src.umi3\core\routes.js <a href="#t577.4 src.umi3\core\routes.js"> # </a></h3>
+<p>src.umi3\core\routes.js</p>
+<pre><code class="lang-diff"><span class="hljs-addition">+import { plugin } from &apos;./plugin&apos;;</span>
+export function getRoutes() {
+  const routes = [
+   {
+    &quot;path&quot;: &quot;/&quot;,
+    &quot;exact&quot;: true,
+    &quot;component&quot;: require(&apos;@/pages/index.js&apos;).default
+   },
+   {
+    &quot;path&quot;: &quot;/profile&quot;,
+    &quot;exact&quot;: true,
+    &quot;component&quot;: require(&apos;@/pages/profile.js&apos;).default
+   }
+ ];
+<span class="hljs-addition">+ plugin.applyPlugins({</span>
+<span class="hljs-addition">+    key: &apos;patchRoutes&apos;,</span>
+<span class="hljs-addition">+    args: { routes }</span>
+<span class="hljs-addition">+ });</span>
+  return routes;
+}
+</code></pre>
+<h2 id="t588. &#x5B9E;&#x73B0;&#x8FD0;&#x884C;&#x65F6;&#x63D2;&#x4EF6;">8. &#x5B9E;&#x73B0;&#x8FD0;&#x884C;&#x65F6;&#x63D2;&#x4EF6; <a href="#t588. &#x5B9E;&#x73B0;&#x8FD0;&#x884C;&#x65F6;&#x63D2;&#x4EF6;"> # </a></h2>
+<h3 id="t598.1 plugin.js">8.1 plugin.js <a href="#t598.1 plugin.js"> # </a></h3>
+<p>lib\plugins\generateFiles\plugin.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> { readFileSync,existsSync } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;fs&quot;</span>);
+<span class="hljs-keyword">let</span> { join } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;path&quot;</span>);
+<span class="hljs-keyword">let</span> writeTmpFile = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;../../writeTmpFile&quot;</span>);
+<span class="hljs-keyword">let</span> Mustache = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;mustache&quot;</span>);
+<span class="hljs-keyword">const</span> {winPath} = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../../utils&apos;</span>);
+<span class="hljs-keyword">const</span> {absSrcPath} = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../../getPaths&apos;</span>);
+
+<span class="hljs-keyword">const</span> plugin = <span class="hljs-function">(<span class="hljs-params">api</span>) =&gt;</span> {
+  api.onGenerateFiles(<span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">const</span> pluginTpl = readFileSync(join(__dirname, <span class="hljs-string">&quot;plugin.tpl&quot;</span>), <span class="hljs-string">&quot;utf8&quot;</span>);
+    <span class="hljs-keyword">const</span> plugins = [join(absSrcPath,<span class="hljs-string">&apos;app.js&apos;</span>)];
+    writeTmpFile({
+      <span class="hljs-attr">path</span>: <span class="hljs-string">&quot;core/plugin.js&quot;</span>,
+      <span class="hljs-attr">content</span>: Mustache.render(pluginTpl,{
+        <span class="hljs-attr">plugins</span>: plugins.map(<span class="hljs-function">(<span class="hljs-params">plugin, index</span>) =&gt;</span> {
+          <span class="hljs-keyword">return</span> {
+            index,
+            <span class="hljs-attr">path</span>: winPath(plugin)
+          };
+        })
+      }),
+    });
+  });
+};
+<span class="hljs-built_in">module</span>.exports = plugin;
+</code></pre>
+<h3 id="t608.2 plugin.tpl">8.2 plugin.tpl <a href="#t608.2 plugin.tpl"> # </a></h3>
+<p>lib\plugins\generateFiles\plugin.tpl</p>
+<pre><code class="lang-tpl">import { plugin } from &apos;./plugin&apos;;
+class Plugin {
+    constructor(){
+        this.hooks = {};
+    }
+    register(plugin) {
+        Object.keys(plugin.apply).forEach((key) =&gt; {
+            if (!this.hooks[key]) this.hooks[key] = [];
+            this.hooks[key] = this.hooks[key].concat(plugin.apply[key]);
+        });
+    }
+    applyPlugins({ key, args }) {
+        const hooks = this.hooks[key]  || [];
+        hooks.forEach((hook) =&gt; {
+            hook(args);
+        });
+    }
+}
+
+const plugin = new Plugin();
+{{#plugins}}
+import * as Plugin_{{{ index }}} from &apos;{{{ path }}}&apos;;
+{{/plugins}}
+
+{{#plugins}}
+  plugin.register({
+    apply: Plugin_{{{ index }}},
+    path: &apos;{{{ path }}}&apos;,
+  });
+{{/plugins}}
+
+export { plugin }
+</code></pre>
+<h3 id="t618.3 routes.tpl">8.3 routes.tpl <a href="#t618.3 routes.tpl"> # </a></h3>
+<p>lib\plugins\generateFiles\routes.tpl</p>
+<pre><code class="lang-diff"><span class="hljs-addition">+import {plugin} from &apos;./plugin&apos;;</span>
+export function getRoutes() {
+  const routes = {{{ routes }}};
+<span class="hljs-addition">+  plugin.applyPlugins({</span>
+<span class="hljs-addition">+    key: &apos;patchRoutes&apos;,</span>
+<span class="hljs-addition">+    args: { routes },</span>
+<span class="hljs-addition">+  });</span>
+  return routes;
+}
+</code></pre>
+
+    </div>
+</div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+    aria-labelledby="loginModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="loginModalLabel">请登录</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="username" class="control-label">姓名:</label>
+                        <input type="text" class="form-control" id="username" placeholder="珠峰架构VIP会员系统用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">密码:</label>
+                        <input type="text" class="form-control" id="password" placeholder="珠峰架构VIP会员系统密码">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                    data-dismiss="modal">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

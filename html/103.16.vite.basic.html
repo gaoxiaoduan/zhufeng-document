@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+   
+                     
+
+                        
+<div class="warpper">
+    <div class="page-toc">
+        <ul><li><a href="#t01.Vite">1.Vite</a></li><li><a href="#t12.配置开发环境">2.配置开发环境</a><ul><li><a href="#t22.1 安装依赖">2.1 安装依赖</a></li><li><a href="#t32.2 配置文件">2.2 配置文件</a></li><li><a href="#t42.3 package.json">2.3 package.json</a></li><li><a href="#t52.4 index.html">2.4 index.html</a></li><li><a href="#t62.5 src\main.js">2.5 src\main.js</a></li><li><a href="#t72.6 src\App.vue">2.6 src\App.vue</a></li><li><a href="#t82.7 HelloWorld.vue">2.7 HelloWorld.vue</a></li></ul></li><li><a href="#t93.静态资源处理">3.静态资源处理</a><ul><li><a href="#t103.1 模板中引入">3.1 模板中引入</a></li><li><a href="#t113.2 JS中引入">3.2 JS中引入</a></li><li><a href="#t123.3 CSS中引入">3.3 CSS中引入</a></li><li><a href="#t133.4 public目录">3.4 public目录</a></li></ul></li><li><a href="#t144.配置别名">4.配置别名</a><ul><li><a href="#t154.1 vite.config.js">4.1 vite.config.js</a></li><li><a href="#t164.2 App.vue">4.2 App.vue</a></li></ul></li><li><a href="#t175.样式处理">5.样式处理</a><ul><li><a href="#t185.1 全局样式">5.1 全局样式</a></li><li><a href="#t195.2 局部样式">5.2 局部样式</a></li><li><a href="#t205.2.1 scoped">5.2.1 scoped</a></li><li><a href="#t215.2.2 CSS Modules">5.2.2 CSS Modules</a></li><li><a href="#t225.2.2.1  内联">5.2.2.1  内联</a></li><li><a href="#t235.2.2.2  外联">5.2.2.2  外联</a></li><li><a href="#t245.3 less和sass">5.3 less和sass</a><ul><li><a href="#t255.3.1 安装">5.3.1 安装</a></li><li><a href="#t265.3.2 HelloWorld.vue">5.3.2 HelloWorld.vue</a></li></ul></li><li><a href="#t275.4 PostCSS">5.4 PostCSS</a><ul><li><a href="#t285.4.1 安装">5.4.1 安装</a></li><li><a href="#t295.4.2 postcss.config.js">5.4.2 postcss.config.js</a></li><li><a href="#t305.4.3 .browserslistrc">5.4.3 .browserslistrc</a></li><li><a href="#t315.4.4 HelloWorld.vue">5.4.4 HelloWorld.vue</a></li></ul></li></ul></li><li><a href="#t326.typescript">6.typescript</a><ul><li><a href="#t336.1 安装">6.1 安装</a></li><li><a href="#t346.2 .babelrc">6.2 .babelrc</a></li><li><a href="#t356.3 tsconfig.json">6.3 tsconfig.json</a></li><li><a href="#t366.4 HelloWorld.vue">6.4 HelloWorld.vue</a></li><li><a href="#t376.5 shims-vue.d.ts">6.5 shims-vue.d.ts</a></li><li><a href="#t386.6 vite-env.d.ts">6.6 vite-env.d.ts</a></li></ul></li><li><a href="#t397.配置代理">7.配置代理</a><ul><li><a href="#t407.1 vite.config.js">7.1 vite.config.js</a></li><li><a href="#t417.2 src\App.vue">7.2 src\App.vue</a></li></ul></li><li><a href="#t428.mock">8.mock</a><ul><li><a href="#t438.1 vite.config.js">8.1 vite.config.js</a></li><li><a href="#t448.2 mock\test.ts">8.2 mock\test.ts</a></li></ul></li><li><a href="#t459.ESLint">9.ESLint</a><ul><li><a href="#t469.1 src\components\HelloWorld.vue">9.1 src\components\HelloWorld.vue</a></li><li><a href="#t479.2 main.ts">9.2 main.ts</a></li><li><a href="#t489.3 .eslintrc.js">9.3 .eslintrc.js</a></li><li><a href="#t499.4 .eslintignore">9.4 .eslintignore</a></li><li><a href="#t509.5 package.json">9.5 package.json</a></li></ul></li><li><a href="#t5110.Prettier">10.Prettier</a><ul><li><a href="#t5210.1 安装">10.1 安装</a></li><li><a href="#t5310.2 package.json">10.2 package.json</a></li><li><a href="#t5410.3 .eslintrc.js">10.3 .eslintrc.js</a></li></ul></li><li><a href="#t5511.单元测试">11.单元测试</a><ul><li><a href="#t5611.1 安装依赖">11.1 安装依赖</a></li><li><a href="#t5711.2 package.json">11.2 package.json</a></li><li><a href="#t5811.3 jest.config.js">11.3 jest.config.js</a></li><li><a href="#t5911.4 tests\test.ts">11.4 tests\test.ts</a></li><li><a href="#t6011.5 tsconfig.json">11.5 tsconfig.json</a></li><li><a href="#t6111.6 package.json">11.6 package.json</a></li></ul></li><li><a href="#t6212.git hook">12.git hook</a><ul><li><a href="#t6312.1 注释规范">12.1 注释规范</a><ul><li><a href="#t6412.1.1 type类型">12.1.1 type类型</a></li></ul></li><li><a href="#t6512.2 安装">12.2 安装</a></li><li><a href="#t6612.3 配置脚本">12.3 配置脚本</a></li><li><a href="#t6712.4 创建hooks">12.4 创建hooks</a></li><li><a href="#t6812.5 commitlint.config.js">12.5 commitlint.config.js</a></li></ul></li><li><a href="#t69参考">参考</a></li></ul>
+    </div>
+    <div class="content markdown-body">
+        <h2 id="t01.Vite">1.Vite <a href="#t01.Vite"> # </a></h2>
+<ul>
+<li><a href="https://cn.vitejs.dev/">Vite (&#x6CD5;&#x8BED;&#x610F;&#x4E3A; &quot;&#x5FEB;&#x901F;&#x7684;&quot;&#xFF0C;&#x53D1;&#x97F3; /vit/) </a>&#x662F;&#x4E0B;&#x4E00;&#x4EE3;&#x524D;&#x7AEF;&#x5F00;&#x53D1;&#x4E0E;&#x6784;&#x5EFA;&#x5DE5;&#x5177;</li>
+<li>&#x1F4A1; &#x6781;&#x901F;&#x7684;&#x670D;&#x52A1;&#x542F;&#x52A8; &#x4F7F;&#x7528;&#x539F;&#x751F; ESM &#x6587;&#x4EF6;&#xFF0C;&#x65E0;&#x9700;&#x6253;&#x5305;!</li>
+<li>&#x26A1;&#xFE0F; &#x8F7B;&#x91CF;&#x5FEB;&#x901F;&#x7684;&#x70ED;&#x91CD;&#x8F7D; &#x65E0;&#x8BBA;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5927;&#x5C0F;&#x5982;&#x4F55;&#xFF0C;&#x90FD;&#x59CB;&#x7EC8;&#x6781;&#x5FEB;&#x7684;&#x6A21;&#x5757;&#x70ED;&#x91CD;&#x8F7D;&#xFF08;HMR&#xFF09;</li>
+<li>&#x1F6E0;&#xFE0F; &#x4E30;&#x5BCC;&#x7684;&#x529F;&#x80FD; &#x5BF9; TypeScript&#x3001;JSX&#x3001;CSS &#x7B49;&#x652F;&#x6301;&#x5F00;&#x7BB1;&#x5373;&#x7528;&#x3002;</li>
+<li>&#x1F4E6; &#x4F18;&#x5316;&#x7684;&#x6784;&#x5EFA; &#x53EF;&#x9009; &#x201C;&#x591A;&#x9875;&#x5E94;&#x7528;&#x201D; &#x6216; &#x201C;&#x5E93;&#x201D; &#x6A21;&#x5F0F;&#x7684;&#x9884;&#x914D;&#x7F6E; Rollup &#x6784;&#x5EFA;</li>
+<li>&#x1F529; &#x901A;&#x7528;&#x7684;&#x63D2;&#x4EF6; &#x5728;&#x5F00;&#x53D1;&#x548C;&#x6784;&#x5EFA;&#x4E4B;&#x95F4;&#x5171;&#x4EAB; Rollup-superset &#x63D2;&#x4EF6;&#x63A5;&#x53E3;&#x3002;</li>
+<li>&#x1F511; &#x5B8C;&#x5168;&#x7C7B;&#x578B;&#x5316;&#x7684;API &#x7075;&#x6D3B;&#x7684; API &#x548C;&#x5B8C;&#x6574; TypeS</li>
+</ul>
+<h2 id="t12.&#x914D;&#x7F6E;&#x5F00;&#x53D1;&#x73AF;&#x5883;">2.&#x914D;&#x7F6E;&#x5F00;&#x53D1;&#x73AF;&#x5883; <a href="#t12.&#x914D;&#x7F6E;&#x5F00;&#x53D1;&#x73AF;&#x5883;"> # </a></h2>
+<ul>
+<li><a href="https://github.com/vuejs/rfcs/blob/master/active-rfcs/0040-script-setup.md">script-setup</a></li>
+</ul>
+<h3 id="t22.1 &#x5B89;&#x88C5;&#x4F9D;&#x8D56;">2.1 &#x5B89;&#x88C5;&#x4F9D;&#x8D56; <a href="#t22.1 &#x5B89;&#x88C5;&#x4F9D;&#x8D56;"> # </a></h3>
+<pre><code class="lang-js">npm install vue  --save
+npm install  @vitejs/plugin-vue @vue/compiler-sfc vite --save-dev
+</code></pre>
+<h3 id="t32.2 &#x914D;&#x7F6E;&#x6587;&#x4EF6;">2.2 &#x914D;&#x7F6E;&#x6587;&#x4EF6; <a href="#t32.2 &#x914D;&#x7F6E;&#x6587;&#x4EF6;"> # </a></h3>
+<p>vite.config.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { defineConfig } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vite&apos;</span>
+<span class="hljs-keyword">import</span> vue <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@vitejs/plugin-vue&apos;</span>
+<span class="hljs-comment">// https://vitejs.dev/config/</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> defineConfig({
+  <span class="hljs-attr">plugins</span>: [vue()]
+})
+</code></pre>
+<h3 id="t42.3 package.json">2.3 package.json <a href="#t42.3 package.json"> # </a></h3>
+<p>package.json</p>
+<pre><code class="lang-json">{
+  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;vite2-prepare&quot;</span>,
+  <span class="hljs-attr">&quot;version&quot;</span>: <span class="hljs-string">&quot;1.0.0&quot;</span>,
+  <span class="hljs-attr">&quot;scripts&quot;</span>: {
+    <span class="hljs-attr">&quot;dev&quot;</span>: <span class="hljs-string">&quot;vite&quot;</span>,
+    <span class="hljs-attr">&quot;build&quot;</span>: <span class="hljs-string">&quot;vite build&quot;</span>,
+    <span class="hljs-attr">&quot;serve&quot;</span>: <span class="hljs-string">&quot;vite preview&quot;</span>
+  },
+  <span class="hljs-attr">&quot;dependencies&quot;</span>: {
+    <span class="hljs-attr">&quot;vue&quot;</span>: <span class="hljs-string">&quot;^3.0.5&quot;</span>
+  },
+  <span class="hljs-attr">&quot;devDependencies&quot;</span>: {
+    <span class="hljs-attr">&quot;@vitejs/plugin-vue&quot;</span>: <span class="hljs-string">&quot;^1.2.4&quot;</span>,
+    <span class="hljs-attr">&quot;@vue/compiler-sfc&quot;</span>: <span class="hljs-string">&quot;^3.0.5&quot;</span>,
+    <span class="hljs-attr">&quot;vite&quot;</span>: <span class="hljs-string">&quot;^2.4.0&quot;</span>
+  }
+}
+</code></pre>
+<h3 id="t52.4 index.html">2.4 index.html <a href="#t52.4 index.html"> # </a></h3>
+<p>index.html</p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;icon&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/favicon.ico&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Vite App<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;module&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;/src/main.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+
+</code></pre>
+<h3 id="t62.5 src\main.js">2.5 src\main.js <a href="#t62.5 src\main.js"> # </a></h3>
+<p>src\main.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { createApp } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vue&apos;</span>
+<span class="hljs-keyword">import</span> App <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./App.vue&apos;</span>
+createApp(App).mount(<span class="hljs-string">&apos;#app&apos;</span>)
+</code></pre>
+<h3 id="t72.6 src\App.vue">2.6 src\App.vue <a href="#t72.6 src\App.vue"> # </a></h3>
+<p>src\App.vue</p>
+<pre><code class="lang-js">&lt;template&gt;
+  &lt;img src=&quot;./assets/ico.jpg&quot; /&gt;
+  &lt;HelloWorld msg=&quot;Vue3 + Vite&quot; /&gt;
+&lt;/template&gt;
+
+&lt;script setup&gt;
+//https://github.com/vuejs/rfcs/blob/master/active-rfcs/0040-script-setup.md
+import HelloWorld from &apos;./components/HelloWorld.vue&apos;
+&lt;/script&gt;
+</code></pre>
+<h3 id="t82.7 HelloWorld.vue">2.7 HelloWorld.vue <a href="#t82.7 HelloWorld.vue"> # </a></h3>
+<p>src\components\HelloWorld.vue</p>
+<pre><code class="lang-js">&lt;template&gt;
+  &lt;h1&gt;{{ msg }}&lt;/h1&gt;
+&lt;/template&gt;
+</code></pre>
+<h2 id="t93.&#x9759;&#x6001;&#x8D44;&#x6E90;&#x5904;&#x7406;">3.&#x9759;&#x6001;&#x8D44;&#x6E90;&#x5904;&#x7406; <a href="#t93.&#x9759;&#x6001;&#x8D44;&#x6E90;&#x5904;&#x7406;"> # </a></h2>
+<ul>
+<li><a href="https://cn.vitejs.dev/guide/assets.html">&#x9759;&#x6001;&#x8D44;&#x6E90;&#x5904;&#x7406;</a></li>
+<li>&#x670D;&#x52A1;&#x65F6;&#x5F15;&#x5165;&#x4E00;&#x4E2A;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x4F1A;&#x8FD4;&#x56DE;&#x89E3;&#x6790;&#x540E;&#x7684;&#x516C;&#x5171;&#x8DEF;&#x5F84;</li>
+</ul>
+<h3 id="t103.1 &#x6A21;&#x677F;&#x4E2D;&#x5F15;&#x5165;">3.1 &#x6A21;&#x677F;&#x4E2D;&#x5F15;&#x5165; <a href="#t103.1 &#x6A21;&#x677F;&#x4E2D;&#x5F15;&#x5165;"> # </a></h3>
+<p>src\App.vue</p>
+<pre><code class="lang-diff">&lt;template&gt;
+<span class="hljs-addition">+  &lt;img  src=&quot;./assets/avatar.jpg&quot; /&gt;</span>
+&lt;/template&gt;
+</code></pre>
+<h3 id="t113.2 JS&#x4E2D;&#x5F15;&#x5165;">3.2 JS&#x4E2D;&#x5F15;&#x5165; <a href="#t113.2 JS&#x4E2D;&#x5F15;&#x5165;"> # </a></h3>
+<pre><code class="lang-diff">&lt;template&gt;
+  &lt;img  src=&quot;./assets/avatar.jpg&quot; /&gt;
+<span class="hljs-addition">+  &lt;img  :src=&quot;imgUrl&quot; /&gt;</span>
+  &lt;HelloWorld msg=&quot;Hello Vue 3 + Vite&quot; /&gt;
+&lt;/template&gt;
+
+&lt;script setup&gt;
+//https://github.com/vuejs/rfcs/blob/master/active-rfcs/0040-script-setup.md
+import HelloWorld from &apos;./components/HelloWorld.vue&apos;
+<span class="hljs-addition">+import imgUrl from &apos;./assets/avatar.jpg&apos;</span>
+&lt;/script&gt;
+</code></pre>
+<h3 id="t123.3 CSS&#x4E2D;&#x5F15;&#x5165;">3.3 CSS&#x4E2D;&#x5F15;&#x5165; <a href="#t123.3 CSS&#x4E2D;&#x5F15;&#x5165;"> # </a></h3>
+<pre><code class="lang-diff">&lt;template&gt;
+  &lt;img  src=&quot;./assets/avatar.jpg&quot; /&gt;
+  &lt;img  :src=&quot;imgUrl&quot; /&gt;
+<span class="hljs-addition">+ &lt;div class=&quot;avatar&quot;&gt;&lt;/div&gt;</span>
+  &lt;HelloWorld msg=&quot;Hello Vue 3 + Vite&quot; /&gt;
+&lt;/template&gt;
+
+&lt;script setup&gt;
+//https://github.com/vuejs/rfcs/blob/master/active-rfcs/0040-script-setup.md
+import HelloWorld from &apos;./components/HelloWorld.vue&apos;
+import imgUrl from &apos;./assets/avatar.jpg&apos;
+&lt;/script&gt;
+<span class="hljs-addition">+&lt;style scoped&gt;</span>
+<span class="hljs-addition">+.avatar{</span>
+<span class="hljs-addition">+  width:200px;</span>
+<span class="hljs-addition">+  height:200px;</span>
+<span class="hljs-addition">+  background-image: url(./assets/avatar.jpg);</span>
+<span class="hljs-addition">+  background-size: contain;</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+&lt;/style&gt;</span>
+</code></pre>
+<h3 id="t133.4 public&#x76EE;&#x5F55;">3.4 public&#x76EE;&#x5F55; <a href="#t133.4 public&#x76EE;&#x5F55;"> # </a></h3>
+<ul>
+<li><a href="https://cn.vitejs.dev/guide/assets.html#the-public-directory">public&#x76EE;&#x5F55;</a></li>
+<li>&#x5982;&#x679C;&#x6709;&#x4EE5;&#x4E0B;&#x9700;&#x6C42;<ul>
+<li>&#x8FD9;&#x4E9B;&#x8D44;&#x6E90;&#x4E0D;&#x4F1A;&#x88AB;&#x6E90;&#x7801;&#x5F15;&#x7528;&#xFF08;&#x4F8B;&#x5982; robots.txt&#xFF09;</li>
+<li>&#x8FD9;&#x4E9B;&#x8D44;&#x6E90;&#x5FC5;&#x987B;&#x4FDD;&#x6301;&#x539F;&#x6709;&#x6587;&#x4EF6;&#x540D;&#xFF08;&#x6CA1;&#x6709;&#x7ECF;&#x8FC7; hash&#xFF09;</li>
+</ul>
+</li>
+<li>&#x90A3;&#x4E48;&#x4F60;&#x53EF;&#x4EE5;&#x5C06;&#x8BE5;&#x8D44;&#x6E90;&#x653E;&#x5728;&#x6307;&#x5B9A;&#x7684; <code>public</code> &#x76EE;&#x5F55;&#x4E2D;&#xFF0C;&#x5B83;&#x5E94;&#x4F4D;&#x4E8E;&#x4F60;&#x7684;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;</li>
+<li>&#x8BE5;&#x76EE;&#x5F55;&#x4E2D;&#x7684;&#x8D44;&#x6E90;&#x5728;&#x5F00;&#x53D1;&#x65F6;&#x80FD;&#x76F4;&#x63A5;&#x901A;&#x8FC7; <code>/</code> &#x6839;&#x8DEF;&#x5F84;&#x8BBF;&#x95EE;&#x5230;&#xFF0C;&#x5E76;&#x4E14;&#x6253;&#x5305;&#x65F6;&#x4F1A;&#x88AB;&#x5B8C;&#x6574;&#x590D;&#x5236;&#x5230;&#x76EE;&#x6807;&#x76EE;&#x5F55;&#x7684;&#x6839;&#x76EE;&#x5F55;&#x4E0B;</li>
+</ul>
+<p><code>public\avatar.jpg</code></p>
+<h2 id="t144.&#x914D;&#x7F6E;&#x522B;&#x540D;">4.&#x914D;&#x7F6E;&#x522B;&#x540D; <a href="#t144.&#x914D;&#x7F6E;&#x522B;&#x540D;"> # </a></h2>
+<h3 id="t154.1 vite.config.js">4.1 vite.config.js <a href="#t154.1 vite.config.js"> # </a></h3>
+<pre><code class="lang-diff">import { defineConfig } from &apos;vite&apos;
+import vue from &apos;@vitejs/plugin-vue&apos;
+<span class="hljs-addition">+import {resolve} from &apos;path&apos;;</span>
+
+// https://vitejs.dev/config/
+export default defineConfig({
+<span class="hljs-addition">+ resolve:{</span>
+<span class="hljs-addition">+   alias:{</span>
+<span class="hljs-addition">+    &apos;@&apos;:resolve(&apos;src&apos;)</span>
+<span class="hljs-addition">+   }</span>
+<span class="hljs-addition">+ },</span>
+  plugins: [vue()]
+})
+</code></pre>
+<h3 id="t164.2 App.vue">4.2 App.vue <a href="#t164.2 App.vue"> # </a></h3>
+<p>src\App.vue</p>
+<pre><code class="lang-diff">&lt;template&gt;
+<span class="hljs-addition">+ &lt;img src=&quot;@/assets/avatar.jpg&quot; /&gt;</span>
+  &lt;img :src=&quot;avatarUrl&quot; /&gt;
+  &lt;div class=&quot;avatar&quot;&gt;&lt;/div&gt;
+  &lt;HelloWorld msg=&quot;Hello Vue 3 + Vite&quot; /&gt;
+&lt;/template&gt;
+&lt;script setup&gt;
+//https://github.com/vuejs/rfcs/blob/master/active-rfcs/0040-script-setup.md
+<span class="hljs-addition">+import HelloWorld from &quot;@/components/HelloWorld.vue&quot;;</span>
+<span class="hljs-addition">+import avatarUrl from &quot;@/assets/avatar.jpg&quot;;</span>
+&lt;/script&gt;
+&lt;style scoped&gt;
+.avatar {
+  width: 200px;
+  height: 200px;
+<span class="hljs-addition">+ background-image: url(@/assets/avatar.jpg);</span>
+  background-size: contain;
+}
+&lt;/style&gt;
+</code></pre>
+<h2 id="t175.&#x6837;&#x5F0F;&#x5904;&#x7406;">5.&#x6837;&#x5F0F;&#x5904;&#x7406; <a href="#t175.&#x6837;&#x5F0F;&#x5904;&#x7406;"> # </a></h2>
+<h3 id="t185.1 &#x5168;&#x5C40;&#x6837;&#x5F0F;">5.1 &#x5168;&#x5C40;&#x6837;&#x5F0F; <a href="#t185.1 &#x5168;&#x5C40;&#x6837;&#x5F0F;"> # </a></h3>
+<p>src\main.js</p>
+<pre><code class="lang-diff">import { createApp } from &apos;vue&apos;
+import App from &apos;./App.vue&apos;
+<span class="hljs-addition">+import &apos;./global.css&apos;</span>
+createApp(App).mount(&apos;#app&apos;)
+</code></pre>
+<p>src\global.css</p>
+<pre><code class="lang-css"><span class="hljs-selector-id">#app</span> {
+    <span class="hljs-attribute">background-color</span>: lightgrey;
+}
+</code></pre>
+<h3 id="t195.2 &#x5C40;&#x90E8;&#x6837;&#x5F0F;">5.2 &#x5C40;&#x90E8;&#x6837;&#x5F0F; <a href="#t195.2 &#x5C40;&#x90E8;&#x6837;&#x5F0F;"> # </a></h3>
+<h3 id="t205.2.1 scoped">5.2.1 scoped <a href="#t205.2.1 scoped"> # </a></h3>
+<ul>
+<li>&#x5F53; <code>&lt;style&gt;</code> &#x6807;&#x7B7E;&#x6709; <code>scoped</code> &#x5C5E;&#x6027;&#x65F6;&#xFF0C;&#x5B83;&#x7684; CSS &#x53EA;&#x4F5C;&#x7528;&#x4E8E;&#x5F53;&#x524D;&#x7EC4;&#x4EF6;&#x4E2D;&#x7684;&#x5143;&#x7D20;</li>
+<li>&#x5B83;&#x4F7F;&#x7528;&#x4E86;<code>data-v-hash</code>&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x4F7F;css&#x6709;&#x4E86;&#x5B83;&#x5BF9;&#x5E94;&#x6A21;&#x5757;&#x7684;&#x6807;&#x8BC6;</li>
+</ul>
+<p>src\components\HelloWorld.vue</p>
+<pre><code class="lang-diff">&lt;template&gt;
+  &lt;h1&gt;{{ msg }}&lt;/h1&gt;
+<span class="hljs-addition">+  &lt;a&gt;&#x8D85;&#x94FE;&#x63A5;&lt;/a&gt;</span>
+&lt;/template&gt;
+<span class="hljs-addition">+&lt;style scoped&gt;</span>
+<span class="hljs-addition">+a {</span>
+<span class="hljs-addition">+  color: #42b983;</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+&lt;/style&gt;</span>
+</code></pre>
+<h3 id="t215.2.2 CSS Modules">5.2.2 CSS Modules <a href="#t215.2.2 CSS Modules"> # </a></h3>
+<ul>
+<li><a href="https://cn.vitejs.dev/guide/features.html#postcss">CSS Modules</a></li>
+<li>&#x901A;&#x8FC7;<code>module</code>&#x4F5C;&#x7528;&#x7684;<code>style</code>&#x90FD;&#x88AB;&#x4FDD;&#x5B58;&#x5230;<code>$style</code>&#x5BF9;&#x8C61;&#x4E2D;</li>
+</ul>
+<h3 id="t225.2.2.1  &#x5185;&#x8054;">5.2.2.1  &#x5185;&#x8054; <a href="#t225.2.2.1  &#x5185;&#x8054;"> # </a></h3>
+<p>src\components\HelloWorld.vue</p>
+<pre><code class="lang-diff">&lt;template&gt;
+  &lt;h1&gt;{{ msg }}&lt;/h1&gt;
+<span class="hljs-addition">+ &lt;a :class=&quot;$style.link&quot;&gt;&#x8D85;&#x94FE;&#x63A5;&lt;/a&gt;</span>
+&lt;/template&gt;
+<span class="hljs-addition">+&lt;style module&gt;</span>
+<span class="hljs-addition">+.link {</span>
+<span class="hljs-addition">+  color: #42b983;</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+&lt;/style&gt;</span>
+</code></pre>
+<h3 id="t235.2.2.2  &#x5916;&#x8054;">5.2.2.2  &#x5916;&#x8054; <a href="#t235.2.2.2  &#x5916;&#x8054;"> # </a></h3>
+<ul>
+<li>&#x4EFB;&#x4F55;&#x4EE5; .module.css &#x4E3A;&#x540E;&#x7F00;&#x540D;&#x7684; CSS &#x6587;&#x4EF6;&#x90FD;&#x88AB;&#x8BA4;&#x4E3A;&#x662F;&#x4E00;&#x4E2A; CSS modules &#x6587;&#x4EF6;</li>
+<li>&#x5BFC;&#x5165;&#x8FD9;&#x6837;&#x7684;&#x6587;&#x4EF6;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x76F8;&#x5E94;&#x7684;&#x6A21;&#x5757;&#x5BF9;&#x8C61;
+src\components\HelloWorld.vue</li>
+</ul>
+<pre><code class="lang-diff">&lt;template&gt;
+  &lt;h1&gt;{{ msg }}&lt;/h1&gt;
+<span class="hljs-addition">+ &lt;a :class=&quot;style.link&quot;&gt;&#x8D85;&#x94FE;&#x63A5;&lt;/a&gt;</span>
+&lt;/template&gt;
+
+&lt;script setup&gt;
+<span class="hljs-addition">+import style from &apos;./HelloWorld.module.css&apos;;</span>
+&lt;/script&gt;
+</code></pre>
+<p>src\components\HelloWorld.module.css</p>
+<pre><code class="lang-js">.link {
+    color: #42b983;
+}
+</code></pre>
+<h3 id="t245.3 less&#x548C;sass">5.3 less&#x548C;sass <a href="#t245.3 less&#x548C;sass"> # </a></h3>
+<ul>
+<li>Vite &#x4E5F;&#x540C;&#x65F6;&#x63D0;&#x4F9B;&#x4E86;&#x5BF9; .scss, .sass, .less, .styl &#x548C; .stylus &#x6587;&#x4EF6;&#x7684;&#x5185;&#x7F6E;&#x652F;&#x6301;&#x3002;&#x6CA1;&#x6709;&#x5FC5;&#x8981;&#x4E3A;&#x5B83;&#x4EEC;&#x5B89;&#x88C5;&#x7279;&#x5B9A;&#x7684; Vite &#x63D2;&#x4EF6;&#xFF0C;&#x4F46;&#x5FC5;&#x987B;&#x5B89;&#x88C5;&#x76F8;&#x5E94;&#x7684;&#x9884;&#x5904;&#x7406;&#x5668;&#x4F9D;&#x8D56;</li>
+<li>&#x5982;&#x679C;&#x662F;&#x7528;&#x7684;&#x662F;&#x5355;&#x6587;&#x4EF6;&#x7EC4;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>style lang=&quot;sass&quot;</code>&#xFF08;&#x6216;&#x5176;&#x4ED6;&#x9884;&#x5904;&#x7406;&#x5668;&#xFF09;&#x81EA;&#x52A8;&#x5F00;&#x542F;</li>
+</ul>
+<h4 id="t255.3.1 &#x5B89;&#x88C5;">5.3.1 &#x5B89;&#x88C5; <a href="#t255.3.1 &#x5B89;&#x88C5;"> # </a></h4>
+<pre><code class="lang-js">npm i less sass -S
+</code></pre>
+<h4 id="t265.3.2 HelloWorld.vue">5.3.2 HelloWorld.vue <a href="#t265.3.2 HelloWorld.vue"> # </a></h4>
+<p>src\components\HelloWorld.vue</p>
+<pre><code class="lang-diff">&lt;template&gt;
+  &lt;h1&gt;{{ msg }}&lt;/h1&gt;
+  &lt;a :class=&quot;style.link&quot;&gt;&#x8D85;&#x94FE;&#x63A5;&lt;/a&gt;
+<span class="hljs-addition">+ &lt;h2&gt;less&lt;/h2&gt;</span>
+<span class="hljs-addition">+ &lt;h3&gt;sass&lt;/h3&gt;</span>
+&lt;/template&gt;
+
+&lt;script setup&gt;
+import { reactive } from &apos;vue&apos;
+import style from &apos;./HelloWorld.module.css&apos;;
+&lt;/script&gt;
+<span class="hljs-addition">+&lt;style scoped lang=&quot;less&quot;&gt;</span>
+<span class="hljs-addition">+@color:red;</span>
+<span class="hljs-addition">+h2{</span>
+<span class="hljs-addition">+  color:@color;</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+&lt;/style&gt;</span>
+<span class="hljs-addition">+&lt;style scoped lang=&quot;scss&quot;&gt;</span>
+<span class="hljs-addition">+$color:green;</span>
+<span class="hljs-addition">+h3{</span>
+<span class="hljs-addition">+  color:$color;</span>
+<span class="hljs-addition">+}</span>
+&lt;/style&gt;
+</code></pre>
+<h3 id="t275.4 PostCSS">5.4 PostCSS <a href="#t275.4 PostCSS"> # </a></h3>
+<ul>
+<li><a href="https://cn.vitejs.dev/guide/features.html#postcss">postcss</a></li>
+<li>&#x5982;&#x679C;&#x9879;&#x76EE;&#x5305;&#x542B;&#x6709;&#x6548;&#x7684; PostCSS &#x914D;&#x7F6E; (&#x4EFB;&#x4F55;&#x53D7; postcss-load-config &#x652F;&#x6301;&#x7684;&#x683C;&#x5F0F;&#xFF0C;&#x4F8B;&#x5982; postcss.config.js)&#xFF0C;&#x5B83;&#x5C06;&#x4F1A;&#x81EA;&#x52A8;&#x5E94;&#x7528;&#x4E8E;&#x6240;&#x6709;&#x5DF2;&#x5BFC;&#x5165;&#x7684; CSS</li>
+</ul>
+<h4 id="t285.4.1 &#x5B89;&#x88C5;">5.4.1 &#x5B89;&#x88C5; <a href="#t285.4.1 &#x5B89;&#x88C5;"> # </a></h4>
+<pre><code class="lang-js">npm install autoprefixer --save
+</code></pre>
+<h4 id="t295.4.2 postcss.config.js">5.4.2 postcss.config.js <a href="#t295.4.2 postcss.config.js"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-attr">plugins</span>: [
+      <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;autoprefixer&apos;</span>)
+  ]
+}
+</code></pre>
+<h4 id="t305.4.3 .browserslistrc">5.4.3 .browserslistrc <a href="#t305.4.3 .browserslistrc"> # </a></h4>
+<pre><code class="lang-js">&gt;<span class="hljs-number">0.2</span>%
+not dead
+not op_mini all
+</code></pre>
+<h4 id="t315.4.4 HelloWorld.vue">5.4.4 HelloWorld.vue <a href="#t315.4.4 HelloWorld.vue"> # </a></h4>
+<p>src\components\HelloWorld.vue</p>
+<pre><code class="lang-diff">&lt;template&gt;
+  &lt;h1&gt;{{ msg }}&lt;/h1&gt;
+  &lt;a :class=&quot;style.link&quot;&gt;&#x8D85;&#x94FE;&#x63A5;&lt;/a&gt;
+  &lt;h2&gt;less&lt;/h2&gt;
+  &lt;h3&gt;sass&lt;/h3&gt;
+<span class="hljs-addition">+ &lt;div class=&quot;postcss&quot;&gt;&lt;/div&gt;</span>
+&lt;/template&gt;
+
+&lt;script setup&gt;
+import { reactive } from &apos;vue&apos;
+import style from &apos;./HelloWorld.module.css&apos;;
+&lt;/script&gt;
+&lt;style scoped lang=&quot;less&quot;&gt;
+@color:red;
+h2{
+  color:@color;
+}
+&lt;/style&gt;
+
+&lt;style scoped lang=&quot;scss&quot;&gt;
+$color:green;
+h3{
+  color:$color;
+}
+&lt;/style&gt;
+<span class="hljs-addition">+&lt;style scoped&gt;</span>
+<span class="hljs-addition">+.postcss{</span>
+<span class="hljs-addition">+    height:50px;</span>
+<span class="hljs-addition">+    width:200px;</span>
+<span class="hljs-addition">+    background-color: orange;</span>
+<span class="hljs-addition">+    transform: rotate(90deg);</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+&lt;/style&gt;</span>
+</code></pre>
+<h2 id="t326.typescript">6.typescript <a href="#t326.typescript"> # </a></h2>
+<h3 id="t336.1 &#x5B89;&#x88C5;">6.1 &#x5B89;&#x88C5; <a href="#t336.1 &#x5B89;&#x88C5;"> # </a></h3>
+<pre><code class="lang-js">cnpm install typescript @babel/core @babel/preset-env  @babel/preset-typescript --save-dev
+</code></pre>
+<h3 id="t346.2 .babelrc">6.2 .babelrc <a href="#t346.2 .babelrc"> # </a></h3>
+<p>.babelrc</p>
+<pre><code class="lang-js">{
+    <span class="hljs-string">&quot;presets&quot;</span>: [
+        [<span class="hljs-string">&quot;@babel/preset-env&quot;</span>],
+        <span class="hljs-string">&quot;@babel/preset-typescript&quot;</span>
+    ]
+}
+</code></pre>
+<h3 id="t356.3 tsconfig.json">6.3 tsconfig.json <a href="#t356.3 tsconfig.json"> # </a></h3>
+<pre><code class="lang-json">{
+  <span class="hljs-attr">&quot;compilerOptions&quot;</span>: {
+    <span class="hljs-attr">&quot;target&quot;</span>: <span class="hljs-string">&quot;esnext&quot;</span>,
+    <span class="hljs-attr">&quot;module&quot;</span>: <span class="hljs-string">&quot;esnext&quot;</span>,
+    <span class="hljs-attr">&quot;moduleResolution&quot;</span>: <span class="hljs-string">&quot;node&quot;</span>,
+    <span class="hljs-attr">&quot;strict&quot;</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">&quot;jsx&quot;</span>: <span class="hljs-string">&quot;preserve&quot;</span>,
+    <span class="hljs-attr">&quot;sourceMap&quot;</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">&quot;resolveJsonModule&quot;</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">&quot;esModuleInterop&quot;</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">&quot;lib&quot;</span>: [<span class="hljs-string">&quot;esnext&quot;</span>, <span class="hljs-string">&quot;dom&quot;</span>]
+  },
+  <span class="hljs-attr">&quot;include&quot;</span>: [<span class="hljs-string">&quot;src/**/*.ts&quot;</span>, <span class="hljs-string">&quot;src/**/*.d.ts&quot;</span>, <span class="hljs-string">&quot;src/**/*.tsx&quot;</span>, <span class="hljs-string">&quot;src/**/*.vue&quot;</span>]
+}
+</code></pre>
+<h3 id="t366.4 HelloWorld.vue">6.4 HelloWorld.vue <a href="#t366.4 HelloWorld.vue"> # </a></h3>
+<p>src\components\HelloWorld.vue</p>
+<pre><code class="lang-diff">&lt;template&gt;
+  &lt;h1&gt;{{ msg }}&lt;/h1&gt;
+  &lt;h2&gt;less&lt;/h2&gt;
+  &lt;h3&gt;sass&lt;/h3&gt;
+  &lt;div class=&quot;postcss&quot;&gt;&lt;/div&gt;
+<span class="hljs-addition">+ &lt;button @click=&quot;handleClick&quot;&gt;{{state.count}}&lt;/button&gt;</span>
+&lt;/template&gt;
+
+&lt;script setup lang=&quot;ts&quot;&gt;
+import { reactive,defineProps } from &apos;vue&apos;
+<span class="hljs-addition">+defineProps({</span>
+<span class="hljs-addition">+  msg:String</span>
+<span class="hljs-addition">+})</span>
+<span class="hljs-addition">+interface State {</span>
+<span class="hljs-addition">+  count:number;</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+let state = reactive&lt;State&gt;({count:0});</span>
+<span class="hljs-addition">+const handleClick = ()=&gt;{</span>
+<span class="hljs-addition">+  console.log(state.count);</span>
+<span class="hljs-addition">+  state.count++;</span>
+<span class="hljs-addition">+}</span>
+&lt;/script&gt;
+&lt;style scoped lang=&quot;less&quot;&gt;
+@color:red;
+h2{
+  color:@color;
+}
+&lt;/style&gt;
+
+&lt;style scoped lang=&quot;scss&quot;&gt;
+$color:green;
+h3{
+  color:$color;
+}
+&lt;/style&gt;
+&lt;style scoped&gt;
+.postcss{
+    height:50px;
+    width:200px;
+    background-color: orange;
+    transform: rotate(90deg);
+}
+&lt;/style&gt;
+</code></pre>
+<h3 id="t376.5 shims-vue.d.ts">6.5 shims-vue.d.ts <a href="#t376.5 shims-vue.d.ts"> # </a></h3>
+<ul>
+<li>&#x8BA9;typescript&#x8BC6;&#x522B;&#x652F;&#x6301;<code>.vue</code>&#x6587;&#x4EF6;</li>
+</ul>
+<p>src\shims-vue.d.ts</p>
+<pre><code class="lang-js">declare <span class="hljs-built_in">module</span> <span class="hljs-string">&apos;*.vue&apos;</span> {
+  <span class="hljs-keyword">import</span> { DefineComponent } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vue&apos;</span>
+  <span class="hljs-keyword">const</span> component: DefineComponent&lt;{}, {}, any&gt;
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> component
+}
+
+</code></pre>
+<h3 id="t386.6 vite-env.d.ts">6.6 vite-env.d.ts <a href="#t386.6 vite-env.d.ts"> # </a></h3>
+<ul>
+<li>&#x5982;&#x679C;&#x4F60;&#x7684;&#x5E93;&#x4F9D;&#x8D56;&#x4E8E;&#x67D0;&#x4E2A;&#x5168;&#x5C40;&#x5E93;&#xFF0C;&#x4F7F;&#x7528;/// <reference types="...">&#x6307;&#x4EE4;</reference></li>
+<li>&#x4E09;&#x659C;&#x7EBF;&#x6307;&#x4EE4;&#x4EC5;&#x53EF;&#x653E;&#x5728;&#x5305;&#x542B;&#x5B83;&#x7684;&#x6587;&#x4EF6;&#x7684;&#x6700;&#x9876;&#x7AEF;</li>
+<li>&#x4E09;&#x659C;&#x7EBF;&#x5F15;&#x7528;&#x544A;&#x8BC9;&#x7F16;&#x8BD1;&#x5668;&#x5728;&#x7F16;&#x8BD1;&#x8FC7;&#x7A0B;&#x4E2D;&#x8981;&#x5F15;&#x5165;&#x7684;&#x989D;&#x5916;&#x7684;&#x6587;&#x4EF6;</li>
+</ul>
+<p>src\vite-env.d.ts</p>
+<pre><code class="lang-js"><span class="hljs-comment">/// &lt;reference types=&quot;vite/client&quot; /&gt;</span>
+</code></pre>
+<h2 id="t397.&#x914D;&#x7F6E;&#x4EE3;&#x7406;">7.&#x914D;&#x7F6E;&#x4EE3;&#x7406; <a href="#t397.&#x914D;&#x7F6E;&#x4EE3;&#x7406;"> # </a></h2>
+<ul>
+<li><a href="https://cn.vitejs.dev/config/#server-proxy">server-proxy</a></li>
+<li>&#x4E3A;&#x5F00;&#x53D1;&#x670D;&#x52A1;&#x5668;&#x914D;&#x7F6E;&#x81EA;&#x5B9A;&#x4E49;&#x4EE3;&#x7406;&#x89C4;&#x5219;</li>
+<li>&#x671F;&#x671B;&#x63A5;&#x6536;&#x4E00;&#x4E2A; { key: options } &#x5BF9;&#x8C61;&#x3002;&#x5982;&#x679C; key &#x503C;&#x4EE5; ^ &#x5F00;&#x5934;&#xFF0C;&#x5C06;&#x4F1A;&#x88AB;&#x89E3;&#x91CA;&#x4E3A; RegExp&#x3002;configure &#x53EF;&#x7528;&#x4E8E;&#x8BBF;&#x95EE; proxy &#x5B9E;&#x4F8B;&#x3002;</li>
+</ul>
+<h3 id="t407.1 vite.config.js">7.1 vite.config.js <a href="#t407.1 vite.config.js"> # </a></h3>
+<pre><code class="lang-diff">import { defineConfig } from &apos;vite&apos;
+import vue from &apos;@vitejs/plugin-vue&apos;
+import { resolve } from &apos;path&apos;;
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  resolve: {
+    alias: {
+      &apos;@&apos;: resolve(&apos;src&apos;)
+    }
+  },
+<span class="hljs-addition">+ server: {</span>
+<span class="hljs-addition">+   proxy: {</span>
+<span class="hljs-addition">+     &apos;/api&apos;: {</span>
+<span class="hljs-addition">+       target: &apos;http://jsonplaceholder.typicode.com&apos;,</span>
+<span class="hljs-addition">+       changeOrigin: true,</span>
+<span class="hljs-addition">+       rewrite: (path) =&gt; path.replace(/^\/api/, &apos;&apos;)</span>
+<span class="hljs-addition">+     }</span>
+<span class="hljs-addition">+   }</span>
+<span class="hljs-addition">+ },</span>
+  plugins: [vue()]
+})
+
+</code></pre>
+<h3 id="t417.2 src\App.vue">7.2 src\App.vue <a href="#t417.2 src\App.vue"> # </a></h3>
+<p>src\App.vue</p>
+<pre><code class="lang-diff">&lt;template&gt;
+  &lt;img src=&quot;@/assets/avatar.jpg&quot; /&gt;
+  &lt;img :src=&quot;avatarUrl&quot; /&gt;
+  &lt;div class=&quot;avatar&quot;&gt;&lt;/div&gt;
+  &lt;HelloWorld msg=&quot;Hello Vue 3 + Vite&quot; /&gt;
+&lt;/template&gt;
+
+&lt;script setup&gt;
+//https://github.com/vuejs/rfcs/blob/master/active-rfcs/0040-script-setup.md
+import HelloWorld from &quot;@/components/HelloWorld.vue&quot;;
+import avatarUrl from &quot;@/assets/avatar.jpg&quot;;
+<span class="hljs-addition">+fetch(&apos;/api/todos/1&apos;)</span>
+<span class="hljs-addition">+  .then(response =&gt; response.json())</span>
+<span class="hljs-addition">+  .then(json =&gt; console.log(json))</span>
+&lt;/script&gt;
+&lt;style scoped&gt;
+.avatar {
+  width: 200px;
+  height: 200px;
+  background-image: url(@/assets/avatar.jpg);
+  background-size: contain;
+}
+&lt;/style&gt;
+</code></pre>
+<h2 id="t428.mock">8.mock <a href="#t428.mock"> # </a></h2>
+<ul>
+<li><a href="https://www.npmjs.com/package/vite-plugin-mock">vite-plugin-mock</a></li>
+</ul>
+<pre><code class="lang-js">npm i mockjs vite-plugin-mock -D
+node ./node_modules/vite-plugin-mock/node_modules/esbuild/install.js
+</code></pre>
+<h3 id="t438.1 vite.config.js">8.1 vite.config.js <a href="#t438.1 vite.config.js"> # </a></h3>
+<pre><code class="lang-diff">import { defineConfig } from &apos;vite&apos;
+import vue from &apos;@vitejs/plugin-vue&apos;
+import { resolve } from &apos;path&apos;;
+<span class="hljs-addition">+import { viteMockServe } from &quot;vite-plugin-mock&quot;;</span>
+// https://vitejs.dev/config/
+export default defineConfig({
+  resolve: {
+    alias: {
+      &apos;@&apos;: resolve(&apos;src&apos;)
+    }
+  },
+  server: {
+    proxy: {
+      &apos;/api&apos;: {
+        target: &apos;http://jsonplaceholder.typicode.com&apos;,
+        changeOrigin: true,
+        rewrite: (path) =&gt; path.replace(/^\/api/, &apos;&apos;)
+      }
+    }
+  },
+<span class="hljs-addition">+  plugins: [vue(),viteMockServe({})]</span>
+})
+</code></pre>
+<h3 id="t448.2 mock\test.ts">8.2 mock\test.ts <a href="#t448.2 mock\test.ts"> # </a></h3>
+<p>mock\test.ts</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { MockMethod } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vite-plugin-mock&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> [
+    {
+        <span class="hljs-attr">url</span>: <span class="hljs-string">&apos;/api/get&apos;</span>,
+        <span class="hljs-attr">method</span>: <span class="hljs-string">&apos;get&apos;</span>,
+        <span class="hljs-attr">response</span>: <span class="hljs-function">(<span class="hljs-params">{ query }</span>) =&gt;</span> {
+            <span class="hljs-keyword">return</span> {
+                <span class="hljs-attr">code</span>: <span class="hljs-number">0</span>,
+                <span class="hljs-attr">data</span>: {
+                    <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;vben&apos;</span>,
+                },
+            };
+        },
+    },
+] <span class="hljs-keyword">as</span> MockMethod[];
+</code></pre>
+<h2 id="t459.ESLint">9.ESLint <a href="#t459.ESLint"> # </a></h2>
+<ul>
+<li>ESLint&#x662F;&#x4E00;&#x4E2A;&#x5F00;&#x6E90;&#x7684; JavaScript &#x7684; linting &#x5DE5;&#x5177;<ul>
+<li>&#x4EE3;&#x7801;&#x8D28;&#x91CF;&#x95EE;&#x9898;&#xFF1A;&#x4F7F;&#x7528;&#x65B9;&#x5F0F;&#x6709;&#x53EF;&#x80FD;&#x6709;&#x95EE;&#x9898;</li>
+<li>&#x4EE3;&#x7801;&#x98CE;&#x683C;&#x95EE;&#x9898;&#xFF1A;&#x98CE;&#x683C;&#x4E0D;&#x7B26;&#x5408;&#x4E00;&#x5B9A;&#x89C4;&#x5219;</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-js">npm install eslint eslint-plugin-vue  @vue/eslint-config-typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-dev
+</code></pre>
+<h3 id="t469.1 src\components\HelloWorld.vue">9.1 src\components\HelloWorld.vue <a href="#t469.1 src\components\HelloWorld.vue"> # </a></h3>
+<p>src\components\HelloWorld.vue</p>
+<pre><code class="lang-diff">&lt;template&gt;
+  &lt;h1&gt;{{ msg }}&lt;/h1&gt;
+  &lt;h2&gt;less&lt;/h2&gt;
+  &lt;h3&gt;sass&lt;/h3&gt;
+  &lt;div class=&quot;postcss&quot; /&gt;
+  &lt;button @click=&quot;handleClick&quot;&gt;
+    {{ state.count }}
+  &lt;/button&gt;
+&lt;/template&gt;
+
+&lt;script setup lang=&quot;ts&quot;&gt;
+import { reactive,defineProps } from &apos;vue&apos;
+defineProps({
+<span class="hljs-addition">+ msg:{</span>
+<span class="hljs-addition">+   type:String,</span>
+<span class="hljs-addition">+   default:&apos;&apos;</span>
+<span class="hljs-addition">+ }</span>
+})
+interface State {
+  count:number;
+}
+let state = reactive&lt;State&gt;({count:0});
+const handleClick = ()=&gt;{
+  console.log(state.count);
+  state.count++;
+}
+&lt;/script&gt;
+&lt;style scoped lang=&quot;less&quot;&gt;
+@color:red;
+h2{
+  color:@color;
+}
+&lt;/style&gt;
+
+&lt;style scoped lang=&quot;scss&quot;&gt;
+$color:green;
+h3{
+  color:$color;
+}
+&lt;/style&gt;
+&lt;style scoped&gt;
+.postcss{
+    height:50px;
+    width:200px;
+    background-color: orange;
+    transform: rotate(90deg);
+}
+&lt;/style&gt;
+</code></pre>
+<h3 id="t479.2 main.ts">9.2 main.ts <a href="#t479.2 main.ts"> # </a></h3>
+<p>src\main.ts</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { createApp } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vue&apos;</span>
+<span class="hljs-keyword">import</span> App <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./App.vue&apos;</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;./global.css&apos;</span>
+createApp(App).mount(<span class="hljs-string">&apos;#app&apos;</span>)
+</code></pre>
+<h3 id="t489.3 .eslintrc.js">9.3 .eslintrc.js <a href="#t489.3 .eslintrc.js"> # </a></h3>
+<p>.eslintrc.js</p>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
+    <span class="hljs-attr">root</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">env</span>: {
+        <span class="hljs-attr">browser</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">es2021</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">node</span>: <span class="hljs-literal">true</span>
+    },
+    <span class="hljs-attr">extends</span>: [
+        <span class="hljs-string">&quot;plugin:vue/vue3-recommended&quot;</span>,
+        <span class="hljs-string">&quot;eslint:recommended&quot;</span>,
+        <span class="hljs-string">&quot;@vue/typescript/recommended&quot;</span>
+    ],
+    <span class="hljs-attr">parserOptions</span>: {
+        <span class="hljs-attr">ecmaVersion</span>: <span class="hljs-number">2021</span>
+    },
+    <span class="hljs-attr">rules</span>: {
+       <span class="hljs-string">&quot;no-unused-vars&quot;</span>: <span class="hljs-string">&quot;off&quot;</span>,
+       <span class="hljs-string">&quot;@typescript-eslint/no-unused-vars&quot;</span>: <span class="hljs-string">&quot;off&quot;</span>,
+    }
+}
+</code></pre>
+<h3 id="t499.4 .eslintignore">9.4 .eslintignore <a href="#t499.4 .eslintignore"> # </a></h3>
+<p>.eslintignore</p>
+<pre><code class="lang-js">*.css
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.d.ts
+</code></pre>
+<h3 id="t509.5 package.json">9.5 package.json <a href="#t509.5 package.json"> # </a></h3>
+<p>package.json</p>
+<pre><code class="lang-diff">{
+  &quot;name&quot;: &quot;zhufeng-vite2-prepare&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;scripts&quot;: {
+    &quot;dev&quot;: &quot;vite&quot;,
+    &quot;build&quot;: &quot;vite build&quot;,
+    &quot;serve&quot;: &quot;vite preview&quot;,
+<span class="hljs-addition">+   &quot;lint&quot;:&quot;eslint --ext .ts,vue src/** --no-error-on-unmatched-pattern --quiet&quot;,</span>
+<span class="hljs-addition">+   &quot;lint:fix&quot;:&quot;eslint --ext .ts,vue src/** --no-error-on-unmatched-pattern --fix&quot;</span>
+  },
+  &quot;dependencies&quot;: {
+    &quot;less&quot;: &quot;^4.1.1&quot;,
+    &quot;sass&quot;: &quot;^1.35.2&quot;,
+    &quot;vue&quot;: &quot;^3.0.5&quot;
+  },
+  &quot;devDependencies&quot;: {
+<span class="hljs-addition">+   &quot;@typescript-eslint/eslint-plugin&quot;: &quot;^4.28.2&quot;,</span>
+<span class="hljs-addition">+   &quot;@typescript-eslint/parser&quot;: &quot;^4.28.2&quot;,</span>
+    &quot;@vitejs/plugin-vue&quot;: &quot;^1.2.4&quot;,
+    &quot;@vue/compiler-sfc&quot;: &quot;^3.0.5&quot;,
+<span class="hljs-addition">+   &quot;@vue/eslint-config-typescript&quot;: &quot;^7.0.0&quot;,</span>
+    &quot;autoprefixer&quot;: &quot;^10.2.6&quot;,
+<span class="hljs-addition">+   &quot;eslint&quot;: &quot;^7.30.0&quot;,</span>
+<span class="hljs-addition">+   &quot;eslint-plugin-vue&quot;: &quot;^7.13.0&quot;,</span>
+    &quot;mockjs&quot;: &quot;^1.1.0&quot;,
+    &quot;vite&quot;: &quot;^2.4.0&quot;,
+    &quot;vite-plugin-mock&quot;: &quot;^2.9.1&quot;
+  }
+}
+</code></pre>
+<h2 id="t5110.Prettier">10.Prettier <a href="#t5110.Prettier"> # </a></h2>
+<ul>
+<li>ESLint &#x4E3B;&#x8981;&#x89E3;&#x51B3;&#x7684;&#x662F;&#x4EE3;&#x7801;&#x8D28;&#x91CF;&#x95EE;&#x9898;</li>
+<li>&#x4EE3;&#x7801;&#x8D28;&#x91CF;&#x89C4;&#x5219; (code-quality rules)<ul>
+<li>no-unused-vars</li>
+<li>no-extra-bind</li>
+<li>no-implicit-globals</li>
+<li>prefer-promise-reject-errors</li>
+</ul>
+</li>
+<li>&#x4EE3;&#x7801;&#x98CE;&#x683C;&#x89C4;&#x5219; (code-formatting rules)<ul>
+<li>max-len</li>
+<li>no-mixed-spaces-and-tabs</li>
+<li>keyword-spacing</li>
+<li>comma-style</li>
+</ul>
+</li>
+<li>&#x4EE3;&#x7801;&#x98CE;&#x683C;&#x95EE;&#x9898;&#x9700;&#x8981;&#x4F7F;&#x7528;<code>Prettier</code></li>
+<li>Prettier &#x58F0;&#x79F0;&#x81EA;&#x5DF1;&#x662F;&#x4E00;&#x4E2A;&#x6709;&#x4E3B;&#x89C1;&#x7684;&#x4EE3;&#x7801;&#x683C;&#x5F0F;&#x5316;&#x5DE5;&#x5177; (opinionated code formatter)</li>
+</ul>
+<h3 id="t5210.1 &#x5B89;&#x88C5;">10.1 &#x5B89;&#x88C5; <a href="#t5210.1 &#x5B89;&#x88C5;"> # </a></h3>
+<ul>
+<li><a href="https://github.com/prettier/eslint-plugin-prettier#options">eslint-plugin-prettier</a></li>
+</ul>
+<pre><code class="lang-js">npm install prettier eslint-plugin-prettier  @vue/eslint-config-prettier --save-dev
+</code></pre>
+<h3 id="t5310.2 package.json">10.2 package.json <a href="#t5310.2 package.json"> # </a></h3>
+<pre><code class="lang-diff">{
+  &quot;name&quot;: &quot;zhufeng-vite2-prepare&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;scripts&quot;: {
+    &quot;dev&quot;: &quot;vite&quot;,
+    &quot;build&quot;: &quot;vite build&quot;,
+    &quot;serve&quot;: &quot;vite preview&quot;,
+    &quot;lint&quot;: &quot;eslint --ext .ts,vue src/** --no-error-on-unmatched-pattern --quiet&quot;,
+    &quot;lint:fix&quot;: &quot;eslint --ext .ts,vue src/** --no-error-on-unmatched-pattern --fix&quot;
+  },
+  &quot;dependencies&quot;: {
+    &quot;less&quot;: &quot;^4.1.1&quot;,
+    &quot;sass&quot;: &quot;^1.35.2&quot;,
+    &quot;vue&quot;: &quot;^3.0.5&quot;
+  },
+  &quot;devDependencies&quot;: {
+    &quot;@typescript-eslint/eslint-plugin&quot;: &quot;^4.28.2&quot;,
+    &quot;@typescript-eslint/parser&quot;: &quot;^4.28.2&quot;,
+    &quot;@vitejs/plugin-vue&quot;: &quot;^1.2.4&quot;,
+    &quot;@vue/compiler-sfc&quot;: &quot;^3.0.5&quot;,
+<span class="hljs-addition">+   &quot;@vue/eslint-config-prettier&quot;: &quot;^6.0.0&quot;,</span>
+    &quot;@vue/eslint-config-typescript&quot;: &quot;^7.0.0&quot;,
+    &quot;autoprefixer&quot;: &quot;^10.2.6&quot;,
+    &quot;eslint&quot;: &quot;^7.30.0&quot;,
+<span class="hljs-addition">+   &quot;eslint-plugin-prettier&quot;: &quot;^3.4.0&quot;,</span>
+    &quot;eslint-plugin-vue&quot;: &quot;^7.13.0&quot;,
+    &quot;mockjs&quot;: &quot;^1.1.0&quot;,
+<span class="hljs-addition">+   &quot;prettier&quot;: &quot;^2.3.2&quot;,</span>
+    &quot;vite&quot;: &quot;^2.4.0&quot;,
+    &quot;vite-plugin-mock&quot;: &quot;^2.9.1&quot;
+  }
+}
+</code></pre>
+<h3 id="t5410.3 .eslintrc.js">10.3 .eslintrc.js <a href="#t5410.3 .eslintrc.js"> # </a></h3>
+<p>.eslintrc.js</p>
+<pre><code class="lang-diff">module.exports = {
+  root: true,
+  env: {
+    browser: true,
+    es2021: true,
+    node: true,
+  },
+  extends: [
+    &quot;plugin:vue/vue3-recommended&quot;,
+    &quot;eslint:recommended&quot;,
+    &quot;@vue/typescript/recommended&quot;,
+<span class="hljs-addition">+   &quot;@vue/prettier&quot;,</span>
+<span class="hljs-addition">+   &quot;@vue/prettier/@typescript-eslint&quot;,</span>
+  ],
+  parserOptions: {
+    ecmaVersion: 2021,
+  },
+  rules: {
+    &quot;no-unused-vars&quot;: &quot;off&quot;,
+    &quot;@typescript-eslint/no-unused-vars&quot;: &quot;off&quot;,
+<span class="hljs-addition">+   &quot;prettier/prettier&quot;: [&quot;error&quot;, { endOfLine: &quot;auto&quot; }],</span>
+  },
+};
+
+</code></pre>
+<h2 id="t5511.&#x5355;&#x5143;&#x6D4B;&#x8BD5;">11.&#x5355;&#x5143;&#x6D4B;&#x8BD5; <a href="#t5511.&#x5355;&#x5143;&#x6D4B;&#x8BD5;"> # </a></h2>
+<ul>
+<li><a href="https://next.vue-test-utils.vuejs.org/">next.vue-test-utils.vuejs.org</a></li>
+<li><a href="https://github.com/vuejs/vue-jest/tree/v3">vue-jest/tree/v3</a></li>
+<li><a href="https://www.jestjs.cn/docs/getting-started">jestjs</a></li>
+</ul>
+<h3 id="t5611.1 &#x5B89;&#x88C5;&#x4F9D;&#x8D56;">11.1 &#x5B89;&#x88C5;&#x4F9D;&#x8D56; <a href="#t5611.1 &#x5B89;&#x88C5;&#x4F9D;&#x8D56;"> # </a></h3>
+<pre><code class="lang-js">cnpm i jest@next babel-jest@next @types/jest vue-jest@next ts-jest@next @vue/test-utils@next --save-dev
+</code></pre>
+<h3 id="t5711.2 package.json">11.2 package.json <a href="#t5711.2 package.json"> # </a></h3>
+<pre><code class="lang-diff">{
+  &quot;name&quot;: &quot;zhufeng-vite2-prepare&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;scripts&quot;: {
+    &quot;dev&quot;: &quot;vite&quot;,
+    &quot;build&quot;: &quot;vite build&quot;,
+    &quot;serve&quot;: &quot;vite preview&quot;,
+    &quot;lint&quot;: &quot;eslint --ext .ts,vue src/** --no-error-on-unmatched-pattern --quiet&quot;,
+    &quot;lint:fix&quot;: &quot;eslint --ext .ts,vue src/** --no-error-on-unmatched-pattern --fix&quot;
+  },
+  &quot;dependencies&quot;: {
+    &quot;less&quot;: &quot;^4.1.1&quot;,
+    &quot;sass&quot;: &quot;^1.35.2&quot;,
+    &quot;vue&quot;: &quot;^3.0.5&quot;
+  },
+  &quot;devDependencies&quot;: {
+    &quot;@typescript-eslint/eslint-plugin&quot;: &quot;^4.28.2&quot;,
+    &quot;@typescript-eslint/parser&quot;: &quot;^4.28.2&quot;,
+    &quot;@vitejs/plugin-vue&quot;: &quot;^1.2.4&quot;,
+    &quot;@vue/compiler-sfc&quot;: &quot;^3.0.5&quot;,
+    &quot;@vue/eslint-config-prettier&quot;: &quot;^6.0.0&quot;,
+    &quot;@vue/eslint-config-typescript&quot;: &quot;^7.0.0&quot;,
+    &quot;autoprefixer&quot;: &quot;^10.2.6&quot;,
+    &quot;eslint&quot;: &quot;^7.30.0&quot;,
+    &quot;eslint-plugin-prettier&quot;: &quot;^3.4.0&quot;,
+    &quot;eslint-plugin-vue&quot;: &quot;^7.13.0&quot;,
+    &quot;mockjs&quot;: &quot;^1.1.0&quot;,
+    &quot;prettier&quot;: &quot;^2.3.2&quot;,
+    &quot;vite&quot;: &quot;^2.4.0&quot;,
+    &quot;vite-plugin-mock&quot;: &quot;^2.9.1&quot;
+  }
+}
+</code></pre>
+<h3 id="t5811.3 jest.config.js">11.3 jest.config.js <a href="#t5811.3 jest.config.js"> # </a></h3>
+<ul>
+<li><a href="https://github.com/vuejs/vue-jest/tree/v3">vue-jest</a>Jest Vue transformer with source map support</li>
+<li><a href="https://www.npmjs.com/package/babel-jest">babel-jest</a>Babel jest plugin</li>
+<li><a href="https://www.npmjs.com/package/ts-jest">ts-jest</a>A Jest transformer with source map support that lets you use Jest to test projects written in TypeScript</li>
+</ul>
+<p>jest.config.js</p>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-attr">testEnvironment</span>: <span class="hljs-string">&quot;jsdom&quot;</span>,
+  <span class="hljs-attr">transform</span>: {
+    <span class="hljs-string">&quot;^.+\\.vue$&quot;</span>: <span class="hljs-string">&quot;vue-jest&quot;</span>,
+    <span class="hljs-string">&quot;^.+\\.jsx?$&quot;</span>: <span class="hljs-string">&quot;babel-jest&quot;</span>,
+    <span class="hljs-string">&quot;^.+\\.tsx?$&quot;</span>: <span class="hljs-string">&quot;ts-jest&quot;</span>,
+  },
+  <span class="hljs-attr">moduleNameMapper</span>: {
+    <span class="hljs-string">&quot;^@/(.*)$&quot;</span>: <span class="hljs-string">&quot;&lt;rootDir&gt;/src/$1&quot;</span>,
+  },
+  <span class="hljs-attr">testMatch</span>: [<span class="hljs-string">&quot;**/tests/**/*.spec.[jt]s&quot;</span>],
+};
+</code></pre>
+<h3 id="t5911.4 tests\test.ts">11.4 tests\test.ts <a href="#t5911.4 tests\test.ts"> # </a></h3>
+<p>tests\test.ts</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { mount } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@vue/test-utils&apos;</span>
+<span class="hljs-keyword">const</span> MessageComponent = {
+  <span class="hljs-attr">template</span>: <span class="hljs-string">&apos;&lt;p&gt;{{ msg }}&lt;/p&gt;&apos;</span>,
+  <span class="hljs-attr">props</span>: [<span class="hljs-string">&apos;msg&apos;</span>]
+}
+test(<span class="hljs-string">&apos;displays message&apos;</span>, () =&gt; {
+  <span class="hljs-keyword">const</span> wrapper = mount(MessageComponent, {
+    <span class="hljs-attr">props</span>: {
+      <span class="hljs-attr">msg</span>: <span class="hljs-string">&apos;Hello world&apos;</span>
+    }
+  })
+  expect(wrapper.text()).toContain(<span class="hljs-string">&apos;Hello world&apos;</span>)
+})
+</code></pre>
+<h3 id="t6011.5 tsconfig.json">11.5 tsconfig.json <a href="#t6011.5 tsconfig.json"> # </a></h3>
+<p>tsconfig.json</p>
+<pre><code class="lang-diff">{
+  &quot;compilerOptions&quot;: {
+    &quot;target&quot;: &quot;esnext&quot;,
+    &quot;module&quot;: &quot;esnext&quot;,
+    &quot;moduleResolution&quot;: &quot;node&quot;,
+    &quot;strict&quot;: true,
+    &quot;jsx&quot;: &quot;preserve&quot;,
+    &quot;sourceMap&quot;: true,
+    &quot;resolveJsonModule&quot;: true,
+    &quot;esModuleInterop&quot;: true,
+    &quot;lib&quot;: [&quot;esnext&quot;, &quot;dom&quot;],
+<span class="hljs-addition">+   &quot;types&quot;:[&quot;vite/client&quot;,&quot;jest&quot;],</span>
+<span class="hljs-addition">+   &quot;baseUrl&quot;: &quot;./&quot;,</span>
+<span class="hljs-addition">+   &quot;paths&quot;: {</span>
+<span class="hljs-addition">+     &quot;@&quot;: [&quot;./src&quot;]</span>
+<span class="hljs-addition">+   }</span>
+  },
+<span class="hljs-addition">+ &quot;include&quot;: [&quot;src/**/*.ts&quot;, &quot;src/**/*.d.ts&quot;, &quot;src/**/*.tsx&quot;, &quot;src/**/*.vue&quot;,&quot;tests/**/*.spec.ts&quot;, &quot;tests/test.ts&quot;]</span>
+}
+</code></pre>
+<h3 id="t6111.6 package.json">11.6 package.json <a href="#t6111.6 package.json"> # </a></h3>
+<p>package.json</p>
+<pre><code class="lang-diff">{
+   &quot;scripts&quot;: {
+    &quot;dev&quot;: &quot;vite&quot;,
+    &quot;build&quot;: &quot;vite build&quot;,
+    &quot;serve&quot;: &quot;vite preview&quot;,
+    &quot;lint&quot;: &quot;eslint --ext .ts,vue src/** --no-error-on-unmatched-pattern --quiet&quot;,
+    &quot;lint:fix&quot;: &quot;eslint --ext .ts,vue src/** --no-error-on-unmatched-pattern --fix&quot;,
+<span class="hljs-addition">+   &quot;test&quot;: &quot;jest  --passWithNoTests&quot;</span>
+  }
+}
+</code></pre>
+<h2 id="t6212.git hook">12.git hook <a href="#t6212.git hook"> # </a></h2>
+<ul>
+<li>&#x53EF;&#x4EE5;&#x5728;<code>git commit</code>&#x4E4B;&#x524D;&#x68C0;&#x67E5;&#x4EE3;&#x7801;&#xFF0C;&#x4FDD;&#x8BC1;&#x6240;&#x6709;&#x63D0;&#x4EA4;&#x5230;&#x7248;&#x672C;&#x5E93;&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#x90FD;&#x662F;&#x7B26;&#x5408;&#x89C4;&#x8303;&#x7684;</li>
+<li>&#x53EF;&#x4EE5;&#x5728;<code>git push</code>&#x4E4B;&#x524D;&#x6267;&#x884C;&#x5355;&#x5143;&#x6D4B;&#x8BD5;,&#x4FDD;&#x8BC1;&#x6240;&#x6709;&#x7684;&#x63D0;&#x4EA4;&#x7684;&#x4EE3;&#x7801;&#x7ECF;&#x8FC7;&#x7684;&#x5355;&#x5143;&#x6D4B;&#x8BD5;</li>
+<li><a href="[husky](https://www.npmjs.com/package/husky">husky</a>)&#x53EF;&#x4EE5;&#x8BA9;&#x6211;&#x4EEC;&#x5411;&#x9879;&#x76EE;&#x4E2D;&#x65B9;&#x4FBF;&#x6DFB;&#x52A0;git hooks</li>
+<li><a href="https://www.npmjs.com/package/lint-staged">lint-staged</a>&#x7528;&#x4E8E;&#x5B9E;&#x73B0;&#x6BCF;&#x6B21;&#x63D0;&#x4EA4;&#x53EA;&#x68C0;&#x67E5;&#x672C;&#x6B21;&#x63D0;&#x4EA4;&#x6240;&#x4FEE;&#x6539;&#x7684;&#x6587;&#x4EF6;</li>
+<li><a href="https://github.com/okonet/lint-staged#configuration">lint-staged#configuration</a></li>
+<li><a href>Commitlint</a>&#x53EF;&#x4EE5;&#x89C4;&#x8303;<code>git commit -m &quot;&quot;</code>&#x4E2D;&#x7684;&#x63CF;&#x8FF0;&#x4FE1;&#x606F;</li>
+</ul>
+<h3 id="t6312.1 &#x6CE8;&#x91CA;&#x89C4;&#x8303;">12.1 &#x6CE8;&#x91CA;&#x89C4;&#x8303; <a href="#t6312.1 &#x6CE8;&#x91CA;&#x89C4;&#x8303;"> # </a></h3>
+<ul>
+<li>commitlint &#x63A8;&#x8350;&#x6211;&#x4EEC;&#x4F7F;&#x7528; config-conventional &#x914D;&#x7F6E;&#x53BB;&#x5199; commit</li>
+<li>&#x63D0;&#x4EA4;&#x683C;&#x5F0F; <code>git commit -m &lt;type&gt;[optional scope]: &lt;description&gt;</code><ul>
+<li>type &#xFF1A;&#x7528;&#x4E8E;&#x8868;&#x660E;&#x6211;&#x4EEC;&#x8FD9;&#x6B21;&#x63D0;&#x4EA4;&#x7684;&#x6539;&#x52A8;&#x7C7B;&#x578B;&#xFF0C;&#x662F;&#x65B0;&#x589E;&#x4E86;&#x529F;&#x80FD;&#xFF1F;&#x8FD8;&#x662F;&#x4FEE;&#x6539;&#x4E86;&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#xFF1F;&#x53C8;&#x6216;&#x8005;&#x662F;&#x66F4;&#x65B0;&#x4E86;&#x6587;&#x6863;&#xFF1F;</li>
+<li>optional scope&#xFF1A;&#x4E00;&#x4E2A;&#x53EF;&#x9009;&#x7684;&#x4FEE;&#x6539;&#x8303;&#x56F4;&#x3002;&#x7528;&#x4E8E;&#x6807;&#x8BC6;&#x6B64;&#x6B21;&#x63D0;&#x4EA4;&#x4E3B;&#x8981;&#x6D89;&#x53CA;&#x5230;&#x4EE3;&#x7801;&#x4E2D;&#x54EA;&#x4E2A;&#x6A21;&#x5757;</li>
+<li>description&#xFF1A;&#x4E00;&#x53E5;&#x8BDD;&#x63CF;&#x8FF0;&#x6B64;&#x6B21;&#x63D0;&#x4EA4;&#x7684;&#x4E3B;&#x8981;&#x5185;&#x5BB9;&#xFF0C;&#x505A;&#x5230;&#x8A00;&#x7B80;&#x610F;&#x8D45;</li>
+</ul>
+</li>
+</ul>
+<h4 id="t6412.1.1 type&#x7C7B;&#x578B;">12.1.1 type&#x7C7B;&#x578B; <a href="#t6412.1.1 type&#x7C7B;&#x578B;"> # </a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">build</td>
+<td style="text-align:left">&#x7F16;&#x8BD1;&#x76F8;&#x5173;&#x7684;&#x4FEE;&#x6539;&#xFF0C;&#x4F8B;&#x5982;&#x53D1;&#x5E03;&#x7248;&#x672C;&#x3001;&#x5BF9;&#x9879;&#x76EE;&#x6784;&#x5EFA;&#x6216;&#x8005;&#x4F9D;&#x8D56;&#x7684;&#x6539;&#x52A8;</td>
+</tr>
+<tr>
+<td style="text-align:left">chore</td>
+<td style="text-align:left">&#x5176;&#x4ED6;&#x4FEE;&#x6539;, &#x6BD4;&#x5982;&#x6539;&#x53D8;&#x6784;&#x5EFA;&#x6D41;&#x7A0B;&#x3001;&#x6216;&#x8005;&#x589E;&#x52A0;&#x4F9D;&#x8D56;&#x5E93;&#x3001;&#x5DE5;&#x5177;&#x7B49;</td>
+</tr>
+<tr>
+<td style="text-align:left">ci</td>
+<td style="text-align:left">&#x6301;&#x7EED;&#x96C6;&#x6210;&#x4FEE;&#x6539;</td>
+</tr>
+<tr>
+<td style="text-align:left">docs</td>
+<td style="text-align:left">&#x6587;&#x6863;&#x4FEE;&#x6539;</td>
+</tr>
+<tr>
+<td style="text-align:left">feature</td>
+<td style="text-align:left">&#x65B0;&#x7279;&#x6027;&#x3001;&#x65B0;&#x529F;&#x80FD;</td>
+</tr>
+<tr>
+<td style="text-align:left">fix</td>
+<td style="text-align:left">&#x4FEE;&#x6539;bug</td>
+</tr>
+<tr>
+<td style="text-align:left">perf</td>
+<td style="text-align:left">&#x4F18;&#x5316;&#x76F8;&#x5173;&#xFF0C;&#x6BD4;&#x5982;&#x63D0;&#x5347;&#x6027;&#x80FD;&#x3001;&#x4F53;&#x9A8C;</td>
+</tr>
+<tr>
+<td style="text-align:left">refactor</td>
+<td style="text-align:left">&#x4EE3;&#x7801;&#x91CD;&#x6784;</td>
+</tr>
+<tr>
+<td style="text-align:left">revert</td>
+<td style="text-align:left">&#x56DE;&#x6EDA;&#x5230;&#x4E0A;&#x4E00;&#x4E2A;&#x7248;&#x672C;</td>
+</tr>
+<tr>
+<td style="text-align:left">style</td>
+<td style="text-align:left">&#x4EE3;&#x7801;&#x683C;&#x5F0F;&#x4FEE;&#x6539;</td>
+</tr>
+<tr>
+<td style="text-align:left">test</td>
+<td style="text-align:left">&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x4FEE;&#x6539;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t6512.2 &#x5B89;&#x88C5;">12.2 &#x5B89;&#x88C5; <a href="#t6512.2 &#x5B89;&#x88C5;"> # </a></h3>
+<pre><code class="lang-js">cnpm i husky lint-staged @commitlint/cli @commitlint/config-conventional --save-dev
+</code></pre>
+<h3 id="t6612.3 &#x914D;&#x7F6E;&#x811A;&#x672C;">12.3 &#x914D;&#x7F6E;&#x811A;&#x672C; <a href="#t6612.3 &#x914D;&#x7F6E;&#x811A;&#x672C;"> # </a></h3>
+<ul>
+<li><code>prepare</code>&#x811A;&#x672C;&#x4F1A;&#x5728;<code>npm install</code>(&#x4E0D;&#x5E26;&#x53C2;&#x6570;)&#x4E4B;&#x540E;&#x81EA;&#x52A8;&#x6267;&#x884C;</li>
+<li>&#x5F53;&#x6211;&#x4EEC;&#x6267;&#x884C;npm install&#x5B89;&#x88C5;&#x5B8C;&#x9879;&#x76EE;&#x4F9D;&#x8D56;&#x540E;&#x4F1A;&#x6267;&#x884C;<code>husky install</code>&#x547D;&#x4EE4;&#xFF0C;&#x8BE5;&#x547D;&#x4EE4;&#x4F1A;&#x521B;&#x5EFA;<code>.husky/</code>&#x76EE;&#x5F55;&#x5E76;&#x6307;&#x5B9A;&#x8BE5;&#x76EE;&#x5F55;&#x4E3A;<code>git hooks</code>&#x6240;&#x5728;&#x7684;&#x76EE;&#x5F55;</li>
+</ul>
+<pre><code class="lang-js">npm <span class="hljs-keyword">set</span>-script prepare &quot;husky install&quot;
+npm run prepare
+</code></pre>
+<h3 id="t6712.4 &#x521B;&#x5EFA;hooks">12.4 &#x521B;&#x5EFA;hooks <a href="#t6712.4 &#x521B;&#x5EFA;hooks"> # </a></h3>
+<pre><code class="lang-js">npx husky add .husky/pre-commit <span class="hljs-string">&quot;lint-staged&quot;</span>
+npx husky add .husky/commit-msg <span class="hljs-string">&quot;npx --no-install commitlint --edit $1&quot;</span>
+npx husky add .husky/pre-push <span class="hljs-string">&quot;npm run test&quot;</span>
+</code></pre>
+<h3 id="t6812.5 commitlint.config.js">12.5 commitlint.config.js <a href="#t6812.5 commitlint.config.js"> # </a></h3>
+<p>commitlint.config.js</p>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-attr">extends</span>: [<span class="hljs-string">&quot;@commitlint/config-conventional&quot;</span>],
+  <span class="hljs-attr">rules</span>: {
+    <span class="hljs-string">&quot;type-enum&quot;</span>: [
+      <span class="hljs-number">2</span>,
+      <span class="hljs-string">&quot;always&quot;</span>,
+      [
+        <span class="hljs-string">&quot;feature&quot;</span>,
+        <span class="hljs-string">&quot;update&quot;</span>,
+        <span class="hljs-string">&quot;fixbug&quot;</span>,
+        <span class="hljs-string">&quot;refactor&quot;</span>,
+        <span class="hljs-string">&quot;optimize&quot;</span>,
+        <span class="hljs-string">&quot;style&quot;</span>,
+        <span class="hljs-string">&quot;docs&quot;</span>,
+        <span class="hljs-string">&quot;chore&quot;</span>,
+      ],
+    ],
+    <span class="hljs-string">&quot;type-case&quot;</span>: [<span class="hljs-number">0</span>],
+    <span class="hljs-string">&quot;type-empty&quot;</span>: [<span class="hljs-number">0</span>],
+    <span class="hljs-string">&quot;scope-empty&quot;</span>: [<span class="hljs-number">0</span>],
+    <span class="hljs-string">&quot;scope-case&quot;</span>: [<span class="hljs-number">0</span>],
+    <span class="hljs-string">&quot;subject-full-stop&quot;</span>: [<span class="hljs-number">0</span>, <span class="hljs-string">&quot;never&quot;</span>],
+    <span class="hljs-string">&quot;subject-case&quot;</span>: [<span class="hljs-number">0</span>, <span class="hljs-string">&quot;never&quot;</span>],
+    <span class="hljs-string">&quot;header-max-length&quot;</span>: [<span class="hljs-number">0</span>, <span class="hljs-string">&quot;always&quot;</span>, <span class="hljs-number">72</span>],
+  },
+};
+</code></pre>
+<h2 id="t69&#x53C2;&#x8003;">&#x53C2;&#x8003; <a href="#t69&#x53C2;&#x8003;"> # </a></h2>
+<ul>
+<li><a href="https://zhuanlan.zhihu.com/p/80574300">&#x641E;&#x61C2; ESLint &#x548C; Prettier</a></li>
+</ul>
+
+    </div>
+</div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+    aria-labelledby="loginModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="loginModalLabel">请登录</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="username" class="control-label">姓名:</label>
+                        <input type="text" class="form-control" id="username" placeholder="珠峰架构VIP会员系统用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">密码:</label>
+                        <input type="text" class="form-control" id="password" placeholder="珠峰架构VIP会员系统密码">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                    data-dismiss="modal">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

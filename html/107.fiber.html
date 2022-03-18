@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+
+                        
+<div class="warpper">
+    <div class="page-toc">
+        <ul><li><a href="#t01. Fiber之前的React">1. Fiber之前的React</a></li><li><a href="#t12. 帧">2. 帧</a></li><li><a href="#t23. 什么是Fiber">3. 什么是Fiber</a><ul><li><a href="#t33.1 Fiber是一个执行单元">3.1 Fiber是一个执行单元</a></li><li><a href="#t43.2 Fiber是一种数据结构">3.2 Fiber是一种数据结构</a></li></ul></li><li><a href="#t54.rAF">4.rAF</a></li><li><a href="#t65.requestIdleCallback">5.requestIdleCallback</a></li><li><a href="#t76.MessageChannel">6.MessageChannel</a></li><li><a href="#t87.Fiber执行阶段">7.Fiber执行阶段</a><ul><li><a href="#t97.1 render阶段">7.1 render阶段</a></li><li><a href="#t107.2 commit阶段">7.2 commit阶段</a></li></ul></li></ul>
+    </div>
+    <div class="content markdown-body">
+        <h2 id="t01. Fiber&#x4E4B;&#x524D;&#x7684;React">1. Fiber&#x4E4B;&#x524D;&#x7684;React <a href="#t01. Fiber&#x4E4B;&#x524D;&#x7684;React"> # </a></h2>
+<p>index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+<span class="hljs-keyword">let</span> element = (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;A1&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;B1&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;C1&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;C2&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;B2&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+)
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(element,<span class="hljs-literal">null</span>,<span class="hljs-number">2</span>));
+ReactDOM.render(element,<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;root&apos;</span>));
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> element = {
+    <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;div&quot;</span>,
+    <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-string">&quot;A1&quot;</span>,
+    <span class="hljs-string">&quot;props&quot;</span>: {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;A1&quot;</span>,
+        <span class="hljs-string">&quot;children&quot;</span>: [
+            {
+                <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;div&quot;</span>,
+                <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-string">&quot;B1&quot;</span>,
+                <span class="hljs-string">&quot;props&quot;</span>: {
+                    <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;B1&quot;</span>,
+                    <span class="hljs-string">&quot;children&quot;</span>: [
+                        {
+                            <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;div&quot;</span>,
+                            <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-string">&quot;C1&quot;</span>,
+                            <span class="hljs-string">&quot;props&quot;</span>: { <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;C1&quot;</span>},
+                        },
+                        {
+                            <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;div&quot;</span>,
+                            <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-string">&quot;C2&quot;</span>,
+                            <span class="hljs-string">&quot;props&quot;</span>: {<span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;C2&quot;</span>},
+                        }
+                    ]
+                },
+            },
+            {
+                <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;div&quot;</span>,
+                <span class="hljs-string">&quot;key&quot;</span>: <span class="hljs-string">&quot;B2&quot;</span>,
+                <span class="hljs-string">&quot;props&quot;</span>: {<span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;B2&quot;</span>},
+            }
+        ]
+    },
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">render</span>(<span class="hljs-params">element, container</span>) </span>{
+    <span class="hljs-keyword">let</span> dom = <span class="hljs-built_in">document</span>.createElement(element.type);
+    <span class="hljs-built_in">Object</span>.keys(element.props).filter(<span class="hljs-function"><span class="hljs-params">key</span> =&gt;</span> key !== <span class="hljs-string">&apos;children&apos;</span>).forEach(<span class="hljs-function"><span class="hljs-params">key</span> =&gt;</span> {
+        dom[key] = element.props[key];
+    });
+    <span class="hljs-keyword">if</span>(<span class="hljs-built_in">Array</span>.isArray(element.props.children)){
+        element.props.children.forEach(<span class="hljs-function"><span class="hljs-params">child</span>=&gt;</span>render(child,dom));
+    }
+    container.appendChild(dom);
+}
+render(element, <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;root&apos;</span>));
+</code></pre>
+<h2 id="t12. &#x5E27;">2. &#x5E27; <a href="#t12. &#x5E27;"> # </a></h2>
+<ul>
+<li>&#x76EE;&#x524D;&#x5927;&#x591A;&#x6570;&#x8BBE;&#x5907;&#x7684;&#x5C4F;&#x5E55;&#x5237;&#x65B0;&#x7387;&#x4E3A; 60 &#x6B21;/&#x79D2;</li>
+<li>&#x5F53;&#x6BCF;&#x79D2;&#x7ED8;&#x5236;&#x7684;&#x5E27;&#x6570;&#xFF08;FPS&#xFF09;&#x8FBE;&#x5230; 60 &#x65F6;&#xFF0C;&#x9875;&#x9762;&#x662F;&#x6D41;&#x7545;&#x7684;,&#x5C0F;&#x4E8E;&#x8FD9;&#x4E2A;&#x503C;&#x65F6;&#xFF0C;&#x7528;&#x6237;&#x4F1A;&#x611F;&#x89C9;&#x5230;&#x5361;&#x987F;</li>
+<li>&#x6BCF;&#x4E2A;&#x5E27;&#x7684;&#x9884;&#x7B97;&#x65F6;&#x95F4;&#x662F;16.66 &#x6BEB;&#x79D2; (1&#x79D2;/60)</li>
+<li>&#x6BCF;&#x4E2A;&#x5E27;&#x7684;&#x5F00;&#x5934;&#x5305;&#x62EC;&#x6837;&#x5F0F;&#x8BA1;&#x7B97;&#x3001;&#x5E03;&#x5C40;&#x548C;&#x7ED8;&#x5236;</li>
+<li>JavaScript&#x6267;&#x884C; Javascript&#x5F15;&#x64CE;&#x548C;&#x9875;&#x9762;&#x6E32;&#x67D3;&#x5F15;&#x64CE;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x6E32;&#x67D3;&#x7EBF;&#x7A0B;,GUI&#x6E32;&#x67D3;&#x548C;Javascript&#x6267;&#x884C;&#x4E24;&#x8005;&#x662F;&#x4E92;&#x65A5;&#x7684;</li>
+<li>&#x5982;&#x679C;&#x67D0;&#x4E2A;&#x4EFB;&#x52A1;&#x6267;&#x884C;&#x65F6;&#x95F4;&#x8FC7;&#x957F;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x63A8;&#x8FDF;&#x6E32;&#x67D3;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/lifeofframe.jpg" alt="lifeofframe"></p>
+<h2 id="t23. &#x4EC0;&#x4E48;&#x662F;Fiber">3. &#x4EC0;&#x4E48;&#x662F;Fiber <a href="#t23. &#x4EC0;&#x4E48;&#x662F;Fiber"> # </a></h2>
+<ul>
+<li>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x67D0;&#x4E9B;&#x8C03;&#x5EA6;&#x7B56;&#x7565;&#x5408;&#x7406;&#x5206;&#x914D;CPU&#x8D44;&#x6E90;&#xFF0C;&#x4ECE;&#x800C;&#x63D0;&#x9AD8;&#x7528;&#x6237;&#x7684;&#x54CD;&#x5E94;&#x901F;&#x5EA6;</li>
+<li>&#x901A;&#x8FC7;<code>Fiber</code>&#x67B6;&#x6784;&#xFF0C;&#x8BA9;&#x81EA;&#x5DF1;&#x7684;&#x534F;&#x8C03;&#x8FC7;&#x7A0B;&#x53D8;&#x6210;&#x53EF;&#x88AB;&#x4E2D;&#x65AD;&#x3002; &#x9002;&#x65F6;&#x5730;&#x8BA9;&#x51FA;CPU&#x6267;&#x884C;&#x6743;&#xFF0C;&#x9664;&#x4E86;&#x53EF;&#x4EE5;&#x8BA9;&#x6D4F;&#x89C8;&#x5668;&#x53CA;&#x65F6;&#x5730;&#x54CD;&#x5E94;&#x7528;&#x6237;&#x7684;&#x4EA4;&#x4E92;</li>
+</ul>
+<h3 id="t33.1 Fiber&#x662F;&#x4E00;&#x4E2A;&#x6267;&#x884C;&#x5355;&#x5143;">3.1 Fiber&#x662F;&#x4E00;&#x4E2A;&#x6267;&#x884C;&#x5355;&#x5143; <a href="#t33.1 Fiber&#x662F;&#x4E00;&#x4E2A;&#x6267;&#x884C;&#x5355;&#x5143;"> # </a></h3>
+<ul>
+<li>Fiber&#x662F;&#x4E00;&#x4E2A;&#x6267;&#x884C;&#x5355;&#x5143;,&#x6BCF;&#x6B21;&#x6267;&#x884C;&#x5B8C;&#x4E00;&#x4E2A;&#x6267;&#x884C;&#x5355;&#x5143;, React &#x5C31;&#x4F1A;&#x68C0;&#x67E5;&#x73B0;&#x5728;&#x8FD8;&#x5269;&#x591A;&#x5C11;&#x65F6;&#x95F4;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x65F6;&#x95F4;&#x5C31;&#x5C06;&#x63A7;&#x5236;&#x6743;&#x8BA9;&#x51FA;&#x53BB;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/fiberflow.jpg" alt="fiberflow"></p>
+<h3 id="t43.2 Fiber&#x662F;&#x4E00;&#x79CD;&#x6570;&#x636E;&#x7ED3;&#x6784;">3.2 Fiber&#x662F;&#x4E00;&#x79CD;&#x6570;&#x636E;&#x7ED3;&#x6784; <a href="#t43.2 Fiber&#x662F;&#x4E00;&#x79CD;&#x6570;&#x636E;&#x7ED3;&#x6784;"> # </a></h3>
+<ul>
+<li>React&#x76EE;&#x524D;&#x7684;&#x505A;&#x6CD5;&#x662F;&#x4F7F;&#x7528;&#x94FE;&#x8868;,&#x6BCF;&#x4E2A;&#x865A;&#x62DF;&#x8282;&#x70B9;&#x5185;&#x90E8;&#x8868;&#x793A;&#x4E3A;&#x4E00;&#x4E2A;Fiber</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/fiberconstructor.jpg" alt="fiberconstructor"></p>
+<h2 id="t54.rAF">4.rAF <a href="#t54.rAF"> # </a></h2>
+<ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/requestAnimationFrame">requestAnimationFrame</a>&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x4F1A;&#x5728;&#x7ED8;&#x5236;&#x4E4B;&#x524D;&#x6267;&#x884C;</li>
+<li><code>requestAnimationFrame(callback)</code> &#x4F1A;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x6BCF;&#x6B21;&#x91CD;&#x7ED8;&#x524D;&#x6267;&#x884C; callback &#x56DE;&#x8C03;, &#x6BCF;&#x6B21; callback &#x6267;&#x884C;&#x7684;&#x65F6;&#x673A;&#x90FD;&#x662F;&#x6D4F;&#x89C8;&#x5668;&#x5237;&#x65B0;&#x4E0B;&#x4E00;&#x5E27;&#x6E32;&#x67D3;&#x5468;&#x671F;&#x7684;&#x8D77;&#x70B9;&#x4E0A;</li>
+<li><code>requestAnimationFrame(callback)</code> &#x7684;&#x56DE;&#x8C03; callback &#x56DE;&#x8C03;&#x53C2;&#x6570; timestamp &#x662F;&#x56DE;&#x8C03;&#x88AB;&#x8C03;&#x7528;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5F53;&#x524D;&#x5E27;&#x7684;&#x8D77;&#x59CB;&#x65F6;&#x95F4;</li>
+<li><code>rAfTime performance.timing.navigationStart + performance.now() &#x7EA6;&#x7B49;&#x4E8E; Date.now()</code></li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>RAF<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;background: lightblue;width: 0;height: 20px;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>&#x5F00;&#x59CB;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-comment">/**
+         * requestAnimationFrame(callback) &#x7531;&#x6D4F;&#x89C8;&#x5668;&#x4E13;&#x95E8;&#x4E3A;&#x52A8;&#x753B;&#x63D0;&#x4F9B;&#x7684;API
+         * cancelAnimationFrame(&#x8FD4;&#x56DE;&#x503C;) &#x6E05;&#x9664;&#x52A8;&#x753B;
+         * &lt;16.7 &#x4E22;&#x5E27;
+         * &gt;16.7 &#x8DF3;&#x8DC3; &#x5361;&#x987F;
+         */</span>
+        <span class="hljs-keyword">const</span> div = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&apos;div&apos;</span>);
+        <span class="hljs-keyword">const</span> button = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&apos;button&apos;</span>);
+        <span class="hljs-keyword">let</span> start;
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">progress</span>(<span class="hljs-params">rAfTime</span>) </span>{
+            div.style.width = div.offsetWidth + <span class="hljs-number">1</span> + <span class="hljs-string">&apos;px&apos;</span>;
+            div.innerHTML = (div.offsetWidth) + <span class="hljs-string">&apos;%&apos;</span>;
+            <span class="hljs-keyword">if</span> (div.offsetWidth &lt; <span class="hljs-number">100</span>) {
+                <span class="hljs-keyword">let</span> current = <span class="hljs-built_in">Date</span>.now();
+                <span class="hljs-built_in">console</span>.log((current - start)+<span class="hljs-string">&apos;ms&apos;</span>);
+                start = current;
+                timer = requestAnimationFrame(progress);
+            }
+        }
+        button.onclick = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+            div.style.width = <span class="hljs-number">0</span>;
+            start = <span class="hljs-built_in">Date</span>.now();
+            requestAnimationFrame(progress);
+        }
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h2 id="t65.requestIdleCallback">5.requestIdleCallback <a href="#t65.requestIdleCallback"> # </a></h2>
+<ul>
+<li>&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x5FEB;&#x901F;&#x54CD;&#x5E94;&#x7528;&#x6237;&#xFF0C;&#x8BA9;&#x7528;&#x6237;&#x89C9;&#x5F97;&#x591F;&#x5FEB;&#xFF0C;&#x4E0D;&#x80FD;&#x963B;&#x585E;&#x7528;&#x6237;&#x7684;&#x4EA4;&#x4E92;</li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/requestIdleCallback">requestIdleCallback</a>&#x4F7F;&#x5F00;&#x53D1;&#x8005;&#x80FD;&#x591F;&#x5728;&#x4E3B;&#x4E8B;&#x4EF6;&#x5FAA;&#x73AF;&#x4E0A;&#x6267;&#x884C;&#x540E;&#x53F0;&#x548C;&#x4F4E;&#x4F18;&#x5148;&#x7EA7;&#x5DE5;&#x4F5C;&#xFF0C;&#x800C;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x5EF6;&#x8FDF;&#x5173;&#x952E;&#x4E8B;&#x4EF6;&#xFF0C;&#x5982;&#x52A8;&#x753B;&#x548C;&#x8F93;&#x5165;&#x54CD;&#x5E94;</li>
+<li>&#x6B63;&#x5E38;&#x5E27;&#x4EFB;&#x52A1;&#x5B8C;&#x6210;&#x540E;&#x6CA1;&#x8D85;&#x8FC7;16 ms,&#x8BF4;&#x660E;&#x65F6;&#x95F4;&#x6709;&#x5BCC;&#x4F59;&#xFF0C;&#x6B64;&#x65F6;&#x5C31;&#x4F1A;&#x6267;&#x884C; requestIdleCallback &#x91CC;&#x6CE8;&#x518C;&#x7684;&#x4EFB;&#x52A1;</li>
+<li><code>requestAnimationFrame</code>&#x7684;&#x56DE;&#x8C03;&#x4F1A;&#x5728;&#x6BCF;&#x4E00;&#x5E27;&#x786E;&#x5B9A;&#x6267;&#x884C;&#xFF0C;&#x5C5E;&#x4E8E;&#x9AD8;&#x4F18;&#x5148;&#x7EA7;&#x4EFB;&#x52A1;&#xFF0C;&#x800C;<code>requestIdleCallback</code>&#x7684;&#x56DE;&#x8C03;&#x5219;&#x4E0D;&#x4E00;&#x5B9A;&#xFF0C;&#x5C5E;&#x4E8E;&#x4F4E;&#x4F18;&#x5148;&#x7EA7;&#x4EFB;&#x52A1;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/cooperativescheduling2.jpg" alt="cooperativescheduling2"></p>
+<pre><code class="lang-js"><span class="hljs-built_in">window</span>.requestIdleCallback(
+  callback: <span class="hljs-function">(<span class="hljs-params">deaLine: IdleDeadline</span>) =&gt;</span> <span class="hljs-keyword">void</span>,
+  option?: {<span class="hljs-attr">timeout</span>: number}
+)
+
+interface IdleDeadline {
+  <span class="hljs-attr">didTimeout</span>: boolean <span class="hljs-comment">// &#x8868;&#x793A;&#x4EFB;&#x52A1;&#x6267;&#x884C;&#x662F;&#x5426;&#x8D85;&#x8FC7;&#x7EA6;&#x5B9A;&#x65F6;&#x95F4;</span>
+  timeRemaining(): DOMHighResTimeStamp <span class="hljs-comment">// &#x4EFB;&#x52A1;&#x53EF;&#x4F9B;&#x6267;&#x884C;&#x7684;&#x5269;&#x4F59;&#x65F6;&#x95F4;</span>
+}
+</code></pre>
+<ul>
+<li>callback&#xFF1A;&#x56DE;&#x8C03;&#x5373;&#x7A7A;&#x95F2;&#x65F6;&#x9700;&#x8981;&#x6267;&#x884C;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x8BE5;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x63A5;&#x6536;&#x4E00;&#x4E2A;IdleDeadline&#x5BF9;&#x8C61;&#x4F5C;&#x4E3A;&#x5165;&#x53C2;&#x3002;&#x5176;&#x4E2D;IdleDeadline&#x5BF9;&#x8C61;&#x5305;&#x542B;&#xFF1A;<ul>
+<li>didTimeout&#xFF0C;&#x5E03;&#x5C14;&#x503C;&#xFF0C;&#x8868;&#x793A;&#x4EFB;&#x52A1;&#x662F;&#x5426;&#x8D85;&#x65F6;&#xFF0C;&#x7ED3;&#x5408; timeRemaining &#x4F7F;&#x7528;</li>
+<li>timeRemaining()&#xFF0C;&#x8868;&#x793A;&#x5F53;&#x524D;&#x5E27;&#x5269;&#x4F59;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x4E5F;&#x53EF;&#x7406;&#x89E3;&#x4E3A;&#x7559;&#x7ED9;&#x4EFB;&#x52A1;&#x7684;&#x65F6;&#x95F4;&#x8FD8;&#x6709;&#x591A;&#x5C11;</li>
+</ul>
+</li>
+<li>options&#xFF1A;&#x76EE;&#x524D; options &#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x53C2;&#x6570;<ul>
+<li>timeout&#x3002;&#x8868;&#x793A;&#x8D85;&#x8FC7;&#x8FD9;&#x4E2A;&#x65F6;&#x95F4;&#x540E;&#xFF0C;&#x5982;&#x679C;&#x4EFB;&#x52A1;&#x8FD8;&#x6CA1;&#x6267;&#x884C;&#xFF0C;&#x5219;&#x5F3A;&#x5236;&#x6267;&#x884C;&#xFF0C;&#x4E0D;&#x5FC5;&#x7B49;&#x5F85;&#x7A7A;&#x95F2;</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sleep</span>(<span class="hljs-params">duration</span>) </span>{
+           <span class="hljs-keyword">let</span> start =<span class="hljs-built_in">Date</span>.now();
+           <span class="hljs-keyword">while</span>(start+duration&gt;<span class="hljs-built_in">Date</span>.now()){}
+        }
+        <span class="hljs-keyword">const</span> works = [
+            <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;&#x7B2C;1&#x4E2A;&#x4EFB;&#x52A1;&#x5F00;&#x59CB;&quot;</span>);
+                sleep(<span class="hljs-number">0</span>);<span class="hljs-comment">//sleep(20);</span>
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;&#x7B2C;1&#x4E2A;&#x4EFB;&#x52A1;&#x7ED3;&#x675F;&quot;</span>);
+            },
+            () =&gt; {
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;&#x7B2C;2&#x4E2A;&#x4EFB;&#x52A1;&#x5F00;&#x59CB;&quot;</span>);
+                sleep(<span class="hljs-number">0</span>);<span class="hljs-comment">//sleep(20);</span>
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;&#x7B2C;2&#x4E2A;&#x4EFB;&#x52A1;&#x7ED3;&#x675F;&quot;</span>);
+            },
+            () =&gt; {
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;&#x7B2C;3&#x4E2A;&#x4EFB;&#x52A1;&#x5F00;&#x59CB;&quot;</span>);
+                sleep(<span class="hljs-number">0</span>);<span class="hljs-comment">//sleep(20);</span>
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;&#x7B2C;3&#x4E2A;&#x4EFB;&#x52A1;&#x7ED3;&#x675F;&quot;</span>);
+            },
+        ];
+
+        requestIdleCallback(workLoop, { <span class="hljs-attr">timeout</span>: <span class="hljs-number">1000</span> });
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">workLoop</span>(<span class="hljs-params">deadline</span>) </span>{
+            <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x672C;&#x5E27;&#x5269;&#x4F59;&#x65F6;&#x95F4;&apos;</span>, <span class="hljs-built_in">parseInt</span>(deadline.timeRemaining()));
+            <span class="hljs-keyword">while</span> ((deadline.timeRemaining() &gt; <span class="hljs-number">1</span> || deadline.didTimeout) &amp;&amp; works.length &gt; <span class="hljs-number">0</span>) {
+                performUnitOfWork();
+            }
+
+            <span class="hljs-keyword">if</span> (works.length &gt; <span class="hljs-number">0</span>) {
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`&#x53EA;&#x5269;&#x4E0B;<span class="hljs-subst">${<span class="hljs-built_in">parseInt</span>(deadline.timeRemaining())}</span>ms,&#x65F6;&#x95F4;&#x7247;&#x5230;&#x4E86;&#x7B49;&#x5F85;&#x4E0B;&#x6B21;&#x7A7A;&#x95F2;&#x65F6;&#x95F4;&#x7684;&#x8C03;&#x5EA6;`</span>);
+                requestIdleCallback(workLoop);
+            }
+        }
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">performUnitOfWork</span>(<span class="hljs-params"></span>) </span>{
+            works.shift()();
+        }
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+</code></pre>
+<h2 id="t76.MessageChannel">6.MessageChannel <a href="#t76.MessageChannel"> # </a></h2>
+<ul>
+<li>&#x76EE;&#x524D; requestIdleCallback &#x76EE;&#x524D;&#x53EA;&#x6709;Chrome&#x652F;&#x6301;</li>
+<li>&#x6240;&#x4EE5;&#x76EE;&#x524D; React&#x5229;&#x7528; MessageChannel&#x6A21;&#x62DF;&#x4E86;requestIdleCallback&#xFF0C;&#x5C06;&#x56DE;&#x8C03;&#x5EF6;&#x8FDF;&#x5230;&#x7ED8;&#x5236;&#x64CD;&#x4F5C;&#x4E4B;&#x540E;&#x6267;&#x884C;</li>
+<li>MessageChannel API&#x5141;&#x8BB8;&#x6211;&#x4EEC;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x6D88;&#x606F;&#x901A;&#x9053;&#xFF0C;&#x5E76;&#x901A;&#x8FC7;&#x5B83;&#x7684;&#x4E24;&#x4E2A;MessagePort&#x5C5E;&#x6027;&#x53D1;&#x9001;&#x6570;&#x636E;</li>
+<li>MessageChannel&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x901A;&#x4FE1;&#x7684;&#x7BA1;&#x9053;&#xFF0C;&#x8FD9;&#x4E2A;&#x7BA1;&#x9053;&#x6709;&#x4E24;&#x4E2A;&#x7AEF;&#x53E3;&#xFF0C;&#x6BCF;&#x4E2A;&#x7AEF;&#x53E3;&#x90FD;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;postMessage&#x53D1;&#x9001;&#x6570;&#x636E;&#xFF0C;&#x800C;&#x4E00;&#x4E2A;&#x7AEF;&#x53E3;&#x53EA;&#x8981;&#x7ED1;&#x5B9A;&#x4E86;onmessage&#x56DE;&#x8C03;&#x65B9;&#x6CD5;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x63A5;&#x6536;&#x4ECE;&#x53E6;&#x4E00;&#x4E2A;&#x7AEF;&#x53E3;&#x4F20;&#x8FC7;&#x6765;&#x7684;&#x6570;&#x636E;</li>
+<li>MessageChannel&#x662F;&#x4E00;&#x4E2A;&#x5B8F;&#x4EFB;&#x52A1;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/phones.png" alt="phones"></p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> channel = <span class="hljs-keyword">new</span> MessageChannel();
+<span class="hljs-comment">//channel.port1</span>
+<span class="hljs-comment">//channel.port2</span>
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> channel = <span class="hljs-keyword">new</span> MessageChannel();
+<span class="hljs-keyword">var</span> port1 = channel.port1;
+<span class="hljs-keyword">var</span> port2 = channel.port2;
+port1.onmessage = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;port1&#x6536;&#x5230;&#x6765;&#x81EA;port2&#x7684;&#x6570;&#x636E;&#xFF1A;&quot;</span> + event.data);
+}
+port2.onmessage = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;port2&#x6536;&#x5230;&#x6765;&#x81EA;port1&#x7684;&#x6570;&#x636E;&#xFF1A;&quot;</span> + event.data);
+}
+port1.postMessage(<span class="hljs-string">&quot;&#x53D1;&#x9001;&#x7ED9;port2&quot;</span>);
+port2.postMessage(<span class="hljs-string">&quot;&#x53D1;&#x9001;&#x7ED9;port1&quot;</span>);
+</code></pre>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Document<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-keyword">const</span> channel = <span class="hljs-keyword">new</span> MessageChannel()
+        <span class="hljs-keyword">let</span> pendingCallback;<span class="hljs-comment">//&#x7B49;&#x5F85;&#x6267;&#x884C;&#x7684;callback</span>
+        <span class="hljs-keyword">let</span> activeFrameTime = (<span class="hljs-number">1000</span> / <span class="hljs-number">60</span>);<span class="hljs-comment">//&#x5728;&#x6BCF;&#x79D2;60&#x5E27;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x6BCF;&#x5E27;&#x7684;&#x65F6;&#x95F4;</span>
+        <span class="hljs-comment">//&#x5F53;&#x524D;&#x5E27;&#x7684;&#x5269;&#x4F59;&#x65F6;&#x95F4;&#x662F;frameDeadline&#x51CF;&#x53BB;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x7684;&#x5DEE;&#x503C;&#x6765;&#x5224;&#x65AD;</span>
+        <span class="hljs-keyword">let</span> timeRemaining = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> frameDeadline - performance.now();
+        channel.port2.onmessage = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+            <span class="hljs-keyword">var</span> currentTime = performance.now();
+            <span class="hljs-keyword">var</span> didTimeout = frameDeadline  &lt;= currentTime;
+            <span class="hljs-keyword">if</span>(didTimeout || timeRemaining()&gt;<span class="hljs-number">1</span>){
+                <span class="hljs-keyword">if</span> (pendingCallback) {
+                  pendingCallback({ <span class="hljs-attr">didTimeout</span>: frameDeadline  &lt;= currentTime, timeRemaining });
+                }
+            }
+        }
+        <span class="hljs-built_in">window</span>.requestIdleCallback = <span class="hljs-function">(<span class="hljs-params">callback, options</span>) =&gt;</span> {
+            requestAnimationFrame(<span class="hljs-function">(<span class="hljs-params">rafTime</span>) =&gt;</span> {<span class="hljs-comment">//&#x5F53;&#x524D;&#x52A8;&#x753B;&#x5E27;&#x5F00;&#x59CB;&#x7684;&#x65F6;&#x95F4;</span>
+                frameDeadline = rafTime + activeFrameTime;
+                pendingCallback = callback;
+                <span class="hljs-comment">//&#x628A;&#x4EFB;&#x52A1;&#x63A8;&#x5165;event loop&#x7684;task queue&#x4E2D;&#x7B49;&#x5F85;&#x6267;&#x884C;</span>
+                channel.port1.postMessage(<span class="hljs-string">&apos;hello&apos;</span>);
+            })
+        }
+
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sleep</span>(<span class="hljs-params">d</span>) </span>{
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> t = <span class="hljs-built_in">Date</span>.now(); <span class="hljs-built_in">Date</span>.now() - t &lt;= d;);
+        }
+        <span class="hljs-keyword">const</span> works = [
+            <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;&#x7B2C;1&#x4E2A;&#x4EFB;&#x52A1;&#x5F00;&#x59CB;&quot;</span>);
+                sleep(<span class="hljs-number">20</span>);<span class="hljs-comment">//sleep(20);</span>
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;&#x7B2C;1&#x4E2A;&#x4EFB;&#x52A1;&#x7ED3;&#x675F;&quot;</span>);
+            },
+            () =&gt; {
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;&#x7B2C;2&#x4E2A;&#x4EFB;&#x52A1;&#x5F00;&#x59CB;&quot;</span>);
+                sleep(<span class="hljs-number">20</span>);<span class="hljs-comment">//sleep(20);</span>
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;&#x7B2C;2&#x4E2A;&#x4EFB;&#x52A1;&#x7ED3;&#x675F;&quot;</span>);
+            },
+            () =&gt; {
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;&#x7B2C;3&#x4E2A;&#x4EFB;&#x52A1;&#x5F00;&#x59CB;&quot;</span>);
+                sleep(<span class="hljs-number">0</span>);<span class="hljs-comment">//sleep(20);</span>
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;&#x7B2C;3&#x4E2A;&#x4EFB;&#x52A1;&#x7ED3;&#x675F;&quot;</span>);
+            },
+        ];
+
+        requestIdleCallback(workLoop, { <span class="hljs-attr">timeout</span>: <span class="hljs-number">60</span> * <span class="hljs-number">1000</span> });
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">workLoop</span>(<span class="hljs-params">deadline</span>) </span>{
+            <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x672C;&#x5E27;&#x5269;&#x4F59;&#x65F6;&#x95F4;&apos;</span>, <span class="hljs-built_in">parseInt</span>(deadline.timeRemaining()));
+            <span class="hljs-keyword">while</span> ((deadline.timeRemaining() &gt; <span class="hljs-number">1</span> || deadline.didTimeout) &amp;&amp; works.length &gt; <span class="hljs-number">0</span>) {
+                performUnitOfWork();
+            }
+            <span class="hljs-keyword">if</span> (works.length &gt; <span class="hljs-number">0</span>) {
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`&#x53EA;&#x5269;&#x4E0B;<span class="hljs-subst">${<span class="hljs-built_in">parseInt</span>(deadline.timeRemaining())}</span>ms,&#x65F6;&#x95F4;&#x7247;&#x5230;&#x4E86;&#x7B49;&#x5F85;&#x4E0B;&#x6B21;&#x7A7A;&#x95F2;&#x65F6;&#x95F4;&#x7684;&#x8C03;&#x5EA6;`</span>);
+                requestIdleCallback(workLoop, { <span class="hljs-attr">timeout</span>: <span class="hljs-number">2</span> * <span class="hljs-number">1000</span> });
+            }
+        }
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">performUnitOfWork</span>(<span class="hljs-params"></span>) </span>{
+            works.shift()();
+        }
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h2 id="t87.Fiber&#x6267;&#x884C;&#x9636;&#x6BB5;">7.Fiber&#x6267;&#x884C;&#x9636;&#x6BB5; <a href="#t87.Fiber&#x6267;&#x884C;&#x9636;&#x6BB5;"> # </a></h2>
+<ul>
+<li>&#x6BCF;&#x6B21;&#x6E32;&#x67D3;&#x6709;&#x4E24;&#x4E2A;&#x9636;&#x6BB5;&#xFF1A;Reconciliation(&#x534F;&#x8C03;render&#x9636;&#x6BB5;)&#x548C;Commit(&#x63D0;&#x4EA4;&#x9636;&#x6BB5;)<ul>
+<li>&#x534F;&#x8C03;&#x9636;&#x6BB5;: &#x53EF;&#x4EE5;&#x8BA4;&#x4E3A;&#x662F; Diff &#x9636;&#x6BB5;, &#x8FD9;&#x4E2A;&#x9636;&#x6BB5;&#x53EF;&#x4EE5;&#x88AB;&#x4E2D;&#x65AD;, &#x8FD9;&#x4E2A;&#x9636;&#x6BB5;&#x4F1A;&#x627E;&#x51FA;&#x6240;&#x6709;&#x8282;&#x70B9;&#x53D8;&#x66F4;&#xFF0C;&#x4F8B;&#x5982;&#x8282;&#x70B9;&#x65B0;&#x589E;&#x3001;&#x5220;&#x9664;&#x3001;&#x5C5E;&#x6027;&#x53D8;&#x66F4;&#x7B49;&#x7B49;, &#x8FD9;&#x4E9B;&#x53D8;&#x66F4;React &#x79F0;&#x4E4B;&#x4E3A;&#x526F;&#x4F5C;&#x7528;(Effect)</li>
+<li>&#x63D0;&#x4EA4;&#x9636;&#x6BB5;: &#x5C06;&#x4E0A;&#x4E00;&#x4E2A;&#x9636;&#x6BB5;&#x8BA1;&#x7B97;&#x51FA;&#x6765;&#x7684;&#x9700;&#x8981;&#x5904;&#x7406;&#x7684;&#x526F;&#x4F5C;&#x7528;(Effects)&#x4E00;&#x6B21;&#x6027;&#x6267;&#x884C;&#x4E86;&#x3002;&#x8FD9;&#x4E2A;&#x9636;&#x6BB5;&#x5FC5;&#x987B;&#x540C;&#x6B65;&#x6267;&#x884C;&#xFF0C;&#x4E0D;&#x80FD;&#x88AB;&#x6253;&#x65AD;</li>
+</ul>
+</li>
+</ul>
+<h3 id="t97.1 render&#x9636;&#x6BB5;">7.1 render&#x9636;&#x6BB5; <a href="#t97.1 render&#x9636;&#x6BB5;"> # </a></h3>
+<ul>
+<li>&#x4ECE;&#x9876;&#x70B9;&#x5F00;&#x59CB;&#x904D;&#x5386;</li>
+<li>&#x5982;&#x679C;&#x6709;&#x7B2C;&#x4E00;&#x4E2A;&#x513F;&#x5B50;&#xFF0C;&#x5148;&#x904D;&#x5386;&#x7B2C;&#x4E00;&#x4E2A;&#x513F;&#x5B50;</li>
+<li>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x7B2C;&#x4E00;&#x4E2A;&#x513F;&#x5B50;&#xFF0C;&#x6807;&#x5FD7;&#x7740;&#x6B64;&#x8282;&#x70B9;&#x904D;&#x5386;&#x5B8C;&#x6210;</li>
+<li>&#x5982;&#x679C;&#x6709;&#x5F1F;&#x5F1F;&#x904D;&#x5386;&#x5F1F;&#x5F1F;</li>
+<li>&#x5982;&#x679C;&#x6709;&#x6CA1;&#x6709;&#x4E0B;&#x4E00;&#x4E2A;&#x5F1F;&#x5F1F;&#xFF0C;&#x8FD4;&#x56DE;&#x7236;&#x8282;&#x70B9;&#x6807;&#x8BC6;&#x5B8C;&#x6210;&#x7236;&#x8282;&#x70B9;&#x904D;&#x5386;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x53D4;&#x53D4;&#x904D;&#x5386;&#x53D4;&#x53D4;</li>
+<li><p>&#x6CA1;&#x6709;&#x7236;&#x8282;&#x70B9;&#x904D;&#x5386;&#x7ED3;&#x675F;</p>
+</li>
+<li><p>&#x5148;&#x513F;&#x5B50;&#xFF0C;&#x540E;&#x5F1F;&#x5F1F;&#xFF0C;&#x518D;&#x53D4;&#x53D4;,&#x8F88;&#x4EFD;&#x8D8A;&#x5C0F;&#x8D8A;&#x4F18;&#x5148;</p>
+</li>
+<li>&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x904D;&#x5386;&#x5B8C;&#x6210;? &#x6CA1;&#x6709;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x6216;&#x8005;&#x6240;&#x6709;&#x5B50;&#x8282;&#x70B9;&#x90FD;&#x904D;&#x5386;&#x5B8C;&#x6210;&#x4E86;</li>
+<li>&#x6CA1;&#x7239;&#x4E86;&#x5C31;&#x8868;&#x793A;&#x5168;&#x90E8;&#x904D;&#x5386;&#x5B8C;&#x6210;&#x4E86;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/fiberconstructortranverse3.jpg" alt="fiberconstructortranverse3"></p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> A1 = { <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;div&apos;</span>, <span class="hljs-attr">props</span>:{<span class="hljs-attr">id</span>: <span class="hljs-string">&apos;A1&apos;</span>} };
+<span class="hljs-keyword">let</span> B1 = { <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;div&apos;</span>, <span class="hljs-attr">props</span>:{<span class="hljs-attr">id</span>: <span class="hljs-string">&apos;B1&apos;</span>}, <span class="hljs-attr">return</span>: A1 };
+<span class="hljs-keyword">let</span> B2 = { <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;div&apos;</span>, <span class="hljs-attr">props</span>:{<span class="hljs-attr">id</span>: <span class="hljs-string">&apos;B2&apos;</span>}, <span class="hljs-attr">return</span>: A1 };
+<span class="hljs-keyword">let</span> C1 = { <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;div&apos;</span>, <span class="hljs-attr">props</span>:{<span class="hljs-attr">id</span>: <span class="hljs-string">&apos;C1&apos;</span>}, <span class="hljs-attr">return</span>: B1 };
+<span class="hljs-keyword">let</span> C2 = { <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;div&apos;</span>, <span class="hljs-attr">props</span>:{<span class="hljs-attr">id</span>: <span class="hljs-string">&apos;C2&apos;</span>}, <span class="hljs-attr">return</span>: B1 };
+A1.child = B1;
+B1.sibling = B2;
+B1.child = C1;
+C1.sibling = C2;
+
+<span class="hljs-comment">//&#x4E0B;&#x4E00;&#x4E2A;&#x5DE5;&#x4F5C;&#x5355;&#x5143;</span>
+<span class="hljs-keyword">let</span> nextUnitOfWork = <span class="hljs-literal">null</span>;
+<span class="hljs-comment">//render&#x5DE5;&#x4F5C;&#x5FAA;&#x73AF;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">workLoop</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">while</span> (nextUnitOfWork) {
+        <span class="hljs-comment">//&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x4EFB;&#x52A1;&#x5E76;&#x8FD4;&#x56DE;&#x4E0B;&#x4E00;&#x4E2A;&#x4EFB;&#x52A1;</span>
+        nextUnitOfWork = performUnitOfWork(nextUnitOfWork);
+    }
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;render&#x9636;&#x6BB5;&#x7ED3;&#x675F;&apos;</span>);
+    <span class="hljs-comment">//render&#x9636;&#x6BB5;&#x7ED3;&#x675F;</span>
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">performUnitOfWork</span>(<span class="hljs-params">fiber</span>) </span>{
+    <span class="hljs-keyword">let</span> child = beginWork(fiber);
+    <span class="hljs-keyword">if</span>(child){
+      <span class="hljs-keyword">return</span> child;
+    }
+    <span class="hljs-keyword">while</span> (fiber) {<span class="hljs-comment">//&#x5982;&#x679C;&#x6CA1;&#x6709;&#x5B50;&#x8282;&#x70B9;&#x8BF4;&#x660E;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x5DF2;&#x7ECF;&#x5B8C;&#x6210;&#x4E86;&#x6E32;&#x67D3;&#x5DE5;&#x4F5C;</span>
+        completeUnitOfWork(fiber);<span class="hljs-comment">//&#x53EF;&#x4EE5;&#x7ED3;&#x675F;&#x6B64;fiber&#x7684;&#x6E32;&#x67D3;&#x4E86; </span>
+        <span class="hljs-keyword">if</span> (fiber.sibling) {<span class="hljs-comment">//&#x5982;&#x679C;&#x5B83;&#x6709;&#x5F1F;&#x5F1F;&#x5C31;&#x8FD4;&#x56DE;&#x5F1F;&#x5F1F;</span>
+            <span class="hljs-keyword">return</span> fiber.sibling;
+        }
+        fiber = fiber.return;<span class="hljs-comment">//&#x5982;&#x679C;&#x6CA1;&#x6709;&#x5F1F;&#x5F1F;&#x8BA9;&#x7238;&#x7238;&#x5B8C;&#x6210;&#xFF0C;&#x7136;&#x540E;&#x627E;&#x53D4;&#x53D4;</span>
+    }
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">beginWork</span>(<span class="hljs-params">fiber</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;beginWork&apos;</span>, fiber.props.id);
+    <span class="hljs-keyword">return</span> fiber.child;
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">completeUnitOfWork</span>(<span class="hljs-params">fiber</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;completeUnitOfWork&apos;</span>, fiber.props.id);
+}
+nextUnitOfWork = A1;
+workLoop();
+</code></pre>
+<h3 id="t107.2 commit&#x9636;&#x6BB5;">7.2 commit&#x9636;&#x6BB5; <a href="#t107.2 commit&#x9636;&#x6BB5;"> # </a></h3>
+<p><img src="http://img.zhufengpeixun.cn/fibereffectlist4.jpg" alt="fibereffectlist4"></p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> container = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;root&apos;</span>);
+<span class="hljs-keyword">let</span> C1 = { <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;div&apos;</span>, <span class="hljs-attr">props</span>: { <span class="hljs-attr">id</span>: <span class="hljs-string">&apos;C1&apos;</span>, <span class="hljs-attr">children</span>: [] } };
+<span class="hljs-keyword">let</span> C2 = { <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;div&apos;</span>, <span class="hljs-attr">props</span>: { <span class="hljs-attr">id</span>: <span class="hljs-string">&apos;C2&apos;</span>, <span class="hljs-attr">children</span>: [] } };
+<span class="hljs-keyword">let</span> B1 = { <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;div&apos;</span>, <span class="hljs-attr">props</span>: { <span class="hljs-attr">id</span>: <span class="hljs-string">&apos;B1&apos;</span>, <span class="hljs-attr">children</span>: [C1, C2] } };
+<span class="hljs-keyword">let</span> B2 = { <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;div&apos;</span>, <span class="hljs-attr">props</span>: { <span class="hljs-attr">id</span>: <span class="hljs-string">&apos;B2&apos;</span>, <span class="hljs-attr">children</span>: [] } };
+<span class="hljs-keyword">let</span> A1 = { <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;div&apos;</span>, <span class="hljs-attr">props</span>: { <span class="hljs-attr">id</span>: <span class="hljs-string">&apos;A1&apos;</span>, <span class="hljs-attr">children</span>: [B1, B2] } };
+
+<span class="hljs-keyword">let</span> nextUnitOfWork = <span class="hljs-literal">null</span>;
+<span class="hljs-keyword">let</span> workInProgressRoot = <span class="hljs-literal">null</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">workLoop</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">while</span> (nextUnitOfWork) {
+        nextUnitOfWork = performUnitOfWork(nextUnitOfWork);
+    }
+    <span class="hljs-keyword">if</span> (!nextUnitOfWork) { <span class="hljs-comment">//render&#x9636;&#x6BB5;&#x7ED3;&#x675F;</span>
+        commitRoot();
+    }
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">commitRoot</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">let</span> fiber = workInProgressRoot.firstEffect;
+    <span class="hljs-keyword">while</span> (fiber) {
+        <span class="hljs-built_in">console</span>.log(fiber.props.id); <span class="hljs-comment">//C1 C2 B1 B2 A1</span>
+        commitWork(fiber);
+        fiber = fiber.nextEffect;
+    }
+    workInProgressRoot = <span class="hljs-literal">null</span>;
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">commitWork</span>(<span class="hljs-params">currentFiber</span>) </span>{
+    currentFiber.return.stateNode.appendChild(currentFiber.stateNode);
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">performUnitOfWork</span>(<span class="hljs-params">fiber</span>) </span>{
+    beginWork(fiber);
+    <span class="hljs-keyword">if</span> (fiber.child) {
+        <span class="hljs-keyword">return</span> fiber.child;
+    }
+    <span class="hljs-keyword">while</span> (fiber) {
+        completeUnitOfWork(fiber);
+        <span class="hljs-keyword">if</span> (fiber.sibling) {
+            <span class="hljs-keyword">return</span> fiber.sibling;
+        }
+        fiber = fiber.return;
+    }
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">beginWork</span>(<span class="hljs-params">currentFiber</span>) </span>{
+    <span class="hljs-keyword">if</span> (!currentFiber.stateNode) {
+        currentFiber.stateNode = <span class="hljs-built_in">document</span>.createElement(currentFiber.type);<span class="hljs-comment">//&#x521B;&#x5EFA;&#x771F;&#x5B9E;DOM</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> key <span class="hljs-keyword">in</span> currentFiber.props) {<span class="hljs-comment">//&#x5FAA;&#x73AF;&#x5C5E;&#x6027;&#x8D4B;&#x8D4B;&#x503C;&#x7ED9;&#x771F;&#x5B9E;DOM</span>
+            <span class="hljs-keyword">if</span> (key !== <span class="hljs-string">&apos;children&apos;</span> &amp;&amp; key !== <span class="hljs-string">&apos;key&apos;</span>)
+                currentFiber.stateNode[key]=currentFiber.props[key];
+        }
+    }
+    <span class="hljs-keyword">let</span> previousFiber;
+    currentFiber.props.children.forEach(<span class="hljs-function">(<span class="hljs-params">child, index</span>) =&gt;</span> {
+        <span class="hljs-keyword">let</span> childFiber = {
+            <span class="hljs-attr">type</span>: child.type,
+            <span class="hljs-attr">props</span>: child.props,
+            <span class="hljs-attr">return</span>: currentFiber,
+            <span class="hljs-attr">effectTag</span>: <span class="hljs-string">&apos;PLACEMENT&apos;</span>,
+            <span class="hljs-attr">nextEffect</span>: <span class="hljs-literal">null</span>
+        }
+        <span class="hljs-keyword">if</span> (index === <span class="hljs-number">0</span>) {
+            currentFiber.child = childFiber;
+        } <span class="hljs-keyword">else</span> {
+            previousFiber.sibling = childFiber;
+        }
+        previousFiber = childFiber;
+    });
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">completeUnitOfWork</span>(<span class="hljs-params">currentFiber</span>) </span>{
+    <span class="hljs-keyword">const</span> returnFiber = currentFiber.return;
+    <span class="hljs-keyword">if</span> (returnFiber) {
+        <span class="hljs-keyword">if</span> (!returnFiber.firstEffect) {
+            returnFiber.firstEffect = currentFiber.firstEffect;
+        }
+        <span class="hljs-keyword">if</span> (currentFiber.lastEffect) {
+            <span class="hljs-keyword">if</span> (returnFiber.lastEffect) {
+                returnFiber.lastEffect.nextEffect = currentFiber.firstEffect;
+            }
+            returnFiber.lastEffect = currentFiber.lastEffect;
+        }
+
+        <span class="hljs-keyword">if</span> (currentFiber.effectTag) {
+            <span class="hljs-keyword">if</span> (returnFiber.lastEffect) {
+                returnFiber.lastEffect.nextEffect = currentFiber;
+            } <span class="hljs-keyword">else</span> {
+                returnFiber.firstEffect = currentFiber;
+            }
+            returnFiber.lastEffect = currentFiber;
+        }
+    }
+}
+
+workInProgressRoot = {
+    <span class="hljs-attr">key</span>: <span class="hljs-string">&apos;ROOT&apos;</span>,
+    <span class="hljs-attr">stateNode</span>: container,
+    <span class="hljs-attr">props</span>: { <span class="hljs-attr">children</span>: [A1] }
+};
+nextUnitOfWork = workInProgressRoot;<span class="hljs-comment">//&#x4ECE;RootFiber&#x5F00;&#x59CB;&#xFF0C;&#x5230;RootFiber&#x7ED3;&#x675F;</span>
+workLoop();
+</code></pre>
+
+    </div>
+</div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+    aria-labelledby="loginModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="loginModalLabel">请登录</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="username" class="control-label">姓名:</label>
+                        <input type="text" class="form-control" id="username" placeholder="珠峰架构VIP会员系统用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">密码:</label>
+                        <input type="text" class="form-control" id="password" placeholder="珠峰架构VIP会员系统密码">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                    data-dismiss="modal">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+   
+                    
+
+                        
+<div class="warpper">
+    <div class="page-toc">
+        <ul><li><a href="#t01.动机">1.动机</a></li><li><a href="#t12.Module Federation">2.Module Federation</a></li><li><a href="#t23.实战">3.实战</a><ul><li><a href="#t33.1 配置参数">3.1 配置参数</a></li><li><a href="#t43.2 安装">3.2 安装</a></li><li><a href="#t53.2 remote">3.2 remote</a><ul><li><a href="#t63.2.1 remote\webpack.config.js">3.2.1 remote\webpack.config.js</a></li><li><a href="#t73.2.2 remote\src\index.js">3.2.2 remote\src\index.js</a></li><li><a href="#t83.2.3 remote\src\bootstrap.js">3.2.3 remote\src\bootstrap.js</a></li><li><a href="#t93.2.4 remote\src\App.js">3.2.4 remote\src\App.js</a></li><li><a href="#t103.2.5 remote\src\NewsList.js">3.2.5 remote\src\NewsList.js</a></li></ul></li><li><a href="#t113.3 host">3.3 host</a><ul><li><a href="#t123.3.1 host\webpack.config.js">3.3.1 host\webpack.config.js</a></li><li><a href="#t133.3.2 host\src\index.js">3.3.2 host\src\index.js</a></li><li><a href="#t143.3.3 host\src\bootstrap.js">3.3.3 host\src\bootstrap.js</a></li><li><a href="#t153.3.4 host\src\App.js">3.3.4 host\src\App.js</a></li><li><a href="#t163.3.5 host\src\Slides.js">3.3.5 host\src\Slides.js</a></li></ul></li></ul></li><li><a href="#t174.shared">4.shared</a><ul><li><a href="#t184.1 remote\webpack.config.js">4.1 remote\webpack.config.js</a></li><li><a href="#t194.2 host\webpack.config.js">4.2 host\webpack.config.js</a></li></ul></li><li><a href="#t205.双向依赖">5.双向依赖</a><ul><li><a href="#t215.1 remote\webpack.config.js">5.1 remote\webpack.config.js</a></li><li><a href="#t225.2 host\webpack.config.js">5.2 host\webpack.config.js</a></li><li><a href="#t235.3 remote\src\App.js">5.3 remote\src\App.js</a></li></ul></li><li><a href="#t246.多个remote">6.多个remote</a><ul><li><a href="#t256.1 all\webpack.config.js">6.1 all\webpack.config.js</a></li><li><a href="#t266.2 remote\src\index.js">6.2 remote\src\index.js</a></li><li><a href="#t276.3 remote\src\bootstrap.js">6.3 remote\src\bootstrap.js</a></li><li><a href="#t286.4 remote\src\App.js">6.4 remote\src\App.js</a></li></ul></li><li><a href="#t297. 运行原理">7. 运行原理</a><ul><li><a href="#t307.1 源代码">7.1 源代码</a><ul><li><a href="#t317.1.1 remote">7.1.1 remote</a><ul><li><a href="#t327.1.1.1 webpack.config.js">7.1.1.1 webpack.config.js</a></li><li><a href="#t337.1.1.2 Remote\src\index.js">7.1.1.2 Remote\src\index.js</a></li><li><a href="#t347.1.1.3 Remote\src\bootstrap.js">7.1.1.3 Remote\src\bootstrap.js</a></li><li><a href="#t357.1.1.4 Remote\src\title.js">7.1.1.4 Remote\src\title.js</a></li></ul></li><li><a href="#t367.1.2 Host">7.1.2 Host</a><ul><li><a href="#t377.1.2.1 Host\webpack.config.js">7.1.2.1 Host\webpack.config.js</a></li><li><a href="#t387.1.2.2 Host\src\index.js">7.1.2.2 Host\src\index.js</a></li><li><a href="#t397.1.2.3 Host\src\bootstrap.js">7.1.2.3 Host\src\bootstrap.js</a></li></ul></li></ul></li><li><a href="#t407.2 输出">7.2 输出</a><ul><li><a href="#t417.2.1 Remote输出">7.2.1 Remote输出</a><ul><li><a href="#t427.2.1.1 Remote\dist\src_title_js.js">7.2.1.1 Remote\dist\src_title_js.js</a></li><li><a href="#t437.2.1.2 Remote\dist\src_bootstrap_js.js">7.2.1.2 Remote\dist\src_bootstrap_js.js</a></li><li><a href="#t447.2.1.3 Remote\dist\remoteEntry.js">7.2.1.3 Remote\dist\remoteEntry.js</a></li><li><a href="#t457.2.1.4 Remote\dist\main.js">7.2.1.4 Remote\dist\main.js</a></li><li><a href="#t467.2.1.5 Remote\dist\index.html">7.2.1.5 Remote\dist\index.html</a></li></ul></li><li><a href="#t477.2.2 Host输出">7.2.2 Host输出</a><ul><li><a href="#t487.2.2.1 Host\dist\src_bootstrap_js.js">7.2.2.1 Host\dist\src_bootstrap_js.js</a></li><li><a href="#t497.2.2.2 Host\dist\main.js">7.2.2.2 Host\dist\main.js</a></li><li><a href="#t507.2.2.3 Host\dist\index.html">7.2.2.3 Host\dist\index.html</a></li></ul></li></ul></li></ul></li></ul>
+    </div>
+    <div class="content markdown-body">
+        <h2 id="t01.&#x52A8;&#x673A;">1.&#x52A8;&#x673A; <a href="#t01.&#x52A8;&#x673A;"> # </a></h2>
+<ul>
+<li>Module Federation&#x7684;&#x52A8;&#x673A;&#x662F;&#x4E3A;&#x4E86;&#x4E0D;&#x540C;&#x5F00;&#x53D1;&#x5C0F;&#x7EC4;&#x95F4;&#x5171;&#x540C;&#x5F00;&#x53D1;&#x4E00;&#x4E2A;&#x6216;&#x8005;&#x591A;&#x4E2A;&#x5E94;&#x7528;</li>
+<li>&#x5E94;&#x7528;&#x5C06;&#x88AB;&#x5212;&#x5206;&#x4E3A;&#x66F4;&#x5C0F;&#x7684;&#x5E94;&#x7528;&#x5757;&#xFF0C;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x5757;&#xFF0C;&#x53EF;&#x4EE5;&#x662F;&#x6BD4;&#x5982;&#x5934;&#x90E8;&#x5BFC;&#x822A;&#x6216;&#x8005;&#x4FA7;&#x8FB9;&#x680F;&#x7684;&#x524D;&#x7AEF;&#x7EC4;&#x4EF6;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x6570;&#x636E;&#x83B7;&#x53D6;&#x903B;&#x8F91;&#x7684;&#x903B;&#x8F91;&#x7EC4;&#x4EF6;</li>
+<li>&#x6BCF;&#x4E2A;&#x5E94;&#x7528;&#x5757;&#x7531;&#x4E0D;&#x540C;&#x7684;&#x7EC4;&#x5F00;&#x53D1;</li>
+<li>&#x5E94;&#x7528;&#x6216;&#x5E94;&#x7528;&#x5757;&#x5171;&#x4EAB;&#x5176;&#x4ED6;&#x5176;&#x4ED6;&#x5E94;&#x7528;&#x5757;&#x6216;&#x8005;&#x5E93;</li>
+</ul>
+<p><img src="https://img.zhufengpeixun.com/1608392171072" alt="1608392171072"></p>
+<h2 id="t12.Module Federation">2.Module Federation <a href="#t12.Module Federation"> # </a></h2>
+<ul>
+<li>&#x4F7F;&#x7528;Module Federation&#x65F6;&#xFF0C;&#x6BCF;&#x4E2A;&#x5E94;&#x7528;&#x5757;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;&#x6784;&#x5EFA;&#xFF0C;&#x8FD9;&#x4E9B;&#x6784;&#x5EFA;&#x90FD;&#x5C06;&#x7F16;&#x8BD1;&#x4E3A;&#x5BB9;&#x5668;</li>
+<li>&#x5BB9;&#x5668;&#x53EF;&#x4EE5;&#x88AB;&#x5176;&#x4ED6;&#x5E94;&#x7528;&#x6216;&#x8005;&#x5176;&#x4ED6;&#x5BB9;&#x5668;&#x5E94;&#x7528;</li>
+<li>&#x4E00;&#x4E2A;&#x88AB;&#x5F15;&#x7528;&#x7684;&#x5BB9;&#x5668;&#x88AB;&#x79F0;&#x4E3A;<code>remote</code>, &#x5F15;&#x7528;&#x8005;&#x88AB;&#x79F0;&#x4E3A;<code>host</code>&#xFF0C;<code>remote</code>&#x66B4;&#x9732;&#x6A21;&#x5757;&#x7ED9;<code>host</code>, <code>host</code>&#x5219;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x66B4;&#x9732;&#x7684;&#x6A21;&#x5757;&#xFF0C;&#x8FD9;&#x4E9B;&#x6A21;&#x5757;&#x88AB;&#x6210;&#x4E3A;<code>remote</code>&#x6A21;&#x5757;</li>
+</ul>
+<p><img src="https://img.zhufengpeixun.com/1608722799323" alt="1608722799323"></p>
+<h2 id="t23.&#x5B9E;&#x6218;">3.&#x5B9E;&#x6218; <a href="#t23.&#x5B9E;&#x6218;"> # </a></h2>
+<h3 id="t33.1 &#x914D;&#x7F6E;&#x53C2;&#x6570;">3.1 &#x914D;&#x7F6E;&#x53C2;&#x6570; <a href="#t33.1 &#x914D;&#x7F6E;&#x53C2;&#x6570;"> # </a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">name</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&#x5FC5;&#x4F20;&#x503C;&#xFF0C;&#x5373;&#x8F93;&#x51FA;&#x7684;&#x6A21;&#x5757;&#x540D;&#xFF0C;&#x88AB;&#x8FDC;&#x7A0B;&#x5F15;&#x7528;&#x65F6;&#x8DEF;&#x5F84;&#x4E3A;${name}/${expose}</td>
+</tr>
+<tr>
+<td style="text-align:left">library</td>
+<td style="text-align:left">object</td>
+<td style="text-align:left">&#x58F0;&#x660E;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;name&#x4E3A;umd&#x7684;name</td>
+</tr>
+<tr>
+<td style="text-align:left">filename</td>
+<td style="text-align:left">string</td>
+<td style="text-align:left">&#x6784;&#x5EFA;&#x8F93;&#x51FA;&#x7684;&#x6587;&#x4EF6;&#x540D;</td>
+</tr>
+<tr>
+<td style="text-align:left">remotes</td>
+<td style="text-align:left">object</td>
+<td style="text-align:left">&#x8FDC;&#x7A0B;&#x5F15;&#x7528;&#x7684;&#x5E94;&#x7528;&#x540D;&#x53CA;&#x5176;&#x522B;&#x540D;&#x7684;&#x6620;&#x5C04;&#xFF0C;&#x4F7F;&#x7528;&#x65F6;&#x4EE5;key&#x503C;&#x4F5C;&#x4E3A;name</td>
+</tr>
+<tr>
+<td style="text-align:left">exposes</td>
+<td style="text-align:left">object</td>
+<td style="text-align:left">&#x88AB;&#x8FDC;&#x7A0B;&#x5F15;&#x7528;&#x65F6;&#x53EF;&#x66B4;&#x9732;&#x7684;&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#x53CA;&#x5176;&#x522B;&#x540D;</td>
+</tr>
+<tr>
+<td style="text-align:left">shared</td>
+<td style="text-align:left">object</td>
+<td style="text-align:left">&#x4E0E;&#x5176;&#x4ED6;&#x5E94;&#x7528;&#x4E4B;&#x95F4;&#x53EF;&#x4EE5;&#x5171;&#x4EAB;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x4F9D;&#x8D56;&#xFF0C;&#x4F7F;&#x4F60;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#x4E0D;&#x7528;&#x91CD;&#x590D;&#x52A0;&#x8F7D;&#x540C;&#x4E00;&#x4EFD;&#x4F9D;&#x8D56;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t43.2 &#x5B89;&#x88C5;">3.2 &#x5B89;&#x88C5; <a href="#t43.2 &#x5B89;&#x88C5;"> # </a></h3>
+<pre><code class="lang-js">cnpm i webpack webpack-cli webpack-dev-server babel-loader @babel/core  @babel/preset-env -D
+</code></pre>
+<h3 id="t53.2 remote">3.2 remote <a href="#t53.2 remote"> # </a></h3>
+<h4 id="t63.2.1 remote\webpack.config.js">3.2.1 remote\webpack.config.js <a href="#t63.2.1 remote\webpack.config.js"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;path&quot;</span>);
+<span class="hljs-keyword">let</span> webpack = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;webpack&quot;</span>);
+<span class="hljs-keyword">let</span> HtmlWebpackPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;html-webpack-plugin&quot;</span>);
+<span class="hljs-keyword">const</span> ModuleFederationPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;webpack/lib/container/ModuleFederationPlugin&quot;</span>);
+<span class="hljs-built_in">module</span>.exports = {
+    <span class="hljs-attr">mode</span>: <span class="hljs-string">&quot;development&quot;</span>,
+    <span class="hljs-attr">entry</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,
+    <span class="hljs-attr">output</span>: {
+        <span class="hljs-attr">publicPath</span>: <span class="hljs-string">&quot;http://localhost:3000/&quot;</span>,
+    },
+    <span class="hljs-attr">devServer</span>: {
+        <span class="hljs-attr">port</span>: <span class="hljs-number">3000</span>
+    },
+    <span class="hljs-attr">module</span>: {
+        <span class="hljs-attr">rules</span>: [
+            {
+                <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.jsx?$/</span>,
+                <span class="hljs-attr">use</span>: {
+                    <span class="hljs-attr">loader</span>: <span class="hljs-string">&apos;babel-loader&apos;</span>,
+                    <span class="hljs-attr">options</span>: {
+                        <span class="hljs-attr">presets</span>: [<span class="hljs-string">&quot;@babel/preset-react&quot;</span>]
+                    },
+                },
+                <span class="hljs-attr">exclude</span>: <span class="hljs-regexp">/node_modules/</span>,
+            },
+        ]
+    },
+    <span class="hljs-attr">plugins</span>: [
+        <span class="hljs-keyword">new</span> HtmlWebpackPlugin({
+            <span class="hljs-attr">template</span>:<span class="hljs-string">&apos;./public/index.html&apos;</span>
+        }),
+        <span class="hljs-keyword">new</span> ModuleFederationPlugin({
+            <span class="hljs-attr">filename</span>: <span class="hljs-string">&quot;remoteEntry.js&quot;</span>,
+            <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;remote&quot;</span>,
+            <span class="hljs-attr">exposes</span>: {
+                <span class="hljs-string">&quot;./NewsList&quot;</span>: <span class="hljs-string">&quot;./src/NewsList&quot;</span>,
+            }
+          })
+    ]
+}
+</code></pre>
+<h4 id="t73.2.2 remote\src\index.js">3.2.2 remote\src\index.js <a href="#t73.2.2 remote\src\index.js"> # </a></h4>
+<p>remote\src\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span>(<span class="hljs-string">&quot;./bootstrap&quot;</span>);
+</code></pre>
+<h4 id="t83.2.3 remote\src\bootstrap.js">3.2.3 remote\src\bootstrap.js <a href="#t83.2.3 remote\src\bootstrap.js"> # </a></h4>
+<p>remote\src\bootstrap.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react&quot;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react-dom&quot;</span>;
+<span class="hljs-keyword">import</span> App <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;./App&quot;</span>;
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">App</span> /&gt;</span></span>, <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;root&quot;</span>));
+</code></pre>
+<h4 id="t93.2.4 remote\src\App.js">3.2.4 remote\src\App.js <a href="#t93.2.4 remote\src\App.js"> # </a></h4>
+<p>remote\src\App.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react&quot;</span>;
+<span class="hljs-keyword">import</span> NewsList <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./NewsList&apos;</span>;
+<span class="hljs-keyword">const</span> App = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> (
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>&#x672C;&#x5730;&#x7EC4;&#x4EF6;NewsList<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">NewsList</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+);
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> App;
+</code></pre>
+<h4 id="t103.2.5 remote\src\NewsList.js">3.2.5 remote\src\NewsList.js <a href="#t103.2.5 remote\src\NewsList.js"> # </a></h4>
+<p>remote\src\NewsList.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react&quot;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> ()=&gt;(
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>&#x65B0;&#x95FB;&#x5217;&#x8868;<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+)
+</code></pre>
+<h3 id="t113.3 host">3.3 host <a href="#t113.3 host"> # </a></h3>
+<h4 id="t123.3.1 host\webpack.config.js">3.3.1 host\webpack.config.js <a href="#t123.3.1 host\webpack.config.js"> # </a></h4>
+<p>host\webpack.config.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;path&quot;</span>);
+<span class="hljs-keyword">let</span> webpack = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;webpack&quot;</span>);
+<span class="hljs-keyword">let</span> HtmlWebpackPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;html-webpack-plugin&quot;</span>);
+<span class="hljs-keyword">const</span> ModuleFederationPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;webpack/lib/container/ModuleFederationPlugin&quot;</span>);
+<span class="hljs-built_in">module</span>.exports = {
+    <span class="hljs-attr">mode</span>: <span class="hljs-string">&quot;development&quot;</span>,
+    <span class="hljs-attr">entry</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,
+    <span class="hljs-attr">output</span>: {
+        <span class="hljs-attr">publicPath</span>: <span class="hljs-string">&quot;http://localhost:8000/&quot;</span>,
+    },
+    <span class="hljs-attr">devServer</span>: {
+        <span class="hljs-attr">port</span>: <span class="hljs-number">8000</span>
+    },
+    <span class="hljs-attr">module</span>: {
+        <span class="hljs-attr">rules</span>: [
+            {
+                <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.jsx?$/</span>,
+                <span class="hljs-attr">use</span>: {
+                    <span class="hljs-attr">loader</span>: <span class="hljs-string">&apos;babel-loader&apos;</span>,
+                    <span class="hljs-attr">options</span>: {
+                        <span class="hljs-attr">presets</span>: [<span class="hljs-string">&quot;@babel/preset-react&quot;</span>]
+                    },
+                },
+                <span class="hljs-attr">exclude</span>: <span class="hljs-regexp">/node_modules/</span>,
+            },
+        ]
+    },
+    <span class="hljs-attr">plugins</span>: [
+        <span class="hljs-keyword">new</span> HtmlWebpackPlugin({
+            <span class="hljs-attr">template</span>: <span class="hljs-string">&apos;./public/index.html&apos;</span>
+        }),
+        <span class="hljs-keyword">new</span> ModuleFederationPlugin({
+            <span class="hljs-attr">filename</span>: <span class="hljs-string">&quot;remoteEntry.js&quot;</span>,
+            <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;host&quot;</span>,
+            <span class="hljs-attr">remotes</span>: {
+                <span class="hljs-attr">remote</span>: <span class="hljs-string">&quot;remote@http://localhost:3000/remoteEntry.js&quot;</span>
+            }
+        })
+    ]
+}
+</code></pre>
+<h4 id="t133.3.2 host\src\index.js">3.3.2 host\src\index.js <a href="#t133.3.2 host\src\index.js"> # </a></h4>
+<p>host\src\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span>(<span class="hljs-string">&quot;./bootstrap&quot;</span>);
+</code></pre>
+<h4 id="t143.3.3 host\src\bootstrap.js">3.3.3 host\src\bootstrap.js <a href="#t143.3.3 host\src\bootstrap.js"> # </a></h4>
+<p>host\src\bootstrap.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react&quot;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react-dom&quot;</span>;
+<span class="hljs-keyword">import</span> App <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;./App&quot;</span>;
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">App</span> /&gt;</span></span>, <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;root&quot;</span>));
+</code></pre>
+<h4 id="t153.3.4 host\src\App.js">3.3.4 host\src\App.js <a href="#t153.3.4 host\src\App.js"> # </a></h4>
+<p>host\src\App.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react&quot;</span>;
+<span class="hljs-keyword">import</span> Slides <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./Slides&apos;</span>;
+<span class="hljs-keyword">const</span> RemoteNewsList = React.lazy(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-keyword">import</span>(<span class="hljs-string">&quot;remote/NewsList&quot;</span>));
+
+<span class="hljs-keyword">const</span> App = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> (
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> &gt;</span>&#x672C;&#x5730;&#x7EC4;&#x4EF6;Slides, &#x8FDC;&#x7A0B;&#x7EC4;&#x4EF6;NewsList<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Slides</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">React.Suspense</span> <span class="hljs-attr">fallback</span>=<span class="hljs-string">&quot;Loading NewsList&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">RemoteNewsList</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">React.Suspense</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+);
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> App;
+</code></pre>
+<h4 id="t163.3.5 host\src\Slides.js">3.3.5 host\src\Slides.js <a href="#t163.3.5 host\src\Slides.js"> # </a></h4>
+<p>host\src\Slides.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react&quot;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> ()=&gt;(
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>&#x8F6E;&#x64AD;&#x56FE;<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+)
+</code></pre>
+<h2 id="t174.shared">4.shared <a href="#t174.shared"> # </a></h2>
+<ul>
+<li><code>shared</code>&#x914D;&#x7F6E;&#x4E3B;&#x8981;&#x662F;&#x7528;&#x6765;&#x907F;&#x514D;&#x9879;&#x76EE;&#x51FA;&#x73B0;&#x591A;&#x4E2A;&#x516C;&#x5171;&#x4F9D;&#x8D56;</li>
+</ul>
+<h3 id="t184.1 remote\webpack.config.js">4.1 remote\webpack.config.js <a href="#t184.1 remote\webpack.config.js"> # </a></h3>
+<pre><code class="lang-diff">    plugins: [
+        new HtmlWebpackPlugin({
+            template:&apos;./public/index.html&apos;
+        }),
+        new ModuleFederationPlugin({
+            filename: &quot;remoteEntry.js&quot;,
+            name: &quot;remote&quot;,
+            exposes: {
+                &quot;./NewsList&quot;: &quot;./src/NewsList&quot;,
+            },
+<span class="hljs-addition">+            shared:{</span>
+<span class="hljs-addition">+                react: { singleton: true },</span>
+<span class="hljs-addition">+                &quot;react-dom&quot;: { singleton: true }</span>
+<span class="hljs-addition">+              }</span>
+          })
+    ]
+</code></pre>
+<h3 id="t194.2 host\webpack.config.js">4.2 host\webpack.config.js <a href="#t194.2 host\webpack.config.js"> # </a></h3>
+<pre><code class="lang-diff">    plugins: [
+        new HtmlWebpackPlugin({
+            template: &apos;./public/index.html&apos;
+        }),
+        new ModuleFederationPlugin({
+            filename: &quot;remoteEntry.js&quot;,
+            name: &quot;host&quot;,
+            remotes: {
+                remote: &quot;remote@http://localhost:3000/remoteEntry.js&quot;
+            },
+<span class="hljs-addition">+           shared:{</span>
+<span class="hljs-addition">+                react: { singleton: true },</span>
+<span class="hljs-addition">+                &quot;react-dom&quot;: { singleton: true }</span>
+<span class="hljs-addition">+           }</span>
+        })
+    ]
+</code></pre>
+<h2 id="t205.&#x53CC;&#x5411;&#x4F9D;&#x8D56;">5.&#x53CC;&#x5411;&#x4F9D;&#x8D56; <a href="#t205.&#x53CC;&#x5411;&#x4F9D;&#x8D56;"> # </a></h2>
+<ul>
+<li>Module Federation &#x7684;&#x5171;&#x4EAB;&#x53EF;&#x4EE5;&#x662F;&#x53CC;&#x5411;&#x7684;</li>
+</ul>
+<h3 id="t215.1 remote\webpack.config.js">5.1 remote\webpack.config.js <a href="#t215.1 remote\webpack.config.js"> # </a></h3>
+<pre><code class="lang-diff">    plugins: [
+        new HtmlWebpackPlugin({
+            template:&apos;./public/index.html&apos;
+        }),
+        new ModuleFederationPlugin({
+            filename: &quot;remoteEntry.js&quot;,
+            name: &quot;remote&quot;,
+<span class="hljs-addition">+            remotes: {</span>
+<span class="hljs-addition">+                host: &quot;host@http://localhost:8000/remoteEntry.js&quot;</span>
+<span class="hljs-addition">+            },</span>
+            exposes: {
+                &quot;./NewsList&quot;: &quot;./src/NewsList&quot;,
+            },
+            shared:{
+                react: { singleton: true },
+                &quot;react-dom&quot;: { singleton: true }
+              }
+          })
+    ]
+</code></pre>
+<h3 id="t225.2 host\webpack.config.js">5.2 host\webpack.config.js <a href="#t225.2 host\webpack.config.js"> # </a></h3>
+<pre><code class="lang-diff">    plugins: [
+        new HtmlWebpackPlugin({
+            template: &apos;./public/index.html&apos;
+        }),
+        new ModuleFederationPlugin({
+            filename: &quot;remoteEntry.js&quot;,
+            name: &quot;host&quot;,
+            remotes: {
+                remote: &quot;remote@http://localhost:3000/remoteEntry.js&quot;
+            },
+<span class="hljs-addition">+           exposes: {</span>
+<span class="hljs-addition">+                &quot;./Slides&quot;: &quot;./src/Slides&quot;,</span>
+<span class="hljs-addition">+           },</span>
+            shared:{
+                react: { singleton: true },
+                &quot;react-dom&quot;: { singleton: true }
+              }
+        })
+    ]
+</code></pre>
+<h3 id="t235.3 remote\src\App.js">5.3 remote\src\App.js <a href="#t235.3 remote\src\App.js"> # </a></h3>
+<p>remote\src\App.js</p>
+<pre><code class="lang-diff">import React from &quot;react&quot;;
+import NewsList from &apos;./NewsList&apos;;
+<span class="hljs-addition">+const RemoteSlides = React.lazy(() =&gt; import(&quot;host/Slides&quot;));</span>
+const App = () =&gt; (
+  &lt;div&gt;
+<span class="hljs-addition">+    &lt;h2&gt;&#x672C;&#x5730;&#x7EC4;&#x4EF6;NewsList,&#x8FDC;&#x7A0B;&#x7EC4;&#x4EF6;Slides&lt;/h2&gt;</span>
+    &lt;NewsList /&gt;
+<span class="hljs-addition">+    &lt;React.Suspense fallback=&quot;Loading Slides&quot;&gt;</span>
+<span class="hljs-addition">+      &lt;RemoteSlides /&gt;</span>
+<span class="hljs-addition">+    &lt;/React.Suspense&gt;</span>
+  &lt;/div&gt;
+);
+
+export default App;
+</code></pre>
+<h2 id="t246.&#x591A;&#x4E2A;remote">6.&#x591A;&#x4E2A;remote <a href="#t246.&#x591A;&#x4E2A;remote"> # </a></h2>
+<h3 id="t256.1 all\webpack.config.js">6.1 all\webpack.config.js <a href="#t256.1 all\webpack.config.js"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;path&quot;</span>);
+<span class="hljs-keyword">let</span> webpack = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;webpack&quot;</span>);
+<span class="hljs-keyword">let</span> HtmlWebpackPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;html-webpack-plugin&quot;</span>);
+<span class="hljs-keyword">const</span> ModuleFederationPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;webpack/lib/container/ModuleFederationPlugin&quot;</span>);
+<span class="hljs-built_in">module</span>.exports = {
+    <span class="hljs-attr">mode</span>: <span class="hljs-string">&quot;development&quot;</span>,
+    <span class="hljs-attr">entry</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,
+    <span class="hljs-attr">output</span>: {
+        <span class="hljs-attr">publicPath</span>: <span class="hljs-string">&quot;http://localhost:3000/&quot;</span>,
+    },
+    <span class="hljs-attr">devServer</span>: {
+        <span class="hljs-attr">port</span>: <span class="hljs-number">5000</span>
+    },
+    <span class="hljs-attr">module</span>: {
+        <span class="hljs-attr">rules</span>: [
+            {
+                <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.jsx?$/</span>,
+                <span class="hljs-attr">use</span>: {
+                    <span class="hljs-attr">loader</span>: <span class="hljs-string">&apos;babel-loader&apos;</span>,
+                    <span class="hljs-attr">options</span>: {
+                        <span class="hljs-attr">presets</span>: [<span class="hljs-string">&quot;@babel/preset-react&quot;</span>]
+                    },
+                },
+                <span class="hljs-attr">exclude</span>: <span class="hljs-regexp">/node_modules/</span>,
+            },
+        ]
+    },
+    <span class="hljs-attr">plugins</span>: [
+        <span class="hljs-keyword">new</span> HtmlWebpackPlugin({
+            <span class="hljs-attr">template</span>:<span class="hljs-string">&apos;./public/index.html&apos;</span>
+        }),
+        <span class="hljs-keyword">new</span> ModuleFederationPlugin({
+            <span class="hljs-attr">filename</span>: <span class="hljs-string">&quot;remoteEntry.js&quot;</span>,
+            <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;all&quot;</span>,
+            <span class="hljs-attr">remotes</span>: {
+                <span class="hljs-attr">remote</span>: <span class="hljs-string">&quot;remote@http://localhost:3000/remoteEntry.js&quot;</span>,
+                <span class="hljs-attr">host</span>: <span class="hljs-string">&quot;host@http://localhost:8000/remoteEntry.js&quot;</span>,
+            },
+            <span class="hljs-attr">shared</span>:{
+                <span class="hljs-attr">react</span>: { <span class="hljs-attr">singleton</span>: <span class="hljs-literal">true</span> },
+                <span class="hljs-string">&quot;react-dom&quot;</span>: { <span class="hljs-attr">singleton</span>: <span class="hljs-literal">true</span> }
+              }
+          })
+    ]
+}
+</code></pre>
+<h3 id="t266.2 remote\src\index.js">6.2 remote\src\index.js <a href="#t266.2 remote\src\index.js"> # </a></h3>
+<p>remote\src\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span>(<span class="hljs-string">&quot;./bootstrap&quot;</span>);
+</code></pre>
+<h3 id="t276.3 remote\src\bootstrap.js">6.3 remote\src\bootstrap.js <a href="#t276.3 remote\src\bootstrap.js"> # </a></h3>
+<p>remote\src\bootstrap.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react&quot;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react-dom&quot;</span>;
+<span class="hljs-keyword">import</span> App <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;./App&quot;</span>;
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">App</span> /&gt;</span></span>, <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;root&quot;</span>));
+</code></pre>
+<h3 id="t286.4 remote\src\App.js">6.4 remote\src\App.js <a href="#t286.4 remote\src\App.js"> # </a></h3>
+<p>remote\src\App.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react&quot;</span>;
+<span class="hljs-keyword">const</span> RemoteSlides = React.lazy(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-keyword">import</span>(<span class="hljs-string">&quot;host/Slides&quot;</span>));
+<span class="hljs-keyword">const</span> RemoteNewsList = React.lazy(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-keyword">import</span>(<span class="hljs-string">&quot;remote/NewsList&quot;</span>));
+<span class="hljs-keyword">const</span> App = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> (
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>&#x8FDC;&#x7A0B;&#x7EC4;&#x4EF6;Slides,&#x8FDC;&#x7A0B;&#x7EC4;&#x4EF6;NewsList<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">React.Suspense</span> <span class="hljs-attr">fallback</span>=<span class="hljs-string">&quot;Loading Slides&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">RemoteSlides</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">React.Suspense</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">React.Suspense</span> <span class="hljs-attr">fallback</span>=<span class="hljs-string">&quot;Loading NewsList&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">RemoteNewsList</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">React.Suspense</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+);
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> App;
+</code></pre>
+<h2 id="t297. &#x8FD0;&#x884C;&#x539F;&#x7406;">7. &#x8FD0;&#x884C;&#x539F;&#x7406; <a href="#t297. &#x8FD0;&#x884C;&#x539F;&#x7406;"> # </a></h2>
+<h3 id="t307.1 &#x6E90;&#x4EE3;&#x7801;">7.1 &#x6E90;&#x4EE3;&#x7801; <a href="#t307.1 &#x6E90;&#x4EE3;&#x7801;"> # </a></h3>
+<h4 id="t317.1.1 remote">7.1.1 remote <a href="#t317.1.1 remote"> # </a></h4>
+<h5 id="t327.1.1.1 webpack.config.js">7.1.1.1 webpack.config.js <a href="#t327.1.1.1 webpack.config.js"> # </a></h5>
+<p>Remote\webpack.config.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;path&quot;</span>);
+<span class="hljs-keyword">let</span> webpack = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;webpack&quot;</span>);
+<span class="hljs-keyword">let</span> HtmlWebpackPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;html-webpack-plugin&quot;</span>);
+<span class="hljs-keyword">const</span> ModuleFederationPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;webpack/lib/container/ModuleFederationPlugin&quot;</span>);
+<span class="hljs-built_in">module</span>.exports = {
+    <span class="hljs-attr">mode</span>: <span class="hljs-string">&quot;development&quot;</span>,
+    <span class="hljs-attr">devtool</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">entry</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,
+    <span class="hljs-attr">output</span>: {
+        <span class="hljs-attr">publicPath</span>: <span class="hljs-string">&quot;http://localhost:8080/&quot;</span>,
+        <span class="hljs-comment">//hotUpdateGlobal:&apos;webpackHotUpdate&apos;,</span>
+        <span class="hljs-comment">//chunkLoadingGlobal: &apos;webpackChunk&apos;</span>
+    },
+    <span class="hljs-attr">devServer</span>: {
+        <span class="hljs-attr">port</span>: <span class="hljs-number">3000</span>
+    },
+    <span class="hljs-attr">module</span>: {
+        <span class="hljs-attr">rules</span>: [
+            {
+                <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.jsx?$/</span>,
+                <span class="hljs-attr">use</span>: {
+                    <span class="hljs-attr">loader</span>: <span class="hljs-string">&apos;babel-loader&apos;</span>,
+                    <span class="hljs-attr">options</span>: {
+                        <span class="hljs-attr">presets</span>: [<span class="hljs-string">&quot;@babel/preset-react&quot;</span>]
+                    },
+                },
+                <span class="hljs-attr">exclude</span>: <span class="hljs-regexp">/node_modules/</span>,
+            },
+        ]
+    },
+    <span class="hljs-attr">plugins</span>: [
+        <span class="hljs-keyword">new</span> HtmlWebpackPlugin({
+            <span class="hljs-attr">template</span>:<span class="hljs-string">&apos;./public/index.html&apos;</span>
+        }),
+        <span class="hljs-keyword">new</span> ModuleFederationPlugin({
+            <span class="hljs-attr">filename</span>: <span class="hljs-string">&quot;remoteEntry.js&quot;</span>,
+            <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;remote&quot;</span>,
+            <span class="hljs-attr">exposes</span>: {
+                <span class="hljs-string">&quot;./title&quot;</span>: <span class="hljs-string">&quot;./src/title&quot;</span>,
+            }
+          })
+    ]
+}
+</code></pre>
+<h5 id="t337.1.1.2 Remote\src\index.js">7.1.1.2 Remote\src\index.js <a href="#t337.1.1.2 Remote\src\index.js"> # </a></h5>
+<p>Remote\src\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span>(<span class="hljs-string">&quot;./bootstrap&quot;</span>);
+</code></pre>
+<h5 id="t347.1.1.3 Remote\src\bootstrap.js">7.1.1.3 Remote\src\bootstrap.js <a href="#t347.1.1.3 Remote\src\bootstrap.js"> # </a></h5>
+<p>Remote\src\bootstrap.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> title <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;./title&quot;</span>;
+<span class="hljs-built_in">console</span>.log(title);
+</code></pre>
+<h5 id="t357.1.1.4 Remote\src\title.js">7.1.1.4 Remote\src\title.js <a href="#t357.1.1.4 Remote\src\title.js"> # </a></h5>
+<p>Remote\src\title.js</p>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = <span class="hljs-string">&apos;title&apos;</span>;
+</code></pre>
+<h4 id="t367.1.2 Host">7.1.2 Host <a href="#t367.1.2 Host"> # </a></h4>
+<h5 id="t377.1.2.1 Host\webpack.config.js">7.1.2.1 Host\webpack.config.js <a href="#t377.1.2.1 Host\webpack.config.js"> # </a></h5>
+<p>Host\webpack.config.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;path&quot;</span>);
+<span class="hljs-keyword">let</span> webpack = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;webpack&quot;</span>);
+<span class="hljs-keyword">let</span> HtmlWebpackPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;html-webpack-plugin&quot;</span>);
+<span class="hljs-keyword">const</span> ModuleFederationPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;webpack/lib/container/ModuleFederationPlugin&quot;</span>);
+<span class="hljs-built_in">module</span>.exports = {
+    <span class="hljs-attr">mode</span>: <span class="hljs-string">&quot;development&quot;</span>,
+    <span class="hljs-attr">entry</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,
+    <span class="hljs-attr">devtool</span>:<span class="hljs-literal">false</span>,
+    <span class="hljs-attr">output</span>: {
+        <span class="hljs-attr">publicPath</span>: <span class="hljs-string">&quot;http://localhost:8081/&quot;</span>,
+        <span class="hljs-attr">hotUpdateGlobal</span>:<span class="hljs-string">&apos;webpackHotUpdate&apos;</span>
+    },
+    <span class="hljs-attr">devServer</span>: {
+        <span class="hljs-attr">port</span>: <span class="hljs-number">8000</span>
+    },
+    <span class="hljs-attr">module</span>: {
+        <span class="hljs-attr">rules</span>: [
+            {
+                <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.jsx?$/</span>,
+                <span class="hljs-attr">use</span>: {
+                    <span class="hljs-attr">loader</span>: <span class="hljs-string">&apos;babel-loader&apos;</span>,
+                    <span class="hljs-attr">options</span>: {
+                        <span class="hljs-attr">presets</span>: [<span class="hljs-string">&quot;@babel/preset-react&quot;</span>]
+                    },
+                },
+                <span class="hljs-attr">exclude</span>: <span class="hljs-regexp">/node_modules/</span>,
+            },
+        ]
+    },
+    <span class="hljs-attr">plugins</span>: [
+        <span class="hljs-keyword">new</span> HtmlWebpackPlugin({
+            <span class="hljs-attr">template</span>: <span class="hljs-string">&apos;./public/index.html&apos;</span>
+        }),
+        <span class="hljs-keyword">new</span> ModuleFederationPlugin({
+            <span class="hljs-attr">filename</span>: <span class="hljs-string">&quot;remoteEntry.js&quot;</span>,
+            <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;host&quot;</span>,
+            <span class="hljs-attr">remotes</span>: {
+                <span class="hljs-attr">remote</span>: <span class="hljs-string">&quot;remoteVar@http://localhost:3000/remoteEntry.js&quot;</span>
+            }
+        })
+    ]
+}
+</code></pre>
+<h5 id="t387.1.2.2 Host\src\index.js">7.1.2.2 Host\src\index.js <a href="#t387.1.2.2 Host\src\index.js"> # </a></h5>
+<p>Host\src\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span>(<span class="hljs-string">&quot;./bootstrap&quot;</span>);
+</code></pre>
+<h5 id="t397.1.2.3 Host\src\bootstrap.js">7.1.2.3 Host\src\bootstrap.js <a href="#t397.1.2.3 Host\src\bootstrap.js"> # </a></h5>
+<p>Host\src\bootstrap.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span>(<span class="hljs-string">&quot;remote/title&quot;</span>).then(<span class="hljs-function"><span class="hljs-params">result</span>=&gt;</span>{
+    <span class="hljs-built_in">console</span>.log(result.default);
+});
+</code></pre>
+<h3 id="t407.2 &#x8F93;&#x51FA;">7.2 &#x8F93;&#x51FA; <a href="#t407.2 &#x8F93;&#x51FA;"> # </a></h3>
+<h4 id="t417.2.1 Remote&#x8F93;&#x51FA;">7.2.1 Remote&#x8F93;&#x51FA; <a href="#t417.2.1 Remote&#x8F93;&#x51FA;"> # </a></h4>
+<h5 id="t427.2.1.1 Remote\dist\src_title_js.js">7.2.1.1 Remote\dist\src_title_js.js <a href="#t427.2.1.1 Remote\dist\src_title_js.js"> # </a></h5>
+<p>Remote\dist\src_title_js.js</p>
+<pre><code class="lang-js">(self[<span class="hljs-string">&quot;webpackChunkRemote&quot;</span>] = self[<span class="hljs-string">&quot;webpackChunkRemote&quot;</span>] || []).push([[<span class="hljs-string">&quot;src_title_js&quot;</span>], {
+  <span class="hljs-string">&quot;./src/title.js&quot;</span>:
+    <span class="hljs-function">(<span class="hljs-params">(<span class="hljs-built_in">module</span></span>) =&gt;</span> {
+      <span class="hljs-built_in">module</span>.exports = <span class="hljs-string">&apos;title&apos;</span>;
+    })
+}]);
+</code></pre>
+<h5 id="t437.2.1.2 Remote\dist\src_bootstrap_js.js">7.2.1.2 Remote\dist\src_bootstrap_js.js <a href="#t437.2.1.2 Remote\dist\src_bootstrap_js.js"> # </a></h5>
+<p>Remote\dist\src_bootstrap_js.js</p>
+<pre><code class="lang-js">(self[<span class="hljs-string">&quot;webpackChunkRemote&quot;</span>] = self[<span class="hljs-string">&quot;webpackChunkRemote&quot;</span>] || []).push([[<span class="hljs-string">&quot;src_bootstrap_js&quot;</span>], {
+  <span class="hljs-string">&quot;./src/bootstrap.js&quot;</span>:
+    <span class="hljs-function">(<span class="hljs-params">(<span class="hljs-built_in">module</span>, exports, <span class="hljs-built_in">require</span></span>) =&gt;</span> {
+      <span class="hljs-built_in">require</span>.r(exports);
+      <span class="hljs-keyword">var</span> title = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;./src/title.js&quot;</span>);
+      <span class="hljs-keyword">var</span> title_default = <span class="hljs-built_in">require</span>.n(title);
+      <span class="hljs-built_in">console</span>.log((title_default()));
+    }),
+  <span class="hljs-string">&quot;./src/title.js&quot;</span>:
+    <span class="hljs-function">(<span class="hljs-params">(<span class="hljs-built_in">module</span></span>) =&gt;</span> {
+      <span class="hljs-built_in">module</span>.exports = <span class="hljs-string">&apos;title&apos;</span>;
+    })
+}]);
+</code></pre>
+<h5 id="t447.2.1.3 Remote\dist\remoteEntry.js">7.2.1.3 Remote\dist\remoteEntry.js <a href="#t447.2.1.3 Remote\dist\remoteEntry.js"> # </a></h5>
+<p>Remote\dist\remoteEntry.js</p>
+<pre><code class="lang-js"><span class="hljs-built_in">window</span>.remote =
+    <span class="hljs-function">(<span class="hljs-params">(</span>) =&gt;</span> {
+        <span class="hljs-keyword">var</span> modules = ({
+            <span class="hljs-string">&quot;webpack/container/entry/remote&quot;</span>:
+                <span class="hljs-function">(<span class="hljs-params">(<span class="hljs-built_in">module</span>, exports, <span class="hljs-built_in">require</span></span>) =&gt;</span> {
+                    <span class="hljs-keyword">var</span> moduleMap = {
+                        <span class="hljs-string">&quot;./title&quot;</span>: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+                            <span class="hljs-keyword">return</span> <span class="hljs-built_in">require</span>.e(<span class="hljs-string">&quot;src_title_js&quot;</span>).then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;./src/title.js&quot;</span>));
+                        }
+                    };
+                    <span class="hljs-keyword">var</span> <span class="hljs-keyword">get</span> = (module) =&gt; {
+                        <span class="hljs-keyword">return</span> moduleMap[<span class="hljs-built_in">module</span>]();
+                    };
+                    <span class="hljs-keyword">var</span> init = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+                        <span class="hljs-keyword">return</span> <span class="hljs-built_in">Promise</span>.resolve();
+                    };
+                    <span class="hljs-built_in">require</span>.d(exports, {
+                        <span class="hljs-attr">get</span>: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-keyword">get</span>,
+                        init: () =&gt; init
+                    });
+                })
+        });
+        var cache = {};
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">require</span>(<span class="hljs-params">moduleId</span>) </span>{
+            <span class="hljs-keyword">if</span> (cache[moduleId]) {
+                <span class="hljs-keyword">return</span> cache[moduleId].exports;
+            }
+            <span class="hljs-keyword">var</span> <span class="hljs-built_in">module</span> = cache[moduleId] = {
+                <span class="hljs-attr">exports</span>: {}
+            };
+            modules[moduleId](<span class="hljs-built_in">module</span>, <span class="hljs-built_in">module</span>.exports, <span class="hljs-built_in">require</span>);
+            <span class="hljs-keyword">return</span> <span class="hljs-built_in">module</span>.exports;
+        }
+        <span class="hljs-built_in">require</span>.m = modules;
+        <span class="hljs-built_in">require</span>.d = <span class="hljs-function">(<span class="hljs-params">exports, definition</span>) =&gt;</span> {
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> key <span class="hljs-keyword">in</span> definition) {
+                <span class="hljs-built_in">Object</span>.defineProperty(exports, key, { <span class="hljs-attr">enumerable</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">get</span>: definition[key] });
+            }
+        };
+        <span class="hljs-built_in">require</span>.f = {};
+        <span class="hljs-built_in">require</span>.e = <span class="hljs-function">(<span class="hljs-params">chunkId</span>) =&gt;</span> {
+            <span class="hljs-keyword">return</span> <span class="hljs-built_in">Promise</span>.all(<span class="hljs-built_in">Object</span>.keys(<span class="hljs-built_in">require</span>.f).reduce(<span class="hljs-function">(<span class="hljs-params">promises, key</span>) =&gt;</span> {
+                <span class="hljs-built_in">require</span>.f[key](chunkId, promises);
+                <span class="hljs-keyword">return</span> promises;
+            }, []));
+        };
+        <span class="hljs-built_in">require</span>.u = <span class="hljs-function">(<span class="hljs-params">chunkId</span>) =&gt;</span> {
+            <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&quot;</span> + chunkId + <span class="hljs-string">&quot;.js&quot;</span>;
+        };
+        <span class="hljs-built_in">require</span>.o = <span class="hljs-function">(<span class="hljs-params">obj, prop</span>) =&gt;</span> <span class="hljs-built_in">Object</span>.prototype.hasOwnProperty.call(obj, prop)
+        <span class="hljs-built_in">require</span>.l = <span class="hljs-function">(<span class="hljs-params">url</span>) =&gt;</span> {
+            <span class="hljs-keyword">var</span> script = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&apos;script&apos;</span>);
+            script.src = url;
+            <span class="hljs-built_in">document</span>.head.appendChild(script);
+        };
+        <span class="hljs-built_in">require</span>.p = <span class="hljs-string">&quot;http://localhost:8080/&quot;</span>;
+        <span class="hljs-keyword">var</span> installedChunks = {
+            <span class="hljs-string">&quot;remote&quot;</span>: <span class="hljs-number">0</span>
+        };
+        <span class="hljs-built_in">require</span>.f.j = <span class="hljs-function">(<span class="hljs-params">chunkId, promises</span>) =&gt;</span> {
+            <span class="hljs-keyword">var</span> installedChunkData = installedChunks[chunkId];
+            <span class="hljs-keyword">if</span> (installedChunkData !== <span class="hljs-number">0</span>) {
+                <span class="hljs-keyword">if</span> (installedChunkData) {
+                    promises.push(installedChunkData[<span class="hljs-number">2</span>]);
+                } <span class="hljs-keyword">else</span> {
+                    <span class="hljs-keyword">var</span> promise = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> {
+                        installedChunkData = installedChunks[chunkId] = [resolve, reject];
+                    });
+                    promises.push(installedChunkData[<span class="hljs-number">2</span>] = promise);
+                    <span class="hljs-keyword">var</span> url = <span class="hljs-built_in">require</span>.p + <span class="hljs-built_in">require</span>.u(chunkId);
+                    <span class="hljs-built_in">require</span>.l(url);
+                }
+            }
+        };
+        <span class="hljs-keyword">var</span> webpackJsonpCallback = <span class="hljs-function">(<span class="hljs-params">parentChunkLoadingFunction,data</span>) =&gt;</span> {
+            <span class="hljs-keyword">var</span> [chunkIds, moreModules] = data;
+            <span class="hljs-keyword">var</span> moduleId, chunkId, i = <span class="hljs-number">0</span>, resolves = [];
+            <span class="hljs-keyword">for</span> (; i &lt; chunkIds.length; i++) {
+                chunkId = chunkIds[i];
+                <span class="hljs-keyword">if</span> (installedChunks[chunkId]) {
+                    resolves.push(installedChunks[chunkId][<span class="hljs-number">0</span>]);
+                }
+                installedChunks[chunkId] = <span class="hljs-number">0</span>;
+            }
+            <span class="hljs-keyword">for</span> (moduleId <span class="hljs-keyword">in</span> moreModules) {
+                <span class="hljs-built_in">require</span>.m[moduleId] = moreModules[moduleId];
+            }
+            <span class="hljs-keyword">if</span> (parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+            <span class="hljs-keyword">while</span> (resolves.length) {
+                resolves.shift()();
+            }
+        }
+        <span class="hljs-keyword">var</span> chunkLoadingGlobal = self[<span class="hljs-string">&quot;webpackChunkRemote&quot;</span>] = self[<span class="hljs-string">&quot;webpackChunkRemote&quot;</span>] || [];
+        chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(<span class="hljs-literal">null</span>, <span class="hljs-number">0</span>));
+        chunkLoadingGlobal.push = webpackJsonpCallback.bind(<span class="hljs-literal">null</span>, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;webpack/container/entry/remote&quot;</span>);
+    })();
+</code></pre>
+<h5 id="t457.2.1.4 Remote\dist\main.js">7.2.1.4 Remote\dist\main.js <a href="#t457.2.1.4 Remote\dist\main.js"> # </a></h5>
+<p>Remote\dist\main.js</p>
+<pre><code class="lang-js">(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-keyword">var</span> modules = ({});
+  <span class="hljs-keyword">var</span> cache = {};
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">require</span>(<span class="hljs-params">moduleId</span>) </span>{
+    <span class="hljs-keyword">if</span> (cache[moduleId]) {
+      <span class="hljs-keyword">return</span> cache[moduleId].exports;
+    }
+    <span class="hljs-keyword">var</span> <span class="hljs-built_in">module</span> = cache[moduleId] = {
+      <span class="hljs-attr">exports</span>: {}
+    };
+    modules[moduleId](<span class="hljs-built_in">module</span>, <span class="hljs-built_in">module</span>.exports, <span class="hljs-built_in">require</span>);
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">module</span>.exports;
+  }
+  <span class="hljs-built_in">require</span>.m = modules;
+  <span class="hljs-built_in">require</span>.n = <span class="hljs-function">(<span class="hljs-params"><span class="hljs-built_in">module</span></span>) =&gt;</span> {
+    <span class="hljs-keyword">var</span> getter = <span class="hljs-built_in">module</span> &amp;&amp; <span class="hljs-built_in">module</span>.__esModule ?
+      <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">module</span>[<span class="hljs-string">&apos;default&apos;</span>] :
+      <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">module</span>;
+    <span class="hljs-built_in">require</span>.d(getter, { <span class="hljs-attr">a</span>: getter });
+    <span class="hljs-keyword">return</span> getter;
+  };
+  <span class="hljs-built_in">require</span>.d = <span class="hljs-function">(<span class="hljs-params">exports, definition</span>) =&gt;</span> {
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> key <span class="hljs-keyword">in</span> definition) {
+      <span class="hljs-built_in">Object</span>.defineProperty(exports, key, { <span class="hljs-attr">enumerable</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">get</span>: definition[key] });
+    }
+  };
+  <span class="hljs-built_in">require</span>.f = {};
+  <span class="hljs-built_in">require</span>.e = <span class="hljs-function">(<span class="hljs-params">chunkId</span>) =&gt;</span> {
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Promise</span>.all(<span class="hljs-built_in">Object</span>.keys(<span class="hljs-built_in">require</span>.f).reduce(<span class="hljs-function">(<span class="hljs-params">promises, key</span>) =&gt;</span> {
+      <span class="hljs-built_in">require</span>.f[key](chunkId, promises);
+      <span class="hljs-keyword">return</span> promises;
+    }, []));
+  };
+  <span class="hljs-built_in">require</span>.u = <span class="hljs-function">(<span class="hljs-params">chunkId</span>) =&gt;</span> {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&quot;</span> + chunkId + <span class="hljs-string">&quot;.js&quot;</span>;
+  };
+  <span class="hljs-built_in">require</span>.l = <span class="hljs-function">(<span class="hljs-params">url</span>) =&gt;</span> {
+    <span class="hljs-keyword">var</span> script = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&apos;script&apos;</span>);
+    script.src = url;
+    <span class="hljs-built_in">document</span>.head.appendChild(script);
+  };
+  <span class="hljs-built_in">require</span>.r = <span class="hljs-function">(<span class="hljs-params">exports</span>) =&gt;</span> {
+    <span class="hljs-built_in">Object</span>.defineProperty(exports, <span class="hljs-built_in">Symbol</span>.toStringTag, { <span class="hljs-attr">value</span>: <span class="hljs-string">&apos;Module&apos;</span> });
+    <span class="hljs-built_in">Object</span>.defineProperty(exports, <span class="hljs-string">&apos;__esModule&apos;</span>, { <span class="hljs-attr">value</span>: <span class="hljs-literal">true</span> });
+  };
+  <span class="hljs-built_in">require</span>.p = <span class="hljs-string">&quot;http://localhost:8080/&quot;</span>;
+  <span class="hljs-keyword">var</span> installedChunks = {
+    <span class="hljs-string">&quot;main&quot;</span>: <span class="hljs-number">0</span>
+  };
+  <span class="hljs-built_in">require</span>.f.j = <span class="hljs-function">(<span class="hljs-params">chunkId, promises</span>) =&gt;</span> {
+    <span class="hljs-keyword">var</span> installedChunkData = installedChunks[chunkId];
+    <span class="hljs-keyword">if</span> (installedChunkData !== <span class="hljs-number">0</span>) {
+      <span class="hljs-keyword">if</span> (installedChunkData) {
+        promises.push(installedChunkData[<span class="hljs-number">2</span>]);
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">var</span> promise = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> {
+          installedChunkData = installedChunks[chunkId] = [resolve, reject];
+        });
+        promises.push(installedChunkData[<span class="hljs-number">2</span>] = promise);
+        <span class="hljs-keyword">var</span> url = <span class="hljs-built_in">require</span>.p + <span class="hljs-built_in">require</span>.u(chunkId);
+        <span class="hljs-built_in">require</span>.l(url);
+      }
+    }
+  };
+  <span class="hljs-keyword">var</span> webpackJsonpCallback = <span class="hljs-function">(<span class="hljs-params">parentChunkLoadingFunction,data</span>) =&gt;</span> {
+    <span class="hljs-keyword">var</span> [chunkIds, moreModules] = data;
+    <span class="hljs-keyword">var</span> moduleId, chunkId, i = <span class="hljs-number">0</span>, resolves = [];
+    <span class="hljs-keyword">for</span> (; i &lt; chunkIds.length; i++) {
+      chunkId = chunkIds[i];
+      <span class="hljs-keyword">if</span> (installedChunks[chunkId]) {
+        resolves.push(installedChunks[chunkId][<span class="hljs-number">0</span>]);
+      }
+      installedChunks[chunkId] = <span class="hljs-number">0</span>;
+    }
+    <span class="hljs-keyword">for</span> (moduleId <span class="hljs-keyword">in</span> moreModules) {
+      <span class="hljs-built_in">require</span>.m[moduleId] = moreModules[moduleId];
+    }
+    <span class="hljs-keyword">if</span> (parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+    <span class="hljs-keyword">while</span> (resolves.length) {
+      resolves.shift()();
+    }
+  }
+  <span class="hljs-keyword">var</span> chunkLoadingGlobal = self[<span class="hljs-string">&quot;webpackChunkRemote&quot;</span>] = self[<span class="hljs-string">&quot;webpackChunkRemote&quot;</span>] || [];
+  chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(<span class="hljs-literal">null</span>, <span class="hljs-number">0</span>));
+        chunkLoadingGlobal.push = webpackJsonpCallback.bind(<span class="hljs-literal">null</span>, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+  <span class="hljs-built_in">require</span>.e(<span class="hljs-string">&quot;src_bootstrap_js&quot;</span>).then(<span class="hljs-built_in">require</span>.bind(<span class="hljs-built_in">require</span>, <span class="hljs-string">&quot;./src/bootstrap.js&quot;</span>));
+})();
+</code></pre>
+<h5 id="t467.2.1.5 Remote\dist\index.html">7.2.1.5 Remote\dist\index.html <a href="#t467.2.1.5 Remote\dist\index.html"> # </a></h5>
+<p>Remote\dist\index.html</p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Document<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;root&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;http://localhost:8080/main.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;http://localhost:8080/remoteEntry.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h4 id="t477.2.2 Host&#x8F93;&#x51FA;">7.2.2 Host&#x8F93;&#x51FA; <a href="#t477.2.2 Host&#x8F93;&#x51FA;"> # </a></h4>
+<h5 id="t487.2.2.1 Host\dist\src_bootstrap_js.js">7.2.2.1 Host\dist\src_bootstrap_js.js <a href="#t487.2.2.1 Host\dist\src_bootstrap_js.js"> # </a></h5>
+<p>Host\dist\src_bootstrap_js.js</p>
+<pre><code class="lang-js">(self[<span class="hljs-string">&quot;webpackChunkHost&quot;</span>] = self[<span class="hljs-string">&quot;webpackChunkHost&quot;</span>] || []).push([[<span class="hljs-string">&quot;src_bootstrap_js&quot;</span>], {
+  <span class="hljs-string">&quot;./src/bootstrap.js&quot;</span>:
+    <span class="hljs-function">(<span class="hljs-params">(<span class="hljs-built_in">module</span>, exports, <span class="hljs-built_in">require</span></span>) =&gt;</span> {
+      <span class="hljs-built_in">require</span>.e(<span class="hljs-string">&quot;webpack_container_remote_remote_title&quot;</span>).then(<span class="hljs-built_in">require</span>.t.bind(<span class="hljs-built_in">require</span>, <span class="hljs-string">&quot;webpack/container/remote/remote/title&quot;</span>)).then(<span class="hljs-function"><span class="hljs-params">result</span> =&gt;</span> {
+        <span class="hljs-built_in">console</span>.log(result.default);
+      });
+    })
+}]);
+</code></pre>
+<h5 id="t497.2.2.2 Host\dist\main.js">7.2.2.2 Host\dist\main.js <a href="#t497.2.2.2 Host\dist\main.js"> # </a></h5>
+<p>Host\dist\main.js</p>
+<pre><code class="lang-js">(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    <span class="hljs-keyword">var</span> modules = ({
+        <span class="hljs-string">&quot;webpack/container/reference/remote&quot;</span>:
+            <span class="hljs-function">(<span class="hljs-params">(<span class="hljs-built_in">module</span>, exports, <span class="hljs-built_in">require</span></span>) =&gt;</span> {
+                <span class="hljs-built_in">module</span>.exports = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve</span>) =&gt;</span> {
+                    <span class="hljs-built_in">require</span>.l(<span class="hljs-string">&quot;http://localhost:8080/remoteEntry.js&quot;</span>,resolve);
+                }).then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> remote);
+            })
+    });
+    <span class="hljs-keyword">var</span> cache = {};
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">require</span>(<span class="hljs-params">moduleId</span>) </span>{
+        <span class="hljs-keyword">if</span> (cache[moduleId]) {
+            <span class="hljs-keyword">return</span> cache[moduleId].exports;
+        }
+        <span class="hljs-keyword">var</span> <span class="hljs-built_in">module</span> = cache[moduleId] = {
+            <span class="hljs-attr">exports</span>: {}
+        };
+        modules[moduleId](<span class="hljs-built_in">module</span>, <span class="hljs-built_in">module</span>.exports, <span class="hljs-built_in">require</span>);
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">module</span>.exports;
+    }
+    <span class="hljs-built_in">require</span>.m = modules;
+    <span class="hljs-built_in">require</span>.t = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">value</span>) </span>{
+        value = <span class="hljs-keyword">this</span>(value);
+        <span class="hljs-keyword">var</span> ns = <span class="hljs-built_in">Object</span>.create(<span class="hljs-literal">null</span>);
+        <span class="hljs-built_in">require</span>.r(ns);
+        <span class="hljs-keyword">var</span> def = { <span class="hljs-string">&apos;default&apos;</span>: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> value };
+        <span class="hljs-built_in">require</span>.d(ns, def);
+        <span class="hljs-keyword">return</span> ns;
+    };
+    <span class="hljs-built_in">require</span>.d = <span class="hljs-function">(<span class="hljs-params">exports, definition</span>) =&gt;</span> {
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> key <span class="hljs-keyword">in</span> definition) {
+            <span class="hljs-built_in">Object</span>.defineProperty(exports, key, { <span class="hljs-attr">enumerable</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">get</span>: definition[key] });
+        }
+    };
+    <span class="hljs-built_in">require</span>.f = {};
+    <span class="hljs-built_in">require</span>.e = <span class="hljs-function">(<span class="hljs-params">chunkId</span>) =&gt;</span> {
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">Promise</span>.all(<span class="hljs-built_in">Object</span>.keys(<span class="hljs-built_in">require</span>.f).reduce(<span class="hljs-function">(<span class="hljs-params">promises, key</span>) =&gt;</span> {
+            <span class="hljs-built_in">require</span>.f[key](chunkId, promises);
+            <span class="hljs-keyword">return</span> promises;
+        }, []));
+    };
+    <span class="hljs-built_in">require</span>.u = <span class="hljs-function">(<span class="hljs-params">chunkId</span>) =&gt;</span> {
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&quot;</span> + chunkId + <span class="hljs-string">&quot;.js&quot;</span>;
+    };
+    <span class="hljs-built_in">require</span>.l = <span class="hljs-function">(<span class="hljs-params">url, done</span>) =&gt;</span> {
+        <span class="hljs-keyword">var</span> script = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&apos;script&apos;</span>);
+        script.src = url;
+        script.onload = done
+        <span class="hljs-built_in">document</span>.head.appendChild(script);
+    };
+    <span class="hljs-built_in">require</span>.r = <span class="hljs-function">(<span class="hljs-params">exports</span>) =&gt;</span> {
+        <span class="hljs-built_in">Object</span>.defineProperty(exports, <span class="hljs-built_in">Symbol</span>.toStringTag, { <span class="hljs-attr">value</span>: <span class="hljs-string">&apos;Module&apos;</span> });
+        <span class="hljs-built_in">Object</span>.defineProperty(exports, <span class="hljs-string">&apos;__esModule&apos;</span>, { <span class="hljs-attr">value</span>: <span class="hljs-literal">true</span> });
+    };
+    <span class="hljs-keyword">var</span> chunkMapping = {
+        <span class="hljs-string">&quot;webpack_container_remote_remote_title&quot;</span>: [
+            <span class="hljs-string">&quot;webpack/container/remote/remote/title&quot;</span>
+        ]
+    };
+    <span class="hljs-keyword">var</span> idToExternalAndNameMapping = {
+        <span class="hljs-string">&quot;webpack/container/remote/remote/title&quot;</span>: [
+            <span class="hljs-string">&quot;./title&quot;</span>,
+            <span class="hljs-string">&quot;webpack/container/reference/remote&quot;</span>
+        ]
+    };
+    <span class="hljs-built_in">require</span>.f.remotes = <span class="hljs-function">(<span class="hljs-params">chunkId,promises</span>) =&gt;</span> {
+        chunkMapping[chunkId] &amp;&amp; chunkMapping[chunkId].forEach(<span class="hljs-function">(<span class="hljs-params">id</span>) =&gt;</span> {
+            <span class="hljs-keyword">var</span> [remoteModuleName,moduleId] = idToExternalAndNameMapping[id];
+            <span class="hljs-keyword">let</span> promise = <span class="hljs-built_in">require</span>(moduleId).then(<span class="hljs-function"><span class="hljs-params">external</span>=&gt;</span>{
+                <span class="hljs-keyword">return</span> external.init().then(<span class="hljs-function"><span class="hljs-params">()</span>=&gt;</span>{
+                    <span class="hljs-keyword">return</span> external.get(remoteModuleName).then(<span class="hljs-function">(<span class="hljs-params">factory</span>)=&gt;</span>{
+                        <span class="hljs-keyword">return</span> modules[id] = <span class="hljs-function">(<span class="hljs-params"><span class="hljs-built_in">module</span></span>) =&gt;</span> {
+                            <span class="hljs-built_in">module</span>.exports = factory();
+                        }
+                    });
+                });
+            })
+            promises.push(promise);
+        });
+    }
+    <span class="hljs-built_in">require</span>.p = <span class="hljs-string">&quot;http://localhost:8081/&quot;</span>;
+    <span class="hljs-keyword">var</span> installedChunks = {
+        <span class="hljs-string">&quot;main&quot;</span>: <span class="hljs-number">0</span>
+    };
+    <span class="hljs-built_in">require</span>.f.j = <span class="hljs-function">(<span class="hljs-params">chunkId, promises</span>) =&gt;</span> {
+        <span class="hljs-keyword">var</span> installedChunkData;
+        <span class="hljs-keyword">if</span> (<span class="hljs-string">&quot;src_bootstrap_js&quot;</span> == chunkId) {
+            <span class="hljs-keyword">var</span> promise = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> {
+                installedChunkData = installedChunks[chunkId] = [resolve, reject];
+            });
+            promises.push(installedChunkData[<span class="hljs-number">2</span>] = promise);
+            <span class="hljs-keyword">var</span> url = <span class="hljs-built_in">require</span>.p + <span class="hljs-built_in">require</span>.u(chunkId);
+            <span class="hljs-built_in">require</span>.l(url);
+        } <span class="hljs-keyword">else</span> {
+            installedChunks[chunkId] = <span class="hljs-number">0</span>;
+        }
+    };
+    <span class="hljs-keyword">var</span> webpackJsonpCallback = <span class="hljs-function">(<span class="hljs-params">data</span>) =&gt;</span> {
+        <span class="hljs-keyword">var</span> [chunkIds, moreModules] = data;
+        <span class="hljs-keyword">var</span> moduleId, chunkId, i = <span class="hljs-number">0</span>, resolves = [];
+        <span class="hljs-keyword">for</span> (; i &lt; chunkIds.length; i++) {
+            chunkId = chunkIds[i];
+            <span class="hljs-keyword">if</span> (installedChunks[chunkId]) {
+                resolves.push(installedChunks[chunkId][<span class="hljs-number">0</span>]);
+            }
+            installedChunks[chunkId] = <span class="hljs-number">0</span>;
+        }
+        <span class="hljs-keyword">for</span> (moduleId <span class="hljs-keyword">in</span> moreModules) {
+            <span class="hljs-built_in">require</span>.m[moduleId] = moreModules[moduleId];
+        }
+        <span class="hljs-keyword">while</span> (resolves.length) {
+            resolves.shift()();
+        }
+    }
+    <span class="hljs-keyword">var</span> chunkLoadingGlobal = self[<span class="hljs-string">&quot;webpackChunkHost&quot;</span>] = self[<span class="hljs-string">&quot;webpackChunkHost&quot;</span>] || [];
+    chunkLoadingGlobal.push = webpackJsonpCallback;
+    <span class="hljs-built_in">require</span>.e(<span class="hljs-string">&quot;src_bootstrap_js&quot;</span>).then(<span class="hljs-built_in">require</span>.t.bind(<span class="hljs-built_in">require</span>, <span class="hljs-string">&quot;./src/bootstrap.js&quot;</span>));
+})();
+</code></pre>
+<h5 id="t507.2.2.3 Host\dist\index.html">7.2.2.3 Host\dist\index.html <a href="#t507.2.2.3 Host\dist\index.html"> # </a></h5>
+<p>Host\dist\index.html</p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Document<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;root&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;http://localhost:8081/main.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+
+    </div>
+</div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+    aria-labelledby="loginModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="loginModalLabel">请登录</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="username" class="control-label">姓名:</label>
+                        <input type="text" class="form-control" id="username" placeholder="珠峰架构VIP会员系统用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">密码:</label>
+                        <input type="text" class="form-control" id="password" placeholder="珠峰架构VIP会员系统密码">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                    data-dismiss="modal">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

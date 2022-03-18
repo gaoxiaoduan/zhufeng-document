@@ -1,0 +1,2853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+   
+                      
+
+                        
+<div class="warpper">
+    <div class="page-toc">
+        <ul><li><a href="#t01.跑通webpack">1.跑通webpack</a><ul><li><a href="#t11.1 webpack.config.js">1.1 webpack.config.js</a></li><li><a href="#t21.2 src\index.js">1.2 src\index.js</a></li><li><a href="#t31.3 src\title.js">1.3 src\title.js</a></li><li><a href="#t41.4 cli.js">1.4 cli.js</a></li><li><a href="#t51.5 main.js">1.5 main.js</a></li></ul></li><li><a href="#t62. Compiler.run">2. Compiler.run</a><ul><li><a href="#t72.1 cli.js">2.1 cli.js</a></li><li><a href="#t82.2 webpack\index.js">2.2 webpack\index.js</a></li><li><a href="#t92.3 Compiler.js">2.3 Compiler.js</a></li><li><a href="#t102.4 NodeEnvironmentPlugin.js">2.4 NodeEnvironmentPlugin.js</a></li></ul></li><li><a href="#t113. 监听make事件">3. 监听make事件</a><ul><li><a href="#t123.1 Compiler.js">3.1 Compiler.js</a></li><li><a href="#t133.2 webpack\index.js">3.2 webpack\index.js</a></li><li><a href="#t143.3 WebpackOptionsApply.js">3.3 WebpackOptionsApply.js</a></li><li><a href="#t153.4 EntryOptionPlugin.js">3.4 EntryOptionPlugin.js</a></li><li><a href="#t163.5 SingleEntryPlugin.js">3.5 SingleEntryPlugin.js</a></li></ul></li><li><a href="#t174. make编译">4. make编译</a><ul><li><a href="#t184.1 Compiler.js">4.1 Compiler.js</a></li><li><a href="#t194.2 Compilation.js">4.2 Compilation.js</a></li><li><a href="#t204.3 NormalModuleFactory.js">4.3 NormalModuleFactory.js</a></li><li><a href="#t214.4 NormalModule.js">4.4 NormalModule.js</a></li><li><a href="#t224.5 Parser.js">4.5 Parser.js</a></li><li><a href="#t234.6 Stats.js">4.6 Stats.js</a></li></ul></li><li><a href="#t245. 编译模块和依赖">5. 编译模块和依赖</a><ul><li><a href="#t255.1 webpack\Compilation.js">5.1 webpack\Compilation.js</a></li><li><a href="#t265.2 NormalModule.js">5.2 NormalModule.js</a></li></ul></li><li><a href="#t276. seal">6. seal</a><ul><li><a href="#t286.1 Compiler.js">6.1 Compiler.js</a></li><li><a href="#t296.2 Compilation.js">6.2 Compilation.js</a></li><li><a href="#t306.3 webpack\Chunk.js">6.3 webpack\Chunk.js</a></li><li><a href="#t316.4 Stats.js">6.4 Stats.js</a></li></ul></li><li><a href="#t327.emit">7.emit</a><ul><li><a href="#t337.1 Compiler.js">7.1 Compiler.js</a></li><li><a href="#t347.2 Compilation.js">7.2 Compilation.js</a></li><li><a href="#t357.3 main.ejs">7.3 main.ejs</a></li></ul></li><li><a href="#t368.动态import">8.动态import</a><ul><li><a href="#t378.1 src\index.js">8.1 src\index.js</a></li><li><a href="#t388.2 Chunk.js">8.2 Chunk.js</a></li><li><a href="#t398.3 SingleEntryPlugin.js">8.3 SingleEntryPlugin.js</a></li><li><a href="#t408.4 Compilation.js">8.4 Compilation.js</a></li><li><a href="#t418.5 NormalModule.js">8.5 NormalModule.js</a></li><li><a href="#t428.6 webpack\mainTemplate.ejs">8.6 webpack\mainTemplate.ejs</a></li><li><a href="#t438.7 chunkTemplate.ejs">8.7 chunkTemplate.ejs</a></li></ul></li><li><a href="#t449.加载第三方模块">9.加载第三方模块</a><ul><li><a href="#t459.1 src\index.js">9.1 src\index.js</a></li><li><a href="#t469.2 NormalModule.js">9.2 NormalModule.js</a></li></ul></li><li><a href="#t4710.分离commons和vendor">10.分离commons和vendor</a><ul><li><a href="#t4810.1 webpack.config.js">10.1 webpack.config.js</a></li><li><a href="#t4910.2 src\entry1.js">10.2 src\entry1.js</a></li><li><a href="#t5010.3 src\entry2.js">10.3 src\entry2.js</a></li><li><a href="#t5110.4 EntryOptionPlugin.js">10.4 EntryOptionPlugin.js</a></li><li><a href="#t5210.5 Compilation.js">10.5 Compilation.js</a></li><li><a href="#t5310.6 mainDeferTemplate.ejs">10.6 mainDeferTemplate.ejs</a></li></ul></li><li><a href="#t5411.支持loader">11.支持loader</a><ul><li><a href="#t5511.1 webpack.config.js">11.1 webpack.config.js</a></li><li><a href="#t5611.2 src\index.js">11.2 src\index.js</a></li><li><a href="#t5711.3 NormalModule.js">11.3 NormalModule.js</a></li><li><a href="#t5811.4 less-loader.js">11.4 less-loader.js</a></li><li><a href="#t5911.5 style-loader.js">11.5 style-loader.js</a></li><li><a href="#t6011.6 index.less">11.6 index.less</a></li><li><a href="#t6111.7 loader-runner.js">11.7 loader-runner.js</a></li></ul></li></ul>
+    </div>
+    <div class="content markdown-body">
+        <h2 id="t01.&#x8DD1;&#x901A;webpack">1.&#x8DD1;&#x901A;webpack <a href="#t01.&#x8DD1;&#x901A;webpack"> # </a></h2>
+<h3 id="t11.1 webpack.config.js">1.1 webpack.config.js <a href="#t11.1 webpack.config.js"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
+<span class="hljs-built_in">module</span>.exports = {
+    <span class="hljs-attr">context</span>: process.cwd(),
+    <span class="hljs-attr">mode</span>: <span class="hljs-string">&apos;development&apos;</span>,
+    <span class="hljs-attr">devtool</span>: <span class="hljs-string">&apos;none&apos;</span>,
+    <span class="hljs-attr">entry</span>: <span class="hljs-string">&apos;./src/index.js&apos;</span>,
+    <span class="hljs-attr">output</span>: {
+        <span class="hljs-attr">path</span>: path.resolve(__dirname, <span class="hljs-string">&apos;dist&apos;</span>),
+        <span class="hljs-attr">filename</span>: <span class="hljs-string">&apos;[name].js&apos;</span>
+    }
+}
+</code></pre>
+<h3 id="t21.2 src\index.js">1.2 src\index.js <a href="#t21.2 src\index.js"> # </a></h3>
+<p>src\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> title = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./title&apos;</span>);
+<span class="hljs-built_in">console</span>.log(title);
+</code></pre>
+<h3 id="t31.3 src\title.js">1.3 src\title.js <a href="#t31.3 src\title.js"> # </a></h3>
+<p>src\title.js</p>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = <span class="hljs-string">&apos;title&apos;</span>;
+</code></pre>
+<h3 id="t41.4 cli.js">1.4 cli.js <a href="#t41.4 cli.js"> # </a></h3>
+<pre><code class="lang-js">node cli.js
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> webpack = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;webpack&quot;</span>);
+<span class="hljs-keyword">const</span> webpackOptions = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;./webpack.config&quot;</span>);
+<span class="hljs-keyword">const</span> compiler = webpack(webpackOptions);
+compiler.run(<span class="hljs-function">(<span class="hljs-params">err, stats</span>) =&gt;</span> {
+    <span class="hljs-built_in">console</span>.log(err);
+    <span class="hljs-built_in">console</span>.log(
+        stats.toJson({
+            <span class="hljs-attr">entries</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-attr">chunks</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-attr">modules</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-attr">_modules</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-attr">assets</span>: <span class="hljs-literal">true</span>
+        })
+    );
+});
+</code></pre>
+<pre><code class="lang-js">{
+  <span class="hljs-attr">errors</span>: [],
+  <span class="hljs-attr">warnings</span>: [],
+  <span class="hljs-attr">version</span>: <span class="hljs-string">&apos;4.43.0&apos;</span>,
+  <span class="hljs-attr">hash</span>: <span class="hljs-string">&apos;b8d9a2a39e55e9ed6360&apos;</span>,
+  <span class="hljs-attr">time</span>: <span class="hljs-number">64</span>,
+  <span class="hljs-attr">builtAt</span>: <span class="hljs-number">1589509767224</span>,
+  <span class="hljs-attr">publicPath</span>: <span class="hljs-string">&apos;&apos;</span>,
+  <span class="hljs-attr">outputPath</span>: <span class="hljs-string">&apos;C:\\vipdata\\prepare12\\zhufengwebpackprepare\\dist&apos;</span>,
+  <span class="hljs-attr">assetsByChunkName</span>: { <span class="hljs-attr">main</span>: <span class="hljs-string">&apos;main.js&apos;</span> },
+  <span class="hljs-attr">assets</span>: [
+    {
+      <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;main.js&apos;</span>,
+      <span class="hljs-attr">size</span>: <span class="hljs-number">4126</span>,
+      <span class="hljs-attr">chunks</span>: [<span class="hljs-built_in">Array</span>],
+      <span class="hljs-attr">chunkNames</span>: [<span class="hljs-built_in">Array</span>]
+    }
+  ],
+  <span class="hljs-attr">entrypoints</span>: {
+    <span class="hljs-attr">main</span>: {
+      <span class="hljs-attr">chunks</span>: [<span class="hljs-built_in">Array</span>],
+      <span class="hljs-attr">assets</span>: [<span class="hljs-built_in">Array</span>],
+    }
+  },
+  <span class="hljs-attr">namedChunkGroups</span>: {
+    <span class="hljs-attr">main</span>: {
+      <span class="hljs-attr">chunks</span>: [<span class="hljs-built_in">Array</span>],
+      <span class="hljs-attr">assets</span>: [<span class="hljs-built_in">Array</span>]
+    }
+  },
+  <span class="hljs-attr">chunks</span>: [
+    {
+      <span class="hljs-attr">id</span>: <span class="hljs-string">&apos;main&apos;</span>,
+      <span class="hljs-attr">rendered</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">initial</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">entry</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">size</span>: <span class="hljs-number">77</span>,
+      <span class="hljs-attr">names</span>: [<span class="hljs-built_in">Array</span>],
+      <span class="hljs-attr">files</span>: [<span class="hljs-built_in">Array</span>],
+      <span class="hljs-attr">hash</span>: <span class="hljs-string">&apos;1e1215aa688e72e663af&apos;</span>,
+      <span class="hljs-attr">siblings</span>: [],
+      <span class="hljs-attr">parents</span>: [],
+      <span class="hljs-attr">children</span>: [],
+      <span class="hljs-attr">childrenByOrder</span>: [<span class="hljs-built_in">Object</span>: <span class="hljs-literal">null</span> prototype] {},
+      <span class="hljs-attr">modules</span>: [<span class="hljs-built_in">Array</span>],
+      <span class="hljs-attr">filteredModules</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-attr">origins</span>: [<span class="hljs-built_in">Array</span>]
+    }
+  ],
+  <span class="hljs-attr">modules</span>: [
+    {
+      <span class="hljs-attr">id</span>: <span class="hljs-string">&apos;./src/index.js&apos;</span>,
+      <span class="hljs-attr">identifier</span>: <span class="hljs-string">&apos;C:\\vipdata\\prepare12\\zhufengwebpackprepare\\src\\index.js&apos;</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;./src/index.js&apos;</span>,
+      <span class="hljs-attr">index</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-attr">index2</span>: <span class="hljs-number">1</span>,
+      <span class="hljs-attr">size</span>: <span class="hljs-number">52</span>,
+      <span class="hljs-attr">cacheable</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">built</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">optional</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-attr">prefetched</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-attr">chunks</span>: [<span class="hljs-built_in">Array</span>]
+      <span class="hljs-attr">assets</span>: [],
+      <span class="hljs-attr">reasons</span>: [<span class="hljs-built_in">Array</span>],
+      <span class="hljs-attr">source</span>: <span class="hljs-string">&quot;let title = require(&apos;./title&apos;);\r\nconsole.log(title);&quot;</span>
+    },
+    {
+      <span class="hljs-attr">id</span>: <span class="hljs-string">&apos;./src/title.js&apos;</span>,
+      <span class="hljs-attr">identifier</span>: <span class="hljs-string">&apos;C:\\vipdata\\prepare12\\zhufengwebpackprepare\\src\\title.js&apos;</span>,
+      <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;./src/title.js&apos;</span>,
+      <span class="hljs-attr">index</span>: <span class="hljs-number">1</span>,
+      <span class="hljs-attr">index2</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-attr">size</span>: <span class="hljs-number">25</span>,
+      <span class="hljs-attr">cacheable</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">built</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">optional</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-attr">prefetched</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-attr">chunks</span>: [<span class="hljs-built_in">Array</span>],
+      <span class="hljs-attr">issuer</span>: <span class="hljs-string">&apos;C:\\vipdata\\prepare12\\zhufengwebpackprepare\\src\\index.js&apos;</span>,
+      <span class="hljs-attr">issuerId</span>: <span class="hljs-string">&apos;./src/index.js&apos;</span>,
+      <span class="hljs-attr">issuerName</span>: <span class="hljs-string">&apos;./src/index.js&apos;</span>,
+      <span class="hljs-attr">errors</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-attr">warnings</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-attr">assets</span>: [],
+      <span class="hljs-attr">reasons</span>: [<span class="hljs-built_in">Array</span>],
+      <span class="hljs-attr">source</span>: <span class="hljs-string">&quot;module.exports = &apos;title&apos;;&quot;</span>
+    }
+  ]
+}
+</code></pre>
+<h3 id="t51.5 main.js">1.5 main.js <a href="#t51.5 main.js"> # </a></h3>
+<ul>
+<li>^\s*(?=\r?$)\n</li>
+</ul>
+<pre><code class="lang-js">(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">modules</span>) </span>{
+  <span class="hljs-keyword">var</span> installedModules = {};
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">__webpack_require__</span>(<span class="hljs-params">moduleId</span>) </span>{
+    <span class="hljs-keyword">if</span> (installedModules[moduleId]) {
+      <span class="hljs-keyword">return</span> installedModules[moduleId].exports;
+    }
+    <span class="hljs-keyword">var</span> <span class="hljs-built_in">module</span> = installedModules[moduleId] = {
+      <span class="hljs-attr">i</span>: moduleId,
+      <span class="hljs-attr">l</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-attr">exports</span>: {}
+    };
+    modules[moduleId].call(<span class="hljs-built_in">module</span>.exports, <span class="hljs-built_in">module</span>, <span class="hljs-built_in">module</span>.exports, __webpack_require__);
+    <span class="hljs-built_in">module</span>.l = <span class="hljs-literal">true</span>;
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">module</span>.exports;
+  }
+  __webpack_require__.m = modules;
+  __webpack_require__.c = installedModules;
+  __webpack_require__.d = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">exports, name, getter</span>) </span>{
+    <span class="hljs-keyword">if</span> (!__webpack_require__.o(exports, name)) {
+      <span class="hljs-built_in">Object</span>.defineProperty(exports, name, { <span class="hljs-attr">enumerable</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">get</span>: getter });
+    }
+  };
+  __webpack_require__.r = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">exports</span>) </span>{
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">Symbol</span> !== <span class="hljs-string">&apos;undefined&apos;</span> &amp;&amp; <span class="hljs-built_in">Symbol</span>.toStringTag) {
+      <span class="hljs-built_in">Object</span>.defineProperty(exports, <span class="hljs-built_in">Symbol</span>.toStringTag, { <span class="hljs-attr">value</span>: <span class="hljs-string">&apos;Module&apos;</span> });
+    }
+    <span class="hljs-built_in">Object</span>.defineProperty(exports, <span class="hljs-string">&apos;__esModule&apos;</span>, { <span class="hljs-attr">value</span>: <span class="hljs-literal">true</span> });
+  };
+  __webpack_require__.t = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">value, mode</span>) </span>{
+    <span class="hljs-keyword">if</span> (mode &amp; <span class="hljs-number">1</span>) value = __webpack_require__(value);
+    <span class="hljs-keyword">if</span> (mode &amp; <span class="hljs-number">8</span>) <span class="hljs-keyword">return</span> value;
+    <span class="hljs-keyword">if</span> ((mode &amp; <span class="hljs-number">4</span>) &amp;&amp; <span class="hljs-keyword">typeof</span> value === <span class="hljs-string">&apos;object&apos;</span> &amp;&amp; value &amp;&amp; value.__esModule) <span class="hljs-keyword">return</span> value;
+    <span class="hljs-keyword">var</span> ns = <span class="hljs-built_in">Object</span>.create(<span class="hljs-literal">null</span>);
+    __webpack_require__.r(ns);
+    <span class="hljs-built_in">Object</span>.defineProperty(ns, <span class="hljs-string">&apos;default&apos;</span>, { <span class="hljs-attr">enumerable</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">value</span>: value });
+    <span class="hljs-keyword">if</span> (mode &amp; <span class="hljs-number">2</span> &amp;&amp; <span class="hljs-keyword">typeof</span> value != <span class="hljs-string">&apos;string&apos;</span>) <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> key <span class="hljs-keyword">in</span> value) __webpack_require__.d(ns, key, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">key</span>) </span>{ <span class="hljs-keyword">return</span> value[key]; }.bind(<span class="hljs-literal">null</span>, key));
+    <span class="hljs-keyword">return</span> ns;
+  };
+  __webpack_require__.n = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">module</span>) </span>{
+    <span class="hljs-keyword">var</span> getter = <span class="hljs-built_in">module</span> &amp;&amp; <span class="hljs-built_in">module</span>.__esModule ?
+      <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getDefault</span>(<span class="hljs-params"></span>) </span>{ <span class="hljs-keyword">return</span> <span class="hljs-built_in">module</span>[<span class="hljs-string">&apos;default&apos;</span>]; } :
+      <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getModuleExports</span>(<span class="hljs-params"></span>) </span>{ <span class="hljs-keyword">return</span> <span class="hljs-built_in">module</span>; };
+    __webpack_require__.d(getter, <span class="hljs-string">&apos;a&apos;</span>, getter);
+    <span class="hljs-keyword">return</span> getter;
+  };
+  __webpack_require__.o = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">object, property</span>) </span>{ <span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.prototype.hasOwnProperty.call(object, property); };
+  __webpack_require__.p = <span class="hljs-string">&quot;&quot;</span>;
+  <span class="hljs-keyword">return</span> __webpack_require__(__webpack_require__.s = <span class="hljs-string">&quot;./src/index.js&quot;</span>);
+})
+  ({
+    <span class="hljs-string">&quot;./src/index.js&quot;</span>:
+      (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">module, exports, __webpack_require__</span>) </span>{
+        <span class="hljs-keyword">let</span> title = __webpack_require__(<span class="hljs-comment">/*! ./title */</span> <span class="hljs-string">&quot;./src/title.js&quot;</span>);
+        <span class="hljs-built_in">console</span>.log(title);
+      }),
+    <span class="hljs-string">&quot;./src/title.js&quot;</span>:
+      (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">module, exports</span>) </span>{
+        <span class="hljs-built_in">module</span>.exports = <span class="hljs-string">&apos;title&apos;</span>;
+      })
+  });
+</code></pre>
+<h2 id="t62. Compiler.run">2. Compiler.run <a href="#t62. Compiler.run"> # </a></h2>
+<h3 id="t72.1 cli.js">2.1 cli.js <a href="#t72.1 cli.js"> # </a></h3>
+<pre><code class="lang-diff"><span class="hljs-addition">+const webpack = require(&quot;./webpack&quot;);</span>
+const webpackOptions = require(&quot;./webpack.config&quot;);
+const compiler = webpack(webpackOptions);
+compiler.run((err, stats) =&gt; {
+    console.log(
+        stats.toJson({
+            entries: true,
+            chunks: true,
+            modules: true,
+            _modules: true,
+            assets: true
+        })
+    );
+});
+</code></pre>
+<h3 id="t82.2 webpack\index.js">2.2 webpack\index.js <a href="#t82.2 webpack\index.js"> # </a></h3>
+<p>webpack\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> NodeEnvironmentPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;./plugins/NodeEnvironmentPlugin&quot;</span>);
+<span class="hljs-keyword">const</span> Compiler = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;./Compiler&quot;</span>);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">webpack</span>(<span class="hljs-params">options</span>) </span>{
+    options.context = options.context || path.resolve(process.cwd());
+    <span class="hljs-comment">//&#x521B;&#x5EFA;compiler</span>
+    <span class="hljs-keyword">let</span> compiler = <span class="hljs-keyword">new</span> Compiler(options.context);
+    <span class="hljs-comment">//&#x7ED9;compiler&#x6307;&#x5B9A;options</span>
+    compiler.options = <span class="hljs-built_in">Object</span>.assign(compiler.options, options);
+    <span class="hljs-comment">//&#x63D2;&#x4EF6;&#x8BBE;&#x7F6E;&#x8BFB;&#x5199;&#x6587;&#x4EF6;&#x7684;API</span>
+    <span class="hljs-keyword">new</span> NodeEnvironmentPlugin().apply(compiler);
+    <span class="hljs-comment">//&#x8C03;&#x7528;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x91CC;&#x914D;&#x7F6E;&#x7684;&#x63D2;&#x4EF6;&#x5E76;&#x4F9D;&#x6B21;&#x8C03;&#x7528;</span>
+    <span class="hljs-keyword">if</span> (options.plugins &amp;&amp; <span class="hljs-built_in">Array</span>.isArray(options.plugins)) {
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> plugin <span class="hljs-keyword">of</span> options.plugins) {
+            plugin.apply(compiler);
+        }
+    }
+    <span class="hljs-keyword">return</span> compiler;
+}
+
+<span class="hljs-built_in">module</span>.exports = webpack;
+</code></pre>
+<h3 id="t92.3 Compiler.js">2.3 Compiler.js <a href="#t92.3 Compiler.js"> # </a></h3>
+<p>webpack\Compiler.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> { Tapable } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;tapable&quot;</span>);
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Compiler</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Tapable</span> </span>{
+    <span class="hljs-keyword">constructor</span>(context) {
+        <span class="hljs-keyword">super</span>();
+        <span class="hljs-keyword">this</span>.options = {};
+        <span class="hljs-keyword">this</span>.context = context; <span class="hljs-comment">//&#x8BBE;&#x7F6E;&#x4E0A;&#x4E0B;&#x6587;&#x8DEF;&#x5F84;</span>
+        <span class="hljs-keyword">this</span>.hooks = {};
+    }
+    run(callback) {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Compiler run&quot;</span>);
+        callback(<span class="hljs-literal">null</span>, {
+            toJson() {
+                <span class="hljs-keyword">return</span> {
+                    <span class="hljs-attr">entries</span>: <span class="hljs-literal">true</span>,
+                    <span class="hljs-attr">chunks</span>: <span class="hljs-literal">true</span>,
+                    <span class="hljs-attr">modules</span>: <span class="hljs-literal">true</span>,
+                    <span class="hljs-attr">_modules</span>: <span class="hljs-literal">true</span>,
+                    <span class="hljs-attr">assets</span>: <span class="hljs-literal">true</span>
+                }
+            }
+        });
+    }
+}
+<span class="hljs-built_in">module</span>.exports = Compiler;
+</code></pre>
+<h3 id="t102.4 NodeEnvironmentPlugin.js">2.4 NodeEnvironmentPlugin.js <a href="#t102.4 NodeEnvironmentPlugin.js"> # </a></h3>
+<p>webpack\plugins\NodeEnvironmentPlugin.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;fs&quot;</span>);
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NodeEnvironmentPlugin</span> </span>{
+    apply(compiler) {
+        compiler.inputFileSystem = fs; <span class="hljs-comment">//&#x8BBE;&#x7F6E;&#x8BFB;&#x6587;&#x4EF6;&#x7684;&#x6A21;&#x5757;</span>
+        compiler.outputFileSystem = fs; <span class="hljs-comment">//&#x8BBE;&#x7F6E;&#x5199;&#x6587;&#x4EF6;&#x7684;&#x6A21;&#x5757;</span>
+    }
+}
+<span class="hljs-built_in">module</span>.exports = NodeEnvironmentPlugin;
+</code></pre>
+<h2 id="t113. &#x76D1;&#x542C;make&#x4E8B;&#x4EF6;">3. &#x76D1;&#x542C;make&#x4E8B;&#x4EF6; <a href="#t113. &#x76D1;&#x542C;make&#x4E8B;&#x4EF6;"> # </a></h2>
+<h3 id="t123.1 Compiler.js">3.1 Compiler.js <a href="#t123.1 Compiler.js"> # </a></h3>
+<p>webpack\Compiler.js</p>
+<pre><code class="lang-diff"><span class="hljs-addition">+const { Tapable, SyncBailHook, AsyncParallelHook } = require(&quot;tapable&quot;);</span>
+class Compiler extends Tapable {
+    constructor(context) {
+        super();
+        this.options = {};
+        this.context = context; //&#x8BBE;&#x7F6E;&#x4E0A;&#x4E0B;&#x6587;&#x8DEF;&#x5F84;
+<span class="hljs-addition">+       this.hooks = {</span>
+<span class="hljs-addition">+            entryOption: new SyncBailHook([&quot;context&quot;, &quot;entry&quot;]),</span>
+<span class="hljs-addition">+            make: new AsyncParallelHook([&quot;compilation&quot;])</span>
+<span class="hljs-addition">+       };</span>
+    }
+    run(callback) {
+        console.log(&quot;Compiler run&quot;);
+        callback(null, {
+            toJson() {
+                return {
+                    entries: true,
+                    chunks: true,
+                    modules: true,
+                    _modules: true,
+                    assets: true
+                }
+            }
+        });
+    }
+}
+module.exports = Compiler;
+</code></pre>
+<h3 id="t133.2 webpack\index.js">3.2 webpack\index.js <a href="#t133.2 webpack\index.js"> # </a></h3>
+<p>webpack\index.js</p>
+<pre><code class="lang-diff">const NodeEnvironmentPlugin = require(&quot;./plugins/NodeEnvironmentPlugin&quot;);
+<span class="hljs-addition">+const WebpackOptionsApply = require(&quot;./WebpackOptionsApply&quot;);</span>
+const Compiler = require(&quot;./Compiler&quot;);
+function webpack(options) {
+    options.context = options.context || path.resolve(process.cwd());
+    //&#x521B;&#x5EFA;compiler
+    let compiler = new Compiler(options.context);
+    //&#x7ED9;compiler&#x6307;&#x5B9A;options
+    compiler.options = Object.assign(compiler.options, options);
+    //&#x63D2;&#x4EF6;&#x8BBE;&#x7F6E;&#x8BFB;&#x5199;&#x6587;&#x4EF6;&#x7684;API
+    new NodeEnvironmentPlugin().apply(compiler);
+    //&#x8C03;&#x7528;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x91CC;&#x914D;&#x7F6E;&#x7684;&#x63D2;&#x4EF6;&#x5E76;&#x4F9D;&#x6B21;&#x8C03;&#x7528;
+    if (options.plugins &amp;&amp; Array.isArray(options.plugins)) {
+        for (const plugin of options.plugins) {
+            plugin.apply(compiler);
+        }
+    }
+<span class="hljs-addition">+    new WebpackOptionsApply().process(options, compiler); //&#x5904;&#x7406;&#x53C2;&#x6570;</span>
+    return compiler;
+}
+
+module.exports = webpack;
+</code></pre>
+<h3 id="t143.3 WebpackOptionsApply.js">3.3 WebpackOptionsApply.js <a href="#t143.3 WebpackOptionsApply.js"> # </a></h3>
+<p>webpack\WebpackOptionsApply.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> EntryOptionPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;./plugins/EntryOptionPlugin&quot;</span>);
+<span class="hljs-built_in">module</span>.exports = <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WebpackOptionsApply</span> </span>{
+    process(options, compiler) {
+        <span class="hljs-comment">//&#x6302;&#x8F7D;&#x5165;&#x53E3;&#x6587;&#x4EF6;&#x63D2;&#x4EF6;</span>
+        <span class="hljs-keyword">new</span> EntryOptionPlugin().apply(compiler);
+        <span class="hljs-comment">//&#x89E6;&#x53D1;entryOption&#x4E8B;&#x4EF6;&#x6267;&#x884C;</span>
+        compiler.hooks.entryOption.call(options.context, options.entry);
+    }
+};
+</code></pre>
+<h3 id="t153.4 EntryOptionPlugin.js">3.4 EntryOptionPlugin.js <a href="#t153.4 EntryOptionPlugin.js"> # </a></h3>
+<p>webpack\plugins\EntryOptionPlugin.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> SingleEntryPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;./SingleEntryPlugin&quot;</span>);
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EntryOptionPlugin</span> </span>{
+    apply(compiler) {
+        compiler.hooks.entryOption.tap(<span class="hljs-string">&quot;EntryOptionPlugin&quot;</span>, (context, entry) =&gt; {
+            <span class="hljs-keyword">new</span> SingleEntryPlugin(context, entry, <span class="hljs-string">&quot;main&quot;</span>).apply(compiler);
+        });
+    }
+}
+
+<span class="hljs-built_in">module</span>.exports = EntryOptionPlugin;
+</code></pre>
+<h3 id="t163.5 SingleEntryPlugin.js">3.5 SingleEntryPlugin.js <a href="#t163.5 SingleEntryPlugin.js"> # </a></h3>
+<p>webpack\plugins\SingleEntryPlugin.js</p>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EntryOptionPlugin</span> </span>{
+    <span class="hljs-keyword">constructor</span>(context, entry, name) {
+        <span class="hljs-keyword">this</span>.context = context;
+        <span class="hljs-keyword">this</span>.entry = entry;
+        <span class="hljs-keyword">this</span>.name = name;
+    }
+    apply(compiler) {
+        compiler.hooks.make.tapAsync(
+            <span class="hljs-string">&quot;SingleEntryPlugin&quot;</span>,
+            (compilation, callback) =&gt; {
+                <span class="hljs-comment">//&#x5165;&#x53E3;&#x6587;&#x4EF6; &#x4EE3;&#x7801;&#x5757;&#x7684;&#x540D;&#x79F0; context&#x4E0A;&#x4E0B;&#x6587;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;</span>
+                <span class="hljs-keyword">const</span> { entry, name, context } = <span class="hljs-keyword">this</span>;
+                compilation.addEntry(context, entry, name, callback);
+            }
+        );
+    }
+};
+<span class="hljs-built_in">module</span>.exports = EntryOptionPlugin;
+</code></pre>
+<h2 id="t174. make&#x7F16;&#x8BD1;">4. make&#x7F16;&#x8BD1; <a href="#t174. make&#x7F16;&#x8BD1;"> # </a></h2>
+<h3 id="t184.1 Compiler.js">4.1 Compiler.js <a href="#t184.1 Compiler.js"> # </a></h3>
+<p>webpack\Compiler.js</p>
+<pre><code class="lang-diff"><span class="hljs-addition">+const { Tapable, SyncHook, SyncBailHook, AsyncParallelHook, AsyncSeriesHook } = require(&quot;tapable&quot;);</span>
+<span class="hljs-addition">+const Compilation = require(&apos;./Compilation&apos;);</span>
+<span class="hljs-addition">+const NormalModuleFactory = require(&apos;./NormalModuleFactory&apos;);</span>
+<span class="hljs-addition">+const Stats = require(&apos;./Stats&apos;);</span>
+class Compiler extends Tapable {
+    constructor(context) {
+        super();
+        this.options = {};
+        this.context = context; //&#x8BBE;&#x7F6E;&#x4E0A;&#x4E0B;&#x6587;&#x8DEF;&#x5F84;
+        this.hooks = {
+            entryOption: new SyncBailHook([&quot;context&quot;, &quot;entry&quot;]),
+<span class="hljs-addition">+            make: new AsyncParallelHook([&quot;compilation&quot;]),</span>
+<span class="hljs-addition">+            beforeRun: new AsyncSeriesHook([&quot;compiler&quot;]),</span>
+<span class="hljs-addition">+            run: new AsyncSeriesHook([&quot;compiler&quot;]),</span>
+<span class="hljs-addition">+            beforeCompile: new AsyncSeriesHook([&quot;params&quot;]),</span>
+<span class="hljs-addition">+            compile: new SyncHook([&quot;params&quot;]),</span>
+<span class="hljs-addition">+            make: new AsyncParallelHook([&quot;compilation&quot;]),</span>
+<span class="hljs-addition">+            thisCompilation: new SyncHook([&quot;compilation&quot;, &quot;params&quot;]),</span>
+<span class="hljs-addition">+            compilation: new SyncHook([&quot;compilation&quot;, &quot;params&quot;]),</span>
+<span class="hljs-addition">+            done: new AsyncSeriesHook([&quot;stats&quot;])</span>
+        };
+    }
+<span class="hljs-addition">+    run(finalCallback) {</span>
+<span class="hljs-addition">+        //&#x7F16;&#x8BD1;&#x5B8C;&#x6210;&#x540E;&#x7684;&#x56DE;&#x8C03;</span>
+<span class="hljs-addition">+        const onCompiled = (err, compilation) =&gt; {</span>
+<span class="hljs-addition">+            console.log(&apos;onCompiled&apos;);</span>
+<span class="hljs-addition">+            finalCallback(err, new Stats(compilation));</span>
+<span class="hljs-addition">+        };</span>
+<span class="hljs-addition">+        //&#x51C6;&#x5907;&#x8FD0;&#x884C;&#x7F16;&#x8BD1;</span>
+<span class="hljs-addition">+        this.hooks.beforeRun.callAsync(this, err =&gt; {</span>
+<span class="hljs-addition">+            //&#x8FD0;&#x884C;</span>
+<span class="hljs-addition">+            this.hooks.run.callAsync(this, err =&gt; {</span>
+<span class="hljs-addition">+                this.compile(onCompiled); //&#x5F00;&#x59CB;&#x7F16;&#x8BD1;,&#x7F16;&#x8BD1;&#x5B8C;&#x6210;&#x540E;&#x6267;&#x884C;conCompiled&#x56DE;&#x8C03;</span>
+<span class="hljs-addition">+            });</span>
+<span class="hljs-addition">+        });</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    compile(onCompiled) {</span>
+<span class="hljs-addition">+        const params = this.newCompilationParams();</span>
+<span class="hljs-addition">+        this.hooks.beforeCompile.callAsync(params, err =&gt; {</span>
+<span class="hljs-addition">+            this.hooks.compile.call(params);</span>
+<span class="hljs-addition">+            const compilation = this.newCompilation(params);</span>
+<span class="hljs-addition">+            this.hooks.make.callAsync(compilation, err =&gt; {</span>
+<span class="hljs-addition">+                console.log(&apos;make&#x5B8C;&#x6210;&apos;);</span>
+<span class="hljs-addition">+                onCompiled(err, compilation);</span>
+<span class="hljs-addition">+            });</span>
+<span class="hljs-addition">+        });</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    newCompilationParams() {</span>
+<span class="hljs-addition">+        const params = {</span>
+<span class="hljs-addition">+            normalModuleFactory: new NormalModuleFactory()</span>
+<span class="hljs-addition">+        };</span>
+<span class="hljs-addition">+        return params;</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    newCompilation(params) {</span>
+<span class="hljs-addition">+        const compilation = new Compilation(this);</span>
+<span class="hljs-addition">+        this.hooks.thisCompilation.call(compilation, params);</span>
+<span class="hljs-addition">+        this.hooks.compilation.call(compilation, params);</span>
+<span class="hljs-addition">+        return compilation;</span>
+<span class="hljs-addition">+    }</span>
+}
+module.exports = Compiler;
+</code></pre>
+<h3 id="t194.2 Compilation.js">4.2 Compilation.js <a href="#t194.2 Compilation.js"> # </a></h3>
+<p>webpack\Compilation.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> NormalModuleFactory = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./NormalModuleFactory&apos;</span>);
+<span class="hljs-keyword">const</span> { Tapable, SyncHook } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;tapable&quot;</span>);
+<span class="hljs-keyword">const</span> Parser = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./Parser&apos;</span>);
+<span class="hljs-keyword">const</span> parser = <span class="hljs-keyword">new</span> Parser();
+<span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Compilation</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Tapable</span> </span>{
+    <span class="hljs-keyword">constructor</span>(compiler) {
+        <span class="hljs-keyword">super</span>();
+        <span class="hljs-keyword">this</span>.compiler = compiler;
+        <span class="hljs-keyword">this</span>.options = compiler.options;
+        <span class="hljs-keyword">this</span>.context = compiler.context;
+        <span class="hljs-keyword">this</span>.inputFileSystem = compiler.inputFileSystem;
+        <span class="hljs-keyword">this</span>.outputFileSystem = compiler.outputFileSystem;
+        <span class="hljs-keyword">this</span>.entries = [];
+        <span class="hljs-keyword">this</span>.modules = [];
+        <span class="hljs-keyword">this</span>.hooks = {
+            <span class="hljs-attr">succeedModule</span>: <span class="hljs-keyword">new</span> SyncHook([<span class="hljs-string">&quot;module&quot;</span>])
+        }
+    }
+    <span class="hljs-comment">//context ./src/index.js main callback(&#x7EC8;&#x7EA7;&#x56DE;&#x8C03;)</span>
+    addEntry(context, entry, name, callback) {
+        <span class="hljs-keyword">this</span>._addModuleChain(context, entry, name, (err, <span class="hljs-built_in">module</span>) =&gt; {
+            callback(err, <span class="hljs-built_in">module</span>);
+        });
+    }
+    _addModuleChain(context, entry, name, callback) {
+        <span class="hljs-keyword">const</span> moduleFactory = <span class="hljs-keyword">new</span> NormalModuleFactory();
+        <span class="hljs-keyword">let</span> <span class="hljs-built_in">module</span> = moduleFactory.create(
+            {
+                name,  <span class="hljs-comment">//&#x6A21;&#x5757;&#x6240;&#x5C5E;&#x7684;&#x4EE3;&#x7801;&#x5757;&#x7684;&#x540D;&#x79F0;</span>
+                <span class="hljs-attr">context</span>: <span class="hljs-keyword">this</span>.context,<span class="hljs-comment">//&#x4E0A;&#x4E0B;&#x6587;</span>
+                <span class="hljs-attr">rawRequest</span>: entry,
+                <span class="hljs-attr">resource</span>: path.posix.join(context, entry),
+                parser
+            });<span class="hljs-comment">//&#x6A21;&#x5757;&#x5B8C;&#x6574;&#x8DEF;&#x5F84;</span>
+
+        <span class="hljs-keyword">this</span>.modules.push(<span class="hljs-built_in">module</span>);
+        <span class="hljs-keyword">this</span>.entries.push(<span class="hljs-built_in">module</span>);<span class="hljs-comment">//&#x628A;&#x7F16;&#x8BD1;&#x597D;&#x7684;&#x6A21;&#x5757;&#x6DFB;&#x52A0;&#x5230;&#x5165;&#x53E3;&#x5217;&#x8868;&#x91CC;&#x9762;</span>
+        <span class="hljs-keyword">const</span> afterBuild = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+            <span class="hljs-keyword">if</span> (<span class="hljs-built_in">module</span>.dependencies) {
+                <span class="hljs-keyword">this</span>.processModuleDependencies(<span class="hljs-built_in">module</span>, err =&gt; {
+                    callback(<span class="hljs-literal">null</span>, <span class="hljs-built_in">module</span>);
+                });
+            } <span class="hljs-keyword">else</span> {
+                <span class="hljs-keyword">return</span> callback(<span class="hljs-literal">null</span>, <span class="hljs-built_in">module</span>);
+            }
+        };
+        <span class="hljs-keyword">this</span>.buildModule(<span class="hljs-built_in">module</span>, afterBuild);
+
+    }
+    buildModule(<span class="hljs-built_in">module</span>, afterBuild) {
+        <span class="hljs-built_in">module</span>.build(<span class="hljs-keyword">this</span>, (err) =&gt; {
+            <span class="hljs-keyword">this</span>.hooks.succeedModule.call(<span class="hljs-built_in">module</span>);
+            <span class="hljs-keyword">return</span> afterBuild();
+        });
+    }
+}
+<span class="hljs-built_in">module</span>.exports = Compilation;
+</code></pre>
+<h3 id="t204.3 NormalModuleFactory.js">4.3 NormalModuleFactory.js <a href="#t204.3 NormalModuleFactory.js"> # </a></h3>
+<p>webpack\NormalModuleFactory.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> NormalModule = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./NormalModule&apos;</span>);
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NormalModuleFactory</span> </span>{
+    create(data) {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> NormalModule(data);
+    }
+}
+<span class="hljs-built_in">module</span>.exports = NormalModuleFactory;
+</code></pre>
+<h3 id="t214.4 NormalModule.js">4.4 NormalModule.js <a href="#t214.4 NormalModule.js"> # </a></h3>
+<p>webpack\NormalModule.js</p>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NormalModule</span> </span>{
+    <span class="hljs-keyword">constructor</span>({ name, context, rawRequest, resource, parser }) {
+        <span class="hljs-keyword">this</span>.name = name;
+        <span class="hljs-keyword">this</span>.context = context;
+        <span class="hljs-keyword">this</span>.rawRequest = rawRequest;
+        <span class="hljs-keyword">this</span>.resource = resource;
+        <span class="hljs-keyword">this</span>.parser = parser;
+        <span class="hljs-keyword">this</span>._source = <span class="hljs-literal">null</span>;
+        <span class="hljs-keyword">this</span>._ast = <span class="hljs-literal">null</span>;
+    }
+    <span class="hljs-comment">//&#x89E3;&#x6790;&#x4F9D;&#x8D56;</span>
+    build(compilation, callback) {
+        <span class="hljs-keyword">this</span>.doBuild(compilation, err =&gt; {
+            <span class="hljs-keyword">this</span>._ast = <span class="hljs-keyword">this</span>.parser.parse(<span class="hljs-keyword">this</span>._source);
+            callback();
+        });
+    }
+    <span class="hljs-comment">//&#x83B7;&#x53D6;&#x6A21;&#x5757;&#x4EE3;&#x7801;</span>
+    doBuild(compilation, callback) {
+        <span class="hljs-keyword">let</span> originalSource = <span class="hljs-keyword">this</span>.getSource(<span class="hljs-keyword">this</span>.resource, compilation);
+        <span class="hljs-keyword">this</span>._source = originalSource;
+        callback();
+    }
+    getSource(resource, compilation) {
+        <span class="hljs-keyword">let</span> originalSource = compilation.inputFileSystem.readFileSync(resource, <span class="hljs-string">&apos;utf8&apos;</span>);
+        <span class="hljs-keyword">return</span> originalSource;
+    }
+}
+<span class="hljs-built_in">module</span>.exports = NormalModule;
+</code></pre>
+<h3 id="t224.5 Parser.js">4.5 Parser.js <a href="#t224.5 Parser.js"> # </a></h3>
+<p>webpack\Parser.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> babylon = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;babylon&apos;</span>);
+<span class="hljs-keyword">const</span> { Tapable } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;tapable&quot;</span>);
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Parser</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Tapable</span> </span>{
+    <span class="hljs-keyword">constructor</span>() {
+        <span class="hljs-keyword">super</span>();
+    }
+    parse(source) {
+        <span class="hljs-keyword">return</span> babylon.parse(source, { <span class="hljs-attr">sourceType</span>: <span class="hljs-string">&apos;module&apos;</span>, <span class="hljs-attr">plugins</span>: [<span class="hljs-string">&apos;dynamicImport&apos;</span>] });
+    }
+}
+<span class="hljs-built_in">module</span>.exports = Parser;
+</code></pre>
+<h3 id="t234.6 Stats.js">4.6 Stats.js <a href="#t234.6 Stats.js"> # </a></h3>
+<p>webpack\Stats.js</p>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Stats</span> </span>{
+    <span class="hljs-keyword">constructor</span>(compilation) {
+        <span class="hljs-keyword">this</span>.entries = compilation.entries;
+        <span class="hljs-keyword">this</span>.modules = compilation.modules;
+    }
+    toJson() {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+    }
+}
+<span class="hljs-built_in">module</span>.exports = Stats;
+</code></pre>
+<h2 id="t245. &#x7F16;&#x8BD1;&#x6A21;&#x5757;&#x548C;&#x4F9D;&#x8D56;">5. &#x7F16;&#x8BD1;&#x6A21;&#x5757;&#x548C;&#x4F9D;&#x8D56; <a href="#t245. &#x7F16;&#x8BD1;&#x6A21;&#x5757;&#x548C;&#x4F9D;&#x8D56;"> # </a></h2>
+<h3 id="t255.1 webpack\Compilation.js">5.1 webpack\Compilation.js <a href="#t255.1 webpack\Compilation.js"> # </a></h3>
+<p>webpack\Compilation.js</p>
+<pre><code class="lang-diff">const NormalModuleFactory = require(&apos;./NormalModuleFactory&apos;);
+<span class="hljs-addition">+const async = require(&apos;neo-async&apos;);</span>
+const { Tapable, SyncHook } = require(&quot;tapable&quot;);
+const Parser = require(&apos;./Parser&apos;);
+const parser = new Parser();
+const path = require(&apos;path&apos;);
+class Compilation extends Tapable {
+    constructor(compiler) {
+        super();
+        this.compiler = compiler;
+        this.options = compiler.options;
+        this.context = compiler.context;
+        this.inputFileSystem = compiler.inputFileSystem;
+        this.outputFileSystem = compiler.outputFileSystem;
+        this.entries = [];
+        this.modules = [];
+<span class="hljs-addition">+        this._modules = {};</span>
+        this.hooks = {
+            succeedModule: new SyncHook([&quot;module&quot;])
+        }
+    }
+    //context ./src/index.js main callback(&#x7EC8;&#x7EA7;&#x56DE;&#x8C03;)
+    addEntry(context, entry, name, callback) {
+        this._addModuleChain(context, entry, name, (err, module) =&gt; {
+            callback(err, module);
+        });
+    }
+    _addModuleChain(context, entry, name, callback) {
+        const moduleFactory = new NormalModuleFactory();
+        let module = moduleFactory.create(
+            {
+                name,  //&#x6A21;&#x5757;&#x6240;&#x5C5E;&#x7684;&#x4EE3;&#x7801;&#x5757;&#x7684;&#x540D;&#x79F0;
+                context: this.context,//&#x4E0A;&#x4E0B;&#x6587;
+                rawRequest: entry,
+                resource: path.posix.join(context, entry),
+                parser
+            });//&#x6A21;&#x5757;&#x5B8C;&#x6574;&#x8DEF;&#x5F84;
+<span class="hljs-addition">+        module.moduleId = &apos;.&apos; + path.posix.sep + path.posix.relative(this.context, module.resource);</span>
+        this.modules.push(module);
+        this.entries.push(module);//&#x628A;&#x7F16;&#x8BD1;&#x597D;&#x7684;&#x6A21;&#x5757;&#x6DFB;&#x52A0;&#x5230;&#x5165;&#x53E3;&#x5217;&#x8868;&#x91CC;&#x9762;
+        const afterBuild = () =&gt; {
+            if (module.dependencies) {
+                this.processModuleDependencies(module, err =&gt; {
+                    callback(null, module);
+                });
+            } else {
+                return callback(null, module);
+            }
+        };
+        this.buildModule(module, afterBuild);
+
+    }
+<span class="hljs-addition">+    processModuleDependencies(module, callback) {</span>
+<span class="hljs-addition">+        let dependencies = module.dependencies;</span>
+<span class="hljs-addition">+        async.forEach(dependencies, (dependency, done) =&gt; {</span>
+<span class="hljs-addition">+            let { name, context, rawRequest, resource, moduleId } = dependency;</span>
+<span class="hljs-addition">+            const moduleFactory = new NormalModuleFactory();</span>
+<span class="hljs-addition">+            let module = moduleFactory.create(</span>
+<span class="hljs-addition">+                {</span>
+<span class="hljs-addition">+                    name,</span>
+<span class="hljs-addition">+                    context,</span>
+<span class="hljs-addition">+                    rawRequest,</span>
+<span class="hljs-addition">+                    moduleId,</span>
+<span class="hljs-addition">+                    resource,</span>
+<span class="hljs-addition">+                    parser</span>
+<span class="hljs-addition">+                });</span>
+<span class="hljs-addition">+            this.modules.push(module);</span>
+<span class="hljs-addition">+            this._modules[module.moduleId] = module;</span>
+<span class="hljs-addition">+            const afterBuild = () =&gt; {</span>
+<span class="hljs-addition">+                if (module.dependencies) {</span>
+<span class="hljs-addition">+                    this.processModuleDependencies(module, err =&gt; {</span>
+<span class="hljs-addition">+                        done(null, module);</span>
+<span class="hljs-addition">+                    });</span>
+<span class="hljs-addition">+                } else {</span>
+<span class="hljs-addition">+                    return done(null, module);</span>
+<span class="hljs-addition">+                }</span>
+<span class="hljs-addition">+            };</span>
+<span class="hljs-addition">+            this.buildModule(module, afterBuild);</span>
+<span class="hljs-addition">+        }, callback);</span>
+<span class="hljs-addition">+    }</span>
+    buildModule(module, afterBuild) {
+        module.build(this, (err) =&gt; {
+            this.hooks.succeedModule.call(module);
+            return afterBuild();
+        });
+    }
+}
+module.exports = Compilation;
+</code></pre>
+<h3 id="t265.2 NormalModule.js">5.2 NormalModule.js <a href="#t265.2 NormalModule.js"> # </a></h3>
+<p>webpack\NormalModule.js</p>
+<pre><code class="lang-diff"><span class="hljs-addition">+const path = require(&apos;path&apos;);</span>
+<span class="hljs-addition">+const types = require(&apos;babel-types&apos;);</span>
+<span class="hljs-addition">+const generate = require(&apos;babel-generator&apos;).default;</span>
+<span class="hljs-addition">+const traverse = require(&apos;babel-traverse&apos;).default;</span>
+class NormalModule {
+<span class="hljs-addition">+    constructor({ name, context, rawRequest, resource, parser, moduleId }) {</span>
+        this.name = name;
+        this.context = context;
+        this.rawRequest = rawRequest;
+        this.resource = resource;
+<span class="hljs-addition">+        this.moduleId = moduleId;</span>
+        this.parser = parser;
+        this._source = null;
+        this._ast = null;
+<span class="hljs-addition">+        this.dependencies = [];</span>
+    }
+    //&#x89E3;&#x6790;&#x4F9D;&#x8D56;
+    build(compilation, callback) {
+        this.doBuild(compilation, err =&gt; {
+<span class="hljs-addition">+            let originalSource = this.getSource(this.resource, compilation);</span>
+<span class="hljs-addition">+            // &#x5C06; &#x5F53;&#x524D;&#x6A21;&#x5757; &#x7684;&#x5185;&#x5BB9;&#x8F6C;&#x6362;&#x6210; AST</span>
+<span class="hljs-addition">+            const ast = this.parser.parse(originalSource);</span>
+<span class="hljs-addition">+            traverse(ast, {</span>
+<span class="hljs-addition">+                // &#x5982;&#x679C;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x65F6;</span>
+<span class="hljs-addition">+                CallExpression: (nodePath) =&gt; {</span>
+<span class="hljs-addition">+                    let node = nodePath.node;</span>
+<span class="hljs-addition">+                    // &#x5F53;&#x524D;&#x8282;&#x70B9;&#x662F; require &#x65F6;</span>
+<span class="hljs-addition">+                    if (node.callee.name === &apos;require&apos;) {</span>
+<span class="hljs-addition">+                        //&#x4FEE;&#x6539;require&#x4E3A;__webpack_require__</span>
+<span class="hljs-addition">+                        node.callee.name = &apos;__webpack_require__&apos;;</span>
+<span class="hljs-addition">+                        //&#x83B7;&#x53D6;&#x8981;&#x52A0;&#x8F7D;&#x7684;&#x6A21;&#x5757;ID</span>
+<span class="hljs-addition">+                        let moduleName = node.arguments[0].value;</span>
+<span class="hljs-addition">+                        //&#x83B7;&#x53D6;&#x6269;&#x5C55;&#x540D;</span>
+<span class="hljs-addition">+                        let extension = moduleName.split(path.posix.sep).pop().indexOf(&apos;.&apos;) == -1 ? &apos;.js&apos; : &apos;&apos;;</span>
+<span class="hljs-addition">+                        //&#x83B7;&#x53D6;&#x4F9D;&#x8D56;&#x6A21;&#x5757;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;</span>
+<span class="hljs-addition">+                        let dependencyResource = path.posix.join(path.posix.dirname(this.resource), moduleName + extension);</span>
+<span class="hljs-addition">+                        //&#x83B7;&#x53D6;&#x4F9D;&#x8D56;&#x6A21;&#x5757;&#x7684;&#x6A21;&#x5757;ID</span>
+<span class="hljs-addition">+                        let dependencyModuleId = &apos;.&apos; + path.posix.sep + path.posix.relative(this.context, dependencyResource);</span>
+<span class="hljs-addition">+                        //&#x6DFB;&#x52A0;&#x4F9D;&#x8D56;</span>
+<span class="hljs-addition">+                        this.dependencies.push({</span>
+<span class="hljs-addition">+                            name: this.name, context: this.context, rawRequest: moduleName,</span>
+<span class="hljs-addition">+                            moduleId: dependencyModuleId, resource: dependencyResource</span>
+<span class="hljs-addition">+                        });</span>
+<span class="hljs-addition">+                        node.arguments = [types.stringLiteral(dependencyModuleId)];</span>
+<span class="hljs-addition">+                    }</span>
+<span class="hljs-addition">+                }</span>
+<span class="hljs-addition">+            });</span>
+<span class="hljs-addition">+            let { code } = generate(ast);</span>
+<span class="hljs-addition">+            this._source = code;</span>
+<span class="hljs-addition">+            this._ast = ast;</span>
+            callback();
+        });
+    }
+    //&#x83B7;&#x53D6;&#x6A21;&#x5757;&#x4EE3;&#x7801;
+    doBuild(compilation, callback) {
+        let originalSource = this.getSource(this.resource, compilation);
+        this._source = originalSource;
+        callback();
+    }
+    getSource(resource, compilation) {
+        let originalSource = compilation.inputFileSystem.readFileSync(resource, &apos;utf8&apos;);
+        return originalSource;
+    }
+}
+module.exports = NormalModule;
+</code></pre>
+<h2 id="t276. seal">6. seal <a href="#t276. seal"> # </a></h2>
+<h3 id="t286.1 Compiler.js">6.1 Compiler.js <a href="#t286.1 Compiler.js"> # </a></h3>
+<p>webpack\Compiler.js</p>
+<pre><code class="lang-diff">const { Tapable, SyncHook, SyncBailHook, AsyncParallelHook, AsyncSeriesHook } = require(&quot;tapable&quot;);
+const Compilation = require(&apos;./Compilation&apos;);
+const NormalModuleFactory = require(&apos;./NormalModuleFactory&apos;);
+const Stats = require(&apos;./Stats&apos;);
+class Compiler extends Tapable {
+    constructor(context) {
+        super();
+        this.options = {};
+        this.context = context; //&#x8BBE;&#x7F6E;&#x4E0A;&#x4E0B;&#x6587;&#x8DEF;&#x5F84;
+        this.hooks = {
+            entryOption: new SyncBailHook([&quot;context&quot;, &quot;entry&quot;]),
+            make: new AsyncParallelHook([&quot;compilation&quot;]),
+            beforeRun: new AsyncSeriesHook([&quot;compiler&quot;]),
+            run: new AsyncSeriesHook([&quot;compiler&quot;]),
+            beforeCompile: new AsyncSeriesHook([&quot;params&quot;]),
+            compile: new SyncHook([&quot;params&quot;]),
+            make: new AsyncParallelHook([&quot;compilation&quot;]),
+            thisCompilation: new SyncHook([&quot;compilation&quot;, &quot;params&quot;]),
+            compilation: new SyncHook([&quot;compilation&quot;, &quot;params&quot;]),
+<span class="hljs-addition">+           afterCompile: new SyncHook([&quot;params&quot;]),</span>
+            done: new AsyncSeriesHook([&quot;stats&quot;])
+        };
+    }
+    run(finalCallback) {
+        //&#x7F16;&#x8BD1;&#x5B8C;&#x6210;&#x540E;&#x7684;&#x56DE;&#x8C03;
+        const onCompiled = (err, compilation) =&gt; {
+            console.log(&apos;onCompiled&apos;);
+            finalCallback(err, new Stats(compilation));
+        };
+        //&#x51C6;&#x5907;&#x8FD0;&#x884C;&#x7F16;&#x8BD1;
+        this.hooks.beforeRun.callAsync(this, err =&gt; {
+            //&#x8FD0;&#x884C;
+            this.hooks.run.callAsync(this, err =&gt; {
+                this.compile(onCompiled); //&#x5F00;&#x59CB;&#x7F16;&#x8BD1;,&#x7F16;&#x8BD1;&#x5B8C;&#x6210;&#x540E;&#x6267;&#x884C;conCompiled&#x56DE;&#x8C03;
+            });
+        });
+    }
+    compile(onCompiled) {
+        const params = this.newCompilationParams();
+        this.hooks.beforeCompile.callAsync(params, err =&gt; {
+            this.hooks.compile.call(params);
+            const compilation = this.newCompilation(params);
+            this.hooks.make.callAsync(compilation, err =&gt; {
+<span class="hljs-addition">+                compilation.seal(err =&gt; {</span>
+<span class="hljs-addition">+                    this.hooks.afterCompile.callAsync(compilation, err =&gt; {</span>
+<span class="hljs-addition">+                        return onCompiled(null, compilation);</span>
+<span class="hljs-addition">+                    });</span>
+<span class="hljs-addition">+                });</span>
+            });
+        });
+    }
+    newCompilationParams() {
+        const params = {
+            normalModuleFactory: new NormalModuleFactory()
+        };
+        return params;
+    }
+    newCompilation(params) {
+        const compilation = new Compilation(this);
+        this.hooks.thisCompilation.call(compilation, params);
+        this.hooks.compilation.call(compilation, params);
+        return compilation;
+    }
+
+}
+module.exports = Compiler;
+</code></pre>
+<h3 id="t296.2 Compilation.js">6.2 Compilation.js <a href="#t296.2 Compilation.js"> # </a></h3>
+<p>webpack\Compilation.js</p>
+<pre><code class="lang-diff">const NormalModuleFactory = require(&apos;./NormalModuleFactory&apos;);
+const async = require(&apos;neo-async&apos;);
+const { Tapable, SyncHook } = require(&quot;tapable&quot;);
+const Parser = require(&apos;./Parser&apos;);
+const parser = new Parser();
+const path = require(&apos;path&apos;);
+<span class="hljs-addition">+let Chunk = require(&apos;./Chunk&apos;);</span>
+class Compilation extends Tapable {
+    constructor(compiler) {
+        super();
+        this.compiler = compiler;
+        this.options = compiler.options;
+        this.context = compiler.context;
+        this.inputFileSystem = compiler.inputFileSystem;
+        this.outputFileSystem = compiler.outputFileSystem;
+        this.entries = [];
+        this.modules = [];
+        this._modules = {};
+        this.chunks = [];
+        this.hooks = {
+            succeedModule: new SyncHook([&quot;module&quot;]),
+<span class="hljs-addition">+            seal: new SyncHook([]),</span>
+<span class="hljs-addition">+            beforeChunks: new SyncHook([]),</span>
+<span class="hljs-addition">+            afterChunks: new SyncHook([&quot;chunks&quot;])</span>
+        }
+    }
+<span class="hljs-addition">+    seal(callback) {</span>
+<span class="hljs-addition">+        this.hooks.seal.call();</span>
+<span class="hljs-addition">+        this.hooks.beforeChunks.call();//&#x751F;&#x6210;&#x4EE3;&#x7801;&#x5757;&#x4E4B;&#x524D;</span>
+<span class="hljs-addition">+        for (const module of this.entries) {//&#x5FAA;&#x73AF;&#x5165;&#x53E3;&#x6A21;&#x5757;</span>
+<span class="hljs-addition">+            const chunk = new Chunk(module);//&#x521B;&#x5EFA;&#x4EE3;&#x7801;&#x5757;</span>
+<span class="hljs-addition">+            this.chunks.push(chunk);//&#x628A;&#x4EE3;&#x7801;&#x5757;&#x6DFB;&#x52A0;&#x5230;&#x4EE3;&#x7801;&#x5757;&#x6570;&#x7EC4;&#x4E2D;</span>
+<span class="hljs-addition">+            //&#x628A;&#x4EE3;&#x7801;&#x5757;&#x7684;&#x6A21;&#x5757;&#x6DFB;&#x52A0;&#x5230;&#x4EE3;&#x7801;&#x5757;&#x4E2D;</span>
+<span class="hljs-addition">+            chunk.modules = this.modules.filter(module =&gt; module.name == chunk.name);</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+        this.hooks.afterChunks.call(this.chunks);//&#x751F;&#x6210;&#x4EE3;&#x7801;&#x5757;&#x4E4B;&#x540E;</span>
+<span class="hljs-addition">+        callback();//&#x5C01;&#x88C5;&#x7ED3;&#x675F;</span>
+<span class="hljs-addition">+    }</span>
+    //context ./src/index.js main callback(&#x7EC8;&#x7EA7;&#x56DE;&#x8C03;)
+    addEntry(context, entry, name, callback) {
+        this._addModuleChain(context, entry, name, (err, module) =&gt; {
+            callback(err, module);
+        });
+    }
+    _addModuleChain(context, entry, name, callback) {
+        const moduleFactory = new NormalModuleFactory();
+        let module = moduleFactory.create(
+            {
+                name,  //&#x6A21;&#x5757;&#x6240;&#x5C5E;&#x7684;&#x4EE3;&#x7801;&#x5757;&#x7684;&#x540D;&#x79F0;
+                context: this.context,//&#x4E0A;&#x4E0B;&#x6587;
+                rawRequest: entry,
+                resource: path.posix.join(context, entry),
+                parser
+            });//&#x6A21;&#x5757;&#x5B8C;&#x6574;&#x8DEF;&#x5F84;
+        module.moduleId = &apos;.&apos; + path.posix.sep + path.posix.relative(this.context, module.resource);
+        this.modules.push(module);
+        this.entries.push(module);//&#x628A;&#x7F16;&#x8BD1;&#x597D;&#x7684;&#x6A21;&#x5757;&#x6DFB;&#x52A0;&#x5230;&#x5165;&#x53E3;&#x5217;&#x8868;&#x91CC;&#x9762;
+        const afterBuild = () =&gt; {
+            if (module.dependencies) {
+                this.processModuleDependencies(module, err =&gt; {
+                    callback(null, module);
+                });
+            } else {
+                return callback(null, module);
+            }
+        };
+        this.buildModule(module, afterBuild);
+
+    }
+    processModuleDependencies(module, callback) {
+        let dependencies = module.dependencies;
+        async.forEach(dependencies, (dependency, done) =&gt; {
+            let { name, context, rawRequest, resource, moduleId } = dependency;
+            const moduleFactory = new NormalModuleFactory();
+            let module = moduleFactory.create(
+                {
+                    name,
+                    context,
+                    rawRequest,
+                    moduleId,
+                    resource,
+                    parser
+                });
+            this.modules.push(module);
+            this._modules[module.moduleId] = module;
+            const afterBuild = () =&gt; {
+                if (module.dependencies) {
+                    this.processModuleDependencies(module, err =&gt; {
+                        done(null, module);
+                    });
+                } else {
+                    return done(null, module);
+                }
+            };
+            this.buildModule(module, afterBuild);
+        }, callback);
+    }
+    buildModule(module, afterBuild) {
+        module.build(this, (err) =&gt; {
+            this.hooks.succeedModule.call(module);
+            return afterBuild();
+        });
+    }
+}
+module.exports = Compilation;
+</code></pre>
+<h3 id="t306.3 webpack\Chunk.js">6.3 webpack\Chunk.js <a href="#t306.3 webpack\Chunk.js"> # </a></h3>
+<p>webpack\Chunk.js</p>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Chunk</span> </span>{
+    <span class="hljs-keyword">constructor</span>(module) {
+        <span class="hljs-keyword">this</span>.entryModule = <span class="hljs-built_in">module</span>;
+        <span class="hljs-keyword">this</span>.name = <span class="hljs-built_in">module</span>.name;
+        <span class="hljs-keyword">this</span>.files = [];
+        <span class="hljs-keyword">this</span>.modules = [];
+    }
+}
+
+<span class="hljs-built_in">module</span>.exports = Chunk;
+</code></pre>
+<h3 id="t316.4 Stats.js">6.4 Stats.js <a href="#t316.4 Stats.js"> # </a></h3>
+<p>webpack\Stats.js</p>
+<pre><code class="lang-diff">class Stats {
+    constructor(compilation) {
+        this.entries = compilation.entries;
+        this.modules = compilation.modules;
+<span class="hljs-addition">+        this.chunks = compilation.chunks;</span>
+    }
+    toJson() {
+        return this;
+    }
+}
+module.exports = Stats;
+</code></pre>
+<h2 id="t327.emit">7.emit <a href="#t327.emit"> # </a></h2>
+<h3 id="t337.1 Compiler.js">7.1 Compiler.js <a href="#t337.1 Compiler.js"> # </a></h3>
+<p>webpack\Compiler.js</p>
+<pre><code class="lang-diff">const { Tapable, SyncHook, SyncBailHook, AsyncParallelHook, AsyncSeriesHook } = require(&quot;tapable&quot;);
+const Compilation = require(&apos;./Compilation&apos;);
+const NormalModuleFactory = require(&apos;./NormalModuleFactory&apos;);
+const Stats = require(&apos;./Stats&apos;);
+<span class="hljs-addition">+const mkdirp = require(&apos;mkdirp&apos;);</span>
+<span class="hljs-addition">+const path = require(&apos;path&apos;);</span>
+class Compiler extends Tapable {
+    constructor(context) {
+        super();
+        this.options = {};
+        this.context = context; //&#x8BBE;&#x7F6E;&#x4E0A;&#x4E0B;&#x6587;&#x8DEF;&#x5F84;
+        this.hooks = {
+            entryOption: new SyncBailHook([&quot;context&quot;, &quot;entry&quot;]),
+            make: new AsyncParallelHook([&quot;compilation&quot;]),
+            beforeRun: new AsyncSeriesHook([&quot;compiler&quot;]),
+            run: new AsyncSeriesHook([&quot;compiler&quot;]),
+            beforeCompile: new AsyncSeriesHook([&quot;params&quot;]),
+            compile: new SyncHook([&quot;params&quot;]),
+            make: new AsyncParallelHook([&quot;compilation&quot;]),
+            thisCompilation: new SyncHook([&quot;compilation&quot;, &quot;params&quot;]),
+            compilation: new SyncHook([&quot;compilation&quot;, &quot;params&quot;]),
+            afterCompile: new SyncHook([&quot;params&quot;]),
+<span class="hljs-addition">+            emit: new AsyncSeriesHook([&quot;compilation&quot;]),</span>
+            done: new AsyncSeriesHook([&quot;stats&quot;])
+        };
+    }
+<span class="hljs-addition">+    emitAssets(compilation, callback) {</span>
+<span class="hljs-addition">+        const emitFiles = err =&gt; {</span>
+<span class="hljs-addition">+            let assets = compilation.assets;</span>
+<span class="hljs-addition">+            for (let file in assets) {</span>
+<span class="hljs-addition">+                let source = assets[file];</span>
+<span class="hljs-addition">+                const targetPath = path.posix.join(this.options.output.path, file);</span>
+<span class="hljs-addition">+                let content = source;</span>
+<span class="hljs-addition">+                this.outputFileSystem.writeFileSync(targetPath, content);</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+            callback();</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+        this.hooks.emit.callAsync(compilation, err =&gt; {</span>
+<span class="hljs-addition">+            mkdirp(this.options.output.path, emitFiles);</span>
+<span class="hljs-addition">+        });</span>
+<span class="hljs-addition">+    }</span>
+    run(finalCallback) {
+        //&#x7F16;&#x8BD1;&#x5B8C;&#x6210;&#x540E;&#x7684;&#x56DE;&#x8C03;
+        const onCompiled = (err, compilation) =&gt; {
+<span class="hljs-addition">+            this.emitAssets(compilation, err =&gt; {</span>
+<span class="hljs-addition">+                const stats = new Stats(compilation);</span>
+<span class="hljs-addition">+                this.hooks.done.callAsync(stats, err =&gt; {</span>
+<span class="hljs-addition">+                    return finalCallback(err, new Stats(compilation));</span>
+<span class="hljs-addition">+                });</span>
+<span class="hljs-addition">+            })</span>
+        };
+        //&#x51C6;&#x5907;&#x8FD0;&#x884C;&#x7F16;&#x8BD1;
+        this.hooks.beforeRun.callAsync(this, err =&gt; {
+            //&#x8FD0;&#x884C;
+            this.hooks.run.callAsync(this, err =&gt; {
+                this.compile(onCompiled); //&#x5F00;&#x59CB;&#x7F16;&#x8BD1;,&#x7F16;&#x8BD1;&#x5B8C;&#x6210;&#x540E;&#x6267;&#x884C;conCompiled&#x56DE;&#x8C03;
+            });
+        });
+    }
+    compile(onCompiled) {
+        const params = this.newCompilationParams();
+        this.hooks.beforeCompile.callAsync(params, err =&gt; {
+            this.hooks.compile.call(params);
+            const compilation = this.newCompilation(params);
+            this.hooks.make.callAsync(compilation, err =&gt; {
+                compilation.seal(err =&gt; {
+                    this.hooks.afterCompile.callAsync(compilation, err =&gt; {
+                        return onCompiled(null, compilation);
+                    });
+                });
+            });
+        });
+    }
+    newCompilationParams() {
+        const params = {
+            normalModuleFactory: new NormalModuleFactory()
+        };
+        return params;
+    }
+    newCompilation(params) {
+        const compilation = new Compilation(this);
+        this.hooks.thisCompilation.call(compilation, params);
+        this.hooks.compilation.call(compilation, params);
+        return compilation;
+    }
+
+}
+module.exports = Compiler;
+</code></pre>
+<h3 id="t347.2 Compilation.js">7.2 Compilation.js <a href="#t347.2 Compilation.js"> # </a></h3>
+<p>webpack\Compilation.js</p>
+<pre><code class="lang-diff">const NormalModuleFactory = require(&apos;./NormalModuleFactory&apos;);
+const async = require(&apos;neo-async&apos;);
+const { Tapable, SyncHook } = require(&quot;tapable&quot;);
+const Parser = require(&apos;./Parser&apos;);
+const parser = new Parser();
+const path = require(&apos;path&apos;);
+<span class="hljs-addition">+const Chunk = require(&apos;./Chunk&apos;);</span>
+<span class="hljs-addition">+const ejs = require(&apos;ejs&apos;);</span>
+<span class="hljs-addition">+const fs = require(&apos;fs&apos;);</span>
+<span class="hljs-addition">+const mainTemplate = fs.readFileSync(path.join(__dirname,&apos;template&apos;, &apos;main.ejs&apos;), &apos;utf8&apos;);</span>
+<span class="hljs-addition">+const mainRender = ejs.compile(mainTemplate);</span>
+class Compilation extends Tapable {
+    constructor(compiler) {
+        super();
+        this.compiler = compiler;
+        this.options = compiler.options;
+        this.context = compiler.context;
+        this.inputFileSystem = compiler.inputFileSystem;
+        this.outputFileSystem = compiler.outputFileSystem;
+        this.entries = [];
+        this.modules = [];
+        this._modules = {};
+        this.chunks = [];
+<span class="hljs-addition">+        this.files = [];  //&#x751F;&#x6210;&#x7684;&#x6587;&#x4EF6;</span>
+<span class="hljs-addition">+        this.assets = {}; //&#x8D44;&#x6E90; </span>
+        this.hooks = {
+            succeedModule: new SyncHook([&quot;module&quot;]),
+            seal: new SyncHook([]),
+            beforeChunks: new SyncHook([]),
+            afterChunks: new SyncHook([&quot;chunks&quot;])
+        }
+    }
+    seal(callback) {
+        this.hooks.seal.call();
+        this.hooks.beforeChunks.call();//&#x751F;&#x6210;&#x4EE3;&#x7801;&#x5757;&#x4E4B;&#x524D;
+        for (const module of this.entries) {//&#x5FAA;&#x73AF;&#x5165;&#x53E3;&#x6A21;&#x5757;
+            const chunk = new Chunk(module);//&#x521B;&#x5EFA;&#x4EE3;&#x7801;&#x5757;
+            this.chunks.push(chunk);//&#x628A;&#x4EE3;&#x7801;&#x5757;&#x6DFB;&#x52A0;&#x5230;&#x4EE3;&#x7801;&#x5757;&#x6570;&#x7EC4;&#x4E2D;
+            //&#x628A;&#x4EE3;&#x7801;&#x5757;&#x7684;&#x6A21;&#x5757;&#x6DFB;&#x52A0;&#x5230;&#x4EE3;&#x7801;&#x5757;&#x4E2D;
+            chunk.modules = this.modules.filter(module =&gt; module.name == chunk.name);
+        }
+        this.hooks.afterChunks.call(this.chunks);//&#x751F;&#x6210;&#x4EE3;&#x7801;&#x5757;&#x4E4B;&#x540E;
+<span class="hljs-addition">+       this.createChunkAssets();</span>
+        callback();//&#x5C01;&#x88C5;&#x7ED3;&#x675F;
+    }
+<span class="hljs-addition">+    createChunkAssets() {</span>
+<span class="hljs-addition">+        for (let i = 0; i &lt; this.chunks.length; i++) {</span>
+<span class="hljs-addition">+            const chunk = this.chunks[i];</span>
+<span class="hljs-addition">+            chunk.files = [];</span>
+<span class="hljs-addition">+            const file = chunk.name + &apos;.js&apos;;</span>
+<span class="hljs-addition">+            const source = mainRender({ entryId: chunk.entryModule.moduleId, modules: chunk.modules });</span>
+<span class="hljs-addition">+            chunk.files.push(file);</span>
+<span class="hljs-addition">+            this.emitAsset(file, source);</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    emitAsset(file, source) {</span>
+<span class="hljs-addition">+        this.assets[file] = source;</span>
+<span class="hljs-addition">+        this.files.push(file);</span>
+<span class="hljs-addition">+    }</span>
+    //context ./src/index.js main callback(&#x7EC8;&#x7EA7;&#x56DE;&#x8C03;)
+    addEntry(context, entry, name, callback) {
+        this._addModuleChain(context, entry, name, (err, module) =&gt; {
+            callback(err, module);
+        });
+    }
+    _addModuleChain(context, entry, name, callback) {
+        const moduleFactory = new NormalModuleFactory();
+        let module = moduleFactory.create(
+            {
+                name,  //&#x6A21;&#x5757;&#x6240;&#x5C5E;&#x7684;&#x4EE3;&#x7801;&#x5757;&#x7684;&#x540D;&#x79F0;
+                context: this.context,//&#x4E0A;&#x4E0B;&#x6587;
+                rawRequest: entry,
+                resource: path.posix.join(context, entry),
+                parser
+            });//&#x6A21;&#x5757;&#x5B8C;&#x6574;&#x8DEF;&#x5F84;
+        module.moduleId = &apos;.&apos; + path.posix.sep + path.posix.relative(this.context, module.resource);
+        this.modules.push(module);
+        this.entries.push(module);//&#x628A;&#x7F16;&#x8BD1;&#x597D;&#x7684;&#x6A21;&#x5757;&#x6DFB;&#x52A0;&#x5230;&#x5165;&#x53E3;&#x5217;&#x8868;&#x91CC;&#x9762;
+        const afterBuild = () =&gt; {
+            if (module.dependencies) {
+                this.processModuleDependencies(module, err =&gt; {
+                    callback(null, module);
+                });
+            } else {
+                return callback(null, module);
+            }
+        };
+        this.buildModule(module, afterBuild);
+
+    }
+    processModuleDependencies(module, callback) {
+        let dependencies = module.dependencies;
+        async.forEach(dependencies, (dependency, done) =&gt; {
+            let { name, context, rawRequest, resource, moduleId } = dependency;
+            const moduleFactory = new NormalModuleFactory();
+            let module = moduleFactory.create(
+                {
+                    name,
+                    context,
+                    rawRequest,
+                    moduleId,
+                    resource,
+                    parser
+                });
+            this.modules.push(module);
+            this._modules[module.moduleId] = module;
+            const afterBuild = () =&gt; {
+                if (module.dependencies) {
+                    this.processModuleDependencies(module, err =&gt; {
+                        done(null, module);
+                    });
+                } else {
+                    return done(null, module);
+                }
+            };
+            this.buildModule(module, afterBuild);
+        }, callback);
+    }
+    buildModule(module, afterBuild) {
+        module.build(this, (err) =&gt; {
+            this.hooks.succeedModule.call(module);
+            return afterBuild();
+        });
+    }
+}
+module.exports = Compilation;
+</code></pre>
+<h3 id="t357.3 main.ejs">7.3 main.ejs <a href="#t357.3 main.ejs"> # </a></h3>
+<p>webpack\main.ejs</p>
+<pre><code class="lang-js">(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">modules</span>) </span>{
+    <span class="hljs-keyword">var</span> installedModules = {};
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">__webpack_require__</span>(<span class="hljs-params">moduleId</span>) </span>{
+      <span class="hljs-keyword">if</span> (installedModules[moduleId]) {
+        <span class="hljs-keyword">return</span> installedModules[moduleId].exports;
+      }
+      <span class="hljs-keyword">var</span> <span class="hljs-built_in">module</span> = installedModules[moduleId] = {
+        <span class="hljs-attr">i</span>: moduleId,
+        <span class="hljs-attr">l</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">exports</span>: {}
+      };
+
+      modules[moduleId].call(<span class="hljs-built_in">module</span>.exports, <span class="hljs-built_in">module</span>, <span class="hljs-built_in">module</span>.exports, __webpack_require__);
+      <span class="hljs-built_in">module</span>.l = <span class="hljs-literal">true</span>;
+      <span class="hljs-keyword">return</span> <span class="hljs-built_in">module</span>.exports;
+    }
+    <span class="hljs-keyword">return</span> __webpack_require__(__webpack_require__.s = <span class="hljs-string">&quot;&lt;%-entryId%&gt;&quot;</span>);
+  })
+    ({
+        &lt;%
+          <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> id <span class="hljs-keyword">in</span> modules){
+              <span class="hljs-keyword">let</span> {moduleId,_source} = modules[id];%&gt;
+              <span class="hljs-string">&quot;&lt;%-moduleId%&gt;&quot;</span>:
+              (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">module, exports,__webpack_require__</span>) </span>{
+                &lt;%-_source%&gt;
+              }),
+           &lt;%}
+        %&gt;
+    });
+</code></pre>
+<h2 id="t368.&#x52A8;&#x6001;import">8.&#x52A8;&#x6001;import <a href="#t368.&#x52A8;&#x6001;import"> # </a></h2>
+<h3 id="t378.1 src\index.js">8.1 src\index.js <a href="#t378.1 src\index.js"> # </a></h3>
+<p>src\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span>(<span class="hljs-string">&apos;./title&apos;</span>).then(<span class="hljs-function"><span class="hljs-params">result</span> =&gt;</span> {
+    <span class="hljs-built_in">console</span>.log(result.default);
+});
+</code></pre>
+<h3 id="t388.2 Chunk.js">8.2 Chunk.js <a href="#t388.2 Chunk.js"> # </a></h3>
+<p>webpack\Chunk.js</p>
+<pre><code class="lang-diff">class Chunk {
+    constructor(module) {
+        this.entryModule = module;
+        this.name = module.name;
+        this.files = [];
+        this.modules = [];
+<span class="hljs-addition">+       this.async = module.async;</span>
+    }
+}
+
+module.exports = Chunk;
+</code></pre>
+<h3 id="t398.3 SingleEntryPlugin.js">8.3 SingleEntryPlugin.js <a href="#t398.3 SingleEntryPlugin.js"> # </a></h3>
+<p>webpack\plugins\SingleEntryPlugin.js</p>
+<pre><code class="lang-diff">class EntryOptionPlugin {
+    constructor(context, entry, name) {
+        this.context = context;
+        this.entry = entry;
+        this.name = name;
+    }
+    apply(compiler) {
+        compiler.hooks.make.tapAsync(
+            &quot;SingleEntryPlugin&quot;,
+            (compilation, callback) =&gt; {
+                //&#x5165;&#x53E3;&#x6587;&#x4EF6; &#x4EE3;&#x7801;&#x5757;&#x7684;&#x540D;&#x79F0; context&#x4E0A;&#x4E0B;&#x6587;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;
+                const { entry, name, context } = this;
+<span class="hljs-addition">+                compilation.addEntry(context, entry, name, false, callback);</span>
+            }
+        );
+    }
+};
+module.exports = EntryOptionPlugin;
+</code></pre>
+<h3 id="t408.4 Compilation.js">8.4 Compilation.js <a href="#t408.4 Compilation.js"> # </a></h3>
+<p>webpack\Compilation.js</p>
+<pre><code class="lang-diff">const NormalModuleFactory = require(&apos;./NormalModuleFactory&apos;);
+const async = require(&apos;neo-async&apos;);
+const { Tapable, SyncHook } = require(&quot;tapable&quot;);
+const Parser = require(&apos;./Parser&apos;);
+const parser = new Parser();
+const path = require(&apos;path&apos;);
+const Chunk = require(&apos;./Chunk&apos;);
+const ejs = require(&apos;ejs&apos;);
+const fs = require(&apos;fs&apos;);
+<span class="hljs-addition">+const mainTemplate = fs.readFileSync(path.join(__dirname, &apos;template&apos;, &apos;mainTemplate.ejs&apos;), &apos;utf8&apos;);</span>
+<span class="hljs-addition">+const mainRender = ejs.compile(mainTemplate);</span>
+<span class="hljs-addition">+const chunkTemplate = fs.readFileSync(path.join(__dirname, &apos;template&apos;, &apos;chunkTemplate.ejs&apos;), &apos;utf8&apos;);</span>
+<span class="hljs-addition">+const chunkRender = ejs.compile(chunkTemplate);</span>
+class Compilation extends Tapable {
+    constructor(compiler) {
+        super();
+        this.compiler = compiler;
+        this.options = compiler.options;
+        this.context = compiler.context;
+        this.inputFileSystem = compiler.inputFileSystem;
+        this.outputFileSystem = compiler.outputFileSystem;
+        this.entries = [];
+        this.modules = [];
+        this._modules = {};
+        this.chunks = [];
+        this.files = [];  //&#x751F;&#x6210;&#x7684;&#x6587;&#x4EF6;
+        this.assets = {}; //&#x8D44;&#x6E90; 
+        this.hooks = {
+            succeedModule: new SyncHook([&quot;module&quot;]),
+            seal: new SyncHook([]),
+            beforeChunks: new SyncHook([]),
+            afterChunks: new SyncHook([&quot;chunks&quot;])
+        }
+    }
+    seal(callback) {
+        this.hooks.seal.call();
+        this.hooks.beforeChunks.call();//&#x751F;&#x6210;&#x4EE3;&#x7801;&#x5757;&#x4E4B;&#x524D;
+        for (const module of this.entries) {//&#x5FAA;&#x73AF;&#x5165;&#x53E3;&#x6A21;&#x5757;
+            const chunk = new Chunk(module);//&#x521B;&#x5EFA;&#x4EE3;&#x7801;&#x5757;
+            this.chunks.push(chunk);//&#x628A;&#x4EE3;&#x7801;&#x5757;&#x6DFB;&#x52A0;&#x5230;&#x4EE3;&#x7801;&#x5757;&#x6570;&#x7EC4;&#x4E2D;
+            //&#x628A;&#x4EE3;&#x7801;&#x5757;&#x7684;&#x6A21;&#x5757;&#x6DFB;&#x52A0;&#x5230;&#x4EE3;&#x7801;&#x5757;&#x4E2D;
+            chunk.modules = this.modules.filter(module =&gt; module.name == chunk.name);
+        }
+        this.hooks.afterChunks.call(this.chunks);//&#x751F;&#x6210;&#x4EE3;&#x7801;&#x5757;&#x4E4B;&#x540E;
+        this.createChunkAssets();
+        callback();//&#x5C01;&#x88C5;&#x7ED3;&#x675F;
+    }
+    createChunkAssets() {
+        for (let i = 0; i &lt; this.chunks.length; i++) {
+            const chunk = this.chunks[i];
+            chunk.files = [];
+            const file = chunk.name + &apos;.js&apos;;
+<span class="hljs-addition">+            let source;</span>
+<span class="hljs-addition">+            if (chunk.async) {</span>
+<span class="hljs-addition">+                source = chunkRender({ chunkName: chunk.name, modules: chunk.modules });</span>
+<span class="hljs-addition">+            } else {</span>
+<span class="hljs-addition">+                source = mainRender({ entryId: chunk.entryModule.moduleId, modules: chunk.modules });</span>
+<span class="hljs-addition">+            }</span>
+            chunk.files.push(file);
+            this.emitAsset(file, source);
+        }
+    }
+    emitAsset(file, source) {
+        this.assets[file] = source;
+        this.files.push(file);
+    }
+    //context ./src/index.js main callback(&#x7EC8;&#x7EA7;&#x56DE;&#x8C03;)
+<span class="hljs-addition">+    addEntry(context, entry, name, async, callback) {</span>
+<span class="hljs-addition">+        this._addModuleChain(context, entry, name, async, (err, module) =&gt; {</span>
+            callback(err, module);
+        });
+    }
+<span class="hljs-addition">+    _addModuleChain(context, entry, name, async, callback) {</span>
+        const moduleFactory = new NormalModuleFactory();
+        let module = moduleFactory.create(
+            {
+                name,  //&#x6A21;&#x5757;&#x6240;&#x5C5E;&#x7684;&#x4EE3;&#x7801;&#x5757;&#x7684;&#x540D;&#x79F0;
+                context: this.context,//&#x4E0A;&#x4E0B;&#x6587;
+                rawRequest: entry,
+<span class="hljs-addition">+                async,</span>
+                resource: path.posix.join(context, entry),
+                parser
+            });//&#x6A21;&#x5757;&#x5B8C;&#x6574;&#x8DEF;&#x5F84;
+        module.moduleId = &apos;.&apos; + path.posix.sep + path.posix.relative(this.context, module.resource);
+        this.modules.push(module);
+        this.entries.push(module);//&#x628A;&#x7F16;&#x8BD1;&#x597D;&#x7684;&#x6A21;&#x5757;&#x6DFB;&#x52A0;&#x5230;&#x5165;&#x53E3;&#x5217;&#x8868;&#x91CC;&#x9762;
+        const afterBuild = () =&gt; {
+            if (module.dependencies) {
+                this.processModuleDependencies(module, err =&gt; {
+                    callback(null, module);
+                });
+            } else {
+                return callback(null, module);
+            }
+        };
+        this.buildModule(module, afterBuild);
+
+    }
+    processModuleDependencies(module, callback) {
+        let dependencies = module.dependencies;
+        async.forEach(dependencies, (dependency, done) =&gt; {
+<span class="hljs-addition">+            let { name, context, rawRequest, resource, moduleId, async } = dependency;</span>
+            const moduleFactory = new NormalModuleFactory();
+            let module = moduleFactory.create(
+                {
+                    name,
+                    context,
+                    rawRequest,
+                    moduleId,
+                    resource,
+                    parser,
+<span class="hljs-addition">+                    async</span>
+                });
+            this.modules.push(module);
+            this._modules[module.moduleId] = module;
+            const afterBuild = () =&gt; {
+                if (module.dependencies) {
+                    this.processModuleDependencies(module, err =&gt; {
+                        done(null, module);
+                    });
+                } else {
+                    return done(null, module);
+                }
+            };
+            this.buildModule(module, afterBuild);
+        }, callback);
+    }
+    buildModule(module, afterBuild) {
+        module.build(this, (err) =&gt; {
+            this.hooks.succeedModule.call(module);
+            return afterBuild();
+        });
+    }
+}
+module.exports = Compilation;
+</code></pre>
+<h3 id="t418.5 NormalModule.js">8.5 NormalModule.js <a href="#t418.5 NormalModule.js"> # </a></h3>
+<p>webpack\NormalModule.js</p>
+<pre><code class="lang-diff">const types = require(&apos;babel-types&apos;);
+const generate = require(&apos;babel-generator&apos;).default;
+const traverse = require(&apos;babel-traverse&apos;).default;
+const path = require(&apos;path&apos;);
+const async = require(&apos;neo-async&apos;);
+class NormalModule {
+<span class="hljs-addition">+    constructor({ name, context, rawRequest, resource, parser, moduleId, async }) {</span>
+        this.name = name;
+        this.context = context;
+        this.rawRequest = rawRequest;
+        this.resource = resource;
+        this.moduleId = moduleId;
+        this.parser = parser;
+        this._source = null;
+        this._ast = null;
+<span class="hljs-addition">+        this.dependencies = [];</span>
+<span class="hljs-addition">+        this.blocks = [];</span>
+<span class="hljs-addition">+        this.async = async;</span>
+    }
+    //&#x89E3;&#x6790;&#x4F9D;&#x8D56;
+    build(compilation, callback) {
+        this.doBuild(compilation, err =&gt; {
+            let originalSource = this.getSource(this.resource, compilation);
+            // &#x5C06; &#x5F53;&#x524D;&#x6A21;&#x5757; &#x7684;&#x5185;&#x5BB9;&#x8F6C;&#x6362;&#x6210; AST
+            const ast = this.parser.parse(originalSource);
+            traverse(ast, {
+                // &#x5982;&#x679C;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x65F6;
+                CallExpression: (nodePath) =&gt; {
+                    let node = nodePath.node;
+                    // &#x5F53;&#x524D;&#x8282;&#x70B9;&#x662F; require &#x65F6;
+                    if (node.callee.name <span class="hljs-comment">=== &apos;require&apos;) {</span>
+                        //&#x4FEE;&#x6539;require&#x4E3A;__webpack_require__
+                        node.callee.name = &apos;__webpack_require__&apos;;
+                        //&#x83B7;&#x53D6;&#x8981;&#x52A0;&#x8F7D;&#x7684;&#x6A21;&#x5757;ID
+                        let moduleName = node.arguments[0].value;
+                        //&#x83B7;&#x53D6;&#x6269;&#x5C55;&#x540D;
+                        let extension = moduleName.split(path.posix.sep).pop().indexOf(&apos;.&apos;) == -1 ? &apos;.js&apos; : &apos;&apos;;
+                        //&#x83B7;&#x53D6;&#x4F9D;&#x8D56;&#x6A21;&#x5757;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;
+                        let dependencyResource = path.posix.join(path.posix.dirname(this.resource), moduleName + extension);
+                        //&#x83B7;&#x53D6;&#x4F9D;&#x8D56;&#x6A21;&#x5757;&#x7684;&#x6A21;&#x5757;ID
+                        let dependencyModuleId = &apos;.&apos; + path.posix.sep + path.posix.relative(this.context, dependencyResource);
+                        //&#x6DFB;&#x52A0;&#x4F9D;&#x8D56;
+                        this.dependencies.push({
+                            name: this.name, context: this.context, rawRequest: moduleName,
+                            moduleId: dependencyModuleId, resource: dependencyResource
+                        });
+                        node.arguments = [types.stringLiteral(dependencyModuleId)];
+<span class="hljs-addition">+                    } else if (types.isImport(nodePath.node.callee)) {</span>
+<span class="hljs-addition">+                        //&#x83B7;&#x53D6;&#x8981;&#x52A0;&#x8F7D;&#x7684;&#x6A21;&#x5757;ID</span>
+<span class="hljs-addition">+                        let moduleName = node.arguments[0].value;</span>
+<span class="hljs-addition">+                        //&#x83B7;&#x53D6;&#x6269;&#x5C55;&#x540D;</span>
+<span class="hljs-addition">+                        let extension = moduleName.split(path.posix.sep).pop().indexOf(&apos;.&apos;) == -1 ? &apos;.js&apos; : &apos;&apos;;</span>
+<span class="hljs-addition">+                        //&#x83B7;&#x53D6;&#x4F9D;&#x8D56;&#x6A21;&#x5757;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;</span>
+<span class="hljs-addition">+                        let dependencyResource = path.posix.join(path.posix.dirname(this.resource), moduleName + extension);</span>
+<span class="hljs-addition">+                        //&#x83B7;&#x53D6;&#x4F9D;&#x8D56;&#x6A21;&#x5757;&#x7684;&#x6A21;&#x5757;ID</span>
+<span class="hljs-addition">+                        let dependencyModuleId = &apos;.&apos; + path.posix.sep + path.posix.relative(this.context, dependencyResource);</span>
+<span class="hljs-addition">+                        //&#x83B7;&#x53D6;&#x4EE3;&#x7801;&#x5757;&#x7684;ID</span>
+<span class="hljs-addition">+                        debugger</span>
+<span class="hljs-addition">+                        let dependencyChunkId = dependencyModuleId.slice(2, dependencyModuleId.lastIndexOf(&apos;.&apos;)).replace(path.posix.sep, &apos;_&apos;, &apos;g&apos;);</span>
+<span class="hljs-addition">+                        // chunkId &#x4E0D;&#x9700;&#x8981;&#x5E26; .js &#x540E;&#x7F00;</span>
+<span class="hljs-addition">+                        nodePath.replaceWithSourceString(`</span>
+<span class="hljs-addition">+                            __webpack_require__.e(&quot;${dependencyChunkId}&quot;).then(__webpack_require__.t.bind(null,&quot;${dependencyModuleId}&quot;,7))</span>
+<span class="hljs-addition">+                        `);</span>
+<span class="hljs-addition">+                        this.blocks.push({</span>
+<span class="hljs-addition">+                            context: this.context,</span>
+<span class="hljs-addition">+                            entry: dependencyModuleId,</span>
+<span class="hljs-addition">+                            name: dependencyChunkId,</span>
+<span class="hljs-addition">+                            async: true</span>
+<span class="hljs-addition">+                        });</span>
+                    }
+                },
+            });
+            let { code } = generate(ast);
+            this._source = code;
+            this._ast = ast;
+<span class="hljs-addition">+           async.forEach(this.blocks, ({ context, entry, name, async }, done) =&gt; {</span>
+<span class="hljs-addition">+                compilation._addModuleChain(context, entry, name, async, done);</span>
+<span class="hljs-addition">+           }, callback);</span>
+        });
+    }
+    //&#x83B7;&#x53D6;&#x6A21;&#x5757;&#x4EE3;&#x7801;
+    doBuild(compilation, callback) {
+        let originalSource = this.getSource(this.resource, compilation);
+        this._source = originalSource;
+        callback();
+    }
+    getSource(resource, compilation) {
+        let originalSource = compilation.inputFileSystem.readFileSync(resource, &apos;utf8&apos;);
+        return originalSource;
+    }
+}
+module.exports = NormalModule;
+</code></pre>
+<h3 id="t428.6 webpack\mainTemplate.ejs">8.6 webpack\mainTemplate.ejs <a href="#t428.6 webpack\mainTemplate.ejs"> # </a></h3>
+<p>webpack\mainTemplate.ejs</p>
+<pre><code class="lang-js">(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">modules</span>) </span>{
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">webpackJsonpCallback</span>(<span class="hljs-params">data</span>) </span>{
+    <span class="hljs-keyword">var</span> chunkIds = data[<span class="hljs-number">0</span>];
+    <span class="hljs-keyword">var</span> moreModules = data[<span class="hljs-number">1</span>];
+    <span class="hljs-keyword">var</span> moduleId, chunkId, i = <span class="hljs-number">0</span>, resolves = [];
+    <span class="hljs-keyword">for</span> (; i &lt; chunkIds.length; i++) {
+      chunkId = chunkIds[i];
+      <span class="hljs-keyword">if</span> (<span class="hljs-built_in">Object</span>.prototype.hasOwnProperty.call(installedChunks, chunkId) &amp;&amp; installedChunks[chunkId]) {
+        resolves.push(installedChunks[chunkId][<span class="hljs-number">0</span>]);
+      }
+      installedChunks[chunkId] = <span class="hljs-number">0</span>;
+    }
+    <span class="hljs-keyword">for</span> (moduleId <span class="hljs-keyword">in</span> moreModules) {
+      <span class="hljs-keyword">if</span> (<span class="hljs-built_in">Object</span>.prototype.hasOwnProperty.call(moreModules, moduleId)) {
+        modules[moduleId] = moreModules[moduleId];
+      }
+    }
+    <span class="hljs-keyword">if</span> (parentJsonpFunction) parentJsonpFunction(data);
+    <span class="hljs-keyword">while</span> (resolves.length) {
+      resolves.shift()();
+    }
+  };
+  <span class="hljs-keyword">var</span> installedModules = {};
+  <span class="hljs-keyword">var</span> installedChunks = {
+    <span class="hljs-string">&quot;main&quot;</span>: <span class="hljs-number">0</span>
+  };
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">jsonpScriptSrc</span>(<span class="hljs-params">chunkId</span>) </span>{
+    <span class="hljs-keyword">return</span> __webpack_require__.p + <span class="hljs-string">&quot;&quot;</span> + ({}[chunkId] || chunkId) + <span class="hljs-string">&quot;.js&quot;</span>
+  }
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">__webpack_require__</span>(<span class="hljs-params">moduleId</span>) </span>{
+    <span class="hljs-keyword">if</span> (installedModules[moduleId]) {
+      <span class="hljs-keyword">return</span> installedModules[moduleId].exports;
+    }
+    <span class="hljs-keyword">var</span> <span class="hljs-built_in">module</span> = installedModules[moduleId] = {
+      <span class="hljs-attr">i</span>: moduleId,
+      <span class="hljs-attr">l</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-attr">exports</span>: {}
+    };
+    modules[moduleId].call(<span class="hljs-built_in">module</span>.exports, <span class="hljs-built_in">module</span>, <span class="hljs-built_in">module</span>.exports, __webpack_require__);
+    <span class="hljs-built_in">module</span>.l = <span class="hljs-literal">true</span>;
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">module</span>.exports;
+  }
+  __webpack_require__.e = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">requireEnsure</span>(<span class="hljs-params">chunkId</span>) </span>{
+    <span class="hljs-keyword">var</span> promises = [];
+    <span class="hljs-keyword">var</span> installedChunkData = installedChunks[chunkId];
+    <span class="hljs-keyword">if</span> (installedChunkData !== <span class="hljs-number">0</span>) {
+      <span class="hljs-keyword">if</span> (installedChunkData) {
+        promises.push(installedChunkData[<span class="hljs-number">2</span>]);
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">var</span> promise = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">resolve, reject</span>) </span>{
+          installedChunkData = installedChunks[chunkId] = [resolve, reject];
+        });
+        promises.push(installedChunkData[<span class="hljs-number">2</span>] = promise);
+        <span class="hljs-keyword">var</span> script = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&apos;script&apos;</span>);
+        <span class="hljs-keyword">var</span> onScriptComplete;
+        script.charset = <span class="hljs-string">&apos;utf-8&apos;</span>;
+        script.timeout = <span class="hljs-number">120</span>;
+        <span class="hljs-keyword">if</span> (__webpack_require__.nc) {
+          script.setAttribute(<span class="hljs-string">&quot;nonce&quot;</span>, __webpack_require__.nc);
+        }
+        script.src = jsonpScriptSrc(chunkId);
+        <span class="hljs-keyword">var</span> error = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>();
+        onScriptComplete = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">event</span>) </span>{
+          script.onerror = script.onload = <span class="hljs-literal">null</span>;
+          clearTimeout(timeout);
+          <span class="hljs-keyword">var</span> chunk = installedChunks[chunkId];
+          <span class="hljs-keyword">if</span> (chunk !== <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">if</span> (chunk) {
+              <span class="hljs-keyword">var</span> errorType = event &amp;&amp; (event.type === <span class="hljs-string">&apos;load&apos;</span> ? <span class="hljs-string">&apos;missing&apos;</span> : event.type);
+              <span class="hljs-keyword">var</span> realSrc = event &amp;&amp; event.target &amp;&amp; event.target.src;
+              error.message = <span class="hljs-string">&apos;Loading chunk &apos;</span> + chunkId + <span class="hljs-string">&apos; failed.\n(&apos;</span> + errorType + <span class="hljs-string">&apos;: &apos;</span> + realSrc + <span class="hljs-string">&apos;)&apos;</span>;
+              error.name = <span class="hljs-string">&apos;ChunkLoadError&apos;</span>;
+              error.type = errorType;
+              error.request = realSrc;
+              chunk[<span class="hljs-number">1</span>](error);
+            }
+            installedChunks[chunkId] = <span class="hljs-literal">undefined</span>;
+          }
+        };
+        <span class="hljs-keyword">var</span> timeout = setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+          onScriptComplete({ <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;timeout&apos;</span>, <span class="hljs-attr">target</span>: script });
+        }, <span class="hljs-number">120000</span>);
+        script.onerror = script.onload = onScriptComplete;
+        <span class="hljs-built_in">document</span>.head.appendChild(script);
+      }
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Promise</span>.all(promises);
+  };
+  __webpack_require__.m = modules;
+  __webpack_require__.c = installedModules;
+  __webpack_require__.d = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">exports, name, getter</span>) </span>{
+    <span class="hljs-keyword">if</span> (!__webpack_require__.o(exports, name)) {
+      <span class="hljs-built_in">Object</span>.defineProperty(exports, name, { <span class="hljs-attr">enumerable</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">get</span>: getter });
+    }
+  };
+  <span class="hljs-comment">// define __esModule on exports</span>
+  __webpack_require__.r = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">exports</span>) </span>{
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">Symbol</span> !== <span class="hljs-string">&apos;undefined&apos;</span> &amp;&amp; <span class="hljs-built_in">Symbol</span>.toStringTag) {
+      <span class="hljs-built_in">Object</span>.defineProperty(exports, <span class="hljs-built_in">Symbol</span>.toStringTag, { <span class="hljs-attr">value</span>: <span class="hljs-string">&apos;Module&apos;</span> });
+    }
+    <span class="hljs-built_in">Object</span>.defineProperty(exports, <span class="hljs-string">&apos;__esModule&apos;</span>, { <span class="hljs-attr">value</span>: <span class="hljs-literal">true</span> });
+  };
+  __webpack_require__.t = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">value, mode</span>) </span>{
+    <span class="hljs-keyword">if</span> (mode &amp; <span class="hljs-number">1</span>) value = __webpack_require__(value);
+    <span class="hljs-keyword">if</span> (mode &amp; <span class="hljs-number">8</span>) <span class="hljs-keyword">return</span> value;
+    <span class="hljs-keyword">if</span> ((mode &amp; <span class="hljs-number">4</span>) &amp;&amp; <span class="hljs-keyword">typeof</span> value === <span class="hljs-string">&apos;object&apos;</span> &amp;&amp; value &amp;&amp; value.__esModule) <span class="hljs-keyword">return</span> value;
+    <span class="hljs-keyword">var</span> ns = <span class="hljs-built_in">Object</span>.create(<span class="hljs-literal">null</span>);
+    __webpack_require__.r(ns);
+    <span class="hljs-built_in">Object</span>.defineProperty(ns, <span class="hljs-string">&apos;default&apos;</span>, { <span class="hljs-attr">enumerable</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">value</span>: value });
+    <span class="hljs-keyword">if</span> (mode &amp; <span class="hljs-number">2</span> &amp;&amp; <span class="hljs-keyword">typeof</span> value != <span class="hljs-string">&apos;string&apos;</span>) <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> key <span class="hljs-keyword">in</span> value) __webpack_require__.d(ns, key, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">key</span>) </span>{ <span class="hljs-keyword">return</span> value[key]; }.bind(<span class="hljs-literal">null</span>, key));
+    <span class="hljs-keyword">return</span> ns;
+  };
+  __webpack_require__.n = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">module</span>) </span>{
+    <span class="hljs-keyword">var</span> getter = <span class="hljs-built_in">module</span> &amp;&amp; <span class="hljs-built_in">module</span>.__esModule ?
+      <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getDefault</span>(<span class="hljs-params"></span>) </span>{ <span class="hljs-keyword">return</span> <span class="hljs-built_in">module</span>[<span class="hljs-string">&apos;default&apos;</span>]; } :
+      <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getModuleExports</span>(<span class="hljs-params"></span>) </span>{ <span class="hljs-keyword">return</span> <span class="hljs-built_in">module</span>; };
+    __webpack_require__.d(getter, <span class="hljs-string">&apos;a&apos;</span>, getter);
+    <span class="hljs-keyword">return</span> getter;
+  };
+  __webpack_require__.o = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">object, property</span>) </span>{ <span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.prototype.hasOwnProperty.call(object, property); };
+  __webpack_require__.p = <span class="hljs-string">&quot;&quot;</span>;
+  __webpack_require__.oe = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err</span>) </span>{ <span class="hljs-built_in">console</span>.error(err); <span class="hljs-keyword">throw</span> err; };
+  <span class="hljs-keyword">var</span> jsonpArray = <span class="hljs-built_in">window</span>[<span class="hljs-string">&quot;webpackJsonp&quot;</span>] = <span class="hljs-built_in">window</span>[<span class="hljs-string">&quot;webpackJsonp&quot;</span>] || [];
+  <span class="hljs-keyword">var</span> oldJsonpFunction = jsonpArray.push.bind(jsonpArray);
+  jsonpArray.push = webpackJsonpCallback;
+  jsonpArray = jsonpArray.slice();
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; jsonpArray.length; i++) webpackJsonpCallback(jsonpArray[i]);
+  <span class="hljs-keyword">var</span> parentJsonpFunction = oldJsonpFunction;
+  <span class="hljs-keyword">return</span> __webpack_require__(__webpack_require__.s = <span class="hljs-string">&quot;./src/index.js&quot;</span>);
+})
+  ({
+    &lt;%
+          <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> id <span class="hljs-keyword">in</span> modules){
+              <span class="hljs-keyword">let</span> {moduleId,_source} = modules[id];%&gt;
+              <span class="hljs-string">&quot;&lt;%-moduleId%&gt;&quot;</span>:
+              (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">module, exports,__webpack_require__</span>) </span>{
+                &lt;%-_source%&gt;
+              }),
+           &lt;%}
+        %&gt;
+  });
+</code></pre>
+<h3 id="t438.7 chunkTemplate.ejs">8.7 chunkTemplate.ejs <a href="#t438.7 chunkTemplate.ejs"> # </a></h3>
+<p>webpack\chunkTemplate.ejs</p>
+<pre><code class="lang-js">(<span class="hljs-built_in">window</span>[<span class="hljs-string">&quot;webpackJsonp&quot;</span>] = <span class="hljs-built_in">window</span>[<span class="hljs-string">&quot;webpackJsonp&quot;</span>] || []).push([[<span class="hljs-string">&quot;&lt;%- chunkName %&gt;&quot;</span>],{
+
+&lt;% <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>;i &lt; modules.length;i++){ %&gt;
+    <span class="hljs-string">&quot;&lt;%- modules[i].moduleId %&gt;&quot;</span>:
+    (<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">module, exports, __webpack_require__</span>) </span>{
+    &lt;%- modules[i]._source %&gt;
+    }),
+&lt;% } %&gt;
+
+}]);
+</code></pre>
+<h2 id="t449.&#x52A0;&#x8F7D;&#x7B2C;&#x4E09;&#x65B9;&#x6A21;&#x5757;">9.&#x52A0;&#x8F7D;&#x7B2C;&#x4E09;&#x65B9;&#x6A21;&#x5757; <a href="#t449.&#x52A0;&#x8F7D;&#x7B2C;&#x4E09;&#x65B9;&#x6A21;&#x5757;"> # </a></h2>
+<h3 id="t459.1 src\index.js">9.1 src\index.js <a href="#t459.1 src\index.js"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> _ = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;lodash&apos;</span>);
+<span class="hljs-built_in">console</span>.log(_.join([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]));
+</code></pre>
+<h3 id="t469.2 NormalModule.js">9.2 NormalModule.js <a href="#t469.2 NormalModule.js"> # </a></h3>
+<p>webpack\NormalModule.js</p>
+<pre><code class="lang-diff">const types = require(&apos;babel-types&apos;);
+const generate = require(&apos;babel-generator&apos;).default;
+const traverse = require(&apos;babel-traverse&apos;).default;
+const path = require(&apos;path&apos;);
+const async = require(&apos;neo-async&apos;);
+class NormalModule {
+    constructor({ name, context, rawRequest, resource, parser, moduleId, async }) {
+        this.name = name;
+        this.context = context;
+        this.rawRequest = rawRequest;
+        this.resource = resource;
+        this.moduleId = moduleId;
+        this.parser = parser;
+        this._source = null;
+        this._ast = null;
+        this.dependencies = [];
+        this.blocks = [];
+        this.async = async;
+    }
+    //&#x89E3;&#x6790;&#x4F9D;&#x8D56;
+    build(compilation, callback) {
+        this.doBuild(compilation, err =&gt; {
+            let originalSource = this.getSource(this.resource, compilation);
+            // &#x5C06; &#x5F53;&#x524D;&#x6A21;&#x5757; &#x7684;&#x5185;&#x5BB9;&#x8F6C;&#x6362;&#x6210; AST
+            const ast = this.parser.parse(originalSource);
+            traverse(ast, {
+                // &#x5982;&#x679C;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x65F6;
+                CallExpression: (nodePath) =&gt; {
+                    let node = nodePath.node;
+                    debugger
+                    // &#x5F53;&#x524D;&#x8282;&#x70B9;&#x662F; require &#x65F6;
+                    if (node.callee.name <span class="hljs-comment">=== &apos;require&apos;) {</span>
+                        //&#x4FEE;&#x6539;require&#x4E3A;__webpack_require__
+                        node.callee.name = &apos;__webpack_require__&apos;;
+                        //&#x83B7;&#x53D6;&#x8981;&#x52A0;&#x8F7D;&#x7684;&#x6A21;&#x5757;ID
+                        let moduleName = node.arguments[0].value;
+<span class="hljs-addition">+                        let dependencyResource;</span>
+<span class="hljs-addition">+                        if (moduleName.startsWith(&apos;.&apos;)) {</span>
+<span class="hljs-addition">+                            //&#x83B7;&#x53D6;&#x6269;&#x5C55;&#x540D;</span>
+<span class="hljs-addition">+                            let extension = moduleName.split(path.posix.sep).pop().indexOf(&apos;.&apos;) == -1 ? &apos;.js&apos; : &apos;&apos;;</span>
+<span class="hljs-addition">+                            //&#x83B7;&#x53D6;&#x4F9D;&#x8D56;&#x6A21;&#x5757;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;</span>
+<span class="hljs-addition">+                            dependencyResource = path.posix.join(path.posix.dirname(this.resource), moduleName + extension);</span>
+<span class="hljs-addition">+                        } else {</span>
+<span class="hljs-addition">+                            dependencyResource = require.resolve(path.posix.join(this.context, &apos;node_modules&apos;, moduleName));</span>
+<span class="hljs-addition">+                            dependencyResource = dependencyResource.replace(/\\/g, path.posix.sep);</span>
+<span class="hljs-addition">+                        }</span>
+<span class="hljs-addition">+                        //&#x83B7;&#x53D6;&#x4F9D;&#x8D56;&#x6A21;&#x5757;&#x7684;&#x6A21;&#x5757;ID</span>
+<span class="hljs-addition">+                        let dependencyModuleId = &apos;.&apos; + dependencyResource.slice(this.context.length);</span>
+                        //&#x6DFB;&#x52A0;&#x4F9D;&#x8D56;
+                        this.dependencies.push({
+                            name: this.name, context: this.context, rawRequest: moduleName,
+                            moduleId: dependencyModuleId, resource: dependencyResource
+                        });
+                        node.arguments = [types.stringLiteral(dependencyModuleId)];
+                    } else if (types.isImport(nodePath.node.callee)) {
+                        //&#x83B7;&#x53D6;&#x8981;&#x52A0;&#x8F7D;&#x7684;&#x6A21;&#x5757;ID
+                        let moduleName = node.arguments[0].value;
+                        //&#x83B7;&#x53D6;&#x6269;&#x5C55;&#x540D;
+                        let extension = moduleName.split(path.posix.sep).pop().indexOf(&apos;.&apos;) == -1 ? &apos;.js&apos; : &apos;&apos;;
+                        //&#x83B7;&#x53D6;&#x4F9D;&#x8D56;&#x6A21;&#x5757;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;
+                        let dependencyResource = path.posix.join(path.posix.dirname(this.resource), moduleName + extension);
+                        //&#x83B7;&#x53D6;&#x4F9D;&#x8D56;&#x6A21;&#x5757;&#x7684;&#x6A21;&#x5757;ID
+                        let dependencyModuleId = &apos;.&apos; + path.posix.sep + path.posix.relative(this.context, dependencyResource);
+                        //&#x83B7;&#x53D6;&#x4EE3;&#x7801;&#x5757;&#x7684;ID
+                        let dependencyChunkId = dependencyModuleId.slice(2, dependencyModuleId.lastIndexOf(&apos;.&apos;)).replace(path.posix.sep, &apos;_&apos;, &apos;g&apos;);
+                        // chunkId &#x4E0D;&#x9700;&#x8981;&#x5E26; .js &#x540E;&#x7F00;
+                        nodePath.replaceWithSourceString(`
+                            __webpack_require__.e(&quot;${dependencyChunkId}&quot;).then(__webpack_require__.t.bind(null,&quot;${dependencyModuleId}&quot;,7))
+                        `);
+                        this.blocks.push({
+                            context: this.context,
+                            entry: dependencyModuleId,
+                            name: dependencyChunkId,
+                            async: true
+                        });
+                    }
+                },
+            });
+            let { code } = generate(ast);
+            this._source = code;
+            this._ast = ast;
+            async.forEach(this.blocks, ({ context, entry, name, async }, done) =&gt; {
+                compilation._addModuleChain(context, entry, name, async, done);
+            }, callback);
+        });
+    }
+    //&#x83B7;&#x53D6;&#x6A21;&#x5757;&#x4EE3;&#x7801;
+    doBuild(compilation, callback) {
+        let originalSource = this.getSource(this.resource, compilation);
+        this._source = originalSource;
+        callback();
+    }
+    getSource(resource, compilation) {
+        let originalSource = compilation.inputFileSystem.readFileSync(resource, &apos;utf8&apos;);
+        return originalSource;
+    }
+}
+module.exports = NormalModule;
+</code></pre>
+<h2 id="t4710.&#x5206;&#x79BB;commons&#x548C;vendor">10.&#x5206;&#x79BB;commons&#x548C;vendor <a href="#t4710.&#x5206;&#x79BB;commons&#x548C;vendor"> # </a></h2>
+<h3 id="t4810.1 webpack.config.js">10.1 webpack.config.js <a href="#t4810.1 webpack.config.js"> # </a></h3>
+<pre><code class="lang-diff">const path = require(&apos;path&apos;);
+module.exports = {
+    context: process.cwd(),
+    mode: &apos;development&apos;,
+    devtool: &apos;none&apos;,
+<span class="hljs-addition">+   entry: {</span>
+<span class="hljs-addition">+       entry1: &apos;./src/entry1.js&apos;,</span>
+<span class="hljs-addition">+       entry2: &apos;./src/entry2.js&apos;,</span>
+<span class="hljs-addition">+   },</span>
+    output: {
+        path: path.resolve(__dirname, &apos;dist&apos;),
+        filename: &apos;[name].js&apos;
+    }
+}
+</code></pre>
+<h3 id="t4910.2 src\entry1.js">10.2 src\entry1.js <a href="#t4910.2 src\entry1.js"> # </a></h3>
+<p>src\entry1.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> title = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./title&apos;</span>);
+<span class="hljs-keyword">let</span> _ = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;lodash&apos;</span>);
+<span class="hljs-built_in">console</span>.log(_.upperCase(title));
+</code></pre>
+<h3 id="t5010.3 src\entry2.js">10.3 src\entry2.js <a href="#t5010.3 src\entry2.js"> # </a></h3>
+<p>src\entry2.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> title = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./title&apos;</span>);
+<span class="hljs-keyword">let</span> _ = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;lodash&apos;</span>);
+<span class="hljs-built_in">console</span>.log(_.upperCase(title));
+</code></pre>
+<h3 id="t5110.4 EntryOptionPlugin.js">10.4 EntryOptionPlugin.js <a href="#t5110.4 EntryOptionPlugin.js"> # </a></h3>
+<p>webpack\plugins\EntryOptionPlugin.js</p>
+<pre><code class="lang-diff">const SingleEntryPlugin = require(&quot;./SingleEntryPlugin&quot;);
+class EntryOptionPlugin {
+    apply(compiler) {
+        compiler.hooks.entryOption.tap(&quot;EntryOptionPlugin&quot;, (context, entry) =&gt; {
+<span class="hljs-addition">+            if (typeof entry == &apos;string&apos;) {</span>
+<span class="hljs-addition">+                new SingleEntryPlugin(context, entry, &apos;main&apos;).apply(compiler);</span>
+<span class="hljs-addition">+            } else {</span>
+<span class="hljs-addition">+                // &#x5904;&#x7406;&#x591A;&#x5165;&#x53E3;</span>
+<span class="hljs-addition">+                for (let entryName in entry) {</span>
+<span class="hljs-addition">+                    new SingleEntryPlugin(context, entry[entryName], entryName).apply(compiler);</span>
+<span class="hljs-addition">+                }</span>
+<span class="hljs-addition">+            }</span>
+        });
+    }
+}
+module.exports = EntryOptionPlugin;
+</code></pre>
+<h3 id="t5210.5 Compilation.js">10.5 Compilation.js <a href="#t5210.5 Compilation.js"> # </a></h3>
+<p>webpack\Compilation.js</p>
+<pre><code class="lang-diff">const NormalModuleFactory = require(&apos;./NormalModuleFactory&apos;);
+const async = require(&apos;neo-async&apos;);
+const { Tapable, SyncHook } = require(&quot;tapable&quot;);
+const Parser = require(&apos;./Parser&apos;);
+const parser = new Parser();
+const path = require(&apos;path&apos;);
+const Chunk = require(&apos;./Chunk&apos;);
+const ejs = require(&apos;ejs&apos;);
+const fs = require(&apos;fs&apos;);
+<span class="hljs-addition">+const mainTemplate = fs.readFileSync(path.join(__dirname, &apos;template&apos;, &apos;mainDeferTemplate.ejs&apos;), &apos;utf8&apos;);</span>
+const mainRender = ejs.compile(mainTemplate);
+const chunkTemplate = fs.readFileSync(path.join(__dirname, &apos;template&apos;, &apos;chunkTemplate.ejs&apos;), &apos;utf8&apos;);
+const chunkRender = ejs.compile(chunkTemplate);
+class Compilation extends Tapable {
+    constructor(compiler) {
+        super();
+        this.compiler = compiler;
+        this.options = compiler.options;
+        this.context = compiler.context;
+        this.inputFileSystem = compiler.inputFileSystem;
+        this.outputFileSystem = compiler.outputFileSystem;
+        this.entries = [];
+        this.modules = [];
+        this._modules = {};
+        this.chunks = [];
+        this.files = [];  //&#x751F;&#x6210;&#x7684;&#x6587;&#x4EF6;
+        this.assets = {}; //&#x8D44;&#x6E90; 
+<span class="hljs-addition">+        this.vendors = [];//&#x7B2C;&#x4E09;&#x65B9;&#x6A21;&#x5757;</span>
+<span class="hljs-addition">+        this.commons = [];//&#x4E0D;&#x5728;node_modules,&#x8C03;&#x7528;&#x6B21;&#x6570;&#x5927;&#x4E8E;1&#x7684;&#x6A21;&#x5757;</span>
+<span class="hljs-addition">+        this.commonsCountMap = {};//map</span>
+        this.hooks = {
+            succeedModule: new SyncHook([&quot;module&quot;]),
+            seal: new SyncHook([]),
+            beforeChunks: new SyncHook([]),
+            afterChunks: new SyncHook([&quot;chunks&quot;])
+        }
+    }
+    seal(callback) {
+        this.hooks.seal.call();
+        this.hooks.beforeChunks.call();//&#x751F;&#x6210;&#x4EE3;&#x7801;&#x5757;&#x4E4B;&#x524D;
+<span class="hljs-addition">+        for (const module of this.modules) {//&#x5FAA;&#x73AF;&#x5165;&#x53E3;&#x6A21;&#x5757;</span>
+<span class="hljs-addition">+            if (/node_modules/.test(module.moduleId)) {</span>
+<span class="hljs-addition">+                module.name = &apos;vendors&apos;;</span>
+<span class="hljs-addition">+                this.vendors.push(module);</span>
+<span class="hljs-addition">+            } else {</span>
+<span class="hljs-addition">+                if (this.commonsCountMap[module.moduleId]) {</span>
+<span class="hljs-addition">+                    this.commonsCountMap[module.moduleId].count++;</span>
+<span class="hljs-addition">+                } else {</span>
+<span class="hljs-addition">+                    this.commonsCountMap[module.moduleId] = { count: 1, module };</span>
+<span class="hljs-addition">+                }</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+        for (let moduleId in this.commonsCountMap) {</span>
+<span class="hljs-addition">+            const moduleCount = this.commonsCountMap[moduleId];</span>
+<span class="hljs-addition">+            let { module, count } = moduleCount;</span>
+<span class="hljs-addition">+            if (count &gt;= 2) {</span>
+<span class="hljs-addition">+                module.name = &apos;commons&apos;;</span>
+<span class="hljs-addition">+                this.commons.push(module);</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+        let excludeModuleIds = [...this.vendors, ...this.commons].map(item =&gt; item.moduleId);</span>
+<span class="hljs-addition">+        this.modules = this.modules.filter(item =&gt; !excludeModuleIds.includes(item.moduleId));</span>
+
+        for (const module of this.entries) {//&#x5FAA;&#x73AF;&#x5165;&#x53E3;&#x6A21;&#x5757;
+            const chunk = new Chunk(module);//&#x521B;&#x5EFA;&#x4EE3;&#x7801;&#x5757;
+            this.chunks.push(chunk);//&#x628A;&#x4EE3;&#x7801;&#x5757;&#x6DFB;&#x52A0;&#x5230;&#x4EE3;&#x7801;&#x5757;&#x6570;&#x7EC4;&#x4E2D;
+            //&#x628A;&#x4EE3;&#x7801;&#x5757;&#x7684;&#x6A21;&#x5757;&#x6DFB;&#x52A0;&#x5230;&#x4EE3;&#x7801;&#x5757;&#x4E2D;
+            chunk.modules = this.modules.filter(module =&gt; module.name == chunk.name);
+        }
+<span class="hljs-addition">+        if (this.vendors.length) {</span>
+<span class="hljs-addition">+            const chunk = new Chunk(this.vendors[0]);</span>
+<span class="hljs-addition">+            chunk.async = true;</span>
+<span class="hljs-addition">+            this.chunks.push(chunk);</span>
+<span class="hljs-addition">+            chunk.modules = this.vendors;</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+        if (this.commons.length) {</span>
+<span class="hljs-addition">+            const chunk = new Chunk(this.commons[0]);</span>
+<span class="hljs-addition">+            chunk.async = true;</span>
+<span class="hljs-addition">+            this.chunks.push(chunk);</span>
+<span class="hljs-addition">+            chunk.modules = this.commons;</span>
+<span class="hljs-addition">+        }</span>
+        this.hooks.afterChunks.call(this.chunks);//&#x751F;&#x6210;&#x4EE3;&#x7801;&#x5757;&#x4E4B;&#x540E;
+        this.createChunkAssets();
+        callback();//&#x5C01;&#x88C5;&#x7ED3;&#x675F;
+    }
+    createChunkAssets() {
+        for (let i = 0; i &lt; this.chunks.length; i++) {
+            const chunk = this.chunks[i];
+            chunk.files = [];
+            const file = chunk.name + &apos;.js&apos;;
+            let source;
+            if (chunk.async) {
+                source = chunkRender({ chunkName: chunk.name, modules: chunk.modules });
+            } else {
+<span class="hljs-addition">+                let deferredChunks = [];</span>
+<span class="hljs-addition">+                if (this.commons.length) deferredChunks.push(&apos;commons&apos;);</span>
+<span class="hljs-addition">+                if (this.vendors.length) deferredChunks.push(&apos;vendors&apos;);</span>
+<span class="hljs-addition">+                source = mainRender({ entryId: chunk.entryModule.moduleId, modules: chunk.modules, deferredChunks });</span>
+            }
+            chunk.files.push(file);
+            this.emitAsset(file, source);
+        }
+
+    }
+    emitAsset(file, source) {
+        this.assets[file] = source;
+        this.files.push(file);
+    }
+    //context ./src/index.js main callback(&#x7EC8;&#x7EA7;&#x56DE;&#x8C03;)
+    addEntry(context, entry, name, async, callback) {
+        this._addModuleChain(context, entry, name, async, (err, module) =&gt; {
+            callback(err, module);
+        });
+    }
+    _addModuleChain(context, entry, name, async, callback) {
+        const moduleFactory = new NormalModuleFactory();
+        let module = moduleFactory.create(
+            {
+                name,  //&#x6A21;&#x5757;&#x6240;&#x5C5E;&#x7684;&#x4EE3;&#x7801;&#x5757;&#x7684;&#x540D;&#x79F0;
+                context: this.context,//&#x4E0A;&#x4E0B;&#x6587;
+                rawRequest: entry,
+                async,
+                resource: path.posix.join(context, entry),
+                parser
+            });//&#x6A21;&#x5757;&#x5B8C;&#x6574;&#x8DEF;&#x5F84;
+        module.moduleId = &apos;.&apos; + path.posix.sep + path.posix.relative(this.context, module.resource);
+        this.modules.push(module);
+        this.entries.push(module);//&#x628A;&#x7F16;&#x8BD1;&#x597D;&#x7684;&#x6A21;&#x5757;&#x6DFB;&#x52A0;&#x5230;&#x5165;&#x53E3;&#x5217;&#x8868;&#x91CC;&#x9762;
+        const afterBuild = () =&gt; {
+            if (module.dependencies) {
+                this.processModuleDependencies(module, err =&gt; {
+                    callback(null, module);
+                });
+            } else {
+                return callback(null, module);
+            }
+        };
+        this.buildModule(module, afterBuild);
+
+    }
+    processModuleDependencies(module, callback) {
+        let dependencies = module.dependencies;
+        async.forEach(dependencies, (dependency, done) =&gt; {
+            let { name, context, rawRequest, resource, moduleId, async } = dependency;
+            const moduleFactory = new NormalModuleFactory();
+            let module = moduleFactory.create(
+                {
+                    name,
+                    context,
+                    rawRequest,
+                    moduleId,
+                    resource,
+                    parser,
+                    async
+                });
+            this.modules.push(module);
+            this._modules[module.moduleId] = module;
+            const afterBuild = () =&gt; {
+                if (module.dependencies) {
+                    this.processModuleDependencies(module, err =&gt; {
+                        done(null, module);
+                    });
+                } else {
+                    return done(null, module);
+                }
+            };
+            this.buildModule(module, afterBuild);
+        }, callback);
+    }
+    buildModule(module, afterBuild) {
+        module.build(this, (err) =&gt; {
+            this.hooks.succeedModule.call(module);
+            return afterBuild();
+        });
+    }
+}
+module.exports = Compilation;
+</code></pre>
+<h3 id="t5310.6 mainDeferTemplate.ejs">10.6 mainDeferTemplate.ejs <a href="#t5310.6 mainDeferTemplate.ejs"> # </a></h3>
+<p>webpack\template\mainDeferTemplate.ejs</p>
+<pre><code class="lang-js">(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">modules</span>) </span>{
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">webpackJsonpCallback</span>(<span class="hljs-params">data</span>) </span>{
+    <span class="hljs-keyword">var</span> chunkIds = data[<span class="hljs-number">0</span>];
+    <span class="hljs-keyword">var</span> moreModules = data[<span class="hljs-number">1</span>];
+    <span class="hljs-keyword">var</span> executeModules = data[<span class="hljs-number">2</span>];
+    <span class="hljs-keyword">var</span> moduleId, chunkId, i = <span class="hljs-number">0</span>, resolves = [];
+    <span class="hljs-keyword">for</span> (; i &lt; chunkIds.length; i++) {
+      chunkId = chunkIds[i];
+      <span class="hljs-keyword">if</span> (<span class="hljs-built_in">Object</span>.prototype.hasOwnProperty.call(installedChunks, chunkId) &amp;&amp; installedChunks[chunkId]) {
+        resolves.push(installedChunks[chunkId][<span class="hljs-number">0</span>]);
+      }
+      installedChunks[chunkId] = <span class="hljs-number">0</span>;
+    }
+    <span class="hljs-keyword">for</span> (moduleId <span class="hljs-keyword">in</span> moreModules) {
+      <span class="hljs-keyword">if</span> (<span class="hljs-built_in">Object</span>.prototype.hasOwnProperty.call(moreModules, moduleId)) {
+        modules[moduleId] = moreModules[moduleId];
+      }
+    }
+    <span class="hljs-keyword">if</span> (parentJsonpFunction) parentJsonpFunction(data);
+    <span class="hljs-keyword">while</span> (resolves.length) {
+      resolves.shift()();
+    }
+    deferredModules.push.apply(deferredModules, executeModules || []);
+    <span class="hljs-keyword">return</span> checkDeferredModules();
+  };
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">checkDeferredModules</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">debugger</span>
+    <span class="hljs-keyword">var</span> result;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; deferredModules.length; i++) {
+      <span class="hljs-keyword">var</span> deferredModule = deferredModules[i];
+      <span class="hljs-keyword">var</span> fulfilled = <span class="hljs-literal">true</span>;
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> j = <span class="hljs-number">1</span>; j &lt; deferredModule.length; j++) {
+        <span class="hljs-keyword">var</span> depId = deferredModule[j];
+        <span class="hljs-keyword">if</span> (installedChunks[depId] !== <span class="hljs-number">0</span>) fulfilled = <span class="hljs-literal">false</span>;
+      }
+      <span class="hljs-keyword">if</span> (fulfilled) {
+        deferredModules.splice(i--, <span class="hljs-number">1</span>);
+        result = __webpack_require__(__webpack_require__.s = deferredModule[<span class="hljs-number">0</span>]);
+      }
+    }
+    <span class="hljs-keyword">return</span> result;
+  }
+  <span class="hljs-keyword">var</span> installedModules = {};
+  <span class="hljs-keyword">var</span> installedChunks = {
+    <span class="hljs-string">&quot;entry1&quot;</span>: <span class="hljs-number">0</span>
+  };
+  <span class="hljs-keyword">var</span> deferredModules = [];
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">__webpack_require__</span>(<span class="hljs-params">moduleId</span>) </span>{
+    <span class="hljs-keyword">if</span> (installedModules[moduleId]) {
+      <span class="hljs-keyword">return</span> installedModules[moduleId].exports;
+    }
+    <span class="hljs-keyword">var</span> <span class="hljs-built_in">module</span> = installedModules[moduleId] = {
+      <span class="hljs-attr">i</span>: moduleId,
+      <span class="hljs-attr">l</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-attr">exports</span>: {}
+    };
+    modules[moduleId].call(<span class="hljs-built_in">module</span>.exports, <span class="hljs-built_in">module</span>, <span class="hljs-built_in">module</span>.exports, __webpack_require__);
+    <span class="hljs-built_in">module</span>.l = <span class="hljs-literal">true</span>;
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">module</span>.exports;
+  }
+  __webpack_require__.m = modules;
+  __webpack_require__.c = installedModules;
+  __webpack_require__.d = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">exports, name, getter</span>) </span>{
+    <span class="hljs-keyword">if</span> (!__webpack_require__.o(exports, name)) {
+      <span class="hljs-built_in">Object</span>.defineProperty(exports, name, { <span class="hljs-attr">enumerable</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">get</span>: getter });
+    }
+  };
+  __webpack_require__.r = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">exports</span>) </span>{
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">Symbol</span> !== <span class="hljs-string">&apos;undefined&apos;</span> &amp;&amp; <span class="hljs-built_in">Symbol</span>.toStringTag) {
+      <span class="hljs-built_in">Object</span>.defineProperty(exports, <span class="hljs-built_in">Symbol</span>.toStringTag, { <span class="hljs-attr">value</span>: <span class="hljs-string">&apos;Module&apos;</span> });
+    }
+    <span class="hljs-built_in">Object</span>.defineProperty(exports, <span class="hljs-string">&apos;__esModule&apos;</span>, { <span class="hljs-attr">value</span>: <span class="hljs-literal">true</span> });
+  };
+  __webpack_require__.t = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">value, mode</span>) </span>{
+    <span class="hljs-keyword">if</span> (mode &amp; <span class="hljs-number">1</span>) value = __webpack_require__(value);
+    <span class="hljs-keyword">if</span> (mode &amp; <span class="hljs-number">8</span>) <span class="hljs-keyword">return</span> value;
+    <span class="hljs-keyword">if</span> ((mode &amp; <span class="hljs-number">4</span>) &amp;&amp; <span class="hljs-keyword">typeof</span> value === <span class="hljs-string">&apos;object&apos;</span> &amp;&amp; value &amp;&amp; value.__esModule) <span class="hljs-keyword">return</span> value;
+    <span class="hljs-keyword">var</span> ns = <span class="hljs-built_in">Object</span>.create(<span class="hljs-literal">null</span>);
+    __webpack_require__.r(ns);
+    <span class="hljs-built_in">Object</span>.defineProperty(ns, <span class="hljs-string">&apos;default&apos;</span>, { <span class="hljs-attr">enumerable</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">value</span>: value });
+    <span class="hljs-keyword">if</span> (mode &amp; <span class="hljs-number">2</span> &amp;&amp; <span class="hljs-keyword">typeof</span> value != <span class="hljs-string">&apos;string&apos;</span>) <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> key <span class="hljs-keyword">in</span> value) __webpack_require__.d(ns, key, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">key</span>) </span>{ <span class="hljs-keyword">return</span> value[key]; }.bind(<span class="hljs-literal">null</span>, key));
+    <span class="hljs-keyword">return</span> ns;
+  };
+  __webpack_require__.n = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">module</span>) </span>{
+    <span class="hljs-keyword">var</span> getter = <span class="hljs-built_in">module</span> &amp;&amp; <span class="hljs-built_in">module</span>.__esModule ?
+      <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getDefault</span>(<span class="hljs-params"></span>) </span>{ <span class="hljs-keyword">return</span> <span class="hljs-built_in">module</span>[<span class="hljs-string">&apos;default&apos;</span>]; } :
+      <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getModuleExports</span>(<span class="hljs-params"></span>) </span>{ <span class="hljs-keyword">return</span> <span class="hljs-built_in">module</span>; };
+    __webpack_require__.d(getter, <span class="hljs-string">&apos;a&apos;</span>, getter);
+    <span class="hljs-keyword">return</span> getter;
+  };
+  __webpack_require__.o = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">object, property</span>) </span>{ <span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.prototype.hasOwnProperty.call(object, property); };
+  __webpack_require__.p = <span class="hljs-string">&quot;&quot;</span>;
+  <span class="hljs-keyword">var</span> jsonpArray = <span class="hljs-built_in">window</span>[<span class="hljs-string">&quot;webpackJsonp&quot;</span>] = <span class="hljs-built_in">window</span>[<span class="hljs-string">&quot;webpackJsonp&quot;</span>] || [];
+  <span class="hljs-keyword">var</span> oldJsonpFunction = jsonpArray.push.bind(jsonpArray);
+  jsonpArray.push = webpackJsonpCallback;
+  jsonpArray = jsonpArray.slice();
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; jsonpArray.length; i++) webpackJsonpCallback(jsonpArray[i]);
+  <span class="hljs-keyword">var</span> parentJsonpFunction = oldJsonpFunction;
+  deferredModules.push([<span class="hljs-string">&quot;&lt;%=entryId%&gt;&quot;</span>&lt;%-deferredChunks.length&gt;<span class="hljs-number">0</span>?<span class="hljs-string">&apos;,&quot;&apos;</span>+deferredChunks.join(<span class="hljs-string">&apos;&quot;,&quot;&apos;</span>)+<span class="hljs-string">&apos;&quot;&apos;</span>:<span class="hljs-string">&quot;&quot;</span>%&gt;]);
+  <span class="hljs-keyword">return</span> checkDeferredModules();
+})
+  ({
+    &lt;%
+          <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> id <span class="hljs-keyword">in</span> modules){
+              <span class="hljs-keyword">let</span> {moduleId,_source} = modules[id];%&gt;
+              <span class="hljs-string">&quot;&lt;%-moduleId%&gt;&quot;</span>:
+              (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">module, exports,__webpack_require__</span>) </span>{
+                &lt;%-_source%&gt;
+              }),
+           &lt;%}
+        %&gt;
+  });
+</code></pre>
+<h2 id="t5411.&#x652F;&#x6301;loader">11.&#x652F;&#x6301;loader <a href="#t5411.&#x652F;&#x6301;loader"> # </a></h2>
+<h3 id="t5511.1 webpack.config.js">11.1 webpack.config.js <a href="#t5511.1 webpack.config.js"> # </a></h3>
+<pre><code class="lang-diff">const path = require(&apos;path&apos;);
+module.exports = {
+    context: process.cwd(),
+    mode: &apos;development&apos;,
+    devtool: &apos;none&apos;,
+<span class="hljs-addition">+    entry: &apos;./src/index.js&apos;,</span>
+    module: {
+        rules: [
+            {
+                test: /\.less$/,
+                use: [&apos;style-loader&apos;, &apos;less-loader&apos;]
+            }
+        ]
+    },
+    output: {
+        path: path.resolve(__dirname, &apos;dist&apos;),
+        filename: &apos;[name].js&apos;
+    }
+}
+</code></pre>
+<h3 id="t5611.2 src\index.js">11.2 src\index.js <a href="#t5611.2 src\index.js"> # </a></h3>
+<p>src\index.js</p>
+<pre><code class="lang-diff"><span class="hljs-addition">+require(&apos;./index.less&apos;);</span>
+let title = require(&apos;./title&apos;);
+let _ = require(&apos;lodash&apos;);
+console.log(_.upperCase(title));
+</code></pre>
+<h3 id="t5711.3 NormalModule.js">11.3 NormalModule.js <a href="#t5711.3 NormalModule.js"> # </a></h3>
+<p>webpack\NormalModule.js</p>
+<pre><code class="lang-diff">const types = require(&apos;babel-types&apos;);
+const generate = require(&apos;babel-generator&apos;).default;
+const traverse = require(&apos;babel-traverse&apos;).default;
+const path = require(&apos;path&apos;);
+const async = require(&apos;neo-async&apos;);
+const runLoaders = require(&apos;./loader-runner&apos;);
+const fs = require(&apos;fs&apos;);
+class NormalModule {
+    constructor({ name, context, rawRequest, resource, parser, moduleId, async }) {
+        this.name = name;
+        this.context = context;
+        this.rawRequest = rawRequest;
+        this.resource = resource;
+        this.moduleId = moduleId;
+        this.parser = parser;
+        this._source = null;
+        this._ast = null;
+        this.dependencies = [];
+        this.blocks = [];
+        this.async = async;
+    }
+    //&#x89E3;&#x6790;&#x4F9D;&#x8D56;
+    build(compilation, callback) {
+        this.doBuild(compilation, err =&gt; {
+<span class="hljs-addition">+            const afterSource = (err, source) =&gt; {</span>
+                // &#x5C06; &#x5F53;&#x524D;&#x6A21;&#x5757; &#x7684;&#x5185;&#x5BB9;&#x8F6C;&#x6362;&#x6210; AST
+                const ast = this.parser.parse(source);
+                traverse(ast, {
+                    // &#x5982;&#x679C;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x65F6;
+                    CallExpression: (nodePath) =&gt; {
+                        let node = nodePath.node;
+                        // &#x5F53;&#x524D;&#x8282;&#x70B9;&#x662F; require &#x65F6;
+                        if (node.callee.name <span class="hljs-comment">=== &apos;require&apos;) {</span>
+                            //&#x4FEE;&#x6539;require&#x4E3A;__webpack_require__
+                            node.callee.name = &apos;__webpack_require__&apos;;
+                            //&#x83B7;&#x53D6;&#x8981;&#x52A0;&#x8F7D;&#x7684;&#x6A21;&#x5757;ID
+                            let moduleName = node.arguments[0].value;
+                            let dependencyResource;
+                            if (moduleName.startsWith(&apos;.&apos;)) {
+                                //&#x83B7;&#x53D6;&#x6269;&#x5C55;&#x540D;
+                                let extension = moduleName.split(path.posix.sep).pop().indexOf(&apos;.&apos;) == -1 ? &apos;.js&apos; : &apos;&apos;;
+                                //&#x83B7;&#x53D6;&#x4F9D;&#x8D56;&#x6A21;&#x5757;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;
+                                dependencyResource = path.posix.join(path.posix.dirname(this.resource), moduleName + extension);
+                            } else {
+                                dependencyResource = require.resolve(path.posix.join(this.context, &apos;node_modules&apos;, moduleName));
+                                dependencyResource = dependencyResource.replace(/\\/g, path.posix.sep);
+                            }
+                            //&#x83B7;&#x53D6;&#x4F9D;&#x8D56;&#x6A21;&#x5757;&#x7684;&#x6A21;&#x5757;ID
+                            let dependencyModuleId = &apos;.&apos; + dependencyResource.slice(this.context.length);
+                            //&#x6DFB;&#x52A0;&#x4F9D;&#x8D56;
+                            this.dependencies.push({
+                                name: this.name, context: this.context, rawRequest: moduleName,
+                                moduleId: dependencyModuleId, resource: dependencyResource
+                            });
+                            node.arguments = [types.stringLiteral(dependencyModuleId)];
+                        } else if (types.isImport(nodePath.node.callee)) {
+                            //&#x83B7;&#x53D6;&#x8981;&#x52A0;&#x8F7D;&#x7684;&#x6A21;&#x5757;ID
+                            let moduleName = node.arguments[0].value;
+                            //&#x83B7;&#x53D6;&#x6269;&#x5C55;&#x540D;
+                            let extension = moduleName.split(path.posix.sep).pop().indexOf(&apos;.&apos;) == -1 ? &apos;.js&apos; : &apos;&apos;;
+                            //&#x83B7;&#x53D6;&#x4F9D;&#x8D56;&#x6A21;&#x5757;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;
+                            let dependencyResource = path.posix.join(path.posix.dirname(this.resource), moduleName + extension);
+                            //&#x83B7;&#x53D6;&#x4F9D;&#x8D56;&#x6A21;&#x5757;&#x7684;&#x6A21;&#x5757;ID
+                            let dependencyModuleId = &apos;.&apos; + path.posix.sep + path.posix.relative(this.context, dependencyResource);
+                            //&#x83B7;&#x53D6;&#x4EE3;&#x7801;&#x5757;&#x7684;ID
+                            let dependencyChunkId = dependencyModuleId.slice(2, dependencyModuleId.lastIndexOf(&apos;.&apos;)).replace(path.posix.sep, &apos;_&apos;, &apos;g&apos;);
+                            // chunkId &#x4E0D;&#x9700;&#x8981;&#x5E26; .js &#x540E;&#x7F00;
+                            nodePath.replaceWithSourceString(`
+                 __webpack_require__.e(&quot;${dependencyChunkId}&quot;).then(__webpack_require__.t.bind(null,&quot;${dependencyModuleId}&quot;,7))
+             `);
+                            this.blocks.push({
+                                context: this.context,
+                                entry: dependencyModuleId,
+                                name: dependencyChunkId,
+                                async: true
+                            });
+                        }
+                    },
+                });
+                let { code } = generate(ast);
+                this._source = code;
+                this._ast = ast;
+                async.forEach(this.blocks, ({ context, entry, name, async }, done) =&gt; {
+                    compilation._addModuleChain(context, entry, name, async, done);
+                }, callback);
+            }
+<span class="hljs-addition">+            this.getSource(this.resource, compilation, afterSource);</span>
+        });
+    }
+    //&#x83B7;&#x53D6;&#x6A21;&#x5757;&#x4EE3;&#x7801;
+    doBuild(compilation, callback) {
+<span class="hljs-addition">+        this.getSource(this.resource, compilation, (err, source) =&gt; {</span>
+<span class="hljs-addition">+            this._source = source;</span>
+<span class="hljs-addition">+            callback();</span>
+<span class="hljs-addition">+        });</span>
+    }
+<span class="hljs-addition">+    getSource(resource, compilation, callback) {</span>
+<span class="hljs-addition">+        let { module: { rules } } = compilation.options;</span>
+<span class="hljs-addition">+        let loaders = [];</span>
+<span class="hljs-addition">+        for (let i = 0; i &lt; rules.length; i++) {</span>
+<span class="hljs-addition">+            let rule = rules[i];</span>
+<span class="hljs-addition">+            if (rule.test.test(resource)) {</span>
+<span class="hljs-addition">+                let useLoaders = rule.use;</span>
+<span class="hljs-addition">+                loaders = [...loaders, ...useLoaders];</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+        loaders = loaders.map(loader =&gt; require.resolve(path.posix.join(this.context, &apos;loaders&apos;, loader)));</span>
+<span class="hljs-addition">+        let source = runLoaders({</span>
+<span class="hljs-addition">+            resource,</span>
+<span class="hljs-addition">+            loaders,</span>
+<span class="hljs-addition">+            context: {},</span>
+<span class="hljs-addition">+            readResource: fs</span>
+<span class="hljs-addition">+        }, function (err, result) {</span>
+<span class="hljs-addition">+            callback(err, result);</span>
+<span class="hljs-addition">+        });</span>
+<span class="hljs-addition">+        return source;</span>
+    }
+}
+module.exports = NormalModule;
+</code></pre>
+<h3 id="t5811.4 less-loader.js">11.4 less-loader.js <a href="#t5811.4 less-loader.js"> # </a></h3>
+<p>loaders\less-loader.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> less = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;less&apos;</span>);
+<span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">source</span>) </span>{
+    <span class="hljs-keyword">let</span> css;
+    less.render(source, (err, output) =&gt; {
+        css = output.css;
+    });
+    <span class="hljs-keyword">return</span> css;
+}
+</code></pre>
+<h3 id="t5911.5 style-loader.js">11.5 style-loader.js <a href="#t5911.5 style-loader.js"> # </a></h3>
+<p>loaders\style-loader.js</p>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">source</span>) </span>{
+    <span class="hljs-keyword">let</span> str = <span class="hljs-string">`
+      let style = document.createElement(&apos;style&apos;);
+      style.innerHTML = <span class="hljs-subst">${<span class="hljs-built_in">JSON</span>.stringify(source)}</span>;
+      document.head.appendChild(style);
+    `</span>;
+    <span class="hljs-keyword">return</span> str;
+}
+</code></pre>
+<h3 id="t6011.6 index.less">11.6 index.less <a href="#t6011.6 index.less"> # </a></h3>
+<p>src\index.less</p>
+<pre><code class="lang-js">@color:red;
+body{
+    background-color:@color;
+}
+</code></pre>
+<h3 id="t6111.7 loader-runner.js">11.7 loader-runner.js <a href="#t6111.7 loader-runner.js"> # </a></h3>
+<p>webpack\loader-runner.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs&apos;</span>);
+<span class="hljs-keyword">let</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createLoaderObject</span>(<span class="hljs-params">loader</span>) </span>{
+    <span class="hljs-keyword">let</span> obj = {};<span class="hljs-comment">//data&#x662F;&#x4E00;&#x81EA;&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;pitch&#x548C;normal&#x4E4B;&#x95F4;&#x4F20;&#x9012;&#x6570;&#x636E;</span>
+    obj.data = {};
+    obj.request = loader;<span class="hljs-comment">//loader&#x7684;&#x8DEF;&#x5F84;</span>
+    obj.normal = <span class="hljs-built_in">require</span>(loader);<span class="hljs-comment">//&#x771F;&#x6B63;&#x7684;loader&#x51FD;&#x6570;&#x4E86;</span>
+    obj.pitch = obj.normal.pitch;<span class="hljs-comment">//pitch&#x5C5E;&#x6027;</span>
+    <span class="hljs-keyword">return</span> obj;
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">runLoaders</span>(<span class="hljs-params">options, callback</span>) </span>{
+    <span class="hljs-keyword">debugger</span>
+    <span class="hljs-keyword">var</span> resource = options.resource || <span class="hljs-string">&quot;&quot;</span>;<span class="hljs-comment">//&#x8981;&#x52A0;&#x8F7D;&#x7684;&#x8D44;&#x6E90;</span>
+    <span class="hljs-keyword">var</span> loaders = options.loaders || [];<span class="hljs-comment">//&#x8D70;&#x54EA;&#x4E9B;loader</span>
+    <span class="hljs-keyword">var</span> loaderContext = options.context || {};<span class="hljs-comment">//loader&#x5728;&#x6267;&#x884C;&#x7684;&#x65F6;&#x5019;&#x5904;&#x4E8E;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x5BF9;&#x8C61; loaderIndex</span>
+    <span class="hljs-keyword">var</span> readResource = options.readResource || fs;<span class="hljs-comment">//&#x8BFB;&#x53D6;&#x6587;&#x4EF6; &#x65B9;&#x6CD5;</span>
+
+    loaders = loaders.map(createLoaderObject);
+    loaderContext.loaderIndex = <span class="hljs-number">0</span>;<span class="hljs-comment">//&#x5F53;&#x524D;&#x6307;&#x5411;&#x7684;loader&#x7D22;&#x5F15;</span>
+    loaderContext.readResource = readResource;<span class="hljs-comment">// fs.readFile</span>
+    loaderContext.resource = resource;<span class="hljs-comment">// ./src/index.js</span>
+    loaderContext.loaders = loaders;<span class="hljs-comment">//&#x6240;&#x6709;&#x7684;loader</span>
+    <span class="hljs-keyword">let</span> isSync = <span class="hljs-literal">true</span>;<span class="hljs-comment">//&#x9ED8;&#x8BA4;&#x662F;&#x540C;&#x6B65;&#x7684;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x5411;&#x540E;&#x6267;&#x884C;&#x4E0B;&#x4E00;&#x4E2A;loader normal</span>
+    <span class="hljs-keyword">let</span> innerCallback = loaderContext.callback = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err, args</span>) </span>{
+        isSync = <span class="hljs-literal">true</span>;
+        loaderContext.loaderIndex--;
+        iterateNormalLoaders(loaderContext, args, callback);
+
+    }
+    loaderContext.async = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        isSync = <span class="hljs-literal">false</span>;<span class="hljs-comment">//&#x4E00;&#x65E6;&#x6211;&#x4EEC;&#x8C03;&#x7528;&#x4E86;async &#x65B9;&#x6CD5;&#xFF0C;&#x5C31;&#x7ACB;&#x523B;&#x53D8;&#x6210;&#x5F02;&#x6B65;&#xFF0C;&#x4E0D;&#x518D;&#x81EA;&#x52A8;&#x6267;&#x884C;&#x4E0B;&#x4E00;&#x4E2A;normal loader&#x4E86;</span>
+        <span class="hljs-keyword">return</span> innerCallback;
+    }
+    <span class="hljs-comment">//request&#x4EE3;&#x8868;&#x5B8C;&#x6574;&#x7684;&#x8BF7;&#x6C42;&#x8DEF;&#x5F84; &#x5305;&#x62EC; loader&#x548C;&#x8981;&#x52A0;&#x8F7D;&#x7684;&#x8D44;&#x6E90;</span>
+    <span class="hljs-built_in">Object</span>.defineProperty(loaderContext, <span class="hljs-string">&quot;request&quot;</span>, {
+        <span class="hljs-keyword">get</span>() {
+            <span class="hljs-keyword">return</span> loaderContext.loaders.map(<span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> item.request)
+                .concat(loaderContext.resource).join(<span class="hljs-string">&apos;!&apos;</span>)
+        }
+    })
+    <span class="hljs-built_in">Object</span>.defineProperty(loaderContext, <span class="hljs-string">&quot;remainingRequest&quot;</span>, {
+        <span class="hljs-keyword">get</span>() {
+            <span class="hljs-keyword">return</span> loaderContext.loaders
+                .slice(loaderContext.loaderIndex + <span class="hljs-number">1</span>)
+                .map(<span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> item.request)
+                .concat(loaderContext.resource).join(<span class="hljs-string">&apos;!&apos;</span>)
+        }
+    })
+    <span class="hljs-comment">//currentRequest&#x4ECE;&#x73B0;&#x5728;&#x8FD9;&#x4E2A;loader&#x5F00;&#x59CB;&#x7684;</span>
+    <span class="hljs-built_in">Object</span>.defineProperty(loaderContext, <span class="hljs-string">&quot;currentRequest&quot;</span>, {
+        <span class="hljs-keyword">get</span>() {
+            <span class="hljs-keyword">return</span> loaderContext.loaders
+                .slice(loaderContext.loaderIndex)
+                .map(<span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> item.request)
+                .concat(loaderContext.resource).join(<span class="hljs-string">&apos;!&apos;</span>)
+        }
+    })
+    <span class="hljs-built_in">Object</span>.defineProperty(loaderContext, <span class="hljs-string">&quot;previousRequest&quot;</span>, {
+        <span class="hljs-keyword">get</span>() {
+            <span class="hljs-keyword">return</span> loaderContext.loaders
+                .slice(<span class="hljs-number">0</span>, loaderContext.loaderIndex)
+                .map(<span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> item.request).join(<span class="hljs-string">&apos;!&apos;</span>)
+        }
+    })
+    <span class="hljs-built_in">Object</span>.defineProperty(loaderContext, <span class="hljs-string">&quot;data&quot;</span>, {
+        <span class="hljs-keyword">get</span>() {
+            <span class="hljs-keyword">return</span> loaderContext.loaders[loaderContext.loaderIndex].data;
+        }
+    })
+    iteratePitchingLoaders(loaderContext, callback);
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">processResource</span>(<span class="hljs-params">loaderContext, callback</span>) </span>{
+        <span class="hljs-keyword">let</span> buffer = loaderContext.readResource.readFileSync(loaderContext.resource, <span class="hljs-string">&apos;utf8&apos;</span>);<span class="hljs-comment">// ./src/index.js</span>
+        iterateNormalLoaders(loaderContext, buffer, callback);
+    }
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">iterateNormalLoaders</span>(<span class="hljs-params">loaderContext, args, callback</span>) </span>{
+        <span class="hljs-keyword">if</span> (loaderContext.loaderIndex &lt; <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">return</span> callback(<span class="hljs-literal">null</span>, args);
+        }
+        <span class="hljs-keyword">let</span> currentLoaderObject = loaderContext.loaders[loaderContext.loaderIndex];<span class="hljs-comment">//loader1 object</span>
+        <span class="hljs-keyword">let</span> fn = currentLoaderObject.normal;<span class="hljs-comment">//pitch1 loader1.pitch</span>
+        args = fn.apply(loaderContext, [args]);
+
+        <span class="hljs-keyword">if</span> (isSync) {<span class="hljs-comment">//&#x6267;&#x884C;&#x5B8C;&#x5F53;&#x524D;&#x7684;loader&#xFF0C;&#x5982;&#x679C;&#x662F;&#x540C;&#x6B65;&#x6A21;&#x5F0F;&#x7684;&#x8BDD;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x5411;&#x4E0B;&#x6267;&#x884C;&#x4E0B;&#x4E00;&#x4E2A;loader,&#x5982;&#x679C;&#x662F;&#x5F02;&#x6B65;&#x6A21;&#x5F0F;&#x7684;&#x8BDD;&#xFF0C;&#x4E0D;&#x518D;&#x81EA;&#x52A8;&#x6267;&#x884C;</span>
+            loaderContext.loaderIndex--;
+            iterateNormalLoaders(loaderContext, args, callback);
+        }
+    }
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">iteratePitchingLoaders</span>(<span class="hljs-params">loaderContext, callback</span>) </span>{
+        <span class="hljs-comment">//&#x5982;&#x679C;&#x8D70;&#x5230;&#x8FD9;&#x8BF4;&#x660E;&#x8D8A;&#x754C;&#x4E86;&#xFF0C;&#x8BF4;&#x660E;loader&#x7684;pitch&#x5DF2;&#x7ECF;&#x5168;&#x90E8;&#x6267;&#x884C;&#x5B8C;&#x4E86;</span>
+        <span class="hljs-keyword">if</span> (loaderContext.loaderIndex &gt;= loaderContext.loaders.length) {
+            loaderContext.loaderIndex--;
+            <span class="hljs-keyword">return</span> processResource(loaderContext, callback);
+        }
+        <span class="hljs-keyword">let</span> currentLoaderObject = loaderContext.loaders[loaderContext.loaderIndex];<span class="hljs-comment">//loader1 object</span>
+        <span class="hljs-keyword">let</span> fn = currentLoaderObject.pitch;<span class="hljs-comment">//pitch1 loader1.pitch</span>
+        <span class="hljs-keyword">if</span> (!fn) {
+            loaderContext.loaderIndex++;
+            <span class="hljs-keyword">return</span> iteratePitchingLoaders(loaderContext, callback);
+        }
+        <span class="hljs-keyword">let</span> args = fn.apply(loaderContext, [loaderContext.remindingRequest, loaderContext.previousRequest, loaderContext.data]);
+        <span class="hljs-keyword">if</span> (args) {
+            loaderContext.loaderIndex--;
+            iterateNormalLoaders(loaderContext, args, callback);
+        } <span class="hljs-keyword">else</span> {
+            loaderContext.loaderIndex++;
+            iteratePitchingLoaders(loaderContext, callback);
+        }
+    }
+}
+<span class="hljs-built_in">module</span>.exports = runLoaders;
+</code></pre>
+
+    </div>
+</div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+    aria-labelledby="loginModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="loginModalLabel">请登录</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="username" class="control-label">姓名:</label>
+                        <input type="text" class="form-control" id="username" placeholder="珠峰架构VIP会员系统用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">密码:</label>
+                        <input type="text" class="form-control" id="password" placeholder="珠峰架构VIP会员系统密码">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                    data-dismiss="modal">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

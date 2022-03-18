@@ -1,0 +1,1637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+   
+                     
+
+                        
+<div class="warpper">
+    <div class="page-toc">
+        <ul><li><a href="#t0上传功能">上传功能</a></li><li><a href="#t11.初始化项目">1.初始化项目</a></li><li><a href="#t22.单个上传">2.单个上传</a><ul><li><a href="#t32.1 src\index.tsx">2.1 src\index.tsx</a></li><li><a href="#t42.2 src\App.tsx">2.2 src\App.tsx</a></li><li><a href="#t52.3 src\App.css">2.3 src\App.css</a></li><li><a href="#t62.4 src\Upload.tsx">2.4 src\Upload.tsx</a></li><li><a href="#t72.4 src\utils.tsx">2.4 src\utils.tsx</a></li></ul></li><li><a href="#t83.切片上传">3.切片上传</a><ul><li><a href="#t93.1 Upload.tsx">3.1 Upload.tsx</a></li><li><a href="#t103.2 public\hash.js">3.2 public\hash.js</a></li></ul></li><li><a href="#t114.进度条">4.进度条</a><ul><li><a href="#t124.1 src\Upload.tsx">4.1 src\Upload.tsx</a></li><li><a href="#t134.2 src\utils.tsx">4.2 src\utils.tsx</a></li></ul></li><li><a href="#t145.断点续传和秒传">5.断点续传和秒传</a><ul><li><a href="#t155.1 Upload.tsx">5.1 Upload.tsx</a></li><li><a href="#t165.2 src\utils.tsx">5.2 src\utils.tsx</a></li></ul></li><li><a href="#t171.初始化项目">1.初始化项目</a></li><li><a href="#t182.单个上传">2.单个上传</a><ul><li><a href="#t192.1 package.json">2.1 package.json</a></li><li><a href="#t202.2 src\www.ts">2.2 src\www.ts</a></li><li><a href="#t212.3 src\app.ts">2.3 src\app.ts</a></li><li><a href="#t222.4 src\utils.ts">2.4 src\utils.ts</a></li></ul></li><li><a href="#t233.文件切割和合并">3.文件切割和合并</a><ul><li><a href="#t243.1 src\utils.ts">3.1 src\utils.ts</a></li></ul></li><li><a href="#t254.切片上传">4.切片上传</a><ul><li><a href="#t264.1 src\app.ts">4.1 src\app.ts</a></li></ul></li><li><a href="#t275.断点续传">5.断点续传</a><ul><li><a href="#t285.1 app.ts">5.1 app.ts</a></li></ul></li></ul>
+    </div>
+    <div class="content markdown-body">
+        <h2 id="t0&#x4E0A;&#x4F20;&#x529F;&#x80FD;">&#x4E0A;&#x4F20;&#x529F;&#x80FD; <a href="#t0&#x4E0A;&#x4F20;&#x529F;&#x80FD;"> # </a></h2>
+<ul>
+<li>&#x6574;&#x4F53;&#x4E0A;&#x4F20;</li>
+<li>&#x5206;&#x7247;&#x4E0A;&#x4F20;</li>
+<li>&#x8FDB;&#x5EA6;&#x6761;</li>
+<li>&#x79D2;&#x4F20;</li>
+<li>&#x65AD;&#x70B9;&#x7EED;&#x4F20;(&#x652F;&#x6301;&#x5355;&#x4E2A;&#x5206;&#x7247;&#x7EED;&#x4F20;&#x548C;&#x5237;&#x65B0;&#x6D4F;&#x89C8;&#x5668;&#x7EED;&#x4F20;)</li>
+<li>&#x6682;&#x505C;&#x548C;&#x6062;&#x590D;</li>
+</ul>
+<h2 id="t11.&#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;">1.&#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE; <a href="#t11.&#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;"> # </a></h2>
+<pre><code class="lang-js">create-react-app --template=typescript
+cd create-react-app
+cnpm i antd -S
+</code></pre>
+<h2 id="t22.&#x5355;&#x4E2A;&#x4E0A;&#x4F20;">2.&#x5355;&#x4E2A;&#x4E0A;&#x4F20; <a href="#t22.&#x5355;&#x4E2A;&#x4E0A;&#x4F20;"> # </a></h2>
+<h3 id="t32.1 src\index.tsx">2.1 src\index.tsx <a href="#t32.1 src\index.tsx"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+<span class="hljs-keyword">import</span> App <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./App&apos;</span>;
+
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">App</span> /&gt;</span></span>, <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;root&apos;</span>));
+</code></pre>
+<h3 id="t42.2 src\App.tsx">2.2 src\App.tsx <a href="#t42.2 src\App.tsx"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> Upload <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./Upload&apos;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;./App.css&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">App</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;App&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">Upload</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    );
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> App;
+
+</code></pre>
+<h3 id="t52.3 src\App.css">2.3 src\App.css <a href="#t52.3 src\App.css"> # </a></h3>
+<pre><code class="lang-css"><span class="hljs-keyword">@import</span> <span class="hljs-string">&apos;~antd/dist/antd.css&apos;</span>;;
+<span class="hljs-selector-class">.App</span> {
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">20px</span>;
+}
+</code></pre>
+<h3 id="t62.4 src\Upload.tsx">2.4 src\Upload.tsx <a href="#t62.4 src\Upload.tsx"> # </a></h3>
+<p>src\Upload.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { ChangeEvent, useState, useEffect } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { Input, Row, Col, Button, message } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;antd&apos;</span>;
+<span class="hljs-keyword">import</span> { request } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./utils&apos;</span>;
+enum UploadStatus {
+    INIT,<span class="hljs-comment">//&#x521D;&#x59CB;&#x6001;</span>
+    PAUSE,<span class="hljs-comment">//&#x6682;&#x505C;&#x4E2D;</span>
+    UPLOADING<span class="hljs-comment">//&#x4E0A;&#x4F20;&#x4E2D;</span>
+}
+interface Props {
+
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Upload</span>(<span class="hljs-params">props: Props</span>) </span>{
+    <span class="hljs-keyword">const</span> [uploadStatus, setUploadStatus] = useState&lt;UploadStatus&gt;(UploadStatus.INIT);
+    <span class="hljs-keyword">const</span> [currentFile, setCurrentFile] = useState&lt;File&gt;();
+    <span class="hljs-keyword">const</span> [objectUrl, setObjectUrl] = useState(<span class="hljs-string">&apos;&apos;</span>);
+    useEffect(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+        <span class="hljs-keyword">if</span> (currentFile) {
+            <span class="hljs-keyword">const</span> URL = <span class="hljs-built_in">window</span>.URL;
+            <span class="hljs-keyword">let</span> objectUrl = URL.createObjectURL(currentFile);
+            setObjectUrl(objectUrl);
+            <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+                URL.revokeObjectURL(objectUrl);
+            }
+        }
+    }, [currentFile]);
+    <span class="hljs-keyword">const</span> handleChange = <span class="hljs-function">(<span class="hljs-params">event: ChangeEvent&lt;HTMLInputElement&gt;</span>) =&gt;</span> {
+        <span class="hljs-keyword">const</span> file: File = event.target.files![<span class="hljs-number">0</span>];
+        setCurrentFile(file);
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;file&apos;</span>, file);
+        reset();
+    }
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">reset</span>(<span class="hljs-params"></span>) </span>{
+        setUploadStatus(UploadStatus.INIT);
+    }
+    <span class="hljs-keyword">const</span> handleUpload = <span class="hljs-keyword">async</span> () =&gt; {
+        <span class="hljs-keyword">if</span> (!currentFile)
+            <span class="hljs-keyword">return</span> message.error(<span class="hljs-string">&apos;&#x4F60;&#x5C1A;&#x672A;&#x9009;&#x62E9;&#x6587;&#x4EF6;&apos;</span>);
+        <span class="hljs-keyword">if</span> (!beforeUpload(currentFile))
+            <span class="hljs-keyword">return</span> message.error(<span class="hljs-string">&apos;&#x4E0D;&#x652F;&#x6301;&#x6B64;&#x7C7B;&#x578B;&#x6587;&#x4EF6;&#x7684;&#x4E0A;&#x4F20;&apos;</span>);
+        <span class="hljs-keyword">const</span> formData = <span class="hljs-keyword">new</span> FormData();
+        formData.append(<span class="hljs-string">&quot;chunk&quot;</span>, currentFile);
+        formData.append(<span class="hljs-string">&quot;filename&quot;</span>, currentFile.name);
+        <span class="hljs-keyword">let</span> result = <span class="hljs-keyword">await</span> request({
+            <span class="hljs-attr">url</span>: <span class="hljs-string">`/upload`</span>,
+            <span class="hljs-attr">method</span>: <span class="hljs-string">&apos;POST&apos;</span>,
+            <span class="hljs-attr">data</span>: formData,
+        });
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x4E0A;&#x4F20;&#x7ED3;&#x679C;&apos;</span>, result);
+        message.info(<span class="hljs-string">&apos;&#x4E0A;&#x4F20;&#x6210;&#x529F;!&apos;</span>);
+        reset();
+    }
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;upload&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">Row</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">Col</span> <span class="hljs-attr">span</span>=<span class="hljs-string">{12}</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">Input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">width:</span> <span class="hljs-attr">300</span> }} <span class="hljs-attr">onChange</span>=<span class="hljs-string">{handleChange}</span> /&gt;</span>
+                    {uploadStatus === UploadStatus.INIT &amp;&amp; <span class="hljs-tag">&lt;<span class="hljs-name">Button</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">marginLeft:</span> <span class="hljs-attr">10</span> }} <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;primary&quot;</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{handleUpload}</span>&gt;</span>&#x4E0A;&#x4F20;<span class="hljs-tag">&lt;/<span class="hljs-name">Button</span>&gt;</span>}
+                <span class="hljs-tag">&lt;/<span class="hljs-name">Col</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">Col</span> <span class="hljs-attr">span</span>=<span class="hljs-string">{12}</span>&gt;</span>
+                    {objectUrl &amp;&amp; <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">maxWidth:</span> <span class="hljs-attr">150</span>, <span class="hljs-attr">maxHeight:</span> <span class="hljs-attr">150</span> }} <span class="hljs-attr">src</span>=<span class="hljs-string">{objectUrl}</span> /&gt;</span>}
+                <span class="hljs-tag">&lt;/<span class="hljs-name">Col</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">Row</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">beforeUpload</span>(<span class="hljs-params">file: File</span>) </span>{
+    <span class="hljs-keyword">const</span> isValidFileType = [<span class="hljs-string">&apos;image/jpeg&apos;</span>, <span class="hljs-string">&apos;image/png&apos;</span>, <span class="hljs-string">&apos;application/pdf&apos;</span>, <span class="hljs-string">&apos;video/mp4&apos;</span>].includes(file.type);
+    <span class="hljs-keyword">if</span> (!isValidFileType) {
+        message.error(<span class="hljs-string">&apos;&#x4E0D;&#x652F;&#x6301;&#x6B64;&#x6587;&#x4EF6;&#x7C7B;&#x578B;!&apos;</span>);
+    }
+    <span class="hljs-keyword">const</span> isLt2G = file.size / <span class="hljs-number">1024</span> / <span class="hljs-number">1024</span> &lt; <span class="hljs-number">1024</span> * <span class="hljs-number">1024</span> * <span class="hljs-number">1024</span>;
+    <span class="hljs-keyword">if</span> (!isLt2G) {
+        message.error(<span class="hljs-string">&apos;&#x4E0A;&#x4F20;&#x7684;&#x56FE;&#x7247;&#x4E0D;&#x80FD;&#x5927;&#x4E8E;2MB!&apos;</span>);
+    }
+    <span class="hljs-keyword">return</span> isValidFileType &amp;&amp; isLt2G;
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Upload;
+</code></pre>
+<h3 id="t72.4 src\utils.tsx">2.4 src\utils.tsx <a href="#t72.4 src\utils.tsx"> # </a></h3>
+<p>src\utils.tsx</p>
+<pre><code class="lang-js">
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">request</span>(<span class="hljs-params">options: any</span>) </span>{
+    <span class="hljs-keyword">let</span> _default: any = {
+        <span class="hljs-attr">baseURL</span>: <span class="hljs-string">&apos;http://localhost:8000&apos;</span>,
+        <span class="hljs-attr">method</span>: <span class="hljs-string">&apos;GET&apos;</span>,
+        <span class="hljs-attr">header</span>: {},
+        <span class="hljs-attr">data</span>: {}
+    };
+    options = { ..._default, ...options, <span class="hljs-attr">headers</span>: { ..._default.headers, ...(options.headers || {}) } };
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve: <span class="hljs-built_in">Function</span>, reject: <span class="hljs-built_in">Function</span></span>) =&gt;</span> {
+        <span class="hljs-keyword">const</span> xhr = <span class="hljs-keyword">new</span> XMLHttpRequest();
+        xhr.open(options.method, options.baseURL + options.url, <span class="hljs-literal">true</span>);
+        <span class="hljs-built_in">Object</span>.entries(options.headers).forEach(<span class="hljs-function">(<span class="hljs-params">[key, value]</span>) =&gt;</span> xhr.setRequestHeader(key, value <span class="hljs-keyword">as</span> string));
+        xhr.responseType = <span class="hljs-string">&apos;json&apos;</span>;
+        xhr.onreadystatechange = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+            <span class="hljs-keyword">if</span> (xhr.readyState === <span class="hljs-number">4</span>) {
+                <span class="hljs-keyword">if</span> (<span class="hljs-regexp">/(2|3)\d{2}/</span>.test(<span class="hljs-string">&apos;&apos;</span> + xhr.status)) {
+                    resolve(xhr.response);
+                } <span class="hljs-keyword">else</span> {
+                    reject(xhr.response);
+                }
+            }
+        }
+        xhr.send(options.data);
+    });
+}
+
+<span class="hljs-keyword">export</span> {
+    request
+}
+</code></pre>
+<h2 id="t83.&#x5207;&#x7247;&#x4E0A;&#x4F20;">3.&#x5207;&#x7247;&#x4E0A;&#x4F20; <a href="#t83.&#x5207;&#x7247;&#x4E0A;&#x4F20;"> # </a></h2>
+<h3 id="t93.1 Upload.tsx">3.1 Upload.tsx <a href="#t93.1 Upload.tsx"> # </a></h3>
+<p>src\Upload.tsx</p>
+<pre><code class="lang-js">import React, { ChangeEvent, useState, useEffect } from &apos;react&apos;;
+import { Input, Row, Col, Button, message } from &apos;antd&apos;;
+import { request } from &apos;./utils&apos;;
+const SIZE = 1024 * 1024 * 100;
+//const SIZE = 1024 * 10;
+enum UploadStatus {
+    INIT,//&#x521D;&#x59CB;&#x6001;
+    PAUSE,//&#x6682;&#x505C;&#x4E2D;
+    UPLOADING//&#x4E0A;&#x4F20;&#x4E2D;
+}
+interface Part {
+    size: number;
+    chunk: Blob;
+    filename?: string;
+    chunk_name?: string;
+}
+interface Props {
+
+}
+function Upload(props: Props) {
+    const [uploadStatus, setUploadStatus] = useState&lt;UploadStatus&gt;(UploadStatus.INIT);
+    const [currentFile, setCurrentFile] = useState&lt;File&gt;();
+    const [objectUrl, setObjectUrl] = useState(&apos;&apos;);
+    const [worker, setWorker] = useState&lt;any&gt;(null);
+    const [hashPercent, setHashPercent] = useState&lt;number&gt;(0);
+    const [filename, setFilename] = useState&lt;string&gt;(&apos;&apos;);
+    const [partList, setPartList] = useState&lt;Part[]&gt;([]);
+    useEffect(() =&gt; {
+        if (currentFile) {
+            const URL = window.URL;
+            let objectUrl = URL.createObjectURL(currentFile);
+            setObjectUrl(objectUrl);
+            return () =&gt; {
+                URL.revokeObjectURL(objectUrl);
+            }
+        }
+    }, [currentFile]);
+    const handleChange = (event: ChangeEvent&lt;HTMLInputElement&gt;) =&gt; {
+        const file: File = event.target.files![0];
+        setCurrentFile(file);
+        console.log(&apos;file&apos;, file);
+        reset();
+    }
+    function reset() {
+        setUploadStatus(UploadStatus.INIT);
+    }
+    const calculateHash = (partList: Part[]): Promise&lt;string&gt; =&gt; {
+        return new Promise(resolve =&gt; {
+            let worker = new Worker(&quot;/hash.js&quot;);
+            setWorker(worker);
+            worker.postMessage({ partList });
+            worker.onmessage = (event) =&gt; {
+                const { percent, hash } = event.data;
+                setHashPercent(percent);
+                if (hash) {
+                    resolve(hash);
+                }
+            };
+        });
+    }
+    const handleUpload = async () =&gt; {
+        if (!currentFile)
+            return message.error(&apos;&#x4F60;&#x5C1A;&#x672A;&#x9009;&#x62E9;&#x6587;&#x4EF6;&apos;);
+        if (!beforeUpload(currentFile))
+            return message.error(&apos;&#x4E0D;&#x652F;&#x6301;&#x6B64;&#x7C7B;&#x578B;&#x6587;&#x4EF6;&#x7684;&#x4E0A;&#x4F20;&apos;);
+        let partList: Part[] = createChunks(currentFile);
+        let fileHash: string = await calculateHash(partList);
+        let lastDotIndex = currentFile.name.lastIndexOf(&apos;.&apos;);;
+        let extName = currentFile.name.slice(lastDotIndex);//.jpg .png
+        let filename = `${fileHash}${extName}`;
+        setFilename(filename);
+        partList = partList.map((part, index: number) =&gt; ({
+            filename,//&#x6587;&#x4EF6;&#x540D;
+            chunk_name: `${filename}-${index}`,//&#x5206;&#x5757;&#x7684;&#x540D;&#x79F0;
+            chunk: part.chunk,//&#x4EE3;&#x7801;&#x5757;
+            size: part.chunk.size//&#x6B64;&#x4EE3;&#x7801;&#x5757;&#x7684;&#x5927;&#x5C0F;
+        }));
+        setPartList(partList);
+        await uploadParts(partList, filename);
+    }
+    async function uploadParts(partList: Part[], filename: string) {
+        let requests = createRequests(partList);
+        await Promise.all(requests);
+        await request({
+            url: &apos;/merge&apos;,
+            method: &apos;POST&apos;,
+            headers: { &apos;Content-Type&apos;: &quot;application/json&quot; },
+            data: JSON.stringify({ filename })
+        });
+        message.info(&apos;&#x4E0A;&#x4F20;&#x6210;&#x529F;!&apos;);
+        reset();
+    }
+    function createRequests(partList: Part[]) {
+        return partList.map((part: Part) =&gt; {
+            return request({
+                url: `/upload/${part.filename}/${part.chunk_name!}`,
+                method: &apos;POST&apos;,
+                header: { &apos;Content-Type&apos;: &apos;application/octet-stream&apos; },
+                data: part.chunk
+            });
+        })
+    }
+    return (
+        &lt;div className=&quot;upload&quot;&gt;
+            &lt;Row&gt;
+                &lt;Col span={12}&gt;
+                    &lt;Input type=&quot;file&quot; style={{ width: 300 }} onChange={handleChange} /&gt;
+                    {uploadStatus === UploadStatus.INIT &amp;&amp; &lt;Button style={{ marginLeft: 10 }} type=&quot;primary&quot; onClick={handleUpload}&gt;&#x4E0A;&#x4F20;&lt;/Button&gt;}
+                &lt;/Col&gt;
+                &lt;Col span={12}&gt;
+                    {objectUrl &amp;&amp; &lt;img style={{ maxWidth: 150, maxHeight: 150 }} src={objectUrl} /&gt;}
+                &lt;/Col&gt;
+            &lt;/Row&gt;
+        &lt;/div&gt;
+    )
+}
+function beforeUpload(file: File) {
+    const isValidFileType = [&apos;image/jpeg&apos;, &apos;image/png&apos;, &apos;application/pdf&apos;, &apos;video/mp4&apos;].includes(file.type);
+    if (!isValidFileType) {
+        message.error(&apos;&#x4E0D;&#x652F;&#x6301;&#x6B64;&#x6587;&#x4EF6;&#x7C7B;&#x578B;!&apos;);
+    }
+    const isLt2G = file.size / 1024 / 1024 &lt; 1024 * 1024 * 1024;
+    if (!isLt2G) {
+        message.error(&apos;&#x4E0A;&#x4F20;&#x7684;&#x56FE;&#x7247;&#x4E0D;&#x80FD;&#x5927;&#x4E8E;2MB!&apos;);
+    }
+    return isValidFileType &amp;&amp; isLt2G;
+}
+function createChunks(file: File): Part[] {
+    let current = 0;
+    const partList: Part[] = [];
+    while (current &lt; file.size) {
+        const chunk = file.slice(current, current + SIZE);
+        partList.push({ chunk, size: chunk.size });
+        current += SIZE;
+    }
+    return partList;
+}
+export default Upload;
+</code></pre>
+<h3 id="t103.2 public\hash.js">3.2 public\hash.js <a href="#t103.2 public\hash.js"> # </a></h3>
+<p>public\hash.js</p>
+<pre><code class="lang-js">self.importScripts(<span class="hljs-string">&apos;https://cdn.bootcss.com/spark-md5/3.0.0/spark-md5.js&apos;</span>);
+self.onmessage = <span class="hljs-keyword">async</span> (event) =&gt; {
+    <span class="hljs-keyword">var</span> { partList } = event.data;
+    <span class="hljs-keyword">const</span> spark = <span class="hljs-keyword">new</span> self.SparkMD5.ArrayBuffer();
+    <span class="hljs-keyword">var</span> percent = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">var</span> perSize = <span class="hljs-number">100</span> / partList.length;
+    <span class="hljs-keyword">var</span> buffers = <span class="hljs-keyword">await</span> <span class="hljs-built_in">Promise</span>.all(partList.map(<span class="hljs-function">(<span class="hljs-params">{ chunk }</span>) =&gt;</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve</span>) =&gt;</span> {
+        <span class="hljs-keyword">const</span> reader = <span class="hljs-keyword">new</span> FileReader();
+        reader.readAsArrayBuffer(chunk);
+        reader.onload = <span class="hljs-function">(<span class="hljs-params">event</span>) =&gt;</span> {
+            percent += perSize;
+            self.postMessage({ <span class="hljs-attr">percent</span>: <span class="hljs-built_in">Number</span>(percent.toFixed(<span class="hljs-number">2</span>)) });
+            resolve(event.target.result);
+        }
+    })));
+    buffers.forEach(<span class="hljs-function"><span class="hljs-params">buffer</span> =&gt;</span> spark.append(buffer));
+    self.postMessage({ <span class="hljs-attr">percent</span>: <span class="hljs-number">100</span>, <span class="hljs-attr">hash</span>: spark.end() });
+    self.close();
+}
+</code></pre>
+<h2 id="t114.&#x8FDB;&#x5EA6;&#x6761;">4.&#x8FDB;&#x5EA6;&#x6761; <a href="#t114.&#x8FDB;&#x5EA6;&#x6761;"> # </a></h2>
+<h3 id="t124.1 src\Upload.tsx">4.1 src\Upload.tsx <a href="#t124.1 src\Upload.tsx"> # </a></h3>
+<p>src\Upload.tsx</p>
+<pre><code class="lang-diff">import React, { ChangeEvent, useState, useEffect } from &apos;react&apos;;
+<span class="hljs-addition">+import { Input, Row, Col, Button, message, Progress, Table } from &apos;antd&apos;;</span>
+import { request } from &apos;./utils&apos;;
+const SIZE = 1024 * 1024 * 100;
+//const SIZE = 1024 * 10;
+enum UploadStatus {
+    INIT,//&#x521D;&#x59CB;&#x6001;
+    PAUSE,//&#x6682;&#x505C;&#x4E2D;
+    UPLOADING//&#x4E0A;&#x4F20;&#x4E2D;
+}
+interface Part {
+    size: number;
+    chunk: Blob;
+    filename?: string;
+    chunk_name?: string;
+<span class="hljs-addition">+    percent?: number;</span>
+}
+interface Props {
+
+}
+function Upload(props: Props) {
+    const [uploadStatus, setUploadStatus] = useState&lt;UploadStatus&gt;(UploadStatus.INIT);
+    const [currentFile, setCurrentFile] = useState&lt;File&gt;();
+    const [objectUrl, setObjectUrl] = useState(&apos;&apos;);
+    const [worker, setWorker] = useState&lt;any&gt;(null);
+    const [hashPercent, setHashPercent] = useState&lt;number&gt;(0);
+    const [filename, setFilename] = useState&lt;string&gt;(&apos;&apos;);
+    const [partList, setPartList] = useState&lt;Part[]&gt;([]);
+    useEffect(() =&gt; {
+        if (currentFile) {
+            const URL = window.URL;
+            let objectUrl = URL.createObjectURL(currentFile);
+            setObjectUrl(objectUrl);
+            return () =&gt; {
+                URL.revokeObjectURL(objectUrl);
+            }
+        }
+    }, [currentFile]);
+    const handleChange = (event: ChangeEvent&lt;HTMLInputElement&gt;) =&gt; {
+        const file: File = event.target.files![0];
+        setCurrentFile(file);
+        reset();
+    }
+    function reset() {
+        setUploadStatus(UploadStatus.INIT);
+<span class="hljs-addition">+        setHashPercent(0);</span>
+    }
+    const calculateHash = (partList: Part[]): Promise&lt;string&gt; =&gt; {
+        return new Promise(resolve =&gt; {
+            let worker = new Worker(&quot;/hash.js&quot;);
+            setWorker(worker);
+            worker.postMessage({ partList });
+            worker.onmessage = (event) =&gt; {
+                const { percent, hash } = event.data;
+                setHashPercent(percent);
+                console.log(&apos;percent&apos;, percent);
+                if (hash) {
+                    resolve(hash);
+                }
+            };
+        });
+    }
+    const handleUpload = async () =&gt; {
+        if (!currentFile)
+            return message.error(&apos;&#x4F60;&#x5C1A;&#x672A;&#x9009;&#x62E9;&#x6587;&#x4EF6;&apos;);
+        if (!beforeUpload(currentFile))
+            return message.error(&apos;&#x4E0D;&#x652F;&#x6301;&#x6B64;&#x7C7B;&#x578B;&#x6587;&#x4EF6;&#x7684;&#x4E0A;&#x4F20;&apos;);
+<span class="hljs-addition">+        setUploadStatus(UploadStatus.UPLOADING);</span>
+        let partList: Part[] = createChunks(currentFile);
+        let fileHash: string = await calculateHash(partList);
+        let lastDotIndex = currentFile.name.lastIndexOf(&apos;.&apos;);;
+        let extName = currentFile.name.slice(lastDotIndex);//.jpg .png
+        let filename = `${fileHash}${extName}`;
+        setFilename(filename);
+        partList = partList.map((part, index: number) =&gt; ({
+            filename,//&#x6587;&#x4EF6;&#x540D;
+            chunk_name: `${filename}-${index}`,//&#x5206;&#x5757;&#x7684;&#x540D;&#x79F0;
+            chunk: part.chunk,//&#x4EE3;&#x7801;&#x5757;
+            size: part.chunk.size,//&#x6B64;&#x4EE3;&#x7801;&#x5757;&#x7684;&#x5927;&#x5C0F;
+<span class="hljs-addition">+            percent: 0</span>
+        }));
+        setPartList(partList);
+        await uploadParts(partList, filename);
+    }
+    async function uploadParts(partList: Part[], filename: string) {
+        let requests = createRequests(partList);
+        await Promise.all(requests);
+        await request({
+            url: &apos;/merge&apos;,
+            method: &apos;POST&apos;,
+            headers: { &apos;Content-Type&apos;: &quot;application/json&quot; },
+            data: JSON.stringify({ filename })
+        });
+        message.info(&apos;&#x4E0A;&#x4F20;&#x6210;&#x529F;!&apos;);
+        reset();
+    }
+    function createRequests(partList: Part[]) {
+        return partList.map((part: Part) =&gt; {
+            return request({
+                url: `/upload/${part.filename}/${part.chunk_name!}`,
+                method: &apos;POST&apos;,
+                header: { &apos;Content-Type&apos;: &apos;application/octet-stream&apos; },
+                data: part.chunk,
+<span class="hljs-addition">+                onProgress: (event: ProgressEvent) =&gt; {</span>
+<span class="hljs-addition">+                    part.percent = event.loaded / part.chunk.size * 100;</span>
+<span class="hljs-addition">+                    setPartList([...partList]);</span>
+<span class="hljs-addition">+                }</span>
+            });
+        })
+    }
+<span class="hljs-addition">+    const columns = [</span>
+<span class="hljs-addition">+        {</span>
+<span class="hljs-addition">+            title: &apos;&#x5207;&#x7247;&#x540D;&#x79F0;&apos;,</span>
+<span class="hljs-addition">+            dataIndex: &apos;filename&apos;,</span>
+<span class="hljs-addition">+            key: &apos;filename&apos;,</span>
+<span class="hljs-addition">+            width: &apos;20%&apos;</span>
+<span class="hljs-addition">+        },</span>
+<span class="hljs-addition">+        {</span>
+<span class="hljs-addition">+            title: &apos;&#x5207;&#x7247;&#x8FDB;&#x5EA6;&apos;,</span>
+<span class="hljs-addition">+            dataIndex: &apos;percent&apos;,</span>
+<span class="hljs-addition">+            key: &apos;percent&apos;,</span>
+<span class="hljs-addition">+            width: &apos;80%&apos;,</span>
+<span class="hljs-addition">+            render: (value: number) =&gt; {</span>
+<span class="hljs-addition">+                return &lt;Progress percent={value} /&gt;</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+        },</span>
+<span class="hljs-addition">+    ];</span>
+<span class="hljs-addition">+    let totalPercent = partList.length &gt; 0 ? Math.round(partList.reduce((acc, curr) =&gt; acc + curr.percent!, 0) / (partList.length * 100) * 100) : 0;</span>
+<span class="hljs-addition">+    let uploadProgress = uploadStatus != UploadStatus.INIT ? (</span>
+<span class="hljs-addition">+        &lt;&gt;</span>
+<span class="hljs-addition">+            &lt;Row&gt;</span>
+<span class="hljs-addition">+                &lt;Col span={4}&gt;</span>
+<span class="hljs-addition">+                    &#x54C8;&#x5E0C;&#x8BA1;&#x7B97;:</span>
+<span class="hljs-addition">+                &lt;/Col&gt;</span>
+<span class="hljs-addition">+                &lt;Col span={20}&gt;</span>
+<span class="hljs-addition">+                    &lt;Progress percent={hashPercent} /&gt;</span>
+<span class="hljs-addition">+                &lt;/Col&gt;</span>
+<span class="hljs-addition">+            &lt;/Row&gt;</span>
+<span class="hljs-addition">+            &lt;Row&gt;</span>
+<span class="hljs-addition">+                &lt;Col span={4}&gt;</span>
+<span class="hljs-addition">+                    &#x603B;&#x4F53;&#x8FDB;&#x5EA6;:</span>
+<span class="hljs-addition">+                &lt;/Col&gt;</span>
+<span class="hljs-addition">+                &lt;Col span={20}&gt;</span>
+<span class="hljs-addition">+                    &lt;Progress percent={totalPercent} /&gt;</span>
+<span class="hljs-addition">+                &lt;/Col&gt;</span>
+<span class="hljs-addition">+            &lt;/Row&gt;</span>
+<span class="hljs-addition">+            &lt;Table</span>
+<span class="hljs-addition">+                columns={columns}</span>
+<span class="hljs-addition">+                dataSource={partList}</span>
+<span class="hljs-addition">+                rowKey={(row: Part) =&gt; row.chunk_name!}</span>
+<span class="hljs-addition">+            /&gt;</span>
+<span class="hljs-addition">+        &lt;/&gt;</span>
+<span class="hljs-addition">+    ) : null;</span>
+    return (
+        &lt;div className=&quot;upload&quot;&gt;
+            &lt;Row&gt;
+                &lt;Col span={12}&gt;
+                    &lt;Input type=&quot;file&quot; style={{ width: 300 }} onChange={handleChange} /&gt;
+                    {uploadStatus <span class="hljs-comment">=== UploadStatus.INIT &amp;&amp; &lt;Button style={{ marginLeft: 10 }} type=&quot;primary&quot; onClick={handleUpload}&gt;&#x4E0A;&#x4F20;&lt;/Button&gt;}</span>
+                &lt;/Col&gt;
+                &lt;Col span={12}&gt;
+                    {objectUrl &amp;&amp; &lt;img style={{ maxWidth: 150, maxHeight: 150 }} src={objectUrl} /&gt;}
+                &lt;/Col&gt;
+            &lt;/Row&gt;
+<span class="hljs-addition">+            {uploadProgress}</span>
+        &lt;/div&gt;
+    )
+}
+function beforeUpload(file: File) {
+    const isValidFileType = [&apos;image/jpeg&apos;, &apos;image/png&apos;, &apos;application/pdf&apos;, &apos;video/mp4&apos;].includes(file.type);
+    if (!isValidFileType) {
+        message.error(&apos;&#x4E0D;&#x652F;&#x6301;&#x6B64;&#x6587;&#x4EF6;&#x7C7B;&#x578B;!&apos;);
+    }
+    const isLt2G = file.size / 1024 / 1024 &lt; 1024 * 1024 * 1024;
+    if (!isLt2G) {
+        message.error(&apos;&#x4E0A;&#x4F20;&#x7684;&#x56FE;&#x7247;&#x4E0D;&#x80FD;&#x5927;&#x4E8E;2MB!&apos;);
+    }
+    return isValidFileType &amp;&amp; isLt2G;
+}
+function createChunks(file: File): Part[] {
+    let current = 0;
+    const partList: Part[] = [];
+    while (current &lt; file.size) {
+        const chunk = file.slice(current, current + SIZE);
+        partList.push({ chunk, size: chunk.size });
+        current += SIZE;
+    }
+    return partList;
+}
+export default Upload;
+</code></pre>
+<h3 id="t134.2 src\utils.tsx">4.2 src\utils.tsx <a href="#t134.2 src\utils.tsx"> # </a></h3>
+<p>src\utils.tsx</p>
+<pre><code class="lang-diff">function request(options: any) {
+    let _default: any = {
+        baseURL: &apos;http://localhost:8000&apos;,
+        method: &apos;GET&apos;,
+        header: {},
+        data: {}
+    };
+    options = { ..._default, ...options, headers: { ..._default.headers, ...(options.headers || {}) } };
+    return new Promise((resolve: Function, reject: Function) =&gt; {
+        const xhr = new XMLHttpRequest();
+        xhr.open(options.method, options.baseURL + options.url, true);
+        Object.entries(options.headers).forEach(([key, value]) =&gt; xhr.setRequestHeader(key, value as string));
+        xhr.responseType = &apos;json&apos;;
+<span class="hljs-addition">+        xhr.upload.onprogress = options.onProgress;</span>
+        xhr.onreadystatechange = () =&gt; {
+            if (xhr.readyState <span class="hljs-comment">=== 4) {</span>
+                if (/(2|3)\d{2}/.test(&apos;&apos; + xhr.status)) {
+                    resolve(xhr.response);
+                } else {
+                    reject(xhr.response);
+                }
+            }
+        }
+        xhr.send(options.data);
+    });
+}
+
+export {
+    request
+}
+</code></pre>
+<h2 id="t145.&#x65AD;&#x70B9;&#x7EED;&#x4F20;&#x548C;&#x79D2;&#x4F20;">5.&#x65AD;&#x70B9;&#x7EED;&#x4F20;&#x548C;&#x79D2;&#x4F20; <a href="#t145.&#x65AD;&#x70B9;&#x7EED;&#x4F20;&#x548C;&#x79D2;&#x4F20;"> # </a></h2>
+<h3 id="t155.1 Upload.tsx">5.1 Upload.tsx <a href="#t155.1 Upload.tsx"> # </a></h3>
+<p>src\Upload.tsx</p>
+<pre><code class="lang-diff">import React, { ChangeEvent, useState, useEffect } from &apos;react&apos;;
+import { Input, Row, Col, Button, message, Progress, Table } from &apos;antd&apos;;
+import { request } from &apos;./utils&apos;;
+const SIZE = 1024 * 1024 * 100;
+//const SIZE = 1024 * 10;
+enum UploadStatus {
+    INIT,//&#x521D;&#x59CB;&#x6001;
+    PAUSE,//&#x6682;&#x505C;&#x4E2D;
+    UPLOADING//&#x4E0A;&#x4F20;&#x4E2D;
+}
+interface Part {
+    size: number;
+    chunk: Blob;
+    filename?: string;
+    chunk_name?: string;
+    percent?: number;
+<span class="hljs-addition">+    loaded: number;</span>
+<span class="hljs-addition">+    xhr?: XMLHttpRequest</span>
+}
+<span class="hljs-addition">+interface Uploaded {</span>
+<span class="hljs-addition">+    filename: string,</span>
+<span class="hljs-addition">+    size: number;</span>
+<span class="hljs-addition">+}</span>
+interface Props {
+
+}
+function Upload(props: Props) {
+    const [uploadStatus, setUploadStatus] = useState&lt;UploadStatus&gt;(UploadStatus.INIT);
+    const [currentFile, setCurrentFile] = useState&lt;File&gt;();
+    const [objectUrl, setObjectUrl] = useState(&apos;&apos;);
+    const [worker, setWorker] = useState&lt;any&gt;(null);
+    const [hashPercent, setHashPercent] = useState&lt;number&gt;(0);
+    const [filename, setFilename] = useState&lt;string&gt;(&apos;&apos;);
+    const [partList, setPartList] = useState&lt;Part[]&gt;([]);
+    useEffect(() =&gt; {
+        if (currentFile) {
+            const URL = window.URL;
+            let objectUrl = URL.createObjectURL(currentFile);
+            setObjectUrl(objectUrl);
+            return () =&gt; {
+                URL.revokeObjectURL(objectUrl);
+            }
+        }
+    }, [currentFile]);
+    const handleChange = (event: ChangeEvent&lt;HTMLInputElement&gt;) =&gt; {
+        const file: File = event.target.files![0];
+        setCurrentFile(file);
+        reset();
+    }
+    function reset() {
+        setUploadStatus(UploadStatus.INIT);
+        setHashPercent(0);
+<span class="hljs-addition">+        setPartList([]);</span>
+<span class="hljs-addition">+        setObjectUrl(&apos;&apos;);</span>
+<span class="hljs-addition">+        setWorker(null);</span>
+<span class="hljs-addition">+        setFilename(&apos;&apos;);</span>
+    }
+    const calculateHash = (partList: Part[]): Promise&lt;string&gt; =&gt; {
+        return new Promise(resolve =&gt; {
+            let worker = new Worker(&quot;/hash.js&quot;);
+            setWorker(worker);
+            worker.postMessage({ partList });
+            worker.onmessage = (event) =&gt; {
+                const { percent, hash } = event.data;
+                setHashPercent(percent);
+                if (hash) {
+                    resolve(hash);
+                }
+            };
+        });
+    }
+    const handleUpload = async () =&gt; {
+        if (!currentFile)
+            return message.error(&apos;&#x4F60;&#x5C1A;&#x672A;&#x9009;&#x62E9;&#x6587;&#x4EF6;&apos;);
+        if (!beforeUpload(currentFile))
+            return message.error(&apos;&#x4E0D;&#x652F;&#x6301;&#x6B64;&#x7C7B;&#x578B;&#x6587;&#x4EF6;&#x7684;&#x4E0A;&#x4F20;&apos;);
+        setUploadStatus(UploadStatus.UPLOADING);
+        let partList: Part[] = createChunks(currentFile);
+        let fileHash: string = await calculateHash(partList);
+        let lastDotIndex = currentFile.name.lastIndexOf(&apos;.&apos;);;
+        let extName = currentFile.name.slice(lastDotIndex);//.jpg .png
+        let filename = `${fileHash}${extName}`;
+        setFilename(filename);
+        partList = partList.map((part, index: number) =&gt; ({
+            filename,//&#x6587;&#x4EF6;&#x540D;
+            chunk_name: `${filename}-${index}`,//&#x5206;&#x5757;&#x7684;&#x540D;&#x79F0;
+            chunk: part.chunk,//&#x4EE3;&#x7801;&#x5757;
+            size: part.chunk.size,//&#x6B64;&#x4EE3;&#x7801;&#x5757;&#x7684;&#x5927;&#x5C0F;
+<span class="hljs-addition">+            loaded: 0,</span>
+            percent: 0
+        }));
+        setPartList(partList);
+        await uploadParts(partList, filename);
+    }
+<span class="hljs-addition">+    const verify = async (filename: string) =&gt; {</span>
+<span class="hljs-addition">+        const result = await request({</span>
+<span class="hljs-addition">+            url: &quot;/verify&quot;,</span>
+<span class="hljs-addition">+            method: &apos;POST&apos;,</span>
+<span class="hljs-addition">+            headers: { &quot;content-type&quot;: &quot;application/json&quot; },</span>
+<span class="hljs-addition">+            data: JSON.stringify({ filename })</span>
+<span class="hljs-addition">+        });</span>
+<span class="hljs-addition">+        return result;</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    async function uploadParts(partList: Part[], filename: string) {</span>
+<span class="hljs-addition">+        const { needUpload, uploadedList } = await verify(filename) as any;</span>
+<span class="hljs-addition">+        if (!needUpload) {</span>
+<span class="hljs-addition">+            message.success(&quot;&#x79D2;&#x4F20;&#x6210;&#x529F;&quot;);</span>
+<span class="hljs-addition">+            return reset();</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+        try {</span>
+<span class="hljs-addition">+            let requests = createRequests(partList, uploadedList);</span>
+<span class="hljs-addition">+            await Promise.all(requests);</span>
+<span class="hljs-addition">+            await request({</span>
+<span class="hljs-addition">+                url: &apos;/merge&apos;,</span>
+<span class="hljs-addition">+                method: &apos;POST&apos;,</span>
+<span class="hljs-addition">+                headers: { &apos;Content-Type&apos;: &quot;application/json&quot; },</span>
+<span class="hljs-addition">+                data: JSON.stringify({ filename })</span>
+<span class="hljs-addition">+            });</span>
+<span class="hljs-addition">+            message.info(&apos;&#x4E0A;&#x4F20;&#x6210;&#x529F;!&apos;);</span>
+<span class="hljs-addition">+            reset();</span>
+<span class="hljs-addition">+        } catch (err) {</span>
+<span class="hljs-addition">+            message.info(&apos;&#x4E0A;&#x4F20;&#x5931;&#x8D25;!&apos;);</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    function createRequests(partList: Part[], uploadedList: Uploaded[]) {</span>
+<span class="hljs-addition">+        return partList.filter((part: Part) =&gt; {</span>
+<span class="hljs-addition">+            let uploadedFile = uploadedList.find(item =&gt; item.filename === part.chunk_name);</span>
+<span class="hljs-addition">+            if (!uploadedFile) {</span>
+<span class="hljs-addition">+                part.loaded = 0;</span>
+<span class="hljs-addition">+                part.percent = 0;</span>
+<span class="hljs-addition">+                return true;</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+            if (uploadedFile.size &lt; part.chunk.size) {</span>
+<span class="hljs-addition">+                part.loaded = uploadedFile.size;</span>
+<span class="hljs-addition">+                part.percent = Number(((part.loaded / part.chunk.size) * 100).toFixed(2));</span>
+<span class="hljs-addition">+                return true;</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+            return false;</span>
+<span class="hljs-addition">+        }).map((part: Part) =&gt; {</span>
+<span class="hljs-addition">+            return request({</span>
+<span class="hljs-addition">+                url: `/upload/${part.filename}/${part.chunk_name!}/${part.loaded!}`,</span>
+<span class="hljs-addition">+                method: &apos;POST&apos;,</span>
+<span class="hljs-addition">+                header: { &apos;Content-Type&apos;: &apos;application/octet-stream&apos; },</span>
+<span class="hljs-addition">+                data: part.chunk.slice(part.loaded!),</span>
+<span class="hljs-addition">+                setXHR: (xhr: XMLHttpRequest) =&gt; { part.xhr = xhr },</span>
+<span class="hljs-addition">+                onProgress: (event: ProgressEvent) =&gt; {</span>
+<span class="hljs-addition">+                    part.percent = Number((Number(part.loaded + event.loaded) / part.chunk.size * 100).toFixed(2));</span>
+<span class="hljs-addition">+                    setPartList([...partList]);</span>
+<span class="hljs-addition">+                }</span>
+<span class="hljs-addition">+            });</span>
+<span class="hljs-addition">+        })</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    const handlePause = () =&gt; {</span>
+<span class="hljs-addition">+        partList.forEach((part: Part) =&gt; part.xhr &amp;&amp; part.xhr.abort());</span>
+<span class="hljs-addition">+        setUploadStatus(UploadStatus.PAUSE);</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    const handleResume = async () =&gt; {</span>
+<span class="hljs-addition">+        setUploadStatus(UploadStatus.UPLOADING);</span>
+<span class="hljs-addition">+        await uploadParts(partList, filename);</span>
+<span class="hljs-addition">+    }</span>
+    const columns = [
+        {
+            title: &apos;&#x5207;&#x7247;&#x540D;&#x79F0;&apos;,
+            data<span class="hljs-comment">Index: &apos;filename&apos;,</span>
+            key: &apos;filename&apos;,
+            width: &apos;20%&apos;
+        },
+        {
+            title: &apos;&#x5207;&#x7247;&#x8FDB;&#x5EA6;&apos;,
+            data<span class="hljs-comment">Index: &apos;percent&apos;,</span>
+            key: &apos;percent&apos;,
+            width: &apos;80%&apos;,
+            render: (value: number) =&gt; {
+                return &lt;Progress percent={value} /&gt;
+            }
+        },
+    ];
+    let totalPercent = partList.length &gt; 0 ? Math.round(partList.reduce((acc, curr) =&gt; acc + curr.percent!, 0) / (partList.length * 100) * 100) : 0;
+    let uploadProgress = uploadStatus != UploadStatus.INIT ? (
+        &lt;&gt;
+            &lt;Row&gt;
+                &lt;Col span={4}&gt;
+                    &#x54C8;&#x5E0C;&#x8BA1;&#x7B97;:
+                &lt;/Col&gt;
+                &lt;Col span={20}&gt;
+                    &lt;Progress percent={hashPercent} /&gt;
+                &lt;/Col&gt;
+            &lt;/Row&gt;
+            &lt;Row&gt;
+                &lt;Col span={4}&gt;
+                    &#x603B;&#x4F53;&#x8FDB;&#x5EA6;:
+                &lt;/Col&gt;
+                &lt;Col span={20}&gt;
+                    &lt;Progress percent={totalPercent} /&gt;
+                &lt;/Col&gt;
+            &lt;/Row&gt;
+            &lt;Table
+                columns={columns}
+                dataSource={partList}
+                rowKey={(row: Part) =&gt; row.chunk_name!}
+            /&gt;
+        &lt;/&gt;
+    ) : null;
+    return (
+        &lt;div className=&quot;upload&quot;&gt;
+            &lt;Row&gt;
+                &lt;Col span={12}&gt;
+                    &lt;Input type=&quot;file&quot; style={{ width: 300 }} onChange={handleChange} /&gt;
+                    {uploadStatus <span class="hljs-comment">=== UploadStatus.INIT &amp;&amp; &lt;Button style={{ marginLeft: 10 }} type=&quot;primary&quot; onClick={handleUpload}&gt;&#x4E0A;&#x4F20;&lt;/Button&gt;}</span>
+<span class="hljs-addition">+                    {uploadStatus === UploadStatus.UPLOADING &amp;&amp; &lt;Button style={{ marginLeft: 10 }} type=&quot;primary&quot; onClick={handlePause}&gt;&#x6682;&#x505C;&lt;/Button&gt;}</span>
+<span class="hljs-addition">+                    {uploadStatus === UploadStatus.PAUSE &amp;&amp; &lt;Button style={{ marginLeft: 10 }} type=&quot;primary&quot; onClick={handleResume}&gt;&#x6062;&#x590D;&lt;/Button&gt;}</span>
+                &lt;/Col&gt;
+                &lt;Col span={12}&gt;
+                    {objectUrl &amp;&amp; &lt;img style={{ maxWidth: 150, maxHeight: 150 }} src={objectUrl} /&gt;}
+                &lt;/Col&gt;
+            &lt;/Row&gt;
+            {
+                uploadProgress
+            }
+        &lt;/div&gt;
+    )
+}
+function beforeUpload(file: File) {
+    const isValidFileType = [&apos;image/jpeg&apos;, &apos;image/png&apos;, &apos;application/pdf&apos;, &apos;video/mp4&apos;].includes(file.type);
+    if (!isValidFileType) {
+        message.error(&apos;&#x4E0D;&#x652F;&#x6301;&#x6B64;&#x6587;&#x4EF6;&#x7C7B;&#x578B;!&apos;);
+    }
+    const isLt2G = file.size / 1024 / 1024 &lt; 1024 * 1024 * 1024;
+    if (!isLt2G) {
+        message.error(&apos;&#x4E0A;&#x4F20;&#x7684;&#x56FE;&#x7247;&#x4E0D;&#x80FD;&#x5927;&#x4E8E;2MB!&apos;);
+    }
+    return isValidFileType &amp;&amp; isLt2G;
+}
+function createChunks(file: File): Part[] {
+    let current = 0;
+    const partList: Part[] = [];
+    while (current &lt; file.size) {
+        const chunk = file.slice(current, current + SIZE);
+<span class="hljs-addition">+        partList.push({ chunk, size: chunk.size, loaded: 0 });</span>
+        current += SIZE;
+    }
+    return partList;
+}
+export default Upload;
+</code></pre>
+<h3 id="t165.2 src\utils.tsx">5.2 src\utils.tsx <a href="#t165.2 src\utils.tsx"> # </a></h3>
+<p>src\utils.tsx</p>
+<pre><code class="lang-diff">function request(options: any) {
+    let _default: any = {
+        baseURL: &apos;http://localhost:8000&apos;,
+        method: &apos;GET&apos;,
+        header: {},
+        data: {}
+    };
+    options = { ..._default, ...options, headers: { ..._default.headers, ...(options.headers || {}) } };
+    return new Promise((resolve: Function, reject: Function) =&gt; {
+        const xhr = new XMLHttpRequest();
+        xhr.open(options.method, options.baseURL + options.url, true);
+        Object.entries(options.headers).forEach(([key, value]) =&gt; xhr.setRequestHeader(key, value as string));
+        xhr.responseType = &apos;json&apos;;
+        xhr.upload.onprogress = options.onProgress;
+        xhr.onreadystatechange = () =&gt; {
+            if (xhr.readyState <span class="hljs-comment">=== 4) {</span>
+                if (/(2|3)\d{2}/.test(&apos;&apos; + xhr.status)) {
+                    resolve(xhr.response);
+                } else {
+                    reject(xhr.response);
+                }
+            }
+        }
+<span class="hljs-addition">+        options.setXHR &amp;&amp; options.setXHR(xhr);</span>
+        xhr.send(options.data);
+    });
+}
+export {
+    request
+}
+</code></pre>
+<h2 id="t171.&#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;">1.&#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE; <a href="#t171.&#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;"> # </a></h2>
+<pre><code class="lang-js">mkdir server 
+cd server 
+cnpm init -y
+npx tsconfig.json
+cnpm i fs-extra express morgan http-errors http-status-codes cors  multer multiparty -S
+cnpm i @types/fs-extra @types/node   @types/express @types/morgan @types/http-errors cross-env typescript ts-node ts-node-dev nodemon @types/cors @types/multer @types/multiparty -D
+</code></pre>
+<h2 id="t182.&#x5355;&#x4E2A;&#x4E0A;&#x4F20;">2.&#x5355;&#x4E2A;&#x4E0A;&#x4F20; <a href="#t182.&#x5355;&#x4E2A;&#x4E0A;&#x4F20;"> # </a></h2>
+<h3 id="t192.1 package.json">2.1 package.json <a href="#t192.1 package.json"> # </a></h3>
+<pre><code class="lang-json">&quot;scripts&quot;: {
+    &quot;start&quot;: &quot;cross-env PORT=8000 ts-node-dev --respawn ./src/www.ts&quot;,
+    &quot;dev&quot;: &quot;cross-env PORT=8000  nodemon --exec ts-node --files ./src/www.ts&quot;,
+    &quot;utils&quot;: &quot;ts-node ./src/utils.ts&quot;
+}
+</code></pre>
+<h3 id="t202.2 src\www.ts">2.2 src\www.ts <a href="#t202.2 src\www.ts"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> app <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./app&apos;</span>;
+<span class="hljs-keyword">import</span> http <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;http&apos;</span>;
+
+<span class="hljs-keyword">const</span> port = process.env.PORT || <span class="hljs-number">8000</span>;
+
+<span class="hljs-keyword">const</span> server = http.createServer(app);
+
+server.listen(port);
+server.on(<span class="hljs-string">&apos;error&apos;</span>, onError);
+server.on(<span class="hljs-string">&apos;listening&apos;</span>, onListening);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onError</span>(<span class="hljs-params">error: any</span>) </span>{
+    <span class="hljs-built_in">console</span>.error(error);
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onListening</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Listening on &apos;</span> + port);
+}
+</code></pre>
+<h3 id="t212.3 src\app.ts">2.3 src\app.ts <a href="#t212.3 src\app.ts"> # </a></h3>
+<p>src\app.ts</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> createError <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;http-errors&apos;</span>;
+<span class="hljs-keyword">import</span> express, { Request, Response, NextFunction } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;express&apos;</span>;
+<span class="hljs-keyword">import</span> logger <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;morgan&apos;</span>;
+<span class="hljs-keyword">import</span> { INTERNAL_SERVER_ERROR } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;http-status-codes&apos;</span>;
+<span class="hljs-keyword">import</span> cors <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;cors&apos;</span>;
+<span class="hljs-keyword">import</span> path <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;path&apos;</span>;
+<span class="hljs-keyword">import</span> { PUBLIC_DIR } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./utils&apos;</span>;
+<span class="hljs-keyword">import</span> fs <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;fs-extra&apos;</span>;
+<span class="hljs-keyword">import</span> multiparty <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;multiparty&apos;</span>;
+<span class="hljs-keyword">let</span> app = express();
+app.use(logger(<span class="hljs-string">&apos;dev&apos;</span>));
+app.use(express.json());
+app.use(express.urlencoded({ <span class="hljs-attr">extended</span>: <span class="hljs-literal">false</span> }));
+app.use(cors());
+app.use(express.static(path.resolve(__dirname, <span class="hljs-string">&apos;public&apos;</span>)));
+app.post(<span class="hljs-string">&apos;/upload&apos;</span>, <span class="hljs-keyword">async</span> (req: Request, <span class="hljs-attr">res</span>: Response, <span class="hljs-attr">next</span>: NextFunction) =&gt; {
+    <span class="hljs-keyword">let</span> form = <span class="hljs-keyword">new</span> multiparty.Form();
+    form.parse(req, <span class="hljs-keyword">async</span> (err, fields, files) =&gt; {
+        <span class="hljs-keyword">if</span> (err) {
+            <span class="hljs-keyword">return</span> next(err);
+        }
+        <span class="hljs-keyword">let</span> [filename] = fields.filename;
+        <span class="hljs-keyword">let</span> [chunk] = files.chunk;
+        <span class="hljs-keyword">await</span> fs.move(chunk.path, path.resolve(PUBLIC_DIR, filename), { <span class="hljs-attr">overwrite</span>: <span class="hljs-literal">true</span> });
+        setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+            res.json({
+                <span class="hljs-attr">success</span>: <span class="hljs-literal">true</span>
+            });
+        }, <span class="hljs-number">3000</span>);
+    });
+});
+app.use(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">_req, _res, next</span>) </span>{
+    next(createError(<span class="hljs-number">404</span>));
+});
+
+app.use(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error: any, _req: Request, res: Response, _next: NextFunction</span>) </span>{
+    res.status(error.status || INTERNAL_SERVER_ERROR);
+    res.json({
+        <span class="hljs-attr">success</span>: <span class="hljs-literal">false</span>,
+        error
+    });
+});
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> app;
+</code></pre>
+<h3 id="t222.4 src\utils.ts">2.4 src\utils.ts <a href="#t222.4 src\utils.ts"> # </a></h3>
+<p>src\utils.ts</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> path <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;path&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> TEMP_DIR = path.resolve(__dirname, <span class="hljs-string">&apos;temp&apos;</span>);
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> PUBLIC_DIR = path.resolve(__dirname, <span class="hljs-string">&apos;public&apos;</span>);
+</code></pre>
+<h2 id="t233.&#x6587;&#x4EF6;&#x5207;&#x5272;&#x548C;&#x5408;&#x5E76;">3.&#x6587;&#x4EF6;&#x5207;&#x5272;&#x548C;&#x5408;&#x5E76; <a href="#t233.&#x6587;&#x4EF6;&#x5207;&#x5272;&#x548C;&#x5408;&#x5E76;"> # </a></h2>
+<h3 id="t243.1 src\utils.ts">3.1 src\utils.ts <a href="#t243.1 src\utils.ts"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> path <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;path&apos;</span>;
+<span class="hljs-keyword">import</span> fs, { WriteStream } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;fs-extra&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> TEMP_DIR = path.resolve(__dirname, <span class="hljs-string">&apos;temp&apos;</span>);
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> PUBLIC_DIR = path.resolve(__dirname, <span class="hljs-string">&apos;public&apos;</span>);
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> SIZE = <span class="hljs-number">1024</span> * <span class="hljs-number">1024</span> * <span class="hljs-number">100</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> splitChunks = <span class="hljs-keyword">async</span> (filename: string, <span class="hljs-attr">size</span>: number = SIZE) =&gt; {
+    <span class="hljs-keyword">const</span> filePath = path.resolve(__dirname, filename);
+    <span class="hljs-keyword">const</span> chunksDir = path.resolve(TEMP_DIR, filename);
+    <span class="hljs-keyword">let</span> stat = <span class="hljs-keyword">await</span> fs.stat(filePath);
+    <span class="hljs-keyword">let</span> content = <span class="hljs-keyword">await</span> fs.readFile(filePath);
+    <span class="hljs-keyword">let</span> current = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">await</span> fs.mkdirp(chunksDir);
+    <span class="hljs-keyword">while</span> (current &lt; stat.size) {
+        <span class="hljs-keyword">await</span> fs.writeFile(
+            path.resolve(chunksDir, filename + <span class="hljs-string">&apos;-&apos;</span> + i),
+            content.slice(current, current + size)
+        );
+        i++;
+        current += size;
+    }
+}
+<span class="hljs-comment">//splitChunks(&apos;dog.png&apos;, 1024  * 10);</span>
+
+<span class="hljs-keyword">const</span> pipeStream = <span class="hljs-function">(<span class="hljs-params">filePath: string, writeStream: WriteStream</span>) =&gt;</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-params">resolve</span> =&gt;</span> {
+    <span class="hljs-keyword">const</span> readStream = fs.createReadStream(filePath);
+    readStream.on(<span class="hljs-string">&apos;end&apos;</span>, <span class="hljs-keyword">async</span> () =&gt; {
+        <span class="hljs-keyword">await</span> fs.unlink(filePath);
+        resolve();
+    });
+    readStream.pipe(writeStream);
+});
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> mergeChunks = <span class="hljs-keyword">async</span> (filename: string, <span class="hljs-attr">size</span>: number = SIZE) =&gt; {
+    <span class="hljs-keyword">const</span> filePath = path.resolve(PUBLIC_DIR, filename);
+    <span class="hljs-keyword">const</span> chunksDir = path.resolve(TEMP_DIR, filename);
+    <span class="hljs-keyword">const</span> chunkFiles = <span class="hljs-keyword">await</span> fs.readdir(chunksDir);
+    chunkFiles.sort(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> <span class="hljs-built_in">Number</span>(a.split(<span class="hljs-string">&apos;-&apos;</span>)[<span class="hljs-number">1</span>]) - <span class="hljs-built_in">Number</span>(b.split(<span class="hljs-string">&apos;-&apos;</span>)[<span class="hljs-number">1</span>]));
+    <span class="hljs-keyword">await</span> <span class="hljs-built_in">Promise</span>.all(
+        chunkFiles.map(<span class="hljs-function">(<span class="hljs-params">chunkFile, index</span>) =&gt;</span> pipeStream(
+            path.resolve(chunksDir, chunkFile),
+            fs.createWriteStream(filePath, {
+                <span class="hljs-attr">start</span>: index * size
+            })
+        ))
+    );
+    <span class="hljs-keyword">await</span> fs.rmdir(chunksDir);
+}
+<span class="hljs-comment">//mergeChunks(&apos;dog.png&apos;, 1024 * 10);</span>
+</code></pre>
+<h2 id="t254.&#x5207;&#x7247;&#x4E0A;&#x4F20;">4.&#x5207;&#x7247;&#x4E0A;&#x4F20; <a href="#t254.&#x5207;&#x7247;&#x4E0A;&#x4F20;"> # </a></h2>
+<h3 id="t264.1 src\app.ts">4.1 src\app.ts <a href="#t264.1 src\app.ts"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> createError <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;http-errors&apos;</span>;
+<span class="hljs-keyword">import</span> express, { Request, Response, NextFunction } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;express&apos;</span>;
+<span class="hljs-keyword">import</span> logger <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;morgan&apos;</span>;
+<span class="hljs-keyword">import</span> { INTERNAL_SERVER_ERROR } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;http-status-codes&apos;</span>;
+<span class="hljs-keyword">import</span> cors <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;cors&apos;</span>;
+<span class="hljs-keyword">import</span> path <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;path&apos;</span>;
+<span class="hljs-keyword">import</span> { TEMP_DIR, PUBLIC_DIR, mergeChunks } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./utils&apos;</span>;
+<span class="hljs-keyword">import</span> fs <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;fs-extra&apos;</span>;
+<span class="hljs-keyword">import</span> multiparty <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;multiparty&apos;</span>;
+<span class="hljs-keyword">let</span> app = express();
+app.use(logger(<span class="hljs-string">&apos;dev&apos;</span>));
+app.use(express.json());
+app.use(express.urlencoded({ <span class="hljs-attr">extended</span>: <span class="hljs-literal">false</span> }));
+app.use(cors());
+app.use(express.static(path.resolve(__dirname, <span class="hljs-string">&apos;public&apos;</span>)));
+app.post(<span class="hljs-string">&apos;/merge&apos;</span>, <span class="hljs-keyword">async</span> (req: Request, <span class="hljs-attr">res</span>: Response) =&gt; {
+    <span class="hljs-keyword">let</span> { filename } = req.body;
+    <span class="hljs-keyword">await</span> mergeChunks(filename);
+    res.json({
+        <span class="hljs-attr">success</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">url</span>: <span class="hljs-string">`http://localhost:8000/<span class="hljs-subst">${filename}</span>`</span>
+    });
+});
+app.post(<span class="hljs-string">&apos;/upload/:filename/:chunk_name&apos;</span>, <span class="hljs-keyword">async</span> (req: Request, <span class="hljs-attr">res</span>: Response, <span class="hljs-attr">_next</span>: NextFunction) =&gt; {
+    <span class="hljs-keyword">let</span> file_dir = path.resolve(TEMP_DIR, req.params.filename);
+    <span class="hljs-keyword">let</span> exist = <span class="hljs-keyword">await</span> fs.pathExists(file_dir);
+    <span class="hljs-keyword">if</span> (!exist) {
+        <span class="hljs-keyword">await</span> fs.mkdirs(file_dir);
+    }
+    <span class="hljs-keyword">const</span> filePath = path.resolve(TEMP_DIR, req.params.filename, req.params.chunk_name);
+    <span class="hljs-keyword">let</span> writeStream = fs.createWriteStream(filePath, { <span class="hljs-attr">start</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">flags</span>: <span class="hljs-string">&quot;a&quot;</span> });
+    req.pipe(writeStream);
+    req.on(<span class="hljs-string">&apos;end&apos;</span>, () =&gt; {
+        writeStream.close();
+        res.json({
+            <span class="hljs-attr">success</span>: <span class="hljs-literal">true</span>
+        });
+    });
+});
+
+app.post(<span class="hljs-string">&apos;/upload&apos;</span>, <span class="hljs-keyword">async</span> (req: Request, <span class="hljs-attr">res</span>: Response, <span class="hljs-attr">next</span>: NextFunction) =&gt; {
+    <span class="hljs-keyword">let</span> form = <span class="hljs-keyword">new</span> multiparty.Form();
+    form.parse(req, <span class="hljs-keyword">async</span> (err, fields, files) =&gt; {
+        <span class="hljs-keyword">if</span> (err) {
+            <span class="hljs-keyword">return</span> next(err);
+        }
+        <span class="hljs-keyword">let</span> [filename] = fields.filename;
+        <span class="hljs-keyword">let</span> [chunk] = files.chunk;
+        <span class="hljs-keyword">await</span> fs.move(chunk.path, path.resolve(PUBLIC_DIR, filename), { <span class="hljs-attr">overwrite</span>: <span class="hljs-literal">true</span> });
+        setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+            res.json({
+                <span class="hljs-attr">success</span>: <span class="hljs-literal">true</span>
+            });
+        }, <span class="hljs-number">3000</span>);
+    });
+});
+app.use(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">_req, _res, next</span>) </span>{
+    next(createError(<span class="hljs-number">404</span>));
+});
+
+app.use(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error: any, _req: Request, res: Response, _next: NextFunction</span>) </span>{
+    res.status(error.status || INTERNAL_SERVER_ERROR);
+    res.json({
+        <span class="hljs-attr">success</span>: <span class="hljs-literal">false</span>,
+        error
+    });
+});
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> app;
+</code></pre>
+<h2 id="t275.&#x65AD;&#x70B9;&#x7EED;&#x4F20;">5.&#x65AD;&#x70B9;&#x7EED;&#x4F20; <a href="#t275.&#x65AD;&#x70B9;&#x7EED;&#x4F20;"> # </a></h2>
+<h3 id="t285.1 app.ts">5.1 app.ts <a href="#t285.1 app.ts"> # </a></h3>
+<pre><code class="lang-diff">import createError from &apos;http-errors&apos;;
+import express, { Request, Response, NextFunction } from &apos;express&apos;;
+import logger from &apos;morgan&apos;;
+import { INTERNAL_SERVER_ERROR } from &apos;http-status-codes&apos;;
+import cors from &apos;cors&apos;;
+import path from &apos;path&apos;;
+import { TEMP_DIR, PUBLIC_DIR, mergeChunks } from &apos;./utils&apos;;
+import fs from &apos;fs-extra&apos;;
+import multiparty from &apos;multiparty&apos;;
+let app = express();
+app.use(logger(&apos;dev&apos;));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cors());
+app.use(express.static(path.resolve(__dirname, &apos;public&apos;)));
+app.post(&apos;/merge&apos;, async (req: Request, res: Response) =&gt; {
+    let { filename } = req.body;
+    await mergeChunks(filename);
+    res.json({
+        success: true,
+        url: `http://localhost:8000/${filename}`
+    });
+});
+<span class="hljs-addition">+app.post(&apos;/upload/:filename/:chunk_name/:start&apos;, async (req: Request, res: Response, _next: NextFunction) =&gt; {</span>
+    let start = isNaN(Number(req.params.start)) ? 0 : Number(req.params.start);
+    let file_dir = path.resolve(TEMP_DIR, req.params.filename);
+    let exist = await fs.pathExists(file_dir);
+    if (!exist) {
+        await fs.mkdirs(file_dir);
+    }
+    const filePath = path.resolve(TEMP_DIR, req.params.filename, req.params.chunk_name);
+<span class="hljs-addition">+    let writeStream = fs.createWriteStream(filePath, { start, flags: &quot;a&quot; });</span>
+    req.pipe(writeStream);
+<span class="hljs-addition">+    req.on(&apos;error&apos;, () =&gt; {</span>
+<span class="hljs-addition">+        writeStream.close();</span>
+<span class="hljs-addition">+    });</span>
+<span class="hljs-addition">+    req.on(&apos;close&apos;, () =&gt; {</span>
+<span class="hljs-addition">+        writeStream.close();</span>
+<span class="hljs-addition">+    });</span>
+    req.on(&apos;end&apos;, () =&gt; {
+        writeStream.close();
+        res.json({
+            success: true
+        });
+    });
+});
+<span class="hljs-addition">+app.post(&apos;/verify&apos;, async (req: Request, res: Response): Promise&lt;any&gt; =&gt; {</span>
+<span class="hljs-addition">+    const { filename } = req.body;</span>
+<span class="hljs-addition">+    const filePath = path.resolve(PUBLIC_DIR, filename);</span>
+<span class="hljs-addition">+    let existFile = await fs.pathExists(filePath);</span>
+<span class="hljs-addition">+    if (existFile) {</span>
+<span class="hljs-addition">+        return res.json({</span>
+<span class="hljs-addition">+            success: true,</span>
+<span class="hljs-addition">+            needUpload: false</span>
+<span class="hljs-addition">+        });</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    let tempFilePath = path.resolve(TEMP_DIR, filename);</span>
+<span class="hljs-addition">+    let uploadedList: any[] = [];</span>
+<span class="hljs-addition">+    let existTemporaryFile = await fs.pathExists(tempFilePath);</span>
+<span class="hljs-addition">+    if (existTemporaryFile) {</span>
+<span class="hljs-addition">+        uploadedList = await fs.readdir(tempFilePath);</span>
+<span class="hljs-addition">+        uploadedList = await Promise.all(uploadedList.map(async (filename: string) =&gt; {</span>
+<span class="hljs-addition">+            let stat = await fs.stat(path.resolve(tempFilePath, filename));</span>
+<span class="hljs-addition">+            return {</span>
+<span class="hljs-addition">+                filename,</span>
+<span class="hljs-addition">+                size: stat.size</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+        }));</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    res.json({</span>
+<span class="hljs-addition">+        success: true,</span>
+<span class="hljs-addition">+        needUpload: true,</span>
+<span class="hljs-addition">+        uploadedList: uploadedList</span>
+<span class="hljs-addition">+    });</span>
+<span class="hljs-addition">+});</span>
+app.post(&apos;/upload&apos;, async (req: Request, res: Response, next: NextFunction) =&gt; {
+    let form = new multiparty.Form();
+    form.parse(req, async (err, fields, files) =&gt; {
+        if (err) {
+            return next(err);
+        }
+        let [filename] = fields.filename;
+        let [chunk] = files.chunk;
+        await fs.move(chunk.path, path.resolve(PUBLIC_DIR, filename), { overwrite: true });
+        setTimeout(() =&gt; {
+            res.json({
+                success: true
+            });
+        }, 3000);
+    });
+});
+app.use(function (_req, _res, next) {
+    next(createError(404));
+});
+
+app.use(function (error: any, _req: Request, res: Response, _next: NextFunction) {
+    res.status(error.status || INTERNAL_SERVER_ERROR);
+    res.json({
+        success: false,
+        error
+    });
+});
+
+export default app;
+</code></pre>
+
+    </div>
+</div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+    aria-labelledby="loginModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="loginModalLabel">请登录</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="username" class="control-label">姓名:</label>
+                        <input type="text" class="form-control" id="username" placeholder="珠峰架构VIP会员系统用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">密码:</label>
+                        <input type="text" class="form-control" id="password" placeholder="珠峰架构VIP会员系统密码">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                    data-dismiss="modal">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

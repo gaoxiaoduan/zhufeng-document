@@ -1,0 +1,1575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+   
+                      
+
+                        
+<div class="warpper">
+    <div class="page-toc">
+        <ul><li><a href="#t01.生成项目">1.生成项目</a></li><li><a href="#t12. get请求">2. get请求</a><ul><li><a href="#t22.1 src\index.tsx">2.1 src\index.tsx</a></li><li><a href="#t32.2 axios\index.tsx">2.2 axios\index.tsx</a></li><li><a href="#t42.2 axios\Axios.tsx">2.2 axios\Axios.tsx</a></li><li><a href="#t52.3 axios\types.tsx">2.3 axios\types.tsx</a></li></ul></li><li><a href="#t63. POST请求">3. POST请求</a><ul><li><a href="#t73.1 src\index.tsx">3.1 src\index.tsx</a></li><li><a href="#t83.2 axios\types.tsx">3.2 axios\types.tsx</a></li><li><a href="#t93.3 axios\Axios.tsx">3.3 axios\Axios.tsx</a></li></ul></li><li><a href="#t104. 错误处理">4. 错误处理</a><ul><li><a href="#t114.1 axios\Axios.tsx">4.1 axios\Axios.tsx</a></li><li><a href="#t124.2 src\index.tsx">4.2 src\index.tsx</a><ul><li><a href="#t134.2.1 网络错误">4.2.1 网络错误</a></li><li><a href="#t144.2.2 超时">4.2.2 超时</a></li><li><a href="#t154.2.3 错误状态码">4.2.3 错误状态码</a></li></ul></li></ul></li><li><a href="#t165. 拦截器功能">5. 拦截器功能</a><ul><li><a href="#t175.1 src\index.tsx">5.1 src\index.tsx</a></li><li><a href="#t185.2 src\axios\types.tsx">5.2 src\axios\types.tsx</a></li><li><a href="#t195.3 AxiosInterceptorManager.ts">5.3 AxiosInterceptorManager.ts</a></li><li><a href="#t205.3 src\axios\Axios.tsx">5.3 src\axios\Axios.tsx</a></li></ul></li><li><a href="#t216. 合并配置">6. 合并配置</a><ul><li><a href="#t226.1 axios\types.tsx">6.1 axios\types.tsx</a></li><li><a href="#t236.2 Axios.tsx">6.2 Axios.tsx</a></li></ul></li><li><a href="#t247.转换请求与响应">7.转换请求与响应</a><ul><li><a href="#t257.1 axios\types.tsx">7.1 axios\types.tsx</a></li><li><a href="#t267.2 axios\Axios.tsx">7.2 axios\Axios.tsx</a></li></ul></li><li><a href="#t278.任务取消">8.任务取消</a><ul><li><a href="#t288.1 src\index.tsx">8.1 src\index.tsx</a></li><li><a href="#t298.2 axios\types.tsx">8.2 axios\types.tsx</a></li><li><a href="#t308.3 axios\cancel.tsx">8.3 axios\cancel.tsx</a></li><li><a href="#t318.4 axios\index.tsx">8.4 axios\index.tsx</a></li><li><a href="#t328.5 axios\Axios.tsx">8.5 axios\Axios.tsx</a></li></ul></li><li><a href="#t339.后端接口">9.后端接口</a></li></ul>
+    </div>
+    <div class="content markdown-body">
+        <h2 id="t01.&#x751F;&#x6210;&#x9879;&#x76EE;">1.&#x751F;&#x6210;&#x9879;&#x76EE; <a href="#t01.&#x751F;&#x6210;&#x9879;&#x76EE;"> # </a></h2>
+<pre><code class="lang-js">npx create-react-app zaxios --typescript
+cd create-react-app
+yarn add axios @types/axios qs @types/qs parse-headers
+yarn add express body-parser
+yarn start
+</code></pre>
+<h2 id="t12. get&#x8BF7;&#x6C42;">2. get&#x8BF7;&#x6C42; <a href="#t12. get&#x8BF7;&#x6C42;"> # </a></h2>
+<ul>
+<li><a href="https://github.com/axios/axios">axios</a></li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/1.axiosresponse.png" alt="1.axiosresponse"></p>
+<p><img src="http://img.zhufengpeixun.cn/2.axiosresponse.png" alt="2.axiosresponse.png"></p>
+<h3 id="t22.1 src\index.tsx">2.1 src\index.tsx <a href="#t22.1 src\index.tsx"> # </a></h3>
+<p>src\index.tsx</p>
+<pre><code class="lang-tsx">import axios, { AxiosResponse } from &apos;./axios&apos;;
+const baseURL = &apos;http://localhost:8080&apos;;
+export interface User {
+    username: string;
+    password: string;
+}
+let user: User = {
+    username: &apos;zhufeng&apos;,
+    password: &apos;123456&apos;
+};
+axios({
+    method: &apos;get&apos;,
+    url: baseURL + &apos;/get&apos;,
+    params: user
+}).then((response: AxiosResponse) =&gt; {
+    console.log(response);
+    return response.data;
+}).then((data: User) =&gt; {
+    console.log(data);
+}).catch(function (error: any) {
+    console.log(error);
+});
+</code></pre>
+<h3 id="t32.2 axios\index.tsx">2.2 axios\index.tsx <a href="#t32.2 axios\index.tsx"> # </a></h3>
+<p>src\axios\index.tsx</p>
+<pre><code class="lang-tsx">import Axios from &apos;./Axios&apos;;
+import { AxiosInstance } from &apos;./types&apos;;
+function createInstance(): AxiosInstance {
+    let context = new Axios();
+    let instance = Axios.prototype.request.bind(context);
+    instance = Object.assign(instance, Axios.prototype, context);
+    return instance as AxiosInstance;
+}
+var axios = createInstance();
+export default axios;
+export * from &apos;./types&apos;;
+</code></pre>
+<h3 id="t42.2 axios\Axios.tsx">2.2 axios\Axios.tsx <a href="#t42.2 axios\Axios.tsx"> # </a></h3>
+<p>src\axios\Axios.tsx</p>
+<pre><code class="lang-tsx">import { AxiosRequestConfig, AxiosResponse } from &apos;./types&apos;;
+import qs from &apos;qs&apos;;
+import parse from &apos;parse-headers&apos;;
+class Axios {
+    request(config: AxiosRequestConfig): Promise<axiosresponse> {
+        return this.dispatchRequest(config);
+    }
+    dispatchRequest(config: AxiosRequestConfig): Promise<axiosresponse> {
+        return new Promise((resolve, reject) =&gt; {
+            let { method = &apos;get&apos;, url, params } = config;
+            let request: XMLHttpRequest = new XMLHttpRequest();
+            if (params) {
+                let paramsString = qs.stringify(params);
+                url = url + (url.indexOf(&apos;?&apos;) == -1 ? &apos;?&apos; : &apos;&amp;&apos;) + paramsString;
+            }
+            request.open(method, url, true);
+            request.responseType = &apos;json&apos;;
+            request.onreadystatechange = () =&gt; {
+                if (request.readyState === 4) {
+                    if (request.status &gt;= 200 &amp;&amp; request.status &lt; 300) {
+                        let response: AxiosResponse = {
+                            data: request.response,
+                            status: request.status,
+                            statusText: request.statusText,
+                            headers: parse(request.getAllResponseHeaders()),
+                            config: config,
+                            request
+                        }
+                        resolve(response);
+                    } else {
+                        reject(&apos;&#x8BF7;&#x6C42;&#x5931;&#x8D25;&apos;);
+                    }
+                }
+            }
+            request.send();
+        });
+    }
+}
+export default Axios;
+</axiosresponse></axiosresponse></code></pre>
+<h3 id="t52.3 axios\types.tsx">2.3 axios\types.tsx <a href="#t52.3 axios\types.tsx"> # </a></h3>
+<p>src\axios\types.tsx</p>
+<pre><code class="lang-tsx">export type Methods = &apos;GET&apos; | &apos;get&apos; | &apos;POST&apos; | &apos;post&apos; | &apos;PUT&apos; | &apos;put&apos; | &apos;DELETE&apos; | &apos;delete&apos;;
+export interface AxiosInstance {
+    <t = any>(config: AxiosRequestConfig): Promise<axiosresponse<t>&gt;
+}
+export interface AxiosRequestConfig {
+    url: string;
+    method?: Methods;
+    params?: Record<string, any>
+}
+
+export interface AxiosResponse<t = any> {
+    data: T;
+    status: number;
+    statusText: string;
+    headers: any;
+    config: AxiosRequestConfig;
+    request?: any;
+}
+</t></string,></axiosresponse<t></t></code></pre>
+<h2 id="t63. POST&#x8BF7;&#x6C42;">3. POST&#x8BF7;&#x6C42; <a href="#t63. POST&#x8BF7;&#x6C42;"> # </a></h2>
+<h3 id="t73.1 src\index.tsx">3.1 src\index.tsx <a href="#t73.1 src\index.tsx"> # </a></h3>
+<pre><code class="lang-diff">import axios, { AxiosResponse } from &apos;./axios&apos;;
+const baseURL = &apos;http://localhost:8080&apos;;
+export interface User {
+    username: string;
+    password: string;
+}
+let user: User = {
+    username: &apos;zhufeng&apos;,
+    password: &apos;123456&apos;
+};
+axios({
+<span class="hljs-addition">+    method: &apos;post&apos;,</span>
+<span class="hljs-addition">+    url: baseURL + &apos;/post&apos;,</span>
+<span class="hljs-addition">+    headers: { &apos;Content-Type&apos;: &apos;application/json&apos; },</span>
+<span class="hljs-addition">+    data: user,</span>
+}).then((response: AxiosResponse) =&gt; {
+    console.log(response);
+    return response.data;
+}).then((data: User) =&gt; {
+    console.log(data);
+}).catch(function (error: any) {
+    console.log(error);
+});
+</code></pre>
+<h3 id="t83.2 axios\types.tsx">3.2 axios\types.tsx <a href="#t83.2 axios\types.tsx"> # </a></h3>
+<p>src\axios\types.tsx</p>
+<pre><code class="lang-diff">export type Methods = &apos;GET&apos; | &apos;get&apos; | &apos;POST&apos; | &apos;post&apos; | &apos;PUT&apos; | &apos;put&apos; | &apos;DELETE&apos; | &apos;delete&apos;;
+export interface AxiosInstance {
+    &lt;T = any&gt;(config: AxiosRequestConfig): Promise&lt;AxiosResponse&lt;T&gt;&gt;
+}
+export interface AxiosRequestConfig {
+    url: string;
+    method?: Methods;
+    params?: Record&lt;string, any&gt;;
+<span class="hljs-addition">+    data?: Record&lt;string, any&gt;;</span>
+<span class="hljs-addition">+    headers?: Record&lt;string, any&gt;;</span>
+}
+
+export interface AxiosResponse&lt;T = any&gt; {
+    data: T;
+    status: number;
+    statusText: string;
+    headers: any;
+    config: AxiosRequestConfig;
+    request?: any;
+}
+</code></pre>
+<h3 id="t93.3 axios\Axios.tsx">3.3 axios\Axios.tsx <a href="#t93.3 axios\Axios.tsx"> # </a></h3>
+<p>src\axios\Axios.tsx</p>
+<pre><code class="lang-diff">import { AxiosRequestConfig, AxiosResponse } from &apos;./types&apos;;
+import qs from &apos;qs&apos;;
+import parse from &apos;parse-headers&apos;;
+class Axios {
+    request(config: AxiosRequestConfig): Promise&lt;AxiosResponse&gt; {
+        return this.dispatchRequest(config);
+    }
+    dispatchRequest(config: AxiosRequestConfig): Promise&lt;AxiosResponse&gt; {
+        return new Promise((resolve, reject) =&gt; {
+<span class="hljs-addition">+           let { method = &apos;get&apos;, url, params, headers, data } = config;</span>
+            let request: XMLHttpRequest = new XMLHttpRequest();
+            if (params) {
+                let paramsString = qs.stringify(params);
+                url = url + (url.indexOf(&apos;?&apos;) == -1 ? &apos;?&apos; : &apos;&amp;&apos;) + paramsString;
+            }
+            request.open(method, url, true);
+            request.responseType = &apos;json&apos;;
+            request.onreadystatechange = () =&gt; {
+                if (request.readyState <span class="hljs-comment">=== 4) {</span>
+                    if (request.status &gt;= 200 &amp;&amp; request.status &lt; 300) {
+                        let response: AxiosResponse = {
+                            data: request.response,
+                            status: request.status,
+                            statusText: request.statusText,
+                            headers: parse(request.getAllResponseHeaders()),
+                            config: config,
+                            request
+                        }
+                        resolve(response);
+                    } else {
+                        reject(&apos;&#x8BF7;&#x6C42;&#x5931;&#x8D25;&apos;);
+                    }
+                }
+            }
+<span class="hljs-addition">+           if (headers) {</span>
+<span class="hljs-addition">+               for (let key in headers) {</span>
+<span class="hljs-addition">+                   request.setRequestHeader(key, headers[key]);</span>
+<span class="hljs-addition">+               }</span>
+<span class="hljs-addition">+           }</span>
+<span class="hljs-addition">+           let body: string | null = null;</span>
+<span class="hljs-addition">+           if (data &amp;&amp; typeof data == &apos;object&apos;) {</span>
+<span class="hljs-addition">+               body = JSON.stringify(data);</span>
+<span class="hljs-addition">+           }</span>
+<span class="hljs-addition">+           request.send(body);</span>
+        });
+    }
+}
+export default Axios;
+</code></pre>
+<h2 id="t104. &#x9519;&#x8BEF;&#x5904;&#x7406;">4. &#x9519;&#x8BEF;&#x5904;&#x7406; <a href="#t104. &#x9519;&#x8BEF;&#x5904;&#x7406;"> # </a></h2>
+<ul>
+<li>&#x7F51;&#x7EDC;&#x5F02;&#x5E38;</li>
+<li>&#x8D85;&#x65F6;&#x5F02;&#x5E38;</li>
+<li>&#x9519;&#x8BEF;&#x72B6;&#x6001;&#x7801;</li>
+</ul>
+<h3 id="t114.1 axios\Axios.tsx">4.1 axios\Axios.tsx <a href="#t114.1 axios\Axios.tsx"> # </a></h3>
+<p>src\axios\Axios.tsx</p>
+<pre><code class="lang-diff">import { AxiosRequestConfig, AxiosResponse } from &apos;./types&apos;;
+import qs from &apos;qs&apos;;
+import parse from &apos;parse-headers&apos;;
+class Axios {
+    request(config: AxiosRequestConfig): Promise&lt;AxiosResponse&gt; {
+        return this.dispatchRequest(config);
+    }
+    dispatchRequest(config: AxiosRequestConfig): Promise&lt;AxiosResponse&gt; {
+        return new Promise((resolve, reject) =&gt; {
+<span class="hljs-addition">+           let { method = &apos;get&apos;, url, params, headers, data, timeout } = config;</span>
+            let request: XMLHttpRequest = new XMLHttpRequest();
+            if (params) {
+                let paramsString = qs.stringify(params);
+                url = url + (url.indexOf(&apos;?&apos;) == -1 ? &apos;?&apos; : &apos;&amp;&apos;) + paramsString;
+            }
+            request.open(method, url, true);
+            request.responseType = &apos;json&apos;;
+            request.onreadystatechange = () =&gt; {
+<span class="hljs-addition">+               if (request.readyState === 4 &amp;&amp; request.status !== 0) {</span>
+                    if (request.status &gt;= 200 &amp;&amp; request.status &lt; 300) {
+                        let response: AxiosResponse = {
+                            data: request.response,
+                            status: request.status,
+                            statusText: request.statusText,
+                            headers: parse(request.getAllResponseHeaders()),
+                            config: config,
+                            request
+                        }
+                        resolve(response);
+                    } else {
+<span class="hljs-addition">+                        reject(new Error(`Request failed with status code ${request.status}`));</span>
+                    }
+                }
+            }
+            if (headers) {
+                for (let key in headers) {
+                    request.setRequestHeader(key, headers[key]);
+                }
+            }
+            let body: string | null = null;
+            if (data &amp;&amp; typeof data == &apos;object&apos;) {
+                body = JSON.stringify(data);
+            }
+<span class="hljs-addition">+           request.onerror = () =&gt; { //&#x7F51;&#x7EDC;&#x5F02;&#x5E38;</span>
+<span class="hljs-addition">+               reject(new Error(&apos;Network Error&apos;));</span>
+<span class="hljs-addition">+           }</span>
+<span class="hljs-addition">+           if (timeout) {</span>
+<span class="hljs-addition">+               request.timeout = timeout;</span>
+<span class="hljs-addition">+               request.ontimeout = () =&gt; { //&#x8D85;&#x65F6;&#x5F02;&#x5E38;</span>
+<span class="hljs-addition">+                   reject(new Error(`timeout of ${timeout}ms exceeded`));</span>
+<span class="hljs-addition">+               }</span>
+<span class="hljs-addition">+           }</span>
+            request.send(body);
+        });
+    }
+}
+export default Axios;
+</code></pre>
+<h3 id="t124.2 src\index.tsx">4.2 src\index.tsx <a href="#t124.2 src\index.tsx"> # </a></h3>
+<h4 id="t134.2.1 &#x7F51;&#x7EDC;&#x9519;&#x8BEF;">4.2.1 &#x7F51;&#x7EDC;&#x9519;&#x8BEF; <a href="#t134.2.1 &#x7F51;&#x7EDC;&#x9519;&#x8BEF;"> # </a></h4>
+<pre><code class="lang-diff"><span class="hljs-addition">+setTimeout(() =&gt; {</span>
+    axios({
+        method: &apos;post&apos;,
+        url: baseURL + &apos;/post&apos;,
+        headers: { &apos;Content-Type&apos;: &apos;application/json&apos; },
+        data: user,
+    }).then((response: AxiosResponse) =&gt; {
+        console.log(response);
+        return response.data;
+    }).then((data: User) =&gt; {
+        console.log(data);
+    }).catch(function (error: any) {
+        console.log(error);
+    });
+<span class="hljs-addition">+}, 5000);</span>
+</code></pre>
+<h4 id="t144.2.2 &#x8D85;&#x65F6;">4.2.2 &#x8D85;&#x65F6; <a href="#t144.2.2 &#x8D85;&#x65F6;"> # </a></h4>
+<pre><code class="lang-diff">axios({
+    method: &apos;post&apos;,
+<span class="hljs-addition">+    url: baseURL + &apos;/post_timeout?timeout=3000&apos;,</span>
+    headers: { &apos;Content-Type&apos;: &apos;application/json&apos; },
+<span class="hljs-addition">+    timeout: 1000,</span>
+    data: user,
+}).then((response: AxiosResponse) =&gt; {
+    console.log(response);
+    return response.data;
+}).then((data: User) =&gt; {
+    console.log(data);
+}).catch(function (error: any) {
+    console.log(error);
+});
+</code></pre>
+<h4 id="t154.2.3 &#x9519;&#x8BEF;&#x72B6;&#x6001;&#x7801;">4.2.3 &#x9519;&#x8BEF;&#x72B6;&#x6001;&#x7801; <a href="#t154.2.3 &#x9519;&#x8BEF;&#x72B6;&#x6001;&#x7801;"> # </a></h4>
+<pre><code class="lang-diff">axios({
+    method: &apos;post&apos;,
+<span class="hljs-addition">+    url: baseURL + &apos;/post_status?code=300&apos;,</span>
+    headers: { &apos;Content-Type&apos;: &apos;application/json&apos; },
+    timeout: 1000,
+    data: user,
+}).then((response: AxiosResponse) =&gt; {
+    console.log(response);
+    return response.data;
+}).then((data: User) =&gt; {
+    console.log(data);
+}).catch(function (error: any) {
+    console.log(error);
+});
+</code></pre>
+<h2 id="t165. &#x62E6;&#x622A;&#x5668;&#x529F;&#x80FD;">5. &#x62E6;&#x622A;&#x5668;&#x529F;&#x80FD; <a href="#t165. &#x62E6;&#x622A;&#x5668;&#x529F;&#x80FD;"> # </a></h2>
+<h3 id="t175.1 src\index.tsx">5.1 src\index.tsx <a href="#t175.1 src\index.tsx"> # </a></h3>
+<p>src\index.tsx</p>
+<pre><code class="lang-diff">import axios from &apos;./axios&apos;
+import { AxiosResponse, AxiosRequestConfig } from &apos;./axios&apos;;
+const baseURL = &apos;http://localhost:8080&apos;;
+interface User {
+    username: string;
+    password: string;
+}
+let user: User = {
+    username: &apos;zhufeng&apos;,
+    password: &apos;123456&apos;
+};
+<span class="hljs-addition">+console.time(&apos;cost&apos;);</span>
+<span class="hljs-addition">+axios.interceptors.request.use((config: AxiosRequestConfig) =&gt; {</span>
+<span class="hljs-addition">+    console.timeEnd(&apos;cost&apos;);</span>
+<span class="hljs-addition">+    config.headers!.name += &apos;1&apos;;</span>
+<span class="hljs-addition">+    return config;</span>
+<span class="hljs-addition">+    //return Promise.reject(&apos;&#x5728;1&#x5904;&#x5931;&#x8D25;&#x4E86;!&apos;);</span>
+<span class="hljs-addition">+})</span>
+<span class="hljs-addition">+let request_interceptor = axios.interceptors.request.use((config: AxiosRequestConfig) =&gt; {</span>
+<span class="hljs-addition">+    config.headers!.name += &apos;2&apos;;</span>
+<span class="hljs-addition">+    return config;</span>
+<span class="hljs-addition">+})</span>
+<span class="hljs-addition">+axios.interceptors.request.use((config: AxiosRequestConfig) =&gt; {</span>
+<span class="hljs-addition">+    return new Promise&lt;AxiosRequestConfig&gt;(function (resolve) {</span>
+<span class="hljs-addition">+        setTimeout(function () {</span>
+<span class="hljs-addition">+            config.headers!.name += &apos;3&apos;;</span>
+<span class="hljs-addition">+            resolve(config);</span>
+<span class="hljs-addition">+        }, 3000);</span>
+<span class="hljs-addition">+    });</span>
+<span class="hljs-addition">+})</span>
+<span class="hljs-addition">+axios.interceptors.request.eject(request_interceptor);</span>
+<span class="hljs-addition">+axios.interceptors.response.use((response: AxiosResponse) =&gt; {</span>
+<span class="hljs-addition">+    response.data.username += &apos;1&apos;</span>
+<span class="hljs-addition">+    return response;</span>
+<span class="hljs-addition">+})</span>
+<span class="hljs-addition">+let response_interceptor = axios.interceptors.response.use((response: AxiosResponse) =&gt; {</span>
+<span class="hljs-addition">+    response.data.username += &apos;2&apos;</span>
+<span class="hljs-addition">+    return response;</span>
+<span class="hljs-addition">+})</span>
+<span class="hljs-addition">+axios.interceptors.response.use((response: AxiosResponse) =&gt; {</span>
+<span class="hljs-addition">+    response.data.username += &apos;3&apos;;</span>
+<span class="hljs-addition">+    return response;</span>
+<span class="hljs-addition">+    //return Promise.reject(&apos;&#x5931;&#x8D25;&#x4E86;&apos;);</span>
+<span class="hljs-addition">+})</span>
+
+<span class="hljs-addition">+axios.interceptors.response.eject(response_interceptor);</span>
+axios&lt;User&gt;({
+    method: &apos;post&apos;,
+<span class="hljs-addition">+    url: baseURL + &apos;/post&apos;,</span>
+<span class="hljs-addition">+    headers: { &apos;Content-Type&apos;: &apos;application/json&apos;, name: &apos;name&apos; },</span>
+    data: user,
+<span class="hljs-addition">+}).then((response: AxiosRequestConfig | AxiosResponse&lt;User&gt;) =&gt; {</span>
+    console.log(response);
+    console.timeEnd(&apos;cost&apos;);
+<span class="hljs-addition">+    return response.data as User;</span>
+}).then((data: User) =&gt; {
+    console.log(data);
+}).catch(function (error: any) {
+    console.log(&apos;error&apos;, error);
+});
+</code></pre>
+<h3 id="t185.2 src\axios\types.tsx">5.2 src\axios\types.tsx <a href="#t185.2 src\axios\types.tsx"> # </a></h3>
+<p>src\axios\types.tsx</p>
+<pre><code class="lang-diff"><span class="hljs-addition">+import AxiosInterceptorManager from &apos;./AxiosInterceptorManager&apos;;</span>
+export type Methods = &apos;GET&apos; | &apos;get&apos; | &apos;POST&apos; | &apos;post&apos; | &apos;PUT&apos; | &apos;put&apos; | &apos;DELETE&apos; | &apos;delete&apos;;
+export interface AxiosInstance {
+    &lt;T = any&gt;(config: AxiosRequestConfig): Promise&lt;AxiosResponse&lt;T&gt;&gt;;
+<span class="hljs-addition">+    interceptors: {</span>
+<span class="hljs-addition">+        request: AxiosInterceptorManager&lt;AxiosRequestConfig&gt;;</span>
+<span class="hljs-addition">+        response: AxiosInterceptorManager&lt;AxiosResponse&gt;;</span>
+<span class="hljs-addition">+    };</span>
+}
+export interface AxiosRequestConfig {
+    url: string;
+    method?: Methods;
+    params?: Record&lt;string, any&gt;;
+    data?: Record&lt;string, any&gt;;
+    headers?: Record&lt;string, any&gt;;
+    timeout?: number;
+}
+
+export interface AxiosResponse&lt;T = any&gt; {
+    data: T;
+    status: number;
+    statusText: string;
+    headers: any;
+    config: AxiosRequestConfig;
+    request?: any;
+}
+</code></pre>
+<h3 id="t195.3 AxiosInterceptorManager.ts">5.3 AxiosInterceptorManager.ts <a href="#t195.3 AxiosInterceptorManager.ts"> # </a></h3>
+<p>src\axios\AxiosInterceptorManager.ts</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> interface OnFulfilledFn&lt;V&gt; {
+    (value: V): V | <span class="hljs-built_in">Promise</span>&lt;V&gt;
+}
+
+<span class="hljs-keyword">export</span> interface OnRejectedFn {
+    (error: any): any
+}
+<span class="hljs-keyword">export</span> interface Interceptor&lt;T = any&gt; {
+    <span class="hljs-attr">onFulfilled</span>: OnFulfilledFn&lt;T&gt;
+    onRejected?: OnRejectedFn
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">InterceptorManager</span>&lt;<span class="hljs-title">V</span>&gt; </span>{
+    private interceptors: <span class="hljs-built_in">Array</span>&lt;Interceptor&lt;V&gt; | <span class="hljs-literal">null</span>&gt; = []
+    use(onFulfilled: OnFulfilledFn&lt;V&gt;, onRejected?: OnRejectedFn): number {
+        <span class="hljs-keyword">this</span>.interceptors.push({
+            onFulfilled,
+            onRejected
+        })
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.interceptors.length - <span class="hljs-number">1</span>;
+    }
+    eject(id: number): <span class="hljs-keyword">void</span> {
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.interceptors[id]) {
+            <span class="hljs-keyword">this</span>.interceptors[id] = <span class="hljs-literal">null</span>;
+        }
+    }
+}
+</code></pre>
+<h3 id="t205.3 src\axios\Axios.tsx">5.3 src\axios\Axios.tsx <a href="#t205.3 src\axios\Axios.tsx"> # </a></h3>
+<p>src\axios\Axios.tsx</p>
+<pre><code class="lang-diff">import { AxiosRequestConfig, AxiosResponse } from &apos;./types&apos;;
+<span class="hljs-addition">+import AxiosInterceptorManager, { Interceptor } from &apos;./AxiosInterceptorManager&apos;;</span>
+import qs from &apos;qs&apos;;
+import parse from &apos;parse-headers&apos;;
+<span class="hljs-addition">+interface Interceptors {</span>
+<span class="hljs-addition">+    request: AxiosInterceptorManager&lt;AxiosRequestConfig&gt;;</span>
+<span class="hljs-addition">+    response: AxiosInterceptorManager&lt;AxiosResponse&gt;;</span>
+<span class="hljs-addition">+}</span>
+class Axios {
+<span class="hljs-addition">+    public interceptors: Interceptors = {</span>
+<span class="hljs-addition">+        request: new AxiosInterceptorManager&lt;AxiosRequestConfig&gt;(),</span>
+<span class="hljs-addition">+        response: new AxiosInterceptorManager&lt;AxiosResponse&gt;()</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    request&lt;T&gt;(config: AxiosRequestConfig): Promise&lt;AxiosRequestConfig | AxiosResponse&lt;T&gt;&gt; {</span>
+<span class="hljs-deletion">-        return this.dispatchRequest(config);</span>
+<span class="hljs-addition">+        const chain: Interceptor[] = [</span>
+<span class="hljs-addition">+            {</span>
+<span class="hljs-addition">+                onFulfilled: this.dispatchRequest,</span>
+<span class="hljs-addition">+                onRejected: undefined</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+        ]</span>
+<span class="hljs-addition">+        this.interceptors.request.interceptors.forEach((interceptor: Interceptor&lt;AxiosRequestConfig&gt; | null) =&gt; {</span>
+<span class="hljs-addition">+            interceptor &amp;&amp; chain.unshift(interceptor);</span>
+<span class="hljs-addition">+        })</span>
+
+<span class="hljs-addition">+        this.interceptors.response.interceptors.forEach((interceptor: Interceptor&lt;AxiosResponse&lt;T&gt;&gt; | null) =&gt; {</span>
+<span class="hljs-addition">+            interceptor &amp;&amp; chain.push(interceptor)</span>
+<span class="hljs-addition">+        })</span>
+<span class="hljs-addition">+        let promise: Promise&lt;AxiosRequestConfig | AxiosResponse&lt;T&gt;&gt; = Promise.resolve(config);</span>
+
+<span class="hljs-addition">+        while (chain.length) {</span>
+<span class="hljs-addition">+            const { onFulfilled, onRejected } = chain.shift()!;</span>
+<span class="hljs-addition">+            promise = promise.then(onFulfilled, onRejected);</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+        return promise;</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    dispatchRequest&lt;T&gt;(config: AxiosRequestConfig): Promise&lt;AxiosResponse&lt;T&gt;&gt; {</span>
+<span class="hljs-addition">+        return new Promise&lt;AxiosResponse&lt;T&gt;&gt;((resolve, reject) =&gt; {</span>
+            let { method = &apos;get&apos;, url, params, headers, data, timeout } = config;
+            let request: XMLHttpRequest = new XMLHttpRequest();
+            if (params) {
+                let paramsString = qs.stringify(params);
+                url = url + (url.indexOf(&apos;?&apos;) == -1 ? &apos;?&apos; : &apos;&amp;&apos;) + paramsString;
+            }
+            request.open(method, url, true);
+            request.responseType = &apos;json&apos;;
+            request.onreadystatechange = () =&gt; {
+                if (request.readyState <span class="hljs-comment">=== 4 &amp;&amp; request.status !== 0) {</span>
+                    if (request.status &gt;= 200 &amp;&amp; request.status &lt; 300) {
+                        let response: AxiosResponse = {
+                            data: request.response,
+                            status: request.status,
+                            statusText: request.statusText,
+                            headers: parse(request.getAllResponseHeaders()),
+                            config: config,
+                            request
+                        }
+                        resolve(response);
+                    } else {
+                        reject(new Error(`Request failed with status code ${request.status}`));
+                    }
+                }
+            }
+            if (headers) {
+                for (let key in headers) {
+                    request.setRequestHeader(key, headers[key]);
+                }
+            }
+            let body: string | null = null;
+            if (data &amp;&amp; typeof data == &apos;object&apos;) {
+                body = JSON.stringify(data);
+            }
+            request.onerror = () =&gt; { //&#x7F51;&#x7EDC;&#x5F02;&#x5E38;
+                reject(new Error(&apos;Network Error&apos;));
+            }
+            if (timeout) {
+                request.timeout = timeout;
+                request.ontimeout = () =&gt; { //&#x8D85;&#x65F6;&#x5F02;&#x5E38;
+                    reject(new Error(`timeout of ${timeout}ms exceeded`));
+                }
+            }
+            request.send(body);
+        });
+    }
+}
+export default Axios;
+</code></pre>
+<h2 id="t216. &#x5408;&#x5E76;&#x914D;&#x7F6E;">6. &#x5408;&#x5E76;&#x914D;&#x7F6E; <a href="#t216. &#x5408;&#x5E76;&#x914D;&#x7F6E;"> # </a></h2>
+<h3 id="t226.1 axios\types.tsx">6.1 axios\types.tsx <a href="#t226.1 axios\types.tsx"> # </a></h3>
+<p>src\axios\types.tsx</p>
+<pre><code class="lang-diff">export interface AxiosRequestConfig extends Record&lt;string, any&gt; {
+<span class="hljs-addition">+   url?: string;</span>
+    method?: Methods;
+    params?: Record&lt;string, any&gt;;
+    data?: Record&lt;string, any&gt;;
+    headers?: Record&lt;string, any&gt;;
+    timeout?: number;
+}
+</code></pre>
+<h3 id="t236.2 Axios.tsx">6.2 Axios.tsx <a href="#t236.2 Axios.tsx"> # </a></h3>
+<p>src\axios\Axios.tsx</p>
+<pre><code class="lang-diff">import { AxiosRequestConfig, AxiosResponse } from &apos;./types&apos;;
+import AxiosInterceptorManager, { Interceptor } from &apos;./AxiosInterceptorManager&apos;;
+import qs from &apos;qs&apos;;
+import parse from &apos;parse-headers&apos;;
+interface Interceptors {
+    request: AxiosInterceptorManager&lt;AxiosRequestConfig&gt;;
+    response: AxiosInterceptorManager&lt;AxiosResponse&gt;;
+}
+<span class="hljs-addition">+let defaults: AxiosRequestConfig = {</span>
+<span class="hljs-addition">+    method: &apos;get&apos;,</span>
+<span class="hljs-addition">+    timeout: 0,</span>
+<span class="hljs-addition">+    headers: {</span>
+<span class="hljs-addition">+        common: {</span>
+<span class="hljs-addition">+            accept: &apos;application/json&apos;</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+let getStyleMethods = [&apos;get&apos;, &apos;head&apos;, &apos;delete&apos;, &apos;options&apos;];</span>
+<span class="hljs-addition">+getStyleMethods.forEach((method: string) =&gt; {</span>
+<span class="hljs-addition">+    defaults.headers![method] = {};</span>
+<span class="hljs-addition">+});</span>
+
+<span class="hljs-addition">+let postStyleMethods = [&apos;put&apos;, &apos;post&apos;, &apos;patch&apos;];</span>
+<span class="hljs-addition">+postStyleMethods.forEach((method: string) =&gt; {</span>
+<span class="hljs-addition">+    defaults.headers![method] = {};</span>
+<span class="hljs-addition">+});</span>
+<span class="hljs-addition">+let allMethods = [...getStyleMethods, ...postStyleMethods];</span>
+class Axios {
+<span class="hljs-addition">+    public defaults: AxiosRequestConfig = defaults;</span>
+    public interceptors: Interceptors = {
+        request: new AxiosInterceptorManager&lt;AxiosRequestConfig&gt;(),
+        response: new AxiosInterceptorManager&lt;AxiosResponse&gt;()
+    }
+    request&lt;T&gt;(config: AxiosRequestConfig): Promise&lt;AxiosRequestConfig | AxiosResponse&lt;T&gt;&gt; {
+        //return this.dispatchRequest(config);
+<span class="hljs-addition">+       config.headers = Object.assign(this.defaults.headers, config.headers);</span>
+        const chain: Interceptor[] = [
+            {
+                onFulfilled: this.dispatchRequest,
+                onRejected: undefined
+            }
+        ]
+        this.interceptors.request.interceptors.forEach((interceptor: Interceptor&lt;AxiosRequestConfig&gt; | null) =&gt; {
+            interceptor &amp;&amp; chain.unshift(interceptor);
+        })
+
+        this.interceptors.response.interceptors.forEach((interceptor: Interceptor&lt;AxiosResponse&lt;T&gt;&gt; | null) =&gt; {
+            interceptor &amp;&amp; chain.push(interceptor)
+        })
+        let promise: Promise&lt;AxiosRequestConfig | AxiosResponse&lt;T&gt;&gt; = Promise.resolve(config);
+
+        while (chain.length) {
+            const { onFulfilled, onRejected } = chain.shift()!;
+            promise = promise.then(onFulfilled, onRejected);
+        }
+        return promise;
+    }
+    dispatchRequest&lt;T&gt;(config: AxiosRequestConfig): Promise&lt;AxiosResponse&lt;T&gt;&gt; {
+        return new Promise&lt;AxiosResponse&lt;T&gt;&gt;((resolve, reject) =&gt; {
+            let { method = &apos;get&apos;, url, params, headers, data, timeout } = config;
+            let request: XMLHttpRequest = new XMLHttpRequest();
+            if (params) {
+                let paramsString = qs.stringify(params);
+<span class="hljs-addition">+               url = url + (url!.indexOf(&apos;?&apos;) == -1 ? &apos;?&apos; : &apos;&amp;&apos;) + paramsString;</span>
+            }
+<span class="hljs-addition">+            request.open(method, url!, true);</span>
+            request.responseType = &apos;json&apos;;
+            request.onreadystatechange = () =&gt; {
+                if (request.readyState <span class="hljs-comment">=== 4 &amp;&amp; request.status !== 0) {</span>
+                    if (request.status &gt;= 200 &amp;&amp; request.status &lt; 300) {
+                        let response: AxiosResponse = {
+                            data: request.response,
+                            status: request.status,
+                            statusText: request.statusText,
+                            headers: parse(request.getAllResponseHeaders()),
+                            config: config,
+                            request
+                        }
+                        resolve(response);
+                    } else {
+                        reject(new Error(`Request failed with status code ${request.status}`));
+                    }
+                }
+            }
+<span class="hljs-addition">+            if (headers) {</span>
+<span class="hljs-addition">+                for (let key in headers) {</span>
+<span class="hljs-addition">+                    if (key === &apos;common&apos; || allMethods.includes(key)) {</span>
+<span class="hljs-addition">+                        for (let key2 in headers[key]) {</span>
+<span class="hljs-addition">+                            request.setRequestHeader(key2, headers[key][key2]);</span>
+<span class="hljs-addition">+                        }</span>
+<span class="hljs-addition">+                    } else {</span>
+<span class="hljs-addition">+                        request.setRequestHeader(key, headers[key]);</span>
+<span class="hljs-addition">+                    }</span>
+<span class="hljs-addition">+                }</span>
+<span class="hljs-addition">+            }</span>
+            let body: string | null = null;
+            if (data &amp;&amp; typeof data == &apos;object&apos;) {
+                body = JSON.stringify(data);
+            }
+            request.onerror = () =&gt; { //&#x7F51;&#x7EDC;&#x5F02;&#x5E38;
+                reject(new Error(&apos;Network Error&apos;));
+            }
+            if (timeout) {
+                request.timeout = timeout;
+                request.ontimeout = () =&gt; { //&#x8D85;&#x65F6;&#x5F02;&#x5E38;
+                    reject(new Error(`timeout of ${timeout}ms exceeded`));
+                }
+            }
+            request.send(body);
+        });
+    }
+}
+export default Axios;
+</code></pre>
+<h2 id="t247.&#x8F6C;&#x6362;&#x8BF7;&#x6C42;&#x4E0E;&#x54CD;&#x5E94;">7.&#x8F6C;&#x6362;&#x8BF7;&#x6C42;&#x4E0E;&#x54CD;&#x5E94; <a href="#t247.&#x8F6C;&#x6362;&#x8BF7;&#x6C42;&#x4E0E;&#x54CD;&#x5E94;"> # </a></h2>
+<h3 id="t257.1 axios\types.tsx">7.1 axios\types.tsx <a href="#t257.1 axios\types.tsx"> # </a></h3>
+<p>src\axios\types.tsx</p>
+<pre><code class="lang-diff">export interface AxiosRequestConfig extends Record&lt;string, any&gt; {
+    url?: string;
+    method?: Methods;
+    params?: Record&lt;string, any&gt;;
+    data?: Record&lt;string, any&gt;;
+    headers?: Record&lt;string, any&gt;;
+    timeout?: number;
+<span class="hljs-addition">+    transformRequest?: (data: Record&lt;string, any&gt;, headers: Record&lt;string, any&gt;) =&gt; any;</span>
+<span class="hljs-addition">+    transformResponse?: (data: any) =&gt; any;</span>
+}
+</code></pre>
+<h3 id="t267.2 axios\Axios.tsx">7.2 axios\Axios.tsx <a href="#t267.2 axios\Axios.tsx"> # </a></h3>
+<p>src\axios\Axios.tsx</p>
+<pre><code class="lang-diff">import { AxiosRequestConfig, AxiosResponse } from &apos;./types&apos;;
+import AxiosInterceptorManager, { Interceptor } from &apos;./AxiosInterceptorManager&apos;;
+import qs from &apos;qs&apos;;
+import parse from &apos;parse-headers&apos;;
+interface Interceptors {
+    request: AxiosInterceptorManager&lt;AxiosRequestConfig&gt;;
+    response: AxiosInterceptorManager&lt;AxiosResponse&gt;;
+}
+let defaults: AxiosRequestConfig = {
+    method: &apos;get&apos;,
+    timeout: 0,
+    headers: {
+        common: {
+            accept: &apos;application/json&apos;
+        }
+    },
+<span class="hljs-addition">+    transformRequest: function (data: Record&lt;string, any&gt;, headers: Record&lt;string, any&gt;) {</span>
+<span class="hljs-addition">+        headers[&apos;content-type&apos;] = &apos;application/x-www-form-urlencoded&apos;;</span>
+<span class="hljs-addition">+        return qs.stringify(data);</span>
+<span class="hljs-addition">+    },</span>
+<span class="hljs-addition">+    transformResponse(data: any) {</span>
+<span class="hljs-addition">+        if (typeof data == &apos;string&apos;)</span>
+<span class="hljs-addition">+            data = JSON.parse(data);</span>
+<span class="hljs-addition">+        return data;</span>
+<span class="hljs-addition">+    },</span>
+}
+let getStyleMethods = [&apos;get&apos;, &apos;head&apos;, &apos;delete&apos;, &apos;options&apos;];
+getStyleMethods.forEach((method: string) =&gt; {
+    defaults.headers![method] = {};
+});
+
+let postStyleMethods = [&apos;put&apos;, &apos;post&apos;, &apos;patch&apos;];
+postStyleMethods.forEach((method: string) =&gt; {
+    defaults.headers![method] = {};
+});
+let allMethods = [...getStyleMethods, ...postStyleMethods];
+class Axios {
+    public defaults: AxiosRequestConfig = defaults;
+    public interceptors: Interceptors = {
+        request: new AxiosInterceptorManager&lt;AxiosRequestConfig&gt;(),
+        response: new AxiosInterceptorManager&lt;AxiosResponse&gt;()
+    }
+    request&lt;T&gt;(config: AxiosRequestConfig): Promise&lt;AxiosRequestConfig | AxiosResponse&lt;T&gt;&gt; {
+        //return this.dispatchRequest(config);
+<span class="hljs-addition">+        if (config.transformRequest &amp;&amp; config.data)</span>
+<span class="hljs-addition">+            config.data = config.transformRequest(config.data, config.headers = {});</span>
+        config.headers = Object.assign(this.defaults.headers, config.headers);
+        const chain: Interceptor[] = [
+            {
+                onFulfilled: this.dispatchRequest,
+                onRejected: undefined
+            }
+        ]
+        this.interceptors.request.interceptors.forEach((interceptor: Interceptor&lt;AxiosRequestConfig&gt; | null) =&gt; {
+            interceptor &amp;&amp; chain.unshift(interceptor);
+        })
+
+        this.interceptors.response.interceptors.forEach((interceptor: Interceptor&lt;AxiosResponse&lt;T&gt;&gt; | null) =&gt; {
+            interceptor &amp;&amp; chain.push(interceptor)
+        })
+        let promise: Promise&lt;AxiosRequestConfig | AxiosResponse&lt;T&gt;&gt; = Promise.resolve(config);
+
+        while (chain.length) {
+            const { onFulfilled, onRejected } = chain.shift()!;
+            promise = promise.then(onFulfilled, onRejected);
+        }
+        return promise;
+    }
+    dispatchRequest&lt;T&gt;(config: AxiosRequestConfig): Promise&lt;AxiosResponse&lt;T&gt;&gt; {
+        return new Promise&lt;AxiosResponse&lt;T&gt;&gt;((resolve, reject) =&gt; {
+            let { method = &apos;get&apos;, url, params, headers, data, timeout } = config;
+            let request: XMLHttpRequest = new XMLHttpRequest();
+            if (params) {
+                let paramsString = qs.stringify(params);
+                url = url + (url!.indexOf(&apos;?&apos;) == -1 ? &apos;?&apos; : &apos;&amp;&apos;) + paramsString;
+            }
+            request.open(method, url!, true);
+            request.responseType = &apos;json&apos;;
+            request.onreadystatechange = () =&gt; {
+                if (request.readyState <span class="hljs-comment">=== 4 &amp;&amp; request.status !== 0) {</span>
+                    if (request.status &gt;= 200 &amp;&amp; request.status &lt; 300) {
+                        let response: AxiosResponse = {
+                            data: request.response,
+                            status: request.status,
+                            statusText: request.statusText,
+                            headers: parse(request.getAllResponseHeaders()),
+                            config: config,
+                            request
+                        }
+<span class="hljs-addition">+                        if (config.transformResponse) {</span>
+<span class="hljs-addition">+                            response.data = config.transformResponse(response.data);</span>
+<span class="hljs-addition">+                        }</span>
+                        resolve(response);
+                    } else {
+                        reject(new Error(`Request failed with status code ${request.status}`));
+                    }
+                }
+            }
+            if (headers) {
+                for (let key in headers) {
+                    if (key <span class="hljs-comment">=== &apos;common&apos; || allMethods.includes(key)) {</span>
+                        for (let key2 in headers[key]) {
+                            request.setRequestHeader(key2, headers[key][key2]);
+                        }
+                    } else {
+                        request.setRequestHeader(key, headers[key]);
+                    }
+                }
+            }
+            let body: string | null = null;
+            if (data &amp;&amp; typeof data == &apos;object&apos;) {
+                body = JSON.stringify(data);
+            }
+            request.onerror = () =&gt; { //&#x7F51;&#x7EDC;&#x5F02;&#x5E38;
+                reject(new Error(&apos;Network Error&apos;));
+            }
+            if (timeout) {
+                request.timeout = timeout;
+                request.ontimeout = () =&gt; { //&#x8D85;&#x65F6;&#x5F02;&#x5E38;
+                    reject(new Error(`timeout of ${timeout}ms exceeded`));
+                }
+            }
+            request.send(body);
+        });
+    }
+}
+export default Axios;
+</code></pre>
+<h2 id="t278.&#x4EFB;&#x52A1;&#x53D6;&#x6D88;">8.&#x4EFB;&#x52A1;&#x53D6;&#x6D88; <a href="#t278.&#x4EFB;&#x52A1;&#x53D6;&#x6D88;"> # </a></h2>
+<h3 id="t288.1 src\index.tsx">8.1 src\index.tsx <a href="#t288.1 src\index.tsx"> # </a></h3>
+<p>src\index.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> axios <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./axios&apos;</span>
+<span class="hljs-keyword">import</span> { AxiosResponse, AxiosRequestConfig } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./axios&apos;</span>;
+interface User {
+    <span class="hljs-attr">username</span>: string;
+    password: string;
+}
+<span class="hljs-keyword">const</span> CancelToken = axios.CancelToken;
+<span class="hljs-keyword">const</span> source = CancelToken.source();
+axios({
+    <span class="hljs-attr">method</span>: <span class="hljs-string">&apos;post&apos;</span>,
+    <span class="hljs-attr">baseURL</span>: <span class="hljs-string">&apos;http://localhost:8080&apos;</span>,
+    <span class="hljs-attr">url</span>: <span class="hljs-string">&apos;/post_timeout?timeout=2000&apos;</span>,
+    <span class="hljs-attr">timeout</span>: <span class="hljs-number">3000</span>,
+    <span class="hljs-attr">cancelToken</span>: source.token
+}).then(<span class="hljs-function">(<span class="hljs-params">response: AxiosRequestConfig | AxiosResponse&lt;User&gt;</span>) =&gt;</span> {
+    <span class="hljs-built_in">console</span>.log(response);
+    <span class="hljs-keyword">return</span> response.data <span class="hljs-keyword">as</span> User;
+}).then(<span class="hljs-function">(<span class="hljs-params">data: User</span>) =&gt;</span> {
+    <span class="hljs-built_in">console</span>.log(data);
+}).catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error: any</span>) </span>{
+    <span class="hljs-keyword">if</span> (axios.isCancel(error)) {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x8BF7;&#x6C42;&#x53D6;&#x6D88;&apos;</span>, error);
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;error&apos;</span>, error);
+    }
+});
+source.cancel(<span class="hljs-string">&apos;&#x7528;&#x6237;&#x53D6;&#x6D88;&#x8BF7;&#x6C42;&apos;</span>);
+</code></pre>
+<h3 id="t298.2 axios\types.tsx">8.2 axios\types.tsx <a href="#t298.2 axios\types.tsx"> # </a></h3>
+<p>src\axios\types.tsx</p>
+<pre><code class="lang-diff">export interface AxiosInstance {
+    &lt;T = any&gt;(config: AxiosRequestConfig): Promise&lt;AxiosResponse&lt;T&gt;&gt;;
+    interceptors: {
+        request: AxiosInterceptorManager&lt;AxiosRequestConfig&gt;;
+        response: AxiosInterceptorManager&lt;AxiosResponse&gt;;
+    };
+<span class="hljs-addition">+    CancelToken: any;</span>
+<span class="hljs-addition">+    isCancel: any</span>
+}
+</code></pre>
+<h3 id="t308.3 axios\cancel.tsx">8.3 axios\cancel.tsx <a href="#t308.3 axios\cancel.tsx"> # </a></h3>
+<p>src\axios\cancel.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cancel</span> </span>{
+    <span class="hljs-keyword">constructor</span>(public reason: string) { }
+}
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">isCancel</span>(<span class="hljs-params">error: any</span>) </span>{
+    <span class="hljs-keyword">return</span> error <span class="hljs-keyword">instanceof</span> Cancel;
+}
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CancelToken</span> </span>{
+    public resolve: any;
+    source() {
+        <span class="hljs-keyword">return</span> {
+            <span class="hljs-attr">token</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve</span>) =&gt;</span> {
+                <span class="hljs-keyword">this</span>.resolve = resolve;
+            }),
+            <span class="hljs-attr">cancel</span>: <span class="hljs-function">(<span class="hljs-params">reason: string</span>) =&gt;</span> {
+                <span class="hljs-keyword">this</span>.resolve(<span class="hljs-keyword">new</span> Cancel(reason));
+            }
+        }
+    }
+}
+</code></pre>
+<h3 id="t318.4 axios\index.tsx">8.4 axios\index.tsx <a href="#t318.4 axios\index.tsx"> # </a></h3>
+<p>src\axios\index.tsx</p>
+<pre><code class="lang-diff">import Axios from &apos;./Axios&apos;;
+import { AxiosInstance } from &apos;./types&apos;;
+<span class="hljs-addition">+import { CancelToken, isCancel } from &apos;./cancel&apos;;</span>
+function createInstance(): AxiosInstance {
+    let context = new Axios();
+    let instance = Axios.prototype.request.bind(context);
+    instance = Object.assign(instance, Axios.prototype, context);
+    return instance as AxiosInstance;
+}
+var axios = createInstance();
+<span class="hljs-addition">+axios.CancelToken = new CancelToken();</span>
+<span class="hljs-addition">+axios.isCancel = isCancel;</span>
+export default axios;
+export * from &apos;./types&apos;;
+</code></pre>
+<h3 id="t328.5 axios\Axios.tsx">8.5 axios\Axios.tsx <a href="#t328.5 axios\Axios.tsx"> # </a></h3>
+<p>src\axios\Axios.tsx</p>
+<pre><code class="lang-diff">import { AxiosRequestConfig, AxiosResponse } from &apos;./types&apos;;
+import AxiosInterceptorManager, { Interceptor } from &apos;./AxiosInterceptorManager&apos;;
+import qs from &apos;qs&apos;;
+import parse from &apos;parse-headers&apos;;
+interface Interceptors {
+    request: AxiosInterceptorManager&lt;AxiosRequestConfig&gt;;
+    response: AxiosInterceptorManager&lt;AxiosResponse&gt;;
+}
+let defaults: AxiosRequestConfig = {
+    method: &apos;get&apos;,
+    timeout: 0,
+    headers: {
+        common: {
+            accept: &apos;application/json&apos;
+        }
+    },
+    transformRequest: function (data: Record&lt;string, any&gt;, headers: Record&lt;string, any&gt;) {
+        headers[&apos;content-type&apos;] = &apos;application/x-www-form-urlencoded&apos;;
+        return qs.stringify(data);
+    },
+    transformResponse(data: any) {
+        if (typeof data == &apos;string&apos;)
+            data = JSON.parse(data);
+        return data;
+    },
+}
+let getStyleMethods = [&apos;get&apos;, &apos;head&apos;, &apos;delete&apos;, &apos;options&apos;];
+getStyleMethods.forEach((method: string) =&gt; {
+    defaults.headers![method] = {};
+});
+
+let postStyleMethods = [&apos;put&apos;, &apos;post&apos;, &apos;patch&apos;];
+postStyleMethods.forEach((method: string) =&gt; {
+    defaults.headers![method] = {};
+});
+let allMethods = [...getStyleMethods, ...postStyleMethods];
+class Axios {
+    public defaults: AxiosRequestConfig = defaults;
+    public interceptors: Interceptors = {
+        request: new AxiosInterceptorManager&lt;AxiosRequestConfig&gt;(),
+        response: new AxiosInterceptorManager&lt;AxiosResponse&gt;()
+    }
+    request&lt;T&gt;(config: AxiosRequestConfig): Promise&lt;AxiosRequestConfig | AxiosResponse&lt;T&gt;&gt; {
+        //return this.dispatchRequest(config);
+        if (config.transformRequest &amp;&amp; config.data)
+            config.data = config.transformRequest(config.data, config.headers = {});
+        config.headers = Object.assign(this.defaults.headers, config.headers);
+        config = Object.assign(this.defaults, config);
+        if (!config.url!.startsWith(&apos;http&apos;) &amp;&amp; config.baseURL) {
+            config.url = config.baseURL + config.url;
+        }
+        const chain: Interceptor[] = [
+            {
+                onFulfilled: this.dispatchRequest,
+                onRejected: undefined
+            }
+        ]
+        this.interceptors.request.interceptors.forEach((interceptor: Interceptor&lt;AxiosRequestConfig&gt; | null) =&gt; {
+            interceptor &amp;&amp; chain.unshift(interceptor);
+        })
+
+        this.interceptors.response.interceptors.forEach((interceptor: Interceptor&lt;AxiosResponse&lt;T&gt;&gt; | null) =&gt; {
+            interceptor &amp;&amp; chain.push(interceptor)
+        })
+        let promise: Promise&lt;AxiosRequestConfig | AxiosResponse&lt;T&gt;&gt; = Promise.resolve(config);
+
+        while (chain.length) {
+            const { onFulfilled, onRejected } = chain.shift()!;
+            promise = promise.then(onFulfilled, onRejected);
+        }
+        return promise;
+    }
+    dispatchRequest&lt;T&gt;(config: AxiosRequestConfig): Promise&lt;AxiosResponse&lt;T&gt;&gt; {
+        return new Promise&lt;AxiosResponse&lt;T&gt;&gt;((resolve, reject) =&gt; {
+            let { method = &apos;get&apos;, url, params, headers, data, timeout } = config;
+            let request: XMLHttpRequest = new XMLHttpRequest();
+            if (params) {
+                let paramsString = qs.stringify(params);
+                url = url + (url!.indexOf(&apos;?&apos;) <span class="hljs-comment">=== -1 ? &apos;?&apos; : &apos;&amp;&apos;) + paramsString;</span>
+            }
+            request.open(method, url!, true);
+            request.responseType = &apos;json&apos;;
+            request.onreadystatechange = () =&gt; {
+                if (request.readyState <span class="hljs-comment">=== 4 &amp;&amp; request.status !== 0) {</span>
+                    if (request.status &gt;= 200 &amp;&amp; request.status &lt; 300) {
+                        let response: AxiosResponse = {
+                            data: request.response,
+                            status: request.status,
+                            statusText: request.statusText,
+                            headers: parse(request.getAllResponseHeaders()),
+                            config: config,
+                            request
+                        }
+                        if (config.transformResponse) {
+                            response.data = config.transformResponse(response.data);
+                        }
+                        resolve(response);
+                    } else {
+                        reject(new Error(`Request failed with status code ${request.status}`));
+                    }
+                }
+            }
+            if (headers) {
+                for (let key in headers) {
+                    if (key <span class="hljs-comment">=== &apos;common&apos; || allMethods.includes(key)) {</span>
+                        for (let key2 in headers[key]) {
+                            request.setRequestHeader(key2, headers[key][key2]);
+                        }
+                    } else {
+                        request.setRequestHeader(key, headers[key]);
+                    }
+                }
+            }
+            let body: string | null = null;
+            if (data &amp;&amp; typeof data == &apos;object&apos;) {
+                body = JSON.stringify(data);
+            }
+            request.onerror = () =&gt; { //&#x7F51;&#x7EDC;&#x5F02;&#x5E38;
+                reject(new Error(&apos;Network Error&apos;));
+            }
+<span class="hljs-addition">+            if (config.cancelToken) {</span>
+<span class="hljs-addition">+                config.cancelToken.then((reason: string) =&gt; {</span>
+<span class="hljs-addition">+                    request.abort();</span>
+<span class="hljs-addition">+                    reject(reason);</span>
+<span class="hljs-addition">+                });</span>
+<span class="hljs-addition">+            }</span>
+            if (timeout) {
+                request.timeout = timeout;
+                request.ontimeout = () =&gt; { //&#x8D85;&#x65F6;&#x5F02;&#x5E38;
+                    reject(new Error(`timeout of ${timeout}ms exceeded`));
+                }
+            }
+            request.send(body);
+        });
+    }
+}
+export default Axios;
+</code></pre>
+<h2 id="t339.&#x540E;&#x7AEF;&#x63A5;&#x53E3;">9.&#x540E;&#x7AEF;&#x63A5;&#x53E3; <a href="#t339.&#x540E;&#x7AEF;&#x63A5;&#x53E3;"> # </a></h2>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express&apos;</span>);
+<span class="hljs-keyword">let</span> bodyParser = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;body-parser&apos;</span>);
+<span class="hljs-keyword">let</span> app = express();
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ <span class="hljs-attr">extended</span>: <span class="hljs-literal">true</span> }));
+app.use(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">req, res, next</span>) </span>{
+    res.set({
+        <span class="hljs-string">&apos;Access-Control-Allow-Origin&apos;</span>: <span class="hljs-string">&apos;http://localhost:3000&apos;</span>,
+        <span class="hljs-string">&apos;Access-Control-Allow-Credentials&apos;</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-string">&apos;Access-Control-Allow-Methods&apos;</span>: <span class="hljs-string">&apos;GET,POST, PUT, DELETE, OPTIONS&apos;</span>,
+        <span class="hljs-string">&apos;Access-Control-Allow-Headers&apos;</span>: <span class="hljs-string">&apos;Content-Type,name&apos;</span>
+    });
+    <span class="hljs-keyword">if</span> (req.method === <span class="hljs-string">&apos;OPTIONS&apos;</span>) {
+        <span class="hljs-keyword">return</span> res.sendStatus(<span class="hljs-number">200</span>);
+    }
+    next();
+});
+app.get(<span class="hljs-string">&apos;/get&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">req, res</span>) </span>{
+    res.json(req.query);
+});
+app.post(<span class="hljs-string">&apos;/post&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">req, res</span>) </span>{
+    res.json(req.body);
+});
+app.post(<span class="hljs-string">&apos;/post_timeout&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">req, res</span>) </span>{
+    <span class="hljs-keyword">let</span> { timeout } = req.query;
+    <span class="hljs-built_in">console</span>.log(req.query);
+
+    <span class="hljs-keyword">if</span> (timeout) {
+        timeout = <span class="hljs-built_in">parseInt</span>(timeout);
+    } <span class="hljs-keyword">else</span> {
+        timeout = <span class="hljs-number">0</span>;
+    }
+    setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        res.json(req.body);
+    }, timeout);
+});
+app.post(<span class="hljs-string">&apos;/post_status&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">req, res</span>) </span>{
+    <span class="hljs-keyword">let</span> { code } = req.query;
+    <span class="hljs-keyword">if</span> (code) {
+        code = <span class="hljs-built_in">parseInt</span>(code);
+    } <span class="hljs-keyword">else</span> {
+        code = <span class="hljs-number">200</span>;
+    }
+    res.statusCode = code;
+    res.json(req.body);
+});
+app.listen(<span class="hljs-number">8080</span>);
+</code></pre>
+
+    </div>
+</div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+    aria-labelledby="loginModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="loginModalLabel">请登录</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="username" class="control-label">姓名:</label>
+                        <input type="text" class="form-control" id="username" placeholder="珠峰架构VIP会员系统用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">密码:</label>
+                        <input type="text" class="form-control" id="password" placeholder="珠峰架构VIP会员系统密码">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                    data-dismiss="modal">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

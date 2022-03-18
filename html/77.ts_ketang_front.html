@@ -1,0 +1,2387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+   
+                      
+
+                        
+<div class="warpper">
+    <div class="page-toc">
+        <ul><li><a href="#t01.搭建开发环境">1.搭建开发环境</a><ul><li><a href="#t11.1 初始化项目">1.1 初始化项目</a></li><li><a href="#t21.2 安装依赖">1.2 安装依赖</a></li><li><a href="#t31.3 支持typescript">1.3 支持typescript</a></li><li><a href="#t41.4 编写webpack配置文件">1.4 编写webpack配置文件</a></li><li><a href="#t51.5 项目文件">1.5 项目文件</a><ul><li><a href="#t61.5.1 src\index.tsx">1.5.1 src\index.tsx</a></li><li><a href="#t71.5.2 src\index.html">1.5.2 src\index.html</a></li></ul></li></ul></li><li><a href="#t82.跑通路由">2.跑通路由</a><ul><li><a href="#t92.1 src\index.tsx">2.1 src\index.tsx</a></li><li><a href="#t102.2 store\index.tsx">2.2 store\index.tsx</a></li><li><a href="#t112.3 history.tsx">2.3 history.tsx</a></li><li><a href="#t122.4 action-types.tsx">2.4 action-types.tsx</a></li><li><a href="#t132.5 reducers\index.tsx">2.5 reducers\index.tsx</a></li><li><a href="#t142.6 reducers\home.tsx">2.6 reducers\home.tsx</a></li><li><a href="#t152.7 typing\common.tsx">2.7 typing\common.tsx</a></li><li><a href="#t162.8 Home\index.tsx">2.8 Home\index.tsx</a></li><li><a href="#t172.9 Mime\index.tsx">2.9 Mime\index.tsx</a></li><li><a href="#t182.10 Profile\index.tsx">2.10 Profile\index.tsx</a></li><li><a href="#t192.11 Tabs\index.tsx">2.11 Tabs\index.tsx</a></li><li><a href="#t202.12 css\common.less">2.12 css\common.less</a></li></ul></li><li><a href="#t213.首页头部导航">3.首页头部导航</a><ul><li><a href="#t223.1 Home\index.tsx">3.1 Home\index.tsx</a></li><li><a href="#t233.2 action-types.tsx">3.2 action-types.tsx</a></li><li><a href="#t243.3 reducers\home.tsx">3.3 reducers\home.tsx</a></li><li><a href="#t253.4 Home\index.less">3.4 Home\index.less</a></li><li><a href="#t263.5 home.tsx">3.5 home.tsx</a></li><li><a href="#t273.6 HomeHeader\index.tsx">3.6 HomeHeader\index.tsx</a></li><li><a href="#t283.7 HomeHeader\index.less">3.7 HomeHeader\index.less</a></li></ul></li><li><a href="#t294.个人中心">4.个人中心</a><ul><li><a href="#t304.1 Profile\index.tsx">4.1 Profile\index.tsx</a></li><li><a href="#t314.2 Profile\index.less">4.2 Profile\index.less</a></li><li><a href="#t324.3 action-types.tsx">4.3 action-types.tsx</a></li><li><a href="#t334.4 reducers\index.tsx">4.4 reducers\index.tsx</a></li><li><a href="#t344.5 src\api\index.tsx">4.5 src\api\index.tsx</a></li><li><a href="#t354.6 api\profile.tsx">4.6 api\profile.tsx</a></li><li><a href="#t364.7 NavHeader\index.tsx">4.7 NavHeader\index.tsx</a></li><li><a href="#t374.8 NavHeader\index.less">4.8 NavHeader\index.less</a></li><li><a href="#t384.9 login-types.tsx">4.9 login-types.tsx</a></li><li><a href="#t394.10 actions\profile.tsx">4.10 actions\profile.tsx</a></li><li><a href="#t404.11 reducers\profile.tsx">4.11 reducers\profile.tsx</a></li></ul></li><li><a href="#t415.注册登录">5.注册登录</a><ul><li><a href="#t425.1 Register\index.tsx">5.1 Register\index.tsx</a></li><li><a href="#t435.2 Login\index.tsx">5.2 Login\index.tsx</a></li><li><a href="#t445.3 Profile\index.tsx">5.3 Profile\index.tsx</a></li><li><a href="#t455.4 action-types.tsx">5.4 action-types.tsx</a></li><li><a href="#t465.5 actions\profile.tsx">5.5 actions\profile.tsx</a></li><li><a href="#t475.6 reducers\profile.tsx">5.6 reducers\profile.tsx</a></li><li><a href="#t485.7 api\profile.tsx">5.7 api\profile.tsx</a></li></ul></li><li><a href="#t496.轮播图">6.轮播图</a><ul><li><a href="#t506.1 Home\index.tsx">6.1 Home\index.tsx</a></li><li><a href="#t516.2 HomeSliders\index.tsx">6.2 HomeSliders\index.tsx</a></li><li><a href="#t526.3 HomeSliders\index.less">6.3 HomeSliders\index.less</a></li><li><a href="#t536.4 actions\home.tsx">6.4 actions\home.tsx</a></li><li><a href="#t546.5 action-types.tsx">6.5 action-types.tsx</a></li><li><a href="#t556.6 api\home.tsx">6.6 api\home.tsx</a></li><li><a href="#t566.7 reducers\home.tsx">6.7 reducers\home.tsx</a></li></ul></li><li><a href="#t577.课程列表">7.课程列表</a><ul><li><a href="#t587.1 routes\Home\index.tsx">7.1 routes\Home\index.tsx</a></li><li><a href="#t597.2 Home\index.less">7.2 Home\index.less</a></li><li><a href="#t607.3 LessonList\index.tsx">7.3 LessonList\index.tsx</a></li><li><a href="#t617.4 LessonList\index.less">7.4 LessonList\index.less</a></li><li><a href="#t627.5 actions\home.tsx">7.5 actions\home.tsx</a></li><li><a href="#t637.6 action-types.tsx">7.6 action-types.tsx</a></li><li><a href="#t647.7 api\home.tsx">7.7 api\home.tsx</a></li><li><a href="#t657.8 reducers\home.tsx">7.8 reducers\home.tsx</a></li><li><a href="#t667.9 utils.tsx">7.9 utils.tsx</a></li></ul></li><li><a href="#t678.课程详情">8.课程详情</a><ul><li><a href="#t688.1 index.tsx">8.1 index.tsx</a></li><li><a href="#t698.2 Detail\index.tsx">8.2 Detail\index.tsx</a></li><li><a href="#t708.3 detail.tsx">8.3 detail.tsx</a></li></ul></li></ul>
+    </div>
+    <div class="content markdown-body">
+        <h2 id="t01.&#x642D;&#x5EFA;&#x5F00;&#x53D1;&#x73AF;&#x5883;">1.&#x642D;&#x5EFA;&#x5F00;&#x53D1;&#x73AF;&#x5883; <a href="#t01.&#x642D;&#x5EFA;&#x5F00;&#x53D1;&#x73AF;&#x5883;"> # </a></h2>
+<h3 id="t11.1 &#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;">1.1 &#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE; <a href="#t11.1 &#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;"> # </a></h3>
+<pre><code class="lang-js">mkdir <span class="hljs-number">2019</span>zfkt
+cd <span class="hljs-number">2019</span>zfkt
+cnpm init -y
+touch .gitignore
+</code></pre>
+<h3 id="t21.2 &#x5B89;&#x88C5;&#x4F9D;&#x8D56;">1.2 &#x5B89;&#x88C5;&#x4F9D;&#x8D56; <a href="#t21.2 &#x5B89;&#x88C5;&#x4F9D;&#x8D56;"> # </a></h3>
+<ul>
+<li><code>@types</code>&#x5F00;&#x5934;&#x7684;&#x5305;&#x90FD;&#x662F;<code>typeScript</code>&#x7684;&#x58F0;&#x660E;&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x8FDB;&#x5165;<code>node_modules/@types/XX/index.d.ts</code>&#x8FDB;&#x884C;&#x67E5;&#x770B;</li>
+<li><a href="https://github.com/DefinitelyTyped/DefinitelyTyped">&#x5E38;&#x89C1;&#x7684;&#x58F0;&#x660E;&#x6587;&#x4EF6;</a></li>
+</ul>
+<pre><code class="lang-js">cnpm i react react-dom @types/react @types/react-dom react-router-dom @types/react-router-dom react-transition-group @types/react-transition-group react-swipe @types/react-swipe antd qs @types/qs -S
+cnpm i webpack webpack-cli webpack-dev-server html-webpack-plugin -D
+cnpm i typescript ts-loader source-map-loader style-loader css-loader less-loader less url-loader file-loader -D
+cnpm i redux react-redux @types/react-redux redux-thunk  redux-logger @types/redux-logger redux-promise @types/redux-promise -S
+cnpm i connected-react-router -S
+cnpm i express express-session body-parser cors axios -S
+</code></pre>
+<ul>
+<li><code>ts-loader</code>&#x53EF;&#x4EE5;&#x8BA9;Webpack&#x4F7F;&#x7528;TypeScript&#x7684;&#x6807;&#x51C6;&#x914D;&#x7F6E;&#x6587;&#x4EF6;<code>tsconfig.json</code>&#x7F16;&#x8BD1;TypeScript&#x4EE3;&#x7801;&#x3002;</li>
+<li><code>source-map-loader</code>&#x4F7F;&#x7528;&#x4EFB;&#x610F;&#x6765;&#x81EA;Typescript&#x7684;<code>sourcemap</code>&#x8F93;&#x51FA;&#xFF0C;&#x4EE5;&#x6B64;&#x901A;&#x77E5;webpack&#x4F55;&#x65F6;&#x751F;&#x6210;&#x81EA;&#x5DF1;&#x7684;sourcemaps,&#x8FD9;&#x8BA9;&#x4F60;&#x5728;&#x8C03;&#x8BD5;&#x6700;&#x7EC8;&#x751F;&#x6210;&#x7684;&#x6587;&#x4EF6;&#x65F6;&#x5C31;&#x597D;&#x50CF;&#x5728;&#x8C03;&#x8BD5;TypeScript&#x6E90;&#x7801;&#x4E00;&#x6837;&#x3002;</li>
+</ul>
+<h3 id="t31.3 &#x652F;&#x6301;typescript">1.3 &#x652F;&#x6301;typescript <a href="#t31.3 &#x652F;&#x6301;typescript"> # </a></h3>
+<ul>
+<li>&#x9700;&#x8981;&#x751F;&#x6210;&#x4E00;&#x4E2A;<code>tsconfig.json</code>&#x6587;&#x4EF6;&#x6765;&#x544A;&#x8BC9;<code>ts-loader</code>&#x5982;&#x4F55;&#x7F16;&#x8BD1;&#x4EE3;&#x7801;<code>TypeScript</code>&#x4EE3;&#x7801;</li>
+</ul>
+<pre><code class="lang-js">tsc --init
+</code></pre>
+<pre><code class="lang-js">{
+  <span class="hljs-string">&quot;compilerOptions&quot;</span>: {
+    <span class="hljs-string">&quot;outDir&quot;</span>: <span class="hljs-string">&quot;./dist&quot;</span>,
+    <span class="hljs-string">&quot;sourceMap&quot;</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-string">&quot;noImplicitAny&quot;</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-string">&quot;module&quot;</span>: <span class="hljs-string">&quot;commonjs&quot;</span>,
+    <span class="hljs-string">&quot;target&quot;</span>: <span class="hljs-string">&quot;es5&quot;</span>,
+    <span class="hljs-string">&quot;jsx&quot;</span>: <span class="hljs-string">&quot;react&quot;</span>,
+    <span class="hljs-string">&quot;esModuleInterop&quot;</span>:<span class="hljs-literal">true</span>
+  },
+  <span class="hljs-string">&quot;include&quot;</span>: [
+    <span class="hljs-string">&quot;./src/**/*&quot;</span>
+  ]
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x9879;&#x76EE;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">outDir</td>
+<td style="text-align:left">&#x6307;&#x5B9A;&#x8F93;&#x51FA;&#x76EE;&#x5F55;</td>
+</tr>
+<tr>
+<td style="text-align:left">sourceMap</td>
+<td style="text-align:left">&#x628A;ts &#x6587;&#x4EF6;&#x7F16;&#x8BD1;&#x6210; js &#x6587;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x540C;&#x65F6;&#x751F;&#x6210;&#x5BF9;&#x5E94;&#x7684;sourceMap&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td style="text-align:left">noImplicitAny</td>
+<td style="text-align:left">&#x5982;&#x679C;&#x4E3A;true&#x7684;&#x8BDD;&#xFF0C;TypeScript &#x7F16;&#x8BD1;&#x5668;&#x65E0;&#x6CD5;&#x63A8;&#x65AD;&#x51FA;&#x7C7B;&#x578B;&#x65F6;&#xFF0C;&#x5B83;&#x4ECD;&#x7136;&#x4F1A;&#x751F;&#x6210; JavaScript &#x6587;&#x4EF6;&#xFF0C;&#x4F46;&#x662F;&#x5B83;&#x4E5F;&#x4F1A;&#x62A5;&#x544A;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;</td>
+</tr>
+<tr>
+<td style="text-align:left">module&#xFF1A;&#x4EE3;&#x7801;&#x89C4;&#x8303;</td>
+<td style="text-align:left">target&#xFF1A;&#x8F6C;&#x6362;&#x6210;es5</td>
+</tr>
+<tr>
+<td style="text-align:left">jsx</td>
+<td style="text-align:left">react&#x6A21;&#x5F0F;&#x4F1A;&#x751F;&#x6210;React.createElement&#xFF0C;&#x5728;&#x4F7F;&#x7528;&#x524D;&#x4E0D;&#x9700;&#x8981;&#x518D;&#x8FDB;&#x884C;&#x8F6C;&#x6362;&#x64CD;&#x4F5C;&#x4E86;&#xFF0C;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x7684;&#x6269;&#x5C55;&#x540D;&#x4E3A;.js</td>
+</tr>
+<tr>
+<td style="text-align:left">include</td>
+<td style="text-align:left">&#x9700;&#x8981;&#x7F16;&#x8BD1;&#x7684;&#x76EE;&#x5F55;</td>
+</tr>
+<tr>
+<td style="text-align:left">allowSyntheticDefaultImports</td>
+<td style="text-align:left">&#x5141;&#x8BB8;&#x4ECE;&#x6CA1;&#x6709;&#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4;&#x5BFC;&#x51FA;&#x7684;&#x6A21;&#x5757;&#x4E2D;&#x9ED8;&#x8BA4;&#x5BFC;&#x5165;&#x3002;&#x8FD9;&#x5E76;&#x4E0D;&#x5F71;&#x54CD;&#x4EE3;&#x7801;&#x7684;&#x8F93;&#x51FA;&#xFF0C;&#x4EC5;&#x4E3A;&#x4E86;&#x7C7B;&#x578B;&#x68C0;&#x67E5;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left">esModuleInterop</td>
+<td style="text-align:left">&#x8BBE;&#x7F6E; esModuleInterop: true &#x4F7F; typescript &#x6765;&#x517C;&#x5BB9;&#x6240;&#x6709;&#x6A21;&#x5757;&#x65B9;&#x6848;&#x7684;&#x5BFC;&#x5165;</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>&#x5728; TypeScript &#x4E2D;&#xFF0C;&#x6709;&#x591A;&#x79CD; import &#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5206;&#x522B;&#x5BF9;&#x5E94;&#x4E86; JavaScript &#x4E2D;&#x4E0D;&#x540C;&#x7684; export</p>
+<pre><code class="lang-js"><span class="hljs-comment">// commonjs &#x6A21;&#x5757;</span>
+<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> xx <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;xx&apos;</span>;
+<span class="hljs-comment">// &#x6807;&#x51C6; es6 &#x6A21;&#x5757;</span>
+<span class="hljs-keyword">import</span> xx <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;xx&apos;</span>;
+</code></pre>
+</blockquote>
+<h3 id="t41.4 &#x7F16;&#x5199;webpack&#x914D;&#x7F6E;&#x6587;&#x4EF6;">1.4 &#x7F16;&#x5199;webpack&#x914D;&#x7F6E;&#x6587;&#x4EF6; <a href="#t41.4 &#x7F16;&#x5199;webpack&#x914D;&#x7F6E;&#x6587;&#x4EF6;"> # </a></h3>
+<ul>
+<li>webpack.config.js</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> webpack=<span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;webpack&apos;</span>);
+<span class="hljs-keyword">const</span> HtmlWebpackPlugin=<span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;html-webpack-plugin&apos;</span>);
+<span class="hljs-keyword">const</span> path=<span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
+<span class="hljs-built_in">module</span>.exports={
+    <span class="hljs-attr">mode</span>: <span class="hljs-string">&apos;development&apos;</span>,
+    <span class="hljs-attr">entry</span>: <span class="hljs-string">&quot;./src/index.tsx&quot;</span>,
+    <span class="hljs-attr">output</span>: {
+        <span class="hljs-attr">filename</span>: <span class="hljs-string">&quot;bundle.js&quot;</span>,
+        <span class="hljs-attr">path</span>: path.join(__dirname,<span class="hljs-string">&apos;dist&apos;</span>)
+    },
+    <span class="hljs-attr">devtool</span>: <span class="hljs-string">&quot;source-map&quot;</span>,
+    <span class="hljs-attr">devServer</span>: {
+        <span class="hljs-attr">hot</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">contentBase</span>: path.join(__dirname,<span class="hljs-string">&apos;dist&apos;</span>),
+        <span class="hljs-attr">historyApiFallback</span>: {
+            <span class="hljs-attr">index</span>:<span class="hljs-string">&apos;./index.html&apos;</span>
+        }
+    },
+    <span class="hljs-attr">resolve</span>: {
+        <span class="hljs-attr">alias</span>:{
+            <span class="hljs-string">&quot;~&quot;</span>:path.resolve(__dirname,<span class="hljs-string">&apos;node_modules&apos;</span>)
+        },
+        <span class="hljs-attr">extensions</span>: [<span class="hljs-string">&quot;.ts&quot;</span>, <span class="hljs-string">&quot;.tsx&quot;</span>, <span class="hljs-string">&quot;.js&quot;</span>, <span class="hljs-string">&quot;.json&quot;</span>]
+    },
+
+    <span class="hljs-attr">module</span>: {
+        <span class="hljs-attr">rules</span>: [{
+                <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.(j|t)sx?$/</span>,
+                <span class="hljs-attr">loader</span>: <span class="hljs-string">&quot;ts-loader&quot;</span>,
+                <span class="hljs-attr">exclude</span>:<span class="hljs-regexp">/node_modules/</span>
+            },
+            {
+                <span class="hljs-attr">enforce</span>: <span class="hljs-string">&quot;pre&quot;</span>,
+                <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.js$/</span>,
+                <span class="hljs-attr">loader</span>: <span class="hljs-string">&quot;source-map-loader&quot;</span>
+            },
+            {
+                <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.css$/</span>,
+                <span class="hljs-attr">use</span>:[<span class="hljs-string">&apos;style-loader&apos;</span>,<span class="hljs-string">&apos;css-loader&apos;</span>]
+            },
+            {
+                <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.less$/</span>,
+                <span class="hljs-attr">use</span>:[<span class="hljs-string">&apos;style-loader&apos;</span>,<span class="hljs-string">&apos;css-loader&apos;</span>,<span class="hljs-string">&apos;less-loader&apos;</span>]
+            },
+            {
+                <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.(gif|svg|png|jpg|jpeg)$/</span>,
+                <span class="hljs-attr">use</span>:[<span class="hljs-string">&apos;url-loader&apos;</span>]
+            }
+        ]
+    },
+
+    <span class="hljs-attr">plugins</span>: [
+        <span class="hljs-keyword">new</span> HtmlWebpackPlugin({
+            <span class="hljs-attr">template</span>:<span class="hljs-string">&apos;./src/index.html&apos;</span>
+        }),
+        <span class="hljs-keyword">new</span> webpack.HotModuleReplacementPlugin()
+    ],
+};
+</code></pre>
+<h3 id="t51.5 &#x9879;&#x76EE;&#x6587;&#x4EF6;">1.5 &#x9879;&#x76EE;&#x6587;&#x4EF6; <a href="#t51.5 &#x9879;&#x76EE;&#x6587;&#x4EF6;"> # </a></h3>
+<h4 id="t61.5.1 src\index.tsx">1.5.1 src\index.tsx <a href="#t61.5.1 src\index.tsx"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+ReactDOM.render((
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>hello<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>
+),<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;root&apos;</span>));
+</code></pre>
+<h4 id="t71.5.2 src\index.html">1.5.2 src\index.html <a href="#t71.5.2 src\index.html"> # </a></h4>
+<p>src\index.html</p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">&quot;X-UA-Compatible&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;ie=edge&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;http://img.zhufengpeixun.cn/reset.min.css&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>&#x73E0;&#x5CF0;&#x8BFE;&#x5802;<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">refreshRem</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-built_in">document</span>.documentElement.style.fontSize = <span class="hljs-built_in">document</span>.documentElement.clientWidth/<span class="hljs-number">750</span>*<span class="hljs-number">100</span>+<span class="hljs-string">&apos;px&apos;</span>;
+  }
+  refreshRem();
+  <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">&apos;resize&apos;</span>,refreshRem,<span class="hljs-literal">false</span>);
+})();
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;root&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h2 id="t82.&#x8DD1;&#x901A;&#x8DEF;&#x7531;">2.&#x8DD1;&#x901A;&#x8DEF;&#x7531; <a href="#t82.&#x8DD1;&#x901A;&#x8DEF;&#x7531;"> # </a></h2>
+<h3 id="t92.1 src\index.tsx">2.1 src\index.tsx <a href="#t92.1 src\index.tsx"> # </a></h3>
+<p>src\index.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react&quot;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react-dom&quot;</span>;
+<span class="hljs-keyword">import</span> { Switch, Route, Redirect } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react-router-dom&quot;</span>;
+<span class="hljs-keyword">import</span> { Provider } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react-redux&quot;</span>;
+<span class="hljs-keyword">import</span> store <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;./store&quot;</span>;
+<span class="hljs-keyword">import</span> { ConfigProvider } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;antd&quot;</span>;
+<span class="hljs-keyword">import</span> zh_CN <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;antd/lib/locale-provider/zh_CN&quot;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&quot;./assets/css/common.less&quot;</span>;
+<span class="hljs-keyword">import</span> Tabs <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;./components/Tabs&quot;</span>;
+<span class="hljs-keyword">import</span> Home <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;./routes/Home&quot;</span>;
+<span class="hljs-keyword">import</span> Mime <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;./routes/Mime&quot;</span>;
+<span class="hljs-keyword">import</span> Profile <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;./routes/Profile&quot;</span>;
+<span class="hljs-keyword">import</span> { ConnectedRouter } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;connected-react-router&apos;</span>;
+<span class="hljs-keyword">import</span> history <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./store/history&apos;</span>;
+ReactDOM.render(
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Provider</span> <span class="hljs-attr">store</span>=<span class="hljs-string">{store}</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ConnectedRouter</span> <span class="hljs-attr">history</span>=<span class="hljs-string">{history}</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ConfigProvider</span> <span class="hljs-attr">locale</span>=<span class="hljs-string">{zh_CN}</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;main-container&quot;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">Switch</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&quot;/&quot;</span> <span class="hljs-attr">exact</span> <span class="hljs-attr">component</span>=<span class="hljs-string">{Home}</span> /&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&quot;/mime&quot;</span> <span class="hljs-attr">component</span>=<span class="hljs-string">{Mime}</span> /&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&quot;/profile&quot;</span> <span class="hljs-attr">component</span>=<span class="hljs-string">{Profile}</span> /&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">Redirect</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&quot;/&quot;</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">Switch</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">Tabs</span> /&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ConfigProvider</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ConnectedRouter</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Provider</span>&gt;</span></span>,
+    <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;root&quot;</span>)
+);
+</code></pre>
+<h3 id="t102.2 store\index.tsx">2.2 store\index.tsx <a href="#t102.2 store\index.tsx"> # </a></h3>
+<p>src\store\index.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { createStore, applyMiddleware, Store, AnyAction } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;redux&apos;</span>;
+<span class="hljs-keyword">import</span> reducers <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./reducers&apos;</span>;
+<span class="hljs-keyword">import</span> logger <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;redux-logger&apos;</span>;
+<span class="hljs-keyword">import</span> thunk <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;redux-thunk&apos;</span>;
+<span class="hljs-keyword">import</span> promise <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;redux-promise&apos;</span>;
+<span class="hljs-keyword">import</span> { routerMiddleware } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;connected-react-router&apos;</span>;
+<span class="hljs-keyword">import</span> history <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./history&apos;</span>;
+<span class="hljs-keyword">let</span> store: Store&lt;TypeRootState, AnyAction&gt; = createStore(reducers, applyMiddleware(routerMiddleware(history), promise, thunk));
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> store;
+</code></pre>
+<h3 id="t112.3 history.tsx">2.3 history.tsx <a href="#t112.3 history.tsx"> # </a></h3>
+<p>src\store\history.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { createHashHistory } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;history&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> createHashHistory();
+</code></pre>
+<h3 id="t122.4 action-types.tsx">2.4 action-types.tsx <a href="#t122.4 action-types.tsx"> # </a></h3>
+<p>src\store\action-types.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> DEMO = <span class="hljs-string">&apos;DEMO&apos;</span>;
+</code></pre>
+<h3 id="t132.5 reducers\index.tsx">2.5 reducers\index.tsx <a href="#t132.5 reducers\index.tsx"> # </a></h3>
+<p>src\store\reducers\index.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { combineReducers,ReducersMapObject } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;redux&apos;</span>;
+<span class="hljs-keyword">import</span> home <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./home&apos;</span>;
+<span class="hljs-keyword">import</span> { connectRouter } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;connected-react-router&apos;</span>;
+<span class="hljs-keyword">import</span> history <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../history&apos;</span>;
+<span class="hljs-keyword">let</span> reducers:ReducersMapObject = {
+    <span class="hljs-attr">router</span>: connectRouter(history),
+    home
+};
+type TypeRootState = {
+    [key <span class="hljs-keyword">in</span> keyof <span class="hljs-keyword">typeof</span> reducers]: ReturnType&lt;<span class="hljs-keyword">typeof</span> reducers[key]&gt;
+}
+<span class="hljs-keyword">let</span> reducer: Reducer&lt;TypeRootState&gt; = combineReducers&lt;TypeRootState&gt;(reducers);
+
+<span class="hljs-keyword">export</span> { TypeRootState }
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> reducer;
+</code></pre>
+<h3 id="t142.6 reducers\home.tsx">2.6 reducers\home.tsx <a href="#t142.6 reducers\home.tsx"> # </a></h3>
+<p>src\store\reducers\home.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { AnyAction } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;redux&apos;</span>;
+<span class="hljs-keyword">export</span> interface TypeHome {
+
+}
+<span class="hljs-keyword">let</span> initialState: TypeHome = {
+};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">state: TypeHome = initialState, action: AnyAction</span>): <span class="hljs-title">TypeHome</span> </span>{
+    <span class="hljs-keyword">switch</span> (action.type) {
+        <span class="hljs-attr">default</span>:
+            <span class="hljs-keyword">return</span> state;
+    }
+}
+</code></pre>
+<h3 id="t152.7 typing\common.tsx">2.7 typing\common.tsx <a href="#t152.7 typing\common.tsx"> # </a></h3>
+<p>src\typing\common.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { Dispatch, Store } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;redux&apos;</span>;
+<span class="hljs-keyword">export</span> interface TypeObject {
+    [propName: string]: any
+}
+<span class="hljs-keyword">export</span> interface TypeAction {
+    <span class="hljs-attr">type</span>: string;
+    payload?: any
+}
+<span class="hljs-keyword">export</span> interface TypeThunkFunction {
+    (dispatch: Dispatch, <span class="hljs-attr">getState</span>: Store[<span class="hljs-string">&apos;getState&apos;</span>]): <span class="hljs-keyword">void</span>
+}
+</code></pre>
+<h3 id="t162.8 Home\index.tsx">2.8 Home\index.tsx <a href="#t162.8 Home\index.tsx"> # </a></h3>
+<p>src\routes\Home\index.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { connect } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-redux&apos;</span>;
+<span class="hljs-keyword">import</span> { RouteComponentProps } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router-dom&apos;</span>;
+interface State { }
+interface PathParamsType { }
+type Props = RouteComponentProps&lt;PathParamsType&gt; &amp; {
+    children?: any
+}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Home</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span>&lt;<span class="hljs-title">Props</span>, <span class="hljs-title">State</span>&gt; </span>{
+    render() {
+        <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                Home
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+        )
+    }
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> connect(
+)(Home);
+</code></pre>
+<h3 id="t172.9 Mime\index.tsx">2.9 Mime\index.tsx <a href="#t172.9 Mime\index.tsx"> # </a></h3>
+<p>src\routes\Mime\index.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { connect } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-redux&apos;</span>;
+<span class="hljs-keyword">import</span> { RouteComponentProps } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router-dom&apos;</span>;
+interface State { }
+interface PathParamsType { }
+type Props = RouteComponentProps&lt;PathParamsType&gt; &amp; {
+    children?: any
+}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Mime</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span>&lt;<span class="hljs-title">Props</span>, <span class="hljs-title">State</span>&gt; </span>{
+    render() {
+        <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                Mime
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+        )
+    }
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> connect(
+
+)(Mime);
+</code></pre>
+<h3 id="t182.10 Profile\index.tsx">2.10 Profile\index.tsx <a href="#t182.10 Profile\index.tsx"> # </a></h3>
+<p>src\routes\Profile\index.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { connect } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-redux&apos;</span>;
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Profile</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+    render() {
+        <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+                Profile
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+        )
+    }
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> connect()(Profile);
+</code></pre>
+<h3 id="t192.11 Tabs\index.tsx">2.11 Tabs\index.tsx <a href="#t192.11 Tabs\index.tsx"> # </a></h3>
+<p>src\components\Tabs\index.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react&quot;</span>;
+<span class="hljs-keyword">import</span> { RouteComponentProps, withRouter, NavLink } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router-dom&apos;</span>;
+<span class="hljs-keyword">import</span> { Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;antd&apos;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;./index.less&apos;</span>;
+interface State { }
+interface PathParamsType { }
+type Props = RouteComponentProps&lt;PathParamsType&gt; &amp; {
+    children?: any
+}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Tabs</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span>&lt;<span class="hljs-title">Props</span>, <span class="hljs-title">State</span>&gt; </span>{
+    <span class="hljs-keyword">constructor</span>(props: Props) {
+        <span class="hljs-keyword">super</span>(props);
+    }
+    render() {
+        <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">footer</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">NavLink</span> <span class="hljs-attr">exact</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&quot;/&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">Icon</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;home&quot;</span> /&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>&#x9996;&#x9875;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">NavLink</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">NavLink</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&quot;/mime&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">Icon</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;solution&quot;</span> /&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>&#x6211;&#x7684;&#x8BFE;&#x7A0B;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">NavLink</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">NavLink</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&quot;/profile&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">Icon</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;user&quot;</span> /&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>&#x4E2A;&#x4EBA;&#x4E2D;&#x5FC3;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">NavLink</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span></span>
+        );
+    }
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> withRouter(Tabs);
+</code></pre>
+<h3 id="t202.12 css\common.less">2.12 css\common.less <a href="#t202.12 css\common.less"> # </a></h3>
+<p>src\assets\css\common.less</p>
+<pre><code class="lang-less"><span class="hljs-keyword">@import</span> <span class="hljs-string">&quot;~antd/dist/antd.css&quot;</span>;
+<span class="hljs-selector-tag">html</span>{
+    <span class="hljs-attribute">font-size</span>:<span class="hljs-number">100px</span>;<span class="hljs-comment">/* 750px 1rem=100px*/</span>
+}
+<span class="hljs-selector-id">#root</span>{
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> auto;
+    <span class="hljs-attribute">max-width</span>:<span class="hljs-number">750px</span>;
+    <span class="hljs-attribute">box-sizing</span>: border-box;
+}
+<span class="hljs-selector-class">.main-container</span>{
+    <span class="hljs-attribute">padding</span>:<span class="hljs-number">1rem</span> <span class="hljs-number">0</span> <span class="hljs-number">1.2rem</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<h2 id="t213.&#x9996;&#x9875;&#x5934;&#x90E8;&#x5BFC;&#x822A;">3.&#x9996;&#x9875;&#x5934;&#x90E8;&#x5BFC;&#x822A; <a href="#t213.&#x9996;&#x9875;&#x5934;&#x90E8;&#x5BFC;&#x822A;"> # </a></h2>
+<ul>
+<li><a href="https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/react/index.d.ts">react/index.d.ts</a></li>
+</ul>
+<h3 id="t223.1 Home\index.tsx">3.1 Home\index.tsx <a href="#t223.1 Home\index.tsx"> # </a></h3>
+<p>routes\Home\index.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { connect } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-redux&apos;</span>;
+<span class="hljs-keyword">import</span> HomeHeader <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./HomeHeader&apos;</span>;
+<span class="hljs-keyword">import</span> actions <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../store/actions/home&apos;</span>;
+<span class="hljs-keyword">import</span> { TypeRootState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../store/reducers&apos;</span>;
+<span class="hljs-keyword">import</span> { TypeHome } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../store/reducers/home&apos;</span>;
+<span class="hljs-keyword">import</span> { RouteComponentProps } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router-dom&apos;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;./index.less&apos;</span>;
+type StateProps = ReturnType&lt;<span class="hljs-keyword">typeof</span> mapStateToProps&gt;;
+type DispatchProps = <span class="hljs-keyword">typeof</span> actions;
+interface PathParamsType { }
+type Props = RouteComponentProps&lt;PathParamsType&gt; &amp; StateProps &amp; DispatchProps &amp; {
+    <span class="hljs-attr">children</span>: any
+};
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Home</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span>&lt;<span class="hljs-title">Props</span>&gt;</span>{
+    <span class="hljs-keyword">constructor</span>(props: Props) {
+        <span class="hljs-keyword">super</span>(props);
+    }
+    render() {
+        <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">HomeHeader</span> <span class="hljs-attr">currentCategory</span>=<span class="hljs-string">{this.props.currentCategory}</span>
+                    <span class="hljs-attr">setCurrentCategory</span>=<span class="hljs-string">{this.props.setCurrentCategory}</span>
+                /&gt;</span>
+            <span class="hljs-tag">&lt;/&gt;</span></span>
+        )
+    }
+}
+<span class="hljs-keyword">let</span> mapStateToProps = (state: TypeRootState): <span class="hljs-function"><span class="hljs-params">TypeHome</span> =&gt;</span> state.home;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> connect(
+    mapStateToProps,
+    actions
+)(Home);
+</code></pre>
+<h3 id="t233.2 action-types.tsx">3.2 action-types.tsx <a href="#t233.2 action-types.tsx"> # </a></h3>
+<p>src\store\action-types.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> SET_CURRENT_CATEGORY = <span class="hljs-string">&apos;SET_CURRENT_CATEGORY&apos;</span>;
+</code></pre>
+<h3 id="t243.3 reducers\home.tsx">3.3 reducers\home.tsx <a href="#t243.3 reducers\home.tsx"> # </a></h3>
+<p>store\reducers\home.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> TYPES <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;../action-types&quot;</span>;
+<span class="hljs-keyword">import</span> { TypeAction } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../typing/common&apos;</span>;
+<span class="hljs-keyword">export</span> interface TypeHome {
+    <span class="hljs-attr">currentCategory</span>: string;
+}
+<span class="hljs-keyword">let</span> initialState: TypeHome = {
+    <span class="hljs-attr">currentCategory</span>: <span class="hljs-string">&apos;all&apos;</span>
+};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">state: TypeHome = initialState, action: TypeAction</span>): <span class="hljs-title">TypeHome</span> </span>{
+    <span class="hljs-keyword">switch</span> (action.type) {
+        <span class="hljs-keyword">case</span> TYPES.SET_CURRENT_CATEGORY:
+            <span class="hljs-keyword">return</span> { ...state, <span class="hljs-attr">currentCategory</span>: action.payload };
+        <span class="hljs-keyword">default</span>:
+            <span class="hljs-keyword">return</span> state;
+    }
+}
+</code></pre>
+<h3 id="t253.4 Home\index.less">3.4 Home\index.less <a href="#t253.4 Home\index.less"> # </a></h3>
+<p>routes\Home\index.less</p>
+<pre><code class="lang-less"><span class="hljs-selector-class">.home-container</span>{
+    <span class="hljs-attribute">position</span>: fixed;
+    <span class="hljs-attribute">top</span>:<span class="hljs-number">1rem</span>;
+    <span class="hljs-attribute">left</span>:<span class="hljs-number">0</span>;
+    <span class="hljs-attribute">width</span>:<span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">overflow-y</span>: auto;
+    <span class="hljs-attribute">height</span>:calc(<span class="hljs-number">100vh</span> - <span class="hljs-number">2.22rem</span>);
+}
+</code></pre>
+<h3 id="t263.5 home.tsx">3.5 home.tsx <a href="#t263.5 home.tsx"> # </a></h3>
+<p>store\actions\home.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> TYPES <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../action-types&apos;</span>;
+<span class="hljs-keyword">import</span> { TypeAction } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../typing/common&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    setCurrentCategory(currentCategory: string): TypeAction {
+        <span class="hljs-keyword">return</span> { <span class="hljs-attr">type</span>: TYPES.SET_CURRENT_CATEGORY, <span class="hljs-attr">payload</span>: currentCategory };
+    }
+}
+</code></pre>
+<h3 id="t273.6 HomeHeader\index.tsx">3.6 HomeHeader\index.tsx <a href="#t273.6 HomeHeader\index.tsx"> # </a></h3>
+<p>routes\Home\HomeHeader\index.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react&quot;</span>;
+<span class="hljs-keyword">import</span> { RouteComponentProps, withRouter } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router-dom&apos;</span>;
+<span class="hljs-keyword">import</span> { Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;antd&apos;</span>;
+<span class="hljs-keyword">import</span> { Transition } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-transition-group&apos;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;./index.less&apos;</span>;
+<span class="hljs-keyword">const</span> duration = <span class="hljs-number">300</span>;
+<span class="hljs-keyword">const</span> defaultStyle: React.CSSProperties = {
+  <span class="hljs-attr">transition</span>: <span class="hljs-string">`all <span class="hljs-subst">${duration}</span>ms ease-in-out`</span>,
+  <span class="hljs-attr">opacity</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-attr">display</span>: <span class="hljs-string">&apos;none&apos;</span>
+}
+interface TypeTransitionStyles {
+  <span class="hljs-attr">entering</span>: React.CSSProperties;
+  entered: React.CSSProperties;
+  exiting: React.CSSProperties;
+  exited: React.CSSProperties;
+  unmounted: React.CSSProperties;
+}
+<span class="hljs-keyword">const</span> transitionStyles: TypeTransitionStyles = {
+  <span class="hljs-attr">entering</span>: { <span class="hljs-attr">opacity</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">display</span>: <span class="hljs-string">&apos;none&apos;</span> },
+  <span class="hljs-attr">entered</span>: { <span class="hljs-attr">opacity</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">display</span>: <span class="hljs-string">&apos;block&apos;</span> },
+  <span class="hljs-attr">exiting</span>: { <span class="hljs-attr">opacity</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">display</span>: <span class="hljs-string">&apos;none&apos;</span> },
+  <span class="hljs-attr">exited</span>: { <span class="hljs-attr">opacity</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">display</span>: <span class="hljs-string">&apos;none&apos;</span> },
+  <span class="hljs-attr">unmounted</span>: { <span class="hljs-attr">opacity</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">display</span>: <span class="hljs-string">&apos;none&apos;</span> }
+}
+interface PathParamsType { }
+type Props = RouteComponentProps&lt;PathParamsType&gt; &amp; {
+  children?: any,
+  currentCategory?: any,
+  setCurrentCategory?: any;
+  refreshLessons?: any
+}
+interface State {
+  <span class="hljs-keyword">in</span>?: boolean
+}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HomeHeader</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span>&lt;<span class="hljs-title">Props</span>, <span class="hljs-title">State</span>&gt;</span>{
+  state = { <span class="hljs-attr">in</span>: <span class="hljs-literal">false</span> }
+  <span class="hljs-keyword">constructor</span>(props: Props) {
+    <span class="hljs-keyword">super</span>(props);
+  }
+  setCurrentCategory = <span class="hljs-function">(<span class="hljs-params">event: React.MouseEvent&lt;HTMLUListElement&gt;</span>) =&gt;</span> {
+    <span class="hljs-keyword">let</span> target: EventTarget = event.target;
+    <span class="hljs-keyword">let</span> category = (target <span class="hljs-keyword">as</span> HTMLUListElement).dataset.category;
+    <span class="hljs-keyword">this</span>.props.setCurrentCategory(category);
+    <span class="hljs-keyword">this</span>.setState({ <span class="hljs-attr">in</span>: <span class="hljs-literal">false</span> }, <span class="hljs-keyword">this</span>.props.refreshLessons);
+  }
+  render() {
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;home-header&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;logo-header&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;http://img.zhufengpeixun.cn/zfkelogo.png&quot;</span> /&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">Icon</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;bars&quot;</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{event</span> =&gt;</span> this.setState({ in: !this.state.in })} /&gt;
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Transition</span> <span class="hljs-attr">in</span>=<span class="hljs-string">{this.state.in}</span> <span class="hljs-attr">timeout</span>=<span class="hljs-string">{300}</span>&gt;</span>
+          {
+            state =&gt; (
+              <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;category&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span>
+                <span class="hljs-attr">...defaultStyle</span>,
+                <span class="hljs-attr">...transitionStyles</span>[<span class="hljs-attr">state</span>]
+              }}
+                <span class="hljs-attr">onClick</span>=<span class="hljs-string">{this.setCurrentCategory}</span>
+              &gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">data-category</span>=<span class="hljs-string">&quot;all&quot;</span> <span class="hljs-attr">className</span>=<span class="hljs-string">{this.props.currentCategory</span> == <span class="hljs-string">&apos;all&apos;</span> ? &apos;<span class="hljs-attr">active</span>&apos; <span class="hljs-attr">:</span> &apos;&apos;}&gt;</span>&#x5168;&#x90E8;&#x8BFE;&#x7A0B;<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">data-category</span>=<span class="hljs-string">&quot;react&quot;</span> <span class="hljs-attr">className</span>=<span class="hljs-string">{this.props.currentCategory</span> == <span class="hljs-string">&apos;react&apos;</span> ? &apos;<span class="hljs-attr">active</span>&apos; <span class="hljs-attr">:</span> &apos;&apos;}&gt;</span>React&#x8BFE;&#x7A0B;<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">data-category</span>=<span class="hljs-string">&quot;vue&quot;</span> <span class="hljs-attr">className</span>=<span class="hljs-string">{this.props.currentCategory</span> == <span class="hljs-string">&apos;vue&apos;</span> ? &apos;<span class="hljs-attr">active</span>&apos; <span class="hljs-attr">:</span> &apos;&apos;}&gt;</span>Vue&#x8BFE;&#x7A0B;<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+            )
+          }
+        <span class="hljs-tag">&lt;/<span class="hljs-name">Transition</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span></span>
+    );
+  }
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> withRouter(HomeHeader);
+</code></pre>
+<h3 id="t283.7 HomeHeader\index.less">3.7 HomeHeader\index.less <a href="#t283.7 HomeHeader\index.less"> # </a></h3>
+<p>src\routes\Home\HomeHeader\index.less</p>
+<pre><code class="lang-less"><span class="hljs-variable">@BG:</span> <span class="hljs-number">#2a2a2a</span>;
+<span class="hljs-selector-class">.home-header</span> {
+  <span class="hljs-attribute">position</span>: fixed;
+  <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+  <span class="hljs-attribute">z-index</span>: <span class="hljs-number">999</span>;
+  <span class="hljs-selector-class">.logo-header</span> {
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">1rem</span>;
+    <span class="hljs-attribute">background</span>: <span class="hljs-variable">@BG</span>;
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+    <span class="hljs-attribute">display</span>: flex;
+    <span class="hljs-attribute">justify-content</span>: space-between;
+    <span class="hljs-attribute">align-items</span>: center;
+    <span class="hljs-selector-tag">img</span> {
+      <span class="hljs-attribute">width</span>: <span class="hljs-number">2rem</span>;
+      <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">0.2rem</span>;
+    }
+    <span class="hljs-selector-tag">i</span> {
+      <span class="hljs-attribute">font-size</span>: <span class="hljs-number">0.6rem</span>;
+      <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">0.2rem</span>;
+    }
+  }
+  <span class="hljs-selector-class">.category</span> {
+    <span class="hljs-attribute">position</span>: absolute;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">top</span>: <span class="hljs-number">1rem</span>;
+    <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.1rem</span> <span class="hljs-number">0.5rem</span>;
+    <span class="hljs-attribute">background</span>: <span class="hljs-variable">@BG</span>;
+    <span class="hljs-selector-tag">li</span> {
+      <span class="hljs-attribute">line-height</span>: <span class="hljs-number">0.6rem</span>;
+      <span class="hljs-attribute">text-align</span>: center;
+      <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+      <span class="hljs-attribute">font-size</span>: <span class="hljs-number">0.3rem</span>;
+      <span class="hljs-attribute">border-top</span>: <span class="hljs-number">0.02rem</span> solid lighten(<span class="hljs-variable">@BG</span>, <span class="hljs-number">20%</span>);
+      <span class="hljs-selector-tag">&amp;</span><span class="hljs-selector-class">.active</span>{
+        <span class="hljs-attribute">color</span>: red;
+      }
+    }
+  }
+}
+
+</code></pre>
+<h2 id="t294.&#x4E2A;&#x4EBA;&#x4E2D;&#x5FC3;">4.&#x4E2A;&#x4EBA;&#x4E2D;&#x5FC3; <a href="#t294.&#x4E2A;&#x4EBA;&#x4E2D;&#x5FC3;"> # </a></h2>
+<h3 id="t304.1 Profile\index.tsx">4.1 Profile\index.tsx <a href="#t304.1 Profile\index.tsx"> # </a></h3>
+<p>src\routes\Profile\index.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { connect } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-redux&apos;</span>;
+<span class="hljs-keyword">import</span> { TypeRootState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../store/reducers&apos;</span>;
+<span class="hljs-keyword">import</span> { TypeProfile } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../store/reducers/profile&apos;</span>;
+<span class="hljs-keyword">import</span> actions <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../store/actions/profile&apos;</span>;
+<span class="hljs-keyword">import</span> LOGIN_TYPES <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../typings/login-types&apos;</span>;
+<span class="hljs-keyword">import</span> { RouteComponentProps } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router&apos;</span>;
+<span class="hljs-keyword">import</span> { Descriptions, Button, Alert } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;antd&apos;</span>;
+<span class="hljs-keyword">import</span> NavHeader <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../components/NavHeader&apos;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;./index.less&apos;</span>;
+interface State {
+
+}
+<span class="hljs-comment">//&#x5F53;&#x524D;&#x7684;&#x7EC4;&#x4EF6;&#x6709;&#x4E09;&#x4E2A;&#x5C5E;&#x6027;&#x6765;&#x6E90; </span>
+<span class="hljs-comment">//1.mapStateToProps&#x7684;&#x8FD4;&#x56DE;&#x503C; 2.actions&#x5BF9;&#x8C61;&#x7C7B;&#x578B; 3. &#x6765;&#x81EA;&#x8DEF;&#x7531; 4.&#x7528;&#x6237;&#x4F20;&#x5165;&#x8FDB;&#x6765;&#x7684;&#x5176;&#x5B83;&#x5C5E;&#x6027;</span>
+type StateProps = ReturnType&lt;<span class="hljs-keyword">typeof</span> mapStateToProps&gt;;
+type DispatchProps = <span class="hljs-keyword">typeof</span> actions;
+interface IParams { }
+type RouteProps = RouteComponentProps&lt;IParams&gt;;
+type Props = StateProps &amp; DispatchProps &amp; RouteProps &amp; {
+    children?: any
+}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Profile</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span>&lt;<span class="hljs-title">Props</span>, <span class="hljs-title">State</span>&gt; </span>{
+    <span class="hljs-keyword">async</span> componentDidMount() {
+        <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>.props.user) {
+            <span class="hljs-keyword">await</span> <span class="hljs-keyword">this</span>.props.validate();
+        }
+    }
+    render() {
+        <span class="hljs-keyword">let</span> content;<span class="hljs-comment">//&#x91CC;&#x5B58;&#x653E;&#x7740;&#x8981;&#x6E32;&#x67D3;&#x7684;&#x5185;&#x5BB9; </span>
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.props.loginState == LOGIN_TYPES.UN_VALIDATE) {
+            content = <span class="hljs-literal">null</span>;
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.props.loginState == LOGIN_TYPES.LOGINED) {
+            content = (
+                <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;user-info&quot;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">Descriptions</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;&#x5F53;&#x524D;&#x767B;&#x5F55;&#x7528;&#x6237;&quot;</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">Descriptions.Item</span> <span class="hljs-attr">label</span>=<span class="hljs-string">&quot;&#x7528;&#x6237;&#x540D;&quot;</span>&gt;</span>&#x73E0;&#x5CF0;&#x67B6;&#x6784;<span class="hljs-tag">&lt;/<span class="hljs-name">Descriptions.Item</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">Descriptions.Item</span> <span class="hljs-attr">label</span>=<span class="hljs-string">&quot;&#x624B;&#x673A;&#x53F7;&quot;</span>&gt;</span>15718856132<span class="hljs-tag">&lt;/<span class="hljs-name">Descriptions.Item</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">Descriptions.Item</span> <span class="hljs-attr">label</span>=<span class="hljs-string">&quot;&#x90AE;&#x7BB1;&quot;</span>&gt;</span>zhangsan@qq.com<span class="hljs-tag">&lt;/<span class="hljs-name">Descriptions.Item</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">Descriptions</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">Button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;danger&quot;</span>&gt;</span>&#x9000;&#x51FA;&#x767B;&#x5F55;<span class="hljs-tag">&lt;/<span class="hljs-name">Button</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+            )
+        } <span class="hljs-keyword">else</span> {
+            content = (
+                <span class="xml"><span class="hljs-tag">&lt;&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">Alert</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;warning&quot;</span> <span class="hljs-attr">message</span>=<span class="hljs-string">&quot;&#x5F53;&#x524D;&#x672A;&#x767B;&#x5F55;&quot;</span> <span class="hljs-attr">description</span>=<span class="hljs-string">&quot;&#x4EB2;&#x7231;&#x7684;&#x7528;&#x6237;&#x4F60;&#x597D;&#xFF0C;&#x4F60;&#x5F53;&#x524D;&#x5C1A;&#x672A;&#x767B;&#x5F55;&#xFF0C;&#x8BF7;&#x4F60;&#x9009;&#x62E9;&#x6CE8;&#x518C;&#x6216;&#x8005;&#x767B;&#x5F55;&quot;</span> /&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">textAlign:</span> &apos;<span class="hljs-attr">center</span>&apos;, <span class="hljs-attr">padding:</span> &apos;<span class="hljs-attr">.5rem</span>&apos; }}&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">Button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;dashed&quot;</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> this.props.history.push(&apos;/login&apos;)}&gt;&#x767B;&#x5F55;<span class="hljs-tag">&lt;/<span class="hljs-name">Button</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">Button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;dashed&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">marginLeft:</span> &apos;<span class="hljs-attr">.5rem</span>&apos; }} <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> this.props.history.push(&apos;/register&apos;)}&gt;&#x6CE8;&#x518C;<span class="hljs-tag">&lt;/<span class="hljs-name">Button</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;/&gt;</span></span>
+            )
+        }
+        <span class="hljs-keyword">return</span> (
+            (
+                <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">NavHeader</span> <span class="hljs-attr">history</span>=<span class="hljs-string">{this.props.history}</span>&gt;</span>&#x4E2A;&#x4EBA;&#x4E2D;&#x5FC3;<span class="hljs-tag">&lt;/<span class="hljs-name">NavHeader</span>&gt;</span>
+                    {content}
+                <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></span>
+            )
+        )
+    }
+}
+<span class="hljs-keyword">let</span> mapStateToProps = (state: TypeRootState): <span class="hljs-function"><span class="hljs-params">TypeProfile</span> =&gt;</span> state.profile
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> connect(
+    mapStateToProps,
+    actions
+)(Profile);
+</code></pre>
+<h3 id="t314.2 Profile\index.less">4.2 Profile\index.less <a href="#t314.2 Profile\index.less"> # </a></h3>
+<p>src\routes\Profile\index.less</p>
+<pre><code class="lang-less"><span class="hljs-selector-class">.user-info</span>{
+    <span class="hljs-attribute">padding</span>:.<span class="hljs-number">2rem</span>;
+}
+</code></pre>
+<h3 id="t324.3 action-types.tsx">4.3 action-types.tsx <a href="#t324.3 action-types.tsx"> # </a></h3>
+<p>src\store\action-types.tsx</p>
+<pre><code class="lang-diff">export const SET_CURRENT_CATEGORY = &apos;SET_CURRENT_CATEGORY&apos;;
+
+<span class="hljs-addition">+export const VALIDATE = &apos;VALIDATE&apos;;</span>
+<span class="hljs-addition">+export const LOGOUT = &apos;LOGOUT&apos;;</span>
+</code></pre>
+<h3 id="t334.4 reducers\index.tsx">4.4 reducers\index.tsx <a href="#t334.4 reducers\index.tsx"> # </a></h3>
+<p>src\store\reducers\index.tsx</p>
+<pre><code class="lang-diff">import { combineReducers, Reducer, ReducersMapObject, AnyAction } from &apos;redux&apos;;
+import { connectRouter } from &apos;connected-react-router&apos;;
+import history from &apos;../history&apos;;
+import home from &apos;./home&apos;;
+import mine from &apos;./mine&apos;;
+<span class="hljs-addition">+import profile from &apos;./profile&apos;;</span>
+<span class="hljs-addition">+let reducers: ReducersMapObject = {</span>
+    home,
+    mine,
+<span class="hljs-addition">+    profile,</span>
+    router: connectRouter(history)
+}
+export type TypeRootState = {
+    [key in keyof typeof reducers]: ReturnType&lt;typeof reducers[key]&gt;
+}
+<span class="hljs-addition">+let reducer: Reducer&lt;TypeRootState&gt; = combineReducers&lt;TypeRootState&gt;(reducers);</span>
+
+export default reducer;
+</code></pre>
+<h3 id="t344.5 src\api\index.tsx">4.5 src\api\index.tsx <a href="#t344.5 src\api\index.tsx"> # </a></h3>
+<p>src\api\index.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> axios <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;axios&quot;</span>;
+<span class="hljs-keyword">import</span> qs <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;qs&quot;</span>;
+axios.defaults.baseURL = <span class="hljs-string">&quot;http://localhost:8000&quot;</span>;
+axios.defaults.withCredentials = <span class="hljs-literal">true</span>;
+axios.defaults.transformRequest = <span class="hljs-function">(<span class="hljs-params">data = {}</span>) =&gt;</span> qs.stringify(data);
+axios.interceptors.response.use(<span class="hljs-function"><span class="hljs-params">result</span> =&gt;</span> result.data);
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> axios;
+</code></pre>
+<h3 id="t354.6 api\profile.tsx">4.6 api\profile.tsx <a href="#t354.6 api\profile.tsx"> # </a></h3>
+<p>src\api\profile.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> axios <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./index&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">validate</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> axios.get(<span class="hljs-string">&apos;/validate&apos;</span>);
+}
+</code></pre>
+<h3 id="t364.7 NavHeader\index.tsx">4.7 NavHeader\index.tsx <a href="#t364.7 NavHeader\index.tsx"> # </a></h3>
+<p>components\NavHeader\index.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;./index.less&apos;</span>;
+<span class="hljs-keyword">import</span> { Icon } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;antd&apos;</span>;
+interface Props {
+    <span class="hljs-attr">history</span>: any;
+    children: any
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">NavHeader</span>(<span class="hljs-params">props: Props</span>) </span>{
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;nav-header&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">Icon</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;left&quot;</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> props.history.goBack()} /&gt;
+            {props.children}
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+}
+
+</code></pre>
+<h3 id="t374.8 NavHeader\index.less">4.8 NavHeader\index.less <a href="#t374.8 NavHeader\index.less"> # </a></h3>
+<p>components\NavHeader\index.less</p>
+<pre><code class="lang-less"><span class="hljs-selector-class">.nav-header</span>{
+    <span class="hljs-attribute">position</span>: fixed;
+    <span class="hljs-attribute">left</span>:<span class="hljs-number">0</span>;
+    <span class="hljs-attribute">top</span>:<span class="hljs-number">0</span>;
+    <span class="hljs-attribute">height</span>:<span class="hljs-number">1rem</span>;
+    <span class="hljs-attribute">z-index</span>: <span class="hljs-number">1000</span>;
+    <span class="hljs-attribute">width</span>:<span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">box-sizing</span>: border-box;
+    <span class="hljs-attribute">text-align</span>: center;
+    <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1rem</span>;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#2A2A2A</span>;
+    <span class="hljs-attribute">color</span>:<span class="hljs-number">#FFF</span>;
+    <span class="hljs-selector-tag">i</span>{
+        <span class="hljs-attribute">position</span>: absolute;
+        <span class="hljs-attribute">left</span>:.<span class="hljs-number">2rem</span>;
+        <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1rem</span>;
+    }
+}
+</code></pre>
+<h3 id="t384.9 login-types.tsx">4.9 login-types.tsx <a href="#t384.9 login-types.tsx"> # </a></h3>
+<p>src\typings\login-types.tsx</p>
+<pre><code class="lang-js">enum LOGIN_TYPES {
+    UN_VALIDATE,
+    LOGINED,
+    UNLOGIN
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> LOGIN_TYPES;
+</code></pre>
+<h3 id="t394.10 actions\profile.tsx">4.10 actions\profile.tsx <a href="#t394.10 actions\profile.tsx"> # </a></h3>
+<p>store\actions\profile.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { AnyAction } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;redux&apos;</span>;
+<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> TYPES <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../action-types&apos;</span>;
+<span class="hljs-keyword">import</span> { validate } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../api/profile&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    validate(): AnyAction {
+        <span class="hljs-keyword">return</span> {
+            <span class="hljs-attr">type</span>: TYPES.VALIDATE,
+            <span class="hljs-attr">payload</span>: validate()
+        }
+    },
+}
+</code></pre>
+<h3 id="t404.11 reducers\profile.tsx">4.11 reducers\profile.tsx <a href="#t404.11 reducers\profile.tsx"> # </a></h3>
+<p>src\store\reducers\profile.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { AnyAction } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;redux&apos;</span>;
+<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> TYPES <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;../action-types&quot;</span>;
+<span class="hljs-keyword">import</span> LOGIN_TYPES <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../typings/login-types&apos;</span>;
+<span class="hljs-keyword">export</span> interface TypeProfile {
+    <span class="hljs-attr">loginState</span>: LOGIN_TYPES,
+    <span class="hljs-attr">user</span>: any,
+    <span class="hljs-attr">error</span>: string | <span class="hljs-literal">null</span>
+}
+<span class="hljs-keyword">let</span> initialState: TypeProfile = {
+    <span class="hljs-attr">loginState</span>: LOGIN_TYPES.UN_VALIDATE,
+    <span class="hljs-attr">user</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">error</span>: <span class="hljs-literal">null</span>
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">state: TypeProfile = initialState, action: AnyAction</span>): <span class="hljs-title">TypeProfile</span> </span>{
+    <span class="hljs-keyword">switch</span> (action.type) {
+        <span class="hljs-keyword">case</span> TYPES.VALIDATE:
+            <span class="hljs-keyword">let</span> { code, data, error } = action.payload;
+            <span class="hljs-keyword">if</span> (code == <span class="hljs-number">0</span>) {
+                <span class="hljs-keyword">return</span> {
+                    ...state,
+                    <span class="hljs-attr">loginState</span>: LOGIN_TYPES.LOGINED,
+                    <span class="hljs-attr">user</span>: data,
+                    <span class="hljs-attr">error</span>: <span class="hljs-literal">null</span>
+                };
+            } <span class="hljs-keyword">else</span> {
+                <span class="hljs-keyword">return</span> { ...state, <span class="hljs-attr">loginState</span>: LOGIN_TYPES.UNLOGIN, <span class="hljs-attr">user</span>: <span class="hljs-literal">null</span>, error };
+            }
+        <span class="hljs-attr">default</span>:
+            <span class="hljs-keyword">return</span> state;
+    }
+}
+</code></pre>
+<h2 id="t415.&#x6CE8;&#x518C;&#x767B;&#x5F55;">5.&#x6CE8;&#x518C;&#x767B;&#x5F55; <a href="#t415.&#x6CE8;&#x518C;&#x767B;&#x5F55;"> # </a></h2>
+<h3 id="t425.1 Register\index.tsx">5.1 Register\index.tsx <a href="#t425.1 Register\index.tsx"> # </a></h3>
+<p>src\routes\Register\index.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react&quot;</span>;
+<span class="hljs-keyword">import</span> { connect } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react-redux&quot;</span>;
+<span class="hljs-keyword">import</span> actions <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;../../store/actions/profile&quot;</span>;
+<span class="hljs-keyword">import</span> { RouteComponentProps, Link } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react-router-dom&quot;</span>;
+<span class="hljs-keyword">import</span> NavHeader <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;../../components/NavHeader&quot;</span>;
+<span class="hljs-keyword">import</span> { Form, Icon, Input, Button, message } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;antd&quot;</span>;
+<span class="hljs-keyword">import</span> { TypeRootState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../store/reducers&apos;</span>;
+<span class="hljs-keyword">import</span> { TypeProfile } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../store/reducers/profile&apos;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&quot;./index.less&quot;</span>;
+type StateProps = ReturnType&lt;<span class="hljs-keyword">typeof</span> mapStateToProps&gt;;
+type DispatchProps = <span class="hljs-keyword">typeof</span> actions;
+interface PathParamsType { }
+type Props = RouteComponentProps&lt;PathParamsType&gt; &amp; StateProps &amp; DispatchProps &amp; {
+    children?: any;
+    form: any;
+};
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Register</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span>&lt;<span class="hljs-title">Props</span>&gt; </span>{
+    handleSubmit = <span class="hljs-function">(<span class="hljs-params">event: React.FormEvent&lt;HTMLFormElement&gt;</span>) =&gt;</span> {
+        event.preventDefault();
+        <span class="hljs-keyword">this</span>.props.form.validateFields(<span class="hljs-keyword">async</span> (err: any, <span class="hljs-attr">values</span>: any) =&gt; {
+            <span class="hljs-keyword">if</span> (err) {
+                message.error(<span class="hljs-string">&apos;&#x8868;&#x5355;&#x9A8C;&#x8BC1;&#x5931;&#x8D25;!&apos;</span>);
+            } <span class="hljs-keyword">else</span> {
+                <span class="hljs-keyword">this</span>.props.register(values);
+            }
+        });
+    };
+    render() {
+        <span class="hljs-keyword">const</span> { getFieldDecorator } = <span class="hljs-keyword">this</span>.props.form;
+        <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">NavHeader</span> <span class="hljs-attr">history</span>=<span class="hljs-string">{this.props.history}</span>&gt;</span>&#x7528;&#x6237;&#x6CE8;&#x518C;<span class="hljs-tag">&lt;/<span class="hljs-name">NavHeader</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">Form</span> <span class="hljs-attr">onSubmit</span>=<span class="hljs-string">{this.handleSubmit}</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;login-form&quot;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">Form.Item</span>&gt;</span>
+                        {getFieldDecorator(&quot;username&quot;, {
+                            rules: [{ required: true, message: &quot;&#x8BF7;&#x8F93;&#x5165;&#x4F60;&#x7684;&#x7528;&#x6237;&#x540D;!&quot; }]
+                        })(
+                            <span class="hljs-tag">&lt;<span class="hljs-name">Input</span>
+                                <span class="hljs-attr">prefix</span>=<span class="hljs-string">{</span>
+                                    &lt;<span class="hljs-attr">Icon</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;user&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">color:</span> &quot;<span class="hljs-attr">rgba</span>(<span class="hljs-attr">0</span>,<span class="hljs-attr">0</span>,<span class="hljs-attr">0</span>,<span class="hljs-attr">.25</span>)&quot; }} /&gt;</span>
+                                }
+                                placeholder=&quot;&#x7528;&#x6237;&#x540D;&quot;
+                            /&gt;
+                        )}
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">Form.Item</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">Form.Item</span>&gt;</span>
+                        {getFieldDecorator(&quot;password&quot;, {
+                            rules: [{ required: true, message: &quot;&#x8BF7;&#x8F93;&#x5165;&#x4F60;&#x7684;&#x5BC6;&#x7801;!&quot; }]
+                        })(
+                            <span class="hljs-tag">&lt;<span class="hljs-name">Input</span>
+                                <span class="hljs-attr">prefix</span>=<span class="hljs-string">{</span>
+                                    &lt;<span class="hljs-attr">Icon</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;lock&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">color:</span> &quot;<span class="hljs-attr">rgba</span>(<span class="hljs-attr">0</span>,<span class="hljs-attr">0</span>,<span class="hljs-attr">0</span>,<span class="hljs-attr">.25</span>)&quot; }} /&gt;</span>
+                                }
+                                type=&quot;password&quot;
+                                placeholder=&quot;&#x5BC6;&#x7801;&quot;
+                            /&gt;
+                        )}
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">Form.Item</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">Form.Item</span>&gt;</span>
+                        {getFieldDecorator(&quot;email&quot;, {
+                            rules: [{ required: true, message: &quot;&#x8BF7;&#x8F93;&#x5165;&#x4F60;&#x7684;&#x90AE;&#x7BB1;!&quot; }]
+                        })(
+                            <span class="hljs-tag">&lt;<span class="hljs-name">Input</span>
+                                <span class="hljs-attr">prefix</span>=<span class="hljs-string">{</span>
+                                    &lt;<span class="hljs-attr">Icon</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;mail&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">color:</span> &quot;<span class="hljs-attr">rgba</span>(<span class="hljs-attr">0</span>,<span class="hljs-attr">0</span>,<span class="hljs-attr">0</span>,<span class="hljs-attr">.25</span>)&quot; }} /&gt;</span>
+                                }
+                                type=&quot;email&quot;
+                                placeholder=&quot;&#x90AE;&#x7BB1;&quot;
+                            /&gt;
+                        )}
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">Form.Item</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">Form.Item</span>&gt;</span>
+                        {getFieldDecorator(&quot;phone&quot;, {
+                            rules: [{ required: true, message: &quot;&#x8BF7;&#x8F93;&#x5165;&#x4F60;&#x7684;&#x624B;&#x673A;&#x53F7;!&quot; }]
+                        })(
+                            <span class="hljs-tag">&lt;<span class="hljs-name">Input</span>
+                                <span class="hljs-attr">prefix</span>=<span class="hljs-string">{</span>
+                                    &lt;<span class="hljs-attr">Icon</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;phone&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">color:</span> &quot;<span class="hljs-attr">rgba</span>(<span class="hljs-attr">0</span>,<span class="hljs-attr">0</span>,<span class="hljs-attr">0</span>,<span class="hljs-attr">.25</span>)&quot; }} /&gt;</span>
+                                }
+                                type=&quot;text&quot;
+                                placeholder=&quot;&#x624B;&#x673A;&#x53F7;&quot;
+                            /&gt;
+                        )}
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">Form.Item</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">Form.Item</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">Button</span>
+                            <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;primary&quot;</span>
+                            <span class="hljs-attr">htmlType</span>=<span class="hljs-string">&quot;submit&quot;</span>
+                            <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;login-form-button&quot;</span>
+                        &gt;</span>
+                            &#x6CE8;&#x518C;
+            <span class="hljs-tag">&lt;/<span class="hljs-name">Button</span>&gt;</span>
+                        &#x6216;&#x8005; <span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&quot;/login&quot;</span>&gt;</span>&#x7ACB;&#x523B;&#x767B;&#x5F55;!<span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">Form.Item</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">Form</span>&gt;</span>
+            <span class="hljs-tag">&lt;/&gt;</span></span>
+        );
+    }
+}
+<span class="hljs-keyword">const</span> WrappedRegister = Form.create({ <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;login&quot;</span> })(Register);
+<span class="hljs-keyword">let</span> mapStateToProps = (state: TypeRootState): <span class="hljs-function"><span class="hljs-params">TypeProfile</span> =&gt;</span> state.profile;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> connect(mapStateToProps, actions)(WrappedRegister);
+</code></pre>
+<p>index.less</p>
+<pre><code class="lang-less"><span class="hljs-selector-class">.login-form</span>{
+    <span class="hljs-attribute">padding</span>:.<span class="hljs-number">2rem</span>;
+}
+</code></pre>
+<h3 id="t435.2 Login\index.tsx">5.2 Login\index.tsx <a href="#t435.2 Login\index.tsx"> # </a></h3>
+<p>routes\Login\index.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react&quot;</span>;
+<span class="hljs-keyword">import</span> { connect } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react-redux&quot;</span>;
+<span class="hljs-keyword">import</span> actions <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;../../store/actions/profile&quot;</span>;
+<span class="hljs-keyword">import</span> { Link, RouteComponentProps } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react-router-dom&quot;</span>;
+<span class="hljs-keyword">import</span> NavHeader <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;../../components/NavHeader&quot;</span>;
+<span class="hljs-keyword">import</span> { Form, Icon, Input, Button, message } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;antd&quot;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&quot;./index.less&quot;</span>;
+<span class="hljs-keyword">import</span> { TypeRootState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../store/reducers&apos;</span>;
+<span class="hljs-keyword">import</span> { TypeProfile } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../store/reducers/profile&apos;</span>;
+type StateProps = ReturnType&lt;<span class="hljs-keyword">typeof</span> mapStateToProps&gt;;
+type DispatchProps = <span class="hljs-keyword">typeof</span> actions;
+interface PathParamsType { }
+type Props = RouteComponentProps&lt;PathParamsType&gt; &amp; StateProps &amp; DispatchProps &amp; {
+    children?: any;
+    form: any;
+};
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Register</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span>&lt;<span class="hljs-title">Props</span>&gt; </span>{
+    handleSubmit = <span class="hljs-function">(<span class="hljs-params">event: React.FormEvent&lt;HTMLFormElement&gt;</span>) =&gt;</span> {
+        event.preventDefault();
+        <span class="hljs-keyword">this</span>.props.form.validateFields(<span class="hljs-keyword">async</span> (err: any, <span class="hljs-attr">values</span>: any) =&gt; {
+            <span class="hljs-keyword">if</span> (err) {
+                message.error(<span class="hljs-string">&apos;&#x8868;&#x5355;&#x9A8C;&#x8BC1;&#x5931;&#x8D25;!&apos;</span>);
+            } <span class="hljs-keyword">else</span> {
+                <span class="hljs-keyword">this</span>.props.login(values);
+            }
+        });
+    };
+    render() {
+        <span class="hljs-keyword">const</span> { getFieldDecorator } = <span class="hljs-keyword">this</span>.props.form;
+        <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">NavHeader</span> <span class="hljs-attr">history</span>=<span class="hljs-string">{this.props.history}</span>&gt;</span>&#x7528;&#x6237;&#x767B;&#x5F55;<span class="hljs-tag">&lt;/<span class="hljs-name">NavHeader</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">Form</span> <span class="hljs-attr">onSubmit</span>=<span class="hljs-string">{this.handleSubmit}</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;login-form&quot;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">Form.Item</span>&gt;</span>
+                        {getFieldDecorator(&quot;username&quot;, {
+                            rules: [{ required: true, message: &quot;&#x8BF7;&#x8F93;&#x5165;&#x4F60;&#x7684;&#x7528;&#x6237;&#x540D;!&quot; }]
+                        })(
+                            <span class="hljs-tag">&lt;<span class="hljs-name">Input</span>
+                                <span class="hljs-attr">prefix</span>=<span class="hljs-string">{</span>
+                                    &lt;<span class="hljs-attr">Icon</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;user&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">color:</span> &quot;<span class="hljs-attr">rgba</span>(<span class="hljs-attr">0</span>,<span class="hljs-attr">0</span>,<span class="hljs-attr">0</span>,<span class="hljs-attr">.25</span>)&quot; }} /&gt;</span>
+                                }
+                                placeholder=&quot;&#x7528;&#x6237;&#x540D;&quot;
+                            /&gt;
+                        )}
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">Form.Item</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">Form.Item</span>&gt;</span>
+                        {getFieldDecorator(&quot;password&quot;, {
+                            rules: [{ required: true, message: &quot;&#x8BF7;&#x8F93;&#x5165;&#x4F60;&#x7684;&#x5BC6;&#x7801;!&quot; }]
+                        })(
+                            <span class="hljs-tag">&lt;<span class="hljs-name">Input</span>
+                                <span class="hljs-attr">prefix</span>=<span class="hljs-string">{</span>
+                                    &lt;<span class="hljs-attr">Icon</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;lock&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">color:</span> &quot;<span class="hljs-attr">rgba</span>(<span class="hljs-attr">0</span>,<span class="hljs-attr">0</span>,<span class="hljs-attr">0</span>,<span class="hljs-attr">.25</span>)&quot; }} /&gt;</span>
+                                }
+                                type=&quot;password&quot;
+                                placeholder=&quot;&#x5BC6;&#x7801;&quot;
+                            /&gt;
+                        )}
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">Form.Item</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">Form.Item</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">Button</span>
+                            <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;primary&quot;</span>
+                            <span class="hljs-attr">htmlType</span>=<span class="hljs-string">&quot;submit&quot;</span>
+                            <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;login-form-button&quot;</span>
+                        &gt;</span>
+                            &#x767B;&#x5F55;
+            <span class="hljs-tag">&lt;/<span class="hljs-name">Button</span>&gt;</span>
+                        &#x6216;&#x8005; <span class="hljs-tag">&lt;<span class="hljs-name">Link</span> <span class="hljs-attr">to</span>=<span class="hljs-string">&quot;/register&quot;</span>&gt;</span>&#x7ACB;&#x523B;&#x6CE8;&#x518C;!<span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">Form.Item</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">Form</span>&gt;</span>
+            <span class="hljs-tag">&lt;/&gt;</span></span>
+        );
+    }
+}
+<span class="hljs-keyword">const</span> WrappedRegister = Form.create({ <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;login&quot;</span> })(Register);
+<span class="hljs-keyword">const</span> mapStateToProps = (state: TypeRootState): <span class="hljs-function"><span class="hljs-params">TypeProfile</span> =&gt;</span> state.profile;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> connect(mapStateToProps, actions)(WrappedRegister);
+</code></pre>
+<p>index.less</p>
+<pre><code class="lang-less"><span class="hljs-selector-class">.login-form</span>{
+    <span class="hljs-attribute">padding</span>:.<span class="hljs-number">2rem</span>;
+}
+</code></pre>
+<h3 id="t445.3 Profile\index.tsx">5.3 Profile\index.tsx <a href="#t445.3 Profile\index.tsx"> # </a></h3>
+<p>src\routes\Profile\index.tsx</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import { connect } from &apos;react-redux&apos;;
+import { TypeRootState } from &apos;../../store/reducers&apos;;
+import { TypeProfile } from &apos;../../store/reducers/profile&apos;;
+import actions from &apos;../../store/actions/profile&apos;;
+import LOGIN_TYPES from &apos;../../typings/login-types&apos;;
+import { RouteComponentProps } from &apos;react-router&apos;;
+<span class="hljs-addition">+import { Descriptions, Button, Alert, Upload, Icon, message } from &apos;antd&apos;;</span>
+import NavHeader from &apos;../../components/NavHeader&apos;;
+import &apos;./index.less&apos;;
+interface State {
+<span class="hljs-addition">+    loading: boolean,</span>
+<span class="hljs-addition">+    imageUrl?: string</span>
+}
+//&#x5F53;&#x524D;&#x7684;&#x7EC4;&#x4EF6;&#x6709;&#x4E09;&#x4E2A;&#x5C5E;&#x6027;&#x6765;&#x6E90; 
+//1.mapStateToProps&#x7684;&#x8FD4;&#x56DE;&#x503C; 2.actions&#x5BF9;&#x8C61;&#x7C7B;&#x578B; 3. &#x6765;&#x81EA;&#x8DEF;&#x7531; 4.&#x7528;&#x6237;&#x4F20;&#x5165;&#x8FDB;&#x6765;&#x7684;&#x5176;&#x5B83;&#x5C5E;&#x6027;
+type StateProps = ReturnType&lt;typeof mapStateToProps&gt;;
+type DispatchProps = typeof actions;
+interface IParams { }
+type RouteProps = RouteComponentProps&lt;IParams&gt;;
+type Props = StateProps &amp; DispatchProps &amp; RouteProps &amp; {
+    children?: any
+}
+class Profile extends React.Component&lt;Props, State&gt; {
+    async componentDidMount() {
+        if (!this.props.user) {
+            await this.props.validate();
+        }
+    }
+<span class="hljs-addition">+    state = {</span>
+<span class="hljs-addition">+        loading: false,</span>
+<span class="hljs-addition">+        imageUrl: &apos;&apos;</span>
+<span class="hljs-addition">+    };</span>
+<span class="hljs-addition">+</span>
+<span class="hljs-addition">+    handleChange = (info: any) =&gt; {</span>
+<span class="hljs-addition">+        if (info.file.status === &apos;uploading&apos;) {</span>
+<span class="hljs-addition">+            this.setState({ loading: true });</span>
+<span class="hljs-addition">+        } else if (info.file.status === &apos;done&apos;) {</span>
+<span class="hljs-addition">+            let { code, data, error } = info.file.response;</span>
+<span class="hljs-addition">+            if (code == 0) {</span>
+<span class="hljs-addition">+                this.setState({</span>
+<span class="hljs-addition">+                    imageUrl: data,</span>
+<span class="hljs-addition">+                    loading: false,</span>
+<span class="hljs-addition">+                }, () =&gt; this.props.changeAvatar(data))</span>
+<span class="hljs-addition">+            } else {</span>
+<span class="hljs-addition">+                message.error(error);</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+    };</span>
+    render() {
+        let content;//&#x91CC;&#x5B58;&#x653E;&#x7740;&#x8981;&#x6E32;&#x67D3;&#x7684;&#x5185;&#x5BB9; 
+        if (this.props.loginState == LOGIN_TYPES.UN_VALIDATE) {
+            content = null;
+        } else if (this.props.loginState == LOGIN_TYPES.LOGINED) {
+<span class="hljs-addition">+            let { user } = this.props;</span>
+<span class="hljs-addition">+            let { imageUrl } = this.state;</span>
+<span class="hljs-addition">+            if (!imageUrl)</span>
+<span class="hljs-addition">+                imageUrl = user.avatar;</span>
+<span class="hljs-addition">+            content = (</span>
+<span class="hljs-addition">+                &lt;div className=&quot;user-info&quot;&gt;</span>
+<span class="hljs-addition">+                    &lt;Descriptions title=&quot;&#x5F53;&#x524D;&#x767B;&#x5F55;&#x7528;&#x6237;&quot;&gt;</span>
+<span class="hljs-addition">+                    &lt;Descriptions title=&quot;&#x5F53;&#x524D;&#x767B;&#x5F55;&#x7528;&#x6237;&quot;&gt;</span>
+<span class="hljs-addition">+                        &lt;Descriptions.Item label=&quot;&#x5934;&#x50CF;&quot;&gt;</span>
+<span class="hljs-addition">+                            &lt;Upload</span>
+<span class="hljs-addition">+                                name=&quot;avatar&quot;</span>
+<span class="hljs-addition">+                                listType=&quot;picture-card&quot;</span>
+<span class="hljs-addition">+                                className=&quot;avatar-uploader&quot;</span>
+<span class="hljs-addition">+                                showUploadList={false}</span>
+<span class="hljs-addition">+                                action=&quot;http://localhost:8000/uploadAvatar&quot;</span>
+<span class="hljs-addition">+                                beforeUpload={beforeUpload}</span>
+<span class="hljs-addition">+                                data={{ userId: user._id }}</span>
+<span class="hljs-addition">+                                onChange={this.handleChange}</span>
+<span class="hljs-addition">+                            &gt;</span>
+<span class="hljs-addition">+                                {</span>
+<span class="hljs-addition">+                                    this.state.loading ? &lt;Icon type=&apos;loading&apos; /&gt; : &lt;img src={imageUrl} alt=&quot;avatar&quot; style={{ width: &apos;100%&apos; }} /&gt;</span>
+<span class="hljs-addition">+                                }</span>
+<span class="hljs-addition">+                            &lt;/Upload&gt;</span>
+<span class="hljs-addition">+                        &lt;/Descriptions.Item&gt;</span>
+                        &lt;Descriptions.Item label=&quot;&#x7528;&#x6237;&#x540D;&quot;&gt;{}&lt;/Descriptions.Item&gt;
+                        &lt;Descriptions.Item label=&quot;&#x624B;&#x673A;&#x53F7;&quot;&gt;15718856132&lt;/Descriptions.Item&gt;
+                        &lt;Descriptions.Item label=&quot;&#x90AE;&#x7BB1;&quot;&gt;zhangsan@qq.com&lt;/Descriptions.Item&gt;
+                    &lt;/Descriptions&gt;
+<span class="hljs-addition">+                    &lt;Button type=&quot;danger&quot; onClick={async () =&gt; {</span>
+<span class="hljs-addition">+                        await this.props.logout();</span>
+<span class="hljs-addition">+                        this.props.history.push(&apos;/login&apos;);</span>
+<span class="hljs-addition">+                    }}&gt;&#x9000;&#x51FA;&#x767B;&#x5F55;&lt;/Button&gt;</span>
+                &lt;/div&gt;
+            )
+        } else {
+            content = (
+                &lt;&gt;
+                    &lt;Alert type=&quot;warning&quot; message=&quot;&#x5F53;&#x524D;&#x672A;&#x767B;&#x5F55;&quot; description=&quot;&#x4EB2;&#x7231;&#x7684;&#x7528;&#x6237;&#x4F60;&#x597D;&#xFF0C;&#x4F60;&#x5F53;&#x524D;&#x5C1A;&#x672A;&#x767B;&#x5F55;&#xFF0C;&#x8BF7;&#x4F60;&#x9009;&#x62E9;&#x6CE8;&#x518C;&#x6216;&#x8005;&#x767B;&#x5F55;&quot; /&gt;
+                    &lt;div style={{ textAlign: &apos;center&apos;, padding: &apos;.5rem&apos; }}&gt;
+                        &lt;Button type=&quot;dashed&quot; onClick={() =&gt; this.props.history.push(&apos;/login&apos;)}&gt;&#x767B;&#x5F55;&lt;/Button&gt;
+                        &lt;Button type=&quot;dashed&quot; style={{ marginLeft: &apos;.5rem&apos; }} onClick={() =&gt; this.props.history.push(&apos;/register&apos;)}&gt;&#x6CE8;&#x518C;&lt;/Button&gt;
+                    &lt;/div&gt;
+                &lt;/&gt;
+            )
+        }
+        return (
+            (
+                &lt;section&gt;
+                    &lt;NavHeader history={this.props.history}&gt;&#x4E2A;&#x4EBA;&#x4E2D;&#x5FC3;&lt;/NavHeader&gt;
+                    {content}
+                &lt;/section&gt;
+            )
+        )
+    }
+}
+let mapStateToProps = (state: TypeRootState): TypeProfile =&gt; state.profile
+export default connect(
+    mapStateToProps,
+    actions
+)(Profile);
+
+<span class="hljs-addition">+function getBase64(img: any, callback: any) {</span>
+<span class="hljs-addition">+    const reader = new FileReader();</span>
+<span class="hljs-addition">+    reader.addEventListener(&apos;load&apos;, () =&gt; callback(reader.result));</span>
+<span class="hljs-addition">+    reader.readAsDataURL(img);</span>
+<span class="hljs-addition">+}</span>
+
+<span class="hljs-addition">+function beforeUpload(file: any) {</span>
+<span class="hljs-addition">+    const isJpgOrPng = file.type === &apos;image/jpeg&apos; || file.type === &apos;image/png&apos;;</span>
+<span class="hljs-addition">+    if (!isJpgOrPng) {</span>
+<span class="hljs-addition">+        message.error(&apos;&#x4F60;&#x53EA;&#x80FD;&#x4E0A;&#x4F20;JPG/PNG &#x6587;&#x4EF6;!&apos;);</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    const isLessThan2M = file.size / 1024 / 1024 &lt; 2;</span>
+<span class="hljs-addition">+    if (!isLessThan2M) {</span>
+<span class="hljs-addition">+        message.error(&apos;&#x56FE;&#x7247;&#x5FC5;&#x987B;&#x5C0F;&#x4E8E;2MB!&apos;);</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    return isJpgOrPng &amp;&amp; isLessThan2M;</span>
+<span class="hljs-addition">+}</span>
+</code></pre>
+<h3 id="t455.4 action-types.tsx">5.4 action-types.tsx <a href="#t455.4 action-types.tsx"> # </a></h3>
+<p>src\store\action-types.tsx</p>
+<pre><code class="lang-diff">export const SET_CURRENT_CATEGORY = &apos;SET_CURRENT_CATEGORY&apos;;
+
+export const VALIDATE = &apos;VALIDATE&apos;;
+export const LOGOUT = &apos;LOGOUT&apos;;
+<span class="hljs-addition">+export const CHANGE_AVATAR = &apos;CHANGE_AVATAR&apos;;</span>
+</code></pre>
+<h3 id="t465.5 actions\profile.tsx">5.5 actions\profile.tsx <a href="#t465.5 actions\profile.tsx"> # </a></h3>
+<p>src\store\actions\profile.tsx</p>
+<pre><code class="lang-diff"><span class="hljs-addition">+import { AnyAction, Dispatch } from &apos;redux&apos;;</span>
+import * as TYPES from &apos;../action-types&apos;;
+<span class="hljs-addition">+import { validate, logout, register, login } from &apos;../../api/profile&apos;;</span>
+<span class="hljs-addition">+import { push } from &apos;connected-react-router&apos;;</span>
+<span class="hljs-addition">+import { message } from &quot;antd&quot;;</span>
+<span class="hljs-addition">+import { TypeAction, TypeObject, TypeThunkFunction } from &apos;../../typings/common&apos;;</span>
+export default {
+    validate(): AnyAction {
+        return {
+            type: TYPES.VALIDATE,
+            payload: validate()
+        }
+    },
+<span class="hljs-addition">+    register(values: TypeObject): TypeThunkFunction {</span>
+<span class="hljs-addition">+        return async function (dispatch: Dispatch) {</span>
+<span class="hljs-addition">+            let result: any = await register(values);</span>
+<span class="hljs-addition">+            if (result.code === 0) {</span>
+<span class="hljs-addition">+                dispatch(push(&apos;/login&apos;));</span>
+<span class="hljs-addition">+            } else {</span>
+<span class="hljs-addition">+                message.error(result.error);</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+    },</span>
+<span class="hljs-addition">+    login(values: TypeObject): TypeThunkFunction {</span>
+<span class="hljs-addition">+        return async function (dispatch) {</span>
+<span class="hljs-addition">+            let result: any = await login(values);</span>
+<span class="hljs-addition">+            if (result.code === 0) {</span>
+<span class="hljs-addition">+                dispatch(push(&apos;/profile&apos;));</span>
+<span class="hljs-addition">+            } else {</span>
+<span class="hljs-addition">+                message.error(result.error);</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+    },</span>
+<span class="hljs-addition">+    logout(): TypeAction {</span>
+<span class="hljs-addition">+        return {</span>
+<span class="hljs-addition">+            type: TYPES.LOGOUT,</span>
+<span class="hljs-addition">+            payload: logout()</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+    },</span>
+<span class="hljs-addition">+    changeAvatar(avatar: string) {</span>
+<span class="hljs-addition">+        return {</span>
+<span class="hljs-addition">+            type: TYPES.CHANGE_AVATAR,</span>
+<span class="hljs-addition">+            payload: avatar</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+    }</span>
+}
+</code></pre>
+<h3 id="t475.6 reducers\profile.tsx">5.6 reducers\profile.tsx <a href="#t475.6 reducers\profile.tsx"> # </a></h3>
+<p>src\store\reducers\profile.tsx</p>
+<pre><code class="lang-diff">import { AnyAction } from &apos;redux&apos;;
+import * as TYPES from &quot;../action-types&quot;;
+import LOGIN_TYPES from &apos;../../typings/login-types&apos;;
+export interface TypeProfile {
+    loginState: LOGIN_TYPES,
+    user: any,
+    error: string | null
+}
+let initialState: TypeProfile = {
+    loginState: LOGIN_TYPES.UN_VALIDATE,
+    user: null,
+    error: null
+}
+export default function (state: TypeProfile = initialState, action: AnyAction): TypeProfile {
+    switch (action.type) {
+        case TYPES.VALIDATE:
+            let { code, data, error } = action.payload;
+            if (code == 0) {
+                return {
+                    ...state,
+                    loginState: LOGIN_TYPES.LOGINED,
+                    user: data,
+                    error: null
+                };
+            } else {
+                return { ...state, loginState: LOGIN_TYPES.UNLOGIN, user: null, error };
+            }
+<span class="hljs-addition">+        case TYPES.LOGOUT:</span>
+<span class="hljs-addition">+            return { ...state, loginState: LOGIN_TYPES.UN_VALIDATE, user: null, error: null };</span>
+<span class="hljs-addition">+        case TYPES.CHANGE_AVATAR:</span>
+<span class="hljs-addition">+            return { ...state, user: { ...state.user, avatar: action.payload } };</span>
+        default:
+            return state;
+    }
+}
+</code></pre>
+<h3 id="t485.7 api\profile.tsx">5.7 api\profile.tsx <a href="#t485.7 api\profile.tsx"> # </a></h3>
+<p>src\api\profile.tsx</p>
+<pre><code class="lang-diff">import axios from &apos;./index&apos;;
+<span class="hljs-addition">+import { TypeObject } from &apos;../typings/common&apos;;</span>
+export function validate() {
+    return axios.get(&apos;/validate&apos;);
+}
+<span class="hljs-addition">+export function logout() {</span>
+<span class="hljs-addition">+    return axios.get(&apos;/logout&apos;);</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+export function login(values: TypeObject) {</span>
+<span class="hljs-addition">+    return axios.post(&apos;/login&apos;, values);</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+export function register(values: TypeObject) {</span>
+<span class="hljs-addition">+    return axios.post(&apos;/register&apos;, values);</span>
+<span class="hljs-addition">+}</span>
+</code></pre>
+<h2 id="t496.&#x8F6E;&#x64AD;&#x56FE;">6.&#x8F6E;&#x64AD;&#x56FE; <a href="#t496.&#x8F6E;&#x64AD;&#x56FE;"> # </a></h2>
+<h3 id="t506.1 Home\index.tsx">6.1 Home\index.tsx <a href="#t506.1 Home\index.tsx"> # </a></h3>
+<p>src\routes\Home\index.tsx</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import { connect } from &apos;react-redux&apos;;
+import { TypeRootState } from &apos;../../store/reducers&apos;;
+import { TypeHome } from &apos;../../store/reducers/home&apos;;
+import actions from &apos;../../store/actions/home&apos;;
+import { RouteComponentProps } from &apos;react-router&apos;;
+import HomeHeader from &apos;./HomeHeader&apos;;
+<span class="hljs-addition">+import HomeSliders from &apos;./HomeSliders&apos;;</span>
+import &apos;./index.less&apos;;
+interface State {
+
+}
+//&#x5F53;&#x524D;&#x7684;&#x7EC4;&#x4EF6;&#x6709;&#x4E09;&#x4E2A;&#x5C5E;&#x6027;&#x6765;&#x6E90; 
+//1.mapStateToProps&#x7684;&#x8FD4;&#x56DE;&#x503C; 2.actions&#x5BF9;&#x8C61;&#x7C7B;&#x578B; 3. &#x6765;&#x81EA;&#x8DEF;&#x7531; 4.&#x7528;&#x6237;&#x4F20;&#x5165;&#x8FDB;&#x6765;&#x7684;&#x5176;&#x5B83;&#x5C5E;&#x6027;
+type StateProps = ReturnType&lt;typeof mapStateToProps&gt;;
+type DispatchProps = typeof actions;
+interface IParams { }
+type RouteProps = RouteComponentProps&lt;IParams&gt;;
+type Props = StateProps &amp; DispatchProps &amp; RouteProps &amp; {
+    children?: any
+}
+class Home extends React.Component&lt;Props, State&gt; {
+<span class="hljs-addition">+    homeContainerRef: any</span>
+    render() {
+        return (
+<span class="hljs-addition">+            &lt;&gt;</span>
+                &lt;HomeHeader
+                    setCurrentCategory={this.props.setCurrentCategory}
+                    currentCategory={this.props.currentCategory} /&gt;
+<span class="hljs-addition">+                &lt;div className=&quot;home-container&quot; ref={this.homeContainerRef}&gt;</span>
+<span class="hljs-addition">+                    &lt;HomeSliders</span>
+<span class="hljs-addition">+                        sliders={this.props.sliders}</span>
+<span class="hljs-addition">+                        getSliders={this.props.getSliders} /&gt;</span>
+<span class="hljs-addition">+                &lt;/div&gt;</span>
+<span class="hljs-addition">+            &lt;/&gt;</span>
+        )
+    }
+}
+let mapStateToProps = (state: TypeRootState): TypeHome =&gt; state.home
+export default connect(
+    mapStateToProps,
+    actions
+)(Home);
+</code></pre>
+<h3 id="t516.2 HomeSliders\index.tsx">6.2 HomeSliders\index.tsx <a href="#t516.2 HomeSliders\index.tsx"> # </a></h3>
+<p>src\routes\Home\HomeSliders\index.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react&quot;</span>;
+<span class="hljs-keyword">import</span> { Carousel } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;antd&quot;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&quot;./index.less&quot;</span>;
+<span class="hljs-keyword">import</span> { TypeSlider } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../../store/reducers/home&apos;</span>;
+interface Props {
+    children?: any;
+    sliders?: any,
+    getSliders?: any
+}
+interface State { }
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HomeSliders</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span>&lt;<span class="hljs-title">Props</span>, <span class="hljs-title">State</span>&gt; </span>{
+    <span class="hljs-keyword">constructor</span>(props: Props) {
+        <span class="hljs-keyword">super</span>(props);
+    }
+    componentDidMount() {
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.props.sliders.length == <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">this</span>.props.getSliders();
+        }
+    }
+    render() {
+        <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Carousel</span> <span class="hljs-attr">effect</span>=<span class="hljs-string">&quot;scrollx&quot;</span> <span class="hljs-attr">autoplay</span>&gt;</span>
+                {
+                    this.props.sliders.map((item: TypeSlider, index: number) =&gt; (
+                        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{index}</span>&gt;</span>
+                            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">{item.url}</span> /&gt;</span>
+                        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                    ))
+                }
+            <span class="hljs-tag">&lt;/<span class="hljs-name">Carousel</span>&gt;</span></span>
+        );
+    }
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> HomeSliders;
+</code></pre>
+<h3 id="t526.3 HomeSliders\index.less">6.3 HomeSliders\index.less <a href="#t526.3 HomeSliders\index.less"> # </a></h3>
+<p>routes\Home\HomeSliders\index.less</p>
+<pre><code class="lang-less"><span class="hljs-selector-class">.ant-carousel</span> <span class="hljs-selector-class">.slick-slide</span> {
+    <span class="hljs-attribute">text-align</span>: center;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">3.2rem</span>;
+    <span class="hljs-attribute">line-height</span>: <span class="hljs-number">3.2rem</span>;
+    <span class="hljs-attribute">background</span>: <span class="hljs-number">#364d79</span>;
+    <span class="hljs-attribute">overflow</span>: hidden;
+  }
+
+<span class="hljs-selector-class">.ant-carousel</span> <span class="hljs-selector-class">.slick-slide</span> {
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+    <span class="hljs-selector-tag">img</span>{
+      <span class="hljs-attribute">width</span>:<span class="hljs-number">100%</span>;
+      <span class="hljs-attribute">height</span>:<span class="hljs-number">3.2rem</span>;
+    }
+}
+</code></pre>
+<h3 id="t536.4 actions\home.tsx">6.4 actions\home.tsx <a href="#t536.4 actions\home.tsx"> # </a></h3>
+<p>src\store\actions\home.tsx</p>
+<pre><code class="lang-diff">import * as TYPES from &apos;../action-types&apos;;
+import { TypeAction } from &apos;../../typings/common&apos;;
+<span class="hljs-addition">+import { getSliders } from &apos;../../api/home&apos;;</span>
+export default {
+    setCurrentCategory(payload: string): TypeAction {
+        return { type: TYPES.SET_CURRENT_CATEGORY, payload }
+    },
+<span class="hljs-addition">+    getSliders(): TypeAction {</span>
+<span class="hljs-addition">+        return {</span>
+<span class="hljs-addition">+            type: TYPES.GET_SLIDERS,</span>
+<span class="hljs-addition">+            payload: getSliders()</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+    }</span>
+}
+</code></pre>
+<h3 id="t546.5 action-types.tsx">6.5 action-types.tsx <a href="#t546.5 action-types.tsx"> # </a></h3>
+<p>src\store\action-types.tsx</p>
+<pre><code class="lang-diff">
+export const SET_CURRENT_CATEGORY = &apos;SET_CURRENT_CATEGORY&apos;;
+<span class="hljs-addition">+export const GET_SLIDERS = &apos;GET_SLIDERS&apos;;</span>
+
+export const VALIDATE = &apos;VALIDATE&apos;;
+export const LOGOUT = &apos;LOGOUT&apos;;
+export const CHANGE_AVATAR = &apos;CHANGE_AVATAR&apos;;
+
+</code></pre>
+<h3 id="t556.6 api\home.tsx">6.6 api\home.tsx <a href="#t556.6 api\home.tsx"> # </a></h3>
+<p>src\api\home.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> axios <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./index&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getSliders</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> axios.get(<span class="hljs-string">&apos;/sliders&apos;</span>);
+}
+</code></pre>
+<h3 id="t566.7 reducers\home.tsx">6.7 reducers\home.tsx <a href="#t566.7 reducers\home.tsx"> # </a></h3>
+<p>src\store\reducers\home.tsx</p>
+<pre><code class="lang-diff">import { AnyAction } from &apos;redux&apos;;
+import * as TYPES from &apos;../action-types&apos;;
+export interface TypeSlider {
+    url: string
+}
+export interface TypeHome {
+    currentCategory: string;
+    sliders: Array&lt;TypeSlider&gt;;
+}
+let initialState: TypeHome = {
+    currentCategory: &apos;all&apos;,
+    sliders: []
+}
+export default function (state: TypeHome = initialState, action: AnyAction) {
+    switch (action.type) {
+        case TYPES.SET_CURRENT_CATEGORY:
+            return { ...state, currentCategory: action.payload };
+        case TYPES.GET_SLIDERS:
+            return { ...state, sliders: action.payload.data };
+        default:
+            return state;
+    }
+}
+</code></pre>
+<h2 id="t577.&#x8BFE;&#x7A0B;&#x5217;&#x8868;">7.&#x8BFE;&#x7A0B;&#x5217;&#x8868; <a href="#t577.&#x8BFE;&#x7A0B;&#x5217;&#x8868;"> # </a></h2>
+<h3 id="t587.1 routes\Home\index.tsx">7.1 routes\Home\index.tsx <a href="#t587.1 routes\Home\index.tsx"> # </a></h3>
+<p>src\routes\Home\index.tsx</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import { connect } from &apos;react-redux&apos;;
+import { TypeRootState } from &apos;../../store/reducers&apos;;
+import { TypeHome } from &apos;../../store/reducers/home&apos;;
+import actions from &apos;../../store/actions/home&apos;;
+import { RouteComponentProps } from &apos;react-router&apos;;
+import HomeHeader from &apos;./HomeHeader&apos;;
+import HomeSliders from &apos;./HomeSliders&apos;;
+<span class="hljs-addition">+import LessonList from &apos;./LessonList&apos;;</span>
+<span class="hljs-addition">+import { loadMore, downReferesh } from &apos;../../utils&apos;;</span>
+import &apos;./index.less&apos;;
+interface State {
+
+}
+//&#x5F53;&#x524D;&#x7684;&#x7EC4;&#x4EF6;&#x6709;&#x4E09;&#x4E2A;&#x5C5E;&#x6027;&#x6765;&#x6E90; 
+//1.mapStateToProps&#x7684;&#x8FD4;&#x56DE;&#x503C; 2.actions&#x5BF9;&#x8C61;&#x7C7B;&#x578B; 3. &#x6765;&#x81EA;&#x8DEF;&#x7531; 4.&#x7528;&#x6237;&#x4F20;&#x5165;&#x8FDB;&#x6765;&#x7684;&#x5176;&#x5B83;&#x5C5E;&#x6027;
+type StateProps = ReturnType&lt;typeof mapStateToProps&gt;;
+type DispatchProps = typeof actions;
+interface IParams { }
+type RouteProps = RouteComponentProps&lt;IParams&gt;;
+type Props = StateProps &amp; DispatchProps &amp; RouteProps &amp; {
+    children?: any
+}
+class Home extends React.Component&lt;Props, State&gt; {
+    homeContainerRef: any
+<span class="hljs-addition">+    lessonListRef: any</span>
+<span class="hljs-addition">+    constructor(props: Props) {</span>
+<span class="hljs-addition">+        super(props);</span>
+<span class="hljs-addition">+       this.homeContainerRef = React.createRef();</span>
+<span class="hljs-addition">+        this.lessonListRef = React.createRef();</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    componentDidMount() {</span>
+<span class="hljs-addition">+        loadMore(this.homeContainerRef.current, this.props.getLessons);</span>
+<span class="hljs-addition">+        downReferesh(this.homeContainerRef.current, this.props.refreshLessons);</span>
+<span class="hljs-addition">+        this.homeContainerRef.current.addEventListener(&apos;scroll&apos;, () =&gt; {</span>
+<span class="hljs-addition">+            this.lessonListRef.current.forceUpdate();</span>
+<span class="hljs-addition">+        });</span>
+    }
+    render() {
+        return (
+            &lt;&gt;
+                &lt;HomeHeader
+                    setCurrentCategory={this.props.setCurrentCategory}
+                    currentCategory={this.props.currentCategory} /&gt;
+                &lt;div className=&quot;home-container&quot; ref={this.homeContainerRef}&gt;
+                    &lt;HomeSliders
+                        sliders={this.props.sliders}
+                        getSliders={this.props.getSliders} /&gt;
+<span class="hljs-addition">+                    &lt;LessonList</span>
+<span class="hljs-addition">+                        ref={this.lessonListRef}</span>
+<span class="hljs-addition">+                        container={this.homeContainerRef}</span>
+<span class="hljs-addition">+                        lessons={this.props.lessons}</span>
+<span class="hljs-addition">+                        getLessons={this.props.getLessons} /&gt;</span>
+                &lt;/div&gt;
+            &lt;/&gt;
+        )
+    }
+}
+let mapStateToProps = (state: TypeRootState): TypeHome =&gt; state.home
+export default connect(
+    mapStateToProps,
+    actions
+)(Home);
+</code></pre>
+<h3 id="t597.2 Home\index.less">7.2 Home\index.less <a href="#t597.2 Home\index.less"> # </a></h3>
+<p>src\routes\Home\index.less</p>
+<pre><code class="lang-diff"><span class="hljs-addition">+.home-container{</span>
+<span class="hljs-addition">+    position: fixed;</span>
+<span class="hljs-addition">+    top:1rem;</span>
+<span class="hljs-addition">+    left:0;</span>
+<span class="hljs-addition">+    width:100%;</span>
+<span class="hljs-addition">+    overflow-y: auto;</span>
+<span class="hljs-addition">+    height:calc(100vh - 2.22rem);</span>
+}
+</code></pre>
+<h3 id="t607.3 LessonList\index.tsx">7.3 LessonList\index.tsx <a href="#t607.3 LessonList\index.tsx"> # </a></h3>
+<p>src\routes\Home\LessonList\index.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;react&quot;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&quot;./index.less&quot;</span>;
+<span class="hljs-keyword">import</span> { Icon, Card, Skeleton, Button, Alert } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;antd&apos;</span>;
+<span class="hljs-keyword">import</span> { Link } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router-dom&apos;</span>;
+<span class="hljs-keyword">import</span> { TypeLesson } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../../store/reducers/home&apos;</span>;
+interface Props {
+    children?: any;
+    lessons?: any;
+    getLessons?: any;
+    container?: any
+}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">LessonList</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span>&lt;<span class="hljs-title">Props</span>&gt; </span>{
+    <span class="hljs-keyword">constructor</span>(props: Props) {
+        <span class="hljs-keyword">super</span>(props);
+    }
+    componentDidMount() {
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.props.lessons.list.length == <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">this</span>.props.getLessons();
+        }
+    }
+    render() {
+        <span class="hljs-keyword">let</span> start = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">let</span> rem = <span class="hljs-built_in">parseInt</span>(<span class="hljs-built_in">document</span>.documentElement.style.fontSize);
+        <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.props.container.current) {
+            <span class="hljs-keyword">let</span> scrollTop = <span class="hljs-keyword">this</span>.props.container.current.scrollTop;
+            <span class="hljs-comment">//slider=160px h1 50 = 210/50=4.2   </span>
+            <span class="hljs-keyword">if</span> (scrollTop - <span class="hljs-number">4.2</span> * rem &gt; <span class="hljs-number">0</span>) {
+                start = <span class="hljs-built_in">Math</span>.floor((scrollTop - <span class="hljs-number">4.2</span> * rem) / (<span class="hljs-number">6.5</span> * rem));<span class="hljs-comment">// 6.5*50=325</span>
+            }
+        }
+        <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;lesson-list&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">Icon</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;menu&quot;</span> /&gt;</span>&#x5168;&#x90E8;&#x8BFE;&#x7A0B;<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">Skeleton</span> <span class="hljs-attr">loading</span>=<span class="hljs-string">{this.props.lessons.list.length</span> == <span class="hljs-string">0</span> &amp;&amp; <span class="hljs-attr">this.props.lessons.loading</span>} <span class="hljs-attr">active</span> <span class="hljs-attr">paragraph</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">rows:</span> <span class="hljs-attr">8</span> }}&gt;</span>
+                    {
+                        this.props.lessons.list.map((lesson: TypeLesson, index: number) =&gt; (
+                            index &gt;= start &amp;&amp; index <span class="hljs-tag">&lt; <span class="hljs-attr">start</span> + <span class="hljs-attr">5</span> ? &lt;<span class="hljs-attr">Link</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{lesson._id}</span> <span class="hljs-attr">to</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">pathname:</span> `/<span class="hljs-attr">detail</span>/${<span class="hljs-attr">lesson._id</span>}`, <span class="hljs-attr">state:</span> <span class="hljs-attr">lesson</span> }}&gt;</span>
+                                <span class="hljs-tag">&lt;<span class="hljs-name">Card</span> <span class="hljs-attr">hoverable</span>=<span class="hljs-string">{true}</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">width:</span> &apos;<span class="hljs-attr">100</span>%&apos; }} <span class="hljs-attr">cover</span>=<span class="hljs-string">{</span>&lt;<span class="hljs-attr">img</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">{lesson.title}</span> <span class="hljs-attr">src</span>=<span class="hljs-string">{lesson.poster}</span> /&gt;</span>} &gt;
+                                    <span class="hljs-tag">&lt;<span class="hljs-name">Card.Meta</span> <span class="hljs-attr">title</span>=<span class="hljs-string">{lesson.title}</span> <span class="hljs-attr">description</span>=<span class="hljs-string">{</span>`&#x4EF7;&#x683C;<span class="hljs-attr">:</span> ${<span class="hljs-attr">lesson.price</span>}`} /&gt;</span>
+                                <span class="hljs-tag">&lt;/<span class="hljs-name">Card</span>&gt;</span>
+                            <span class="hljs-tag">&lt;/<span class="hljs-name">Link</span>&gt;</span> : <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{index}</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">height:</span> `${<span class="hljs-attr">6.5</span> * <span class="hljs-attr">rem</span>}<span class="hljs-attr">px</span>` }}&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                        ))
+                    }
+                    {
+                        this.props.lessons.hasMore ? <span class="hljs-tag">&lt;<span class="hljs-name">Button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{this.props.getLessons}</span> <span class="hljs-attr">loading</span>=<span class="hljs-string">{this.props.lessons.loading}</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;primary&quot;</span> <span class="hljs-attr">block</span> &gt;</span>{this.props.lessons.loading ? &apos;&apos; : &apos;&#x52A0;&#x8F7D;&#x66F4;&#x591A;&apos;}<span class="hljs-tag">&lt;/<span class="hljs-name">Button</span>&gt;</span> : <span class="hljs-tag">&lt;<span class="hljs-name">Alert</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">textAlign:</span> &apos;<span class="hljs-attr">center</span>&apos; }} <span class="hljs-attr">message</span>=<span class="hljs-string">&quot;&#x5230;&#x5E95;&#x4E86;&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;warning&quot;</span> /&gt;</span>
+                    }
+                <span class="hljs-tag">&lt;/<span class="hljs-name">Skeleton</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></span>
+        );
+    }
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> LessonList
+
+</code></pre>
+<h3 id="t617.4 LessonList\index.less">7.4 LessonList\index.less <a href="#t617.4 LessonList\index.less"> # </a></h3>
+<p>src\routes\Home\LessonList\index.less</p>
+<pre><code class="lang-less"><span class="hljs-selector-class">.lesson-list</span>{
+  <span class="hljs-selector-tag">h2</span>{
+    <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1rem</span>;
+    <span class="hljs-selector-tag">i</span>{
+      <span class="hljs-attribute">margin</span>:<span class="hljs-number">0</span> .<span class="hljs-number">1rem</span>;
+    }
+  }
+  <span class="hljs-selector-class">.ant-card</span><span class="hljs-selector-class">.ant-card-bordered</span><span class="hljs-selector-class">.ant-card-hoverable</span>{
+    <span class="hljs-attribute">height</span>:<span class="hljs-number">6.5rem</span>;
+    <span class="hljs-attribute">overflow</span>:hidden;
+  }
+}
+</code></pre>
+<h3 id="t627.5 actions\home.tsx">7.5 actions\home.tsx <a href="#t627.5 actions\home.tsx"> # </a></h3>
+<p>src\store\actions\home.tsx</p>
+<pre><code class="lang-diff">import * as TYPES from &apos;../action-types&apos;;
+import { TypeAction, TypeThunkFunction } from &apos;../../typings/common&apos;;
+import { getSliders, getLessons } from &apos;../../api/home&apos;;
+export default {
+    setCurrentCategory(payload: string): TypeAction {
+        return { type: TYPES.SET_CURRENT_CATEGORY, payload }
+    },
+    getSliders(): TypeAction {
+        return {
+            type: TYPES.GET_SLIDERS,
+            payload: getSliders()
+        }
+    },
+<span class="hljs-addition">+    getLessons(): TypeThunkFunction {</span>
+<span class="hljs-addition">+        return async (dispatch, getState) =&gt; {</span>
+<span class="hljs-addition">+            let { currentCategory, lessons: { hasMore, offset, limit, loading } } = getState().home;</span>
+<span class="hljs-addition">+            if (hasMore &amp;&amp; !loading) {</span>
+<span class="hljs-addition">+                dispatch({ type: TYPES.SET_LESSONS_LOADING, payload: true });</span>
+<span class="hljs-addition">+                let result = await getLessons(currentCategory, offset, limit);</span>
+<span class="hljs-addition">+                dispatch({ type: TYPES.SET_LESSONS, payload: result.data });</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+    },</span>
+<span class="hljs-addition">+    refreshLessons(): TypeThunkFunction {</span>
+<span class="hljs-addition">+        return async (dispatch, getState) =&gt; {</span>
+<span class="hljs-addition">+            let { currentCategory, lessons: { limit, loading } } = getState().home;</span>
+<span class="hljs-addition">+            if (!loading) {</span>
+<span class="hljs-addition">+                dispatch({ type: TYPES.SET_LESSONS_LOADING, payload: true });</span>
+<span class="hljs-addition">+                let result = await getLessons(currentCategory, 0, limit);</span>
+<span class="hljs-addition">+                dispatch({ type: TYPES.REFRESH_LESSONS, payload: result.data });</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+    }</span>
+}
+</code></pre>
+<h3 id="t637.6 action-types.tsx">7.6 action-types.tsx <a href="#t637.6 action-types.tsx"> # </a></h3>
+<p>src\store\action-types.tsx</p>
+<pre><code class="lang-diff">
+export const SET_CURRENT_CATEGORY = &apos;SET_CURRENT_CATEGORY&apos;;
+export const GET_SLIDERS = &apos;GET_SLIDERS&apos;;
+
+export const VALIDATE = &apos;VALIDATE&apos;;
+export const LOGOUT = &apos;LOGOUT&apos;;
+export const CHANGE_AVATAR = &apos;CHANGE_AVATAR&apos;;
+
+<span class="hljs-addition">+export const GET_LESSONS = &apos;GET_LESSONS&apos;;</span>
+<span class="hljs-addition">+export const SET_LESSONS_LOADING = &apos;SET_LESSONS_LOADING&apos;;</span>
+<span class="hljs-addition">+export const SET_LESSONS = &apos;SET_LESSONS&apos;;</span>
+<span class="hljs-addition">+export const REFRESH_LESSONS = &apos;REFRESH_LESSONS&apos;;</span>
+</code></pre>
+<h3 id="t647.7 api\home.tsx">7.7 api\home.tsx <a href="#t647.7 api\home.tsx"> # </a></h3>
+<p>src\api\home.tsx</p>
+<pre><code class="lang-diff">import axios from &apos;./index&apos;;
+export function getSliders() {
+    return axios.get(&apos;/sliders&apos;);
+}
+<span class="hljs-addition">+export function getLessons(currentCategory: string = &apos;all&apos;, offset: number, limit: number) {</span>
+<span class="hljs-addition">+    return axios.get(`/getLessons/${currentCategory}?offset=${offset}&amp;limit=${limit}`);</span>
+<span class="hljs-addition">+}</span>
+</code></pre>
+<h3 id="t657.8 reducers\home.tsx">7.8 reducers\home.tsx <a href="#t657.8 reducers\home.tsx"> # </a></h3>
+<p>src\store\reducers\home.tsx</p>
+<pre><code class="lang-diff">import { AnyAction } from &apos;redux&apos;;
+import * as TYPES from &apos;../action-types&apos;;
+export interface TypeSlider {
+    url: string
+}
+
+<span class="hljs-addition">+export interface TypeLesson {</span>
+<span class="hljs-addition">+    _id: string;</span>
+<span class="hljs-addition">+    id: number;</span>
+<span class="hljs-addition">+    title: string;</span>
+<span class="hljs-addition">+    video: string;</span>
+<span class="hljs-addition">+    poster: string;</span>
+<span class="hljs-addition">+    url: string;</span>
+<span class="hljs-addition">+    price: string;</span>
+<span class="hljs-addition">+    category: string;</span>
+<span class="hljs-addition">+}</span>
+
+<span class="hljs-addition">+export interface TypeLessons {</span>
+<span class="hljs-addition">+    loading: boolean;</span>
+<span class="hljs-addition">+    list: Array&lt;TypeLesson&gt;;</span>
+<span class="hljs-addition">+    hasMore: boolean;</span>
+<span class="hljs-addition">+    offset: number;</span>
+<span class="hljs-addition">+    limit: number;</span>
+<span class="hljs-addition">+}</span>
+
+
+export interface TypeHome {
+    currentCategory: string;
+    sliders: Array&lt;TypeSlider&gt;;
+<span class="hljs-addition">+    lessons: TypeLessons;</span>
+}
+let initialState: TypeHome = {
+    currentCategory: &apos;all&apos;,
+    sliders: [],
+<span class="hljs-addition">+    lessons: {</span>
+<span class="hljs-addition">+        loading: false,</span>
+<span class="hljs-addition">+        list: [],</span>
+<span class="hljs-addition">+        hasMore: true,</span>
+<span class="hljs-addition">+        offset: 0,</span>
+<span class="hljs-addition">+        limit: 5</span>
+<span class="hljs-addition">+    }</span>
+}
+export default function (state: TypeHome = initialState, action: AnyAction) {
+    switch (action.type) {
+        case TYPES.SET_CURRENT_CATEGORY:
+            return { ...state, currentCategory: action.payload };
+        case TYPES.GET_SLIDERS:
+            return { ...state, sliders: action.payload.data };
+<span class="hljs-addition">+        case TYPES.SET_LESSONS_LOADING:</span>
+<span class="hljs-addition">+            return {</span>
+<span class="hljs-addition">+                ...state, lessons: {</span>
+<span class="hljs-addition">+                    ...state.lessons,</span>
+<span class="hljs-addition">+                    loading: action.payload</span>
+<span class="hljs-addition">+                }</span>
+<span class="hljs-addition">+            };</span>
+<span class="hljs-addition">+        case TYPES.SET_LESSONS:</span>
+<span class="hljs-addition">+            return {</span>
+<span class="hljs-addition">+                ...state, lessons: {</span>
+<span class="hljs-addition">+                    ...state.lessons,</span>
+<span class="hljs-addition">+                    loading: false,</span>
+<span class="hljs-addition">+                    hasMore: action.payload.hasMore,</span>
+<span class="hljs-addition">+                    list: [...state.lessons.list, ...action.payload.list],</span>
+<span class="hljs-addition">+                    offset: state.lessons.offset + action.payload.list.length</span>
+<span class="hljs-addition">+                }</span>
+<span class="hljs-addition">+            };</span>
+<span class="hljs-addition">+        case TYPES.REFRESH_LESSONS:</span>
+<span class="hljs-addition">+            return {</span>
+<span class="hljs-addition">+                ...state, lessons: {</span>
+<span class="hljs-addition">+                    ...state.lessons,</span>
+<span class="hljs-addition">+                    loading: false,</span>
+<span class="hljs-addition">+                    hasMore: action.payload.hasMore,</span>
+<span class="hljs-addition">+                    list: action.payload.list,</span>
+<span class="hljs-addition">+                    offset: action.payload.list.length</span>
+<span class="hljs-addition">+                }</span>
+<span class="hljs-addition">+            };</span>
+        default:
+            return state;
+    }
+}
+</code></pre>
+<h3 id="t667.9 utils.tsx">7.9 utils.tsx <a href="#t667.9 utils.tsx"> # </a></h3>
+<p>src\utils.tsx</p>
+<pre><code class="lang-js"><span class="hljs-comment">//ele &#x8981;&#x5B9E;&#x73B0;&#x6B64;&#x529F;&#x80FD;DOM&#x5BF9;&#x8C61; callback&#x52A0;&#x8F7D;&#x66F4;&#x591A;&#x7684;&#x65B9;&#x6CD5;</span>
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loadMore</span>(<span class="hljs-params">element: any, callback: any</span>) </span>{
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_loadMore</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">let</span> clientHeight = element.clientHeight;
+        <span class="hljs-keyword">let</span> scrollTop = element.scrollTop;
+        <span class="hljs-keyword">let</span> scrollHeight = element.scrollHeight;
+        <span class="hljs-keyword">if</span> (clientHeight + scrollTop + <span class="hljs-number">10</span> &gt;= scrollHeight) {
+            callback();
+        }
+    }
+    element.addEventListener(<span class="hljs-string">&apos;scroll&apos;</span>, debounce(_loadMore, <span class="hljs-number">300</span>));
+}
+
+<span class="hljs-comment">//&#x4E0B;&#x62C9;&#x5237;&#x65B0;</span>
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">downReferesh</span>(<span class="hljs-params">element: any, callback: any</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;downReferesh&apos;</span>, <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>());
+    <span class="hljs-keyword">let</span> startY: number;<span class="hljs-comment">//&#x521A;&#x6309;&#x4E0B;&#x7684;&#x65F6;&#x5019;&#x521D;&#x59CB;&#x7EB5;&#x5750;&#x6807;</span>
+    <span class="hljs-keyword">let</span> distance: number;<span class="hljs-comment">//&#x4E0B;&#x62C9;&#x7684;&#x8DDD;&#x79BB;</span>
+    <span class="hljs-keyword">let</span> originTop = element.offsetTop;<span class="hljs-comment">//&#x6700;&#x521D;&#x7684;&#x8DDD;&#x79BB;&#x7236;&#x7EA7;&#x9876;&#x90E8;&#x7684;&#x8DDD;&#x79BB;</span>
+    element.addEventListener(<span class="hljs-string">&apos;touchstart&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">event: any</span>) </span>{
+        <span class="hljs-keyword">let</span> touchMove = throttle(_touchMove, <span class="hljs-number">70</span>);
+        <span class="hljs-keyword">if</span> (element.offsetTop == originTop &amp;&amp; element.scrollTop == <span class="hljs-number">0</span>) {
+            startY = event.touches[<span class="hljs-number">0</span>].pageY;
+            element.addEventListener(<span class="hljs-string">&apos;touchmove&apos;</span>, touchMove);
+            element.addEventListener(<span class="hljs-string">&apos;touchend&apos;</span>, touchEnd);
+        }
+
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_touchMove</span>(<span class="hljs-params">event: any</span>) </span>{
+            <span class="hljs-keyword">let</span> pageY = event.touches[<span class="hljs-number">0</span>].pageY;
+            <span class="hljs-keyword">if</span> (pageY &gt; startY) {<span class="hljs-comment">//&#x5982;&#x679C;&#x8D8A;&#x6765;&#x8D8A;&#x5927;&#xFF0C;&#x8868;&#x793A;&#x4E0B;&#x62C9;</span>
+                distance = pageY - startY;
+                element.style.top = originTop + distance + <span class="hljs-string">&apos;px&apos;</span>;
+            } <span class="hljs-keyword">else</span> {
+                element.removeEventListener(<span class="hljs-string">&apos;touchmove&apos;</span>, touchMove);
+                element.removeEventListener(<span class="hljs-string">&apos;touchend&apos;</span>, touchEnd);
+            }
+        }
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">touchEnd</span>(<span class="hljs-params"></span>) </span>{
+            element.removeEventListener(<span class="hljs-string">&apos;touchmove&apos;</span>, touchMove);
+            element.removeEventListener(<span class="hljs-string">&apos;touchend&apos;</span>, touchEnd);
+            <span class="hljs-keyword">let</span> timer = setInterval(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+                <span class="hljs-keyword">if</span> (distance &lt; <span class="hljs-number">1</span>) {
+                    element.style.top = originTop + <span class="hljs-string">&apos;px&apos;</span>;<span class="hljs-comment">//11.5</span>
+                    clearInterval(timer);
+                } <span class="hljs-keyword">else</span> {
+                    element.style.top = originTop + (--distance) + <span class="hljs-string">&apos;px&apos;</span>;
+                }
+            }, <span class="hljs-number">13</span>);
+            <span class="hljs-keyword">if</span> (distance &gt; <span class="hljs-number">30</span>) {
+                callback();
+            }
+        }
+    });
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">debounce</span>(<span class="hljs-params">fn: any, wait: number</span>) </span>{
+    <span class="hljs-keyword">var</span> timeout: any = <span class="hljs-literal">null</span>;
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">if</span> (timeout !== <span class="hljs-literal">null</span>) clearTimeout(timeout);
+        timeout = setTimeout(fn, wait);
+    }
+}
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">throttle</span>(<span class="hljs-params">func: any, delay: number</span>) </span>{
+    <span class="hljs-keyword">var</span> prev = <span class="hljs-built_in">Date</span>.now();
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">var</span> context = <span class="hljs-keyword">this</span>;
+        <span class="hljs-keyword">var</span> args = <span class="hljs-built_in">arguments</span>;
+        <span class="hljs-keyword">var</span> now = <span class="hljs-built_in">Date</span>.now();
+        <span class="hljs-keyword">if</span> (now - prev &gt;= delay) {
+            func.apply(context, args);
+            prev = <span class="hljs-built_in">Date</span>.now();
+        }
+    }
+}
+</code></pre>
+<h2 id="t678.&#x8BFE;&#x7A0B;&#x8BE6;&#x60C5;">8.&#x8BFE;&#x7A0B;&#x8BE6;&#x60C5; <a href="#t678.&#x8BFE;&#x7A0B;&#x8BE6;&#x60C5;"> # </a></h2>
+<h3 id="t688.1 index.tsx">8.1 index.tsx <a href="#t688.1 index.tsx"> # </a></h3>
+<p>src\index.tsx</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import ReactDOM from &apos;react-dom&apos;;
+import { Switch, Route, Redirect } from &apos;react-router-dom&apos;;
+import { Provider } from &apos;react-redux&apos;;
+import store from &apos;./store&apos;;
+import &apos;./assets/common.less&apos;;//&#x8FD9;&#x91CC;&#x653E;&#x516C;&#x5171;&#x7684;&#x6837;&#x5F0F;
+import { ConnectedRouter } from &apos;connected-react-router&apos;;
+import history from &apos;./store/history&apos;;
+import Home from &apos;./routes/Home&apos;;
+import Profile from &apos;./routes/Profile&apos;;
+import Register from &apos;./routes/Register&apos;;
+import Login from &apos;./routes/Login&apos;;
+import Mine from &apos;./routes/Mine&apos;;
+import Tabs from &apos;./components/Tabs&apos;;
+<span class="hljs-addition">+import Detail from &quot;./routes/Detail&quot;;</span>
+ReactDOM.render((
+    &lt;Provider store={store}&gt;
+        &lt;ConnectedRouter history={history}&gt;
+            &lt;&gt;
+                &lt;main className=&quot;main-container&quot;&gt;
+                    &lt;Switch&gt;
+                        &lt;Route path=&quot;/&quot; exact component={Home} /&gt;
+                        &lt;Route path=&quot;/mine&quot; exact component={Mine} /&gt;
+                        &lt;Route path=&quot;/profile&quot; exact component={Profile} /&gt;
+                        &lt;Route path=&quot;/register&quot; exact component={Register} /&gt;
+                        &lt;Route path=&quot;/login&quot; exact component={Login} /&gt;
+                        &lt;Route path=&quot;/login&quot; component={Login} /&gt;
+                        &lt;Route path=&quot;/Register&quot; component={Register} /&gt;
+<span class="hljs-addition">+                        &lt;Route path=&quot;/detail/:id&quot; component={Detail} /&gt;</span>
+                        &lt;Redirect to=&quot;/&quot; /&gt;
+                    &lt;/Switch&gt;
+                &lt;/main&gt;
+                &lt;Tabs /&gt;
+            &lt;/&gt;
+        &lt;/ConnectedRouter&gt;
+    &lt;/Provider&gt;
+), document.getElementById(&apos;root&apos;));
+</code></pre>
+<h3 id="t698.2 Detail\index.tsx">8.2 Detail\index.tsx <a href="#t698.2 Detail\index.tsx"> # </a></h3>
+<p>src\routes\Detail\index.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { connect } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-redux&apos;</span>;
+<span class="hljs-keyword">import</span> { Card, Button } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;antd&apos;</span>;
+<span class="hljs-keyword">import</span> NavHeader <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;../../components/NavHeader&quot;</span>;
+<span class="hljs-keyword">import</span> { getLesson } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../api/detail&apos;</span>;
+<span class="hljs-keyword">import</span> { RouteComponentProps } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router&apos;</span>;
+<span class="hljs-keyword">import</span> { TypeLesson } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../store/reducers/home&apos;</span>;
+<span class="hljs-keyword">const</span> { Meta } = Card;
+interface IParams { <span class="hljs-attr">id</span>: string }
+type RouteProps = RouteComponentProps&lt;IParams&gt;;
+type Props = RouteProps &amp; {
+    children?: any
+}
+interface State {
+    <span class="hljs-attr">lesson</span>: TypeLesson;
+}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Detail</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span>&lt;<span class="hljs-title">Props</span>, <span class="hljs-title">State</span>&gt; </span>{
+    <span class="hljs-attr">state</span>: State = { <span class="hljs-attr">lesson</span>: { <span class="hljs-attr">_id</span>: <span class="hljs-string">&apos;&apos;</span>, <span class="hljs-attr">id</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">title</span>: <span class="hljs-string">&apos;&apos;</span>, <span class="hljs-attr">video</span>: <span class="hljs-string">&apos;&apos;</span>, <span class="hljs-attr">poster</span>: <span class="hljs-string">&apos;&apos;</span>, <span class="hljs-attr">url</span>: <span class="hljs-string">&apos;&apos;</span>, <span class="hljs-attr">price</span>: <span class="hljs-string">&apos;&apos;</span>, <span class="hljs-attr">category</span>: <span class="hljs-string">&apos;&apos;</span> } }
+    <span class="hljs-keyword">async</span> componentDidMount() {
+        <span class="hljs-keyword">let</span> lesson = <span class="hljs-keyword">this</span>.props.location.state;
+        <span class="hljs-keyword">if</span> (!lesson) {
+            <span class="hljs-keyword">let</span> id = <span class="hljs-keyword">this</span>.props.match.params.id;
+            <span class="hljs-keyword">let</span> result: any = <span class="hljs-keyword">await</span> getLesson(id);
+            <span class="hljs-keyword">if</span> (result.code == <span class="hljs-number">0</span>)
+                lesson = result.data;
+        }
+        <span class="hljs-keyword">this</span>.setState({ lesson });
+    }
+    render() {
+        <span class="hljs-keyword">let</span> { lesson } = <span class="hljs-keyword">this</span>.state;
+        <span class="hljs-keyword">return</span> (
+            <span class="xml"><span class="hljs-tag">&lt;&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">NavHeader</span> <span class="hljs-attr">history</span>=<span class="hljs-string">{this.props.history}</span>&gt;</span>&#x8BFE;&#x7A0B;&#x8BE6;&#x60C5;<span class="hljs-tag">&lt;/<span class="hljs-name">NavHeader</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">Card</span>
+                    <span class="hljs-attr">hoverable</span>
+                    <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">width:</span> &apos;<span class="hljs-attr">100</span>%&apos; }}
+                    <span class="hljs-attr">cover</span>=<span class="hljs-string">{</span>&lt;<span class="hljs-attr">video</span> <span class="hljs-attr">src</span>=<span class="hljs-string">{lesson.video}</span> <span class="hljs-attr">controls</span> <span class="hljs-attr">autoPlay</span>=<span class="hljs-string">{false}</span> /&gt;</span>}
+                &gt;
+                    <span class="hljs-tag">&lt;<span class="hljs-name">Meta</span> <span class="hljs-attr">title</span>=<span class="hljs-string">{lesson.title}</span> <span class="hljs-attr">description</span>=<span class="hljs-string">{</span>&lt;<span class="hljs-attr">p</span>&gt;</span>&#x4EF7;&#x683C;: {lesson.price}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>} /&gt;
+                <span class="hljs-tag">&lt;/<span class="hljs-name">Card</span>&gt;</span>
+            <span class="hljs-tag">&lt;/&gt;</span></span>
+        )
+    }
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> connect(
+
+)(Detail);
+</code></pre>
+<h3 id="t708.3 detail.tsx">8.3 detail.tsx <a href="#t708.3 detail.tsx"> # </a></h3>
+<p>src\api\detail.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> axios <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./index&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getLesson</span>(<span class="hljs-params">id: string</span>) </span>{
+    <span class="hljs-keyword">return</span> axios.get(<span class="hljs-string">`/getLesson?id=<span class="hljs-subst">${id}</span>`</span>);
+}
+</code></pre>
+
+    </div>
+</div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+    aria-labelledby="loginModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="loginModalLabel">请登录</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="username" class="control-label">姓名:</label>
+                        <input type="text" class="form-control" id="username" placeholder="珠峰架构VIP会员系统用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">密码:</label>
+                        <input type="text" class="form-control" id="password" placeholder="珠峰架构VIP会员系统密码">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                    data-dismiss="modal">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

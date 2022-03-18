@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+   
+                     
+
+                        
+<div class="warpper">
+    <div class="page-toc">
+        <ul><li><a href="#t01. Serverless是什么？">1. Serverless是什么？</a><ul><li><a href="#t11.1 Serverless是什么？">1.1 Serverless是什么？</a></li><li><a href="#t21.2 云函数">1.2 云函数</a></li></ul></li><li><a href="#t32. serverless framework">2. serverless framework</a></li><li><a href="#t43. Serverless Components">3. Serverless Components</a><ul><li><a href="#t53.1 云函数 SCF 组件">3.1 云函数 SCF 组件</a><ul><li><a href="#t63.1.1 serverless.yml">3.1.1 serverless.yml</a></li><li><a href="#t73.1.2 src\index.js">3.1.2 src\index.js</a></li><li><a href="#t83.1.3 tencent-scf.env">3.1.3 tencent-scf.env</a></li><li><a href="#t93.1.4 布署">3.1.4 布署</a></li></ul></li><li><a href="#t103.2 API 网关组件">3.2 API 网关组件</a><ul><li><a href="#t113.2.1 tencent-api\serverless.yml">3.2.1 tencent-api\serverless.yml</a></li><li><a href="#t123.2.2 布署">3.2.2 布署</a></li></ul></li><li><a href="#t133.3 布署静态网站">3.3 布署静态网站</a><ul><li><a href="#t143.3.1 serverless.yml">3.3.1 serverless.yml</a></li><li><a href="#t153.3.2 index.html">3.3.2 index.html</a></li></ul></li><li><a href="#t163.4 布署express项目">3.4 布署express项目</a><ul><li><a href="#t173.4.1 创建项目">3.4.1 创建项目</a></li><li><a href="#t183.4.2 serverless.yml">3.4.2 serverless.yml</a></li><li><a href="#t193.4.3 sls.js">3.4.3 sls.js</a></li></ul></li><li><a href="#t203.5 布署express+layer项目">3.5 布署express+layer项目</a><ul><li><a href="#t213.5.1 serverless.yml">3.5.1 serverless.yml</a></li><li><a href="#t223.5.2 src\sls.js">3.5.2 src\sls.js</a></li></ul></li><li><a href="#t233.6 部署Vue+Express全栈应用">3.6 部署Vue+Express全栈应用</a><ul><li><a href="#t243.6.1  serverless.yml">3.6.1  serverless.yml</a></li><li><a href="#t253.6.2  api\package.json">3.6.2  api\package.json</a></li><li><a href="#t263.6.3 api\app.js">3.6.3 api\app.js</a></li><li><a href="#t273.6.4 生成前端项目">3.6.4 生成前端项目</a></li><li><a href="#t283.6.5 src\App.vue">3.6.5 src\App.vue</a></li></ul></li></ul></li><li><a href="#t292.RBAC">2.RBAC</a><ul><li><a href="#t302.1 示意图">2.1 示意图</a></li><li><a href="#t312.2 表设计">2.2 表设计</a><ul><li><a href="#t322.2.1 用户表(user)">2.2.1 用户表(user)</a></li><li><a href="#t332.2.2 角色表(role)">2.2.2 角色表(role)</a></li><li><a href="#t342.2.3 权限表(permission)">2.2.3 权限表(permission)</a></li><li><a href="#t352.2.4 角色用户表(role_user)">2.2.4 角色用户表(role_user)</a></li><li><a href="#t362.2.5 角色权限(role_permission)">2.2.5 角色权限(role_permission)</a></li><li><a href="#t372.2.6 数据库脚本">2.2.6 数据库脚本</a></li></ul></li></ul></li><li><a href="#t383.egg.js">3.egg.js</a><ul><li><a href="#t393.1. 初始化项目">3.1. 初始化项目</a></li><li><a href="#t403.2. 添加模块">3.2. 添加模块</a></li><li><a href="#t413.3. config\plugin.js">3.3. config\plugin.js</a></li><li><a href="#t423.4. config\config.default.js">3.4. config\config.default.js</a></li><li><a href="#t433.5. model\user.js">3.5. model\user.js</a></li><li><a href="#t443.6. app\controller\home.js">3.6. app\controller\home.js</a></li><li><a href="#t453.7. app\router.js">3.7. app\router.js</a></li><li><a href="#t463.8. app.js">3.8. app.js</a></li></ul></li><li><a href="#t474. 前端项目">4. 前端项目</a><ul><li><a href="#t484.1. 启动项目">4.1. 启动项目</a></li><li><a href="#t494.2 config\config.ts">4.2 config\config.ts</a></li><li><a href="#t504.3 services\login.ts">4.3 services\login.ts</a></li><li><a href="#t514.4 services\user.ts">4.4 services\user.ts</a></li><li><a href="#t524.5 models\login.ts">4.5 models\login.ts</a></li><li><a href="#t534.6 utils\request.ts">4.6 utils\request.ts</a></li></ul></li></ul>
+    </div>
+    <div class="content markdown-body">
+        <h2 id="t01. Serverless&#x662F;&#x4EC0;&#x4E48;&#xFF1F;">1. Serverless&#x662F;&#x4EC0;&#x4E48;&#xFF1F; <a href="#t01. Serverless&#x662F;&#x4EC0;&#x4E48;&#xFF1F;"> # </a></h2>
+<h3 id="t11.1 Serverless&#x662F;&#x4EC0;&#x4E48;&#xFF1F;">1.1 Serverless&#x662F;&#x4EC0;&#x4E48;&#xFF1F; <a href="#t11.1 Serverless&#x662F;&#x4EC0;&#x4E48;&#xFF1F;"> # </a></h3>
+<ul>
+<li>&#x65E0;&#x670D;&#x52A1;&#x5668;&#x67B6;&#x6784;&#x51E0;&#x4E4E;&#x5C01;&#x88C5;&#x4E86;&#x6240;&#x6709;&#x5E95;&#x5C42;&#x8D44;&#x6E90;&#x7BA1;&#x7406;&#x548C;&#x7CFB;&#x7EDF;&#x8FD0;&#x7EF4;&#x5DE5;&#x4F5C;</li>
+<li>&#x670D;&#x52A1;&#x5668;&#x5E03;&#x7F72;&#x3001;&#x6269;&#x7F29;&#x5BB9;&#x3001;&#x8FD0;&#x7EF4;&#x3001;&#x76D1;&#x63A7;&#x62A5;&#x8B66;&#x4EA4;&#x7531;&#x4E91;&#x670D;&#x52A1;&#x5668;&#x5382;&#x5546;&#x6765;&#x505A;</li>
+<li>&#x524D;&#x7AEF;&#x5F00;&#x53D1;&#x53EA;&#x5173;&#x6CE8;&#x4E1A;&#x52A1;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x5173;&#x6CE8;&#x670D;&#x52A1;&#x5668;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/serverless2.jpg" alt="serverless2"></p>
+<h3 id="t21.2 &#x4E91;&#x51FD;&#x6570;">1.2 &#x4E91;&#x51FD;&#x6570; <a href="#t21.2 &#x4E91;&#x51FD;&#x6570;"> # </a></h3>
+<ul>
+<li><a href="https://console.cloud.tencent.com/scf/list?rid=1&amp;ns=default">&#x51FD;&#x6570;&#x670D;&#x52A1;</a></li>
+</ul>
+<h2 id="t32. serverless framework">2. serverless framework <a href="#t32. serverless framework"> # </a></h2>
+<ul>
+<li>Serverless Framework &#x662F;&#x4E1A;&#x754C;&#x975E;&#x5E38;&#x53D7;&#x6B22;&#x8FCE;&#x7684;&#x65E0;&#x670D;&#x52A1;&#x5668;&#x5E94;&#x7528;&#x6846;&#x67B6;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x65E0;&#x9700;&#x5173;&#x5FC3;&#x5E95;&#x5C42;&#x8D44;&#x6E90;&#x5373;&#x53EF;&#x90E8;&#x7F72;&#x5B8C;&#x6574;&#x53EF;&#x7528;&#x7684; Serverless &#x5E94;&#x7528;&#x67B6;&#x6784;</li>
+<li>Serverless Framework &#x5177;&#x6709;&#x8D44;&#x6E90;&#x7F16;&#x6392;&#x3001;&#x81EA;&#x52A8;&#x4F38;&#x7F29;&#x3001;&#x4E8B;&#x4EF6;&#x9A71;&#x52A8;&#x7B49;&#x80FD;&#x529B;&#xFF0C;&#x8986;&#x76D6;&#x7F16;&#x7801;&#x3001;&#x8C03;&#x8BD5;&#x3001;&#x6D4B;&#x8BD5;&#x3001;&#x90E8;&#x7F72;&#x7B49;&#x5168;&#x751F;&#x547D;&#x5468;&#x671F;&#xFF0C;&#x5E2E;&#x52A9;&#x5F00;&#x53D1;&#x8005;&#x901A;&#x8FC7;&#x8054;&#x52A8;&#x4E91;&#x8D44;&#x6E90;&#xFF0C;&#x8FC5;&#x901F;&#x6784;&#x5EFA; Serverless &#x5E94;&#x7528;</li>
+<li><a href="https://cloud.tencent.com/product/sls">Serverless Framework</a></li>
+<li><a href="https://cloud.tencent.com/document/product/1154">Serverless Framework&#x6587;&#x6863;</a></li>
+<li><a href="https://cloud.tencent.com/document/product/1154/42990">&#x5B89;&#x88C5;Serverless Framework</a></li>
+</ul>
+<pre><code class="lang-js">$ cnpm install -g serverless
+$ cnpm update -g serverless
+$ serverless -v
+</code></pre>
+<h2 id="t43. Serverless Components">3. Serverless Components <a href="#t43. Serverless Components"> # </a></h2>
+<ul>
+<li><a href="https://cloud.tencent.com/document/product/1154/39270">Serverless Components</a>&#x662F;&#x652F;&#x6301;&#x591A;&#x4E2A;&#x4E91;&#x8D44;&#x6E90;&#x7F16;&#x6392;&#x548C;&#x7EC4;&#x7EC7;&#x7684;&#x573A;&#x666F;&#x5316;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF0C;&#x4E3B;&#x8981;&#x57FA;&#x4E8E;&#x5BA2;&#x6237;&#x7684;&#x5177;&#x4F53;&#x573A;&#x666F;&#xFF0C;&#x5982; Express &#x6846;&#x67B6;&#x652F;&#x6301;&#x3001;&#x7F51;&#x7AD9;&#x90E8;&#x7F72;&#x7B49;</li>
+<li>Serverless Components &#x53EF;&#x4EE5;&#x6709;&#x6548;&#x7B80;&#x5316;&#x4E91;&#x8D44;&#x6E90;&#x7684;&#x914D;&#x7F6E;&#x548C;&#x7BA1;&#x7406;&#xFF0C;&#x5C06;&#x7F51;&#x5173;&#x3001;COS &#x548C; CAM &#x7B49;&#x4EA7;&#x54C1;&#x8054;&#x52A8;&#x8D77;&#x6765;&#xFF0C;&#x8BA9;&#x5BA2;&#x6237;&#x66F4;&#x591A;&#x5173;&#x6CE8;&#x573A;&#x666F;&#x548C;&#x4E1A;&#x52A1;</li>
+<li>Serverless Framework Components &#x6700;&#x4F73;&#x5B9E;&#x8DF5;<ul>
+<li>@serverless/tencent-scf - &#x817E;&#x8BAF;&#x4E91;&#x4E91;&#x51FD;&#x6570;&#x7EC4;&#x4EF6;</li>
+<li>@serverless/tencent-express - &#x5FEB;&#x901F;&#x90E8;&#x7F72;&#x57FA;&#x4E8E; Express.js &#x7684;&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5230;&#x817E;&#x8BAF;&#x4E91;&#x51FD;&#x6570;&#x7684;&#x7EC4;&#x4EF6;</li>
+<li>@serverless/tencent-website - &#x5FEB;&#x901F;&#x90E8;&#x7F72;&#x9759;&#x6001;&#x7F51;&#x7AD9;&#x5230;&#x817E;&#x8BAF;&#x4E91;&#x7684;&#x7EC4;&#x4EF6;</li>
+</ul>
+</li>
+</ul>
+<h3 id="t53.1 &#x4E91;&#x51FD;&#x6570; SCF &#x7EC4;&#x4EF6;">3.1 &#x4E91;&#x51FD;&#x6570; SCF &#x7EC4;&#x4EF6; <a href="#t53.1 &#x4E91;&#x51FD;&#x6570; SCF &#x7EC4;&#x4EF6;"> # </a></h3>
+<ul>
+<li><a href="https://cloud.tencent.com/document/product/1154/39271">&#x817E;&#x8BAF;&#x4E91; SCF &#x4E91;&#x51FD;&#x6570;&#x7EC4;&#x4EF6;</a>&#x901A;&#x8FC7;&#x4F7F;&#x7528; Tencent Serverless Framework&#xFF0C;&#x57FA;&#x4E8E;&#x4E91;&#x4E0A; Serverless &#x670D;&#x52A1;&#xFF08;&#x4E91;&#x51FD;&#x6570;&#x53CA;&#x89E6;&#x53D1;&#x5668;&#x7B49;&#xFF09;&#xFF0C;&#x5B9E;&#x73B0;<code>0</code>&#x914D;&#x7F6E;&#xFF0C;&#x4FBF;&#x6377;&#x5F00;&#x53D1;&#xFF0C;&#x6781;&#x901F;&#x90E8;&#x7F72;&#x60A8;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x4E91;&#x51FD;&#x6570;</li>
+<li><a href="https://console.cloud.tencent.com/scf/list">&#x67E5;&#x770B;scf</a></li>
+<li><a href="https://github.com/serverless-components/tencent-scf/blob/v2/doc/serverless.yaml">&#x5168;&#x91CF;&#x914D;&#x7F6E;</a></li>
+</ul>
+<h4 id="t63.1.1 serverless.yml">3.1.1 serverless.yml <a href="#t63.1.1 serverless.yml"> # </a></h4>
+<ul>
+<li><p><a href="https://nodeca.github.io/js-yaml">js-yaml</a></p>
+<p>tencent-scf\serverless.yml</p>
+</li>
+</ul>
+<pre><code class="lang-js"># serverless.yml
+
+component: scf # (&#x5FC5;&#x586B;) &#x5F15;&#x7528; component &#x7684;&#x540D;&#x79F0;&#xFF0C;&#x5F53;&#x524D;&#x7528;&#x5230;&#x7684;&#x662F; tencent-scf &#x7EC4;&#x4EF6;
+name: scfdemo # (&#x5FC5;&#x586B;) &#x8BE5;&#x7EC4;&#x4EF6;&#x521B;&#x5EFA;&#x7684;&#x5B9E;&#x4F8B;&#x540D;&#x79F0;
+org: test # (&#x53EF;&#x9009;) &#x7528;&#x4E8E;&#x8BB0;&#x5F55;&#x7EC4;&#x7EC7;&#x4FE1;&#x606F;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;&#x60A8;&#x7684;&#x817E;&#x8BAF;&#x4E91;&#x8D26;&#x6237; appid
+app: scfApp # (&#x53EF;&#x9009;) &#x8BE5; SCF &#x5E94;&#x7528;&#x540D;&#x79F0;
+stage: dev # (&#x53EF;&#x9009;) &#x7528;&#x4E8E;&#x533A;&#x5206;&#x73AF;&#x5883;&#x4FE1;&#x606F;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x662F; dev
+
+inputs:
+  name: scfFunctionName
+  src: ./src
+  runtime: Nodejs10.15 # &#x4E91;&#x51FD;&#x6570;&#x7684;&#x8FD0;&#x884C;&#x65F6;&#x73AF;&#x5883;&#x3002;&#x9664; Nodejs10.15 &#x5916;&#xFF0C;&#x53EF;&#x9009;&#x503C;&#x4E3A;&#xFF1A;Python2.7&#x3001;Python3.6&#x3001;Nodejs6.10&#x3001;Nodejs8.9&#x3001;PHP5&#x3001;PHP7&#x3001;Golang1&#x3001;Java8&#x3002;
+  region: ap-beijing
+  handler: index.main_handler
+  events:
+    - apigw:
+        name: serverless_api
+        parameters:
+          protocols:
+            - http
+            - https
+          serviceName:
+          description: The service of Serverless Framework
+          environment: release
+          endpoints:
+            - path: /index
+              method: GET
+</code></pre>
+<h4 id="t73.1.2 src\index.js">3.1.2 src\index.js <a href="#t73.1.2 src\index.js"> # </a></h4>
+<p>tencent-scf\src\index.js</p>
+<pre><code class="lang-js"><span class="hljs-meta">&apos;use strict&apos;</span>;
+exports.main_handler = <span class="hljs-keyword">async</span> (event, context, callback) =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Hello World&quot;</span>)
+    <span class="hljs-built_in">console</span>.log(event)
+    <span class="hljs-built_in">console</span>.log(event[<span class="hljs-string">&quot;non-exist&quot;</span>])
+    <span class="hljs-built_in">console</span>.log(context)
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Hello World&quot;</span>;
+};
+</code></pre>
+<h4 id="t83.1.3 tencent-scf.env">3.1.3 tencent-scf.env <a href="#t83.1.3 tencent-scf.env"> # </a></h4>
+<p>tencent-scf.env</p>
+<ul>
+<li>&#x5F53;&#x524D;&#x9ED8;&#x8BA4;&#x652F;&#x6301; CLI &#x626B;&#x63CF;&#x4E8C;&#x7EF4;&#x7801;&#x767B;&#x5F55;&#xFF0C;&#x5982;&#x60A8;&#x5E0C;&#x671B;&#x914D;&#x7F6E;&#x6301;&#x4E45;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;/&#x5BC6;&#x94A5;&#x4FE1;&#x606F;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x672C;&#x5730;&#x521B;&#x5EFA; .env &#x6587;&#x4EF6;&#xFF1A;</li>
+<li><a href="https://console.cloud.tencent.com/cam/capi">API&#x5BC6;&#x94A5;&#x7BA1;&#x7406;</a></li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/wechatlogin.jpg" alt="wechatlogin"></p>
+<pre><code class="lang-js">TENCENT_APP_ID=
+TENCENT_SECRET_ID=
+TENCENT_SECRET_KEY=
+</code></pre>
+<h4 id="t93.1.4 &#x5E03;&#x7F72;">3.1.4 &#x5E03;&#x7F72; <a href="#t93.1.4 &#x5E03;&#x7F72;"> # </a></h4>
+<pre><code class="lang-js">sls --debug
+</code></pre>
+<h3 id="t103.2 API &#x7F51;&#x5173;&#x7EC4;&#x4EF6;">3.2 API &#x7F51;&#x5173;&#x7EC4;&#x4EF6; <a href="#t103.2 API &#x7F51;&#x5173;&#x7EC4;&#x4EF6;"> # </a></h3>
+<ul>
+<li>API&#x7F51;&#x5173;&#x662F;&#x5C06;&#x6240;&#x6709;API&#x7684;&#x8C03;&#x7528;&#x7EDF;&#x4E00;&#x63A5;&#x5165;API&#x7F51;&#x5173;&#x5C42;&#xFF0C;&#x7531;&#x7F51;&#x5173;&#x5C42;&#x8D1F;&#x8D23;&#x63A5;&#x5165;&#x548C;&#x8F93;&#x51FA;</li>
+<li>API&#x7F51;&#x5173;&#x662F;&#x7528;&#x6237;&#x4E0E;&#x670D;&#x52A1;&#x5668;&#x7684;&#x8FDE;&#x63A5;&#x5668;&#xFF0C;&#x8D1F;&#x8D23;API&#x63A5;&#x53E3;&#x7684;&#x6258;&#x7BA1;&#xFF0C;&#x5B9E;&#x73B0;&#x5B89;&#x5168;&#x9632;&#x62A4;&#x548C;&#x7EDF;&#x4E00;&#x76D1;&#x63A7;&#x3002;</li>
+<li>API&#x7F51;&#x5173;&#x7EC4;&#x4EF6;&#x662F; serverless-tencent &#x7EC4;&#x4EF6;&#x5E93;&#x4E2D;&#x7684;&#x57FA;&#x7840;&#x7EC4;&#x4EF6;&#x4E4B;&#x4E00;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8BE5;&#x7EC4;&#x4EF6;&#x5FEB;&#x901F;&#x4E14;&#x65B9;&#x4FBF;&#x5730;&#x521B;&#x5EFA;&#x3001;&#x914D;&#x7F6E;&#x548C;&#x7BA1;&#x7406;&#x817E;&#x8BAF;&#x4E91;&#x7684; API &#x7F51;&#x5173;&#x4EA7;&#x54C1;&#x3002;</li>
+<li>&#x901A;&#x8FC7; API &#x7F51;&#x5173;&#x7EC4;&#x4EF6;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x5BF9;&#x4E00;&#x4E2A; API &#x670D;&#x52A1;/&#x63A5;&#x53E3;&#x8FDB;&#x884C;&#x5B8C;&#x6574;&#x7684;&#x521B;&#x5EFA;&#x3001;&#x914D;&#x7F6E;&#x3001;&#x90E8;&#x7F72;&#x548C;&#x5220;&#x9664;&#x7B49;&#x64CD;&#x4F5C;</li>
+<li><a href="https://github.com/serverless-components/tencent-apigateway/blob/master/docs/configure.md">&#x5168;&#x91CF;&#x914D;&#x7F6E;</a></li>
+</ul>
+<h4 id="t113.2.1 tencent-api\serverless.yml">3.2.1 tencent-api\serverless.yml <a href="#t113.2.1 tencent-api\serverless.yml"> # </a></h4>
+<pre><code class="lang-js"># serverless.yml
+
+restApi:
+    component: &quot;@serverless/tencent-apigateway&quot;
+    inputs:
+      region: ap-beijing
+      protocol: http
+      serviceName: serverless
+      environment: release
+      endpoints:
+        - path: /users
+          method: GET
+          function:
+            functionName: scfFunctionName
+</code></pre>
+<h4 id="t123.2.2 &#x5E03;&#x7F72;">3.2.2 &#x5E03;&#x7F72; <a href="#t123.2.2 &#x5E03;&#x7F72;"> # </a></h4>
+<pre><code class="lang-js">sls --debug
+</code></pre>
+<pre><code class="lang-js">http:<span class="hljs-comment">//service-mpkd1e88-1258145019.gz.apigw.tencentcs.com/users</span>
+</code></pre>
+<h3 id="t133.3 &#x5E03;&#x7F72;&#x9759;&#x6001;&#x7F51;&#x7AD9;">3.3 &#x5E03;&#x7F72;&#x9759;&#x6001;&#x7F51;&#x7AD9; <a href="#t133.3 &#x5E03;&#x7F72;&#x9759;&#x6001;&#x7F51;&#x7AD9;"> # </a></h3>
+<ul>
+<li><a href="https://github.com/serverless-components/tencent-website/blob/v2/doc/serverless.yaml">&#x5B8C;&#x6574;&#x914D;&#x7F6E;</a></li>
+</ul>
+<h4 id="t143.3.1 serverless.yml">3.3.1 serverless.yml <a href="#t143.3.1 serverless.yml"> # </a></h4>
+<p>staticwebsite\serverless.yml</p>
+<pre><code class="lang-js">component: website # (&#x5FC5;&#x586B;) &#x5F15;&#x7528; component &#x7684;&#x540D;&#x79F0;&#xFF0C;&#x5F53;&#x524D;&#x7528;&#x5230;&#x7684;&#x662F; tencent-website &#x7EC4;&#x4EF6;
+name: websitedemo # (&#x5FC5;&#x586B;) &#x8BE5; website &#x7EC4;&#x4EF6;&#x521B;&#x5EFA;&#x7684;&#x5B9E;&#x4F8B;&#x540D;&#x79F0;
+org: test # (&#x53EF;&#x9009;) &#x7528;&#x4E8E;&#x8BB0;&#x5F55;&#x7EC4;&#x7EC7;&#x4FE1;&#x606F;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;&#x60A8;&#x7684;&#x817E;&#x8BAF;&#x4E91;&#x8D26;&#x6237; appid
+app: websiteApp # (&#x53EF;&#x9009;) &#x8BE5; website &#x5E94;&#x7528;&#x540D;&#x79F0;
+stage: dev # (&#x53EF;&#x9009;) &#x7528;&#x4E8E;&#x533A;&#x5206;&#x73AF;&#x5883;&#x4FE1;&#x606F;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x662F; dev
+
+inputs:
+  code:
+    src: ./code
+    index: index.html
+    error: index.html  
+  region: ap-beijing
+  bucketName: my-bucket
+</code></pre>
+<h4 id="t153.3.2 index.html">3.3.2 index.html <a href="#t153.3.2 index.html"> # </a></h4>
+<p>staticwebsite\code\index.html</p>
+<pre><code class="lang-js">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    static website
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<h3 id="t163.4 &#x5E03;&#x7F72;express&#x9879;&#x76EE;">3.4 &#x5E03;&#x7F72;express&#x9879;&#x76EE; <a href="#t163.4 &#x5E03;&#x7F72;express&#x9879;&#x76EE;"> # </a></h3>
+<ul>
+<li><a href="https://github.com/serverless-components/tencent-express/blob/v2/docs/configure.md">&#x5168;&#x91CF;&#x914D;&#x7F6E;</a></li>
+</ul>
+<h4 id="t173.4.1 &#x521B;&#x5EFA;&#x9879;&#x76EE;">3.4.1 &#x521B;&#x5EFA;&#x9879;&#x76EE; <a href="#t173.4.1 &#x521B;&#x5EFA;&#x9879;&#x76EE;"> # </a></h4>
+<pre><code class="lang-js">mkdir tencent-express
+cd tencent-express
+npm init -y
+cnpm i express -S
+</code></pre>
+<h4 id="t183.4.2 serverless.yml">3.4.2 serverless.yml <a href="#t183.4.2 serverless.yml"> # </a></h4>
+<p>tencent-express\serverless.yml</p>
+<pre><code class="lang-js">org: orgDemo # (optional) serverless dashboard org. default is the first org you created during signup.
+app: appDemo # (optional) serverless dashboard app. default is the same as the name property.
+stage: dev # (optional) serverless dashboard stage. default is dev.
+component: express # (required) name of the component. In that case, it&apos;s express.
+name: expressDemo # (required) name of your express component instance.
+
+inputs:
+  src: ./
+  region: ap-beijing
+  runtime: Nodejs10.15
+  apigatewayConf:
+    protocols:
+      - http
+      - https
+    environment: release
+</code></pre>
+<h4 id="t193.4.3 sls.js">3.4.3 sls.js <a href="#t193.4.3 sls.js"> # </a></h4>
+<p>tencent-express\sls.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express&apos;</span>)
+<span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>)
+<span class="hljs-keyword">const</span> app = express()
+
+app.get(<span class="hljs-string">`/*`</span>, (req, res) =&gt; {
+    res.send(<span class="hljs-string">&apos;i am express&apos;</span>)
+})
+<span class="hljs-built_in">module</span>.exports = app
+</code></pre>
+<h3 id="t203.5 &#x5E03;&#x7F72;express+layer&#x9879;&#x76EE;">3.5 &#x5E03;&#x7F72;express+layer&#x9879;&#x76EE; <a href="#t203.5 &#x5E03;&#x7F72;express+layer&#x9879;&#x76EE;"> # </a></h3>
+<ul>
+<li><a href="https://cloud.tencent.com/document/product/583/40159">&#x5C42;&#x7BA1;&#x7406;</a></li>
+<li><a href="https://github.com/serverless-components/tencent-egg/issues/5">&#x6253;&#x5305;&#x538B;&#x7F29;&#x9636;&#x6BB5;</a></li>
+</ul>
+<h4 id="t213.5.1 serverless.yml">3.5.1 serverless.yml <a href="#t213.5.1 serverless.yml"> # </a></h4>
+<p>tencent-express-layer\serverless.yml</p>
+<pre><code class="lang-js">org: orgDemo # (optional) serverless dashboard org. default is the first org you created during signup.
+app: appDemo # (optional) serverless dashboard app. default is the same as the name property.
+stage: dev # (optional) serverless dashboard stage. default is dev.
+component: express # (required) name of the component. In that case, it&apos;s express.
+name: expressLayerDemo # (required) name of your express component instance.
+
+inputs:
+  src:
+    src: ./src # (optional) path to the source folder. default is a hello world app.
+    exclude:
+      - .env
+  region: ap-beijing
+  layers:
+    - name: nodeLayer
+      version: 1
+  runtime: Nodejs10.15
+  apigatewayConf:
+    protocols:
+      - http
+      - https
+    environment: release
+</code></pre>
+<h4 id="t223.5.2 src\sls.js">3.5.2 src\sls.js <a href="#t223.5.2 src\sls.js"> # </a></h4>
+<p>tencent-express-layer\src\sls.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express&apos;</span>)
+<span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>)
+<span class="hljs-keyword">const</span> app = express()
+
+app.get(<span class="hljs-string">`/*`</span>, (req, res) =&gt; {
+    res.sendFile(path.join(__dirname, <span class="hljs-string">&apos;index.html&apos;</span>))
+})
+
+app.use(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err, req, res</span>) </span>{
+    <span class="hljs-built_in">console</span>.error(err)
+    res.status(<span class="hljs-number">500</span>).send(<span class="hljs-string">&apos;Internal Serverless Error&apos;</span>)
+})
+
+<span class="hljs-built_in">module</span>.exports = app
+</code></pre>
+<h3 id="t233.6 &#x90E8;&#x7F72;Vue+Express&#x5168;&#x6808;&#x5E94;&#x7528;">3.6 &#x90E8;&#x7F72;Vue+Express&#x5168;&#x6808;&#x5E94;&#x7528; <a href="#t233.6 &#x90E8;&#x7F72;Vue+Express&#x5168;&#x6808;&#x5E94;&#x7528;"> # </a></h3>
+<ul>
+<li>&#x5168;&#x6808;&#x7EC4;&#x4EF6;&#xFF08;Vue.js+Express.js&#xFF09;&#x7528;&#x4E8E;&#x901A;&#x8FC7;&#x591A;&#x4E2A; Serverless Components &#x90E8;&#x7F72; Serverless &#x5168;&#x6808;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;</li>
+<li>&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;&#x5F00;&#x53D1;&#x8005;&#x66F4;&#x65B9;&#x4FBF;&#x5FEB;&#x6377;&#x7684;&#x90E8;&#x7F72; Serverless &#x5E94;&#x7528;&#xFF0C;&#x4F8B;&#x5982;&#x5229;&#x7528;&#x540E;&#x7AEF; API &#x4E0E;&#x524D;&#x7AEF; Vue.js &#x7ED3;&#x5408;&#x7B49;&#x573A;&#x666F;</li>
+<li>serverless Express.js &#x540E;&#x7AEF;&#xFF1A;&#x7531;&#x817E;&#x8BAF;&#x4E91; Serverless Cloud Function&#xFF08;&#x4E91;&#x51FD;&#x6570; SCF&#xFF09; &#x548C;&#x817E;&#x8BAF;&#x4E91; API &#x7F51;&#x5173;&#x63D0;&#x4F9B;&#x76F8;&#x5173;&#x80FD;&#x529B;&#xFF0C;&#x652F;&#x6301; express.js &#x6846;&#x67B6;&#xFF0C;&#x5E2E;&#x52A9;&#x5F00;&#x53D1;&#x8005;&#x67B6;&#x6784;&#x81EA;&#x5DF1;&#x7684;&#x9879;&#x76EE;&#x548C;&#x8DEF;&#x7531;&#x3002;</li>
+<li>serverless Vue.js &#x524D;&#x7AEF;&#xFF1A;&#x7531;&#x817E;&#x8BAF;&#x4E91; Cloud Object Storage&#xFF08;&#x5BF9;&#x8C61;&#x5B58;&#x50A8; COS&#xFF09;&#x63D0;&#x4F9B;&#x76F8;&#x5173;&#x5B58;&#x50A8;&#x80FD;&#x529B;&#xFF0C;&#x901A;&#x8FC7;&#x540E;&#x7AEF; API &#x4F20;&#x9012;&#x5230;&#x524D;&#x7AEF;&#xFF0C;&#x5E76;&#x4F7F;&#x7528; Vue.js &#x505A;&#x76F8;&#x5173;&#x6E32;&#x67D3;</li>
+</ul>
+<p><img src="https://main.qcloudimg.com/raw/21ae7465b6927c14d9bc4ae6dc33fc17.png" alt="21ae7465b6927c14d9bc4ae6dc33fc17"></p>
+<h4 id="t243.6.1  serverless.yml">3.6.1  serverless.yml <a href="#t243.6.1  serverless.yml"> # </a></h4>
+<p>vue-fullstack\serverless.yml</p>
+<pre><code class="lang-js">name: tencent-fullstack-vue-application
+
+<span class="hljs-attr">dashboard</span>:
+  component: <span class="hljs-string">&apos;@serverless/tencent-website&apos;</span>
+  <span class="hljs-attr">inputs</span>:
+    code:
+      src: dist
+      <span class="hljs-attr">root</span>: dashboard
+      <span class="hljs-attr">hook</span>: npm run build
+    <span class="hljs-attr">env</span>:
+      apiUrl: ${api.url}
+<span class="hljs-attr">api</span>:
+  component: <span class="hljs-string">&apos;@serverless/tencent-express&apos;</span>
+  <span class="hljs-attr">inputs</span>:
+    code: ./api
+    <span class="hljs-attr">functionName</span>: tencent-fullstack-vue-api
+    <span class="hljs-attr">apigatewayConf</span>:
+      protocols:
+        - https
+</code></pre>
+<h4 id="t253.6.2  api\package.json">3.6.2  api\package.json <a href="#t253.6.2  api\package.json"> # </a></h4>
+<p>vue-fullstack\api\package.json</p>
+<pre><code class="lang-json">{
+  <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;tencent-fullstack-vue-api&quot;</span>,
+  <span class="hljs-attr">&quot;version&quot;</span>: <span class="hljs-string">&quot;0.0.0&quot;</span>,
+  <span class="hljs-attr">&quot;dependencies&quot;</span>: {
+    <span class="hljs-attr">&quot;cors&quot;</span>: <span class="hljs-string">&quot;^2.8.5&quot;</span>,
+    <span class="hljs-attr">&quot;express&quot;</span>: <span class="hljs-string">&quot;^4.17.1&quot;</span>
+  },
+  <span class="hljs-attr">&quot;license&quot;</span>: <span class="hljs-string">&quot;ISC&quot;</span>
+}
+</code></pre>
+<h4 id="t263.6.3 api\app.js">3.6.3 api\app.js <a href="#t263.6.3 api\app.js"> # </a></h4>
+<p>vue-fullstack\api\app.js</p>
+<pre><code class="lang-js"><span class="hljs-meta">&apos;use strict&apos;</span>
+<span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express&apos;</span>);
+<span class="hljs-keyword">const</span> cors = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;cors&apos;</span>);
+<span class="hljs-keyword">const</span> app = express();
+app.use(cors());
+
+app.get(<span class="hljs-string">&apos;/&apos;</span>, (req, res) =&gt; {
+    res.send(<span class="hljs-built_in">JSON</span>.stringify({ <span class="hljs-attr">message</span>: <span class="hljs-string">`&#x73E0;&#x5CF0;&#x67B6;&#x6784;`</span> }))
+});
+
+<span class="hljs-built_in">module</span>.exports = app;
+</code></pre>
+<h4 id="t273.6.4 &#x751F;&#x6210;&#x524D;&#x7AEF;&#x9879;&#x76EE;">3.6.4 &#x751F;&#x6210;&#x524D;&#x7AEF;&#x9879;&#x76EE; <a href="#t273.6.4 &#x751F;&#x6210;&#x524D;&#x7AEF;&#x9879;&#x76EE;"> # </a></h4>
+<pre><code class="lang-js">vue create dashboard
+</code></pre>
+<h4 id="t283.6.5 src\App.vue">3.6.5 src\App.vue <a href="#t283.6.5 src\App.vue"> # </a></h4>
+<p>vue-fullstack\dashboard\src\App.vue</p>
+<pre><code class="lang-js">&lt;template&gt;
+  &lt;div id=&quot;app&quot;&gt;{{message}}&lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import &quot;../env&quot;;
+export default {
+  name: &quot;App&quot;,
+  data() {
+    return {
+      message: &quot;message&quot;
+    };
+  },
+  mounted() {
+    fetch(window.env.apiUrl)
+      .then(res =&gt; res.json())
+      .then(result =&gt; {
+        this.message = result.message;
+      });
+  }
+};
+&lt;/script&gt;
+</code></pre>
+<h2 id="t292.RBAC">2.RBAC <a href="#t292.RBAC"> # </a></h2>
+<ul>
+<li>&#x57FA;&#x4E8E;&#x89D2;&#x8272;&#x7684;&#x6743;&#x9650;&#x8BBF;&#x95EE;&#x63A7;&#x5236;&#xFF08;Role-Based Access Control&#xFF09; </li>
+<li>RBAC&#xFF08;Role-Based Access Control&#xFF0C;&#x57FA;&#x4E8E;&#x89D2;&#x8272;&#x7684;&#x8BBF;&#x95EE;&#x63A7;&#x5236;&#xFF09;&#xFF0C;&#x5C31;&#x662F;&#x7528;&#x6237;&#x901A;&#x8FC7;&#x89D2;&#x8272;&#x4E0E;&#x6743;&#x9650;&#x8FDB;&#x884C;&#x5173;&#x8054;</li>
+<li>&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x62E5;&#x6709;&#x82E5;&#x5E72;&#x89D2;&#x8272;,&#x6BCF;&#x4E00;&#x4E2A;&#x89D2;&#x8272;&#x62E5;&#x6709;&#x82E5;&#x5E72;&#x6743;&#x9650;&#x3002;&#x8FD9;&#x6837;&#xFF0C;&#x5C31;&#x6784;&#x9020;&#x6210;<code>&#x7528;&#x6237;-&#x89D2;&#x8272;-&#x6743;&#x9650;</code>&#x7684;&#x6388;&#x6743;&#x6A21;&#x578B;</li>
+<li>&#x5728;&#x8FD9;&#x79CD;&#x6A21;&#x578B;&#x4E2D;&#xFF0C;&#x7528;&#x6237;&#x4E0E;&#x89D2;&#x8272;&#x4E4B;&#x95F4;&#xFF0C;&#x89D2;&#x8272;&#x4E0E;&#x6743;&#x9650;&#x4E4B;&#x95F4;&#x4E00;&#x822C;&#x662F;&#x591A;&#x5BF9;&#x591A;&#x7684;&#x5173;&#x7CFB;</li>
+<li>&#x5728;RBAC&#x4E2D;&#x6700;&#x91CD;&#x8981;&#x7684;&#x6982;&#x5FF5;&#x5305;&#x62EC;&#xFF1A;&#x7528;&#x6237;(User)&#xFF0C;&#x89D2;&#x8272;(Role)&#xFF0C;&#x6743;&#x9650;(Permission)</li>
+</ul>
+<h3 id="t302.1 &#x793A;&#x610F;&#x56FE;">2.1 &#x793A;&#x610F;&#x56FE; <a href="#t302.1 &#x793A;&#x610F;&#x56FE;"> # </a></h3>
+<p><img src="http://img.zhufengpeixun.cn/rbacimage.jpg" alt="rbacimage"></p>
+<p><img src="http://img.zhufengpeixun.cn/rbac.png" alt="rbac"></p>
+<h3 id="t312.2 &#x8868;&#x8BBE;&#x8BA1;">2.2 &#x8868;&#x8BBE;&#x8BA1; <a href="#t312.2 &#x8868;&#x8BBE;&#x8BA1;"> # </a></h3>
+<h4 id="t322.2.1 &#x7528;&#x6237;&#x8868;(user)">2.2.1 &#x7528;&#x6237;&#x8868;(user) <a href="#t322.2.1 &#x7528;&#x6237;&#x8868;(user)"> # </a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x5B57;&#x6BB5;&#x540D;</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x9ED8;&#x8BA4;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">id</td>
+<td style="text-align:left">ID</td>
+<td style="text-align:left">int(11)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">userName</td>
+<td style="text-align:left">&#x7528;&#x6237;&#x540D;</td>
+<td style="text-align:left">varchar(255)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">password</td>
+<td style="text-align:left">&#x5BC6;&#x7801;</td>
+<td style="text-align:left">varchar(255)</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-js">CREATE TABLE <span class="hljs-string">`user`</span>  (
+  <span class="hljs-string">`id`</span> int(<span class="hljs-number">11</span>) NOT NULL AUTO_INCREMENT,
+  <span class="hljs-string">`userName`</span> varchar(<span class="hljs-number">255</span>),
+  <span class="hljs-string">`password`</span> varchar(<span class="hljs-number">255</span>),
+  PRIMARY KEY (<span class="hljs-string">`id`</span>) 
+)
+
+INSERT INTO <span class="hljs-string">`user`</span> VALUES (<span class="hljs-number">1</span>, <span class="hljs-string">&apos;isadmin&apos;</span>, <span class="hljs-string">&apos;123456&apos;</span>);
+INSERT INTO <span class="hljs-string">`user`</span> VALUES (<span class="hljs-number">2</span>, <span class="hljs-string">&apos;isuser&apos;</span>, <span class="hljs-string">&apos;123456&apos;</span>);
+</code></pre>
+<h4 id="t332.2.2 &#x89D2;&#x8272;&#x8868;(role)">2.2.2 &#x89D2;&#x8272;&#x8868;(role) <a href="#t332.2.2 &#x89D2;&#x8272;&#x8868;(role)"> # </a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x5B57;&#x6BB5;&#x540D;</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x9ED8;&#x8BA4;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">id</td>
+<td style="text-align:left">ID</td>
+<td style="text-align:left">int(11)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">name</td>
+<td style="text-align:left">&#x540D;&#x79F0;</td>
+<td style="text-align:left">varchar(255)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">desc</td>
+<td style="text-align:left">&#x63CF;&#x8FF0;</td>
+<td style="text-align:left">varchar(255)</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-js">CREATE TABLE <span class="hljs-string">`role`</span>  (
+  <span class="hljs-string">`id`</span> int(<span class="hljs-number">11</span>) NOT NULL AUTO_INCREMENT,
+  <span class="hljs-string">`name`</span> varchar(<span class="hljs-number">255</span>) ,
+  <span class="hljs-string">`desc`</span> varchar(<span class="hljs-number">255</span>) ,
+  PRIMARY KEY (<span class="hljs-string">`id`</span>) 
+) E
+
+INSERT INTO <span class="hljs-string">`role`</span> VALUES (<span class="hljs-number">1</span>, <span class="hljs-string">&apos;admin&apos;</span>, <span class="hljs-string">&apos;&#x7BA1;&#x7406;&#x5458;&apos;</span>);
+INSERT INTO <span class="hljs-string">`role`</span> VALUES (<span class="hljs-number">2</span>, <span class="hljs-string">&apos;user&apos;</span>, <span class="hljs-string">&apos;&#x666E;&#x901A;&#x7528;&#x6237;&apos;</span>);
+</code></pre>
+<h4 id="t342.2.3 &#x6743;&#x9650;&#x8868;(permission)">2.2.3 &#x6743;&#x9650;&#x8868;(permission) <a href="#t342.2.3 &#x6743;&#x9650;&#x8868;(permission)"> # </a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x5B57;&#x6BB5;&#x540D;</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x9ED8;&#x8BA4;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">id</td>
+<td style="text-align:left">ID</td>
+<td style="text-align:left">int(11)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">name</td>
+<td style="text-align:left">&#x540D;&#x79F0;</td>
+<td style="text-align:left">varchar(255)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">parent_id</td>
+<td style="text-align:left">&#x7236;ID</td>
+<td style="text-align:left">int(11)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">icon</td>
+<td style="text-align:left">&#x56FE;&#x6807;</td>
+<td style="text-align:left">varchar(255)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">key</td>
+<td style="text-align:left">&#x8DEF;&#x5F84;</td>
+<td style="text-align:left">varchar(255)</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">type</td>
+<td style="text-align:left">&#x7C7B;&#x578B;</td>
+<td style="text-align:left">varchar(32)</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-js">CREATE TABLE <span class="hljs-string">`permission`</span>  (
+  <span class="hljs-string">`id`</span> int(<span class="hljs-number">11</span>) NOT NULL AUTO_INCREMENT,
+  <span class="hljs-string">`name`</span> varchar(<span class="hljs-number">255</span>) ,
+  <span class="hljs-string">`parent_id`</span> int(<span class="hljs-number">11</span>) NULL DEFAULT NULL,
+  <span class="hljs-string">`icon`</span> varchar(<span class="hljs-number">255</span>) ,
+  <span class="hljs-string">`key`</span> varchar(<span class="hljs-number">255</span>) ,
+  <span class="hljs-string">`type`</span> varchar(<span class="hljs-number">255</span>) ,
+  PRIMARY KEY (<span class="hljs-string">`id`</span>) 
+);
+
+INSERT INTO <span class="hljs-string">`permission`</span> VALUES (<span class="hljs-number">1</span>, <span class="hljs-string">&apos;&#x6388;&#x6743;&#x5E73;&#x53F0;&apos;</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&apos;desktop&apos;</span>, <span class="hljs-string">&apos;/api&apos;</span>, <span class="hljs-string">&apos;menu&apos;</span>);
+INSERT INTO <span class="hljs-string">`permission`</span> VALUES (<span class="hljs-number">2</span>, <span class="hljs-string">&apos;&#x89D2;&#x8272;&#x7BA1;&#x7406;&apos;</span>, <span class="hljs-number">1</span>, <span class="hljs-string">&apos;team&apos;</span>, <span class="hljs-string">&apos;/api/role&apos;</span>, <span class="hljs-string">&apos;menu&apos;</span>);
+INSERT INTO <span class="hljs-string">`permission`</span> VALUES (<span class="hljs-number">3</span>, <span class="hljs-string">&apos;&#x7528;&#x6237;&#x7BA1;&#x7406;&apos;</span>, <span class="hljs-number">1</span>, <span class="hljs-string">&apos;user&apos;</span>, <span class="hljs-string">&apos;/api/user&apos;</span>, <span class="hljs-string">&apos;menu&apos;</span>);
+INSERT INTO <span class="hljs-string">`permission`</span> VALUES (<span class="hljs-number">4</span>, <span class="hljs-string">&apos;&#x6743;&#x9650;&#x7BA1;&#x7406;&apos;</span>, <span class="hljs-number">1</span>, <span class="hljs-string">&apos;idcard&apos;</span>, <span class="hljs-string">&apos;/api/resource&apos;</span>, <span class="hljs-string">&apos;menu&apos;</span>);
+INSERT INTO <span class="hljs-string">`permission`</span> VALUES (<span class="hljs-number">5</span>, <span class="hljs-string">&apos;&#x6DFB;&#x52A0;&#x7528;&#x6237;&apos;</span>, <span class="hljs-number">3</span>, <span class="hljs-string">&apos;team&apos;</span>, <span class="hljs-string">&apos;/api/user/add&apos;</span>, <span class="hljs-string">&apos;button&apos;</span>);
+INSERT INTO <span class="hljs-string">`permission`</span> VALUES (<span class="hljs-number">6</span>, <span class="hljs-string">&apos;&#x5220;&#x9664;&#x7528;&#x6237;&apos;</span>, <span class="hljs-number">3</span>, <span class="hljs-string">&apos;team&apos;</span>, <span class="hljs-string">&apos;/api/user/delete&apos;</span>, <span class="hljs-string">&apos;button&apos;</span>);
+</code></pre>
+<h4 id="t352.2.4 &#x89D2;&#x8272;&#x7528;&#x6237;&#x8868;(role_user)">2.2.4 &#x89D2;&#x8272;&#x7528;&#x6237;&#x8868;(role_user) <a href="#t352.2.4 &#x89D2;&#x8272;&#x7528;&#x6237;&#x8868;(role_user)"> # </a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x5B57;&#x6BB5;&#x540D;</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">role_id</td>
+<td style="text-align:left">&#x89D2;&#x8272;ID</td>
+<td style="text-align:left">int(11)</td>
+</tr>
+<tr>
+<td style="text-align:left">user_id</td>
+<td style="text-align:left">&#x7528;&#x6237;ID</td>
+<td style="text-align:left">int(11)</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-js">DROP TABLE IF EXISTS <span class="hljs-string">`role_user`</span>;
+CREATE TABLE <span class="hljs-string">`role_user`</span>  (
+  <span class="hljs-string">`role_id`</span> int(<span class="hljs-number">11</span>) NOT NULL,
+  <span class="hljs-string">`user_id`</span> int(<span class="hljs-number">11</span>) NOT NULL,
+  PRIMARY KEY (<span class="hljs-string">`user_id`</span>, <span class="hljs-string">`role_id`</span>) 
+) 
+
+INSERT INTO <span class="hljs-string">`role_user`</span> VALUES (<span class="hljs-number">1</span>, <span class="hljs-number">1</span>);
+INSERT INTO <span class="hljs-string">`role_user`</span> VALUES (<span class="hljs-number">2</span>, <span class="hljs-number">2</span>);
+</code></pre>
+<h4 id="t362.2.5 &#x89D2;&#x8272;&#x6743;&#x9650;(role_permission)">2.2.5 &#x89D2;&#x8272;&#x6743;&#x9650;(role_permission) <a href="#t362.2.5 &#x89D2;&#x8272;&#x6743;&#x9650;(role_permission)"> # </a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x5B57;&#x6BB5;&#x540D;</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">role_id</td>
+<td style="text-align:left">&#x89D2;&#x8272;ID</td>
+<td style="text-align:left">int(11)</td>
+</tr>
+<tr>
+<td style="text-align:left">permission_id</td>
+<td style="text-align:left">&#x8D44;&#x6E90;ID</td>
+<td style="text-align:left">int(11)</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-js">CREATE TABLE <span class="hljs-string">`role_permission`</span>  (
+  <span class="hljs-string">`role_id`</span> int(<span class="hljs-number">11</span>) NOT NULL,
+  <span class="hljs-string">`permission_id`</span> int(<span class="hljs-number">255</span>) NOT NULL,
+  PRIMARY KEY (<span class="hljs-string">`role_id`</span>, <span class="hljs-string">`permission_id`</span>) 
+) 
+
+INSERT INTO <span class="hljs-string">`role_permission`</span> VALUES (<span class="hljs-number">1</span>, <span class="hljs-number">1</span>);
+INSERT INTO <span class="hljs-string">`role_permission`</span> VALUES (<span class="hljs-number">1</span>, <span class="hljs-number">2</span>);
+INSERT INTO <span class="hljs-string">`role_permission`</span> VALUES (<span class="hljs-number">1</span>, <span class="hljs-number">3</span>);
+INSERT INTO <span class="hljs-string">`role_permission`</span> VALUES (<span class="hljs-number">1</span>, <span class="hljs-number">4</span>);
+INSERT INTO <span class="hljs-string">`role_permission`</span> VALUES (<span class="hljs-number">1</span>, <span class="hljs-number">5</span>);
+INSERT INTO <span class="hljs-string">`role_permission`</span> VALUES (<span class="hljs-number">1</span>, <span class="hljs-number">6</span>);
+INSERT INTO <span class="hljs-string">`role_permission`</span> VALUES (<span class="hljs-number">2</span>, <span class="hljs-number">1</span>);
+INSERT INTO <span class="hljs-string">`role_permission`</span> VALUES (<span class="hljs-number">2</span>, <span class="hljs-number">4</span>);
+</code></pre>
+<h4 id="t372.2.6 &#x6570;&#x636E;&#x5E93;&#x811A;&#x672C;">2.2.6 &#x6570;&#x636E;&#x5E93;&#x811A;&#x672C; <a href="#t372.2.6 &#x6570;&#x636E;&#x5E93;&#x811A;&#x672C;"> # </a></h4>
+<ul>
+<li><a href="http://img.zhufengpeixun.cn/cms.sql">cms.sql</a></li>
+</ul>
+<h2 id="t383.egg.js">3.egg.js <a href="#t383.egg.js"> # </a></h2>
+<ul>
+<li><a href="https://github.com/serverless-components/tencent-egg">tencent-egg</a></li>
+</ul>
+<h3 id="t393.1. &#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;">3.1. &#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE; <a href="#t393.1. &#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;"> # </a></h3>
+<pre><code class="lang-js">$ mkdir egg-cms &amp;&amp; cd egg-cms
+$ cnpm init egg --type=simple
+$ cnpm i
+</code></pre>
+<h3 id="t403.2. &#x6DFB;&#x52A0;&#x6A21;&#x5757;">3.2. &#x6DFB;&#x52A0;&#x6A21;&#x5757; <a href="#t403.2. &#x6DFB;&#x52A0;&#x6A21;&#x5757;"> # </a></h3>
+<ul>
+<li><a href="https://dev.mysql.com/doc/refman/5.6/en/">mysql</a></li>
+<li><a href="https://github.com/microsoftarchive/redis/releases">redis</a></li>
+</ul>
+<pre><code class="lang-js">$ cd egg-cms
+$ npm install egg-sequelize mysql2 egg-jwt egg-redis --save
+</code></pre>
+<h3 id="t413.3. config\plugin.js">3.3. config\plugin.js <a href="#t413.3. config\plugin.js"> # </a></h3>
+<pre><code class="lang-js"><span class="hljs-meta">&apos;use strict&apos;</span>;
+
+<span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-attr">sequelize</span>: {
+    <span class="hljs-attr">enable</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">package</span>: <span class="hljs-string">&quot;egg-sequelize&quot;</span>
+  },
+  <span class="hljs-attr">jwt</span>: {
+    <span class="hljs-attr">enable</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">package</span>: <span class="hljs-string">&quot;egg-jwt&quot;</span>
+  },
+  <span class="hljs-attr">redis</span>: {
+    <span class="hljs-attr">enable</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">package</span>: <span class="hljs-string">&quot;egg-redis&quot;</span>
+  }
+};
+
+</code></pre>
+<h3 id="t423.4. config\config.default.js">3.4. config\config.default.js <a href="#t423.4. config\config.default.js"> # </a></h3>
+<pre><code class="lang-diff">/* eslint valid-jsdoc: &quot;off&quot; */
+
+&apos;use strict&apos;;
+
+/**
+ * @param {Egg.EggAppInfo} appInfo app info
+ */
+module.exports = appInfo =&gt; {
+  /**
+   * built-in config
+   * @type {Egg.EggAppConfig}
+   **/
+  const config = exports = {};
+
+  // use for cookie sign key, should change to your own and keep security
+  config.keys = appInfo.name + &apos;_1588409777990_9883&apos;;
+
+  // add your middleware config here
+  config.middleware = [];
+
+  // add your user config here
+  const userConfig = {
+<span class="hljs-addition">+    security: {</span>
+<span class="hljs-addition">+      csrf: false</span>
+<span class="hljs-addition">+    },</span>
+<span class="hljs-addition">+    sequelize: {</span>
+<span class="hljs-addition">+      dialect: &quot;mysql&quot;,</span>
+<span class="hljs-addition">+      host: &quot;localhost&quot;,</span>
+<span class="hljs-addition">+      port: &quot;3306&quot;,</span>
+<span class="hljs-addition">+      database: &quot;egg-cms&quot;,</span>
+<span class="hljs-addition">+      username: &quot;root&quot;,</span>
+<span class="hljs-addition">+      password: &quot;5f8b8a5d650637f8&quot;</span>
+<span class="hljs-addition">+    },</span>
+<span class="hljs-addition">+    redis: {</span>
+<span class="hljs-addition">+      client: {</span>
+<span class="hljs-addition">+        port: 6379,          // Redis port</span>
+<span class="hljs-addition">+        host: &apos;127.0.0.1&apos;,   // Redis host</span>
+<span class="hljs-addition">+        password: &apos;auth&apos;,</span>
+<span class="hljs-addition">+        db: 0,</span>
+<span class="hljs-addition">+      },</span>
+<span class="hljs-addition">+    }</span>
+  };
+
+  return {
+    ...config,
+    ...userConfig,
+  };
+};
+
+</code></pre>
+<h3 id="t433.5. model\user.js">3.5. model\user.js <a href="#t433.5. model\user.js"> # </a></h3>
+<p>app\model\user.js</p>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-params">app</span> =&gt;</span> {
+    <span class="hljs-keyword">const</span> { STRING, INTEGER, DATE } = app.Sequelize;
+    <span class="hljs-keyword">const</span> User = app.model.define(<span class="hljs-string">&quot;user&quot;</span>, {
+        <span class="hljs-attr">id</span>: { <span class="hljs-attr">type</span>: INTEGER, <span class="hljs-attr">primaryKey</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">autoIncrement</span>: <span class="hljs-literal">true</span> },
+        <span class="hljs-attr">userName</span>: STRING(<span class="hljs-number">30</span>),
+        <span class="hljs-attr">password</span>: STRING(<span class="hljs-number">30</span>),
+        <span class="hljs-attr">created_at</span>: DATE,
+        <span class="hljs-attr">updated_at</span>: DATE
+    });
+    <span class="hljs-keyword">return</span> User;
+};
+</code></pre>
+<h3 id="t443.6. app\controller\home.js">3.6. app\controller\home.js <a href="#t443.6. app\controller\home.js"> # </a></h3>
+<ul>
+<li><a href="https://jwt.io/">jwt.io</a></li>
+</ul>
+<p>app\controller\home.js</p>
+<pre><code class="lang-js"><span class="hljs-meta">&apos;use strict&apos;</span>;
+
+<span class="hljs-keyword">const</span> Controller = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;egg&apos;</span>).Controller;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HomeController</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Controller</span> </span>{
+  <span class="hljs-keyword">async</span> index() {
+    <span class="hljs-keyword">const</span> { ctx } = <span class="hljs-keyword">this</span>;
+    ctx.body = <span class="hljs-string">&apos;hi, egg&apos;</span>;
+  }
+  <span class="hljs-keyword">async</span> currentUser() {
+    <span class="hljs-keyword">const</span> { ctx } = <span class="hljs-keyword">this</span>;
+    <span class="hljs-keyword">const</span> { user } = ctx.state;
+    <span class="hljs-keyword">this</span>.ctx.body = {
+      <span class="hljs-attr">name</span>: user.userName,
+      <span class="hljs-attr">avatar</span>: <span class="hljs-string">&apos;http://img.zhufengpeixun.cn/tuizi.jpg&apos;</span>,
+      <span class="hljs-attr">userid</span>: user.id
+    }
+  }
+  <span class="hljs-keyword">async</span> login() {
+    <span class="hljs-keyword">const</span> { ctx, app } = <span class="hljs-keyword">this</span>;
+    <span class="hljs-keyword">let</span> { userName, password } = ctx.request.body;
+    <span class="hljs-keyword">const</span> users = <span class="hljs-keyword">await</span> ctx.model.User.findAll({
+      <span class="hljs-attr">where</span>: { userName, password },
+      <span class="hljs-attr">limit</span>: <span class="hljs-number">1</span>
+    });
+    <span class="hljs-keyword">if</span> (users.length &gt; <span class="hljs-number">0</span>) {
+      <span class="hljs-keyword">let</span> user = users[<span class="hljs-number">0</span>];
+      ctx.status = <span class="hljs-number">200</span>;
+      <span class="hljs-keyword">const</span> token = app.jwt.sign(
+        {
+          <span class="hljs-attr">id</span>: user.id,
+          <span class="hljs-attr">userName</span>: user.userName
+        },
+        app.config.jwt.secret,
+        {
+          <span class="hljs-attr">expiresIn</span>: <span class="hljs-string">&quot;1h&quot;</span>
+        }
+      );
+      <span class="hljs-keyword">await</span> app.redis.set(<span class="hljs-string">`token_<span class="hljs-subst">${user.id}</span>`</span>, token);
+      ctx.body = {
+        <span class="hljs-attr">status</span>: <span class="hljs-string">&apos;ok&apos;</span>,
+        <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;account&apos;</span>,
+        <span class="hljs-attr">currentAuthority</span>: <span class="hljs-string">&apos;admin&apos;</span>,
+        token
+      }
+    } <span class="hljs-keyword">else</span> {
+      ctx.body = {
+        <span class="hljs-attr">status</span>: <span class="hljs-string">&apos;error&apos;</span>
+      }
+    }
+  }
+}
+
+<span class="hljs-built_in">module</span>.exports = HomeController;
+
+</code></pre>
+<h3 id="t453.7. app\router.js">3.7. app\router.js <a href="#t453.7. app\router.js"> # </a></h3>
+<p>app\router.js</p>
+<pre><code class="lang-diff">module.exports = app =&gt; {
+  const { router, controller, jwt } = app;
+  router.get(&apos;/&apos;, controller.home.index);
+<span class="hljs-addition">+  router.post(&apos;/api/login/account&apos;, controller.home.login);</span>
+<span class="hljs-addition">+  router.get(&apos;/api/currentUser&apos;, jwt, controller.home.currentUser);</span>
+};
+</code></pre>
+<h3 id="t463.8. app.js">3.8. app.js <a href="#t463.8. app.js"> # </a></h3>
+<p>app.js</p>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AppBootHook</span> </span>{
+    <span class="hljs-keyword">constructor</span>(app) {
+        <span class="hljs-keyword">this</span>.app = app;
+    }
+
+    <span class="hljs-keyword">async</span> willReady() {
+        <span class="hljs-keyword">await</span> <span class="hljs-keyword">this</span>.app.model.sync({ <span class="hljs-attr">logging</span>: <span class="hljs-built_in">console</span>.log, <span class="hljs-attr">force</span>: <span class="hljs-literal">true</span> });
+        <span class="hljs-keyword">await</span> <span class="hljs-keyword">this</span>.app.model.query(
+            <span class="hljs-string">&quot;INSERT INTO users (user_name, password) VALUES (&apos;admin&apos;, &apos;123456&apos;)&quot;</span>
+        );
+    }
+}
+
+<span class="hljs-built_in">module</span>.exports = AppBootHook;
+</code></pre>
+<h2 id="t474. &#x524D;&#x7AEF;&#x9879;&#x76EE;">4. &#x524D;&#x7AEF;&#x9879;&#x76EE; <a href="#t474. &#x524D;&#x7AEF;&#x9879;&#x76EE;"> # </a></h2>
+<h3 id="t484.1. &#x542F;&#x52A8;&#x9879;&#x76EE;">4.1. &#x542F;&#x52A8;&#x9879;&#x76EE; <a href="#t484.1. &#x542F;&#x52A8;&#x9879;&#x76EE;"> # </a></h3>
+<ul>
+<li><a href="https://pro.ant.design/docs/getting-started-cn">pro.ant.design</a></li>
+<li><a href="https://github.com/umijs/create-umi">create-umi</a></li>
+</ul>
+<pre><code class="lang-js">umi -v
+cnpm create umi
+</code></pre>
+<h3 id="t494.2 config\config.ts">4.2 config\config.ts <a href="#t494.2 config\config.ts"> # </a></h3>
+<p>config\config.ts</p>
+<pre><code class="lang-diff">export default {
+  dev: {
+<span class="hljs-addition">+    &apos;/server/api/&apos;: {</span>
+<span class="hljs-addition">+      target: &apos;http://127.0.0.1:7001&apos;,</span>
+<span class="hljs-addition">+      changeOrigin: true,</span>
+<span class="hljs-addition">+      pathRewrite: { &apos;^/server&apos;: &apos;&apos; },</span>
+<span class="hljs-addition">+    },</span>
+    /* &apos;/api/&apos;: {
+      target: &apos;https://preview.pro.ant.design&apos;,
+      changeOrigin: true,
+      pathRewrite: { &apos;^&apos;: &apos;&apos; },
+    }, */
+  },
+  test: {
+    &apos;/api/&apos;: {
+      target: &apos;https://preview.pro.ant.design&apos;,
+      changeOrigin: true,
+      pathRewrite: { &apos;^&apos;: &apos;&apos; },
+    },
+  },
+  pre: {
+    &apos;/api/&apos;: {
+      target: &apos;your pre url&apos;,
+      changeOrigin: true,
+      pathRewrite: { &apos;^&apos;: &apos;&apos; },
+    },
+  },
+};
+
+</code></pre>
+<h3 id="t504.3 services\login.ts">4.3 services\login.ts <a href="#t504.3 services\login.ts"> # </a></h3>
+<p>src\services\login.ts</p>
+<pre><code class="lang-diff">export async function fakeAccountLogin(params: LoginParamsType) {
+<span class="hljs-addition">+  return request(&apos;/server/api/login/account&apos;, {</span>
+    method: &apos;POST&apos;,
+    data: params,
+  });
+}
+</code></pre>
+<h3 id="t514.4 services\user.ts">4.4 services\user.ts <a href="#t514.4 services\user.ts"> # </a></h3>
+<p>src\services\user.ts</p>
+<pre><code class="lang-diff">export async function queryCurrent(): Promise&lt;any&gt; {
+<span class="hljs-addition">+  return request(&apos;/server/api/currentUser&apos;);</span>
+}
+</code></pre>
+<h3 id="t524.5 models\login.ts">4.5 models\login.ts <a href="#t524.5 models\login.ts"> # </a></h3>
+<p>src\models\login.ts</p>
+<pre><code class="lang-diff">effects: {
+    *login({ payload }, { call, put }) {
+      const response = yield call(fakeAccountLogin, payload);
+      yield put({
+        type: &apos;changeLoginStatus&apos;,
+        payload: response,
+      });
+      // Login successfully
+      if (response.status <span class="hljs-comment">=== &apos;ok&apos;) {</span>
+<span class="hljs-addition">+        if (response.token) {</span>
+<span class="hljs-addition">+          localStorage.setItem(&apos;token&apos;, response.token);</span>
+<span class="hljs-addition">+        }</span>
+        const urlParams = new URL(window.location.href);
+</code></pre>
+<h3 id="t534.6 utils\request.ts">4.6 utils\request.ts <a href="#t534.6 utils\request.ts"> # </a></h3>
+<p>src\utils\request.ts</p>
+<pre><code class="lang-diff">const request = extend({
+  errorHandler, // &#x9ED8;&#x8BA4;&#x9519;&#x8BEF;&#x5904;&#x7406;
+  credentials: &apos;include&apos;, // &#x9ED8;&#x8BA4;&#x8BF7;&#x6C42;&#x662F;&#x5426;&#x5E26;&#x4E0A;cookie
+});
+<span class="hljs-addition">+request.interceptors.request.use((url: any, options: any) =&gt; {</span>
+<span class="hljs-addition">+  if (localStorage.getItem(&apos;token&apos;)) {</span>
+<span class="hljs-addition">+    options.headers.Authorization = &apos;Bearer &apos; + localStorage.getItem(&apos;token&apos;)</span>
+<span class="hljs-addition">+  }</span>
+<span class="hljs-addition">+  return { url, options };</span>
+<span class="hljs-addition">+});</span>
+export default request;
+</code></pre>
+
+    </div>
+</div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+    aria-labelledby="loginModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="loginModalLabel">请登录</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="username" class="control-label">姓名:</label>
+                        <input type="text" class="form-control" id="username" placeholder="珠峰架构VIP会员系统用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">密码:</label>
+                        <input type="text" class="form-control" id="password" placeholder="珠峰架构VIP会员系统密码">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                    data-dismiss="modal">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

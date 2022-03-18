@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+   
+                    
+
+                        
+<div class="warpper">
+    <div class="page-toc">
+        <ul><li><a href="#t01.create-react-app工作流">1.create-react-app工作流</a></li><li><a href="#t12.初始化react-scripts2">2.初始化react-scripts2</a><ul><li><a href="#t22.1 安装依赖">2.1 安装依赖</a></li><li><a href="#t32.2 package.json">2.2 package.json</a></li><li><a href="#t42.3 执行命令">2.3 执行命令</a></li></ul></li><li><a href="#t53.实现build命令">3.实现build命令</a><ul><li><a href="#t63.1 bin\react-scripts2.js">3.1 bin\react-scripts2.js</a></li><li><a href="#t73.2 scripts\build.js">3.2 scripts\build.js</a></li><li><a href="#t83.3 config\paths.js">3.3 config\paths.js</a></li><li><a href="#t93.4 config\webpack.config.js">3.4 config\webpack.config.js</a></li><li><a href="#t103.5 src\index.js">3.5 src\index.js</a></li><li><a href="#t113.6 public\index.html">3.6 public\index.html</a></li></ul></li><li><a href="#t124.实现start命令">4.实现start命令</a><ul><li><a href="#t134.1 scripts\start.js">4.1 scripts\start.js</a></li><li><a href="#t144.2 config\webpackDevServer.config.js">4.2 config\webpackDevServer.config.js</a></li></ul></li><li><a href="#t155.知识">5.知识</a><ul><li><a href="#t165.1 dotenv">5.1 dotenv</a></li><li><a href="#t175.2 NODE_PATH">5.2 NODE_PATH</a></li><li><a href="#t185.3 semver-regex">5.3 semver-regex</a></li><li><a href="#t195.4 globby">5.4 globby</a></li><li><a href="#t205.5 globalThis">5.5 globalThis</a></li><li><a href="#t215.6 bfj">5.6 bfj</a></li><li><a href="#t225.7 pnp">5.7 pnp</a><ul><li><a href="#t235.7.1 yarn install">5.7.1 yarn install</a></li><li><a href="#t245.7.2 Pnp">5.7.2 Pnp</a></li><li><a href="#t255.7.3 使用">5.7.3 使用</a><ul><li><a href="#t265.7.3.1 启用">5.7.3.1 启用</a></li><li><a href="#t275.7.3.2 package.json">5.7.3.2 package.json</a></li><li><a href="#t285.7.3.3 uuid.js">5.7.3.3 uuid.js</a></li><li><a href="#t295.7.3.4 运行">5.7.3.4 运行</a></li></ul></li></ul></li></ul></li></ul>
+    </div>
+    <div class="content markdown-body">
+        <h2 id="t01.create-react-app&#x5DE5;&#x4F5C;&#x6D41;">1.create-react-app&#x5DE5;&#x4F5C;&#x6D41; <a href="#t01.create-react-app&#x5DE5;&#x4F5C;&#x6D41;"> # </a></h2>
+<pre><code class="lang-js">create-react-app react-project
+
+Creating a <span class="hljs-keyword">new</span> React app <span class="hljs-keyword">in</span> C:\aprepare\react-project.
+Installing packages. This might take a couple <span class="hljs-keyword">of</span> minutes.
+Installing react, react-dom, and react-scripts <span class="hljs-keyword">with</span> cra-template...
+yarn add v1<span class="hljs-number">.22</span><span class="hljs-number">.10</span>
+info No lockfile found.
+[<span class="hljs-number">1</span>/<span class="hljs-number">4</span>] Resolving packages...
+[<span class="hljs-number">2</span>/<span class="hljs-number">4</span>] Fetching packages...
+[<span class="hljs-number">3</span>/<span class="hljs-number">4</span>] Linking dependencies...
+[<span class="hljs-number">4</span>/<span class="hljs-number">4</span>] Building fresh packages...
+success Saved lockfile.
+success Saved <span class="hljs-number">881</span> <span class="hljs-keyword">new</span> dependencies.
+Done <span class="hljs-keyword">in</span> <span class="hljs-number">49.71</span>s.
+Removing template package using yarnpkg...
+yarn remove v1<span class="hljs-number">.22</span><span class="hljs-number">.10</span>
+[<span class="hljs-number">1</span>/<span class="hljs-number">2</span>] Removing <span class="hljs-built_in">module</span> cra-template...
+[<span class="hljs-number">2</span>/<span class="hljs-number">2</span>] Regenerating lockfile and installing missing dependencies...
+success Uninstalled packages.
+Done <span class="hljs-keyword">in</span> <span class="hljs-number">10.19</span>s.
+Created git commit.
+Success! Created react-project at C:\aprepare\react-project
+Inside that directory, you can run several commands:
+  yarn start
+    Starts the development server.
+  yarn build
+    Bundles the app into <span class="hljs-keyword">static</span> files <span class="hljs-keyword">for</span> production.    
+</code></pre>
+<h2 id="t12.&#x521D;&#x59CB;&#x5316;react-scripts2">2.&#x521D;&#x59CB;&#x5316;react-scripts2 <a href="#t12.&#x521D;&#x59CB;&#x5316;react-scripts2"> # </a></h2>
+<h3 id="t22.1 &#x5B89;&#x88C5;&#x4F9D;&#x8D56;">2.1 &#x5B89;&#x88C5;&#x4F9D;&#x8D56; <a href="#t22.1 &#x5B89;&#x88C5;&#x4F9D;&#x8D56;"> # </a></h3>
+<pre><code class="lang-js">mkdir react-scripts2
+cd react-scripts2
+npm init -y
+yarn add react react-dom
+yarn add cross-spawn fs-extra chalk webpack webpack-dev-server babel-loader babel-preset-react-app html-webpack-plugin  open
+</code></pre>
+<h3 id="t32.2 package.json">2.2 package.json <a href="#t32.2 package.json"> # </a></h3>
+<pre><code class="lang-json">  &quot;scripts&quot;: {
+    &quot;build&quot;: &quot;node ./bin/react-scripts2 build&quot;,
+    &quot;start&quot;: &quot;node ./bin/react-scripts2 start&quot;
+  },
+  &quot;bin&quot;: {
+    &quot;react-scripts2&quot;: &quot;./bin/react-scripts2&quot;
+  },
+</code></pre>
+<h3 id="t42.3 &#x6267;&#x884C;&#x547D;&#x4EE4;">2.3 &#x6267;&#x884C;&#x547D;&#x4EE4; <a href="#t42.3 &#x6267;&#x884C;&#x547D;&#x4EE4;"> # </a></h3>
+<pre><code class="lang-js">npm run build
+npm run start
+</code></pre>
+<h2 id="t53.&#x5B9E;&#x73B0;build&#x547D;&#x4EE4;">3.&#x5B9E;&#x73B0;build&#x547D;&#x4EE4; <a href="#t53.&#x5B9E;&#x73B0;build&#x547D;&#x4EE4;"> # </a></h2>
+<ul>
+<li>1.&#x8BBE;&#x7F6E;<code>process.env.NODE_ENV = &apos;production&apos;;</code></li>
+<li>2.&#x83B7;&#x53D6;<code>webpack&#x914D;&#x7F6E;</code>&#x6587;&#x4EF6;</li>
+<li>3.&#x6E05;&#x7A7A;<code>build</code>&#x76EE;&#x5F55;</li>
+<li>4.&#x62F7;&#x8D1D;<code>public</code>&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6587;&#x4EF6;&#x5230;<code>build</code>&#x76EE;&#x5F55;</li>
+<li>5.&#x521B;&#x5EFA;<code>compiler</code>&#x5E76;&#x8C03;&#x7528;<code>run</code>&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x7F16;&#x8BD1;</li>
+</ul>
+<h3 id="t63.1 bin\react-scripts2.js">3.1 bin\react-scripts2.js <a href="#t63.1 bin\react-scripts2.js"> # </a></h3>
+<p>bin\react-scripts2.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> spawn = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;cross-spawn&apos;</span>);
+<span class="hljs-keyword">const</span> args = process.argv.slice(<span class="hljs-number">2</span>);
+<span class="hljs-keyword">const</span> script = args[<span class="hljs-number">0</span>];
+spawn.sync(
+    process.execPath,
+    [<span class="hljs-built_in">require</span>.resolve(<span class="hljs-string">&apos;../scripts/&apos;</span> + script)],
+    { <span class="hljs-attr">stdio</span>: <span class="hljs-string">&apos;inherit&apos;</span> }
+);
+</code></pre>
+<h3 id="t73.2 scripts\build.js">3.2 scripts\build.js <a href="#t73.2 scripts\build.js"> # </a></h3>
+<p>scripts\build.js</p>
+<pre><code class="lang-js">process.env.NODE_ENV = <span class="hljs-string">&apos;production&apos;</span>;
+<span class="hljs-keyword">const</span> chalk = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;chalk&apos;</span>);
+<span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs-extra&apos;</span>);
+<span class="hljs-keyword">const</span> webpack = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;webpack&apos;</span>);
+<span class="hljs-keyword">const</span> configFactory = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../config/webpack.config&apos;</span>);
+<span class="hljs-keyword">const</span> paths = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../config/paths&apos;</span>);
+<span class="hljs-keyword">const</span> config = configFactory(<span class="hljs-string">&apos;production&apos;</span>);
+
+fs.emptyDirSync(paths.appBuild);
+copyPublicFolder();
+build();
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">build</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> compiler = webpack(config);
+    compiler.run(<span class="hljs-function">(<span class="hljs-params">err, stats</span>) =&gt;</span> {
+        <span class="hljs-built_in">console</span>.log(err);
+        <span class="hljs-built_in">console</span>.log(chalk.green(<span class="hljs-string">&apos;Compiled successfully.\n&apos;</span>));
+    })
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">copyPublicFolder</span>(<span class="hljs-params"></span>) </span>{
+    fs.copySync(paths.appPublic, paths.appBuild, {
+      <span class="hljs-attr">filter</span>: <span class="hljs-function"><span class="hljs-params">file</span> =&gt;</span> file !== paths.appHtml,
+    });
+}
+</code></pre>
+<h3 id="t83.3 config\paths.js">3.3 config\paths.js <a href="#t83.3 config\paths.js"> # </a></h3>
+<p>config\paths.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
+<span class="hljs-keyword">const</span> appDirectory = process.cwd();
+<span class="hljs-keyword">const</span> resolveApp = <span class="hljs-function"><span class="hljs-params">relativePath</span> =&gt;</span> path.resolve(appDirectory, relativePath);
+<span class="hljs-built_in">module</span>.exports = {
+    <span class="hljs-attr">appHtml</span>: resolveApp(<span class="hljs-string">&apos;public/index.html&apos;</span>),
+    <span class="hljs-attr">appIndexJs</span>:resolveApp(<span class="hljs-string">&apos;src/index.js&apos;</span>),
+    <span class="hljs-attr">appBuild</span>: resolveApp(<span class="hljs-string">&apos;build&apos;</span>),
+    <span class="hljs-attr">appPublic</span>: resolveApp(<span class="hljs-string">&apos;public&apos;</span>)
+}
+</code></pre>
+<h3 id="t93.4 config\webpack.config.js">3.4 config\webpack.config.js <a href="#t93.4 config\webpack.config.js"> # </a></h3>
+<p>config\webpack.config.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> paths = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../config/paths&apos;</span>);
+<span class="hljs-keyword">const</span> HtmlWebpackPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;html-webpack-plugin&apos;</span>);
+<span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">webpackEnv</span>) </span>{
+    <span class="hljs-keyword">const</span> isEnvDevelopment = webpackEnv === <span class="hljs-string">&apos;development&apos;</span>;
+    <span class="hljs-keyword">const</span> isEnvProduction = webpackEnv === <span class="hljs-string">&apos;production&apos;</span>;
+    <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">mode</span>: isEnvProduction ? <span class="hljs-string">&apos;production&apos;</span> : isEnvDevelopment &amp;&amp; <span class="hljs-string">&apos;development&apos;</span>,
+        <span class="hljs-attr">output</span>: {
+            <span class="hljs-attr">path</span>: paths.appBuild
+        },
+        <span class="hljs-attr">module</span>:{
+            <span class="hljs-attr">rules</span>:[
+                {
+                    <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.(js|jsx|ts|tsx)$/</span>,
+                    <span class="hljs-attr">include</span>: paths.appSrc,
+                    <span class="hljs-attr">loader</span>: <span class="hljs-built_in">require</span>.resolve(<span class="hljs-string">&apos;babel-loader&apos;</span>),
+                    <span class="hljs-attr">options</span>: {
+                      <span class="hljs-attr">presets</span>: [
+                        [
+                          <span class="hljs-built_in">require</span>.resolve(<span class="hljs-string">&apos;babel-preset-react-app&apos;</span>)
+                        ]
+                      ]
+                    }
+                  },
+            ]
+        },
+        <span class="hljs-attr">plugins</span>:[
+            <span class="hljs-keyword">new</span> HtmlWebpackPlugin({
+                <span class="hljs-attr">inject</span>: <span class="hljs-literal">true</span>,
+                <span class="hljs-attr">template</span>: paths.appHtml
+            })
+        ]
+    }
+}
+</code></pre>
+<h3 id="t103.5 src\index.js">3.5 src\index.js <a href="#t103.5 src\index.js"> # </a></h3>
+<p>src\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>hello<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>,<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;root&apos;</span>));
+</code></pre>
+<h3 id="t113.6 public\index.html">3.6 public\index.html <a href="#t113.6 public\index.html"> # </a></h3>
+<p>public\index.html</p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>react<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;root&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h2 id="t124.&#x5B9E;&#x73B0;start&#x547D;&#x4EE4;">4.&#x5B9E;&#x73B0;start&#x547D;&#x4EE4; <a href="#t124.&#x5B9E;&#x73B0;start&#x547D;&#x4EE4;"> # </a></h2>
+<h3 id="t134.1 scripts\start.js">4.1 scripts\start.js <a href="#t134.1 scripts\start.js"> # </a></h3>
+<p>scripts\start.js</p>
+<pre><code class="lang-js">process.env.NODE_ENV = <span class="hljs-string">&apos;development&apos;</span>;
+<span class="hljs-keyword">const</span> configFactory = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../config/webpack.config&apos;</span>);
+<span class="hljs-keyword">const</span> createDevServerConfig = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../config/webpackDevServer.config&apos;</span>);
+<span class="hljs-keyword">const</span> WebpackDevServer = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;webpack-dev-server&apos;</span>);
+<span class="hljs-keyword">const</span> DEFAULT_PORT = <span class="hljs-built_in">parseInt</span>(process.env.PORT, <span class="hljs-number">10</span>) || <span class="hljs-number">3000</span>;
+<span class="hljs-keyword">const</span> HOST = process.env.HOST || <span class="hljs-string">&apos;0.0.0.0&apos;</span>;
+<span class="hljs-keyword">const</span> config = configFactory(<span class="hljs-string">&apos;development&apos;</span>);
+<span class="hljs-keyword">const</span> webpack = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;webpack&apos;</span>);
+<span class="hljs-keyword">const</span> chalk = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;chalk&apos;</span>);
+<span class="hljs-keyword">const</span> compiler = createCompiler({ config, webpack });
+<span class="hljs-keyword">const</span> serverConfig = createDevServerConfig();
+<span class="hljs-keyword">const</span> devServer = <span class="hljs-keyword">new</span> WebpackDevServer(compiler, serverConfig);
+devServer.listen(DEFAULT_PORT, HOST, err =&gt; {
+    <span class="hljs-keyword">if</span> (err) {
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">console</span>.log(err);
+    }
+    <span class="hljs-built_in">console</span>.log(chalk.cyan(<span class="hljs-string">&apos;Starting the development server...\n&apos;</span>));
+});
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createCompiler</span>(<span class="hljs-params">{ config, webpack }</span>) </span>{
+    <span class="hljs-keyword">let</span> compiler = webpack(config);
+    <span class="hljs-keyword">return</span> compiler;
+}
+</code></pre>
+<h3 id="t144.2 config\webpackDevServer.config.js">4.2 config\webpackDevServer.config.js <a href="#t144.2 config\webpackDevServer.config.js"> # </a></h3>
+<p>config\webpackDevServer.config.js</p>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">hot</span>: <span class="hljs-literal">true</span>
+    }
+};
+</code></pre>
+<h2 id="t155.&#x77E5;&#x8BC6;">5.&#x77E5;&#x8BC6; <a href="#t155.&#x77E5;&#x8BC6;"> # </a></h2>
+<h3 id="t165.1 dotenv">5.1 dotenv <a href="#t165.1 dotenv"> # </a></h3>
+<ul>
+<li>&#x4F7F;&#x7528;dotenv&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5C06;&#x7A0B;&#x5E8F;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x914D;&#x7F6E;&#x5199;&#x5728;<code>.env</code>&#x6587;&#x4EF6;&#x4E2D;</li>
+</ul>
+<p>.env</p>
+<pre><code class="lang-js">MONGODB_HOST=localhost
+MONGODB_PORT=<span class="hljs-number">27017</span>
+MONGODB_DB=test
+MONGODB_URI=mongodb:<span class="hljs-comment">//${MONGODB_HOST}:${MONGODB_PORT}/${MONGODB_DB}</span>
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> dotenvFile = <span class="hljs-string">&apos;.env&apos;</span>;
+<span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;dotenv-expand&apos;</span>)(
+    <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;dotenv&apos;</span>).config({
+        <span class="hljs-attr">path</span>: dotenvFile,
+    })
+);
+<span class="hljs-built_in">console</span>.log(process.env.MONGODB_HOST);
+<span class="hljs-built_in">console</span>.log(process.env.MONGODB_PORT);
+<span class="hljs-built_in">console</span>.log(process.env.MONGODB_DB);
+<span class="hljs-built_in">console</span>.log(process.env.MONGODB_URI);
+</code></pre>
+<h3 id="t175.2 NODE_PATH">5.2 NODE_PATH <a href="#t175.2 NODE_PATH"> # </a></h3>
+<ul>
+<li>NODE_PATH &#x5C31;&#x662F;NODE&#x4E2D;&#x7528;&#x6765;&#x5BFB;&#x627E;&#x6A21;&#x5757;&#x6240;&#x63D0;&#x4F9B;&#x7684;&#x8DEF;&#x5F84;&#x6CE8;&#x518C;&#x73AF;&#x5883;&#x53D8;&#x91CF;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs&apos;</span>);
+<span class="hljs-keyword">let</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
+<span class="hljs-keyword">const</span> appDirectory = fs.realpathSync(process.cwd());
+<span class="hljs-comment">//NODE_PATH folder1;folder2</span>
+process.env.NODE_PATH = [
+    <span class="hljs-string">&apos;./a&apos;</span>,
+    path.resolve(appDirectory, <span class="hljs-string">&apos;b&apos;</span>),
+    <span class="hljs-string">&apos;./c&apos;</span>,
+].join(path.delimiter);
+process.env.NODE_PATH = (process.env.NODE_PATH || <span class="hljs-string">&apos;&apos;</span>)
+  .split(path.delimiter)<span class="hljs-comment">//windows ; mac :</span>
+  .filter(<span class="hljs-function"><span class="hljs-params">folder</span> =&gt;</span> folder &amp;&amp; !path.isAbsolute(folder))<span class="hljs-comment">//&#x4E0D;&#x662F;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x7684;&#x5220;&#x9664;</span>
+  .map(<span class="hljs-function"><span class="hljs-params">folder</span> =&gt;</span> path.resolve(appDirectory, folder))<span class="hljs-comment">//&#x53EA;&#x80FD;&#x662F;&#x76F8;&#x5BF9;&#x76EE;&#x5F55;</span>
+  .join(path.delimiter);<span class="hljs-comment">//&#x518D;&#x8FDE;&#x63A5;&#x5728;&#x4E00;&#x8D77;</span>
+<span class="hljs-built_in">console</span>.log(process.env.NODE_PATH);
+</code></pre>
+<h3 id="t185.3 semver-regex">5.3 semver-regex <a href="#t185.3 semver-regex"> # </a></h3>
+<ul>
+<li>&#x5339;&#x914D;semver&#x7248;&#x672C;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> semverRegex = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;semver-regex&apos;</span>);
+<span class="hljs-built_in">console</span>.log(semverRegex().test(<span class="hljs-string">&apos;v1.0.0&apos;</span>));
+<span class="hljs-comment">//=&gt; true</span>
+<span class="hljs-built_in">console</span>.log(semverRegex().test(<span class="hljs-string">&apos;1.2.3-alpha.10.beta.0+build.unicorn.rainbow&apos;</span>));
+<span class="hljs-comment">//=&gt; true</span>
+<span class="hljs-built_in">console</span>.log(semverRegex().exec(<span class="hljs-string">&apos;unicorn 1.0.0 rainbow&apos;</span>)[<span class="hljs-number">0</span>]);
+<span class="hljs-comment">//=&gt; &apos;1.0.0&apos;</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;unicorn 1.0.0 and rainbow 2.1.3&apos;</span>.match(semverRegex()));
+<span class="hljs-comment">//=&gt; [&apos;1.0.0&apos;, &apos;2.1.3&apos;]</span>
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> semver = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;semver&apos;</span>)
+<span class="hljs-built_in">console</span>.log(semver.valid(<span class="hljs-string">&apos;1.2.3&apos;</span>)); <span class="hljs-comment">// &apos;1.2.3&apos;</span>
+<span class="hljs-built_in">console</span>.log(semver.valid(<span class="hljs-string">&apos;a.b.c&apos;</span>)); <span class="hljs-comment">// null</span>
+<span class="hljs-built_in">console</span>.log(semver.clean(<span class="hljs-string">&apos;  =v1.2.3   &apos;</span>)); <span class="hljs-comment">// &apos;1.2.3&apos;</span>
+<span class="hljs-built_in">console</span>.log(semver.satisfies(<span class="hljs-string">&apos;1.2.3&apos;</span>, <span class="hljs-string">&apos;1.x || &gt;=2.5.0 || 5.0.0 - 7.2.3&apos;</span>)); <span class="hljs-comment">// true</span>
+<span class="hljs-built_in">console</span>.log(semver.gt(<span class="hljs-string">&apos;1.2.3&apos;</span>, <span class="hljs-string">&apos;9.8.7&apos;</span>)); <span class="hljs-comment">// false</span>
+<span class="hljs-built_in">console</span>.log(semver.lt(<span class="hljs-string">&apos;1.2.3&apos;</span>, <span class="hljs-string">&apos;9.8.7&apos;</span>)); <span class="hljs-comment">// true</span>
+<span class="hljs-built_in">console</span>.log(semver.valid(semver.coerce(<span class="hljs-string">&apos;v2&apos;</span>))); <span class="hljs-comment">// &apos;2.0.0&apos;</span>
+<span class="hljs-built_in">console</span>.log(semver.valid(semver.coerce(<span class="hljs-string">&apos;42.6.7.9.3-alpha&apos;</span>))); <span class="hljs-comment">// &apos;42.6.7&apos;</span>
+</code></pre>
+<h3 id="t195.4 globby">5.4 globby <a href="#t195.4 globby"> # </a></h3>
+<ul>
+<li><a href="https://github.com/sindresorhus/globby">globby</a>&#x662F;&#x57FA;&#x4E8E; glob&#xFF0C;&#x5E76;&#x8FDB;&#x4E00;&#x6B65;&#x5F97;&#x5230;&#x4E86;&#x589E;&#x5F3A;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> globby = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;globby&apos;</span>);
+<span class="hljs-function">(<span class="hljs-params"><span class="hljs-keyword">async</span> (</span>) =&gt;</span> {
+    <span class="hljs-keyword">const</span> paths = <span class="hljs-keyword">await</span> globby([<span class="hljs-string">&apos;images&apos;</span>,<span class="hljs-string">&apos;photos&apos;</span>],{
+      <span class="hljs-attr">expandDirectories</span>: <span class="hljs-literal">true</span>
+    });
+    <span class="hljs-built_in">console</span>.log(paths);
+})();
+</code></pre>
+<h3 id="t205.5 globalThis">5.5 globalThis <a href="#t205.5 globalThis"> # </a></h3>
+<ul>
+<li>globalThis&#x63D0;&#x4F9B;&#x7EDF;&#x4E00;&#x7684;&#x673A;&#x5236;&#x6765;&#x8BBF;&#x95EE;&#x5168;&#x5C40;&#x5BF9;&#x8C61;<ul>
+<li>Web &#x6D4F;&#x89C8;&#x5668; window</li>
+<li>Node.js global</li>
+<li>Web Worker self</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-comment">// &#x6D4F;&#x89C8;&#x5668;&#x73AF;&#x5883;</span>
+<span class="hljs-built_in">console</span>.log(globalThis);    <span class="hljs-comment">// =&gt; Window {...}</span>
+<span class="hljs-comment">// node.js &#x73AF;&#x5883;</span>
+<span class="hljs-built_in">console</span>.log(globalThis);    <span class="hljs-comment">// =&gt; Object [global] {...}</span>
+<span class="hljs-comment">// web worker &#x73AF;&#x5883;</span>
+<span class="hljs-built_in">console</span>.log(globalThis);    <span class="hljs-comment">// =&gt; DedicatedWorkerGlobalScope {...}</span>
+</code></pre>
+<h3 id="t215.6 bfj">5.6 bfj <a href="#t215.6 bfj"> # </a></h3>
+<ul>
+<li><a href="bfj">bfj</a>Big-Friendly JSON. Asynchronous streaming functions for large JSON data sets.</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> bfj = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;bfj&apos;</span>);
+
+bfj.read(<span class="hljs-string">&apos;big.json&apos;</span>)
+  .then(<span class="hljs-function"><span class="hljs-params">data</span> =&gt;</span> {
+    <span class="hljs-built_in">console</span>.log(data);
+  })
+  .catch(<span class="hljs-function"><span class="hljs-params">error</span> =&gt;</span> {
+    <span class="hljs-built_in">console</span>.log(error)
+  });
+</code></pre>
+<h3 id="t225.7 pnp">5.7 pnp <a href="#t225.7 pnp"> # </a></h3>
+<h4 id="t235.7.1 yarn install">5.7.1 yarn install <a href="#t235.7.1 yarn install"> # </a></h4>
+<ul>
+<li>1.&#x5C06;&#x4F9D;&#x8D56;&#x5305;&#x7684;&#x7248;&#x672C;&#x533A;&#x95F4;&#x89E3;&#x6790;&#x4E3A;&#x67D0;&#x4E2A;&#x5177;&#x4F53;&#x7684;&#x7248;&#x672C;&#x53F7;</li>
+<li>2.&#x4E0B;&#x8F7D;&#x5BF9;&#x5E94;&#x7248;&#x672C;&#x4F9D;&#x8D56;&#x7684; tar &#x5305;&#x5230;&#x672C;&#x5730;&#x79BB;&#x7EBF;&#x955C;&#x50CF;</li>
+<li>3.&#x5C06;&#x4F9D;&#x8D56;&#x4ECE;&#x79BB;&#x7EBF;&#x955C;&#x50CF;&#x89E3;&#x538B;&#x5230;&#x672C;&#x5730;&#x7F13;&#x5B58;</li>
+<li>4.&#x5C06;&#x4F9D;&#x8D56;&#x4ECE;&#x7F13;&#x5B58;&#x62F7;&#x8D1D;&#x5230;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x7684; node_modules &#x76EE;&#x5F55;</li>
+</ul>
+<h4 id="t245.7.2 Pnp">5.7.2 Pnp <a href="#t245.7.2 Pnp"> # </a></h4>
+<ul>
+<li>PnP&#x5DE5;&#x4F5C;&#x539F;&#x7406;&#x662F;&#x4F5C;&#x4E3A;&#x628A;&#x4F9D;&#x8D56;&#x4ECE;&#x7F13;&#x5B58;&#x62F7;&#x8D1D;&#x5230; node_modules &#x7684;&#x66FF;&#x4EE3;&#x65B9;&#x6848;</li>
+</ul>
+<h4 id="t255.7.3 &#x4F7F;&#x7528;">5.7.3 &#x4F7F;&#x7528; <a href="#t255.7.3 &#x4F7F;&#x7528;"> # </a></h4>
+<h5 id="t265.7.3.1 &#x542F;&#x7528;">5.7.3.1 &#x542F;&#x7528; <a href="#t265.7.3.1 &#x542F;&#x7528;"> # </a></h5>
+<pre><code class="lang-js">#create-react-app &#x5DF2;&#x7ECF;&#x96C6;&#x6210;&#x4E86;&#x5BF9; PnP &#x7684;&#x652F;&#x6301;&#x3002;&#x53EA;&#x9700;&#x5728;&#x521B;&#x5EFA;&#x9879;&#x76EE;&#x65F6;&#x6DFB;&#x52A0; --use-pnp &#x53C2;&#x6570;
+npx create-react-app react-project --use-pnp 
+# &#x5728;&#x5DF2;&#x6709;&#x9879;&#x76EE;&#x4E2D;&#x5F00;&#x542F; PnP
+yarn --pnp
+yarn add uuid
+</code></pre>
+<h5 id="t275.7.3.2 package.json">5.7.3.2 package.json <a href="#t275.7.3.2 package.json"> # </a></h5>
+<ul>
+<li>&#x53EA;&#x8981; installConfig.pnp &#x7684;&#x503C;&#x662F;&#x4E00;&#x4E2A;&#x771F;&#x503C;&#x4E14;&#x5F53;&#x524D;&#x7248;&#x672C;&#x7684; Yarn &#x652F;&#x6301;&#xFF0C;PnP &#x7279;&#x6027;&#x5C31;&#x4F1A;&#x88AB;&#x542F;&#x7528;</li>
+</ul>
+<pre><code class="lang-json">{
+  <span class="hljs-attr">&quot;installConfig&quot;</span>: {
+    <span class="hljs-attr">&quot;pnp&quot;</span>: <span class="hljs-literal">true</span>
+  }
+}
+</code></pre>
+<h5 id="t285.7.3.3 uuid.js">5.7.3.3 uuid.js <a href="#t285.7.3.3 uuid.js"> # </a></h5>
+<p>uuid.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> uuid = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;uuid&apos;</span>);
+<span class="hljs-built_in">console</span>.log(uuid.v4());
+</code></pre>
+<h5 id="t295.7.3.4 &#x8FD0;&#x884C;">5.7.3.4 &#x8FD0;&#x884C; <a href="#t295.7.3.4 &#x8FD0;&#x884C;"> # </a></h5>
+<ul>
+<li>&#x7531;&#x4E8E;&#x5728;&#x5F00;&#x542F;&#x4E86; PnP &#x7684;&#x9879;&#x76EE;&#x4E2D;&#x4E0D;&#x518D;&#x6709; node_modules &#x76EE;&#x5F55;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x4F9D;&#x8D56;&#x5F15;&#x7528;&#x90FD;&#x5FC5;&#x987B;&#x7531; .pnp.js &#x4E2D;&#x7684; resolver &#x5904;&#x7406;</li>
+<li>&#x56E0;&#x6B64;&#x4E0D;&#x8BBA;&#x662F;&#x6267;&#x884C; script &#x8FD8;&#x662F;&#x7528; node &#x76F4;&#x63A5;&#x6267;&#x884C;&#x4E00;&#x4E2A; JS &#x6587;&#x4EF6;&#xFF0C;&#x90FD;&#x5FC5;&#x987B;&#x7ECF;&#x7531; Yarn &#x5904;&#x7406;</li>
+</ul>
+<pre><code class="lang-js">yarn run build
+yarn node uuid.js
+</code></pre>
+
+    </div>
+</div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+    aria-labelledby="loginModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="loginModalLabel">请登录</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="username" class="control-label">姓名:</label>
+                        <input type="text" class="form-control" id="username" placeholder="珠峰架构VIP会员系统用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">密码:</label>
+                        <input type="text" class="form-control" id="password" placeholder="珠峰架构VIP会员系统密码">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                    data-dismiss="modal">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

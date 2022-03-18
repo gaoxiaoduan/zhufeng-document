@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+    
+                        
+<div class="warpper">
+    <div class="page-toc">
+        <ul><li><a href="#t01. Redux中间件">1. Redux中间件</a></li><li><a href="#t12. 日志中间件">2. 日志中间件</a><ul><li><a href="#t22.1 实现日志">2.1 实现日志</a></li><li><a href="#t32.2 实现异步">2.2 实现异步</a></li></ul></li><li><a href="#t43. 单个日志中间件">3. 单个日志中间件</a><ul><li><a href="#t53.1 src\store\logger.js">3.1 src\store\logger.js</a></li><li><a href="#t63.2 redux\applyMiddleware.js">3.2 redux\applyMiddleware.js</a></li><li><a href="#t73.3 redux\index.js">3.3 redux\index.js</a></li><li><a href="#t83.4 store\index.js">3.4 store\index.js</a></li><li><a href="#t93.5 createStore.js">3.5 createStore.js</a></li></ul></li><li><a href="#t104. 级联中间件">4. 级联中间件</a><ul><li><a href="#t114.1 compose">4.1 compose</a><ul><li><a href="#t124.1.1 compose.js">4.1.1 compose.js</a></li><li><a href="#t134.1.2 链式调用">4.1.2 链式调用</a></li></ul></li><li><a href="#t144.2 applyMiddleware">4.2 applyMiddleware</a></li><li><a href="#t154.3 redux\index.js">4.3 redux\index.js</a></li><li><a href="#t164.4 redux-logger\index.js">4.4 redux-logger\index.js</a></li><li><a href="#t174.5 redux-promise\index.js">4.5 redux-promise\index.js</a></li><li><a href="#t184.6 redux-thunk\index.js">4.6 redux-thunk\index.js</a></li><li><a href="#t194.7 actions\counter1.js">4.7 actions\counter1.js</a></li><li><a href="#t204.8 store\index.js">4.8 store\index.js</a></li><li><a href="#t214.9 Counter1.js">4.9 Counter1.js</a></li></ul></li></ul>
+    </div>
+    <div class="content markdown-body">
+        <h2 id="t01. Redux&#x4E2D;&#x95F4;&#x4EF6;">1. Redux&#x4E2D;&#x95F4;&#x4EF6; <a href="#t01. Redux&#x4E2D;&#x95F4;&#x4EF6;"> # </a></h2>
+<ul>
+<li>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x4E2D;&#x95F4;&#x4EF6;&#x7684;&#x8FD0;&#x7528;,redux &#x7684;&#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;&#x662F;&#x8FD9;&#x6837; <code>action -&gt; reducer</code>&#xFF0C;&#x8FD9;&#x662F;&#x76F8;&#x5F53;&#x4E8E;&#x540C;&#x6B65;&#x64CD;&#x4F5C;&#xFF0C;&#x7531;dispatch &#x89E6;&#x53D1;action&#x540E;&#xFF0C;&#x76F4;&#x63A5;&#x53BB;reducer&#x6267;&#x884C;&#x76F8;&#x5E94;&#x7684;&#x52A8;&#x4F5C;</li>
+<li>&#x4F46;&#x662F;&#x5728;&#x67D0;&#x4E9B;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#x7684;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x4E2D;&#xFF0C;&#x8FD9;&#x79CD;&#x540C;&#x6B65;&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x5E76;&#x4E0D;&#x80FD;&#x5F88;&#x597D;&#x7684;&#x89E3;&#x51B3;&#x6211;&#x4EEC;&#x7684;&#x95EE;&#x9898;&#x3002;&#x6BD4;&#x5982;&#x6211;&#x4EEC;&#x6709;&#x4E00;&#x4E2A;&#x8FD9;&#x6837;&#x7684;&#x9700;&#x6C42;&#xFF0C;&#x70B9;&#x51FB;&#x6309;&#x94AE; -&gt; &#x83B7;&#x53D6;&#x670D;&#x52A1;&#x5668;&#x6570;&#x636E; -&gt; &#x6E32;&#x67D3;&#x89C6;&#x56FE;&#xFF0C;&#x56E0;&#x4E3A;&#x83B7;&#x53D6;&#x670D;&#x52A1;&#x5668;&#x6570;&#x636E;&#x662F;&#x9700;&#x8981;&#x5F02;&#x6B65;&#x5B9E;&#x73B0;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x65F6;&#x5019;&#x6211;&#x5C31;&#x9700;&#x8981;&#x5F15;&#x5165;&#x4E2D;&#x95F4;&#x4EF6;&#x6539;&#x53D8;redux&#x540C;&#x6B65;&#x6267;&#x884C;&#x7684;&#x6D41;&#x7A0B;&#xFF0C;&#x5F62;&#x6210;&#x5F02;&#x6B65;&#x6D41;&#x7A0B;&#x6765;&#x5B9E;&#x73B0;&#x6211;&#x4EEC;&#x6240;&#x8981;&#x7684;&#x903B;&#x8F91;&#xFF0C;&#x6709;&#x4E86;&#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;redux &#x7684;&#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;&#x5C31;&#x53D8;&#x6210;&#x8FD9;&#x6837; action -&gt; middlewares -&gt; reducer&#xFF0C;&#x70B9;&#x51FB;&#x6309;&#x94AE;&#x5C31;&#x76F8;&#x5F53;&#x4E8E;dispatch &#x89E6;&#x53D1;action&#xFF0C;&#x63A5;&#x4E0B;&#x53BB;&#x83B7;&#x53D6;&#x670D;&#x52A1;&#x5668;&#x6570;&#x636E; middlewares &#x7684;&#x6267;&#x884C;&#xFF0C;&#x5F53; middlewares &#x6210;&#x529F;&#x83B7;&#x53D6;&#x5230;&#x670D;&#x52A1;&#x5668;&#x5C31;&#x53BB;&#x89E6;&#x53D1;reducer&#x5BF9;&#x5E94;&#x7684;&#x52A8;&#x4F5C;&#xFF0C;&#x66F4;&#x65B0;&#x9700;&#x8981;&#x6E32;&#x67D3;&#x89C6;&#x56FE;&#x7684;&#x6570;&#x636E;</li>
+<li>&#x4E2D;&#x95F4;&#x4EF6;&#x7684;&#x673A;&#x5236;&#x53EF;&#x4EE5;&#x8BA9;&#x6211;&#x4EEC;&#x6539;&#x53D8;&#x6570;&#x636E;&#x6D41;&#xFF0C;&#x5B9E;&#x73B0;&#x5982;&#x5F02;&#x6B65; action &#xFF0C;action &#x8FC7;&#x6EE4;&#xFF0C;&#x65E5;&#x5FD7;&#x8F93;&#x51FA;&#xFF0C;&#x5F02;&#x5E38;&#x62A5;&#x544A;&#x7B49;&#x529F;&#x80FD;&#x3002;</li>
+</ul>
+<p><img src="https://img.zhufengpeixun.com/redux-saga-flow2.jpg" alt="redux-saga-flow2"></p>
+<p><img src="https://img.zhufengpeixun.com/react-redux-flow.jpg" alt="react-redux-flow.jpg"></p>
+<h2 id="t12. &#x65E5;&#x5FD7;&#x4E2D;&#x95F4;&#x4EF6;">2. &#x65E5;&#x5FD7;&#x4E2D;&#x95F4;&#x4EF6; <a href="#t12. &#x65E5;&#x5FD7;&#x4E2D;&#x95F4;&#x4EF6;"> # </a></h2>
+<ul>
+<li>&#x6211;&#x4EEC;&#x6539;&#x5199;&#x4E86;<code>dispatch</code>&#x65B9;&#x6CD5;,&#x5B9E;&#x73B0;&#x4E86;&#x5728;&#x66F4;&#x6539;&#x72B6;&#x6001;&#x65F6;&#x6253;&#x5370;&#x524D;&#x540E;&#x7684;&#x72B6;&#x6001;</li>
+<li>&#x4F46;&#x662F;&#x8FD9;&#x79CD;&#x65B9;&#x6848;&#x5E76;&#x4E0D;&#x597D;&#x3002;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x91C7;&#x7528;&#x4E2D;&#x95F4;&#x7684;&#x65B9;&#x5F0F;</li>
+</ul>
+<h3 id="t22.1 &#x5B9E;&#x73B0;&#x65E5;&#x5FD7;">2.1 &#x5B9E;&#x73B0;&#x65E5;&#x5FD7; <a href="#t22.1 &#x5B9E;&#x73B0;&#x65E5;&#x5FD7;"> # </a></h3>
+<p>src\store\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { createStore} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../redux&apos;</span>;
+<span class="hljs-keyword">import</span> reducer <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./reducers&apos;</span>;
+<span class="hljs-keyword">const</span> store = createStore(reducer, { 
+    <span class="hljs-attr">counter1</span>: { <span class="hljs-attr">number</span>: <span class="hljs-number">0</span> },
+    <span class="hljs-attr">counter2</span>: { <span class="hljs-attr">number</span>: <span class="hljs-number">0</span> }
+ });
+<span class="hljs-keyword">let</span> dispatch = store.dispatch;
+store.dispatch = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">action</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(store.getState());
+    dispatch(action);
+    <span class="hljs-built_in">console</span>.log(store.getState());
+    <span class="hljs-keyword">return</span> action;
+};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> store;
+</code></pre>
+<h3 id="t32.2 &#x5B9E;&#x73B0;&#x5F02;&#x6B65;">2.2 &#x5B9E;&#x73B0;&#x5F02;&#x6B65; <a href="#t32.2 &#x5B9E;&#x73B0;&#x5F02;&#x6B65;"> # </a></h3>
+<p>src\store\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { createStore} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../redux&apos;</span>;
+<span class="hljs-keyword">import</span> reducer <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./reducers&apos;</span>;
+<span class="hljs-keyword">const</span> store = createStore(reducer, { <span class="hljs-attr">counter1</span>: { <span class="hljs-attr">number</span>: <span class="hljs-number">0</span> }, <span class="hljs-attr">counter2</span>: { <span class="hljs-attr">number</span>: <span class="hljs-number">0</span> } });
+<span class="hljs-keyword">let</span> dispatch = store.dispatch;
+store.dispatch = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">action</span>) </span>{
+    setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+        dispatch(action);
+    }, <span class="hljs-number">1000</span>);
+    <span class="hljs-keyword">return</span> action;
+};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> store;
+</code></pre>
+<h2 id="t43. &#x5355;&#x4E2A;&#x65E5;&#x5FD7;&#x4E2D;&#x95F4;&#x4EF6;">3. &#x5355;&#x4E2A;&#x65E5;&#x5FD7;&#x4E2D;&#x95F4;&#x4EF6; <a href="#t43. &#x5355;&#x4E2A;&#x65E5;&#x5FD7;&#x4E2D;&#x95F4;&#x4EF6;"> # </a></h2>
+<h3 id="t53.1 src\store\logger.js">3.1 src\store\logger.js <a href="#t53.1 src\store\logger.js"> # </a></h3>
+<p>src\store\logger.js</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">logger</span>(<span class="hljs-params">{getState,dispatch}</span>)</span>{
+   <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">next</span>)</span>{<span class="hljs-comment">//&#x4E3A;&#x4E86;&#x5B9E;&#x73B0;&#x4E2D;&#x95F4;&#x4EF6;&#x7684;&#x7EA7;&#x8054;&#xFF0C;&#x8C03;&#x7528;&#x4E0B;&#x4E00;&#x4E2A;&#x4E2D;&#x95F4;&#x4EF6;</span>
+     <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">action</span>)</span>{<span class="hljs-comment">//&#x8FD9;&#x624D;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x6539;&#x9020;&#x540E;&#x7684;dispatch&#x65B9;&#x6CD5;&#x4E86;</span>
+         <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;prev state&apos;</span>,getState());
+         next(action);<span class="hljs-comment">//&#x5982;&#x679C;&#x4F60;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x4E2D;&#x95F4;&#x4EF6;&#x7684;&#x8BDD;&#xFF0C;next&#x5C31;&#x662F;&#x539F;&#x59CB;&#x7684;store.dispatch(action)</span>
+         <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;next state&apos;</span>,getState());
+         <span class="hljs-keyword">return</span> action;
+     }
+   }
+ }
+ <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> logger;
+</code></pre>
+<h3 id="t63.2 redux\applyMiddleware.js">3.2 redux\applyMiddleware.js <a href="#t63.2 redux\applyMiddleware.js"> # </a></h3>
+<p>src\redux\applyMiddleware.js</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">applyMiddleware</span>(<span class="hljs-params">logger</span>)</span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">createStore</span>)</span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">reducer&#xFF0C;preloadedState</span>)</span>{
+            <span class="hljs-keyword">let</span> store = createStore(reducer&#xFF0C;preloadedState);
+            dispatch = logger(store)(store.dispatch);
+            <span class="hljs-keyword">return</span> {
+                ...store,
+                dispatch
+            };
+        }
+    }
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> applyMiddleware;
+</code></pre>
+<h3 id="t73.3 redux\index.js">3.3 redux\index.js <a href="#t73.3 redux\index.js"> # </a></h3>
+<p>src\redux\index.js</p>
+<pre><code class="lang-diff">export {default as createStore} from &apos;./createStore&apos;
+export {default as bindActionCreators} from &apos;./bindActionCreators&apos;;
+export {default as combineReducers} from &apos;./combineReducers&apos;;
+<span class="hljs-addition">+export {default as applyMiddleware} from &apos;./applyMiddleware&apos;;</span>
+</code></pre>
+<h3 id="t83.4 store\index.js">3.4 store\index.js <a href="#t83.4 store\index.js"> # </a></h3>
+<p>src\store\index.js</p>
+<pre><code class="lang-diff">import { createStore,applyMiddleware } from &apos;../redux&apos;;
+import reducer from &apos;./reducers&apos;;
+import logger from &apos;./logger&apos;;
+let store = applyMiddleware(logger)(createStore)(reducer);
+export default store;
+</code></pre>
+<h3 id="t93.5 createStore.js">3.5 createStore.js <a href="#t93.5 createStore.js"> # </a></h3>
+<p>src\redux\createStore.js</p>
+<pre><code class="lang-diff">const createStore = (reducer, preloadedState, enhancer) =&gt; {
+<span class="hljs-addition">+  if (typeof enhancer !== &apos;undefined&apos;) {</span>
+<span class="hljs-addition">+    return enhancer(createStore)(reducer,preloadedState);</span>
+<span class="hljs-addition">+  }</span>
+  let state=preloadedState;
+  let listeners = [];
+  function getState() {
+    return state;
+  }
+  function dispatch(action) {
+    state = reducer(state, action);
+    listeners.forEach(l =&gt; l());
+    return action;
+  }
+  function subscribe(listener) {
+    listeners.push(listener);
+    return () =&gt; {
+      listeners = listeners.filter(l =&gt; l !== listener);
+    }
+  }
+  dispatch({ type: &apos;@@REDUX/INIT&apos; });
+  return {
+    getState,
+    dispatch,
+    subscribe
+  }
+}
+export default createStore;
+</code></pre>
+<h2 id="t104. &#x7EA7;&#x8054;&#x4E2D;&#x95F4;&#x4EF6;">4. &#x7EA7;&#x8054;&#x4E2D;&#x95F4;&#x4EF6; <a href="#t104. &#x7EA7;&#x8054;&#x4E2D;&#x95F4;&#x4EF6;"> # </a></h2>
+<p><img src="http://img.zhufengpeixun.cn/middleware.jpg" alt="middleware"></p>
+<h3 id="t114.1 compose">4.1 compose <a href="#t114.1 compose"> # </a></h3>
+<ul>
+<li><p>&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x9700;&#x8981;&#x7ECF;&#x8FC7;&#x591A;&#x4E2A;&#x51FD;&#x6570;&#x5904;&#x7406;&#x624D;&#x80FD;&#x5F97;&#x5230;&#x6700;&#x7EC8;&#x503C;&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x628A;&#x4E2D;&#x95F4;&#x8FC7;&#x7A0B;&#x7684;&#x51FD;&#x6570;&#x5408;&#x5E76;&#x4E00;&#x4E2A;&#x51FD;&#x6570;</p>
+<h4 id="t124.1.1 compose.js">4.1.1 compose.js <a href="#t124.1.1 compose.js"> # </a></h4>
+<p>src\redux\compose.js</p>
+</li>
+<li><p><a href="https://gitee.com/zhufengpeixun/redux/blob/master/src/compose.ts">compose</a></p>
+</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add1</span>(<span class="hljs-params">str</span>)</span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;1&apos;</span>+str;
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add2</span>(<span class="hljs-params">str</span>)</span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;2&apos;</span>+str;
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add3</span>(<span class="hljs-params">str</span>)</span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;3&apos;</span>+str;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">compose</span>(<span class="hljs-params">...funcs</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">args</span>)</span>{
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i=funcs.length<span class="hljs-number">-1</span>;i&gt;=<span class="hljs-number">0</span>;i--){
+            args=funcs[i](args);
+        }
+        <span class="hljs-keyword">return</span> args;
+    }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">compose</span>(<span class="hljs-params">...funcs</span>)</span>{
+    <span class="hljs-keyword">return</span> funcs.reduce(<span class="hljs-function">(<span class="hljs-params">a,b</span>)=&gt;</span><span class="hljs-function">(<span class="hljs-params">...args</span>)=&gt;</span>a(b(...args)));
+}
+<span class="hljs-comment">/**
+ *&#x7B2C;&#x4E00;&#x6B21; a=add3 b=add2 =&gt; (...args)=&gt;add3(add2(...args))
+ *&#x7B2C;&#x4E8C;&#x6B21; a=(...args)=&gt;add3(add2(...args)) b=add1 =&gt; (...args)=&gt;add3(add2((add1(...args)))))
+ */</span>
+<span class="hljs-keyword">let</span> fn = compose(add3, add2, add1);
+<span class="hljs-keyword">let</span> result = fn(<span class="hljs-string">&apos;zhufeng&apos;</span>);
+<span class="hljs-built_in">console</span>.log(result);
+</code></pre>
+<h4 id="t134.1.2 &#x94FE;&#x5F0F;&#x8C03;&#x7528;">4.1.2 &#x94FE;&#x5F0F;&#x8C03;&#x7528; <a href="#t134.1.2 &#x94FE;&#x5F0F;&#x8C03;&#x7528;"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">compose</span>(<span class="hljs-params">...funcs</span>)</span>{
+    <span class="hljs-keyword">return</span> funcs.reduce(<span class="hljs-function">(<span class="hljs-params">a,b</span>)=&gt;</span><span class="hljs-function">(<span class="hljs-params">...args</span>)=&gt;</span>a(b(...args)));
+}
+<span class="hljs-keyword">let</span> promise = <span class="hljs-function">(<span class="hljs-params">next</span>)=&gt;</span><span class="hljs-function"><span class="hljs-params">action</span>=&gt;</span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;promise&apos;</span>);
+    next(action);
+};
+<span class="hljs-keyword">let</span> thunk = <span class="hljs-function">(<span class="hljs-params">next</span>)=&gt;</span><span class="hljs-function"><span class="hljs-params">action</span>=&gt;</span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;thunk&apos;</span>);
+    next(action);
+};
+<span class="hljs-keyword">let</span> logger = <span class="hljs-function">(<span class="hljs-params">next</span>)=&gt;</span><span class="hljs-function"><span class="hljs-params">action</span>=&gt;</span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;logger&apos;</span>);
+    next(action);
+};
+
+<span class="hljs-keyword">let</span> chain = [promise,thunk,logger]; 
+<span class="hljs-keyword">let</span> composed = compose(...chain)
+<span class="hljs-keyword">let</span> dispatch = <span class="hljs-function"><span class="hljs-params">()</span>=&gt;</span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x539F;&#x59CB;&#x7684;dispatch&apos;</span>);
+}
+<span class="hljs-keyword">let</span> newDispatch = composed(dispatch);
+newDispatch({<span class="hljs-attr">type</span>:<span class="hljs-string">&quot;add&quot;</span>});
+</code></pre>
+<h3 id="t144.2 applyMiddleware">4.2 applyMiddleware <a href="#t144.2 applyMiddleware"> # </a></h3>
+<p>src\redux\applyMiddleware.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> compose <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./compose&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">applyMiddleware</span>(<span class="hljs-params">...middlewares</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">createStore</span>) </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">reducer,preloadedState</span>) </span>{
+            <span class="hljs-keyword">let</span> store = createStore(reducer,preloadedState);
+            <span class="hljs-keyword">let</span> dispatch;
+            <span class="hljs-keyword">let</span> middlewareAPI = {
+                <span class="hljs-attr">getState</span>: store.getState,
+                <span class="hljs-attr">dispatch</span>: <span class="hljs-function">(<span class="hljs-params">action</span>) =&gt;</span> dispatch(action)
+            }
+            <span class="hljs-keyword">let</span> chain = middlewares.map(<span class="hljs-function"><span class="hljs-params">middleware</span> =&gt;</span> middleware(middlewareAPI));
+            dispatch = compose(...chain)(store.dispatch);
+            <span class="hljs-keyword">return</span> {
+                ...store,
+                dispatch
+            }
+        }
+    }
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> applyMiddleware;
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> dispatch;
+<span class="hljs-keyword">let</span> middlewareAPI = {
+    <span class="hljs-attr">dispatch</span>:<span class="hljs-function">(<span class="hljs-params">action</span>)=&gt;</span>dispatch(action)
+}
+dispatch = <span class="hljs-function">(<span class="hljs-params">action</span>)=&gt;</span>{<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;action&apos;</span>,action);}
+middlewareAPI.dispatch({<span class="hljs-attr">type</span>:<span class="hljs-string">&apos;ADD&apos;</span>});
+
+<span class="hljs-keyword">let</span> a;
+<span class="hljs-keyword">let</span> b=a;
+a = <span class="hljs-number">1</span>;
+<span class="hljs-built_in">console</span>.log(b); 
+</code></pre>
+<h3 id="t154.3 redux\index.js">4.3 redux\index.js <a href="#t154.3 redux\index.js"> # </a></h3>
+<p>src\redux\index.js</p>
+<pre><code class="lang-diff">export {default as createStore} from &apos;./createStore&apos;;
+export {default as bindActionCreators} from &apos;./bindActionCreators&apos;;
+export {default as combineReducers} from &apos;./combineReducers&apos;;
+export {default as applyMiddleware} from &apos;./applyMiddleware&apos;;
+<span class="hljs-addition">+export {default as compose} from &apos;./compose&apos;;</span>
+</code></pre>
+<h3 id="t164.4 redux-logger\index.js">4.4 redux-logger\index.js <a href="#t164.4 redux-logger\index.js"> # </a></h3>
+<p>src\redux-logger\index.js</p>
+<ul>
+<li><a href="https://gitee.com/zhufengpeixun/redux-logger/blob/master/src/index.js">redux-logger</a></li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span>  (api) =&gt; <span class="hljs-function">(<span class="hljs-params">next</span>) =&gt;</span> <span class="hljs-function">(<span class="hljs-params">action</span>) =&gt;</span> {
+  <span class="hljs-built_in">console</span>.log(api.getState());
+  next(action);
+  <span class="hljs-built_in">console</span>.log(api.getState());
+  <span class="hljs-keyword">return</span> action;
+};
+</code></pre>
+<h3 id="t174.5 redux-promise\index.js">4.5 redux-promise\index.js <a href="#t174.5 redux-promise\index.js"> # </a></h3>
+<p>src\redux-promise\index.js</p>
+<ul>
+<li><a href="https://gitee.com/zhufengpeixun/redux-promise/blob/master/src/index.js">redux-promise</a></li>
+</ul>
+<pre><code class="lang-js"> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">promise</span>(<span class="hljs-params">{getState,dispatch}</span>)</span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">next</span>)</span>{
+      <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">action</span>)</span>{
+          <span class="hljs-keyword">if</span>(action.then&amp;&amp; <span class="hljs-keyword">typeof</span> action.then===<span class="hljs-string">&apos;function&apos;</span>){
+            action.then(dispatch).catch(dispatch);
+          }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(action.payload &amp;&amp; <span class="hljs-keyword">typeof</span> action.payload.then===<span class="hljs-string">&apos;function&apos;</span>){
+            action.payload
+            .then(<span class="hljs-function"><span class="hljs-params">result</span> =&gt;</span> dispatch({ ...action, <span class="hljs-attr">payload</span>: result }))
+            .catch(<span class="hljs-function"><span class="hljs-params">error</span> =&gt;</span> {
+               dispatch({ ...action, <span class="hljs-attr">payload</span>: error, <span class="hljs-attr">error</span>: <span class="hljs-literal">true</span> });
+               <span class="hljs-keyword">return</span> <span class="hljs-built_in">Promise</span>.reject(error);
+             })
+          }<span class="hljs-keyword">else</span>{
+             next(action);
+          }
+      }
+    }
+  }
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> promise;
+</code></pre>
+<h3 id="t184.6 redux-thunk\index.js">4.6 redux-thunk\index.js <a href="#t184.6 redux-thunk\index.js"> # </a></h3>
+<p>src\redux-thunk\index.js</p>
+<ul>
+<li><a href="https://gitee.com/zhufengpeixun/redux-thunk/blob/master/src/index.js">redux-thunk</a><pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> ({ dispatch, getState }) =&gt; <span class="hljs-function">(<span class="hljs-params">next</span>) =&gt;</span> <span class="hljs-function">(<span class="hljs-params">action</span>) =&gt;</span> {
+  <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> action === <span class="hljs-string">&apos;function&apos;</span>) {
+      <span class="hljs-keyword">return</span> action(dispatch, getState);
+  }
+  <span class="hljs-keyword">return</span> next(action);
+};
+</code></pre>
+</li>
+</ul>
+<h3 id="t194.7 actions\counter1.js">4.7 actions\counter1.js <a href="#t194.7 actions\counter1.js"> # </a></h3>
+<p>src\store\actions\counter1.js</p>
+<pre><code class="lang-diff">import * as types from &apos;../action-types&apos;;
+
+const actions = {
+    add1() {
+        return { type: types.ADD1 };
+    },
+    minus1() {
+        return { type: types.MINUS1 };
+    },
+<span class="hljs-addition">+    thunkAdd1() {</span>
+<span class="hljs-addition">+        return function (dispatch, getState) {</span>
+<span class="hljs-addition">+            setTimeout(function () {</span>
+<span class="hljs-addition">+                dispatch({ type: types.ADD1 });</span>
+<span class="hljs-addition">+            }, 2000);</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+    },</span>
+<span class="hljs-addition">+    promiseAdd1() {</span>
+<span class="hljs-addition">+        return {</span>
+<span class="hljs-addition">+            type: types.ADD1,</span>
+<span class="hljs-addition">+            payload: new Promise((resolve, reject) =&gt; {</span>
+<span class="hljs-addition">+                setTimeout(() =&gt; {</span>
+<span class="hljs-addition">+                    let result = Math.random();</span>
+<span class="hljs-addition">+                    if (result &gt; .5) {</span>
+<span class="hljs-addition">+                        resolve(result);</span>
+<span class="hljs-addition">+                    } else {</span>
+<span class="hljs-addition">+                       reject(result);</span>
+<span class="hljs-addition">+                   }</span>
+<span class="hljs-addition">+               }, 1000);</span>
+<span class="hljs-addition">+           })</span>
+<span class="hljs-addition">+       }</span>
+<span class="hljs-addition">+   },</span>
+<span class="hljs-addition">+   promiseAdd2() {</span>
+<span class="hljs-addition">+       return new Promise((resolve, reject) =&gt; {</span>
+<span class="hljs-addition">+           setTimeout(() =&gt; {</span>
+<span class="hljs-addition">+               resolve({ type: types.ADD1});</span>
+<span class="hljs-addition">+           }, 1000);</span>
+<span class="hljs-addition">+       });</span>
+    }
+}
+export default actions;
+</code></pre>
+<h3 id="t204.8 store\index.js">4.8 store\index.js <a href="#t204.8 store\index.js"> # </a></h3>
+<p>src\store\index.js</p>
+<pre><code class="lang-diff">import { createStore, applyMiddleware } from &apos;../redux&apos;;
+import reducer from &apos;./reducers&apos;;
+<span class="hljs-addition">+import logger from &apos;../redux-logger&apos;;</span>
+<span class="hljs-addition">+import promise from &apos;../redux-promise&apos;;</span>
+<span class="hljs-addition">+import thunk from &apos;../redux-thunk&apos;;</span>
+<span class="hljs-addition">+let store = applyMiddleware(promise,thunk,logger)(createStore)(combinedReducer);</span>
+export default store;
+</code></pre>
+<h3 id="t214.9 Counter1.js">4.9 Counter1.js <a href="#t214.9 Counter1.js"> # </a></h3>
+<p>src\components\Counter1.js</p>
+<pre><code class="lang-diff">import React, { Component } from &apos;react&apos;;
+import actions from &apos;../store/actions/counter1&apos;;
+import { connect } from &apos;../react-redux&apos;;
+class Counter1 extends Component {
+    render() {
+        let { number, add1,addThunk1,addPromise1,addPromise2 } = this.props;
+        return (
+            &lt;div&gt;
+                &lt;p&gt;{number}&lt;/p&gt;
+                &lt;button onClick={add1}&gt;+&lt;/button&gt;
+<span class="hljs-addition">+               &lt;button onClick={thunkAdd1}&gt;thunk+1&lt;/button&gt;</span>
+<span class="hljs-addition">+               &lt;button onClick={promiseAdd1}&gt;promise+1&lt;/button&gt;</span>
+<span class="hljs-addition">+               &lt;button onClick={promiseAdd2}&gt;promise+2&lt;/button&gt;</span>
+            &lt;/div&gt;
+        )
+    }
+}
+let mapStateToProps = (state) =&gt; state.counter1;
+export default connect(
+    mapStateToProps,
+    actions
+)(Counter1)
+</code></pre>
+
+    </div>
+</div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+    aria-labelledby="loginModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="loginModalLabel">请登录</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="username" class="control-label">姓名:</label>
+                        <input type="text" class="form-control" id="username" placeholder="珠峰架构VIP会员系统用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">密码:</label>
+                        <input type="text" class="form-control" id="password" placeholder="珠峰架构VIP会员系统密码">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                    data-dismiss="modal">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

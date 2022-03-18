@@ -1,0 +1,2337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+
+                        
+<div class="warpper">
+    <div class="page-toc">
+        <ul><li><a href="#t01.拖拽应用场景">1.拖拽应用场景</a></li><li><a href="#t12.React DnD">2.React DnD</a></li><li><a href="#t23.核心知识">3.核心知识</a><ul><li><a href="#t33.1 HTML拖放API">3.1 HTML拖放API</a></li><li><a href="#t43.2 触摸事件">3.2 触摸事件</a></li><li><a href="#t53.3 getBoundingClientRect">3.3 getBoundingClientRect</a></li><li><a href="#t63.4 clientX/Y">3.4 clientX/Y</a></li><li><a href="#t73.5 React Hooks">3.5 React Hooks</a></li><li><a href="#t83.6 高阶组件">3.6 高阶组件</a></li></ul></li><li><a href="#t94. 核心概念">4. 核心概念</a><ul><li><a href="#t104.1 DndProvider">4.1 DndProvider</a></li><li><a href="#t114.2 backend(后端)">4.2 backend(后端)</a></li><li><a href="#t124.3 DragDropManager(管理器)和Registry(注册器)">4.3 DragDropManager(管理器)和Registry(注册器)</a></li><li><a href="#t134.4 Items and Types(项目和类型)">4.4 Items and Types(项目和类型)</a></li><li><a href="#t144.5 Monitors(监听器)">4.5 Monitors(监听器)</a><ul><li><a href="#t154.5.1 DragSourceMonitor(拖动源监听器)">4.5.1 DragSourceMonitor(拖动源监听器)</a></li><li><a href="#t164.5.2 DropTargetMonitor(放置目标监听器)">4.5.2 DropTargetMonitor(放置目标监听器)</a></li></ul></li><li><a href="#t174.6 Connectors(连接器)">4.6 Connectors(连接器)</a><ul><li><a href="#t184.6.1 DragSourceConnector(拖动源连接器)">4.6.1 DragSourceConnector(拖动源连接器)</a></li><li><a href="#t194.6.2 DragTargetConnector(放置目标连接器)">4.6.2 DragTargetConnector(放置目标连接器)</a></li></ul></li><li><a href="#t204.7 DragSources(拖动源)和DropTargets(放置目标)">4.7 DragSources(拖动源)和DropTargets(放置目标)</a><ul><li><a href="#t214.7.1 DragSource">4.7.1 DragSource</a></li><li><a href="#t224.7.2 DropTarget">4.7.2 DropTarget</a></li></ul></li><li><a href="#t234.8 useDrag">4.8 useDrag</a></li><li><a href="#t244.9 useDrop">4.9 useDrop</a></li></ul></li><li><a href="#t255. 拖拽排序实战">5. 拖拽排序实战</a><ul><li><a href="#t265.1 安装">5.1 安装</a></li><li><a href="#t275.2 绘制容器">5.2 绘制容器</a><ul><li><a href="#t285.2.1 src\index.js">5.2.1 src\index.js</a></li><li><a href="#t295.2.2 Container.js">5.2.2 Container.js</a></li></ul></li><li><a href="#t305.3 绘制卡片">5.3 绘制卡片</a><ul><li><a href="#t315.3.1 src\Card.js">5.3.1 src\Card.js</a></li><li><a href="#t325.3.2 src\Container.js">5.3.2 src\Container.js</a></li></ul></li><li><a href="#t335.4 拖动卡片">5.4 拖动卡片</a><ul><li><a href="#t345.4.1 ItemTypes.js">5.4.1 ItemTypes.js</a></li><li><a href="#t355.4.2 Container.js">5.4.2 Container.js</a></li><li><a href="#t365.4.3 Card.js">5.4.3 Card.js</a></li></ul></li><li><a href="#t375.5 放置卡片">5.5 放置卡片</a><ul><li><a href="#t385.5.1 Container.js">5.5.1 Container.js</a></li><li><a href="#t395.5.2 src\Card.js">5.5.2 src\Card.js</a></li></ul></li></ul></li><li><a href="#t405.实现Provider">5.实现Provider</a><ul><li><a href="#t415.1 react-dnd\index.js">5.1 react-dnd\index.js</a></li><li><a href="#t425.2 core\index.js">5.2 core\index.js</a></li><li><a href="#t435.3 DndContext.js">5.3 DndContext.js</a></li><li><a href="#t445.4 DndProvider.js">5.4 DndProvider.js</a></li><li><a href="#t455.5 dnd-core\index.js">5.5 dnd-core\index.js</a></li><li><a href="#t465.6 createDragDropManager.js">5.6 createDragDropManager.js</a></li><li><a href="#t475.7 DragDropManagerImpl.js">5.7 DragDropManagerImpl.js</a></li><li><a href="#t485.8 reducers\index.js">5.8 reducers\index.js</a></li><li><a href="#t495.9 react-dnd-html5-backend\index.js">5.9 react-dnd-html5-backend\index.js</a></li><li><a href="#t505.10 HTML5BackendImpl.js">5.10 HTML5BackendImpl.js</a></li></ul></li><li><a href="#t516.实现Monitor">6.实现Monitor</a><ul><li><a href="#t526.1 react-dnd\index.js">6.1 react-dnd\index.js</a></li><li><a href="#t536.2 hooks\index.js">6.2 hooks\index.js</a></li><li><a href="#t546.3 useDrag\index.js">6.3 useDrag\index.js</a></li><li><a href="#t556.4 useDragSourceMonitor.js">6.4 useDragSourceMonitor.js</a></li><li><a href="#t566.5 useDragDropManager.js">6.5 useDragDropManager.js</a></li><li><a href="#t576.6 internals\index.js">6.6 internals\index.js</a></li><li><a href="#t586.7 DragSourceMonitorImpl.js">6.7 DragSourceMonitorImpl.js</a></li><li><a href="#t596.8  dnd-core\index.js">6.8  dnd-core\index.js</a></li><li><a href="#t606.9  createDragDropManager.js">6.9  createDragDropManager.js</a></li><li><a href="#t616.10 DragDropMonitorImpl.js">6.10 DragDropMonitorImpl.js</a></li><li><a href="#t626.11 DragDropManagerImpl.js">6.11 DragDropManagerImpl.js</a></li></ul></li><li><a href="#t637.实现Registry">7.实现Registry</a><ul><li><a href="#t647.1 HandlerRegistryImpl.js">7.1 HandlerRegistryImpl.js</a></li><li><a href="#t657.2 createDragDropManager.js">7.2 createDragDropManager.js</a></li><li><a href="#t667.3 DragDropMonitorImpl.js">7.3 DragDropMonitorImpl.js</a></li></ul></li><li><a href="#t678.useDragSourceConnector">8.useDragSourceConnector</a><ul><li><a href="#t688.1 useDrag\index.js">8.1 useDrag\index.js</a></li><li><a href="#t698.2 useDragSourceConnector.js">8.2 useDragSourceConnector.js</a></li><li><a href="#t708.3 internals\index.js">8.3 internals\index.js</a></li><li><a href="#t718.4 SourceConnector.js">8.4 SourceConnector.js</a></li></ul></li><li><a href="#t729.创建DragSource和DragType">9.创建DragSource和DragType</a><ul><li><a href="#t739.1 src\react-dnd\hooks\useDrag\index.js">9.1 src\react-dnd\hooks\useDrag\index.js</a></li><li><a href="#t749.2 useRegisteredDragSource.js">9.2 useRegisteredDragSource.js</a></li><li><a href="#t759.3 useDragSource.js">9.3 useDragSource.js</a></li><li><a href="#t769.4 DragSourceImpl.js">9.4 DragSourceImpl.js</a></li><li><a href="#t779.5 useDragType.js">9.5 useDragType.js</a></li></ul></li><li><a href="#t7810.registerSource">10.registerSource</a><ul><li><a href="#t7910.1 useRegisteredDragSource.js">10.1 useRegisteredDragSource.js</a></li><li><a href="#t8010.2 DragSourceMonitorImpl.js">10.2 DragSourceMonitorImpl.js</a></li><li><a href="#t8110.3 SourceConnector.js">10.3 SourceConnector.js</a></li><li><a href="#t8210.4 registerSource.js">10.4 registerSource.js</a></li><li><a href="#t8310.5 internals\index.js">10.5 internals\index.js</a></li><li><a href="#t8410.6 DragDropManagerImpl.js">10.6 DragDropManagerImpl.js</a></li><li><a href="#t8510.7 HandlerRegistryImpl.js">10.7 HandlerRegistryImpl.js</a></li><li><a href="#t8610.8 interfaces.js">10.8 interfaces.js</a></li><li><a href="#t8710.9 getNextUniqueId.js">10.9 getNextUniqueId.js</a></li><li><a href="#t8810.10 utils\index.js">10.10 utils\index.js</a></li><li><a href="#t8910.11 registry.js">10.11 registry.js</a></li></ul></li><li><a href="#t9011.connectDragSource">11.connectDragSource</a><ul><li><a href="#t9111.1 useDrag\index.js">11.1 useDrag\index.js</a></li><li><a href="#t9211.2 useConnectDragSource.js">11.2 useConnectDragSource.js</a></li><li><a href="#t9311.3 SourceConnector.js">11.3 SourceConnector.js</a></li><li><a href="#t9411.4 HTML5BackendImpl.js">11.4 HTML5BackendImpl.js</a></li></ul></li><li><a href="#t9512.收集属性">12.收集属性</a><ul><li><a href="#t9612.1 useDrag\index.js">12.1 useDrag\index.js</a></li><li><a href="#t9712.2 useCollectedProps.js">12.2 useCollectedProps.js</a></li><li><a href="#t9812.3 DragSourceMonitorImpl.js">12.3 DragSourceMonitorImpl.js</a></li><li><a href="#t9912.4 DragDropMonitorImpl.js">12.4 DragDropMonitorImpl.js</a></li></ul></li><li><a href="#t10013.绑定拖动事件">13.绑定拖动事件</a><ul><li><a href="#t10113.1 dragOperation.js">13.1 dragOperation.js</a></li><li><a href="#t10213.2 reducers\index.js">13.2 reducers\index.js</a></li><li><a href="#t10313.3 dragDrop\index.js">13.3 dragDrop\index.js</a></li><li><a href="#t10413.4 types.js">13.4 types.js</a></li><li><a href="#t10513.5 beginDrag.js">13.5 beginDrag.js</a></li><li><a href="#t10613.6 DragSourceImpl.js">13.6 DragSourceImpl.js</a></li><li><a href="#t10713.7 endDrag.js">13.7 endDrag.js</a></li><li><a href="#t10813.8 DragDropMonitorImpl.js">13.8 DragDropMonitorImpl.js</a></li><li><a href="#t10913.9 DragDropManagerImpl.js">13.9 DragDropManagerImpl.js</a></li><li><a href="#t11013.10 HTML5BackendImpl.js">13.10 HTML5BackendImpl.js</a></li></ul></li><li><a href="#t11114.复制useDrop">14.复制useDrop</a><ul><li><a href="#t11214.1 useDrop\index.js">14.1 useDrop\index.js</a></li><li><a href="#t11314.2 useDropTargetMonitor.js">14.2 useDropTargetMonitor.js</a></li><li><a href="#t11414.3 DropTargetMonitorImpl.js">14.3 DropTargetMonitorImpl.js</a></li><li><a href="#t11514.4 useDropTargetConnector.js">14.4 useDropTargetConnector.js</a></li><li><a href="#t11614.5 TargetConnector.js">14.5 TargetConnector.js</a></li><li><a href="#t11714.6 useRegisteredDropTarget.js">14.6 useRegisteredDropTarget.js</a></li><li><a href="#t11814.7 useDropTarget.js">14.7 useDropTarget.js</a></li><li><a href="#t11914.8 DropTargetImpl.js">14.8 DropTargetImpl.js</a></li><li><a href="#t12014.9 registerTarget.js">14.9 registerTarget.js</a></li><li><a href="#t12114.10  useConnectDropTarget.js">14.10  useConnectDropTarget.js</a></li><li><a href="#t12214.11 hooks\index.js">14.11 hooks\index.js</a></li><li><a href="#t12314.12 internals\index.js">14.12 internals\index.js</a></li></ul></li><li><a href="#t12415.增加监听">15.增加监听</a><ul><li><a href="#t12515.1 src\react-dnd-html5-backend\HTML5BackendImpl.js">15.1 src\react-dnd-html5-backend\HTML5BackendImpl.js</a></li><li><a href="#t12615.2 OffsetUtils.js">15.2 OffsetUtils.js</a></li></ul></li><li><a href="#t12716.注册和监听">16.注册和监听</a><ul><li><a href="#t12816.1 src\dnd-core\classes\DragDropMonitorImpl.js">16.1 src\dnd-core\classes\DragDropMonitorImpl.js</a></li><li><a href="#t12916.2 src\dnd-core\classes\HandlerRegistryImpl.js">16.2 src\dnd-core\classes\HandlerRegistryImpl.js</a></li><li><a href="#t13016.3 src\dnd-core\actions\registry.js">16.3 src\dnd-core\actions\registry.js</a></li></ul></li><li><a href="#t13117.store">17.store</a><ul><li><a href="#t13217.1 reducers\index.js">17.1 reducers\index.js</a></li><li><a href="#t13317.2 dragOffset.js">17.2 dragOffset.js</a></li><li><a href="#t13417.3 dragDrop\index.js">17.3 dragDrop\index.js</a></li><li><a href="#t13517.4 hover.js">17.4 hover.js</a></li><li><a href="#t13617.5 src\dnd-core\actions\dragDrop\types.js">17.5 src\dnd-core\actions\dragDrop\types.js</a></li></ul></li></ul>
+    </div>
+    <div class="content markdown-body">
+        <h2 id="t01.&#x62D6;&#x62FD;&#x5E94;&#x7528;&#x573A;&#x666F;">1.&#x62D6;&#x62FD;&#x5E94;&#x7528;&#x573A;&#x666F; <a href="#t01.&#x62D6;&#x62FD;&#x5E94;&#x7528;&#x573A;&#x666F;"> # </a></h2>
+<ul>
+<li>&#x62D6;&#x62FD;&#x7684;&#x4E1A;&#x52A1;&#x5F88;&#x5E38;&#x89C1;&#xFF0C;&#x6BD4;&#x5982;&#x62D6;&#x62FD;&#x83DC;&#x5355; &#x3001;&#x62D6;&#x62FD;&#x5361;&#x7247;&#x6392;&#x5E8F;&#x548C;&#x62D6;&#x62FD;&#x8BC4;&#x5206;&#x7B49;</li>
+</ul>
+<h2 id="t12.React DnD">2.React DnD <a href="#t12.React DnD"> # </a></h2>
+<ul>
+<li><a href="https://www.npmjs.com/package/react-dnd">react-dnd</a>&#x662F;React&#x548C;Redux&#x6838;&#x5FC3;&#x4F5C;&#x8005; Dan&#x521B;&#x9020;&#x7684;&#x4E00;&#x7EC4;React&#x5B9E;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x53EF;&#x5E2E;&#x52A9;&#x60A8;&#x6784;&#x5EFA;&#x590D;&#x6742;&#x7684;&#x62D6;&#x653E;&#x754C;&#x9762;</li>
+<li><a href="http://react-dnd.github.io/react-dnd/">react-dnd&#x5B98;&#x7F51;</a></li>
+</ul>
+<h2 id="t23.&#x6838;&#x5FC3;&#x77E5;&#x8BC6;">3.&#x6838;&#x5FC3;&#x77E5;&#x8BC6; <a href="#t23.&#x6838;&#x5FC3;&#x77E5;&#x8BC6;"> # </a></h2>
+<h3 id="t33.1 HTML&#x62D6;&#x653E;API">3.1 HTML&#x62D6;&#x653E;API <a href="#t33.1 HTML&#x62D6;&#x653E;API"> # </a></h3>
+<ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API">HTML &#x62D6;&#x653E;&#xFF08;Drag and Drop&#xFF09;</a>&#x63A5;&#x53E3;&#x4F7F;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x80FD;&#x591F;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x4F7F;&#x7528;&#x62D6;&#x653E;&#x529F;&#x80FD;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4F7F;&#x7528;&#x9F20;&#x6807;&#x9009;&#x62E9;&#x53EF;&#x62D6;&#x62FD;&#xFF08;draggable&#xFF09;&#x5143;&#x7D20;&#xFF0C;&#x5C06;&#x5143;&#x7D20;&#x62D6;&#x62FD;&#x5230;&#x53EF;&#x653E;&#x7F6E;&#xFF08;droppable&#xFF09;&#x5143;&#x7D20;&#xFF0C;&#x5E76;&#x91CA;&#x653E;&#x9F20;&#x6807;&#x6309;&#x94AE;&#x4EE5;&#x653E;&#x7F6E;&#x8FD9;&#x4E9B;&#x5143;&#x7D20;&#x3002;&#x62D6;&#x62FD;&#x64CD;&#x4F5C;&#x671F;&#x95F4;&#xFF0C;&#x4F1A;&#x6709;&#x4E00;&#x4E2A;&#x53EF;&#x62D6;&#x62FD;&#x5143;&#x7D20;&#x7684;&#x534A;&#x900F;&#x660E;&#x5FEB;&#x7167;&#x8DDF;&#x968F;&#x7740;&#x9F20;&#x6807;&#x6307;&#x9488;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x4E8B;&#x4EF6;</th>
+<th style="text-align:left">&#x89E6;&#x53D1;&#x65F6;&#x523B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">dragstart</td>
+<td style="text-align:left">&#x5F53;&#x7528;&#x6237;&#x5F00;&#x59CB;&#x62D6;&#x62FD;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x65F6;&#x89E6;&#x53D1;</td>
+</tr>
+<tr>
+<td style="text-align:left">dragover</td>
+<td style="text-align:left">&#x5F53;&#x5143;&#x7D20;&#x88AB;&#x62D6;&#x5230;&#x4E00;&#x4E2A;&#x53EF;&#x91CA;&#x653E;&#x76EE;&#x6807;&#x4E0A;&#x65F6;&#x89E6;&#x53D1;(&#x6BCF;100&#x6BEB;&#x79D2;&#x89E6;&#x53D1;&#x4E00;&#x6B21;)</td>
+</tr>
+<tr>
+<td style="text-align:left">dragend</td>
+<td style="text-align:left">&#x5F53;&#x62D6;&#x62FD;&#x64CD;&#x4F5C;&#x7ED3;&#x675F;&#x65F6;&#x89E6;&#x53D1;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t43.2 &#x89E6;&#x6478;&#x4E8B;&#x4EF6;">3.2 &#x89E6;&#x6478;&#x4E8B;&#x4EF6; <a href="#t43.2 &#x89E6;&#x6478;&#x4E8B;&#x4EF6;"> # </a></h3>
+<ul>
+<li>HTML&#x62D6;&#x653E;API&#x4E0D;&#x652F;&#x6301;&#x89E6;&#x6478;&#x4E8B;&#x4EF6;&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x4E0D;&#x9002;&#x7528;&#x4E8E;&#x5E73;&#x677F;&#x7535;&#x8111;&#x548C;&#x79FB;&#x52A8;&#x8BBE;&#x5907;</li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Touch_events">&#x89E6;&#x6478;&#x4E8B;&#x4EF6;(Touch_events)</a>&#x53EF;&#x4E3A;&#x7279;&#x5B9A;&#x7A0B;&#x5E8F;&#x63D0;&#x4F9B;&#x591A;&#x70B9;&#x89E6;&#x63A7;&#x4EA4;&#x4E92;&#x7684;&#x652F;&#x6301;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x4E8B;&#x4EF6;</th>
+<th style="text-align:left">&#x89E6;&#x53D1;&#x65F6;&#x523B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">touchstart</td>
+<td style="text-align:left">&#x89E6;&#x6478;&#x5F00;&#x59CB;</td>
+</tr>
+<tr>
+<td style="text-align:left">touchmove</td>
+<td style="text-align:left">&#x63A5;&#x89E6;&#x70B9;&#x79FB;&#x52A8;</td>
+</tr>
+<tr>
+<td style="text-align:left">touchend</td>
+<td style="text-align:left">&#x89E6;&#x6478;&#x7ED3;&#x675F;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t53.3 getBoundingClientRect">3.3 getBoundingClientRect <a href="#t53.3 getBoundingClientRect"> # </a></h3>
+<ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element/getBoundingClientRect">getBoundingClientRect</a>&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x5143;&#x7D20;&#x7684;&#x5927;&#x5C0F;&#x53CA;&#x5176;&#x76F8;&#x5BF9;&#x4E8E;&#x89C6;&#x53E3;&#x7684;&#x4F4D;&#x7F6E;</li>
+</ul>
+<p><img src="https://upload-markdown-images.oss-cn-beijing.aliyuncs.com/rect_1634833633920.png" alt></p>
+<h3 id="t63.4 clientX/Y">3.4 clientX/Y <a href="#t63.4 clientX/Y"> # </a></h3>
+<ul>
+<li>event.clientX &#x9F20;&#x6807;&#x76F8;&#x5BF9;&#x4E8E;&#x6D4F;&#x89C8;&#x5668;&#x5DE6;&#x4E0A;&#x89D2;x&#x8F74;&#x7684;&#x5750;&#x6807;&#xFF1B; &#x4E0D;&#x968F;&#x6EDA;&#x52A8;&#x6761;&#x6EDA;&#x52A8;&#x800C;&#x6539;&#x53D8;</li>
+<li>event.clientY &#x9F20;&#x6807;&#x76F8;&#x5BF9;&#x4E8E;&#x6D4F;&#x89C8;&#x5668;&#x5DE6;&#x4E0A;&#x89D2;y&#x8F74;&#x7684;&#x5750;&#x6807;&#xFF1B; &#x4E0D;&#x968F;&#x6EDA;&#x52A8;&#x6761;&#x6EDA;&#x52A8;&#x800C;&#x6539;&#x53D8;</li>
+</ul>
+<h3 id="t73.5 React Hooks">3.5 React Hooks <a href="#t73.5 React Hooks"> # </a></h3>
+<ul>
+<li><code>useState</code> &#x901A;&#x8FC7;&#x5728;&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#x91CC;&#x8C03;&#x7528;&#x5B83;&#x6765;&#x7ED9;&#x7EC4;&#x4EF6;&#x6DFB;&#x52A0;&#x4E00;&#x4E9B;&#x5185;&#x90E8; state,React &#x4F1A;&#x5728;&#x91CD;&#x590D;&#x6E32;&#x67D3;&#x65F6;&#x4FDD;&#x7559;&#x8FD9;&#x4E2A; state</li>
+<li><code>useCallback</code> &#x628A;&#x5185;&#x8054;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x53CA;&#x4F9D;&#x8D56;&#x9879;&#x6570;&#x7EC4;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4F20;&#x5165; useCallback&#xFF0C;&#x5B83;&#x5C06;&#x8FD4;&#x56DE;&#x8BE5;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7684; memoized &#x7248;&#x672C;&#xFF0C;&#x8BE5;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x4EC5;&#x5728;&#x67D0;&#x4E2A;&#x4F9D;&#x8D56;&#x9879;&#x6539;&#x53D8;&#x65F6;&#x624D;&#x4F1A;&#x66F4;&#x65B0;</li>
+<li><code>useMemo</code> &#x628A;&#x521B;&#x5EFA;&#x51FD;&#x6570;&#x548C;&#x4F9D;&#x8D56;&#x9879;&#x6570;&#x7EC4;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4F20;&#x5165; useMemo&#xFF0C;&#x5B83;&#x4EC5;&#x4F1A;&#x5728;&#x67D0;&#x4E2A;&#x4F9D;&#x8D56;&#x9879;&#x6539;&#x53D8;&#x65F6;&#x624D;&#x91CD;&#x65B0;&#x8BA1;&#x7B97; memoized &#x503C;</li>
+<li><code>useLayoutEffect</code> &#x7ED9;&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#x589E;&#x52A0;&#x4E86;&#x64CD;&#x4F5C;&#x526F;&#x4F5C;&#x7528;&#x7684;&#x80FD;&#x529B;</li>
+</ul>
+<h3 id="t83.6 &#x9AD8;&#x9636;&#x7EC4;&#x4EF6;">3.6 &#x9AD8;&#x9636;&#x7EC4;&#x4EF6; <a href="#t83.6 &#x9AD8;&#x9636;&#x7EC4;&#x4EF6;"> # </a></h3>
+<ul>
+<li>&#x9AD8;&#x9636;&#x7EC4;&#x4EF6;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x4F20;&#x7ED9;&#x5B83;&#x4E00;&#x4E2A;&#x8001;&#x7EC4;&#x4EF6;&#xFF0C;&#x5B83;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x7EC4;&#x4EF6;</li>
+<li>&#x9AD8;&#x9636;&#x7EC4;&#x4EF6;&#x7684;&#x4F5C;&#x7528;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x4E3A;&#x4E86;&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x7684;&#x4EE3;&#x7801;&#x590D;&#x7528;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> NewComponent = higherOrderComponent(OldComponent)
+</code></pre>
+<h2 id="t94. &#x6838;&#x5FC3;&#x6982;&#x5FF5;">4. &#x6838;&#x5FC3;&#x6982;&#x5FF5; <a href="#t94. &#x6838;&#x5FC3;&#x6982;&#x5FF5;"> # </a></h2>
+<p><img src="https://static.zhufengpeixun.com/reactdnd2_1635074386436.png" alt="reactdnd"></p>
+<h3 id="t104.1 DndProvider">4.1 DndProvider <a href="#t104.1 DndProvider"> # </a></h3>
+<ul>
+<li>DndProvider &#x7EC4;&#x4EF6;&#x4E3A;&#x60A8;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x63D0;&#x4F9B; React-DnD &#x529F;&#x80FD;</li>
+<li>&#x4F7F;&#x7528;&#x65F6;&#x5FC5;&#x987B;&#x901A;&#x8FC7;<code>backend</code>&#x5C5E;&#x6027;&#x6CE8;&#x5165;&#x4E00;&#x4E2A;&#x540E;&#x7AEF;<ul>
+<li>backend: &#x5FC5;&#x9700;&#x5C5E;&#x6027; React DnD &#x540E;&#x7AEF;</li>
+</ul>
+</li>
+</ul>
+<h3 id="t114.2 backend(&#x540E;&#x7AEF;)">4.2 backend(&#x540E;&#x7AEF;) <a href="#t114.2 backend(&#x540E;&#x7AEF;)"> # </a></h3>
+<ul>
+<li>React DnD &#x4F7F;&#x7528; HTML5 &#x62D6;&#x653E; API&#x3002;&#x5B83;&#x4F1A;&#x622A;&#x53D6;&#x62D6;&#x52A8;&#x7684; DOM &#x8282;&#x70B9;&#x5E76;&#x5C06;&#x5176;&#x7528;&#x4F5C;&#x5F00;&#x7BB1;&#x5373;&#x7528;&#x7684;<code>&#x62D6;&#x52A8;&#x9884;&#x89C8;</code>&#x3002; &#x5F53;&#x5149;&#x6807;&#x79FB;&#x52A8;&#x65F6;&#xFF0C;&#x60A8;&#x4E0D;&#x5FC5;&#x8FDB;&#x884C;&#x4EFB;&#x4F55;&#x7ED8;&#x56FE;&#xFF0C;&#x8FD9;&#x5F88;&#x65B9;&#x4FBF;</li>
+<li>&#x540E;&#x7AEF;&#x62BD;&#x8C61;&#x51FA;&#x6D4F;&#x89C8;&#x5668;&#x5DEE;&#x5F02;&#x5E76;&#x5904;&#x7406;&#x539F;&#x751F; DOM &#x4E8B;&#x4EF6;,&#x5E76;&#x5C06; DOM &#x4E8B;&#x4EF6;&#x8F6C;&#x6362;&#x4E3A; React DnD &#x53EF;&#x4EE5;&#x5904;&#x7406;&#x7684;&#x5185;&#x90E8; Redux &#x64CD;&#x4F5C;</li>
+<li><a href="https://react-dnd.github.io/react-dnd/docs/backends/html5">react-dnd-html5-backend</a>&#x662F; React-DnD &#x652F;&#x6301;&#x7684;&#x4E3B;&#x8981;&#x540E;&#x7AEF;,&#x5B83;&#x672C;&#x8D28;&#x4E0A;&#x662F;&#x4F7F;&#x7528; HTML5 &#x62D6;&#x653E; API</li>
+<li>HTML5 &#x540E;&#x7AEF;&#x4E0D;&#x652F;&#x6301;&#x89E6;&#x6478;&#x4E8B;&#x4EF6;&#x3002; &#x6240;&#x4EE5;&#x5B83;&#x4E0D;&#x9002;&#x7528;&#x4E8E;&#x5E73;&#x677F;&#x7535;&#x8111;&#x548C;&#x79FB;&#x52A8;&#x8BBE;&#x5907;&#x3002; &#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<a href="https://react-dnd.github.io/react-dnd/docs/backends/touch">react-dnd-touch-backend</a></li>
+</ul>
+<h3 id="t124.3 DragDropManager(&#x7BA1;&#x7406;&#x5668;)&#x548C;Registry(&#x6CE8;&#x518C;&#x5668;)">4.3 DragDropManager(&#x7BA1;&#x7406;&#x5668;)&#x548C;Registry(&#x6CE8;&#x518C;&#x5668;) <a href="#t124.3 DragDropManager(&#x7BA1;&#x7406;&#x5668;)&#x548C;Registry(&#x6CE8;&#x518C;&#x5668;)"> # </a></h3>
+<ul>
+<li>&#x7BA1;&#x7406;&#x6574;&#x4E2A;&#x62D6;&#x62FD;&#x5E94;&#x7528;</li>
+<li>&#x5305;&#x542B;&#x4ED3;&#x5E93;&#x548C;&#x5168;&#x5C40;monitor</li>
+<li>&#x5168;&#x5C40;monitor&#x91CC;&#x5305;&#x542B;registry(&#x6CE8;&#x518C;&#x5668;)</li>
+<li>&#x6CE8;&#x518C;&#x5668;&#x91CC;&#x5305;&#x542B;&#x4E86;handlerId&#x548C;&#x5BF9;&#x5E94;&#x7684;DragSource&#x6216;DropTarget&#x7684;&#x5BF9;&#x5E94;&#x5173;&#x7CFB;</li>
+<li>&#x6BCF;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#x90FD;&#x4F1A;&#x6709;&#x4E00;&#x4E2A;&#x552F;&#x4E00;&#x7684;handlerId</li>
+</ul>
+<h3 id="t134.4 Items and Types(&#x9879;&#x76EE;&#x548C;&#x7C7B;&#x578B;)">4.4 Items and Types(&#x9879;&#x76EE;&#x548C;&#x7C7B;&#x578B;) <a href="#t134.4 Items and Types(&#x9879;&#x76EE;&#x548C;&#x7C7B;&#x578B;)"> # </a></h3>
+<ul>
+<li>&#x4E0E;Redux&#x4E00;&#x6837;&#xFF0C;React DnD &#x4F7F;&#x7528;&#x6570;&#x636E;&#x800C;&#x4E0D;&#x662F;&#x89C6;&#x56FE;&#x4F5C;&#x4E3A;&#x6765;&#x6E90;</li>
+<li>&#x5F53;&#x60A8;&#x5728;&#x5C4F;&#x5E55;&#x4E0A;&#x62D6;&#x52A8;&#x67D0;&#x7269;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x5E76;&#x4E0D;&#x662F;&#x8BF4;&#x6B63;&#x5728;&#x62D6;&#x52A8;&#x7EC4;&#x4EF6;&#x6216; DOM &#x8282;&#x70B9;&#x3002; &#x76F8;&#x53CD;&#xFF0C;&#x6211;&#x4EEC;&#x8BF4;&#x67D0;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x9879;&#x76EE;&#x6B63;&#x5728;&#x88AB;&#x62D6;&#x52A8;</li>
+<li>&#x4EC0;&#x4E48;&#x662F;&#x9879;&#x76EE;&#xFF1F; &#x4E00;&#x4E2A;&#x9879;&#x76EE;&#x662F;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684; JavaScript &#x5BF9;&#x8C61;&#xFF0C;&#x63CF;&#x8FF0;&#x88AB;&#x62D6;&#x52A8;&#x7684;&#x5185;&#x5BB9;&#x3002; &#x4F8B;&#x5982;&#xFF0C;&#x5728;&#x770B;&#x677F;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x5F53;&#x60A8;&#x62D6;&#x52A8;&#x5361;&#x7247;&#x65F6;&#xFF0C;&#x9879;&#x76EE;&#x53EF;&#x80FD;&#x770B;&#x8D77;&#x6765;&#x50CF;&#x662F;<code>{type:&apos;card&apos;, id: &apos;card1&apos; }</code>, &#x5C06;&#x62D6;&#x52A8;&#x7684;&#x6570;&#x636E;&#x63CF;&#x8FF0;&#x4E3A;&#x666E;&#x901A;&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;&#x60A8;&#x4FDD;&#x6301;&#x7EC4;&#x4EF6;&#x89E3;&#x8026;</li>
+<li>&#x90A3;&#x4EC0;&#x4E48;&#x662F;type(&#x7C7B;&#x578B;)&#x5462;&#xFF1F; &#x7C7B;&#x578B;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;(&#x6216;Symbol)&#xFF0C;&#x5B83;&#x552F;&#x4E00;&#x5730;&#x6807;&#x8BC6;&#x4E86;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#x7684;&#x9879;&#x76EE;&#x3002; &#x5728;&#x770B;&#x677F;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x60A8;&#x53EF;&#x80FD;&#x6709;&#x4E00;&#x4E2A;&#x4EE3;&#x8868;&#x53EF;&#x62D6;&#x52A8;&#x5361;&#x7247;&#x7684;<code>&#x5361;&#x7247;</code>&#x7C7B;&#x578B;</li>
+<li>&#x7C7B;&#x578B;&#x5F88;&#x6709;&#x7528;&#xFF0C;&#x56E0;&#x4E3A;&#x968F;&#x7740;&#x60A8;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x589E;&#x957F;&#xFF0C;&#x60A8;&#x53EF;&#x80FD;&#x5E0C;&#x671B;&#x4F7F;&#x66F4;&#x591A;&#x5185;&#x5BB9;&#x53EF;&#x62D6;&#x52A8;&#xFF0C;&#x4F46;&#x60A8;&#x4E0D;&#x4E00;&#x5B9A;&#x5E0C;&#x671B;&#x6240;&#x6709;&#x73B0;&#x6709;&#x7684;&#x653E;&#x7F6E;&#x76EE;&#x6807;&#x7A81;&#x7136;&#x5F00;&#x59CB;&#x5BF9;&#x65B0;&#x9879;&#x76EE;&#x505A;&#x51FA;&#x53CD;&#x5E94;&#x3002; &#x8FD9;&#x4E9B;&#x7C7B;&#x578B;&#x5141;&#x8BB8;&#x60A8;&#x6307;&#x5B9A;&#x517C;&#x5BB9;&#x7684;&#x62D6;&#x653E;&#x6E90;&#x548C;&#x653E;&#x7F6E;&#x76EE;&#x6807;</li>
+</ul>
+<p><img src="https://upload-markdown-images.oss-cn-beijing.aliyuncs.com/kanbanben_1634867988749.png" alt="kanbanben_1634867988749"></p>
+<h3 id="t144.5 Monitors(&#x76D1;&#x542C;&#x5668;)">4.5 Monitors(&#x76D1;&#x542C;&#x5668;) <a href="#t144.5 Monitors(&#x76D1;&#x542C;&#x5668;)"> # </a></h3>
+<ul>
+<li>&#x62D6;&#x653E;&#x672C;&#x8D28;&#x4E0A;&#x662F;&#x6709;&#x72B6;&#x6001;&#x7684;&#x3002; &#x8981;&#x4E48;&#x6B63;&#x5728;&#x8FDB;&#x884C;&#x62D6;&#x52A8;&#x64CD;&#x4F5C;&#xFF0C;&#x8981;&#x4E48;&#x4E0D;&#x5728;&#x3002; &#x8981;&#x4E48;&#x6709;&#x5F53;&#x524D;&#x7C7B;&#x578B;&#x548C;&#x5F53;&#x524D;&#x9879;&#x76EE;&#xFF0C;&#x8981;&#x4E48;&#x6CA1;&#x6709;&#x3002; &#x8FD9;&#x79CD;&#x72B6;&#x6001;&#x5FC5;&#x987B;&#x5B58;&#x5728;&#x4E8E;&#x67D0;&#x4E2A;&#x5730;&#x65B9;</li>
+<li>React DnD &#x901A;&#x8FC7;&#x76D1;&#x89C6;&#x5668;&#x5C01;&#x88C5;&#x5185;&#x90E8;&#x5B58;&#x50A8;&#x72B6;&#x6001;,&#x5E76;&#x5C06;&#x6B64;&#x72B6;&#x6001;&#x516C;&#x5F00;&#x7ED9;&#x60A8;&#x7684;&#x7EC4;&#x4EF6;</li>
+<li>&#x76D1;&#x89C6;&#x5668;&#x5141;&#x8BB8;&#x60A8;&#x66F4;&#x65B0;&#x7EC4;&#x4EF6;&#x7684;&#x5C5E;&#x6027;&#x4EE5;&#x54CD;&#x5E94;&#x62D6;&#x653E;&#x72B6;&#x6001;&#x7684;&#x53D8;&#x5316;</li>
+<li>&#x5BF9;&#x4E8E;&#x9700;&#x8981;&#x8DDF;&#x8E2A;&#x62D6;&#x653E;&#x72B6;&#x6001;&#x7684;&#x6BCF;&#x4E2A;&#x7EC4;&#x4EF6;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x6536;&#x96C6;&#x51FD;&#x6570;&#xFF0C;&#x4ECE;&#x76D1;&#x89C6;&#x5668;&#x83B7;&#x53D6;&#x5B83;&#x7684;&#x76F8;&#x5173;&#x5C5E;&#x6027;</li>
+<li>React DnD &#x7136;&#x540E;&#x8D1F;&#x8D23;&#x53CA;&#x65F6;&#x8C03;&#x7528;&#x60A8;&#x7684;&#x6536;&#x96C6;&#x51FD;&#x6570;&#x5E76;&#x5C06;&#x5176;&#x8FD4;&#x56DE;&#x503C;&#x5408;&#x5E76;&#x5230;&#x7EC4;&#x4EF6;&#x7684;&#x5C5E;&#x6027;&#x5BF9;&#x8C61;&#x4E2D;</li>
+</ul>
+<h4 id="t154.5.1 DragSourceMonitor(&#x62D6;&#x52A8;&#x6E90;&#x76D1;&#x542C;&#x5668;)">4.5.1 DragSourceMonitor(&#x62D6;&#x52A8;&#x6E90;&#x76D1;&#x542C;&#x5668;) <a href="#t154.5.1 DragSourceMonitor(&#x62D6;&#x52A8;&#x6E90;&#x76D1;&#x542C;&#x5668;)"> # </a></h4>
+<ul>
+<li><code>DragSourceMonitor</code> &#x662F;&#x4F20;&#x9012;&#x7ED9;&#x57FA;&#x4E8E;&#x94A9;&#x5B50;&#x6216;&#x57FA;&#x4E8E;&#x88C5;&#x9970;&#x5668;&#x7684;&#x62D6;&#x52A8;&#x6E90;&#x7684;&#x6536;&#x96C6;&#x51FD;&#x6570;&#x7684;&#x5BF9;&#x8C61;</li>
+<li>&#x5B83;&#x7684;&#x65B9;&#x6CD5;&#x53EF;&#x8BA9;&#x60A8;&#x83B7;&#x53D6;&#x6709;&#x5173;&#x7279;&#x5B9A;&#x62D6;&#x52A8;&#x6E90;&#x7684;&#x62D6;&#x52A8;&#x72B6;&#x6001;&#x7684;&#x4FE1;&#x606F;</li>
+<li>&#x7ED1;&#x5B9A;&#x5230;&#x8BE5;&#x76D1;&#x89C6;&#x5668;&#x7684;&#x7279;&#x5B9A;&#x62D6;&#x52A8;&#x6E90;&#x5728;&#x4E0B;&#x9762;&#x79F0;&#x4E3A;&#x76D1;&#x89C6;&#x5668;&#x7684;&#x6240;&#x6709;&#x8005;</li>
+<li>&#x65B9;&#x6CD5;<ul>
+<li>isDragging(): &#x5982;&#x679C;&#x62D6;&#x52A8;&#x64CD;&#x4F5C;&#x6B63;&#x5728;&#x8FDB;&#x884C;&#x4E2D;&#xFF0C;&#x5E76;&#x4E14;&#x6240;&#x6709;&#x8005;&#x53D1;&#x8D77;&#x62D6;&#x52A8;&#xFF0C;&#x5219;&#x8FD4;&#x56DE; true</li>
+<li>getItemType(): &#x8FD4;&#x56DE;&#x6807;&#x8BC6;&#x5F53;&#x524D;&#x62D6;&#x52A8;&#x9879;&#x76EE;&#x7C7B;&#x578B;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x6216;Symbol</li>
+<li>getItem(): &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x8868;&#x793A;&#x5F53;&#x524D;&#x62D6;&#x52A8;&#x9879;&#x76EE;&#x7684;&#x666E;&#x901A;&#x5BF9;&#x8C61;&#x3002; &#x6BCF;&#x4E2A;&#x62D6;&#x52A8;&#x6E90;&#x90FD;&#x5FC5;&#x987B;&#x901A;&#x8FC7;&#x4ECE;&#x5176; <code>beginDrag()</code> &#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x6765;&#x6307;&#x5B9A;&#x5B83;</li>
+<li>getClientOffset(): &#x5728;&#x62D6;&#x52A8;&#x64CD;&#x4F5C;&#x6B63;&#x5728;&#x8FDB;&#x884C;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;&#x6700;&#x540E;&#x8BB0;&#x5F55;&#x7684; { x, y } &#x9F20;&#x6807;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x504F;&#x79FB;&#x91CF;</li>
+</ul>
+</li>
+</ul>
+<h4 id="t164.5.2 DropTargetMonitor(&#x653E;&#x7F6E;&#x76EE;&#x6807;&#x76D1;&#x542C;&#x5668;)">4.5.2 DropTargetMonitor(&#x653E;&#x7F6E;&#x76EE;&#x6807;&#x76D1;&#x542C;&#x5668;) <a href="#t164.5.2 DropTargetMonitor(&#x653E;&#x7F6E;&#x76EE;&#x6807;&#x76D1;&#x542C;&#x5668;)"> # </a></h4>
+<ul>
+<li>DropTargetMonitor &#x662F;&#x4F20;&#x9012;&#x7ED9;&#x57FA;&#x4E8E;&#x94A9;&#x5B50;&#x6216;&#x57FA;&#x4E8E;&#x88C5;&#x9970;&#x5668;&#x7684;&#x6536;&#x96C6;&#x51FD;&#x6570;&#x7684;&#x5BF9;&#x8C61;</li>
+<li>&#x5B83;&#x7684;&#x65B9;&#x6CD5;&#x53EF;&#x8BA9;&#x60A8;&#x83B7;&#x53D6;&#x6709;&#x5173;&#x7279;&#x5B9A;&#x653E;&#x7F6E;&#x76EE;&#x6807;&#x7684;&#x62D6;&#x52A8;&#x72B6;&#x6001;&#x7684;&#x4FE1;&#x606F;</li>
+<li>&#x7ED1;&#x5B9A;&#x5230;&#x8BE5;&#x76D1;&#x89C6;&#x5668;&#x7684;&#x7279;&#x5B9A;&#x653E;&#x7F6E;&#x76EE;&#x6807;&#x5728;&#x4E0B;&#x9762;&#x79F0;&#x4E3A;&#x76D1;&#x89C6;&#x5668;&#x7684;&#x6240;&#x6709;&#x8005;</li>
+<li>&#x65B9;&#x6CD5;<ul>
+<li>getItemType(): &#x8FD4;&#x56DE;&#x6807;&#x8BC6;&#x5F53;&#x524D;&#x62D6;&#x52A8;&#x9879;&#x76EE;&#x7C7B;&#x578B;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x6216;Symbol</li>
+<li>getItem(): &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x8868;&#x793A;&#x5F53;&#x524D;&#x62D6;&#x52A8;&#x9879;&#x76EE;&#x7684;&#x666E;&#x901A;&#x5BF9;&#x8C61;&#x3002; &#x6BCF;&#x4E2A;&#x62D6;&#x52A8;&#x6E90;&#x90FD;&#x5FC5;&#x987B;&#x901A;&#x8FC7;&#x4ECE;&#x5176; beginDrag() &#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x6765;&#x6307;&#x5B9A;&#x5B83;</li>
+<li>getClientOffset(): &#x5728;&#x62D6;&#x52A8;&#x64CD;&#x4F5C;&#x6B63;&#x5728;&#x8FDB;&#x884C;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;&#x6700;&#x540E;&#x8BB0;&#x5F55;&#x7684; { x, y } &#x9F20;&#x6807;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x504F;&#x79FB;&#x91CF;</li>
+</ul>
+</li>
+</ul>
+<h3 id="t174.6 Connectors(&#x8FDE;&#x63A5;&#x5668;)">4.6 Connectors(&#x8FDE;&#x63A5;&#x5668;) <a href="#t174.6 Connectors(&#x8FDE;&#x63A5;&#x5668;)"> # </a></h3>
+<ul>
+<li>&#x5982;&#x679C;&#x540E;&#x7AEF;&#x5904;&#x7406; DOM &#x4E8B;&#x4EF6;&#xFF0C;&#x4F46;&#x662F;&#x7EC4;&#x4EF6;&#x4F7F;&#x7528; React &#x6765;&#x63CF;&#x8FF0; DOM&#xFF0C;&#x540E;&#x7AEF;&#x5982;&#x4F55;&#x77E5;&#x9053;&#x8981;&#x76D1;&#x542C;&#x54EA;&#x4E9B; DOM &#x8282;&#x70B9;&#xFF1F;</li>
+<li>&#x8FDE;&#x63A5;&#x5668;&#x5141;&#x8BB8;&#x60A8;&#x5C06;&#x9884;&#x5B9A;&#x4E49;&#x89D2;&#x8272;&#x4E4B;&#x4E00;&#xFF08;&#x62D6;&#x52A8;&#x6E90;&#x6216;&#x653E;&#x7F6E;&#x76EE;&#x6807;&#xFF09;&#x5206;&#x914D;&#x7ED9;&#x6E32;&#x67D3;&#x51FD;&#x6570;&#x4E2D;&#x7684; DOM &#x8282;&#x70B9;</li>
+<li>&#x4E8B;&#x5B9E;&#x4E0A;&#xFF0C;&#x8FDE;&#x63A5;&#x5668;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x7ED9;&#x6211;&#x4EEC;&#x4E0A;&#x9762;&#x63CF;&#x8FF0;&#x7684;&#x6536;&#x96C6;&#x51FD;&#x6570;</li>
+<li>&#x5728;&#x7EC4;&#x4EF6;&#x7684;&#x6E32;&#x67D3;&#x65B9;&#x6CD5;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x4ECE;&#x76D1;&#x89C6;&#x5668;&#x83B7;&#x5F97;&#x7684;&#x6570;&#x636E;&#x548C;&#x4ECE;&#x8FDE;&#x63A5;&#x5668;&#x83B7;&#x5F97;&#x7684;&#x51FD;&#x6570;</li>
+</ul>
+<h4 id="t184.6.1 DragSourceConnector(&#x62D6;&#x52A8;&#x6E90;&#x8FDE;&#x63A5;&#x5668;)">4.6.1 DragSourceConnector(&#x62D6;&#x52A8;&#x6E90;&#x8FDE;&#x63A5;&#x5668;) <a href="#t184.6.1 DragSourceConnector(&#x62D6;&#x52A8;&#x6E90;&#x8FDE;&#x63A5;&#x5668;)"> # </a></h4>
+<ul>
+<li>DragSourceConnector &#x662F;&#x4F20;&#x9012;&#x7ED9; DragSource &#x7684;&#x6536;&#x96C6;&#x51FD;&#x6570;&#x7684;&#x5BF9;&#x8C61;</li>
+<li>&#x5B83;&#x63D0;&#x4F9B;&#x4E86;&#x5C06; React &#x7EC4;&#x4EF6;&#x7ED1;&#x5B9A;&#x5230; Drag Source &#x89D2;&#x8272;&#x7684;&#x80FD;&#x529B;</li>
+<li>&#x5C5E;&#x6027;<ul>
+<li>dragSource &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5FC5;&#x987B;&#x88AB; prop-injected &#x5230;&#x4F60;&#x7684;&#x7EC4;&#x4EF6;&#x4E2D;&#x5E76;&#x5728;&#x8BE5;&#x7EC4;&#x4EF6;&#x7684; render() &#x65B9;&#x6CD5;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x51FD;&#x6570;&#x3002; &#x60A8;&#x53EF;&#x4EE5;&#x5C06;&#x6B64;&#x51FD;&#x6570;&#x4F20;&#x9012;&#x7ED9;&#x6B64;&#x65B9;&#x6CD5;&#x4E00;&#x4E2A; react &#x7EC4;&#x4EF6;&#x3001;&#x4E00;&#x4E2A; DOM &#x5143;&#x7D20;&#x6216;&#x4E00;&#x4E2A; ref &#x5BF9;&#x8C61;</li>
+</ul>
+</li>
+</ul>
+<h4 id="t194.6.2 DragTargetConnector(&#x653E;&#x7F6E;&#x76EE;&#x6807;&#x8FDE;&#x63A5;&#x5668;)">4.6.2 DragTargetConnector(&#x653E;&#x7F6E;&#x76EE;&#x6807;&#x8FDE;&#x63A5;&#x5668;) <a href="#t194.6.2 DragTargetConnector(&#x653E;&#x7F6E;&#x76EE;&#x6807;&#x8FDE;&#x63A5;&#x5668;)"> # </a></h4>
+<ul>
+<li>DropTargetConnector &#x662F;&#x4F20;&#x9012;&#x7ED9; DropTarget &#x7684;&#x6536;&#x96C6;&#x51FD;&#x6570;&#x7684;&#x5BF9;&#x8C61;&#x3002; &#x5B83;&#x63D0;&#x4F9B;&#x4E86;&#x5C06; React &#x7EC4;&#x4EF6;&#x7ED1;&#x5B9A;&#x5230; Drop Target &#x89D2;&#x8272;&#x7684;&#x80FD;&#x529B;</li>
+<li>&#x5C5E;&#x6027;<ul>
+<li>dropTarget() =&gt; (Element | Node | Ref)  &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5FC5;&#x987B;&#x88AB; prop-injected &#x5230;&#x4F60;&#x7684;&#x7EC4;&#x4EF6;&#x4E2D;&#x5E76;&#x5728;&#x8BE5;&#x7EC4;&#x4EF6;&#x7684; render() &#x65B9;&#x6CD5;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x51FD;&#x6570;&#x3002; &#x60A8;&#x53EF;&#x4EE5;&#x5C06;&#x6B64;&#x51FD;&#x6570;&#x4F20;&#x9012;&#x7ED9;&#x6B64;&#x65B9;&#x6CD5;&#x4E00;&#x4E2A; react &#x7EC4;&#x4EF6;&#x3001;&#x4E00;&#x4E2A; DOM &#x5143;&#x7D20;&#x6216;&#x4E00;&#x4E2A; ref &#x5BF9;&#x8C61;</li>
+</ul>
+</li>
+</ul>
+<h3 id="t204.7 DragSources(&#x62D6;&#x52A8;&#x6E90;)&#x548C;DropTargets(&#x653E;&#x7F6E;&#x76EE;&#x6807;)">4.7 DragSources(&#x62D6;&#x52A8;&#x6E90;)&#x548C;DropTargets(&#x653E;&#x7F6E;&#x76EE;&#x6807;) <a href="#t204.7 DragSources(&#x62D6;&#x52A8;&#x6E90;)&#x548C;DropTargets(&#x653E;&#x7F6E;&#x76EE;&#x6807;)"> # </a></h3>
+<ul>
+<li>&#x4E0A;&#x9762;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x4ECB;&#x7ECD;&#x4E86;&#x4E0E; DOM &#x4E00;&#x8D77;&#x5DE5;&#x4F5C;&#x7684;&#x540E;&#x7AEF;&#x3001;&#x7531;&#x9879;&#x76EE;&#x548C;&#x7C7B;&#x578B;&#x8868;&#x793A;&#x7684;&#x6570;&#x636E;&#x4EE5;&#x53CA;&#x6536;&#x96C6;&#x529F;&#x80FD;&#xFF0C;&#x4F9D;&#x9760;&#x76D1;&#x89C6;&#x5668;&#x548C;&#x8FDE;&#x63A5;&#x5668;&#xFF0C;&#x8FD9;&#x4E9B;&#x529F;&#x80FD;&#x8BA9;&#x60A8;&#x53EF;&#x4EE5;&#x63CF;&#x8FF0; React DnD &#x5E94;&#x8BE5;&#x6CE8;&#x5165;&#x5230;&#x60A8;&#x7684;&#x7EC4;&#x4EF6;&#x4E2D;&#x7684;&#x5C5E;&#x6027;&#x5BF9;&#x8C61;&#x4E2D;</li>
+<li>&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x5982;&#x4F55;&#x914D;&#x7F6E;&#x6211;&#x4EEC;&#x7684;&#x7EC4;&#x4EF6;&#x6765;&#x5B9E;&#x9645;&#x6CE8;&#x5165;&#x8FD9;&#x4E9B;&#x5C5E;&#x6027;&#x5BF9;&#x8C61;&#x4E2D;&#x5462;&#xFF1F; &#x6211;&#x4EEC;&#x5982;&#x4F55;&#x6267;&#x884C;&#x54CD;&#x5E94;&#x62D6;&#x653E;&#x4E8B;&#x4EF6;&#x7684;&#x526F;&#x4F5C;&#x7528;&#xFF1F;React DnD &#x7684;&#x4E3B;&#x8981;&#x62BD;&#x8C61;&#x5355;&#x5143;&#x62D6;&#x52A8;&#x6E90;&#x548C;&#x653E;&#x7F6E;&#x76EE;&#x6807;&#x53EF;&#x4EE5;&#x5C06;&#x7C7B;&#x578B;&#x3001;&#x9879;&#x76EE;&#x3001;&#x526F;&#x4F5C;&#x7528;&#x548C;&#x6536;&#x96C6;&#x529F;&#x80FD;&#x4E0E;&#x60A8;&#x7684;&#x7EC4;&#x4EF6;&#x8054;&#x7CFB;&#x5728;&#x4E00;&#x8D77;</li>
+<li>&#x6BCF;&#x5F53;&#x60A8;&#x60F3;&#x8BA9;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x6216;&#x5176;&#x67D0;&#x4E9B;&#x90E8;&#x5206;&#x53EF;&#x62D6;&#x52A8;&#x65F6;&#xFF0C;&#x60A8;&#x9700;&#x8981;&#x5C06;&#x8BE5;&#x7EC4;&#x4EF6;&#x5305;&#x88C5;&#x5230;&#x62D6;&#x52A8;&#x6E90;&#x58F0;&#x660E;&#x4E2D;&#x3002; &#x6BCF;&#x4E2A;&#x62D6;&#x52A8;&#x6E90;&#x90FD;&#x9488;&#x5BF9;&#x7279;&#x5B9A;&#x7C7B;&#x578B;&#x6CE8;&#x518C;&#xFF0C;&#x5E76;&#x4E14;&#x5FC5;&#x987B;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x4ECE;&#x7EC4;&#x4EF6;&#x7684; props &#x751F;&#x6210;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#x3002; &#x62D6;&#x52A8;&#x6E90;&#x58F0;&#x660E;&#x8FD8;&#x5141;&#x8BB8;&#x60A8;&#x4E3A;&#x7ED9;&#x5B9A;&#x7EC4;&#x4EF6;&#x6307;&#x5B9A;&#x6536;&#x96C6;&#x529F;&#x80FD;</li>
+<li>&#x653E;&#x7F6E;&#x76EE;&#x6807;&#x4E0E;&#x62D6;&#x52A8;&#x6E90;&#x975E;&#x5E38;&#x76F8;&#x4F3C;&#x3002; &#x552F;&#x4E00;&#x7684;&#x533A;&#x522B;&#x662F;&#x5355;&#x4E2A;&#x653E;&#x7F6E;&#x76EE;&#x6807;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x6CE8;&#x518C;&#x591A;&#x4E2A;&#x9879;&#x76EE;&#x7C7B;&#x578B;</li>
+</ul>
+<h4 id="t214.7.1 DragSource">4.7.1 DragSource <a href="#t214.7.1 DragSource"> # </a></h4>
+<ul>
+<li>&#x53C2;&#x6570;<ul>
+<li>type: &#x5FC5;&#x9700;&#x7684;&#x3002; &#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x3001;&#x4E00;&#x4E2A;&#x7B26;&#x53F7;&#x6216;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED9;&#x5B9A;&#x7EC4;&#x4EF6;&#x7684;&#x5C5E;&#x6027;&#x3002; &#x53EA;&#x6709;&#x4E3A;&#x76F8;&#x540C;&#x7C7B;&#x578B;&#x6CE8;&#x518C;&#x7684;&#x653E;&#x7F6E;&#x76EE;&#x6807;&#x624D;&#x4F1A;&#x5BF9;&#x6B64;&#x62D6;&#x52A8;&#x6E90;&#x751F;&#x6210;&#x7684;&#x9879;&#x76EE;&#x505A;&#x51FA;&#x53CD;&#x5E94;</li>
+<li>spec: &#x5FC5;&#x9700;&#x7684;&#x3002; &#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684; JavaScript &#x5BF9;&#x8C61;&#xFF0C;&#x4E0A;&#x9762;&#x6709;&#x4E00;&#x4E9B;&#x5141;&#x8BB8;&#x7684;&#x65B9;&#x6CD5;&#x3002; &#x5B83;&#x63CF;&#x8FF0;&#x4E86;&#x62D6;&#x52A8;&#x6E90;&#x5982;&#x4F55;&#x5BF9;&#x62D6;&#x653E;&#x4E8B;&#x4EF6;&#x505A;&#x51FA;&#x53CD;&#x5E94;<ul>
+<li>beginDrag(props, monitor, component): &#x5FC5;&#x9700;&#x7684;&#x3002; &#x5F53;&#x62D6;&#x52A8;&#x5F00;&#x59CB;&#x65F6;&#xFF0C;beginDrag&#x88AB;&#x8C03;&#x7528;&#x3002; &#x60A8;&#x5FC5;&#x987B;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x63CF;&#x8FF0;&#x88AB;&#x62D6;&#x52A8;&#x6570;&#x636E;&#x7684;&#x666E;&#x901A; JavaScript &#x5BF9;&#x8C61;&#x3002; &#x60A8;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x6709;&#x5173;&#x62D6;&#x653E;&#x6E90;&#x7684;&#x653E;&#x7F6E;&#x76EE;&#x6807;&#x53EF;&#x7528;&#x7684;&#x552F;&#x4E00;&#x4FE1;&#x606F;&#xFF0C;&#x56E0;&#x6B64;&#x9009;&#x62E9;&#x4ED6;&#x4EEC;&#x9700;&#x8981;&#x77E5;&#x9053;&#x7684;&#x6700;&#x5C11;&#x6570;&#x636E;&#x5F88;&#x91CD;&#x8981;</li>
+</ul>
+</li>
+<li>collect: &#x5FC5;&#x9700;&#x7684;&#x3002; &#x6536;&#x96C6;&#x529F;&#x80FD;&#x3002; &#x5B83;&#x5E94;&#x8BE5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x7684;&#x5C5E;&#x6027;&#x5BF9;&#x8C61;&#x4EE5;&#x6CE8;&#x5165;&#x5230;&#x60A8;&#x7684;&#x7EC4;&#x4EF6;&#x4E2D;&#x3002; &#x5B83;&#x63A5;&#x6536;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;connect &#x548C; monitor</li>
+</ul>
+</li>
+</ul>
+<h4 id="t224.7.2 DropTarget">4.7.2 DropTarget <a href="#t224.7.2 DropTarget"> # </a></h4>
+<ul>
+<li>&#x53C2;&#x6570;<ul>
+<li>types: &#x5FC5;&#x9700;&#x7684;&#x3002; &#x7ED9;&#x5B9A;&#x7EC4;&#x4EF6;&#x7684; props&#xFF0C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x3001;&#x4E00;&#x4E2A;&#x7B26;&#x53F7;&#x3001;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x6216;&#x4E00;&#x4E2A;&#x8FD4;&#x56DE;&#x5176;&#x4E2D;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#x7684;&#x51FD;&#x6570;&#x3002; &#x8FD9;&#x4E2A;&#x653E;&#x7F6E;&#x76EE;&#x6807;&#x53EA;&#x4F1A;&#x5BF9;&#x6307;&#x5B9A;&#x7C7B;&#x578B;&#x7684;&#x62D6;&#x62FD;&#x6E90;&#x4EA7;&#x751F;&#x7684;&#x9879;&#x76EE;&#x505A;&#x51FA;&#x53CD;&#x5E94;</li>
+<li>spec: &#x5FC5;&#x9700;&#x7684;&#x3002; &#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684; JavaScript &#x5BF9;&#x8C61;&#xFF0C;&#x4E0A;&#x9762;&#x6709;&#x4E00;&#x4E9B;&#x5141;&#x8BB8;&#x7684;&#x65B9;&#x6CD5;&#x3002; &#x5B83;&#x63CF;&#x8FF0;&#x4E86;&#x653E;&#x7F6E;&#x76EE;&#x6807;&#x5982;&#x4F55;&#x5BF9;&#x62D6;&#x653E;&#x4E8B;&#x4EF6;&#x505A;&#x51FA;&#x53CD;&#x5E94;<ul>
+<li>hover(props, monitor, component): &#x53EF;&#x9009;&#x7684;&#x3002; &#x5F53;&#x9879;&#x76EE;&#x60AC;&#x505C;&#x5728;&#x7EC4;&#x4EF6;&#x4E0A;&#x65F6;&#x8C03;&#x7528;</li>
+</ul>
+</li>
+<li>collect: &#x5FC5;&#x9700;&#x7684;&#x3002; &#x6536;&#x96C6;&#x529F;&#x80FD;&#x3002; &#x5B83;&#x5E94;&#x8BE5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x7684;&#x5C5E;&#x6027;&#x5BF9;&#x8C61;&#x4EE5;&#x6CE8;&#x5165;&#x5230;&#x60A8;&#x7684;&#x7EC4;&#x4EF6;&#x4E2D;&#x3002; &#x5B83;&#x63A5;&#x6536;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;connect &#x548C; monitor</li>
+</ul>
+</li>
+</ul>
+<h3 id="t234.8 useDrag">4.8 useDrag <a href="#t234.8 useDrag"> # </a></h3>
+<ul>
+<li>useDrag hook &#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x5C06;&#x7EC4;&#x4EF6;&#x4F5C;&#x4E3A;&#x62D6;&#x52A8;&#x6E90;&#x8FDE;&#x63A5;&#x5230; DnD &#x7CFB;&#x7EDF;&#x7684;&#x65B9;&#x6CD5;</li>
+<li>&#x901A;&#x8FC7;&#x5C06;&#x89C4;&#x8303;&#x4F20;&#x5165; useDrag&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x58F0;&#x660E;&#x6027;&#x5730;&#x63CF;&#x8FF0;&#x6B63;&#x5728;&#x751F;&#x6210;&#x7684;&#x53EF;&#x62D6;&#x52A8;&#x7684;&#x7C7B;&#x578B;&#x3001;&#x8868;&#x793A;&#x62D6;&#x52A8;&#x6E90;&#x7684;&#x9879;&#x76EE;&#x5BF9;&#x8C61;&#x3001;&#x8981;&#x6536;&#x96C6;&#x7684;&#x5C5E;&#x6027;&#x7B49;</li>
+<li>useDrag hooks &#x8FD4;&#x56DE;&#x51E0;&#x4E2A;&#x5173;&#x952E;&#x9879;&#xFF1A;&#x6536;&#x96C6;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x4EE5;&#x53CA;&#x53EF;&#x80FD;&#x9644;&#x52A0;&#x5230;&#x62D6;&#x52A8;&#x6E90;&#x7684; <code>refs</code></li>
+<li>&#x53C2;&#x6570;<ul>
+<li>spec &#x89C4;&#x8303;&#x5BF9;&#x8C61;&#x6216;&#x521B;&#x5EFA;&#x89C4;&#x8303;&#x5BF9;&#x8C61;&#x7684;&#x51FD;&#x6570;<ul>
+<li>type: &#x5FC5;&#x9700;&#x7684;&#x3002; &#x8FD9;&#x5FC5;&#x987B;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x6216;Symbol&#x3002; &#x53EA;&#x6709;&#x4E3A;&#x76F8;&#x540C;&#x7C7B;&#x578B;&#x6CE8;&#x518C;&#x7684;&#x653E;&#x7F6E;&#x76EE;&#x6807;&#x624D;&#x4F1A;&#x5BF9;&#x6B64;&#x9879;&#x76EE;&#x505A;&#x51FA;&#x53CD;&#x5E94;</li>
+<li>item: &#x5FC5;&#x9700;&#x7684; (&#x5BF9;&#x8C61;&#x6216;&#x8005;&#x51FD;&#x6570;) &#x5F53;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x5B83;&#x662F;&#x4E00;&#x4E2A;&#x63CF;&#x8FF0;&#x88AB;&#x62D6;&#x52A8;&#x6570;&#x636E;&#x7684;&#x666E;&#x901A; JavaScript &#x5BF9;&#x8C61;&#x3002; &#x8FD9;&#x662F;&#x62D6;&#x653E;&#x76EE;&#x6807;&#x552F;&#x4E00;&#x53EF;&#x7528;&#x7684;&#x6709;&#x5173;&#x62D6;&#x52A8;&#x6E90;&#x7684;&#x4FE1;&#x606F;&#x3002;&#x5F53;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x65F6;&#xFF0C;&#x5B83;&#x5728;&#x62D6;&#x52A8;&#x64CD;&#x4F5C;&#x5F00;&#x59CB;&#x65F6;&#x88AB;&#x89E6;&#x53D1;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x8868;&#x793A;&#x62D6;&#x52A8;&#x64CD;&#x4F5C;&#x7684;&#x5BF9;&#x8C61;</li>
+<li>collect: &#x53EF;&#x9009;&#x7684;&#x3002; &#x6536;&#x96C6;&#x529F;&#x80FD;&#x3002; &#x5B83;&#x5E94;&#x8BE5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x7684;&#x5C5E;&#x6027;&#x5BF9;&#x8C61;&#xFF0C;&#x4EE5;&#x8FD4;&#x56DE;&#x4EE5;&#x6CE8;&#x5165;&#x5230;&#x60A8;&#x7684;&#x7EC4;&#x4EF6;&#x5C5E;&#x6027;&#x4E2D;&#x3002; &#x5B83;&#x63A5;&#x6536;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;monitor &#x548C; props</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x8FD4;&#x56DE;&#x503C;&#x6570;&#x7EC4;<ul>
+<li>[0] - Collected Props: &#x5305;&#x542B;&#x4ECE; collect &#x51FD;&#x6570;&#x6536;&#x96C6;&#x7684;&#x5C5E;&#x6027;&#x7684;&#x5BF9;&#x8C61;&#x3002; &#x5982;&#x679C;&#x6CA1;&#x6709;&#x5B9A;&#x4E49; collect &#x51FD;&#x6570;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7A7A;&#x5BF9;&#x8C61;</li>
+<li>[1] - DragSource Ref: &#x62D6;&#x52A8;&#x6E90;&#x7684;&#x8FDE;&#x63A5;&#x5668;&#x529F;&#x80FD;&#x3002; &#x8FD9;&#x5FC5;&#x987B;&#x9644;&#x52A0;&#x5230; DOM &#x7684;&#x53EF;&#x62D6;&#x52A8;&#x90E8;&#x5206;</li>
+</ul>
+</li>
+</ul>
+<h3 id="t244.9 useDrop">4.9 useDrop <a href="#t244.9 useDrop"> # </a></h3>
+<ul>
+<li><a href="https://react-dnd.github.io/react-dnd/docs/api/use-drop">useDrop hook</a> &#x4E3A;&#x60A8;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x5C06;&#x7EC4;&#x4EF6;&#x8FDE;&#x63A5;&#x5230; DnD &#x7CFB;&#x7EDF;&#x4F5C;&#x4E3A;&#x653E;&#x7F6E;&#x76EE;&#x6807;&#x7684;&#x65B9;&#x6CD5;</li>
+<li>&#x901A;&#x8FC7;&#x5C06;&#x89C4;&#x8303;&#x4F20;&#x5165; useDrop hook&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x653E;&#x7F6E;&#x76EE;&#x6807;&#x5C06;&#x63A5;&#x53D7;&#x54EA;&#x4E9B;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x9879;&#xFF0C;&#x8981;&#x6536;&#x96C6;&#x54EA;&#x4E9B;&#x5C5E;&#x6027;&#xFF0C;&#x7B49;&#x7B49;</li>
+<li>&#x6B64;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x8981;&#x9644;&#x52A0;&#x5230; Drop Target &#x8282;&#x70B9;&#x7684;ref&#x548C;&#x6536;&#x96C6;&#x5230;&#x7684;&#x5C5E;&#x6027;</li>
+<li>&#x53C2;&#x6570;<ul>
+<li>specA &#x89C4;&#x8303;&#x5BF9;&#x8C61;&#x6216;&#x521B;&#x5EFA;&#x89C4;&#x8303;&#x5BF9;&#x8C61;&#x7684;&#x51FD;&#x6570;<ul>
+<li>accept &#x5FC5;&#x586B;&#x9879; &#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x6216;&#x4E00;&#x4E2A;Symbol,&#x8FD9;&#x4E2A;&#x653E;&#x7F6E;&#x76EE;&#x6807;&#x53EA;&#x4F1A;&#x5BF9;&#x6307;&#x5B9A;&#x7C7B;&#x578B;&#x7684;&#x62D6;&#x62FD;&#x6E90;&#x4EA7;&#x751F;&#x7684;&#x9879;&#x76EE;&#x505A;&#x51FA;&#x53CD;&#x5E94;</li>
+<li>collect: &#x53EF;&#x9009;&#x7684;&#x3002;&#x6536;&#x96C6;&#x529F;&#x80FD;&#x3002; &#x5B83;&#x5E94;&#x8BE5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x7684;&#x5C5E;&#x6027;&#x5BF9;&#x8C61;&#xFF0C;&#x4EE5;&#x8FD4;&#x56DE;&#x4EE5;&#x6CE8;&#x5165;&#x5230;&#x60A8;&#x7684;&#x7EC4;&#x4EF6;&#x5C5E;&#x6027;&#x4E2D;&#x3002; &#x5B83;&#x63A5;&#x6536;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;monitor &#x548C; props</li>
+<li>hover(item, monitor): &#x53EF;&#x9009;&#x7684;&#x3002; &#x5F53;&#x5728;&#x7EC4;&#x4EF6;&#x53D1;&#x751F;hover&#x4E8B;&#x4EF6;&#x65F6;&#x8C03;&#x7528;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x8FD4;&#x56DE;&#x503C;<ul>
+<li>Collected Props: &#x5305;&#x542B;&#x4ECE; collect &#x51FD;&#x6570;&#x6536;&#x96C6;&#x7684;&#x5C5E;&#x6027;&#x7684;&#x5BF9;&#x8C61;&#x3002; &#x5982;&#x679C;&#x6CA1;&#x6709;&#x5B9A;&#x4E49;collect function&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7A7A;&#x5BF9;&#x8C61;</li>
+<li>DropTarget Ref: &#x653E;&#x7F6E;&#x76EE;&#x6807;&#x7684;&#x8FDE;&#x63A5;&#x5668;&#x51FD;&#x6570;&#x3002; &#x8FD9;&#x5FC5;&#x987B;&#x9644;&#x52A0;&#x5230; DOM &#x7684;&#x653E;&#x7F6E;&#x76EE;&#x6807;&#x90E8;&#x5206;</li>
+</ul>
+</li>
+</ul>
+<h2 id="t255. &#x62D6;&#x62FD;&#x6392;&#x5E8F;&#x5B9E;&#x6218;">5. &#x62D6;&#x62FD;&#x6392;&#x5E8F;&#x5B9E;&#x6218; <a href="#t255. &#x62D6;&#x62FD;&#x6392;&#x5E8F;&#x5B9E;&#x6218;"> # </a></h2>
+<h3 id="t265.1 &#x5B89;&#x88C5;">5.1 &#x5B89;&#x88C5; <a href="#t265.1 &#x5B89;&#x88C5;"> # </a></h3>
+<pre><code class="lang-js">npm install react-dnd react-dnd-html5-backend --save
+</code></pre>
+<h3 id="t275.2 &#x7ED8;&#x5236;&#x5BB9;&#x5668;">5.2 &#x7ED8;&#x5236;&#x5BB9;&#x5668; <a href="#t275.2 &#x7ED8;&#x5236;&#x5BB9;&#x5668;"> # </a></h3>
+<h4 id="t285.2.1 src\index.js">5.2.1 src\index.js <a href="#t285.2.1 src\index.js"> # </a></h4>
+<p>src\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+<span class="hljs-keyword">import</span> Container <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./Container&apos;</span>;
+<span class="hljs-keyword">import</span> { DndProvider } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dnd&apos;</span>;
+<span class="hljs-keyword">import</span> { HTML5Backend } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dnd-html5-backend&apos;</span>;
+
+ReactDOM.render(
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">DndProvider</span> <span class="hljs-attr">backend</span>=<span class="hljs-string">{HTML5Backend}</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Container</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">DndProvider</span>&gt;</span></span>,
+  <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;root&apos;</span>)
+);
+</code></pre>
+<h4 id="t295.2.2 Container.js">5.2.2 Container.js <a href="#t295.2.2 Container.js"> # </a></h4>
+<p>src\Container.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+<span class="hljs-keyword">const</span> style = {
+    <span class="hljs-attr">width</span>: <span class="hljs-string">&apos;300px&apos;</span>
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Container</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{style}</span>&gt;</span>
+            Container
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Container;
+</code></pre>
+<h3 id="t305.3 &#x7ED8;&#x5236;&#x5361;&#x7247;">5.3 &#x7ED8;&#x5236;&#x5361;&#x7247; <a href="#t305.3 &#x7ED8;&#x5236;&#x5361;&#x7247;"> # </a></h3>
+<h4 id="t315.3.1 src\Card.js">5.3.1 src\Card.js <a href="#t315.3.1 src\Card.js"> # </a></h4>
+<p>src\Card.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+<span class="hljs-keyword">const</span> style = {
+    <span class="hljs-attr">backgroundColor</span>: <span class="hljs-string">&apos;red&apos;</span>,
+    <span class="hljs-attr">padding</span>: <span class="hljs-string">&apos;5px&apos;</span>,
+    <span class="hljs-attr">margin</span>: <span class="hljs-string">&apos;5px&apos;</span>,
+    <span class="hljs-attr">border</span>: <span class="hljs-string">&apos;1px dashed gray&apos;</span>,
+    <span class="hljs-attr">cursor</span>: <span class="hljs-string">&apos;move&apos;</span>
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Card</span>(<span class="hljs-params">{ text }</span>) </span>{
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{style}</span>&gt;</span>
+            {text}
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+}
+</code></pre>
+<h4 id="t325.3.2 src\Container.js">5.3.2 src\Container.js <a href="#t325.3.2 src\Container.js"> # </a></h4>
+<pre><code class="lang-diff"><span class="hljs-addition">+import React, { useState } from &apos;react&apos;</span>
+<span class="hljs-addition">+import Card from &apos;./Card&apos;;</span>
+const style = {
+    width: &apos;300px&apos;
+}
+function Container() {
+<span class="hljs-addition">+   const [cards, setCards] = useState([</span>
+<span class="hljs-addition">+       { id: &apos;card1&apos;, text: &apos;&#x5361;&#x7247;1&apos; },</span>
+<span class="hljs-addition">+       { id: &apos;card2&apos;, text: &apos;&#x5361;&#x7247;2&apos; },</span>
+<span class="hljs-addition">+       { id: &apos;card3&apos;, text: &apos;&#x5361;&#x7247;3&apos; }</span>
+<span class="hljs-addition">+   ]);</span>
+    return (
+        &lt;div style={style}&gt;
+<span class="hljs-addition">+           {</span>
+<span class="hljs-addition">+               cards.map((card, index) =&gt; (</span>
+<span class="hljs-addition">+                   &lt;Card key={card.id} text={card.text} /&gt;</span>
+<span class="hljs-addition">+               ))</span>
+<span class="hljs-addition">+           }</span>
+        &lt;/div&gt;
+    )
+}
+export default Container;
+</code></pre>
+<h3 id="t335.4 &#x62D6;&#x52A8;&#x5361;&#x7247;">5.4 &#x62D6;&#x52A8;&#x5361;&#x7247; <a href="#t335.4 &#x62D6;&#x52A8;&#x5361;&#x7247;"> # </a></h3>
+<h4 id="t345.4.1 ItemTypes.js">5.4.1 ItemTypes.js <a href="#t345.4.1 ItemTypes.js"> # </a></h4>
+<p>src\ItemTypes.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> CARD = <span class="hljs-string">&apos;card&apos;</span>;
+<span class="hljs-comment">/**
+ * React DnD &#x4F7F;&#x7528;&#x6570;&#x636E;&#x800C;&#x4E0D;&#x662F;&#x89C6;&#x56FE;&#x4F5C;&#x4E3A;&#x6765;&#x6E90;
+ * &#x5F53;&#x60A8;&#x5728;&#x5C4F;&#x5E55;&#x4E0A;&#x62D6;&#x52A8;&#x67D0;&#x7269;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x5E76;&#x4E0D;&#x662F;&#x8BF4;&#x6B63;&#x5728;&#x62D6;&#x52A8;&#x7EC4;&#x4EF6;&#x6216; DOM &#x8282;&#x70B9;&#x3002; &#x76F8;&#x53CD;&#xFF0C;&#x6211;&#x4EEC;&#x8BF4;&#x67D0;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x9879;&#x76EE;&#x6B63;&#x5728;&#x88AB;&#x62D6;&#x52A8;
+ * &#x4EC0;&#x4E48;&#x662F;&#x9879;&#x76EE;&#xFF1F; &#x4E00;&#x4E2A;&#x9879;&#x76EE;&#x662F;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684; JavaScript &#x5BF9;&#x8C61;&#xFF0C;&#x63CF;&#x8FF0;&#x88AB;&#x62D6;&#x52A8;&#x7684;&#x5185;&#x5BB9;
+ * &#x90A3;&#x4EC0;&#x4E48;&#x662F;type(&#x7C7B;&#x578B;)&#x5462;&#xFF1F; &#x7C7B;&#x578B;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;(&#x6216;Symbol)&#xFF0C;&#x5B83;&#x552F;&#x4E00;&#x5730;&#x6807;&#x8BC6;&#x4E86;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#x7684;&#x9879;&#x76EE;&#x3002; &#x5728;&#x770B;&#x677F;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x60A8;&#x53EF;&#x80FD;&#x6709;&#x4E00;&#x4E2A;&#x4EE3;&#x8868;&#x53EF;&#x62D6;&#x52A8;&#x5361;&#x7247;&#x7684;&#x5361;&#x7247;&#x7C7B;&#x578B;
+ * &#x7C7B;&#x578B;&#x5F88;&#x6709;&#x7528;&#xFF0C;&#x56E0;&#x4E3A;&#x968F;&#x7740;&#x60A8;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x589E;&#x957F;&#xFF0C;&#x60A8;&#x53EF;&#x80FD;&#x5E0C;&#x671B;&#x4F7F;&#x66F4;&#x591A;&#x5185;&#x5BB9;&#x53EF;&#x62D6;&#x52A8;&#xFF0C;&#x4F46;&#x60A8;&#x4E0D;&#x4E00;&#x5B9A;&#x5E0C;&#x671B;&#x6240;&#x6709;&#x73B0;&#x6709;&#x7684;&#x653E;&#x7F6E;&#x76EE;&#x6807;&#x7A81;&#x7136;&#x5F00;&#x59CB;&#x5BF9;&#x65B0;&#x9879;&#x76EE;&#x505A;&#x51FA;&#x53CD;&#x5E94;
+ * &#x8FD9;&#x4E9B;&#x7C7B;&#x578B;&#x5141;&#x8BB8;&#x60A8;&#x6307;&#x5B9A;&#x517C;&#x5BB9;&#x7684;&#x62D6;&#x653E;&#x6E90;&#x548C;&#x653E;&#x7F6E;&#x76EE;&#x6807;
+ */</span>
+</code></pre>
+<h4 id="t355.4.2 Container.js">5.4.2 Container.js <a href="#t355.4.2 Container.js"> # </a></h4>
+<p>src\Container.js</p>
+<pre><code class="lang-diff">import React, { useState } from &apos;react&apos;
+import Card from &apos;./Card&apos;;
+const style = {
+    width: &apos;200px&apos;
+}
+function Container() {
+    const [cards, setCards] = useState([
+        { id: &apos;card1&apos;, text: &apos;&#x5361;&#x7247;1&apos; },
+        { id: &apos;card2&apos;, text: &apos;&#x5361;&#x7247;2&apos; },
+        { id: &apos;card3&apos;, text: &apos;&#x5361;&#x7247;3&apos; }
+    ]);
+    return (
+        &lt;div style={style}&gt;
+            {
+                cards.map((card, index) =&gt; (
+<span class="hljs-addition">+                   &lt;Card key={card.id} text={card.text} id={card.id} index={index} /&gt;</span>
+                ))
+            }
+        &lt;/div&gt;
+    )
+}
+
+export default Container;
+</code></pre>
+<h4 id="t365.4.3 Card.js">5.4.3 Card.js <a href="#t365.4.3 Card.js"> # </a></h4>
+<p>src\Card.js</p>
+<pre><code class="lang-diff">import React, { useRef } from &apos;react&apos;
+<span class="hljs-addition">+import { useDrag } from &apos;react-dnd&apos;;</span>
+<span class="hljs-addition">+import { CARD } from &apos;./ItemTypes&apos;;</span>
+const style = {
+    backgroundColor: &apos;red&apos;,
+    padding: &apos;5px&apos;,
+    margin: &apos;5px&apos;,
+    border: &apos;1px dashed gray&apos;,
+    cursor: &apos;move&apos;
+}
+export default function Card({ text, id, index }) {
+<span class="hljs-addition">+   const ref = useRef(null);</span>
+<span class="hljs-addition">+   //useDrag hook &#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x5C06;&#x7EC4;&#x4EF6;&#x4F5C;&#x4E3A;&#x62D6;&#x52A8;&#x6E90;&#x8FDE;&#x63A5;&#x5230; DnD &#x7CFB;&#x7EDF;&#x7684;&#x65B9;&#x6CD5;</span>
+<span class="hljs-addition">+   //Collected Props: &#x5305;&#x542B;&#x4ECE; collect &#x51FD;&#x6570;&#x6536;&#x96C6;&#x7684;&#x5C5E;&#x6027;&#x7684;&#x5BF9;&#x8C61;&#x3002; &#x5982;&#x679C;&#x6CA1;&#x6709;&#x5B9A;&#x4E49; collect &#x51FD;&#x6570;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7A7A;&#x5BF9;&#x8C61;</span>
+<span class="hljs-addition">+   //DragSource Ref: &#x62D6;&#x52A8;&#x6E90;&#x7684;&#x8FDE;&#x63A5;&#x5668;&#x529F;&#x80FD;&#x3002; &#x8FD9;&#x5FC5;&#x987B;&#x9644;&#x52A0;&#x5230; DOM &#x7684;&#x53EF;&#x62D6;&#x52A8;&#x90E8;&#x5206;</span>
+<span class="hljs-addition">+   const [{ isDragging }, drag] = useDrag({//spec</span>
+<span class="hljs-addition">+       //&#x5FC5;&#x9700;&#x7684;&#x3002; &#x8FD9;&#x5FC5;&#x987B;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x6216;Symbol&#x3002; &#x53EA;&#x6709;&#x4E3A;&#x76F8;&#x540C;&#x7C7B;&#x578B;&#x6CE8;&#x518C;&#x7684;&#x653E;&#x7F6E;&#x76EE;&#x6807;&#x624D;&#x4F1A;&#x5BF9;&#x6B64;&#x9879;&#x76EE;&#x505A;&#x51FA;&#x53CD;&#x5E94;</span>
+<span class="hljs-addition">+       type: CARD,</span>
+<span class="hljs-addition">+       //item: &#x5FC5;&#x9700;&#x7684; (&#x5BF9;&#x8C61;&#x6216;&#x8005;&#x51FD;&#x6570;) &#x5F53;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x5B83;&#x662F;&#x4E00;&#x4E2A;&#x63CF;&#x8FF0;&#x88AB;&#x62D6;&#x52A8;&#x6570;&#x636E;&#x7684;&#x666E;&#x901A; JavaScript &#x5BF9;&#x8C61;</span>
+<span class="hljs-addition">+       item: () =&gt; ({ id, index }),</span>
+<span class="hljs-addition">+       //collect:  &#x6536;&#x96C6;&#x529F;&#x80FD;&#x3002; &#x5B83;&#x5E94;&#x8BE5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x7684;&#x5C5E;&#x6027;&#x5BF9;&#x8C61;&#xFF0C;&#x4EE5;&#x8FD4;&#x56DE;&#x4EE5;&#x6CE8;&#x5165;&#x5230;&#x60A8;&#x7684;&#x7EC4;&#x4EF6;&#x5C5E;&#x6027;&#x4E2D;</span>
+<span class="hljs-addition">+       //&#x5B83;&#x63A5;&#x6536;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;monitor &#x548C; props</span>
+<span class="hljs-addition">+       collect: (monitor) =&gt; ({//&#x8981;&#x6536;&#x96C6;&#x7684;&#x5C5E;&#x6027;</span>
+<span class="hljs-addition">+           isDragging: monitor.isDragging()</span>
+<span class="hljs-addition">+       })</span>
+<span class="hljs-addition">+   });</span>
+<span class="hljs-addition">+   const opacity = isDragging ? 0.1 : 1;</span>
+<span class="hljs-addition">+   drag(ref)</span>
+    return (
+<span class="hljs-addition">+       &lt;div ref={ref} style={{ ...style, opacity }}&gt;</span>
+            {text}
+        &lt;/div&gt;
+    )
+}
+</code></pre>
+<h3 id="t375.5 &#x653E;&#x7F6E;&#x5361;&#x7247;">5.5 &#x653E;&#x7F6E;&#x5361;&#x7247; <a href="#t375.5 &#x653E;&#x7F6E;&#x5361;&#x7247;"> # </a></h3>
+<h4 id="t385.5.1 Container.js">5.5.1 Container.js <a href="#t385.5.1 Container.js"> # </a></h4>
+<p>src\Container.js</p>
+<pre><code class="lang-diff">import React, { useState } from &apos;react&apos;
+import Card from &apos;./Card&apos;;
+const style = {
+    width: &apos;200px&apos;
+}
+function Container() {
+    const [cards, setCards] = useState([
+        { id: &apos;card1&apos;, text: &apos;&#x5361;&#x7247;1&apos; },
+        { id: &apos;card2&apos;, text: &apos;&#x5361;&#x7247;2&apos; },
+        { id: &apos;card3&apos;, text: &apos;&#x5361;&#x7247;3&apos; }
+    ]);
+<span class="hljs-addition">+   const moveCard = (dragIndex, hoverIndex) =&gt; {</span>
+<span class="hljs-addition">+       const dragCard = cards[dragIndex];</span>
+<span class="hljs-addition">+       const cloneCards = [...cards];</span>
+<span class="hljs-addition">+       cloneCards.splice(dragIndex, 1);</span>
+<span class="hljs-addition">+       cloneCards.splice(hoverIndex, 0, dragCard);</span>
+<span class="hljs-addition">+       setCards(cloneCards);</span>
+<span class="hljs-addition">+   }</span>
+    return (
+        &lt;div style={style}&gt;
+            {
+                cards.map((card, index) =&gt; (
+<span class="hljs-addition">+                   &lt;Card key={card.id} text={card.text} id={card.id} index={index} moveCard={moveCard} /&gt;</span>
+                ))
+            }
+        &lt;/div&gt;
+    )
+}
+export default Container;
+</code></pre>
+<h4 id="t395.5.2 src\Card.js">5.5.2 src\Card.js <a href="#t395.5.2 src\Card.js"> # </a></h4>
+<p>src\Card.js</p>
+<pre><code class="lang-diff">import React, { useRef } from &apos;react&apos;
+<span class="hljs-addition">+import { useDrag, useDrop } from &apos;react-dnd&apos;;</span>
+import { CARD } from &apos;./ItemTypes&apos;;
+const style = {
+    backgroundColor: &apos;red&apos;,
+    padding: &apos;5px&apos;,
+    margin: &apos;5px&apos;,
+    border: &apos;1px dashed gray&apos;,
+    cursor: &apos;move&apos;
+}
+export default function Card({ text, id, index, moveCard }) {
+    const ref = useRef(null);
+<span class="hljs-addition">+   //useDrop hook &#x4E3A;&#x60A8;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x5C06;&#x7EC4;&#x4EF6;&#x8FDE;&#x63A5;&#x5230; DnD &#x7CFB;&#x7EDF;&#x4F5C;&#x4E3A;&#x653E;&#x7F6E;&#x76EE;&#x6807;&#x7684;&#x65B9;&#x6CD5;</span>
+<span class="hljs-addition">+   // Collected Props: &#x5305;&#x542B;&#x4ECE; collect &#x51FD;&#x6570;&#x6536;&#x96C6;&#x7684;&#x5C5E;&#x6027;&#x7684;&#x5BF9;&#x8C61;</span>
+<span class="hljs-addition">+   //DropTarget Ref: &#x653E;&#x7F6E;&#x76EE;&#x6807;&#x7684;&#x8FDE;&#x63A5;&#x5668;&#x51FD;&#x6570;&#x3002; &#x8FD9;&#x5FC5;&#x987B;&#x9644;&#x52A0;&#x5230; DOM &#x7684;&#x653E;&#x7F6E;&#x76EE;&#x6807;&#x90E8;&#x5206;</span>
+<span class="hljs-addition">+   const [, drop] = useDrop({</span>
+<span class="hljs-addition">+       //&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x6216;&#x4E00;&#x4E2A;Symbol,&#x8FD9;&#x4E2A;&#x653E;&#x7F6E;&#x76EE;&#x6807;&#x53EA;&#x4F1A;&#x5BF9;&#x6307;&#x5B9A;&#x7C7B;&#x578B;&#x7684;&#x62D6;&#x62FD;&#x6E90;&#x4EA7;&#x751F;&#x7684;&#x9879;&#x76EE;&#x505A;&#x51FA;&#x53CD;&#x5E94;</span>
+<span class="hljs-addition">+       accept: CARD,</span>
+<span class="hljs-addition">+       //&#x6536;&#x96C6;&#x529F;&#x80FD;&#x3002; &#x5B83;&#x5E94;&#x8BE5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x7684;&#x5C5E;&#x6027;&#x5BF9;&#x8C61;&#xFF0C;&#x4EE5;&#x8FD4;&#x56DE;&#x4EE5;&#x6CE8;&#x5165;&#x5230;&#x60A8;&#x7684;&#x7EC4;&#x4EF6;&#x5C5E;&#x6027;&#x4E2D;</span>
+<span class="hljs-addition">+       collect: (monitor) =&gt; ({}),</span>
+<span class="hljs-addition">+       //&#x5F53;&#x5728;&#x7EC4;&#x4EF6;&#x53D1;&#x751F;hover&#x4E8B;&#x4EF6;&#x65F6;&#x8C03;&#x7528;</span>
+<span class="hljs-addition">+       hover(item, monitor) {</span>
+<span class="hljs-addition">+           //&#x88AB;&#x62D6;&#x52A8;&#x5361;&#x7247;&#x7684;&#x7D22;&#x5F15;</span>
+<span class="hljs-addition">+           const dragIndex = item.index;</span>
+<span class="hljs-addition">+           //hover&#x5361;&#x7247;&#x7684;&#x7D22;&#x5F15;</span>
+<span class="hljs-addition">+           const hoverIndex = index;</span>
+<span class="hljs-addition">+           //&#x5982;&#x679C;&#x4E00;&#x6837;&#x4EC0;&#x4E48;&#x90FD;&#x4E0D;&#x505A;</span>
+<span class="hljs-addition">+           if (dragIndex === hoverIndex) {</span>
+<span class="hljs-addition">+               return;</span>
+<span class="hljs-addition">+           }</span>
+<span class="hljs-addition">+           //&#x83B7;&#x53D6;hover&#x5361;&#x7247;&#x7684;&#x4F4D;&#x7F6E;&#x4FE1;&#x606F;</span>
+<span class="hljs-addition">+           const { top, bottom } = ref.current.getBoundingClientRect();</span>
+<span class="hljs-addition">+           //&#x83B7;&#x53D6;hover&#x5361;&#x7247;&#x9AD8;&#x5EA6;&#x7684;&#x4E00;&#x534A;</span>
+<span class="hljs-addition">+           const halfOfHoverHeight = (bottom - top) / 2;</span>
+<span class="hljs-addition">+           //&#x83B7;&#x53D6;&#x9F20;&#x6807;&#x6700;&#x65B0;&#x7684;X&#x548C;Y&#x5750;&#x6807;</span>
+<span class="hljs-addition">+           const { y } = monitor.getClientOffset();</span>
+<span class="hljs-addition">+           const hoverClientY = y - top;</span>
+<span class="hljs-addition">+           if ((dragIndex &lt; hoverIndex &amp;&amp; hoverClientY &gt; halfOfHoverHeight)</span>
+<span class="hljs-addition">+               || (dragIndex &gt; hoverIndex &amp;&amp; hoverClientY &lt; halfOfHoverHeight)) {</span>
+<span class="hljs-addition">+               moveCard(dragIndex, hoverIndex);</span>
+<span class="hljs-addition">+               item.index = hoverIndex;</span>
+<span class="hljs-addition">+           }</span>
+<span class="hljs-addition">+       }</span>
+<span class="hljs-addition">+   });</span>
+    //useDrag hook &#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x5C06;&#x7EC4;&#x4EF6;&#x4F5C;&#x4E3A;&#x62D6;&#x52A8;&#x6E90;&#x8FDE;&#x63A5;&#x5230; DnD &#x7CFB;&#x7EDF;&#x7684;&#x65B9;&#x6CD5;
+    //Collected Props: &#x5305;&#x542B;&#x4ECE; collect &#x51FD;&#x6570;&#x6536;&#x96C6;&#x7684;&#x5C5E;&#x6027;&#x7684;&#x5BF9;&#x8C61;&#x3002; &#x5982;&#x679C;&#x6CA1;&#x6709;&#x5B9A;&#x4E49; collect &#x51FD;&#x6570;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7A7A;&#x5BF9;&#x8C61;
+    //DragSource Ref: &#x62D6;&#x52A8;&#x6E90;&#x7684;&#x8FDE;&#x63A5;&#x5668;&#x529F;&#x80FD;&#x3002; &#x8FD9;&#x5FC5;&#x987B;&#x9644;&#x52A0;&#x5230; DOM &#x7684;&#x53EF;&#x62D6;&#x52A8;&#x90E8;&#x5206;
+    const [{ isDragging }, drag] = useDrag({//spec
+        //&#x5FC5;&#x9700;&#x7684;&#x3002; &#x8FD9;&#x5FC5;&#x987B;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x6216;Symbol&#x3002; &#x53EA;&#x6709;&#x4E3A;&#x76F8;&#x540C;&#x7C7B;&#x578B;&#x6CE8;&#x518C;&#x7684;&#x653E;&#x7F6E;&#x76EE;&#x6807;&#x624D;&#x4F1A;&#x5BF9;&#x6B64;&#x9879;&#x76EE;&#x505A;&#x51FA;&#x53CD;&#x5E94;
+        type: CARD,
+        //item: &#x5FC5;&#x9700;&#x7684; (&#x5BF9;&#x8C61;&#x6216;&#x8005;&#x51FD;&#x6570;) &#x5F53;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x5B83;&#x662F;&#x4E00;&#x4E2A;&#x63CF;&#x8FF0;&#x88AB;&#x62D6;&#x52A8;&#x6570;&#x636E;&#x7684;&#x666E;&#x901A; JavaScript &#x5BF9;&#x8C61;
+        item: () =&gt; ({ id, index }),
+        //collect:  &#x6536;&#x96C6;&#x529F;&#x80FD;&#x3002; &#x5B83;&#x5E94;&#x8BE5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x7684;&#x5C5E;&#x6027;&#x5BF9;&#x8C61;&#xFF0C;&#x4EE5;&#x8FD4;&#x56DE;&#x4EE5;&#x6CE8;&#x5165;&#x5230;&#x60A8;&#x7684;&#x7EC4;&#x4EF6;&#x5C5E;&#x6027;&#x4E2D;
+        //&#x5B83;&#x63A5;&#x6536;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;monitor &#x548C; props
+        collect: (monitor) =&gt; ({//&#x8981;&#x6536;&#x96C6;&#x7684;&#x5C5E;&#x6027;
+            isDragging: monitor.isDragging()
+        })
+    });
+    const opacity = isDragging ? 0.1 : 1;
+    drag(ref)
+<span class="hljs-addition">+   drop(ref)</span>
+    return (
+        &lt;div ref={ref} style={{ ...style, opacity }}&gt;
+            {text}
+        &lt;/div&gt;
+    )
+}
+</code></pre>
+<h2 id="t405.&#x5B9E;&#x73B0;Provider">5.&#x5B9E;&#x73B0;Provider <a href="#t405.&#x5B9E;&#x73B0;Provider"> # </a></h2>
+<h3 id="t415.1 react-dnd\index.js">5.1 react-dnd\index.js <a href="#t415.1 react-dnd\index.js"> # </a></h3>
+<p>src\react-dnd\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> * <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./core&apos;</span>
+</code></pre>
+<h3 id="t425.2 core\index.js">5.2 core\index.js <a href="#t425.2 core\index.js"> # </a></h3>
+<p>src\react-dnd\core\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> { <span class="hljs-keyword">default</span> <span class="hljs-keyword">as</span> DndContext } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./DndContext&apos;</span>;
+<span class="hljs-keyword">export</span> { <span class="hljs-keyword">default</span> <span class="hljs-keyword">as</span> DndProvider } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./DndProvider&apos;</span>;
+</code></pre>
+<h3 id="t435.3 DndContext.js">5.3 DndContext.js <a href="#t435.3 DndContext.js"> # </a></h3>
+<p>src\react-dnd\core\DndContext.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">const</span> DndContext = React.createContext({});
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> DndContext;
+</code></pre>
+<h3 id="t445.4 DndProvider.js">5.4 DndProvider.js <a href="#t445.4 DndProvider.js"> # </a></h3>
+<p>src\react-dnd\core\DndProvider.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> DndContext <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./DndContext&apos;</span>;
+<span class="hljs-keyword">import</span> { createDragDropManager } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../dnd-core&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">DndProvider</span>(<span class="hljs-params">{ backend, children }</span>) </span>{
+    <span class="hljs-keyword">let</span> value = { <span class="hljs-attr">dragDropManager</span>: createDragDropManager(backend) };
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">DndContext.Provider</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{value}</span>&gt;</span>
+            {children}
+        <span class="hljs-tag">&lt;/<span class="hljs-name">DndContext.Provider</span>&gt;</span></span>
+    )
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> DndProvider;
+</code></pre>
+<h3 id="t455.5 dnd-core\index.js">5.5 dnd-core\index.js <a href="#t455.5 dnd-core\index.js"> # </a></h3>
+<p>src\dnd-core\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> { <span class="hljs-keyword">default</span> <span class="hljs-keyword">as</span> createDragDropManager } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./createDragDropManager&apos;</span>;
+</code></pre>
+<h3 id="t465.6 createDragDropManager.js">5.6 createDragDropManager.js <a href="#t465.6 createDragDropManager.js"> # </a></h3>
+<p>src\dnd-core\createDragDropManager.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { createStore } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;redux&apos;</span>;
+<span class="hljs-keyword">import</span> reducer <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./reducers&apos;</span>;
+<span class="hljs-keyword">import</span> DragDropManagerImpl <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./classes/DragDropManagerImpl&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createDragDropManager</span>(<span class="hljs-params">backendFactory</span>) </span>{
+    <span class="hljs-comment">//&#x521B;&#x5EFA;redux&#x4ED3;&#x5E93;</span>
+    <span class="hljs-keyword">const</span> store = createStore(reducer);
+    <span class="hljs-keyword">const</span> manager = <span class="hljs-keyword">new</span> DragDropManagerImpl(store);
+    <span class="hljs-keyword">const</span> backend = backendFactory(manager);
+    manager.receiveBackend(backend);
+    <span class="hljs-keyword">return</span> manager;
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> createDragDropManager;
+</code></pre>
+<h3 id="t475.7 DragDropManagerImpl.js">5.7 DragDropManagerImpl.js <a href="#t475.7 DragDropManagerImpl.js"> # </a></h3>
+<p>src\dnd-core\classes\DragDropManagerImpl.js</p>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DragDropManagerImpl</span> </span>{
+    store;
+    backend;
+    <span class="hljs-keyword">constructor</span>(store) {
+        <span class="hljs-keyword">this</span>.store = store;
+    }
+    receiveBackend(backend) {
+        <span class="hljs-keyword">this</span>.backend = backend;
+    }
+    getBackend() {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.backend;
+    }
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> DragDropManagerImpl;
+</code></pre>
+<h3 id="t485.8 reducers\index.js">5.8 reducers\index.js <a href="#t485.8 reducers\index.js"> # </a></h3>
+<p>src\dnd-core\reducers\index.js</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">reducer</span>(<span class="hljs-params">state = {}, action</span>) </span>{
+    <span class="hljs-keyword">return</span> {};
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> reducer;
+</code></pre>
+<h3 id="t495.9 react-dnd-html5-backend\index.js">5.9 react-dnd-html5-backend\index.js <a href="#t495.9 react-dnd-html5-backend\index.js"> # </a></h3>
+<p>src\react-dnd-html5-backend\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> HTML5BackendImpl <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./HTML5BackendImpl&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">HTML5Backend</span>(<span class="hljs-params">manager</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> HTML5BackendImpl(manager);
+}
+</code></pre>
+<h3 id="t505.10 HTML5BackendImpl.js">5.10 HTML5BackendImpl.js <a href="#t505.10 HTML5BackendImpl.js"> # </a></h3>
+<p>src\react-dnd-html5-backend\HTML5BackendImpl.js</p>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HTML5BackendImpl</span> </span>{}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> HTML5BackendImpl;
+</code></pre>
+<h2 id="t516.&#x5B9E;&#x73B0;Monitor">6.&#x5B9E;&#x73B0;Monitor <a href="#t516.&#x5B9E;&#x73B0;Monitor"> # </a></h2>
+<ul>
+<li>&#x62D6;&#x653E;&#x672C;&#x8D28;&#x4E0A;&#x662F;&#x6709;&#x72B6;&#x6001;&#x7684;&#x3002; &#x8981;&#x4E48;&#x6B63;&#x5728;&#x8FDB;&#x884C;&#x62D6;&#x52A8;&#x64CD;&#x4F5C;&#xFF0C;&#x8981;&#x4E48;&#x4E0D;&#x5728;&#x3002; &#x8981;&#x4E48;&#x6709;&#x5F53;&#x524D;&#x7C7B;&#x578B;&#x548C;&#x5F53;&#x524D;&#x9879;&#x76EE;&#xFF0C;&#x8981;&#x4E48;&#x6CA1;&#x6709;&#x3002; &#x8FD9;&#x79CD;&#x72B6;&#x6001;&#x5FC5;&#x987B;&#x5B58;&#x5728;&#x4E8E;&#x67D0;&#x4E2A;&#x5730;&#x65B9;</li>
+<li>React DnD &#x901A;&#x8FC7;&#x76D1;&#x89C6;&#x5668;&#x5C01;&#x88C5;&#x5185;&#x90E8;&#x5B58;&#x50A8;&#x72B6;&#x6001;,&#x5E76;&#x5C06;&#x6B64;&#x72B6;&#x6001;&#x516C;&#x5F00;&#x7ED9;&#x60A8;&#x7684;&#x7EC4;&#x4EF6;</li>
+<li>&#x76D1;&#x89C6;&#x5668;&#x5141;&#x8BB8;&#x60A8;&#x66F4;&#x65B0;&#x7EC4;&#x4EF6;&#x7684;&#x5C5E;&#x6027;&#x4EE5;&#x54CD;&#x5E94;&#x62D6;&#x653E;&#x72B6;&#x6001;&#x7684;&#x53D8;&#x5316;</li>
+<li>&#x5BF9;&#x4E8E;&#x9700;&#x8981;&#x8DDF;&#x8E2A;&#x62D6;&#x653E;&#x72B6;&#x6001;&#x7684;&#x6BCF;&#x4E2A;&#x7EC4;&#x4EF6;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x6536;&#x96C6;&#x51FD;&#x6570;&#xFF0C;&#x4ECE;&#x76D1;&#x89C6;&#x5668;&#x83B7;&#x53D6;&#x5B83;&#x7684;&#x76F8;&#x5173;&#x5C5E;&#x6027;</li>
+<li>React DnD &#x7136;&#x540E;&#x8D1F;&#x8D23;&#x53CA;&#x65F6;&#x8C03;&#x7528;&#x60A8;&#x7684;&#x6536;&#x96C6;&#x51FD;&#x6570;&#x5E76;&#x5C06;&#x5176;&#x8FD4;&#x56DE;&#x503C;&#x5408;&#x5E76;&#x5230;&#x7EC4;&#x4EF6;&#x7684;&#x5C5E;&#x6027;&#x5BF9;&#x8C61;&#x4E2D;</li>
+</ul>
+<h3 id="t526.1 react-dnd\index.js">6.1 react-dnd\index.js <a href="#t526.1 react-dnd\index.js"> # </a></h3>
+<p>src\react-dnd\index.js</p>
+<pre><code class="lang-diff">export * from &apos;./core&apos;
+<span class="hljs-addition">+export * from &apos;./hooks&apos;;</span>
+</code></pre>
+<h3 id="t536.2 hooks\index.js">6.2 hooks\index.js <a href="#t536.2 hooks\index.js"> # </a></h3>
+<p>src\react-dnd\hooks\index.js</p>
+<pre><code class="lang-diff">export { default as useDrag } from &apos;./useDrag&apos;;
+</code></pre>
+<h3 id="t546.3 useDrag\index.js">6.3 useDrag\index.js <a href="#t546.3 useDrag\index.js"> # </a></h3>
+<p>src\react-dnd\hooks\useDrag\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> useDragSourceMonitor <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./useDragSourceMonitor&apos;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useDrag</span>(<span class="hljs-params">spec</span>) </span>{
+    <span class="hljs-keyword">const</span> monitor = useDragSourceMonitor();
+    <span class="hljs-built_in">console</span>.log(monitor);
+    <span class="hljs-keyword">return</span> [{}, () =&gt; { }];
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> useDrag;
+</code></pre>
+<h3 id="t556.4 useDragSourceMonitor.js">6.4 useDragSourceMonitor.js <a href="#t556.4 useDragSourceMonitor.js"> # </a></h3>
+<p>src\react-dnd\hooks\useDrag\useDragSourceMonitor.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { useMemo } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> useDragDropManager <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../useDragDropManager&apos;</span>;
+<span class="hljs-keyword">import</span> { DragSourceMonitorImpl } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../internals&apos;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useDragSourceMonitor</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> manager = useDragDropManager();
+    <span class="hljs-keyword">return</span> useMemo(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-keyword">new</span> DragSourceMonitorImpl(manager), [manager]);
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> useDragSourceMonitor;
+</code></pre>
+<h3 id="t566.5 useDragDropManager.js">6.5 useDragDropManager.js <a href="#t566.5 useDragDropManager.js"> # </a></h3>
+<p>src\react-dnd\hooks\useDragDropManager.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { useContext } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { DndContext } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../core&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useDragDropManager</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> { dragDropManager } = useContext(DndContext);
+    <span class="hljs-keyword">return</span> dragDropManager;
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> useDragDropManager;
+</code></pre>
+<h3 id="t576.6 internals\index.js">6.6 internals\index.js <a href="#t576.6 internals\index.js"> # </a></h3>
+<p>src\react-dnd\internals\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> { <span class="hljs-keyword">default</span> <span class="hljs-keyword">as</span> DragSourceMonitorImpl } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./DragSourceMonitorImpl&apos;</span>;
+</code></pre>
+<h3 id="t586.7 DragSourceMonitorImpl.js">6.7 DragSourceMonitorImpl.js <a href="#t586.7 DragSourceMonitorImpl.js"> # </a></h3>
+<p>src\react-dnd\internals\DragSourceMonitorImpl.js</p>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DragSourceMonitorImpl</span> </span>{
+    internalMonitor
+    <span class="hljs-keyword">constructor</span>(manager) {
+        <span class="hljs-keyword">this</span>.internalMonitor = manager.getGlobalMonitor();
+    }
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> DragSourceMonitorImpl;
+</code></pre>
+<h3 id="t596.8  dnd-core\index.js">6.8  dnd-core\index.js <a href="#t596.8  dnd-core\index.js"> # </a></h3>
+<p>src\dnd-core\index.js</p>
+<pre><code class="lang-diff">export { default as createDragDropManager } from &apos;./createDragDropManager&apos;;
+export { default as DragDropManagerImpl } from &apos;./classes/DragDropManagerImpl&apos;;
+<span class="hljs-addition">+export { default as DragDropMonitorImpl } from &apos;./classes/DragDropMonitorImpl&apos;;</span>
+</code></pre>
+<h3 id="t606.9  createDragDropManager.js">6.9  createDragDropManager.js <a href="#t606.9  createDragDropManager.js"> # </a></h3>
+<p>src\dnd-core\createDragDropManager.js</p>
+<pre><code class="lang-diff">import { createStore } from &apos;redux&apos;;
+import reducer from &apos;./reducers&apos;;
+import DragDropManagerImpl from &apos;./classes/DragDropManagerImpl&apos;;
+<span class="hljs-addition">+import DragDropMonitorImpl from &apos;./classes/DragDropMonitorImpl&apos;;</span>
+function createDragDropManager(backendFactory) {
+    //&#x521B;&#x5EFA;redux&#x4ED3;&#x5E93;
+    const store = createStore(reducer);
+<span class="hljs-addition">+   const globalMonitor = new DragDropMonitorImpl(store);</span>
+<span class="hljs-addition">+   const manager = new DragDropManagerImpl(store, globalMonitor);</span>
+    const backend = backendFactory(manager);
+    manager.receiveBackend(backend);
+    return manager;
+}
+export default createDragDropManager;
+</code></pre>
+<h3 id="t616.10 DragDropMonitorImpl.js">6.10 DragDropMonitorImpl.js <a href="#t616.10 DragDropMonitorImpl.js"> # </a></h3>
+<p>src\dnd-core\classes\DragDropMonitorImpl.js</p>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DragDropMonitorImpl</span> </span>{
+    store
+    <span class="hljs-keyword">constructor</span>(store) {
+        <span class="hljs-keyword">this</span>.store = store
+    }
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> DragDropMonitorImpl;
+</code></pre>
+<h3 id="t626.11 DragDropManagerImpl.js">6.11 DragDropManagerImpl.js <a href="#t626.11 DragDropManagerImpl.js"> # </a></h3>
+<p>src\dnd-core\classes\DragDropManagerImpl.js</p>
+<pre><code class="lang-diff">class DragDropManagerImpl {
+    store;
+    backend;
+<span class="hljs-addition">+   globalMonitor;</span>
+<span class="hljs-addition">+   constructor(store, globalMonitor) {</span>
+        this.store = store;
+<span class="hljs-addition">+       this.globalMonitor = globalMonitor;</span>
+    }
+    receiveBackend(backend) {
+        this.backend = backend;
+    }
+    getBackend() {
+        return this.backend;
+    }
+<span class="hljs-addition">+   getGlobalMonitor() {</span>
+<span class="hljs-addition">+        return this.globalMonitor;</span>
+<span class="hljs-addition">+   }</span>
+}
+export default DragDropManagerImpl;
+</code></pre>
+<h2 id="t637.&#x5B9E;&#x73B0;Registry">7.&#x5B9E;&#x73B0;Registry <a href="#t637.&#x5B9E;&#x73B0;Registry"> # </a></h2>
+<ul>
+<li>&#x6BCF;&#x4E00;&#x4E2A;&#x62D6;&#x52A8;&#x6E90;&#x548C;&#x653E;&#x7F6E;&#x76EE;&#x6807;&#x90FD;&#x4F1A;&#x6709;&#x4E00;&#x4E2A;&#x552F;&#x4E00;&#x6807;&#x8BC6;handlerId,&#x751F;&#x6210;&#x89C4;&#x5219;&#x4E3A;S&#x6216;T&#x52A0;&#x4E00;&#x4E2A;&#x9012;&#x589E;&#x6570;&#x5B57;</li>
+<li>Registry&#x6CE8;&#x518C;&#x8868;&#x91CC;&#x4F1A;&#x5B58;&#x653E;handlerId&#x548C;&#x62D6;&#x52A8;&#x6E90;&#x548C;&#x653E;&#x7F6E;&#x76EE;&#x6807;&#x7684;&#x5BF9;&#x5E94;&#x5173;&#x7CFB;</li>
+</ul>
+<h3 id="t647.1 HandlerRegistryImpl.js">7.1 HandlerRegistryImpl.js <a href="#t647.1 HandlerRegistryImpl.js"> # </a></h3>
+<p>src\dnd-core\classes\HandlerRegistryImpl.js</p>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HandlerRegistryImpl</span> </span>{
+    store;<span class="hljs-comment">//redux&#x4ED3;&#x5E93;</span>
+    <span class="hljs-keyword">constructor</span>(store) {
+        <span class="hljs-keyword">this</span>.store = store;
+    }
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> HandlerRegistryImpl;
+</code></pre>
+<h3 id="t657.2 createDragDropManager.js">7.2 createDragDropManager.js <a href="#t657.2 createDragDropManager.js"> # </a></h3>
+<p>src\dnd-core\createDragDropManager.js</p>
+<pre><code class="lang-diff">import { createStore } from &apos;redux&apos;;
+import reducer from &apos;./reducers&apos;;
+<span class="hljs-addition">+import HandlerRegistryImpl from &apos;./classes/HandlerRegistryImpl&apos;</span>
+import DragDropManagerImpl from &apos;./classes/DragDropManagerImpl&apos;;
+import DragDropMonitorImpl from &apos;./classes/DragDropMonitorImpl&apos;;
+function createDragDropManager(backendFactory) {
+    //&#x521B;&#x5EFA;redux&#x4ED3;&#x5E93;
+    const store = createStore(reducer);
+<span class="hljs-addition">+   const registry = new HandlerRegistryImpl(store);</span>
+<span class="hljs-addition">+   const globalMonitor = new DragDropMonitorImpl(store, registry);</span>
+    const manager = new DragDropManagerImpl(store, globalMonitor);
+    const backend = backendFactory(manager);
+    manager.receiveBackend(backend);
+    return manager;
+}
+export default createDragDropManager;
+</code></pre>
+<h3 id="t667.3 DragDropMonitorImpl.js">7.3 DragDropMonitorImpl.js <a href="#t667.3 DragDropMonitorImpl.js"> # </a></h3>
+<p>src\dnd-core\classes\DragDropMonitorImpl.js</p>
+<pre><code class="lang-diff">class DragDropMonitorImpl {
+    store
+<span class="hljs-addition">+   registry</span>
+    constructor(store, registry) {
+        this.store = store
+<span class="hljs-addition">+       this.registry = registry;</span>
+    }
+}
+export default DragDropMonitorImpl;
+</code></pre>
+<h2 id="t678.useDragSourceConnector">8.useDragSourceConnector <a href="#t678.useDragSourceConnector"> # </a></h2>
+<ul>
+<li>&#x5982;&#x679C;&#x540E;&#x7AEF;&#x5904;&#x7406; DOM &#x4E8B;&#x4EF6;&#xFF0C;&#x4F46;&#x662F;&#x7EC4;&#x4EF6;&#x4F7F;&#x7528; React &#x6765;&#x63CF;&#x8FF0; DOM&#xFF0C;&#x540E;&#x7AEF;&#x5982;&#x4F55;&#x77E5;&#x9053;&#x8981;&#x76D1;&#x542C;&#x54EA;&#x4E9B; DOM &#x8282;&#x70B9;&#xFF1F;</li>
+<li>&#x8FDE;&#x63A5;&#x5668;&#x5141;&#x8BB8;&#x60A8;&#x5C06;&#x9884;&#x5B9A;&#x4E49;&#x89D2;&#x8272;&#x4E4B;&#x4E00;&#xFF08;&#x62D6;&#x52A8;&#x6E90;&#x6216;&#x653E;&#x7F6E;&#x76EE;&#x6807;&#xFF09;&#x5206;&#x914D;&#x7ED9;&#x6E32;&#x67D3;&#x51FD;&#x6570;&#x4E2D;&#x7684; DOM &#x8282;&#x70B9;</li>
+</ul>
+<h3 id="t688.1 useDrag\index.js">8.1 useDrag\index.js <a href="#t688.1 useDrag\index.js"> # </a></h3>
+<p>src\react-dnd\hooks\useDrag\index.js</p>
+<pre><code class="lang-diff">import useDragSourceMonitor from &apos;./useDragSourceMonitor&apos;;
+<span class="hljs-addition">+import useDragSourceConnector from &apos;./useDragSourceConnector&apos;;</span>
+function useDrag(spec) {
+    const monitor = useDragSourceMonitor();
+<span class="hljs-addition">+   const connector = useDragSourceConnector();</span>
+<span class="hljs-addition">+   console.log(connector);</span>
+    return [{}, () =&gt; { }];
+}
+export default useDrag;
+</code></pre>
+<h3 id="t698.2 useDragSourceConnector.js">8.2 useDragSourceConnector.js <a href="#t698.2 useDragSourceConnector.js"> # </a></h3>
+<p>src\react-dnd\hooks\useDrag\useDragSourceConnector.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { useMemo } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> useDragDropManager <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../useDragDropManager&apos;</span>;
+<span class="hljs-keyword">import</span> { SourceConnector } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../internals&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useDragSourceConnector</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> manager = useDragDropManager();
+    <span class="hljs-keyword">const</span> connector = useMemo(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-keyword">new</span> SourceConnector(manager.getBackend()), [manager]);
+    <span class="hljs-keyword">return</span> connector;
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> useDragSourceConnector;
+</code></pre>
+<h3 id="t708.3 internals\index.js">8.3 internals\index.js <a href="#t708.3 internals\index.js"> # </a></h3>
+<p>src\react-dnd\internals\index.js</p>
+<pre><code class="lang-diff">export { default as DragSourceMonitorImpl } from &apos;./DragSourceMonitorImpl&apos;;
+<span class="hljs-addition">+export { default as SourceConnector } from &apos;./SourceConnector&apos;;</span>
+</code></pre>
+<h3 id="t718.4 SourceConnector.js">8.4 SourceConnector.js <a href="#t718.4 SourceConnector.js"> # </a></h3>
+<p>src\react-dnd\internals\SourceConnector.js</p>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SourceConnector</span> </span>{
+    backend
+    <span class="hljs-keyword">constructor</span>(backend) {
+        <span class="hljs-keyword">this</span>.backend = backend;
+    }
+    connect() {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x8FDE;&#x63A5;React&#x548C;DOM&apos;</span>);
+    }
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> SourceConnector;
+</code></pre>
+<h2 id="t729.&#x521B;&#x5EFA;DragSource&#x548C;DragType">9.&#x521B;&#x5EFA;DragSource&#x548C;DragType <a href="#t729.&#x521B;&#x5EFA;DragSource&#x548C;DragType"> # </a></h2>
+<ul>
+<li>&#x62D6;&#x52A8;&#x6E90;&#x548C;&#x653E;&#x7F6E;&#x76EE;&#x6807;&#x53EF;&#x4EE5;&#x5C06;&#x7C7B;&#x578B;&#x3001;&#x9879;&#x76EE;&#x3001;&#x526F;&#x4F5C;&#x7528;&#x548C;&#x6536;&#x96C6;&#x529F;&#x80FD;&#x4E0E;&#x60A8;&#x7684;&#x7EC4;&#x4EF6;&#x8054;&#x7CFB;&#x5728;&#x4E00;&#x8D77;</li>
+</ul>
+<h3 id="t739.1 src\react-dnd\hooks\useDrag\index.js">9.1 src\react-dnd\hooks\useDrag\index.js <a href="#t739.1 src\react-dnd\hooks\useDrag\index.js"> # </a></h3>
+<p>src\react-dnd\hooks\useDrag\index.js</p>
+<pre><code class="lang-diff">import useDragSourceMonitor from &apos;./useDragSourceMonitor&apos;;
+import useDragSourceConnector from &apos;./useDragSourceConnector&apos;;
+<span class="hljs-addition">+import useRegisteredDragSource from &apos;./useRegisteredDragSource&apos;;</span>
+function useDrag(spec) {
+//  const monitor = useDragSourceMonitor();
+    const connector = useDragSourceConnector();
+<span class="hljs-addition">+   useRegisteredDragSource(spec, monitor, connector);</span>
+    return [{}, () =&gt; { }];
+}
+export default useDrag;
+</code></pre>
+<h3 id="t749.2 useRegisteredDragSource.js">9.2 useRegisteredDragSource.js <a href="#t749.2 useRegisteredDragSource.js"> # </a></h3>
+<p>src\react-dnd\hooks\useDrag\useRegisteredDragSource.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> useDragDropManager <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../useDragDropManager&apos;</span>;
+<span class="hljs-keyword">import</span> useDragSource <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./useDragSource&apos;</span>;
+<span class="hljs-keyword">import</span> { useDragType } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./useDragType&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useRegisteredDragSource</span>(<span class="hljs-params">spec, monitor, connector</span>) </span>{
+    <span class="hljs-keyword">const</span> manager = useDragDropManager();
+    <span class="hljs-keyword">const</span> handler = useDragSource(spec, monitor, connector);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;handler&apos;</span>, handler);
+    <span class="hljs-keyword">const</span> itemType = useDragType(spec);
+    <span class="hljs-built_in">console</span>.log(itemType);
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> useRegisteredDragSource;
+</code></pre>
+<h3 id="t759.3 useDragSource.js">9.3 useDragSource.js <a href="#t759.3 useDragSource.js"> # </a></h3>
+<p>src\react-dnd\hooks\useDrag\useDragSource.js</p>
+<pre><code class="lang-js"><span class="hljs-comment">/* eslint-disable react-hooks/exhaustive-deps */</span>
+<span class="hljs-keyword">import</span> { useMemo, useEffect } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { DragSourceImpl } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./DragSourceImpl&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useDragSource</span>(<span class="hljs-params">spec, monitor, connector</span>) </span>{
+    <span class="hljs-keyword">const</span> handler = useMemo(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> DragSourceImpl(spec, monitor, connector);
+    }, [monitor, connector]);
+    useEffect(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+        handler.spec = spec;
+    }, [handler, spec]);
+    <span class="hljs-keyword">return</span> handler;
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> useDragSource;
+</code></pre>
+<h3 id="t769.4 DragSourceImpl.js">9.4 DragSourceImpl.js <a href="#t769.4 DragSourceImpl.js"> # </a></h3>
+<p>src\react-dnd\hooks\useDrag\DragSourceImpl.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DragSourceImpl</span> </span>{
+    spec;
+    monitor;
+    connector;
+    <span class="hljs-keyword">constructor</span>(spec, monitor, connector) {
+        <span class="hljs-keyword">this</span>.spec = spec;
+        <span class="hljs-keyword">this</span>.monitor = monitor;
+        <span class="hljs-keyword">this</span>.connector = connector;
+    }
+}
+</code></pre>
+<h3 id="t779.5 useDragType.js">9.5 useDragType.js <a href="#t779.5 useDragType.js"> # </a></h3>
+<p>src\react-dnd\hooks\useDrag\useDragType.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { useMemo } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useDragType</span>(<span class="hljs-params">spec</span>) </span>{
+    <span class="hljs-keyword">return</span> useMemo(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> spec.type, [spec]);
+}
+</code></pre>
+<h2 id="t7810.registerSource">10.registerSource <a href="#t7810.registerSource"> # </a></h2>
+<ul>
+<li>&#x6CE8;&#x518C;&#x62D6;&#x52A8;&#x6E90;</li>
+</ul>
+<p><img src="https://upload-markdown-images.oss-cn-beijing.aliyuncs.com/addSource_1635002106824.png" alt></p>
+<h3 id="t7910.1 useRegisteredDragSource.js">10.1 useRegisteredDragSource.js <a href="#t7910.1 useRegisteredDragSource.js"> # </a></h3>
+<p>src\react-dnd\hooks\useDrag\useRegisteredDragSource.js</p>
+<pre><code class="lang-diff"><span class="hljs-addition">+import { useLayoutEffect } from &apos;react&apos;;</span>
+import useDragDropManager from &apos;../useDragDropManager&apos;;
+import useDragSource from &apos;./useDragSource&apos;;
+import { useDragType } from &apos;./useDragType&apos;;
+<span class="hljs-addition">+import { registerSource } from &apos;../../internals&apos;;</span>
+function useRegisteredDragSource(spec, monitor, connector) {
+    const manager = useDragDropManager();
+    const handler = useDragSource(spec, monitor, connector);
+    const itemType = useDragType(spec);
+<span class="hljs-addition">+   useLayoutEffect(function () {</span>
+<span class="hljs-addition">+       const handlerId = registerSource(itemType, handler, manager);</span>
+<span class="hljs-addition">+       monitor.receiveHandlerId(handlerId);</span>
+<span class="hljs-addition">+       connector.receiveHandlerId(handlerId);</span>
+<span class="hljs-addition">+       console.log(&apos;dragSources&apos;, manager.globalMonitor.registry.dragSources);</span>
+<span class="hljs-addition">+       console.log(&apos;types&apos;, manager.globalMonitor.registry.types);</span>
+<span class="hljs-addition">+   }, [connector, handler, itemType, manager, monitor]);</span>
+}
+export default useRegisteredDragSource;
+</code></pre>
+<h3 id="t8010.2 DragSourceMonitorImpl.js">10.2 DragSourceMonitorImpl.js <a href="#t8010.2 DragSourceMonitorImpl.js"> # </a></h3>
+<p>src\react-dnd\internals\DragSourceMonitorImpl.js</p>
+<pre><code class="lang-diff">class DragSourceMonitorImpl {
+    internalMonitor
+<span class="hljs-addition">+   handlerId</span>
+    constructor(manager) {
+        this.internalMonitor = manager.getGlobalMonitor();
+    }
+<span class="hljs-addition">+   receiveHandlerId(handlerId) {</span>
+<span class="hljs-addition">+       this.handlerId = handlerId;</span>
+<span class="hljs-addition">+   }</span>
+}
+export default DragSourceMonitorImpl;
+</code></pre>
+<h3 id="t8110.3 SourceConnector.js">10.3 SourceConnector.js <a href="#t8110.3 SourceConnector.js"> # </a></h3>
+<p>src\react-dnd\internals\SourceConnector.js</p>
+<pre><code class="lang-diff">class SourceConnector {
+    backend
+<span class="hljs-addition">+   handlerId</span>
+    constructor(backend) {
+        this.backend = backend;
+    }
+    connect() {
+        console.log(&apos;&#x8FDE;&#x63A5;React&#x548C;DOM&apos;);
+    }
+<span class="hljs-addition">+   receiveHandlerId(handlerId) {</span>
+<span class="hljs-addition">+       this.handlerId = handlerId;</span>
+<span class="hljs-addition">+   }</span>
+}
+
+export default SourceConnector;
+</code></pre>
+<h3 id="t8210.4 registerSource.js">10.4 registerSource.js <a href="#t8210.4 registerSource.js"> # </a></h3>
+<p>src\react-dnd\internals\registerSource.js</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">registerSource</span>(<span class="hljs-params">type, handler, manager</span>) </span>{
+    <span class="hljs-keyword">const</span> registry = manager.getRegistry();
+    <span class="hljs-keyword">const</span> handlerId = registry.addSource(type, handler);
+    <span class="hljs-keyword">return</span> handlerId;
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> registerSource;
+</code></pre>
+<h3 id="t8310.5 internals\index.js">10.5 internals\index.js <a href="#t8310.5 internals\index.js"> # </a></h3>
+<p>src\react-dnd\internals\index.js</p>
+<pre><code class="lang-diff">export { default as DragSourceMonitorImpl } from &apos;./DragSourceMonitorImpl&apos;;
+export { default as SourceConnector } from &apos;./SourceConnector&apos;;
+<span class="hljs-addition">+export { default as registerSource } from &apos;./registerSource&apos;;</span>
+</code></pre>
+<h3 id="t8410.6 DragDropManagerImpl.js">10.6 DragDropManagerImpl.js <a href="#t8410.6 DragDropManagerImpl.js"> # </a></h3>
+<p>src\dnd-core\classes\DragDropManagerImpl.js</p>
+<pre><code class="lang-diff">class DragDropManagerImpl {
+    store;
+    backend;
+    globalMonitor;
+    constructor(store, globalMonitor) {
+        this.store = store;
+        this.globalMonitor = globalMonitor;
+    }
+    receiveBackend(backend) {
+        this.backend = backend;
+    }
+    getBackend() {
+        return this.backend;
+    }
+    getGlobalMonitor() {
+        return this.globalMonitor;
+    }
+<span class="hljs-addition">+   getRegistry() {</span>
+<span class="hljs-addition">+       return this.globalMonitor.registry;</span>
+<span class="hljs-addition">+   }</span>
+}
+export default DragDropManagerImpl;
+</code></pre>
+<h3 id="t8510.7 HandlerRegistryImpl.js">10.7 HandlerRegistryImpl.js <a href="#t8510.7 HandlerRegistryImpl.js"> # </a></h3>
+<p>src\dnd-core\classes\HandlerRegistryImpl.js</p>
+<pre><code class="lang-diff"><span class="hljs-addition">+import { HandlerRole } from &apos;../interfaces&apos;;</span>
+<span class="hljs-addition">+import { getNextUniqueId } from &apos;../utils&apos;;</span>
+<span class="hljs-addition">+import { addSource } from &apos;../actions/registry&apos;;</span>
+class HandlerRegistryImpl {
+    store;//redux&#x4ED3;&#x5E93;
+<span class="hljs-addition">+   types = new Map(); //&#x4E0D;&#x540C;handlerId&#x7684;&#x7C7B;&#x578B;</span>
+<span class="hljs-addition">+   dragSources = new Map();//&#x62D6;&#x653E;&#x6765;&#x6E90;</span>
+    constructor(store) {
+        this.store = store;
+    }
+<span class="hljs-addition">+   addSource(type, source) {</span>
+<span class="hljs-addition">+       const handlerId = this.addHandler(HandlerRole.SOURCE, type, source);</span>
+<span class="hljs-addition">+       this.store.dispatch(addSource(handlerId));</span>
+<span class="hljs-addition">+       return handlerId;</span>
+<span class="hljs-addition">+   }</span>
+<span class="hljs-addition">+   addHandler(role, type, handler) {</span>
+<span class="hljs-addition">+       const handlerId = getNextHandlerId(role);//&#x83B7;&#x53D6;&#x4E0B;&#x4E00;&#x4E2A;handleId</span>
+<span class="hljs-addition">+       this.types.set(handlerId, type);</span>
+<span class="hljs-addition">+       if (role === HandlerRole.SOURCE) {</span>
+<span class="hljs-addition">+           this.dragSources.set(handlerId, handler);</span>
+<span class="hljs-addition">+       }</span>
+<span class="hljs-addition">+       return handlerId;</span>
+<span class="hljs-addition">+   }</span>
+<span class="hljs-addition">+   getSource(handlerId) {</span>
+<span class="hljs-addition">+       return this.dragSources.get(handlerId);</span>
+<span class="hljs-addition">+   }</span>
+<span class="hljs-addition">+   getSourceType(handlerId) {</span>
+<span class="hljs-addition">+       return this.types.get(handlerId);</span>
+<span class="hljs-addition">+   }</span>
+}
+<span class="hljs-addition">+function getNextHandlerId(role) {</span>
+<span class="hljs-addition">+    const id = getNextUniqueId().toString();</span>
+<span class="hljs-addition">+    switch (role) {</span>
+<span class="hljs-addition">+        case HandlerRole.SOURCE:</span>
+<span class="hljs-addition">+            return `S${id}`;</span>
+<span class="hljs-addition">+        case HandlerRole.TARGET:</span>
+<span class="hljs-addition">+            return `T${id}`;</span>
+<span class="hljs-addition">+        default:</span>
+<span class="hljs-addition">+            throw new Error(`Unknown Handler Role: ${role}`);</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+}</span>
+export default HandlerRegistryImpl;
+</code></pre>
+<h3 id="t8610.8 interfaces.js">10.8 interfaces.js <a href="#t8610.8 interfaces.js"> # </a></h3>
+<p>src\dnd-core\interfaces.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">var</span> HandlerRole = {
+    <span class="hljs-string">&quot;SOURCE&quot;</span>: <span class="hljs-string">&quot;SOURCE&quot;</span>,
+    <span class="hljs-string">&quot;TARGET&quot;</span>: <span class="hljs-string">&quot;TARGET&quot;</span>
+}
+</code></pre>
+<h3 id="t8710.9 getNextUniqueId.js">10.9 getNextUniqueId.js <a href="#t8710.9 getNextUniqueId.js"> # </a></h3>
+<p>src\dnd-core\utils\getNextUniqueId.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> nextUniqueId = <span class="hljs-number">0</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getNextUniqueId</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> nextUniqueId++;
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> getNextUniqueId;
+</code></pre>
+<h3 id="t8810.10 utils\index.js">10.10 utils\index.js <a href="#t8810.10 utils\index.js"> # </a></h3>
+<p>src\dnd-core\utils\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> { <span class="hljs-keyword">default</span> <span class="hljs-keyword">as</span> getNextUniqueId } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./getNextUniqueId&apos;</span>;
+</code></pre>
+<h3 id="t8910.11 registry.js">10.11 registry.js <a href="#t8910.11 registry.js"> # </a></h3>
+<p>src\dnd-core\actions\registry.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> ADD_SOURCE = <span class="hljs-string">&apos;dnd-core/ADD_SOURCE&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">addSource</span>(<span class="hljs-params">handlerId</span>) </span>{
+    <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">type</span>: ADD_SOURCE,
+        <span class="hljs-attr">payload</span>: { handlerId }
+    };
+}
+</code></pre>
+<h2 id="t9011.connectDragSource">11.connectDragSource <a href="#t9011.connectDragSource"> # </a></h2>
+<ul>
+<li>&#x7ED1;&#x5B9A;&#x62D6;&#x52A8;&#x4E8B;&#x4EF6;</li>
+</ul>
+<h3 id="t9111.1 useDrag\index.js">11.1 useDrag\index.js <a href="#t9111.1 useDrag\index.js"> # </a></h3>
+<p>src\react-dnd\hooks\useDrag\index.js</p>
+<pre><code class="lang-diff">import useDragSourceMonitor from &apos;./useDragSourceMonitor&apos;;
+import useDragSourceConnector from &apos;./useDragSourceConnector&apos;;
+import useRegisteredDragSource from &apos;./useRegisteredDragSource&apos;;
+<span class="hljs-addition">+import useConnectDragSource from &apos;./useConnectDragSource&apos;;</span>
+function useDrag(spec) {
+    const monitor = useDragSourceMonitor();
+    const connector = useDragSourceConnector();
+    useRegisteredDragSource(spec, monitor, connector);
+    return [
+        {},
+<span class="hljs-addition">+       useConnectDragSource(connector)</span>
+    ];
+}
+export default useDrag;
+</code></pre>
+<h3 id="t9211.2 useConnectDragSource.js">11.2 useConnectDragSource.js <a href="#t9211.2 useConnectDragSource.js"> # </a></h3>
+<p>src\react-dnd\hooks\useDrag\useConnectDragSource.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { useMemo } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useConnectDragSource</span>(<span class="hljs-params">connector</span>) </span>{
+    <span class="hljs-keyword">return</span> useMemo(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> connector.receiveDragSource, [connector]);
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> useConnectDragSource
+</code></pre>
+<h3 id="t9311.3 SourceConnector.js">11.3 SourceConnector.js <a href="#t9311.3 SourceConnector.js"> # </a></h3>
+<p>src\react-dnd\internals\SourceConnector.js</p>
+<pre><code class="lang-diff">class SourceConnector {
+    backend
+    handlerId  //&#x62D6;&#x52A8;&#x6E90;&#x552F;&#x4E00;&#x6807;&#x8BC6;
+<span class="hljs-addition">+   dragSourceRef //DOM&#x8282;&#x70B9;</span>
+    constructor(backend) {
+        this.backend = backend;
+    }
+<span class="hljs-addition">+   get dragSource() {</span>
+<span class="hljs-addition">+       return this.dragSourceRef &amp;&amp; this.dragSourceRef.current;</span>
+<span class="hljs-addition">+   }</span>
+<span class="hljs-addition">+   connect() {</span>
+<span class="hljs-addition">+       if (!this.handlerId || !this.dragSource) {</span>
+<span class="hljs-addition">+           return;</span>
+<span class="hljs-addition">+       }</span>
+<span class="hljs-addition">+       this.backend.connectDragSource(this.handlerId, this.dragSource);</span>
+<span class="hljs-addition">+   }</span>
+
+    //useRegisteredDragSource&#x4E2D;useLayoutEffect&#x8D4B;&#x503C;
+    receiveHandlerId(handlerId) {
+        this.handlerId = handlerId;
+<span class="hljs-addition">+       this.connect();</span>
+    }
+<span class="hljs-addition">+   receiveDragSource = (dragSourceRef) =&gt; {</span>
+<span class="hljs-addition">+       this.dragSourceRef = dragSourceRef;</span>
+<span class="hljs-addition">+   }</span>
+}
+
+export default SourceConnector;
+</code></pre>
+<h3 id="t9411.4 HTML5BackendImpl.js">11.4 HTML5BackendImpl.js <a href="#t9411.4 HTML5BackendImpl.js"> # </a></h3>
+<p>src\react-dnd-html5-backend\HTML5BackendImpl.js</p>
+<pre><code class="lang-diff">class HTML5BackendImpl {
+<span class="hljs-addition">+   dragStartSourceId</span>
+<span class="hljs-addition">+   connectDragSource(handleId, node) {</span>
+<span class="hljs-addition">+       node.setAttribute(&apos;draggable&apos;, &apos;true&apos;);</span>
+<span class="hljs-addition">+       node.addEventListener(&apos;dragstart&apos;, (e) =&gt; this.handleDragStart(e, handleId));</span>
+<span class="hljs-addition">+   }</span>
+<span class="hljs-addition">+   handleDragStart(e, handleId) {</span>
+<span class="hljs-addition">+       this.dragStartSourceId = handleId;</span>
+<span class="hljs-addition">+   }</span>
+}
+export default HTML5BackendImpl;
+</code></pre>
+<h2 id="t9512.&#x6536;&#x96C6;&#x5C5E;&#x6027;">12.&#x6536;&#x96C6;&#x5C5E;&#x6027; <a href="#t9512.&#x6536;&#x96C6;&#x5C5E;&#x6027;"> # </a></h2>
+<h3 id="t9612.1 useDrag\index.js">12.1 useDrag\index.js <a href="#t9612.1 useDrag\index.js"> # </a></h3>
+<p>src\react-dnd\hooks\useDrag\index.js</p>
+<pre><code class="lang-diff">import useDragSourceMonitor from &apos;./useDragSourceMonitor&apos;;
+import useDragSourceConnector from &apos;./useDragSourceConnector&apos;;
+import useRegisteredDragSource from &apos;./useRegisteredDragSource&apos;;
+import useConnectDragSource from &apos;./useConnectDragSource&apos;;
+<span class="hljs-addition">+import { useCollectedProps } from &apos;../useCollectedProps&apos;;</span>
+function useDrag(spec) {
+    const monitor = useDragSourceMonitor();
+    const connector = useDragSourceConnector();
+    useRegisteredDragSource(spec, monitor, connector);
+    return [
+<span class="hljs-addition">+       useCollectedProps(monitor, spec.collect),</span>
+        useConnectDragSource(connector)
+    ];
+}
+export default useDrag;
+</code></pre>
+<h3 id="t9712.2 useCollectedProps.js">12.2 useCollectedProps.js <a href="#t9712.2 useCollectedProps.js"> # </a></h3>
+<p>src\react-dnd\hooks\useCollectedProps.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { useLayoutEffect, useState, useCallback } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> equal <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;fast-deep-equal&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useCollectedProps</span>(<span class="hljs-params">monitor, collect</span>) </span>{
+    <span class="hljs-keyword">const</span> [collected, setCollected] = useState(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> collect(monitor));
+    <span class="hljs-keyword">const</span> updateCollected = useCallback(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+        <span class="hljs-keyword">const</span> nextValue = collect(monitor);
+        <span class="hljs-keyword">if</span> (!equal(collected, nextValue)) {
+            setCollected(nextValue);
+        }
+    }, [collect, collected, monitor]);
+    useLayoutEffect(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">return</span> monitor.subscribeToStateChange(updateCollected);
+    }, [monitor, updateCollected]);
+    <span class="hljs-keyword">return</span> collected;
+}
+</code></pre>
+<h3 id="t9812.3 DragSourceMonitorImpl.js">12.3 DragSourceMonitorImpl.js <a href="#t9812.3 DragSourceMonitorImpl.js"> # </a></h3>
+<p>src\react-dnd\internals\DragSourceMonitorImpl.js</p>
+<pre><code class="lang-diff">class DragSourceMonitorImpl {
+    internalMonitor
+    handlerId
+    constructor(manager) {
+        this.internalMonitor = manager.getGlobalMonitor();
+    }
+    receiveHandlerId(handlerId) {
+        this.handlerId = handlerId;
+    }
+<span class="hljs-addition">+   subscribeToStateChange(listener) {</span>
+<span class="hljs-addition">+       return this.internalMonitor.subscribeToStateChange(listener);</span>
+<span class="hljs-addition">+   }</span>
+<span class="hljs-addition">+   isDragging() {</span>
+<span class="hljs-addition">+       return this.internalMonitor.isDraggingSource(this.handlerId);</span>
+<span class="hljs-addition">+   }</span>
+}
+export default DragSourceMonitorImpl;
+</code></pre>
+<h3 id="t9912.4 DragDropMonitorImpl.js">12.4 DragDropMonitorImpl.js <a href="#t9912.4 DragDropMonitorImpl.js"> # </a></h3>
+<p>src\dnd-core\classes\DragDropMonitorImpl.js</p>
+<pre><code class="lang-diff">class DragDropMonitorImpl {
+    store
+    registry
+    constructor(store, registry) {
+        this.store = store
+        this.registry = registry;
+    }
+<span class="hljs-addition">+   subscribeToStateChange(listener) {</span>
+<span class="hljs-addition">+       return this.store.subscribe(listener);</span>
+<span class="hljs-addition">+   }</span>
+<span class="hljs-addition">+   getSourceId() {</span>
+<span class="hljs-addition">+       return &apos;S0&apos;;</span>
+<span class="hljs-addition">+   }</span>
+<span class="hljs-addition">+   isDraggingSource(handlerId) {</span>
+<span class="hljs-addition">+       return handlerId === this.getSourceId();</span>
+<span class="hljs-addition">+   }</span>
+}
+export default DragDropMonitorImpl;
+</code></pre>
+<h2 id="t10013.&#x7ED1;&#x5B9A;&#x62D6;&#x52A8;&#x4E8B;&#x4EF6;">13.&#x7ED1;&#x5B9A;&#x62D6;&#x52A8;&#x4E8B;&#x4EF6; <a href="#t10013.&#x7ED1;&#x5B9A;&#x62D6;&#x52A8;&#x4E8B;&#x4EF6;"> # </a></h2>
+<h3 id="t10113.1 dragOperation.js">13.1 dragOperation.js <a href="#t10113.1 dragOperation.js"> # </a></h3>
+<p>src\dnd-core\reducers\dragOperation.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { BEGIN_DRAG, END_DRAG } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../actions/dragDrop&apos;</span>;
+<span class="hljs-keyword">const</span> initialState = {
+    <span class="hljs-attr">itemType</span>: <span class="hljs-literal">null</span>, <span class="hljs-comment">//&#x62D6;&#x52A8;&#x5143;&#x7D20;&#x7684;&#x7C7B;&#x578B;</span>
+    <span class="hljs-attr">item</span>: <span class="hljs-literal">null</span>, <span class="hljs-comment">//&#x62D6;&#x52A8;&#x7684;&#x5143;&#x7D20;</span>
+    <span class="hljs-attr">sourceId</span>: <span class="hljs-literal">null</span> <span class="hljs-comment">//&#x6765;&#x6E90;&#x7684;ID</span>
+};
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">reduce</span>(<span class="hljs-params">state = initialState, action</span>) </span>{
+    <span class="hljs-keyword">const</span> { payload } = action;
+    <span class="hljs-keyword">switch</span> (action.type) {
+        <span class="hljs-keyword">case</span> BEGIN_DRAG:
+            <span class="hljs-keyword">return</span> {
+                ...state,
+                <span class="hljs-attr">itemType</span>: payload.itemType,
+                <span class="hljs-attr">item</span>: payload.item,
+                <span class="hljs-attr">sourceId</span>: payload.sourceId
+            };
+        <span class="hljs-keyword">case</span> END_DRAG:
+            <span class="hljs-keyword">return</span> {
+                ...state,
+                <span class="hljs-attr">itemType</span>: <span class="hljs-literal">null</span>,
+                <span class="hljs-attr">item</span>: <span class="hljs-literal">null</span>,
+                <span class="hljs-attr">sourceId</span>: <span class="hljs-literal">null</span>
+            };
+        <span class="hljs-keyword">default</span>:
+            <span class="hljs-keyword">return</span> state;
+    }
+}
+</code></pre>
+<h3 id="t10213.2 reducers\index.js">13.2 reducers\index.js <a href="#t10213.2 reducers\index.js"> # </a></h3>
+<p>src\dnd-core\reducers\index.js</p>
+<pre><code class="lang-diff"><span class="hljs-addition">+import { reduce as dragOperation, } from &apos;./dragOperation&apos;;</span>
+<span class="hljs-addition">+import { combineReducers } from &apos;redux&apos;</span>
+<span class="hljs-addition">+const reducers = {</span>
+<span class="hljs-addition">+    dragOperation</span>
+<span class="hljs-addition">+};</span>
+<span class="hljs-addition">+export default combineReducers(reducers);</span>
+</code></pre>
+<h3 id="t10313.3 dragDrop\index.js">13.3 dragDrop\index.js <a href="#t10313.3 dragDrop\index.js"> # </a></h3>
+<p>src\dnd-core\actions\dragDrop\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { createBeginDrag } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./beginDrag&apos;</span>;
+<span class="hljs-keyword">import</span> { createEndDrag } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./endDrag&apos;</span>;
+<span class="hljs-keyword">export</span> * <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./types&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createDragDropActions</span>(<span class="hljs-params">manager</span>) </span>{
+    <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">beginDrag</span>: createBeginDrag(manager),
+        <span class="hljs-attr">endDrag</span>: createEndDrag(manager),
+    };
+}
+</code></pre>
+<h3 id="t10413.4 types.js">13.4 types.js <a href="#t10413.4 types.js"> # </a></h3>
+<p>src\dnd-core\actions\dragDrop\types.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> BEGIN_DRAG = <span class="hljs-string">&apos;dnd-core/BEGIN_DRAG&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> END_DRAG = <span class="hljs-string">&apos;dnd-core/END_DRAG&apos;</span>;
+</code></pre>
+<h3 id="t10513.5 beginDrag.js">13.5 beginDrag.js <a href="#t10513.5 beginDrag.js"> # </a></h3>
+<p>src\dnd-core\actions\dragDrop\beginDrag.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { BEGIN_DRAG } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./types&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createBeginDrag</span>(<span class="hljs-params">manager</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">beginDrag</span>(<span class="hljs-params">sourceId</span>) </span>{
+        <span class="hljs-keyword">const</span> monitor = manager.getGlobalMonitor();
+        <span class="hljs-keyword">const</span> registry = manager.getRegistry();
+        <span class="hljs-keyword">const</span> source = registry.getSource(sourceId);
+        <span class="hljs-keyword">const</span> item = source.beginDrag(monitor, sourceId);
+        <span class="hljs-keyword">const</span> itemType = registry.getSourceType(sourceId);
+        <span class="hljs-keyword">return</span> {
+            <span class="hljs-attr">type</span>: BEGIN_DRAG,
+            <span class="hljs-attr">payload</span>: {
+                itemType,
+                item,
+                sourceId
+            },
+        };
+    }
+}
+</code></pre>
+<h3 id="t10613.6 DragSourceImpl.js">13.6 DragSourceImpl.js <a href="#t10613.6 DragSourceImpl.js"> # </a></h3>
+<p>src\react-dnd\hooks\useDrag\DragSourceImpl.js</p>
+<pre><code class="lang-diff">export class DragSourceImpl {
+    spec;
+    monitor;
+    connector;
+    constructor(spec, monitor, connector) {
+        this.spec = spec;
+        this.monitor = monitor;
+        this.connector = connector;
+    }
+<span class="hljs-addition">+   beginDrag() {</span>
+<span class="hljs-addition">+       const spec = this.spec;</span>
+<span class="hljs-addition">+       const monitor = this.monitor;</span>
+<span class="hljs-addition">+       return spec.item(monitor);</span>
+<span class="hljs-addition">+   }</span>
+}
+</code></pre>
+<h3 id="t10713.7 endDrag.js">13.7 endDrag.js <a href="#t10713.7 endDrag.js"> # </a></h3>
+<p>src\dnd-core\actions\dragDrop\endDrag.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { END_DRAG } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./types&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createEndDrag</span>(<span class="hljs-params">manager</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">endDrag</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">return</span> { <span class="hljs-attr">type</span>: END_DRAG };
+    };
+}
+</code></pre>
+<h3 id="t10813.8 DragDropMonitorImpl.js">13.8 DragDropMonitorImpl.js <a href="#t10813.8 DragDropMonitorImpl.js"> # </a></h3>
+<p>src\dnd-core\classes\DragDropMonitorImpl.js</p>
+<pre><code class="lang-diff">class DragDropMonitorImpl {
+    store
+    registry
+    constructor(store, registry) {
+        this.store = store
+        this.registry = registry;
+    }
+    subscribeToStateChange(listener) {
+        return this.store.subscribe(listener);
+    }
+<span class="hljs-addition">+   getSourceId() {</span>
+<span class="hljs-addition">+       return this.store.getState().dragOperation.sourceId;</span>
+<span class="hljs-addition">+   }</span>
+    isDraggingSource(sourceId) {
+        return sourceId <span class="hljs-comment">=== this.getSourceId();</span>
+    }
+}
+export default DragDropMonitorImpl;
+</code></pre>
+<h3 id="t10913.9 DragDropManagerImpl.js">13.9 DragDropManagerImpl.js <a href="#t10913.9 DragDropManagerImpl.js"> # </a></h3>
+<p>src\dnd-core\classes\DragDropManagerImpl.js</p>
+<pre><code class="lang-diff"><span class="hljs-addition">+import { createDragDropActions } from &apos;../actions/dragDrop&apos;;</span>
+<span class="hljs-addition">+import { bindActionCreators } from &apos;redux&apos;;</span>
+class DragDropManagerImpl {
+    store;
+    backend;
+    globalMonitor;
+    constructor(store, globalMonitor) {
+        this.store = store;
+        this.globalMonitor = globalMonitor;
+    }
+    receiveBackend(backend) {
+        this.backend = backend;
+<span class="hljs-addition">+       this.backend.setup();</span>
+    }
+    getBackend() {
+        return this.backend;
+    }
+    getGlobalMonitor() {
+        return this.globalMonitor;
+    }
+    getRegistry() {
+        return this.globalMonitor.registry;
+    }
+<span class="hljs-addition">+   getActions() {</span>
+<span class="hljs-addition">+       const actions = createDragDropActions(this);</span>
+<span class="hljs-addition">+       return bindActionCreators(actions, this.store.dispatch);</span>
+<span class="hljs-addition">+   }</span>
+}
+export default DragDropManagerImpl;
+</code></pre>
+<h3 id="t11013.10 HTML5BackendImpl.js">13.10 HTML5BackendImpl.js <a href="#t11013.10 HTML5BackendImpl.js"> # </a></h3>
+<p>src\react-dnd-html5-backend\HTML5BackendImpl.js</p>
+<pre><code class="lang-diff">class HTML5BackendImpl {
+    dragStartSourceId
+<span class="hljs-addition">+   actions</span>
+<span class="hljs-addition">+   constructor(manager) {</span>
+<span class="hljs-addition">+       this.actions = manager.getActions();</span>
+<span class="hljs-addition">+   }</span>
+<span class="hljs-addition">+   setup() {</span>
+<span class="hljs-addition">+       this.addEventListeners(window);</span>
+<span class="hljs-addition">+   }</span>
+<span class="hljs-addition">+   addEventListeners(target) {</span>
+<span class="hljs-addition">+       target.addEventListener(&apos;dragstart&apos;, this.handleTopDragStart);</span>
+<span class="hljs-addition">+       target.addEventListener(&apos;dragend&apos;, this.handleTopDragEndCapture, true);</span>
+<span class="hljs-addition">+   }</span>
+<span class="hljs-addition">+   handleTopDragStart = (e) =&gt; {</span>
+<span class="hljs-addition">+       this.actions.beginDrag(this.dragStartSourceId);</span>
+<span class="hljs-addition">+   }</span>
+<span class="hljs-addition">+   handleTopDragEndCapture = () =&gt; {</span>
+<span class="hljs-addition">+       this.actions.endDrag();</span>
+<span class="hljs-addition">+   };</span>
+    connectDragSource(handleId, node) {
+        node.setAttribute(&apos;draggable&apos;, &apos;true&apos;);
+        node.addEventListener(&apos;dragstart&apos;, (e) =&gt; this.handleDragStart(e, handleId));
+    }
+    handleDragStart(e, handleId) {
+        this.dragStartSourceId = handleId;
+    }
+}
+export default HTML5BackendImpl;
+</code></pre>
+<h2 id="t11114.&#x590D;&#x5236;useDrop">14.&#x590D;&#x5236;useDrop <a href="#t11114.&#x590D;&#x5236;useDrop"> # </a></h2>
+<h3 id="t11214.1 useDrop\index.js">14.1 useDrop\index.js <a href="#t11214.1 useDrop\index.js"> # </a></h3>
+<p>src\react-dnd\hooks\useDrop\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> useDropTargetMonitor <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./useDropTargetMonitor&apos;</span>;
+<span class="hljs-keyword">import</span> useDropTargetConnector <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./useDropTargetConnector&apos;</span>;
+<span class="hljs-keyword">import</span> useRegisteredDropTarget <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./useRegisteredDropTarget&apos;</span>;
+<span class="hljs-keyword">import</span> useConnectDropTarget <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./useConnectDropTarget&apos;</span>;
+<span class="hljs-keyword">import</span> { useCollectedProps } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../useCollectedProps&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useDrag</span>(<span class="hljs-params">spec</span>) </span>{
+    <span class="hljs-keyword">const</span> monitor = useDropTargetMonitor();
+    <span class="hljs-keyword">const</span> connector = useDropTargetConnector();
+    useRegisteredDropTarget(spec, monitor, connector);
+    <span class="hljs-keyword">return</span> [
+        useCollectedProps(monitor, spec.collect),
+        useConnectDropTarget(connector)
+    ];
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> useDrag;
+</code></pre>
+<h3 id="t11314.2 useDropTargetMonitor.js">14.2 useDropTargetMonitor.js <a href="#t11314.2 useDropTargetMonitor.js"> # </a></h3>
+<p>src\react-dnd\hooks\useDrop\useDropTargetMonitor.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { useMemo } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> useDragDropManager <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../useDragDropManager&apos;</span>;
+<span class="hljs-keyword">import</span> { DropTargetMonitorImpl } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../internals&apos;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useDropTargetMonitor</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> manager = useDragDropManager();
+    <span class="hljs-keyword">return</span> useMemo(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-keyword">new</span> DropTargetMonitorImpl(manager), [manager]);
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> useDropTargetMonitor;
+</code></pre>
+<h3 id="t11414.3 DropTargetMonitorImpl.js">14.3 DropTargetMonitorImpl.js <a href="#t11414.3 DropTargetMonitorImpl.js"> # </a></h3>
+<p>src\react-dnd\internals\DropTargetMonitorImpl.js</p>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DragSourceMonitorImpl</span> </span>{
+    internalMonitor
+    handlerId
+    <span class="hljs-keyword">constructor</span>(manager) {
+        <span class="hljs-keyword">this</span>.internalMonitor = manager.getGlobalMonitor();
+    }
+    receiveHandlerId(handlerId) {
+        <span class="hljs-keyword">this</span>.handlerId = handlerId;
+    }
+    subscribeToStateChange(listener) {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.internalMonitor.subscribeToStateChange(listener);
+    }
+    isDragging() {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.internalMonitor.isDraggingSource(<span class="hljs-keyword">this</span>.handlerId);
+    }
+    getItemType() {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.internalMonitor.getItemType();
+    }
+    getItem() {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.internalMonitor.getItem();
+    }
+    getClientOffset() {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.internalMonitor.getClientOffset();
+    }
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> DragSourceMonitorImpl;
+</code></pre>
+<h3 id="t11514.4 useDropTargetConnector.js">14.4 useDropTargetConnector.js <a href="#t11514.4 useDropTargetConnector.js"> # </a></h3>
+<p>src\react-dnd\hooks\useDrop\useDropTargetConnector.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { useMemo } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> useDragDropManager <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../useDragDropManager&apos;</span>;
+<span class="hljs-keyword">import</span> { TargetConnector } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../internals&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useDropTargetConnector</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> manager = useDragDropManager();
+    <span class="hljs-keyword">const</span> connector = useMemo(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-keyword">new</span> TargetConnector(manager.getBackend()), [manager]);
+    <span class="hljs-keyword">return</span> connector;
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> useDropTargetConnector;
+</code></pre>
+<h3 id="t11614.5 TargetConnector.js">14.5 TargetConnector.js <a href="#t11614.5 TargetConnector.js"> # </a></h3>
+<p>src\react-dnd\internals\TargetConnector.js</p>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TargetConnector</span> </span>{
+    backend
+    handlerId  <span class="hljs-comment">//&#x62D6;&#x52A8;&#x6E90;&#x552F;&#x4E00;&#x6807;&#x8BC6;</span>
+    dropTargetRef <span class="hljs-comment">//DOM&#x8282;&#x70B9;</span>
+    <span class="hljs-keyword">constructor</span>(backend) {
+        <span class="hljs-keyword">this</span>.backend = backend;
+    }
+    <span class="hljs-keyword">get</span> dropTarget() {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.dropTargetRef &amp;&amp; <span class="hljs-keyword">this</span>.dropTargetRef.current;
+    }
+    connect() {
+        <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">this</span>.handlerId || !<span class="hljs-keyword">this</span>.dropTarget) {
+            <span class="hljs-keyword">return</span>;
+        }
+        <span class="hljs-keyword">this</span>.backend.connectDropTarget(<span class="hljs-keyword">this</span>.handlerId, <span class="hljs-keyword">this</span>.dropTarget);
+    }
+
+    <span class="hljs-comment">//useRegisteredDragSource&#x4E2D;useLayoutEffect&#x8D4B;&#x503C;</span>
+    receiveHandlerId(handlerId) {
+        <span class="hljs-keyword">this</span>.handlerId = handlerId;
+        <span class="hljs-keyword">this</span>.connect();
+    }
+    receiveDropTarget = <span class="hljs-function">(<span class="hljs-params">dropTargetRef</span>) =&gt;</span> {
+        <span class="hljs-keyword">this</span>.dropTargetRef = dropTargetRef;
+    }
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> TargetConnector;
+</code></pre>
+<h3 id="t11714.6 useRegisteredDropTarget.js">14.6 useRegisteredDropTarget.js <a href="#t11714.6 useRegisteredDropTarget.js"> # </a></h3>
+<p>src\react-dnd\hooks\useDrop\useRegisteredDropTarget.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { useLayoutEffect } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> useDragDropManager <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../useDragDropManager&apos;</span>;
+<span class="hljs-keyword">import</span> useDropTarget <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./useDropTarget&apos;</span>;
+<span class="hljs-keyword">import</span> { registerTarget } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../../internals&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useRegisteredDropTarget</span>(<span class="hljs-params">spec, monitor, connector</span>) </span>{
+    <span class="hljs-keyword">const</span> manager = useDragDropManager();
+    <span class="hljs-keyword">const</span> handler = useDropTarget(spec, monitor, connector);
+    <span class="hljs-keyword">const</span> type = spec.type;
+    useLayoutEffect(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">const</span> handlerId = registerTarget(type, handler, manager);
+        monitor.receiveHandlerId(handlerId);
+        connector.receiveHandlerId(handlerId);
+    }, [connector, handler, type, manager, monitor]);
+
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> useRegisteredDropTarget;
+</code></pre>
+<h3 id="t11814.7 useDropTarget.js">14.7 useDropTarget.js <a href="#t11814.7 useDropTarget.js"> # </a></h3>
+<p>src\react-dnd\hooks\useDrop\useDropTarget.js</p>
+<pre><code class="lang-js"><span class="hljs-comment">/* eslint-disable react-hooks/exhaustive-deps */</span>
+<span class="hljs-keyword">import</span> { useMemo, useEffect } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { DropTargetImpl } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./DropTargetImpl&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useDropTarget</span>(<span class="hljs-params">spec, monitor, connector</span>) </span>{
+    <span class="hljs-keyword">const</span> handler = useMemo(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> DropTargetImpl(spec, monitor, connector);
+    }, [monitor, connector]);
+    useEffect(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+        handler.spec = spec;
+    }, [handler, spec]);
+    <span class="hljs-keyword">return</span> handler;
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> useDropTarget;
+</code></pre>
+<h3 id="t11914.8 DropTargetImpl.js">14.8 DropTargetImpl.js <a href="#t11914.8 DropTargetImpl.js"> # </a></h3>
+<p>src\react-dnd\hooks\useDrop\DropTargetImpl.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DropTargetImpl</span> </span>{
+    spec;
+    monitor;
+    connector;
+    <span class="hljs-keyword">constructor</span>(spec, monitor, connector) {
+        <span class="hljs-keyword">this</span>.spec = spec;
+        <span class="hljs-keyword">this</span>.monitor = monitor;
+        <span class="hljs-keyword">this</span>.connector = connector;
+    }
+    hover() {
+        <span class="hljs-keyword">const</span> spec = <span class="hljs-keyword">this</span>.spec;
+        <span class="hljs-keyword">const</span> monitor = <span class="hljs-keyword">this</span>.monitor;
+        <span class="hljs-keyword">if</span> (spec.hover) {
+            spec.hover(monitor.getItem(), monitor);
+        }
+    }
+}
+</code></pre>
+<h3 id="t12014.9 registerTarget.js">14.9 registerTarget.js <a href="#t12014.9 registerTarget.js"> # </a></h3>
+<p>src\react-dnd\internals\registerTarget.js</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">registerTarget</span>(<span class="hljs-params">type, target, manager</span>) </span>{
+    <span class="hljs-keyword">const</span> registry = manager.getRegistry();
+    <span class="hljs-keyword">const</span> targetId = registry.addTarget(type, target);
+    <span class="hljs-keyword">return</span> targetId;
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> registerTarget;
+</code></pre>
+<h3 id="t12114.10  useConnectDropTarget.js">14.10  useConnectDropTarget.js <a href="#t12114.10  useConnectDropTarget.js"> # </a></h3>
+<p>src\react-dnd\hooks\useDrop\useConnectDropTarget.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { useMemo } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useConnectDropTarget</span>(<span class="hljs-params">connector</span>) </span>{
+    <span class="hljs-keyword">return</span> useMemo(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> connector.receiveDropTarget, [connector]);
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> useConnectDropTarget
+</code></pre>
+<h3 id="t12214.11 hooks\index.js">14.11 hooks\index.js <a href="#t12214.11 hooks\index.js"> # </a></h3>
+<p>src\react-dnd\hooks\index.js</p>
+<pre><code class="lang-diff">export { default as useDrag } from &apos;./useDrag&apos;;
+<span class="hljs-addition">+export { default as useDrop } from &apos;./useDrop&apos;;</span>
+</code></pre>
+<h3 id="t12314.12 internals\index.js">14.12 internals\index.js <a href="#t12314.12 internals\index.js"> # </a></h3>
+<p>src\react-dnd\internals\index.js</p>
+<pre><code class="lang-diff">export { default as DragSourceMonitorImpl } from &apos;./DragSourceMonitorImpl&apos;;
+<span class="hljs-addition">+export { default as DropTargetMonitorImpl } from &apos;./DropTargetMonitorImpl&apos;;</span>
+export { default as SourceConnector } from &apos;./SourceConnector&apos;;
+<span class="hljs-addition">+export { default as TargetConnector } from &apos;./TargetConnector&apos;;</span>
+export { default as registerSource } from &apos;./registerSource&apos;;
+<span class="hljs-addition">+export { default as registerTarget } from &apos;./registerTarget&apos;;</span>
+</code></pre>
+<h2 id="t12415.&#x589E;&#x52A0;&#x76D1;&#x542C;">15.&#x589E;&#x52A0;&#x76D1;&#x542C; <a href="#t12415.&#x589E;&#x52A0;&#x76D1;&#x542C;"> # </a></h2>
+<h3 id="t12515.1 src\react-dnd-html5-backend\HTML5BackendImpl.js">15.1 src\react-dnd-html5-backend\HTML5BackendImpl.js <a href="#t12515.1 src\react-dnd-html5-backend\HTML5BackendImpl.js"> # </a></h3>
+<p>src\react-dnd-html5-backend\HTML5BackendImpl.js</p>
+<pre><code class="lang-diff"><span class="hljs-addition">+import { getEventClientOffset } from &apos;./OffsetUtils&apos;;</span>
+class HTML5BackendImpl {
+    dragStartSourceId
+    actions
+<span class="hljs-addition">+   dragOverTargetId</span>
+    constructor(manager) {
+        this.actions = manager.getActions();
+    }
+    setup() {
+        this.addEventListeners(window);
+    }
+    addEventListeners(target) {
+        target.addEventListener(&apos;dragstart&apos;, this.handleTopDragStart);
+<span class="hljs-addition">+       target.addEventListener(&apos;dragover&apos;, this.handleTopDragOver);</span>
+        target.addEventListener(&apos;dragend&apos;, this.handleTopDragEndCapture, true);
+    }
+    handleTopDragStart = (e) =&gt; {
+        this.actions.beginDrag(this.dragStartSourceId);
+    }
+    handleTopDragEndCapture = () =&gt; {
+        this.actions.endDrag();
+    };
+    connectDragSource(handleId, node) {
+        node.setAttribute(&apos;draggable&apos;, &apos;true&apos;);
+        node.addEventListener(&apos;dragstart&apos;, (e) =&gt; this.handleDragStart(e, handleId));
+    }
+    handleDragStart(e, handleId) {
+        this.dragStartSourceId = handleId;
+    }
+<span class="hljs-addition">+   handleTopDragOver = (e) =&gt; {</span>
+<span class="hljs-addition">+       this.actions.hover(this.dragOverTargetId, {</span>
+<span class="hljs-addition">+           clientOffset: getEventClientOffset(e)</span>
+<span class="hljs-addition">+       });</span>
+<span class="hljs-addition">+   };</span>
+<span class="hljs-addition">+   handleDragOver(e, targetId) {</span>
+<span class="hljs-addition">+       this.dragOverTargetId = targetId;</span>
+<span class="hljs-addition">+   }</span>
+<span class="hljs-addition">+   connectDropTarget(targetId, node) {</span>
+<span class="hljs-addition">+       console.log(&apos;connectDropTarget&apos;, targetId);</span>
+<span class="hljs-addition">+       node.addEventListener(&apos;dragover&apos;, (e) =&gt; this.handleDragOver(e, targetId));</span>
+<span class="hljs-addition">+   }</span>
+}
+export default HTML5BackendImpl;
+</code></pre>
+<h3 id="t12615.2 OffsetUtils.js">15.2 OffsetUtils.js <a href="#t12615.2 OffsetUtils.js"> # </a></h3>
+<p>src\react-dnd-html5-backend\OffsetUtils.js</p>
+<pre><code class="lang-js"><span class="hljs-comment">/**
+ * &#x83B7;&#x53D6;&#x4E8B;&#x4EF6;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x53EF;&#x89C6;&#x533A;&#x57DF;&#x7684;&#x5750;&#x6807;
+ * <span class="hljs-doctag">@param <span class="hljs-type">{*}</span> </span>e 
+ * <span class="hljs-doctag">@returns </span>
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getEventClientOffset</span>(<span class="hljs-params">e</span>) </span>{
+    <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">x</span>: e.clientX,<span class="hljs-comment">//&#x9F20;&#x6807;&#x76F8;&#x5BF9;&#x4E8E;&#x6D4F;&#x89C8;&#x5668;&#x7A97;&#x53E3;&#x53EF;&#x89C6;&#x533A;&#x57DF;&#x7684;X</span>
+        <span class="hljs-attr">y</span>: e.clientY<span class="hljs-comment">//&#x9F20;&#x6807;&#x76F8;&#x5BF9;&#x4E8E;&#x6D4F;&#x89C8;&#x5668;&#x7A97;&#x53E3;&#x53EF;&#x89C6;&#x533A;&#x57DF;&#x7684;Y&#x5750;&#x6807;</span>
+    };
+}
+</code></pre>
+<h2 id="t12716.&#x6CE8;&#x518C;&#x548C;&#x76D1;&#x542C;">16.&#x6CE8;&#x518C;&#x548C;&#x76D1;&#x542C; <a href="#t12716.&#x6CE8;&#x518C;&#x548C;&#x76D1;&#x542C;"> # </a></h2>
+<h3 id="t12816.1 src\dnd-core\classes\DragDropMonitorImpl.js">16.1 src\dnd-core\classes\DragDropMonitorImpl.js <a href="#t12816.1 src\dnd-core\classes\DragDropMonitorImpl.js"> # </a></h3>
+<p>src\dnd-core\classes\DragDropMonitorImpl.js</p>
+<pre><code class="lang-diff">class DragDropMonitorImpl {
+    store
+    registry
+    constructor(store, registry) {
+        this.store = store
+        this.registry = registry;
+    }
+    subscribeToStateChange(listener) {
+        return this.store.subscribe(listener);
+    }
+    getSourceId() {
+        return this.store.getState().dragOperation.sourceId;
+    }
+    isDraggingSource(sourceId) {
+        return sourceId <span class="hljs-comment">=== this.getSourceId();</span>
+    }
+<span class="hljs-addition">+   getItem() {</span>
+<span class="hljs-addition">+       return this.store.getState().dragOperation.item;</span>
+<span class="hljs-addition">+   }</span>
+<span class="hljs-addition">+   getItemType() {</span>
+<span class="hljs-addition">+       return this.store.getState().dragOperation.itemType;</span>
+<span class="hljs-addition">+   }</span>
+<span class="hljs-addition">+   getClientOffset() {</span>
+<span class="hljs-addition">+       return this.store.getState().dragOffset.clientOffset;</span>
+<span class="hljs-addition">+   }</span>
+}
+export default DragDropMonitorImpl;
+</code></pre>
+<h3 id="t12916.2 src\dnd-core\classes\HandlerRegistryImpl.js">16.2 src\dnd-core\classes\HandlerRegistryImpl.js <a href="#t12916.2 src\dnd-core\classes\HandlerRegistryImpl.js"> # </a></h3>
+<p>src\dnd-core\classes\HandlerRegistryImpl.js</p>
+<pre><code class="lang-diff">import { HandlerRole } from &apos;../interfaces&apos;;
+import { getNextUniqueId } from &apos;../utils&apos;;
+<span class="hljs-addition">+import { addSource, addTarget } from &apos;../actions/registry&apos;;</span>
+class HandlerRegistryImpl {
+    store;//redux&#x4ED3;&#x5E93;
+    types = new Map(); //&#x4E0D;&#x540C;handlerId&#x7684;&#x7C7B;&#x578B;
+    dragSources = new Map();//&#x62D6;&#x653E;&#x6765;&#x6E90;
+<span class="hljs-addition">+   dropTargets = new Map();//&#x653E;&#x7F6E;&#x76EE;&#x6807;</span>
+    constructor(store) {
+        this.store = store;
+    }
+    addSource(type, source) {
+        const handlerId = this.addHandler(HandlerRole.SOURCE, type, source);
+        this.store.dispatch(addSource(handlerId));
+        return handlerId;
+    }
+    addHandler(role, type, handler) {
+        const handlerId = getNextHandlerId(role);//&#x83B7;&#x53D6;&#x4E0B;&#x4E00;&#x4E2A;handleId
+        this.types.set(handlerId, type);
+        if (role <span class="hljs-comment">=== HandlerRole.SOURCE) {</span>
+            this.dragSources.set(handlerId, handler);
+<span class="hljs-addition">+       } else if (role === HandlerRole.TARGET) {</span>
+<span class="hljs-addition">+           this.dropTargets.set(handlerId, handler);</span>
+<span class="hljs-addition">+       }</span>
+        return handlerId;
+    }
+    getSource(handlerId) {
+        return this.dragSources.get(handlerId);
+    }
+    getSourceType(handlerId) {
+        return this.types.get(handlerId);
+    }
+<span class="hljs-addition">+   addTarget(type, target) {</span>
+<span class="hljs-addition">+       const targetId = this.addHandler(HandlerRole.TARGET, type, target);</span>
+<span class="hljs-addition">+       this.store.dispatch(addTarget(targetId));</span>
+<span class="hljs-addition">+       return targetId;</span>
+<span class="hljs-addition">+   }</span>
+<span class="hljs-addition">+   getTarget(targetId) {</span>
+<span class="hljs-addition">+       return this.dropTargets.get(targetId);</span>
+<span class="hljs-addition">+   }</span>
+<span class="hljs-addition">+   getTargetType(targetId) {</span>
+<span class="hljs-addition">+       return this.types.get(targetId);</span>
+<span class="hljs-addition">+   }</span>
+}
+function getNextHandlerId(role) {
+    const id = getNextUniqueId().toString();
+    switch (role) {
+        case HandlerRole.SOURCE:
+            return `S${id}`;
+        case HandlerRole.TARGET:
+            return `T${id}`;
+        default:
+            throw new Error(`Unknown Handler Role: ${role}`);
+    }
+}
+export default HandlerRegistryImpl;
+</code></pre>
+<h3 id="t13016.3 src\dnd-core\actions\registry.js">16.3 src\dnd-core\actions\registry.js <a href="#t13016.3 src\dnd-core\actions\registry.js"> # </a></h3>
+<p>src\dnd-core\actions\registry.js</p>
+<pre><code class="lang-diff">export const ADD_SOURCE = &apos;dnd-core/ADD_SOURCE&apos;;
+<span class="hljs-addition">+export const ADD_TARGET = &apos;dnd-core/ADD_TARGET&apos;;</span>
+export function addSource(handlerId) {
+    return {
+        type: ADD_SOURCE,
+        payload: { handlerId }
+    };
+}
+<span class="hljs-addition">+export function addTarget(targetId) {</span>
+<span class="hljs-addition">+    return {</span>
+<span class="hljs-addition">+        type: ADD_TARGET,</span>
+<span class="hljs-addition">+        payload: {</span>
+<span class="hljs-addition">+            targetId</span>
+<span class="hljs-addition">+        },</span>
+<span class="hljs-addition">+    };</span>
+<span class="hljs-addition">+}</span>
+</code></pre>
+<h2 id="t13117.store">17.store <a href="#t13117.store"> # </a></h2>
+<h3 id="t13217.1 reducers\index.js">17.1 reducers\index.js <a href="#t13217.1 reducers\index.js"> # </a></h3>
+<p>src\dnd-core\reducers\index.js</p>
+<pre><code class="lang-diff">import { reduce as dragOperation, } from &apos;./dragOperation&apos;;
+<span class="hljs-addition">+import { reduce as dragOffset } from &apos;./dragOffset&apos;;</span>
+import { combineReducers } from &apos;redux&apos;
+const reducers = {
+    dragOperation,
+<span class="hljs-addition">+   dragOffset</span>
+};
+export default combineReducers(reducers);
+</code></pre>
+<h3 id="t13317.2 dragOffset.js">17.2 dragOffset.js <a href="#t13317.2 dragOffset.js"> # </a></h3>
+<p>src\dnd-core\reducers\dragOffset.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { BEGIN_DRAG, HOVER, END_DRAG } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;../actions/dragDrop&apos;</span>;
+<span class="hljs-keyword">const</span> initialState = {
+    <span class="hljs-attr">clientOffset</span>: {},
+};
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">reduce</span>(<span class="hljs-params">state = initialState, action</span>) </span>{
+    <span class="hljs-keyword">const</span> { payload } = action;
+    <span class="hljs-keyword">switch</span> (action.type) {
+        <span class="hljs-keyword">case</span> BEGIN_DRAG:
+            <span class="hljs-keyword">return</span> {
+                <span class="hljs-attr">clientOffset</span>: payload.clientOffset,
+            };
+        <span class="hljs-keyword">case</span> HOVER:
+            <span class="hljs-keyword">return</span> {
+                <span class="hljs-attr">clientOffset</span>: payload.clientOffset
+            };
+        <span class="hljs-keyword">case</span> END_DRAG:
+            <span class="hljs-keyword">return</span> initialState;
+        <span class="hljs-keyword">default</span>:
+            <span class="hljs-keyword">return</span> state;
+    }
+}
+</code></pre>
+<h3 id="t13417.3 dragDrop\index.js">17.3 dragDrop\index.js <a href="#t13417.3 dragDrop\index.js"> # </a></h3>
+<p>src\dnd-core\actions\dragDrop\index.js</p>
+<pre><code class="lang-diff">import { createBeginDrag } from &apos;./beginDrag&apos;;
+import { createEndDrag } from &apos;./endDrag&apos;;
+<span class="hljs-addition">+import { createHover } from &apos;./hover&apos;;</span>
+export * from &apos;./types&apos;;
+export function createDragDropActions(manager) {
+    return {
+        beginDrag: createBeginDrag(manager),
+        endDrag: createEndDrag(manager),
+<span class="hljs-addition">+       hover: createHover(manager)</span>
+    };
+}
+
+</code></pre>
+<h3 id="t13517.4 hover.js">17.4 hover.js <a href="#t13517.4 hover.js"> # </a></h3>
+<p>src\dnd-core\actions\dragDrop\hover.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { HOVER } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./types&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createHover</span>(<span class="hljs-params">manager</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">hover</span>(<span class="hljs-params">targetId, { clientOffset } = {}</span>) </span>{
+        <span class="hljs-keyword">const</span> registry = manager.getRegistry();<span class="hljs-comment">//HandlerRegistryImpl</span>
+        <span class="hljs-keyword">const</span> target = registry.getTarget(targetId);<span class="hljs-comment">//DropTargetImpl</span>
+        queueMicrotask(target.hover.bind(target));
+        <span class="hljs-keyword">return</span> {
+            <span class="hljs-attr">type</span>: HOVER,
+            <span class="hljs-attr">payload</span>: {
+                targetId,
+                clientOffset
+            },
+        };
+    };
+}
+</code></pre>
+<h3 id="t13617.5 src\dnd-core\actions\dragDrop\types.js">17.5 src\dnd-core\actions\dragDrop\types.js <a href="#t13617.5 src\dnd-core\actions\dragDrop\types.js"> # </a></h3>
+<p>src\dnd-core\actions\dragDrop\types.js</p>
+<pre><code class="lang-diff">export const BEGIN_DRAG = &apos;dnd-core/BEGIN_DRAG&apos;;
+export const END_DRAG = &apos;dnd-core/END_DRAG&apos;;
+<span class="hljs-addition">+export const HOVER = &apos;dnd-core/HOVER&apos;;</span>
+</code></pre>
+
+    </div>
+</div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+    aria-labelledby="loginModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="loginModalLabel">请登录</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="username" class="control-label">姓名:</label>
+                        <input type="text" class="form-control" id="username" placeholder="珠峰架构VIP会员系统用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">密码:</label>
+                        <input type="text" class="form-control" id="password" placeholder="珠峰架构VIP会员系统密码">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                    data-dismiss="modal">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+let zhufengjiagou = localStorage.getItem('zhufengjiagou');
+const host = 'http://login.zhufengpeixun.com';
+if(zhufengjiagou){
+  fetch(host+'/check',{method:"GET",mode: 'cors',
+　　headers: {'Content-Type': 'application/json', authorization: `Bearer ${zhufengjiagou}`}}).then(response => response.json()).then(res => {
+    if(res.success){
+     
+    }else{
+      $('#loginModal').modal('show')
+    }
+  }) 
+}else{
+   $('#loginModal').modal('show')
+}
+
+$('#loginModal').on('hidden.bs.modal', function (event) {
+  var modal = $(this)
+  let username = modal.find('.modal-body #username').val();
+  let password = modal.find('.modal-body #password').val();
+  fetch(host+'/login',{method:"POST",mode: 'cors',
+　　headers: {'Content-Type': 'application/json'},
+　　body:JSON.stringify({username,password})}).then(response => response.json()).then(res => {
+  console.log(res);
+    if(res.success){
+      localStorage.setItem('zhufengjiagou',res.zhufengjiagou);
+    }else{
+      window.location.href = 'http://www.zhufengpeixun.cn';
+    }
+  })
+})
+</script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

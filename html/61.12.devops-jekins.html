@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+   
+                      
+
+                        
+<div class="warpper">
+    <div class="page-toc">
+        <ul><li><a href="#t01. 持续集成">1. 持续集成</a></li><li><a href="#t12. Jenkins">2. Jenkins</a></li><li><a href="#t23. Git安装">3. Git安装</a><ul><li><a href="#t33.1 git服务器">3.1 git服务器</a><ul><li><a href="#t43.1.1 安装git">3.1.1 安装git</a></li><li><a href="#t53.1.2 创建git用户">3.1.2 创建git用户</a></li><li><a href="#t63.1.3 创建仓库">3.1.3 创建仓库</a></li></ul></li><li><a href="#t73.2 git客户端(web服务器)">3.2 git客户端(web服务器)</a><ul><li><a href="#t83.2.1 安装git">3.2.1 安装git</a></li><li><a href="#t93.2.2 免密码登录">3.2.2 免密码登录</a><ul><li><a href="#t103.2.2.1 生成秘钥">3.2.2.1 生成秘钥</a></li><li><a href="#t113.2.2.2 拷贝公钥">3.2.2.2 拷贝公钥</a></li><li><a href="#t123.2.2.3 允许公钥登录">3.2.2.3 允许公钥登录</a></li></ul></li></ul></li></ul></li><li><a href="#t134. Jenkins">4. Jenkins</a><ul><li><a href="#t144.1 安装JDK">4.1 安装JDK</a></li><li><a href="#t154.2 修改配置文件">4.2 修改配置文件</a></li><li><a href="#t164.3 生效配置">4.3 生效配置</a></li><li><a href="#t174.4 安装jenkins">4.4 安装jenkins</a></li><li><a href="#t184.5 关闭防火墙">4.5 关闭防火墙</a></li><li><a href="#t194.6 启动jenkins">4.6 启动jenkins</a></li><li><a href="#t204.7 选择java版本">4.7 选择java版本</a></li><li><a href="#t214.8 运行用户">4.8 运行用户</a></li><li><a href="#t224.8 访问jenkins">4.8 访问jenkins</a></li><li><a href="#t234.9 安装maven">4.9 安装maven</a></li><li><a href="#t244.10 使用jenkins">4.10 使用jenkins</a></li><li><a href="#t254.11 下载插件加速">4.11 下载插件加速</a></li><li><a href="#t264.12 创建管理员用户">4.12 创建管理员用户</a></li><li><a href="#t274.13 主要功能">4.13 主要功能</a></li></ul></li><li><a href="#t285. 角色和用户管理">5. 角色和用户管理</a></li><li><a href="#t296. 参数化构建">6. 参数化构建</a></li><li><a href="#t307. 主从模式">7. 主从模式</a></li><li><a href="#t318. 流水线">8. 流水线</a></li><li><a href="#t329. 邮件通知">9. 邮件通知</a></li><li><a href="#t3310. 发布PHP项目">10. 发布PHP项目</a><ul><li><a href="#t3410.1 创建本地项目">10.1 创建本地项目</a></li><li><a href="#t3510.2 拉取代码">10.2 拉取代码</a></li><li><a href="#t3610.3 部署环境">10.3 部署环境</a></li><li><a href="#t3710.4 创建项目">10.4 创建项目</a><ul><li><a href="#t3810.4.1 构建参数">10.4.1 构建参数</a></li><li><a href="#t3910.4.2 pipeline脚本">10.4.2 pipeline脚本</a></li></ul></li></ul></li><li><a href="#t4011. 发布Java项目">11. 发布Java项目</a><ul><li><a href="#t4111.1 创建本地项目">11.1 创建本地项目</a></li><li><a href="#t4210.2 拉取代码">10.2 拉取代码</a></li><li><a href="#t4310.3 部署环境">10.3 部署环境</a></li><li><a href="#t4410.4 pipeline脚本">10.4 pipeline脚本</a></li></ul></li><li><a href="#t4512. Jenkins+Docker实现持续集成">12. Jenkins+Docker实现持续集成</a></li></ul>
+    </div>
+    <div class="content markdown-body">
+        <h2 id="t01. &#x6301;&#x7EED;&#x96C6;&#x6210;">1. &#x6301;&#x7EED;&#x96C6;&#x6210; <a href="#t01. &#x6301;&#x7EED;&#x96C6;&#x6210;"> # </a></h2>
+<ul>
+<li>&#x6301;&#x7EED;&#x96C6;&#x6210;(Continuous Integration,CI) &#x4EE3;&#x7801;&#x5408;&#x5E76;&#x3001;&#x6784;&#x5EFA;&#x3001;&#x5E03;&#x7F72;&#x3001;&#x6D4B;&#x8BD5;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x4E0D;&#x65AD;&#x6267;&#x884C;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x5E76;&#x5BF9;&#x7ED3;&#x679C;&#x8FDB;&#x884C;&#x53CD;&#x9988;</li>
+<li>&#x6301;&#x7EED;&#x90E8;&#x7F72;(Continuous Deloyment,CD) &#x90E8;&#x7F72;&#x5230;&#x751F;&#x4EA7;&#x73AF;&#x5883;</li>
+<li>&#x6301;&#x7EED;&#x4EA4;&#x4ED8;(Continuous Delivery,CD) &#x90E8;&#x7F72;&#x5230;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#xFF0C;&#x7ED9;&#x7528;&#x6237;&#x4F7F;&#x7528;</li>
+<li>DevOps &#x662F;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684;&#x9762;&#x5411;IT&#x8FD0;&#x7EF4;&#x7684;&#x5DE5;&#x4F5C;&#x6D41;&#xFF0C;&#x4EE5; IT &#x81EA;&#x52A8;&#x5316;&#x4EE5;&#x53CA;&#x6301;&#x7EED;&#x96C6;&#x6210;&#xFF08;CI&#xFF09;&#x3001;&#x6301;&#x7EED;&#x90E8;&#x7F72;&#xFF08;CD&#xFF09;&#x4E3A;&#x57FA;&#x7840;&#xFF0C;&#x6765;&#x4F18;&#x5316;&#x7A0B;&#x5F0F;&#x5F00;&#x53D1;&#x3001;&#x6D4B;&#x8BD5;&#x3001;&#x7CFB;&#x7EDF;&#x8FD0;&#x7EF4;&#x7B49;&#x6240;&#x6709;&#x73AF;&#x8282;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/cicd.jpg" alt="cicd"></p>
+<h2 id="t12. Jenkins">2. Jenkins <a href="#t12. Jenkins"> # </a></h2>
+<p><img src="http://img.zhufengpeixun.cn/cicdwithoutdocker.png" alt="cicdwithoutdocker"></p>
+<p><img src="http://img.zhufengpeixun.cn/dockercicd.png" alt="dockercicd"></p>
+<h2 id="t23. Git&#x5B89;&#x88C5;">3. Git&#x5B89;&#x88C5; <a href="#t23. Git&#x5B89;&#x88C5;"> # </a></h2>
+<h3 id="t33.1 git&#x670D;&#x52A1;&#x5668;">3.1 git&#x670D;&#x52A1;&#x5668; <a href="#t33.1 git&#x670D;&#x52A1;&#x5668;"> # </a></h3>
+<h4 id="t43.1.1 &#x5B89;&#x88C5;git">3.1.1 &#x5B89;&#x88C5;git <a href="#t43.1.1 &#x5B89;&#x88C5;git"> # </a></h4>
+<pre><code class="lang-js">yum install -y git
+</code></pre>
+<h4 id="t53.1.2 &#x521B;&#x5EFA;git&#x7528;&#x6237;">3.1.2 &#x521B;&#x5EFA;git&#x7528;&#x6237; <a href="#t53.1.2 &#x521B;&#x5EFA;git&#x7528;&#x6237;"> # </a></h4>
+<pre><code class="lang-js">useradd git
+passwd git
+</code></pre>
+<h4 id="t63.1.3 &#x521B;&#x5EFA;&#x4ED3;&#x5E93;">3.1.3 &#x521B;&#x5EFA;&#x4ED3;&#x5E93; <a href="#t63.1.3 &#x521B;&#x5EFA;&#x4ED3;&#x5E93;"> # </a></h4>
+<pre><code class="lang-js">su - git
+mkdir -p ~<span class="hljs-regexp">/repos/</span>app.git
+cd ~<span class="hljs-regexp">/repos/</span>app.git
+git --bare init
+</code></pre>
+<h3 id="t73.2 git&#x5BA2;&#x6237;&#x7AEF;(web&#x670D;&#x52A1;&#x5668;)">3.2 git&#x5BA2;&#x6237;&#x7AEF;(web&#x670D;&#x52A1;&#x5668;) <a href="#t73.2 git&#x5BA2;&#x6237;&#x7AEF;(web&#x670D;&#x52A1;&#x5668;)"> # </a></h3>
+<h4 id="t83.2.1 &#x5B89;&#x88C5;git">3.2.1 &#x5B89;&#x88C5;git <a href="#t83.2.1 &#x5B89;&#x88C5;git"> # </a></h4>
+<pre><code class="lang-js">yum install -y git
+</code></pre>
+<pre><code class="lang-js">cd /usr/local/src
+git clone git@<span class="hljs-number">192.168</span><span class="hljs-number">.20</span><span class="hljs-number">.131</span>:<span class="hljs-regexp">/home/gi</span>t/repos/app.git
+cd app
+git config --global user.email <span class="hljs-string">&quot;zhufengjiagou@126.com&quot;</span>
+git config --global user.name <span class="hljs-string">&quot;zhufengjiagou&quot;</span>
+touch index.html
+git add -A
+git commit -m<span class="hljs-string">&quot;init&quot;</span>
+git push origin master
+</code></pre>
+<h4 id="t93.2.2 &#x514D;&#x5BC6;&#x7801;&#x767B;&#x5F55;">3.2.2 &#x514D;&#x5BC6;&#x7801;&#x767B;&#x5F55; <a href="#t93.2.2 &#x514D;&#x5BC6;&#x7801;&#x767B;&#x5F55;"> # </a></h4>
+<h5 id="t103.2.2.1 &#x751F;&#x6210;&#x79D8;&#x94A5;">3.2.2.1 &#x751F;&#x6210;&#x79D8;&#x94A5; <a href="#t103.2.2.1 &#x751F;&#x6210;&#x79D8;&#x94A5;"> # </a></h5>
+<ul>
+<li>&#x5148;&#x767B;&#x5F55;web&#x670D;&#x52A1;&#x5668;&#x751F;&#x6210;&#x79D8;&#x94A5;&#x5E76;&#x62F7;&#x8D1D;&#x516C;&#x94A5;<pre><code class="lang-js">ssh-keygen -t rsa
+cat ~<span class="hljs-regexp">/.ssh/i</span>d_rsa.pub 
+</code></pre>
+</li>
+</ul>
+<h5 id="t113.2.2.2 &#x62F7;&#x8D1D;&#x516C;&#x94A5;">3.2.2.2 &#x62F7;&#x8D1D;&#x516C;&#x94A5; <a href="#t113.2.2.2 &#x62F7;&#x8D1D;&#x516C;&#x94A5;"> # </a></h5>
+<ul>
+<li>&#x518D;&#x767B;&#x5F55;git&#x670D;&#x52A1;&#x5668;</li>
+<li>&#x8981;&#x6CE8;&#x610F;&#x5982;&#x679C;&#x4F60;&#x8981;&#x514D;&#x767B;&#x5F55;<code>git</code>&#x7528;&#x6237;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x628A;&#x81EA;&#x5DF1;&#x7684;&#x516C;&#x94A5;&#x62F7;&#x8D1D;&#x5230;<code>git</code>&#x7528;&#x6237;&#x7684;<code>authorized_keys</code>&#x6587;&#x4EF6;&#x91CC;</li>
+</ul>
+<pre><code class="lang-js">ssh-keygen -t rsa
+chmod <span class="hljs-number">700</span> /home/git/.ssh
+vi /home/git/.ssh/authorized_keys 
+chmod <span class="hljs-number">600</span> /home/git/.ssh/authorized_keys
+</code></pre>
+<h5 id="t123.2.2.3 &#x5141;&#x8BB8;&#x516C;&#x94A5;&#x767B;&#x5F55;">3.2.2.3 &#x5141;&#x8BB8;&#x516C;&#x94A5;&#x767B;&#x5F55; <a href="#t123.2.2.3 &#x5141;&#x8BB8;&#x516C;&#x94A5;&#x767B;&#x5F55;"> # </a></h5>
+<ul>
+<li>&#x518D;&#x767B;&#x5F55;git&#x670D;&#x52A1;&#x5668;</li>
+<li>vim /etc/ssh/sshd_config </li>
+</ul>
+<pre><code class="lang-js">PubkeyAuthentication yes
+</code></pre>
+<pre><code class="lang-js">systemctl restart sshd
+</code></pre>
+<h2 id="t134. Jenkins">4. Jenkins <a href="#t134. Jenkins"> # </a></h2>
+<ul>
+<li><a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html">jdk</a></li>
+<li><a href="https://jenkins.io">jenkins&#x5B98;&#x7F51;</a></li>
+</ul>
+<h3 id="t144.1 &#x5B89;&#x88C5;JDK">4.1 &#x5B89;&#x88C5;JDK <a href="#t144.1 &#x5B89;&#x88C5;JDK"> # </a></h3>
+<ul>
+<li><a href="https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase10-4425482.html">jdk</a></li>
+</ul>
+<pre><code class="lang-js">cd /usr/local/src
+wget http:<span class="hljs-comment">//img.zhufengpeixun.cn/jdk1.8.0_211.tar.gz</span>
+tar -xzvf jdk1<span class="hljs-number">.8</span><span class="hljs-number">.0</span>_211.tar.gz 
+cp -r /usr/local/src/jdk1<span class="hljs-number">.8</span><span class="hljs-number">.0</span>_211 /usr/java
+rm -rf /usr/bin/java&#x3000;&amp;&amp;&#x3000;ln -s /usr/java/jdk1<span class="hljs-number">.8</span><span class="hljs-number">.0</span>_211/bin/java /usr/bin/java
+</code></pre>
+<h3 id="t154.2 &#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;">4.2 &#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6; <a href="#t154.2 &#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;"> # </a></h3>
+<p>vi /etc/profile</p>
+<pre><code class="lang-js">JAVA_HOME=<span class="hljs-regexp">/usr/</span>java/jdk1<span class="hljs-number">.8</span><span class="hljs-number">.0</span>_211
+<span class="hljs-keyword">export</span> CLASSPATH=.:${JAVA_HOME}/jre/lib/rt.jar:${JAVA_HOME}/lib/dt.jar:${JAVA_HOME}/lib/tools.jar
+<span class="hljs-keyword">export</span> PATH=$PATH:${JAVA_HOME}/bin
+</code></pre>
+<h3 id="t164.3 &#x751F;&#x6548;&#x914D;&#x7F6E;">4.3 &#x751F;&#x6548;&#x914D;&#x7F6E; <a href="#t164.3 &#x751F;&#x6548;&#x914D;&#x7F6E;"> # </a></h3>
+<pre><code class="lang-js">source /etc/profile
+java --version
+</code></pre>
+<h3 id="t174.4 &#x5B89;&#x88C5;jenkins">4.4 &#x5B89;&#x88C5;jenkins <a href="#t174.4 &#x5B89;&#x88C5;jenkins"> # </a></h3>
+<pre><code class="lang-js">wget -O /etc/yum.repos.d/jenkins.repo https:<span class="hljs-comment">//pkg.jenkins.io/redhat-stable/jenkins.repo</span>
+rpm --<span class="hljs-keyword">import</span> https:<span class="hljs-comment">//pkg.jenkins.io/redhat-stable/jenkins.io.key</span>
+yum install -y jenkins
+</code></pre>
+<h3 id="t184.5 &#x5173;&#x95ED;&#x9632;&#x706B;&#x5899;">4.5 &#x5173;&#x95ED;&#x9632;&#x706B;&#x5899; <a href="#t184.5 &#x5173;&#x95ED;&#x9632;&#x706B;&#x5899;"> # </a></h3>
+<pre><code class="lang-js">systemctl stop firewalld.service
+systemctl disable firewalld.service
+</code></pre>
+<pre><code class="lang-js">javap -v JNLPMain.class
+J2SE <span class="hljs-number">8</span> = <span class="hljs-number">52</span>
+J2SE <span class="hljs-number">7</span> = <span class="hljs-number">51</span>
+J2SE <span class="hljs-number">6.0</span> = <span class="hljs-number">50</span>
+J2SE <span class="hljs-number">5.0</span> = <span class="hljs-number">49</span>
+JDK <span class="hljs-number">1.4</span> = <span class="hljs-number">48</span>
+JDK <span class="hljs-number">1.3</span> = <span class="hljs-number">47</span>
+JDK <span class="hljs-number">1.2</span> = <span class="hljs-number">46</span>
+JDK <span class="hljs-number">1.1</span> = <span class="hljs-number">45</span>
+</code></pre>
+<h3 id="t194.6 &#x542F;&#x52A8;jenkins">4.6 &#x542F;&#x52A8;jenkins <a href="#t194.6 &#x542F;&#x52A8;jenkins"> # </a></h3>
+<pre><code class="lang-js">systemctl start jenkins
+systemctl daemon-reload
+systemctl status jenkins
+</code></pre>
+<h3 id="t204.7 &#x9009;&#x62E9;java&#x7248;&#x672C;">4.7 &#x9009;&#x62E9;java&#x7248;&#x672C; <a href="#t204.7 &#x9009;&#x62E9;java&#x7248;&#x672C;"> # </a></h3>
+<p>vi /etc/init.d/jenkins</p>
+<pre><code class="lang-js">candidates=&quot;
+#/etc/alternatives/java
+#/usr/lib/jvm/java-1.8.0/bin/java
+#/usr/lib/jvm/jre-1.8.0/bin/java
+#/usr/lib/jvm/java-1.7.0/bin/java
+#/usr/lib/jvm/jre-1.7.0/bin/java
+/usr/bin/java
+&quot;
+</code></pre>
+<h3 id="t214.8 &#x8FD0;&#x884C;&#x7528;&#x6237;">4.8 &#x8FD0;&#x884C;&#x7528;&#x6237; <a href="#t214.8 &#x8FD0;&#x884C;&#x7528;&#x6237;"> # </a></h3>
+<p>&#x4E00;&#x5B9A;&#x8981;&#x6539;&#x4E00;&#x4E0B;root&#x7528;&#x6237;&#xFF0C;&#x4E0D;&#x7136;&#x6D41;&#x6C34;&#x7EBF;SCM&#x62C9;&#x4E0D;&#x5230;&#x811A;&#x672C;
+vi /etc/sysconfig/jenkins </p>
+<pre><code class="lang-js">JENKINS_USER=<span class="hljs-string">&quot;root&quot;</span>
+</code></pre>
+<h3 id="t224.8 &#x8BBF;&#x95EE;jenkins">4.8 &#x8BBF;&#x95EE;jenkins <a href="#t224.8 &#x8BBF;&#x95EE;jenkins"> # </a></h3>
+<p><a href="http://192.168.20.133:8080">http://192.168.20.133:8080</a></p>
+<h3 id="t234.9 &#x5B89;&#x88C5;maven">4.9 &#x5B89;&#x88C5;maven <a href="#t234.9 &#x5B89;&#x88C5;maven"> # </a></h3>
+<pre><code class="lang-js">yum install maven -y
+
+# rpm -ql maven
+
+/etc/m2.conf
+/etc/maven
+/etc/maven/settings.xml
+/usr/bin/mvn
+/usr/share/maven/conf/settings.xml
+</code></pre>
+<h3 id="t244.10 &#x4F7F;&#x7528;jenkins">4.10 &#x4F7F;&#x7528;jenkins <a href="#t244.10 &#x4F7F;&#x7528;jenkins"> # </a></h3>
+<ul>
+<li><a href="https://plugins.jenkins.io/">jenkins</a></li>
+<li>OWASP(Open Web Application Security Project),&#x5F00;&#x653E;&#x5F0F;Web&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5B89;&#x5168;&#x9879;&#x76EE;,&#x5B83;&#x8BC6;&#x522B;&#x9879;&#x76EE;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#xFF0C;&#x5E76;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x5B58;&#x5728;&#x4EFB;&#x4F55;&#x5DF2;&#x77E5;&#x7684;&#x548C;&#x516C;&#x5F00;&#x7684;&#x6F0F;&#x6D1E;.</li>
+<li>PAM&#xFF08;Pluggable Authentication Modules &#xFF09;&#x662F;&#x7531;Sun&#x63D0;&#x51FA;&#x7684;&#x4E00;&#x79CD;&#x8BA4;&#x8BC1;&#x673A;&#x5236;&#x3002;&#x5B83;&#x901A;&#x8FC7;&#x63D0;&#x4F9B;&#x4E00;&#x4E9B;&#x52A8;&#x6001;&#x94FE;&#x63A5;&#x5E93;&#x548C;&#x4E00;&#x5957;&#x7EDF;&#x4E00;&#x7684;API&#xFF0C;&#x5C06;&#x7CFB;&#x7EDF;&#x63D0;&#x4F9B;&#x7684;&#x670D;&#x52A1;&#x548C;&#x8BE5;&#x670D;&#x52A1;&#x7684;&#x8BA4;&#x8BC1;&#x65B9;&#x5F0F;&#x5206;&#x5F00;&#xFF0C;&#x4F7F;&#x5F97;&#x7CFB;&#x7EDF;&#x7BA1;&#x7406;&#x5458;&#x53EF;&#x4EE5;&#x7075;&#x6D3B;&#x5730;&#x6839;&#x636E;&#x9700;&#x8981;&#x7ED9;&#x4E0D;&#x540C;&#x7684;&#x670D;&#x52A1;&#x914D;&#x7F6E;&#x4E0D;&#x540C;&#x7684;&#x8BA4;&#x8BC1;&#x65B9;&#x5F0F;&#x800C;&#x65E0;&#x9700;&#x66F4;&#x6539;&#x670D;&#x52A1;&#x7A0B;&#x5E8F;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x4FBF;&#x4E8E;&#x5411;&#x7CFB;&#x7EDF;&#x4E2D;&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x8BA4;&#x8BC1;&#x624B;&#x6BB5;&#x3002; PAM&#x6A21;&#x5757;&#x662F;&#x4E00;&#x79CD;&#x5D4C;&#x5165;&#x5F0F;&#x6A21;&#x5757;&#xFF0C;&#x4FEE;&#x6539;&#x540E;&#x5373;&#x65F6;&#x751F;&#x6548;&#x3002;</li>
+<li>LDAP&#xFF08;Light Directory Access Portocol&#xFF09;,&#x5B83;&#x662F;&#x57FA;&#x4E8E;X.500&#x6807;&#x51C6;&#x7684;&#x8F7B;&#x91CF;&#x7EA7;&#x76EE;&#x5F55;&#x8BBF;&#x95EE;&#x534F;&#x8BAE;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x63D2;&#x4EF6;&#x540D;&#x79F0;</th>
+<th style="text-align:left">&#x63D2;&#x4EF6;&#x4F5C;&#x7528;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Folders</td>
+<td style="text-align:left">(<a href="https://plugins.jenkins.io/cloudbees-folder),&#x8FD9;&#x4E2A;&#x63D2;&#x4EF6;&#x652F;&#x6301;&#x7528;&#x6237;&#x4F7F;&#x7528;&#x76EE;&#x5F55;&#x7BA1;&#x7406;&#x9879;&#x76EE;&#xFF0C;&#x76EE;&#x5F55;&#x652F;&#x6301;&#x5D4C;&#x5957;&#xFF0C;&#x5E76;&#x4E14;&#x652F;&#x6301;&#x76EE;&#x5F55;&#x4E2D;&#x521B;&#x5EFA;&#x89C6;&#x56FE;">https://plugins.jenkins.io/cloudbees-folder),&#x8FD9;&#x4E2A;&#x63D2;&#x4EF6;&#x652F;&#x6301;&#x7528;&#x6237;&#x4F7F;&#x7528;&#x76EE;&#x5F55;&#x7BA1;&#x7406;&#x9879;&#x76EE;&#xFF0C;&#x76EE;&#x5F55;&#x652F;&#x6301;&#x5D4C;&#x5957;&#xFF0C;&#x5E76;&#x4E14;&#x652F;&#x6301;&#x76EE;&#x5F55;&#x4E2D;&#x521B;&#x5EFA;&#x89C6;&#x56FE;</a></td>
+</tr>
+<tr>
+<td style="text-align:left">OWASP Markup Formatter</td>
+<td style="text-align:left">OWASP&#x6807;&#x8BB0;&#x683C;&#x5F0F;&#x5316;&#x7A0B;&#x5E8F;&#x63D2;&#x4EF6;,&#x4F7F;&#x7528;OWASP Java HTML Sanitizer &#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x9879;&#x76EE;&#x63CF;&#x8FF0;&#x7B49;&#x4E2D;&#x8F93;&#x5165;&#x5B89;&#x5168;&#x7684;HTML&#x6807;&#x8BB0;</td>
+</tr>
+<tr>
+<td style="text-align:left">Build Timeout</td>
+<td style="text-align:left">&#x6784;&#x5EFA;&#x8D85;&#x65F6;,&#x6B64;&#x63D2;&#x4EF6;&#x5141;&#x8BB8;&#x6784;&#x5EFA;&#x5728;&#x6307;&#x5B9A;&#x7684;&#x65F6;&#x95F4;&#x8FC7;&#x540E;&#x81EA;&#x52A8;&#x7EC8;&#x6B62;</td>
+</tr>
+<tr>
+<td style="text-align:left">Credentials Binding</td>
+<td style="text-align:left">&#x8BC1;&#x4E66;&#x7ED1;&#x5B9A;</td>
+</tr>
+<tr>
+<td style="text-align:left">Timestamper</td>
+<td style="text-align:left">&#x5C06;&#x65F6;&#x95F4;&#x6233;&#x6DFB;&#x52A0;&#x5230;&#x63A7;&#x5236;&#x53F0;&#x8F93;&#x51FA;</td>
+</tr>
+<tr>
+<td style="text-align:left">Workspace Cleanup</td>
+<td style="text-align:left">(<a href="https://plugins.jenkins.io/ws-cleanup),&#x8FD9;&#x4E2A;&#x63D2;&#x4EF6;&#x652F;&#x6301;&#x5728;&#x6784;&#x5EFA;&#x524D;&#x540E;">https://plugins.jenkins.io/ws-cleanup),&#x8FD9;&#x4E2A;&#x63D2;&#x4EF6;&#x652F;&#x6301;&#x5728;&#x6784;&#x5EFA;&#x524D;&#x540E;</a> &#x5220;&#x9664;&#x6216;&#x8005;&#x90E8;&#x5206;&#x5220;&#x9664;workspace</td>
+</tr>
+<tr>
+<td style="text-align:left">Ant</td>
+<td style="text-align:left">&#x5411;Jenkins&#x6DFB;&#x52A0;Apache Ant&#x652F;&#x6301;</td>
+</tr>
+<tr>
+<td style="text-align:left">Gradle</td>
+<td style="text-align:left">&#x8FD9;&#x4E2A;&#x63D2;&#x4EF6;&#x5141;&#x8BB8;Jenkins&#x76F4;&#x63A5;&#x8C03;&#x7528;Gradle&#x6784;&#x5EFA;&#x811A;&#x672C;</td>
+</tr>
+<tr>
+<td style="text-align:left">Pipeline</td>
+<td style="text-align:left">&#x7BA1;&#x9053;,&#x4E00;&#x5957;&#x63D2;&#x4EF6;&#x53EF;&#x8BA9;&#x60A8;&#x534F;&#x8C03;&#x81EA;&#x52A8;&#x5316;</td>
+</tr>
+<tr>
+<td style="text-align:left">Pipeline: GitHub Groovy Libraries</td>
+<td style="text-align:left">&#x5141;&#x8BB8;&#x4ECE;GitHub&#x52A8;&#x6001;&#x52A0;&#x8F7D;Pipeline Groovy&#x5E93;</td>
+</tr>
+<tr>
+<td style="text-align:left">Pipeline: Stage View</td>
+<td style="text-align:left">&#x67E5;&#x770B;&#x6BCF;&#x4E00;&#x6B65;&#x7684;&#x6267;&#x884C;&#x7ED3;&#x679C;</td>
+</tr>
+<tr>
+<td style="text-align:left">GitHub Branch Source</td>
+<td style="text-align:left">GitHub&#x7EC4;&#x7EC7;&#x6587;&#x4EF6;&#x5939;&#x63D2;&#x4EF6;</td>
+</tr>
+<tr>
+<td style="text-align:left">Git</td>
+<td style="text-align:left">(<a href="https://plugins.jenkins.io/git),&#x652F;&#x6301;&#x4F7F;&#x7528;Github&#x3001;GitLab&#x3001;Gerrit&#x7B49;&#x7CFB;&#x7EDF;&#x7BA1;&#x7406;&#x4EE3;&#x7801;&#x4ED3;&#x5E93;">https://plugins.jenkins.io/git),&#x652F;&#x6301;&#x4F7F;&#x7528;Github&#x3001;GitLab&#x3001;Gerrit&#x7B49;&#x7CFB;&#x7EDF;&#x7BA1;&#x7406;&#x4EE3;&#x7801;&#x4ED3;&#x5E93;</a></td>
+</tr>
+<tr>
+<td style="text-align:left">Subversion</td>
+<td style="text-align:left">(<a href="https://plugins.jenkins.io/subversion),&#x652F;&#x6301;Subversion&#x7CFB;&#x7EDF;&#x7BA1;&#x7406;&#x6E90;&#x4EE3;&#x7801;">https://plugins.jenkins.io/subversion),&#x652F;&#x6301;Subversion&#x7CFB;&#x7EDF;&#x7BA1;&#x7406;&#x6E90;&#x4EE3;&#x7801;</a></td>
+</tr>
+<tr>
+<td style="text-align:left">SSH Slaves</td>
+<td style="text-align:left">SSH&#x767B;&#x5F55;&#x5230;&#x4E00;&#x4E2A;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;&#x4EE5;&#x6267;&#x884C;&#x5FC5;&#x8981;&#x7684;&#x811A;&#x672C;</td>
+</tr>
+<tr>
+<td style="text-align:left">Matrix Authorization Strategy</td>
+<td style="text-align:left">&#x77E9;&#x9635;&#x6388;&#x6743;&#x7B56;&#x7565;&#x63D2;&#x4EF6;,&#x63D0;&#x4F9B;&#x57FA;&#x4E8E;&#x77E9;&#x9635;&#x7684;&#x5B89;&#x5168;&#x6388;&#x6743;&#x7B56;&#x7565;&#xFF08;&#x5168;&#x5C40;&#x548C;&#x6BCF;&#x4E2A;&#x9879;&#x76EE;&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:left">PAM Authentication</td>
+<td style="text-align:left">&#x4E3A;Jenkins&#x6DFB;&#x52A0;Unix&#x53EF;&#x63D2;&#x5165;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x6A21;&#x5757;&#xFF08;PAM&#xFF09;&#x652F;&#x6301;</td>
+</tr>
+<tr>
+<td style="text-align:left">LDAP</td>
+<td style="text-align:left">(<a href="https://plugins.jenkins.io/ldap),&#x8FD9;&#x4E2A;&#x63D2;&#x4EF6;&#x5141;&#x8BB8;&#x4F7F;&#x7528;LDAP&#x5BF9;&#x7528;&#x6237;&#x8FDB;&#x884C;&#x8BA4;&#x8BC1;&#xFF0C;LDAP">https://plugins.jenkins.io/ldap),&#x8FD9;&#x4E2A;&#x63D2;&#x4EF6;&#x5141;&#x8BB8;&#x4F7F;&#x7528;LDAP&#x5BF9;&#x7528;&#x6237;&#x8FDB;&#x884C;&#x8BA4;&#x8BC1;&#xFF0C;LDAP</a> &#x670D;&#x52A1;&#x5668;&#x53EF;&#x4EE5;&#x4E3A;Active Directory &#x6216;&#x8005; OpenLDAP</td>
+</tr>
+<tr>
+<td style="text-align:left">Email Extension</td>
+<td style="text-align:left">&#x8FD9;&#x4E2A;&#x63D2;&#x4EF6;&#x662F;Jenkins&#x7684;&#x7535;&#x5B50;&#x90AE;&#x4EF6;&#x53D1;&#x5E03;&#x8005;&#x7684;&#x66FF;&#x4EE3;&#x54C1;&#x3002;&#x5B83;&#x5141;&#x8BB8;&#x914D;&#x7F6E;&#x7535;&#x5B50;&#x90AE;&#x4EF6;&#x901A;&#x77E5;&#x7684;&#x5404;&#x4E2A;&#x65B9;&#x9762;&#xFF1A;&#x53D1;&#x9001;&#x7535;&#x5B50;&#x90AE;&#x4EF6;&#x65F6;&#xFF0C;&#x5E94;&#x8BE5;&#x6536;&#x5230;&#x8C01;&#x4EE5;&#x53CA;&#x7535;&#x5B50;&#x90AE;&#x4EF6;&#x8BF4;&#x660E;&#x7684;&#x5185;&#x5BB9;</td>
+</tr>
+<tr>
+<td style="text-align:left">Mailer</td>
+<td style="text-align:left">&#x53D1;&#x90AE;&#x4EF6;&#x670D;&#x52A1;</td>
+</tr>
+<tr>
+<td style="text-align:left">Localization: Chinese (Simplified)</td>
+<td style="text-align:left">&#x672C;&#x5730;&#x5316;&#x6784;&#x5EFA;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t254.11 &#x4E0B;&#x8F7D;&#x63D2;&#x4EF6;&#x52A0;&#x901F;">4.11 &#x4E0B;&#x8F7D;&#x63D2;&#x4EF6;&#x52A0;&#x901F; <a href="#t254.11 &#x4E0B;&#x8F7D;&#x63D2;&#x4EF6;&#x52A0;&#x901F;"> # </a></h3>
+<ul>
+<li><a href="http://mirrors.jenkins-ci.org/status.html">mirrors</a></li>
+<li><a href="https://mirrors.tuna.tsinghua.edu.cn/jenkins/updates/update-center.json">update-center</a></li>
+</ul>
+<h3 id="t264.12 &#x521B;&#x5EFA;&#x7BA1;&#x7406;&#x5458;&#x7528;&#x6237;">4.12 &#x521B;&#x5EFA;&#x7BA1;&#x7406;&#x5458;&#x7528;&#x6237; <a href="#t264.12 &#x521B;&#x5EFA;&#x7BA1;&#x7406;&#x5458;&#x7528;&#x6237;"> # </a></h3>
+<h3 id="t274.13 &#x4E3B;&#x8981;&#x529F;&#x80FD;">4.13 &#x4E3B;&#x8981;&#x529F;&#x80FD; <a href="#t274.13 &#x4E3B;&#x8981;&#x529F;&#x80FD;"> # </a></h3>
+<ul>
+<li>&#x65B0;&#x5EFA;&#x4EFB;&#x52A1;</li>
+<li>&#x7528;&#x6237;</li>
+<li>&#x6784;&#x5EFA;&#x5386;&#x53F2;</li>
+<li>&#x7CFB;&#x7EDF;&#x7BA1;&#x7406;</li>
+<li>&#x6211;&#x7684;&#x89C6;&#x56FE;</li>
+<li>Credentials</li>
+<li>&#x65B0;&#x5EFA;&#x89C6;&#x56FE;</li>
+</ul>
+<h2 id="t285. &#x89D2;&#x8272;&#x548C;&#x7528;&#x6237;&#x7BA1;&#x7406;">5. &#x89D2;&#x8272;&#x548C;&#x7528;&#x6237;&#x7BA1;&#x7406; <a href="#t285. &#x89D2;&#x8272;&#x548C;&#x7528;&#x6237;&#x7BA1;&#x7406;"> # </a></h2>
+<ul>
+<li>&#x5B89;&#x88C5; Role-based Authorization Strategy &#x63D2;&#x4EF6;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/manageroles.png" alt="manageroles"></p>
+<p><img src="http://img.zhufengpeixun.cn/assignusers.png" alt="assignusers"></p>
+<p><img src="http://img.zhufengpeixun.cn/jprojects.png" alt="jprojects"></p>
+<h2 id="t296. &#x53C2;&#x6570;&#x5316;&#x6784;&#x5EFA;">6. &#x53C2;&#x6570;&#x5316;&#x6784;&#x5EFA; <a href="#t296. &#x53C2;&#x6570;&#x5316;&#x6784;&#x5EFA;"> # </a></h2>
+<ul>
+<li>Extended Choice Parameter &#x63D2;&#x4EF6;</li>
+<li>Git Parameter &#x63D2;&#x4EF6;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/parameterbuild.png" alt="parameterbuild"></p>
+<p><img src="http://img.zhufengpeixun.cn/execshell.png" alt="execshell"></p>
+<p><img src="http://img.zhufengpeixun.cn/extendparameterbuild.png" alt="extendparameterbuild"></p>
+<p><img src="http://img.zhufengpeixun.cn/buildspec.png" alt="buildspec"></p>
+<p>vi /etc/sysconfig/jenkins
+&#x4E00;&#x5B9A;&#x8981;&#x6539;&#x4E00;&#x4E0B;root&#x7528;&#x6237;&#xFF0C;&#x4E0D;&#x7136;&#x6D41;&#x6C34;&#x7EBF;SCM&#x62C9;&#x4E0D;&#x5230;&#x811A;&#x672C;</p>
+<pre><code class="lang-js">JENKINS_USER=<span class="hljs-string">&quot;root&quot;</span>
+</code></pre>
+<pre><code class="lang-js">git branch test
+git checkout test
+git branch
+touch <span class="hljs-number">5.</span>txt
+git add -A
+git commit -m<span class="hljs-string">&quot;add 5.txt&quot;</span>
+git git push origin test
+git push origin test
+</code></pre>
+<h2 id="t307. &#x4E3B;&#x4ECE;&#x6A21;&#x5F0F;">7. &#x4E3B;&#x4ECE;&#x6A21;&#x5F0F; <a href="#t307. &#x4E3B;&#x4ECE;&#x6A21;&#x5F0F;"> # </a></h2>
+<p><img src="http://img.zhufengpeixun.cn/masterslave2.jpg" alt="masterslave2"></p>
+<p><img src="http://img.zhufengpeixun.cn/configureslave.png" alt="configureslave"></p>
+<p><img src="http://img.zhufengpeixun.cn/limitproject.png" alt="limitproject"></p>
+<p><img src="http://img.zhufengpeixun.cn/configslave2.png" alt="configslave2"></p>
+<h2 id="t318. &#x6D41;&#x6C34;&#x7EBF;">8. &#x6D41;&#x6C34;&#x7EBF; <a href="#t318. &#x6D41;&#x6C34;&#x7EBF;"> # </a></h2>
+<ul>
+<li>Pipeline &#x63D2;&#x4EF6;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/mystageview.png" alt="mystageview"></p>
+<p><img src="http://img.zhufengpeixun.cn/pipelinegrammar.png" alt="pipelinegrammar"></p>
+<pre><code class="lang-js">node {
+    stage (<span class="hljs-string">&apos;checkout&apos;</span>){
+       echo <span class="hljs-string">&quot;checkout&quot;</span>
+    }
+    stage (<span class="hljs-string">&apos;build&apos;</span>){
+        echo <span class="hljs-string">&quot;build&quot;</span>
+    }
+    stage (<span class="hljs-string">&apos;deploy&apos;</span>){
+        echo <span class="hljs-string">&quot;deploy&quot;</span>
+    }
+    stage (<span class="hljs-string">&apos;test&apos;</span>){
+        echo <span class="hljs-string">&quot;test&quot;</span>
+    }
+}
+</code></pre>
+<p><img src="http://img.zhufengpeixun.cn/scmscript.png" alt="scmscript"></p>
+<pre><code class="lang-js">node(<span class="hljs-string">&apos;slave&apos;</span>) {
+    stage (<span class="hljs-string">&apos;checkout&apos;</span>){
+       echo <span class="hljs-string">&quot;checkout2&quot;</span>
+       sleep time: <span class="hljs-number">10</span>, <span class="hljs-attr">unit</span>: <span class="hljs-string">&apos;SECONDS&apos;</span>
+    }
+    stage (<span class="hljs-string">&apos;build&apos;</span>){
+        echo <span class="hljs-string">&quot;build&quot;</span>
+    }
+    stage (<span class="hljs-string">&apos;deploy&apos;</span>){
+        echo <span class="hljs-string">&quot;deploy&quot;</span>
+    }
+    stage (<span class="hljs-string">&apos;test&apos;</span>){
+        echo <span class="hljs-string">&quot;test&quot;</span>
+    }
+}
+</code></pre>
+<h2 id="t329. &#x90AE;&#x4EF6;&#x901A;&#x77E5;">9. &#x90AE;&#x4EF6;&#x901A;&#x77E5; <a href="#t329. &#x90AE;&#x4EF6;&#x901A;&#x77E5;"> # </a></h2>
+<ul>
+<li>Email Extension Plugin &#x63D2;&#x4EF6; </li>
+</ul>
+<h2 id="t3310. &#x53D1;&#x5E03;PHP&#x9879;&#x76EE;">10. &#x53D1;&#x5E03;PHP&#x9879;&#x76EE; <a href="#t3310. &#x53D1;&#x5E03;PHP&#x9879;&#x76EE;"> # </a></h2>
+<h3 id="t3410.1 &#x521B;&#x5EFA;&#x672C;&#x5730;&#x9879;&#x76EE;">10.1 &#x521B;&#x5EFA;&#x672C;&#x5730;&#x9879;&#x76EE; <a href="#t3410.1 &#x521B;&#x5EFA;&#x672C;&#x5730;&#x9879;&#x76EE;"> # </a></h3>
+<ul>
+<li>&#x5148;&#x767B;&#x5F55;git&#x670D;&#x52A1;&#x5668;&#x521B;&#x5EFA;php&#x4ED3;&#x5E93;</li>
+</ul>
+<pre><code class="lang-js">mkdir -p /home/git/repos/dev-php.git
+cd /home/git/repos/dev-php.git
+git init --bare
+</code></pre>
+<h3 id="t3510.2 &#x62C9;&#x53D6;&#x4EE3;&#x7801;">10.2 &#x62C9;&#x53D6;&#x4EE3;&#x7801; <a href="#t3510.2 &#x62C9;&#x53D6;&#x4EE3;&#x7801;"> # </a></h3>
+<ul>
+<li>&#x62C9;&#x53D6;&#x5E76;&#x521D;&#x59CB;&#x5316;&#x672C;&#x5730;&#x4ED3;&#x5E93;<pre><code class="lang-js">git clone  git@<span class="hljs-number">192.168</span><span class="hljs-number">.20</span><span class="hljs-number">.131</span>:<span class="hljs-regexp">/home/gi</span>t/repos/dev-php.git
+cd php
+echo <span class="hljs-string">&quot;&lt;?php echo info()?&gt;&quot;</span> &gt; index.php
+git add -A
+git commit -m<span class="hljs-string">&quot;add index.php&quot;</span>
+git push origin master
+</code></pre>
+</li>
+</ul>
+<h3 id="t3610.3 &#x90E8;&#x7F72;&#x73AF;&#x5883;">10.3 &#x90E8;&#x7F72;&#x73AF;&#x5883; <a href="#t3610.3 &#x90E8;&#x7F72;&#x73AF;&#x5883;"> # </a></h3>
+<ul>
+<li>&#x5B89;&#x88C5;php</li>
+<li>&#x5B89;&#x88C5;nginx</li>
+</ul>
+<h3 id="t3710.4 &#x521B;&#x5EFA;&#x9879;&#x76EE;">10.4 &#x521B;&#x5EFA;&#x9879;&#x76EE; <a href="#t3710.4 &#x521B;&#x5EFA;&#x9879;&#x76EE;"> # </a></h3>
+<h4 id="t3810.4.1 &#x6784;&#x5EFA;&#x53C2;&#x6570;">10.4.1 &#x6784;&#x5EFA;&#x53C2;&#x6570; <a href="#t3810.4.1 &#x6784;&#x5EFA;&#x53C2;&#x6570;"> # </a></h4>
+<p><img src="http://img.zhufengpeixun.cn/constphp.png" alt="constphp"></p>
+<p><img src="http://img.zhufengpeixun.cn/phppipeline.png" alt="phppipeline"></p>
+<h4 id="t3910.4.2 pipeline&#x811A;&#x672C;">10.4.2 pipeline&#x811A;&#x672C; <a href="#t3910.4.2 pipeline&#x811A;&#x672C;"> # </a></h4>
+<ul>
+<li>&#x5148;&#x5728;git&#x670D;&#x52A1;&#x5668;&#x91CC;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;<code>dev-php</code>&#x9879;&#x76EE;</li>
+<li>&#x7136;&#x540E;&#x5230;web&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x514B;&#x9686;&#x6B64;&#x9879;&#x76EE;&#x5E76;&#x5728;&#x91CC;&#x9762;&#x6DFB;&#x52A0;&#x6587;&#x4EF6;</li>
+<li>&#x5728;pipeline&#x670D;&#x52A1;&#x5668;&#x91CC;&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x811A;&#x672C;</li>
+<li><p>&#x7ED9;web&#x670D;&#x52A1;&#x5668;&#x6DFB;&#x52A0;&#x6807;&#x7B7E;&#x540D;&#x5E76;&#x5728;pipeline&#x811A;&#x672C;&#x4E2D;&#x5F15;&#x7528;</p>
+</li>
+<li><p>web&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x7684;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55; /var/lib/jenkins/workspace/dev-php </p>
+</li>
+<li>credentialsId  git/git</li>
+</ul>
+<p>cat /root/pipeline/Jenkinsfile-php</p>
+<pre><code class="lang-js">node(&apos;webserver&apos;) {
+    stage (&apos;checkout&apos;){
+       checkout([$class: &apos;GitSCM&apos;, branches: [[name: &apos;*/master&apos;]], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: &apos;8e8e63f9-4806-4f2e-8633-c92badbdefd7&apos;, url: &quot;git@192.168.20.131:/home/git/repos/${JOB_NAME}.git&quot;]]])
+    }
+    stage (&apos;build&apos;){
+       sh &apos;&apos;&apos;rm -rf ${WORKSPACE}/.git
+       [ -e /data/backup ] ||  mkdir -p /data/backup
+       [ -e /usr/share/nginx/html/${JOB_NAME} ] || mkdir /usr/share/nginx/html/${JOB_NAME}
+       mv /usr/share/nginx/html/${JOB_NAME} /data/backup/${JOB_NAME}&quot;-$(date +%F_%T)&quot;
+       cp -rf ${WORKSPACE} /usr/share/nginx/html&apos;&apos;&apos;
+    }
+    stage (&apos;test&apos;){
+        sh &quot;curl http://www.${JOB_NAME}.com/status&quot;
+    }
+}
+</code></pre>
+<h2 id="t4011. &#x53D1;&#x5E03;Java&#x9879;&#x76EE;">11. &#x53D1;&#x5E03;Java&#x9879;&#x76EE; <a href="#t4011. &#x53D1;&#x5E03;Java&#x9879;&#x76EE;"> # </a></h2>
+<h3 id="t4111.1 &#x521B;&#x5EFA;&#x672C;&#x5730;&#x9879;&#x76EE;">11.1 &#x521B;&#x5EFA;&#x672C;&#x5730;&#x9879;&#x76EE; <a href="#t4111.1 &#x521B;&#x5EFA;&#x672C;&#x5730;&#x9879;&#x76EE;"> # </a></h3>
+<ul>
+<li>&#x5148;&#x767B;&#x5F55;git&#x670D;&#x52A1;&#x5668;&#x521B;&#x5EFA;java&#x4ED3;&#x5E93;</li>
+</ul>
+<pre><code class="lang-js">mkdir -p /home/git/repos/dev-java.git
+cd /home/git/repos/dev-java.git
+git init --bare
+</code></pre>
+<h3 id="t4210.2 &#x62C9;&#x53D6;&#x4EE3;&#x7801;">10.2 &#x62C9;&#x53D6;&#x4EE3;&#x7801; <a href="#t4210.2 &#x62C9;&#x53D6;&#x4EE3;&#x7801;"> # </a></h3>
+<ul>
+<li>&#x62C9;&#x53D6;&#x5E76;&#x521D;&#x59CB;&#x5316;&#x672C;&#x5730;&#x4ED3;&#x5E93;<pre><code class="lang-js">git clone git@github.com:zhufengnodejs/blog2.git
+git clone git@<span class="hljs-number">192.168</span><span class="hljs-number">.20</span><span class="hljs-number">.131</span>:<span class="hljs-regexp">/home/gi</span>t/repos/dev-java.git
+git add -A &amp;&amp; git commit -m<span class="hljs-string">&quot;blog2&quot;</span> &amp;&amp; git push origin master
+</code></pre>
+</li>
+</ul>
+<h3 id="t4310.3 &#x90E8;&#x7F72;&#x73AF;&#x5883;">10.3 &#x90E8;&#x7F72;&#x73AF;&#x5883; <a href="#t4310.3 &#x90E8;&#x7F72;&#x73AF;&#x5883;"> # </a></h3>
+<ul>
+<li>jdk</li>
+<li>maven</li>
+<li>tomcat</li>
+</ul>
+<h3 id="t4410.4 pipeline&#x811A;&#x672C;">10.4 pipeline&#x811A;&#x672C; <a href="#t4410.4 pipeline&#x811A;&#x672C;"> # </a></h3>
+<pre><code class="lang-js">node (&quot;webserver&quot;) {
+   stage(&apos;git checkout&apos;) { 
+       checkout([$class: &apos;GitSCM&apos;, branches: [[name: &apos;*/master&apos;]], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: &apos;8e8e63f9-4806-4f2e-8633-c92badbdefd7&apos;, url: &quot;git@192.168.20.131:/home/git/repos/${JOB_NAME}.git&quot;]]])
+   }
+   stage(&apos;maven build&apos;) {
+        sh &apos;&apos;&apos;export JAVA_HOME=/usr/java/jdk1.8.0_211
+        /usr/bin/mvn clean package&apos;&apos;&apos;
+   }
+   stage(&apos;deploy&apos;) {
+        sh &apos;&apos;&apos;
+        JENKINS_NODE_COOKIE=dontkillme
+        export JAVA_HOME=/usr/java/jdk1.8.0_211
+        TOMCAT_NAME=tomcat
+        TOMCAT_HOME=/usr/local/$TOMCAT_NAME
+        WWWROOT=$TOMCAT_HOME/webapps/ROOT
+
+        if [ -d $WWWROOT ]; then
+           mv $WWWROOT /data/backup/${TOMCAT_NAME}-$(date +&quot;%F_%T&quot;)
+        fi
+        unzip ${WORKSPACE}/target/*.war -d $WWWROOT
+        PID=$(ps -ef |grep $TOMCAT_NAME |egrep -v &quot;grep|$$&quot; |awk &apos;{print $2}&apos;)
+        [ -n &quot;$PID&quot; ] &amp;&amp; kill -9 $PID
+        /bin/bash $TOMCAT_HOME/bin/startup.sh&apos;&apos;&apos;
+   }
+   stage(&apos;test&apos;) {
+       sh &quot;curl http://www.de-java.com/status.html&quot;
+   }
+}
+</code></pre>
+<h2 id="t4512. Jenkins+Docker&#x5B9E;&#x73B0;&#x6301;&#x7EED;&#x96C6;&#x6210;">12. Jenkins+Docker&#x5B9E;&#x73B0;&#x6301;&#x7EED;&#x96C6;&#x6210; <a href="#t4512. Jenkins+Docker&#x5B9E;&#x73B0;&#x6301;&#x7EED;&#x96C6;&#x6210;"> # </a></h2>
+<pre><code class="lang-js">node (&quot;webserver&quot;) { 
+   stage(&apos;Git Checkout&apos;) { 
+        checkout([$class: &apos;GitSCM&apos;, branches: [[name: &apos;$Tag&apos;]], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: &apos;git@192.168.0.219:/home/git/solo.git&apos;]]])
+   }
+   stage(&apos;Maven Build&apos;) {
+        sh &apos;&apos;&apos;
+        export JAVA_HOME=/usr/local/jdk1.8
+        /usr/local/maven3.5/bin/mvn clean package -Dmaven.test.skip=true
+        &apos;&apos;&apos;
+   }
+   stage(&apos;Build and Push Image&apos;) {
+    sh &apos;&apos;&apos;
+        REPOSITORY=192.168.0.2/project/dev-docker:${Tag}
+        cat &gt; Dockerfile &lt;&lt; EOF
+        FROM 192.168.0.2/library/tomcat-85:latest
+        RUN rm -rf /usr/local/tomcat/webapps/ROOT
+        COPY target/*.war /usr/local/tomcat/webapps/ROOT.war
+        CMD [&quot;catalina.sh&quot;, &quot;run&quot;]
+        EOF
+        docker build -t $REPOSITORY .
+        docker login -u zhangrenyang -p xxx= 192.168.0.2
+        docker push $REPOSITORY
+    &apos;&apos;&apos;
+   }
+   stage(&apos;Deploy to Docker&apos;) {
+        sh &apos;&apos;&apos;
+        REPOSITORY=192.168.0.219/project/dev-docker:${Tag}
+        docker rm -f dev-docker: |true
+        docker image rm $REPOSITORY |true
+        docker login -u zhangrenyang -p xxx= 192.168.0.2
+        docker container run -d --name dev-docker -v /usr/local/jdk1.8:/usr/local/jdk -p 88:8080 $REPOSITORY
+        &apos;&apos;&apos;
+   }
+}
+</code></pre>
+
+    </div>
+</div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+    aria-labelledby="loginModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="loginModalLabel">请登录</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="username" class="control-label">姓名:</label>
+                        <input type="text" class="form-control" id="username" placeholder="珠峰架构VIP会员系统用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">密码:</label>
+                        <input type="text" class="form-control" id="password" placeholder="珠峰架构VIP会员系统密码">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                    data-dismiss="modal">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

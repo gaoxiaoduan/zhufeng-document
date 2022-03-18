@@ -1,0 +1,3819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+   
+                     
+
+                        
+<div class="warpper">
+    <div class="page-toc">
+        <ul><li><a href="#t01.dva介绍">1.dva介绍</a><ul><li><a href="#t11.1 前置知识">1.1 前置知识</a></li></ul></li><li><a href="#t22. 初始化项目">2. 初始化项目</a></li><li><a href="#t33. 基本计数器">3. 基本计数器</a><ul><li><a href="#t43.1 使用">3.1 使用</a><ul><li><a href="#t53.1.1 index.tsx">3.1.1 index.tsx</a></li></ul></li><li><a href="#t63.2 实现">3.2 实现</a><ul><li><a href="#t73.2.1 dva\index.tsx">3.2.1 dva\index.tsx</a></li><li><a href="#t83.2.2 prefixNamespace.tsx">3.2.2 prefixNamespace.tsx</a></li><li><a href="#t93.2.3 constants.tsx">3.2.3 constants.tsx</a></li><li><a href="#t103.2.4 typings.tsx">3.2.4 typings.tsx</a></li></ul></li></ul></li><li><a href="#t114. 支持effects">4. 支持effects</a><ul><li><a href="#t124.1 使用">4.1 使用</a><ul><li><a href="#t134.1.1 index.tsx">4.1.1 index.tsx</a></li></ul></li><li><a href="#t144.2 实现">4.2 实现</a><ul><li><a href="#t154.2.1 dva\index.tsx">4.2.1 dva\index.tsx</a></li><li><a href="#t164.2.2 prefixNamespace.tsx">4.2.2 prefixNamespace.tsx</a></li></ul></li></ul></li><li><a href="#t175. 支持路由">5. 支持路由</a><ul><li><a href="#t185.1 使用">5.1 使用</a><ul><li><a href="#t195.1.1 index.tsx">5.1.1 index.tsx</a></li></ul></li><li><a href="#t205.2 实现">5.2 实现</a><ul><li><a href="#t215.2.1 dva\index.tsx">5.2.1 dva\index.tsx</a></li><li><a href="#t225.2.2 router.tsx">5.2.2 router.tsx</a></li></ul></li></ul></li><li><a href="#t236. 跳转路径">6. 跳转路径</a><ul><li><a href="#t246.1 使用">6.1 使用</a><ul><li><a href="#t256.1.1 index.tsx">6.1.1 index.tsx</a></li></ul></li><li><a href="#t266.2 实现">6.2 实现</a><ul><li><a href="#t276.2.1 dva\index.tsx">6.2.1 dva\index.tsx</a></li><li><a href="#t286.2.2 src\dva\router.tsx">6.2.2 src\dva\router.tsx</a></li></ul></li></ul></li><li><a href="#t297. dva-loading">7. dva-loading</a><ul><li><a href="#t307.1 使用">7.1 使用</a><ul><li><a href="#t317.1.1 index.tsx">7.1.1 index.tsx</a></li></ul></li><li><a href="#t327.2 实现">7.2 实现</a><ul><li><a href="#t337.2.1 dva\index.tsx">7.2.1 dva\index.tsx</a></li><li><a href="#t347.2.2 dva-loading.tsx">7.2.2 dva-loading.tsx</a></li><li><a href="#t357.2.3 plugin.tsx">7.2.3 plugin.tsx</a></li></ul></li></ul></li><li><a href="#t368. dynamic">8. dynamic</a><ul><li><a href="#t378.1 使用">8.1 使用</a><ul><li><a href="#t388.1.1 index.tsx">8.1.1 index.tsx</a></li></ul></li><li><a href="#t398.2 实现">8.2 实现</a><ul><li><a href="#t408.2.1 dva\index.tsx">8.2.1 dva\index.tsx</a></li><li><a href="#t418.2.2 dynamic.tsx">8.2.2 dynamic.tsx</a></li><li><a href="#t428.2.3 src\models\users.tsx">8.2.3 src\models\users.tsx</a></li><li><a href="#t438.2.4 routes\UserPage.tsx">8.2.4 routes\UserPage.tsx</a></li></ul></li></ul></li><li><a href="#t449. onAction中间件">9. onAction中间件</a><ul><li><a href="#t459.1 使用">9.1 使用</a><ul><li><a href="#t469.1.1 index.tsx">9.1.1 index.tsx</a></li></ul></li><li><a href="#t479.2 实现">9.2 实现</a><ul><li><a href="#t489.2.1 dva\index.tsx">9.2.1 dva\index.tsx</a></li><li><a href="#t499.2.2 src\dva\plugin.tsx">9.2.2 src\dva\plugin.tsx</a></li><li><a href="#t509.2.3 src\redux-logger.tsx">9.2.3 src\redux-logger.tsx</a></li></ul></li></ul></li><li><a href="#t5110. stateChange">10. stateChange</a><ul><li><a href="#t5210.1 使用">10.1 使用</a><ul><li><a href="#t5310.1.1 index.tsx">10.1.1 index.tsx</a></li></ul></li><li><a href="#t5410.2 实现">10.2 实现</a><ul><li><a href="#t5510.2.1 dva\index.tsx">10.2.1 dva\index.tsx</a></li><li><a href="#t5610.2.2 src\dva\plugin.tsx">10.2.2 src\dva\plugin.tsx</a></li></ul></li></ul></li><li><a href="#t5711. onReducer">11. onReducer</a><ul><li><a href="#t5811.1 使用">11.1 使用</a><ul><li><a href="#t5911.1.1 index.tsx">11.1.1 index.tsx</a></li></ul></li><li><a href="#t6011.2 实现">11.2 实现</a><ul><li><a href="#t6111.2.1 dva\index.tsx">11.2.1 dva\index.tsx</a></li><li><a href="#t6211.2.2 src\dva\plugin.tsx">11.2.2 src\dva\plugin.tsx</a></li><li><a href="#t6311.2.3 src\routes\UserPage.tsx">11.2.3 src\routes\UserPage.tsx</a></li><li><a href="#t6411.2.4 src\redux-undo.tsx">11.2.4 src\redux-undo.tsx</a></li></ul></li></ul></li><li><a href="#t6512. extraEnhancers">12. extraEnhancers</a><ul><li><a href="#t6612.1 使用">12.1 使用</a><ul><li><a href="#t6712.1.1 index.tsx">12.1.1 index.tsx</a></li></ul></li><li><a href="#t6812.2 实现">12.2 实现</a><ul><li><a href="#t6912.2.1 dva\index.tsx">12.2.1 dva\index.tsx</a></li><li><a href="#t7012.2.2 plugin.tsx">12.2.2 plugin.tsx</a></li><li><a href="#t7112.2.3 redux-persist\index.tsx">12.2.3 redux-persist\index.tsx</a></li><li><a href="#t7212.2.4 persistReducer.tsx">12.2.4 persistReducer.tsx</a></li><li><a href="#t7312.2.5 persistStore.tsx">12.2.5 persistStore.tsx</a></li><li><a href="#t7412.2.6 redux-persist\lib\storage.tsx">12.2.6 redux-persist\lib\storage.tsx</a></li><li><a href="#t7512.2.7 redux-persist\lib\integration\react.tsx">12.2.7 redux-persist\lib\integration\react.tsx</a></li></ul></li></ul></li><li><a href="#t7613. dva-immer">13. dva-immer</a><ul><li><a href="#t7713.1 使用">13.1 使用</a><ul><li><a href="#t7813.1.1 index.tsx">13.1.1 index.tsx</a></li></ul></li><li><a href="#t7913.2 实现">13.2 实现</a><ul><li><a href="#t8013.2.1 dva\index.tsx">13.2.1 dva\index.tsx</a></li><li><a href="#t8113.2.2 dva\plugin.tsx">13.2.2 dva\plugin.tsx</a></li><li><a href="#t8213.2.3 dva-immer.tsx">13.2.3 dva-immer.tsx</a></li></ul></li></ul></li><li><a href="#t8314. onError">14. onError</a><ul><li><a href="#t8414.1 使用">14.1 使用</a><ul><li><a href="#t8514.1.1 index.tsx">14.1.1 index.tsx</a></li></ul></li><li><a href="#t8614.2 实现">14.2 实现</a><ul><li><a href="#t8714.2.1 src\dva\index.tsx">14.2.1 src\dva\index.tsx</a></li><li><a href="#t8814.2.2 src\dva\plugin.tsx">14.2.2 src\dva\plugin.tsx</a></li></ul></li></ul></li></ul>
+    </div>
+    <div class="content markdown-body">
+        <h2 id="t01.dva&#x4ECB;&#x7ECD;">1.dva&#x4ECB;&#x7ECD; <a href="#t01.dva&#x4ECB;&#x7ECD;"> # </a></h2>
+<ul>
+<li><a href="https://github.com/dvajs/dva">dva</a>&#x9996;&#x5148;&#x662F;&#x4E00;&#x4E2A;&#x57FA;&#x4E8E; <code>redux</code> &#x548C; <code>redux-saga</code> &#x7684;&#x6570;&#x636E;&#x6D41;&#x65B9;&#x6848;&#xFF0C;&#x7136;&#x540E;&#x4E3A;&#x4E86;&#x7B80;&#x5316;&#x5F00;&#x53D1;&#x4F53;&#x9A8C;,dva &#x8FD8;&#x989D;&#x5916;&#x5185;&#x7F6E;&#x4E86; <code>react-router</code> &#x548C; <code>fetch</code>,&#x6240;&#x4EE5;&#x4E5F;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x4E00;&#x4E2A;&#x8F7B;&#x91CF;&#x7EA7;&#x7684;&#x5E94;&#x7528;&#x6846;&#x67B6;</li>
+</ul>
+<p><img src="https://zos.alipayobjects.com/rmsportal/PPrerEAKbIoDZYr.png" alt="dva"></p>
+<h3 id="t11.1 &#x524D;&#x7F6E;&#x77E5;&#x8BC6;">1.1 &#x524D;&#x7F6E;&#x77E5;&#x8BC6; <a href="#t11.1 &#x524D;&#x7F6E;&#x77E5;&#x8BC6;"> # </a></h3>
+<ul>
+<li>react</li>
+<li>react-router-dom</li>
+<li>redux</li>
+<li>react-redux</li>
+<li>connected-react-router</li>
+<li>history</li>
+<li>dva</li>
+</ul>
+<h2 id="t22. &#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;">2. &#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE; <a href="#t22. &#x521D;&#x59CB;&#x5316;&#x9879;&#x76EE;"> # </a></h2>
+<pre><code class="lang-js">create-react-app zhufeng-dva-source-typescript --typescript
+cd  zhufeng-dva-source-typescript
+cnpm install dva@<span class="hljs-number">2.6</span><span class="hljs-number">.0</span>-beta<span class="hljs-number">.20</span> redux react-redux react-router-dom connected-react-router history --save
+npm start
+</code></pre>
+<h2 id="t33. &#x57FA;&#x672C;&#x8BA1;&#x6570;&#x5668;">3. &#x57FA;&#x672C;&#x8BA1;&#x6570;&#x5668; <a href="#t33. &#x57FA;&#x672C;&#x8BA1;&#x6570;&#x5668;"> # </a></h2>
+<h3 id="t43.1 &#x4F7F;&#x7528;">3.1 &#x4F7F;&#x7528; <a href="#t43.1 &#x4F7F;&#x7528;"> # </a></h3>
+<h4 id="t53.1.1 index.tsx">3.1.1 index.tsx <a href="#t53.1.1 index.tsx"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> dva, { connect } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./dva&apos;</span>;
+<span class="hljs-keyword">const</span> app = dva();
+app.model({
+    <span class="hljs-attr">namespace</span>: <span class="hljs-string">&apos;counter&apos;</span>,
+    <span class="hljs-attr">state</span>: { <span class="hljs-attr">number</span>: <span class="hljs-number">0</span> },
+    <span class="hljs-attr">reducers</span>: {
+        add(state) {
+            <span class="hljs-keyword">return</span> { <span class="hljs-attr">number</span>: state.number + <span class="hljs-number">1</span> };
+        }
+    }
+});
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Counter</span>(<span class="hljs-params">props</span>) </span>{
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{props.number}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> props.dispatch({ type: &quot;counter/add&quot; })}&gt;+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+}
+<span class="hljs-keyword">const</span> ConnectedCounter = connect(
+    <span class="hljs-function">(<span class="hljs-params">state</span>) =&gt;</span> state.counter
+)(Counter);
+app.router(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ConnectedCounter</span> /&gt;</span></span>);
+app.start(<span class="hljs-string">&apos;#root&apos;</span>);
+</code></pre>
+<h3 id="t63.2 &#x5B9E;&#x73B0;">3.2 &#x5B9E;&#x73B0; <a href="#t63.2 &#x5B9E;&#x73B0;"> # </a></h3>
+<h4 id="t73.2.1 dva\index.tsx">3.2.1 dva\index.tsx <a href="#t73.2.1 dva\index.tsx"> # </a></h4>
+<p>src\dva\index.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> ReactDOM <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+<span class="hljs-keyword">import</span> { createStore, combineReducers } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;redux&apos;</span>;
+<span class="hljs-keyword">import</span> { connect, Provider } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-redux&apos;</span>;
+<span class="hljs-keyword">import</span> { DvaInstance, Router, Model } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./typings&apos;</span>;
+<span class="hljs-keyword">import</span> prefixNamespace <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./prefixNamespace&apos;</span>;
+<span class="hljs-keyword">export</span> { connect };
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> app: DvaInstance = {
+        <span class="hljs-attr">_models</span>: [],
+        model,
+        router,
+        <span class="hljs-attr">_router</span>: <span class="hljs-literal">null</span>,
+        start
+    }
+    <span class="hljs-keyword">const</span> initialReducers = {};
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">model</span>(<span class="hljs-params">model: Model</span>) </span>{
+        <span class="hljs-keyword">const</span> prefixedModel = prefixNamespace(model);
+        app._models.push(prefixedModel);
+        <span class="hljs-keyword">return</span> prefixedModel;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">router</span>(<span class="hljs-params">router: Router</span>) </span>{
+        app._router = router;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">start</span>(<span class="hljs-params">root</span>) </span>{
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> model <span class="hljs-keyword">of</span> app._models) {
+            initialReducers[model.namespace] = getReducer(model);
+        }
+        <span class="hljs-keyword">let</span> rootReducer = createReducer();
+        <span class="hljs-keyword">let</span> store = createStore(rootReducer);
+        ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Provider</span> <span class="hljs-attr">store</span>=<span class="hljs-string">{store}</span>&gt;</span>{app._router()}<span class="hljs-tag">&lt;/<span class="hljs-name">Provider</span>&gt;</span></span>, <span class="hljs-built_in">document</span>.querySelector(root));
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createReducer</span>(<span class="hljs-params"></span>) </span>{
+          <span class="hljs-keyword">return</span> combineReducers(initialReducers);
+        }
+    }
+
+    <span class="hljs-keyword">return</span> app;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getReducer</span>(<span class="hljs-params">model</span>) </span>{
+    <span class="hljs-keyword">let</span> { reducers, <span class="hljs-attr">state</span>: defaultState } = model;
+    <span class="hljs-keyword">let</span> reducer = <span class="hljs-function">(<span class="hljs-params">state = defaultState, action</span>) =&gt;</span> {
+        <span class="hljs-keyword">let</span> reducer = reducers[action.type];
+        <span class="hljs-keyword">if</span> (reducer) {
+            <span class="hljs-keyword">return</span> reducer(state, action);
+        }
+        <span class="hljs-keyword">return</span> state;
+    }
+    <span class="hljs-keyword">return</span> reducer;
+}
+<span class="hljs-keyword">export</span> * <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./typings&apos;</span>;
+</code></pre>
+<h4 id="t83.2.2 prefixNamespace.tsx">3.2.2 prefixNamespace.tsx <a href="#t83.2.2 prefixNamespace.tsx"> # </a></h4>
+<p>src\dva\prefixNamespace.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { NAMESPACE_SEP } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./constants&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">prefix</span>(<span class="hljs-params">obj, namespace</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.keys(obj).reduce(<span class="hljs-function">(<span class="hljs-params">memo, key</span>) =&gt;</span> {
+        <span class="hljs-keyword">const</span> newKey = <span class="hljs-string">`<span class="hljs-subst">${namespace}</span><span class="hljs-subst">${NAMESPACE_SEP}</span><span class="hljs-subst">${key}</span>`</span>;
+        memo[newKey] = obj[key];
+        <span class="hljs-keyword">return</span> memo;
+    }, {});
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">prefixNamespace</span>(<span class="hljs-params">model</span>) </span>{
+    <span class="hljs-keyword">if</span> (model.reducers)
+        model.reducers = prefix(model.reducers, model.namespace);
+    <span class="hljs-keyword">return</span> model;
+}
+</code></pre>
+<h4 id="t93.2.3 constants.tsx">3.2.3 constants.tsx <a href="#t93.2.3 constants.tsx"> # </a></h4>
+<p>src\dva\constants.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> NAMESPACE_SEP = <span class="hljs-string">&apos;/&apos;</span>;
+</code></pre>
+<h4 id="t103.2.4 typings.tsx">3.2.4 typings.tsx <a href="#t103.2.4 typings.tsx"> # </a></h4>
+<p>src\dva\typings.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { Dispatch, Reducer, AnyAction, MiddlewareAPI, StoreEnhancer } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;redux&apos;</span>;
+<span class="hljs-keyword">import</span> { History } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;history&apos;</span>;
+<span class="hljs-keyword">export</span> interface ReducersMapObject {
+    [key: string]: Reducer&lt;any&gt;;
+}
+<span class="hljs-keyword">export</span> interface ReducerEnhancer {
+    (reducer: Reducer&lt;any&gt;): <span class="hljs-keyword">void</span>,
+}
+<span class="hljs-keyword">export</span> interface EffectsCommandMap {
+    <span class="hljs-attr">put</span>: &lt;A extends AnyAction&gt;(action: A) =&gt; any,
+    call: Function,
+    select: Function,
+    take: Function,
+    cancel: Function,
+    [key: string]: any,
+}
+export type EffectType = &apos;takeEvery&apos; | &apos;takeLatest&apos; | &apos;watcher&apos; | &apos;throttle&apos;;
+export type EffectWithType = [Effect, { type: EffectType }];
+export type Effect = (action: AnyAction, effects: EffectsCommandMap) =&gt; void;
+export type ReducersMapObjectWithEnhancer = [ReducersMapObject, ReducerEnhancer];
+export interface EffectsMapObject {
+    [key: string]: Effect | EffectWithType,
+}
+export interface SubscriptionsMapObject {
+    [key: string]: Subscription,
+}
+export interface SubscriptionAPI {
+    history: History,
+    dispatch: Dispatch&lt;any&gt;,
+}
+export type Subscription = (api: SubscriptionAPI, done: Function) =&gt; void;
+export interface Model {
+    namespace: string,
+    state?: any,
+    reducers?: ReducersMapObject | ReducersMapObjectWithEnhancer,
+    effects?: EffectsMapObject,
+    subscriptions?: SubscriptionsMapObject,
+}
+export interface RouterAPI {
+    history: History,
+    app: DvaInstance,
+}
+export interface Router {
+    (api?: RouterAPI): JSX.Element | Object,
+}
+export interface onActionFunc {
+    (api: MiddlewareAPI&lt;any&gt;): void,
+}
+export interface Hooks {
+    onError?: (e: Error, dispatch: Dispatch&lt;any&gt;) =&gt; void,
+    onAction?: onActionFunc | onActionFunc[],
+    onStateChange?: () =&gt; void,
+    onReducer?: ReducerEnhancer,
+    onEffect?: () =&gt; void,
+    onHmr?: () =&gt; void,
+    extraReducers?: ReducersMapObject,
+    extraEnhancers?: StoreEnhancer&lt;any&gt;[],
+}
+export interface DvaInstance extends Record&lt;any, any&gt; {
+    //use: (hooks: Hooks) =&gt; void,
+    model: (model: Model) =&gt; void,
+    //unmodel: (namespace: string) =&gt; void,
+    router: (router: Router) =&gt; void,
+    start: (selector?: HTMLElement | string) =&gt; any,
+}
+</code></pre>
+<h2 id="t114. &#x652F;&#x6301;effects">4. &#x652F;&#x6301;effects <a href="#t114. &#x652F;&#x6301;effects"> # </a></h2>
+<h3 id="t124.1 &#x4F7F;&#x7528;">4.1 &#x4F7F;&#x7528; <a href="#t124.1 &#x4F7F;&#x7528;"> # </a></h3>
+<h4 id="t134.1.1 index.tsx">4.1.1 index.tsx <a href="#t134.1.1 index.tsx"> # </a></h4>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import dva, { connect } from &apos;./dva&apos;;
+const app = dva();
+app.model({
+    namespace: &apos;counter&apos;,
+    state: { number: 0 },
+    reducers: {
+        add(state) {
+            return { number: state.number + 1 };
+        }
+    },
+<span class="hljs-addition">+    effects: {</span>
+<span class="hljs-addition">+        *asyncAdd(action, { call, put }) {</span>
+<span class="hljs-addition">+            yield call(delay, 1000);</span>
+<span class="hljs-addition">+            yield put({ type: &apos;counter/add&apos; });</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+    }</span>
+});
+function Counter(props) {
+    return (
+        &lt;div&gt;
+            &lt;p&gt;{props.number}&lt;/p&gt;
+            &lt;button onClick={() =&gt; props.dispatch({ type: &quot;counter/add&quot; })}&gt;&#x52A0;1&lt;/button&gt;
+<span class="hljs-addition">+            &lt;button onClick={() =&gt; props.dispatch({ type: &quot;counter/asyncAdd&quot; })}&gt;&#x5F02;&#x6B65;+&lt;/button&gt;</span>
+        &lt;/div&gt;
+    )
+}
+const ConnectedCounter = connect(
+    (state) =&gt; state.counter
+)(Counter);
+app.router(() =&gt; &lt;ConnectedCounter /&gt;);
+app.start(&apos;#root&apos;);
+
+<span class="hljs-addition">+function delay(ms) {</span>
+<span class="hljs-addition">+    return new Promise((resolve) =&gt; {</span>
+<span class="hljs-addition">+        setTimeout(function () {</span>
+<span class="hljs-addition">+            resolve();</span>
+<span class="hljs-addition">+        }, ms);</span>
+<span class="hljs-addition">+    });</span>
+<span class="hljs-addition">+}</span>
+</code></pre>
+<h3 id="t144.2 &#x5B9E;&#x73B0;">4.2 &#x5B9E;&#x73B0; <a href="#t144.2 &#x5B9E;&#x73B0;"> # </a></h3>
+<h4 id="t154.2.1 dva\index.tsx">4.2.1 dva\index.tsx <a href="#t154.2.1 dva\index.tsx"> # </a></h4>
+<p>src\dva\index.tsx</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import ReactDOM from &apos;react-dom&apos;;
+<span class="hljs-addition">+import { createStore, combineReducers, applyMiddleware } from &apos;redux&apos;;</span>
+<span class="hljs-addition">+import createSagaMiddleware from &apos;redux-saga&apos;;</span>
+<span class="hljs-addition">+import * as sagaEffects from &apos;redux-saga/effects&apos;;</span>
+<span class="hljs-addition">+import { NAMESPACE_SEP } from &apos;./constants&apos;;</span>
+import { connect, Provider } from &apos;react-redux&apos;;
+import { DvaInstance, Router, Model } from &apos;./typings&apos;;
+import prefixNamespace from &apos;./prefixNamespace&apos;;
+export { connect };
+
+export default function () {
+    const app: DvaInstance = {
+        _models: [],
+        model,
+        router,
+        _router: null,
+        start
+    }
+    const initialReducers = {};
+    function model(model: Model) {
+        const prefixedModel = prefixNamespace(model);
+        app._models.push(prefixedModel);
+        return prefixedModel;
+    }
+    function router(router: Router) {
+        app._router = router;
+    }
+
+    function start(root) {
+        for (const model of app._models) {
+            initialReducers[model.namespace] = getReducer(model);
+        }
+        let rootReducer = createReducer();
+<span class="hljs-addition">+        const sagas = getSagas(app);</span>
+<span class="hljs-addition">+        const sagaMiddleware = createSagaMiddleware();</span>
+<span class="hljs-addition">+        let store = createStore(rootReducer, applyMiddleware(sagaMiddleware));</span>
+<span class="hljs-addition">+        sagas.forEach(saga =&gt; sagaMiddleware.run(saga));</span>
+<span class="hljs-addition">+        ReactDOM.render(&lt;Provider store={store}&gt;{app._router()}&lt;/Provider&gt;, document.querySelector(root));</span>
+        function createReducer() {
+           return combineReducers(initialReducers);
+        }
+    }
+<span class="hljs-addition">+    function getSagas(app) {</span>
+<span class="hljs-addition">+        let sagas: Array&lt;any&gt; = [];</span>
+<span class="hljs-addition">+        for (const model of app._models) {</span>
+<span class="hljs-addition">+            sagas.push(getSaga(model.effects, model));</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+        return sagas;</span>
+<span class="hljs-addition">+    }</span>
+
+    return app;
+}
+
+<span class="hljs-addition">+function getSaga(effects, model) {</span>
+<span class="hljs-addition">+    return function* () {</span>
+<span class="hljs-addition">+        for (const key in effects) {</span>
+<span class="hljs-addition">+            const watcher = getWatcher(key, model.effects[key], model);</span>
+<span class="hljs-addition">+            yield sagaEffects.fork(watcher);</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+    };</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+function getWatcher(key, effect, model) {</span>
+<span class="hljs-addition">+    return function* () {</span>
+<span class="hljs-addition">+        yield sagaEffects.takeEvery(key, function* sagaWithCatch(...args) {</span>
+<span class="hljs-addition">+            yield effect(...args, { ...sagaEffects, put: action =&gt; sagaEffects.put({ ...action, type: prefixType(action.type, model) }) });</span>
+<span class="hljs-addition">+        });</span>
+<span class="hljs-addition">+    };</span>
+<span class="hljs-addition">+}</span>
+<span class="hljs-addition">+function prefixType(type, model) {</span>
+<span class="hljs-addition">+    if (type.indexOf(&apos;/&apos;) === -1) {</span>
+<span class="hljs-addition">+        return `${model.namespace}${NAMESPACE_SEP}${type}`;</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    return type;</span>
+<span class="hljs-addition">+}</span>
+function getReducer(model) {
+    let { reducers, state: defaultState } = model;
+    let reducer = (state = defaultState, action) =&gt; {
+        let reducer = reducers[action.type];
+        if (reducer) {
+            return reducer(state, action);
+        }
+        return state;
+    }
+    return reducer;
+}
+</code></pre>
+<h4 id="t164.2.2 prefixNamespace.tsx">4.2.2 prefixNamespace.tsx <a href="#t164.2.2 prefixNamespace.tsx"> # </a></h4>
+<p>src\dva\prefixNamespace.tsx</p>
+<pre><code class="lang-diff">import { NAMESPACE_SEP } from &apos;./constants&apos;;
+function prefix(obj, namespace) {
+    return Object.keys(obj).reduce((memo, key) =&gt; {
+        const newKey = `${namespace}${NAMESPACE_SEP}${key}`;
+        memo[newKey] = obj[key];
+        return memo;
+    }, {});
+}
+export default function prefixNamespace(model) {
+    if (model.reducers)
+        model.reducers = prefix(model.reducers, model.namespace);
+<span class="hljs-addition">+    if (model.effects) {</span>
+<span class="hljs-addition">+        model.effects = prefix(model.effects, model.namespace);</span>
+<span class="hljs-addition">+    }</span>
+    return model;
+}
+</code></pre>
+<h2 id="t175. &#x652F;&#x6301;&#x8DEF;&#x7531;">5. &#x652F;&#x6301;&#x8DEF;&#x7531; <a href="#t175. &#x652F;&#x6301;&#x8DEF;&#x7531;"> # </a></h2>
+<h3 id="t185.1 &#x4F7F;&#x7528;">5.1 &#x4F7F;&#x7528; <a href="#t185.1 &#x4F7F;&#x7528;"> # </a></h3>
+<h4 id="t195.1.1 index.tsx">5.1.1 index.tsx <a href="#t195.1.1 index.tsx"> # </a></h4>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import dva, { connect } from &apos;./dva&apos;;
+<span class="hljs-addition">+import { Router, Route } from &apos;./dva/router&apos;;</span>
+const app = dva();
+app.model({
+    namespace: &apos;counter&apos;,
+    state: { number: 0 },
+    reducers: {
+        add(state) {
+            return { number: state.number + 1 };
+        }
+    },
+    effects: {
+        *asyncAdd(action, { call, put }) {
+            yield call(delay, 1000);
+            yield put({ type: &apos;counter/add&apos; });
+        }
+    }
+});
+function Counter(props) {
+    return (
+        &lt;div&gt;
+            &lt;p&gt;{props.number}&lt;/p&gt;
+            &lt;button onClick={() =&gt; props.dispatch({ type: &quot;counter/add&quot; })}&gt;&#x52A0;1&lt;/button&gt;
+            &lt;button onClick={() =&gt; props.dispatch({ type: &quot;counter/asyncAdd&quot; })}&gt;&#x5F02;&#x6B65;+&lt;/button&gt;
+        &lt;/div&gt;
+    )
+}
+const ConnectedCounter = connect(
+    (state) =&gt; state.counter
+)(Counter);
+const Home = () =&gt; &lt;div&gt;Home&lt;/div&gt;
+<span class="hljs-addition">+app.router((api: any) =&gt; (</span>
+<span class="hljs-addition">+    &lt;Router history={api.history}&gt;</span>
+<span class="hljs-addition">+        &lt;&gt;</span>
+<span class="hljs-addition">+            &lt;Route path=&quot;/&quot; exact={true} component={Home} /&gt;</span>
+<span class="hljs-addition">+            &lt;Route path=&quot;/counter&quot; component={ConnectedCounter} /&gt;</span>
+<span class="hljs-addition">+        &lt;/&gt;</span>
+<span class="hljs-addition">+    &lt;/Router&gt;</span>
+<span class="hljs-addition">+));</span>
+app.start(&apos;#root&apos;);
+
+function delay(ms) {
+    return new Promise((resolve) =&gt; {
+        setTimeout(function () {
+            resolve();
+        }, ms);
+    });
+}
+</code></pre>
+<h3 id="t205.2 &#x5B9E;&#x73B0;">5.2 &#x5B9E;&#x73B0; <a href="#t205.2 &#x5B9E;&#x73B0;"> # </a></h3>
+<h4 id="t215.2.1 dva\index.tsx">5.2.1 dva\index.tsx <a href="#t215.2.1 dva\index.tsx"> # </a></h4>
+<p>src\dva\index.tsx</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import ReactDOM from &apos;react-dom&apos;;
+import { createStore, combineReducers, applyMiddleware } from &apos;redux&apos;;
+import createSagaMiddleware from &apos;redux-saga&apos;;
+import * as sagaEffects from &apos;redux-saga/effects&apos;;
+import { NAMESPACE_SEP } from &apos;./constants&apos;;
+import { connect, Provider } from &apos;react-redux&apos;;
+import { DvaInstance, Router, Model } from &apos;./typings&apos;;
+import prefixNamespace from &apos;./prefixNamespace&apos;;
+<span class="hljs-addition">+import { createHashHistory } from &apos;history&apos;;</span>
+<span class="hljs-addition">+let history = createHashHistory();</span>
+export { connect };
+
+export default function () {
+    const app: DvaInstance = {
+        _models: [],
+        model,
+        router,
+        _router: null,
+        start
+    }
+    const initialReducers = {};
+    function model(model: Model) {
+        const prefixedModel = prefixNamespace(model);
+        app._models.push(prefixedModel);
+        return prefixedModel;
+    }
+    function router(router: Router) {
+        app._router = router;
+    }
+
+    function start(root) {
+        for (const model of app._models) {
+            initialReducers[model.namespace] = getReducer(model);
+        }
+        let rootReducer = createReducer();
+        const sagas = getSagas(app);
+        const sagaMiddleware = createSagaMiddleware();
+        let store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
+        sagas.forEach(saga =&gt; sagaMiddleware.run(saga));
+<span class="hljs-addition">+        ReactDOM.render(&lt;Provider store={store}&gt;{app._router({ history })}&lt;/Provider&gt;, document.querySelector(root))</span>
+        function createReducer() {
+           return combineReducers(initialReducers);
+        }
+    }
+    function getSagas(app) {
+        let sagas: Array&lt;any&gt; = [];
+        for (const model of app._models) {
+            sagas.push(getSaga(model.effects, model));
+        }
+        return sagas;
+    }
+
+    return app;
+}
+
+function getSaga(effects, model) {
+    return function* () {
+        for (const key in effects) {
+            const watcher = getWatcher(key, model.effects[key], model);
+            yield sagaEffects.fork(watcher);
+        }
+    };
+}
+function getWatcher(key, effect, model) {
+    return function* () {
+        yield sagaEffects.takeEvery(key, function* sagaWithCatch(...args) {
+            yield effect(...args, { ...sagaEffects, put: action =&gt; sagaEffects.put({ ...action, type: prefixType(action.type, model) }) });
+        });
+    };
+}
+function prefixType(type, model) {
+    if (type.indexOf(&apos;/&apos;) <span class="hljs-comment">=== -1) {</span>
+        return `${model.namespace}${NAMESPACE_SEP}${type}`;
+    }
+    return type;
+}
+function getReducer(model) {
+    let { reducers, state: defaultState } = model;
+    let reducer = (state = defaultState, action) =&gt; {
+        let reducer = reducers[action.type];
+        if (reducer) {
+            return reducer(state, action);
+        }
+        return state;
+    }
+    return reducer;
+}
+export * from &apos;./typings&apos;;
+</code></pre>
+<h4 id="t225.2.2 router.tsx">5.2.2 router.tsx <a href="#t225.2.2 router.tsx"> # </a></h4>
+<p>src\dva\router.tsx</p>
+<pre><code class="lang-diff">export * from &apos;react-router-dom&apos;;
+</code></pre>
+<h2 id="t236. &#x8DF3;&#x8F6C;&#x8DEF;&#x5F84;">6. &#x8DF3;&#x8F6C;&#x8DEF;&#x5F84; <a href="#t236. &#x8DF3;&#x8F6C;&#x8DEF;&#x5F84;"> # </a></h2>
+<h3 id="t246.1 &#x4F7F;&#x7528;">6.1 &#x4F7F;&#x7528; <a href="#t246.1 &#x4F7F;&#x7528;"> # </a></h3>
+<h4 id="t256.1.1 index.tsx">6.1.1 index.tsx <a href="#t256.1.1 index.tsx"> # </a></h4>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import dva, { connect } from &apos;./dva&apos;;
+<span class="hljs-addition">+import { Router, Route, routerRedux } from &apos;./dva/router&apos;;</span>
+<span class="hljs-addition">+import { ConnectedRouter } from &apos;connected-react-router&apos;;</span>
+const app = dva();
+app.model({
+    namespace: &apos;counter&apos;,
+    state: { number: 0 },
+    reducers: {
+        add(state) {
+            return { number: state.number + 1 };
+        }
+    },
+    effects: {
+        *asyncAdd(action, { call, put }) {
+            yield call(delay, 1000);
+            yield put({ type: &apos;counter/add&apos; });
+        },
+<span class="hljs-addition">+        *goto({ to }, { put }) {</span>
+<span class="hljs-addition">+            yield put(routerRedux.push(to));</span>
+<span class="hljs-addition">+        }</span>
+    }
+});
+function Counter(props) {
+    return (
+        &lt;div&gt;
+            &lt;p&gt;{props.number}&lt;/p&gt;
+            &lt;button onClick={() =&gt; props.dispatch({ type: &quot;counter/add&quot; })}&gt;&#x52A0;1&lt;/button&gt;
+            &lt;button onClick={() =&gt; props.dispatch({ type: &quot;counter/asyncAdd&quot; })}&gt;&#x5F02;&#x6B65;+&lt;/button&gt;
+<span class="hljs-addition">+            &lt;button onClick={() =&gt; props.dispatch({ type: &quot;counter/goto&quot;, to: &apos;/&apos; })}&gt;&#x8DF3;&#x8F6C;&#x5230;/&lt;/button&gt;</span>
+        &lt;/div&gt;
+    )
+}
+const ConnectedCounter = connect(
+    (state) =&gt; state.counter
+)(Counter);
+const Home = () =&gt; &lt;div&gt;Home&lt;/div&gt;
+app.router((api: any) =&gt; (
+<span class="hljs-addition">+    &lt;ConnectedRouter history={api.history}&gt;</span>
+        &lt;&gt;
+            &lt;Route path=&quot;/&quot; exact={true} component={Home} /&gt;
+            &lt;Route path=&quot;/counter&quot; component={ConnectedCounter} /&gt;
+        &lt;/&gt;
+<span class="hljs-addition">+    &lt;/ConnectedRouter&gt;</span>
+));
+app.start(&apos;#root&apos;);
+
+function delay(ms) {
+    return new Promise((resolve) =&gt; {
+        setTimeout(function () {
+            resolve();
+        }, ms);
+    });
+}
+</code></pre>
+<h3 id="t266.2 &#x5B9E;&#x73B0;">6.2 &#x5B9E;&#x73B0; <a href="#t266.2 &#x5B9E;&#x73B0;"> # </a></h3>
+<h4 id="t276.2.1 dva\index.tsx">6.2.1 dva\index.tsx <a href="#t276.2.1 dva\index.tsx"> # </a></h4>
+<p>src\dva\index.tsx</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import ReactDOM from &apos;react-dom&apos;;
+import { createStore, combineReducers, applyMiddleware } from &apos;redux&apos;;
+import createSagaMiddleware from &apos;redux-saga&apos;;
+import * as sagaEffects from &apos;redux-saga/effects&apos;;
+import { NAMESPACE_SEP } from &apos;./constants&apos;;
+import { connect, Provider } from &apos;react-redux&apos;;
+import { DvaInstance, Router, Model } from &apos;./typings&apos;;
+import prefixNamespace from &apos;./prefixNamespace&apos;;
+import { createHashHistory } from &apos;history&apos;;
+<span class="hljs-addition">+import { routerMiddleware, connectRouter, ConnectedRouter } from &quot;connected-react-router&quot;;</span>
+let history = createHashHistory();
+export { connect };
+
+export default function () {
+    const app: DvaInstance = {
+        _models: [],
+        model,
+        router,
+        _router: null,
+        start
+    }
+<span class="hljs-addition">+    const initialReducers = { router: connectRouter(history) };</span>
+    function model(model: Model) {
+        const prefixedModel = prefixNamespace(model);
+        app._models.push(prefixedModel);
+        return prefixedModel;
+    }
+    function router(router: Router) {
+        app._router = router;
+    }
+
+    function start(root) {
+        for (const model of app._models) {
+            initialReducers[model.namespace] = getReducer(model);
+        }
+        let rootReducer = createReducer();
+        const sagas = getSagas(app);
+        const sagaMiddleware = createSagaMiddleware();
+<span class="hljs-addition">+        let store = createStore(rootReducer, applyMiddleware(routerMiddleware(history), sagaMiddleware));</span>
+        sagas.forEach(saga =&gt; sagaMiddleware.run(saga));
+        ReactDOM.render(&lt;Provider store={store}&gt;{app._router({ history })}&lt;/Provider&gt;, document.querySelector(root));
+        function createReducer() {
+           return combineReducers(initialReducers);
+        }
+    }
+    function getSagas(app) {
+        let sagas: Array&lt;any&gt; = [];
+        for (const model of app._models) {
+            sagas.push(getSaga(model.effects, model));
+        }
+        return sagas;
+    }
+
+    return app;
+}
+
+function getSaga(effects, model) {
+    return function* () {
+        for (const key in effects) {
+            const watcher = getWatcher(key, model.effects[key], model);
+            yield sagaEffects.fork(watcher);
+        }
+    };
+}
+function getWatcher(key, effect, model) {
+    return function* () {
+        yield sagaEffects.takeEvery(key, function* sagaWithCatch(...args) {
+            yield effect(...args, { ...sagaEffects, put: action =&gt; sagaEffects.put({ ...action, type: prefixType(action.type, model) }) });
+        });
+    };
+}
+function prefixType(type, model) {
+    if (type.indexOf(&apos;/&apos;) <span class="hljs-comment">=== -1) {</span>
+        return `${model.namespace}${NAMESPACE_SEP}${type}`;
+    }
+    return type;
+}
+function getReducer(model) {
+    let { reducers, state: defaultState } = model;
+    let reducer = (state = defaultState, action) =&gt; {
+        let reducer = reducers[action.type];
+        if (reducer) {
+            return reducer(state, action);
+        }
+        return state;
+    }
+    return reducer;
+}
+export * from &apos;./typings&apos;;
+</code></pre>
+<h4 id="t286.2.2 src\dva\router.tsx">6.2.2 src\dva\router.tsx <a href="#t286.2.2 src\dva\router.tsx"> # </a></h4>
+<p>src\dva\router.tsx</p>
+<pre><code class="lang-diff">import * as routerRedux from &apos;connected-react-router&apos;;
+export * from &apos;react-router-dom&apos;;
+export {
+    routerRedux
+}
+</code></pre>
+<h2 id="t297. dva-loading">7. dva-loading <a href="#t297. dva-loading"> # </a></h2>
+<ul>
+<li>Auto loading data binding plugin for dva. You don&apos;t need to write showLoading and hideLoading any more.</li>
+<li><a href="https://github.com/dvajs/dva/tree/master/packages/dva-loading">dva-loading</a></li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/dva-loading.png" alt="dva-loading"></p>
+<h3 id="t307.1 &#x4F7F;&#x7528;">7.1 &#x4F7F;&#x7528; <a href="#t307.1 &#x4F7F;&#x7528;"> # </a></h3>
+<h4 id="t317.1.1 index.tsx">7.1.1 index.tsx <a href="#t317.1.1 index.tsx"> # </a></h4>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import dva, { connect } from &apos;./dva&apos;;
+import { Router, Route, routerRedux } from &apos;./dva/router&apos;;
+import { ConnectedRouter } from &apos;connected-react-router&apos;;
+<span class="hljs-addition">+import createLoading from &apos;./dva-loading&apos;;</span>
+const app = dva();
+<span class="hljs-addition">+app.use(createLoading());</span>
+app.model({
+    namespace: &apos;counter&apos;,
+    state: { number: 0 },
+    reducers: {
+        add(state) {
+            return { number: state.number + 1 };
+        }
+    },
+    effects: {
+        *asyncAdd(action, { call, put }) {
+            yield call(delay, 1000);
+            yield put({ type: &apos;counter/add&apos; });
+        },
+        *goto({ to }, { put }) {
+            yield put(routerRedux.push(to));
+        }
+    }
+});
+function Counter(props) {
+    return (
+        &lt;div&gt;
+<span class="hljs-addition">+            &lt;p&gt; {props.loading.models.counter ? &apos;loading&apos; : props.counter.number}&lt;/p&gt;</span>
+            &lt;button onClick={() =&gt; props.dispatch({ type: &quot;counter/add&quot; })}&gt;&#x52A0;1&lt;/button&gt;
+            &lt;button onClick={() =&gt; props.dispatch({ type: &quot;counter/asyncAdd&quot; })}&gt;&#x5F02;&#x6B65;+&lt;/button&gt;
+            &lt;button onClick={() =&gt; props.dispatch({ type: &quot;counter/goto&quot;, to: &apos;/&apos; })}&gt;&#x8DF3;&#x8F6C;&#x5230;/&lt;/button&gt;
+        &lt;/div&gt;
+    )
+}
+const ConnectedCounter = connect(
+<span class="hljs-addition">+    (state) =&gt; state</span>
+)(Counter);
+const Home = () =&gt; &lt;div&gt;Home&lt;/div&gt;
+app.router((api: any) =&gt; (
+<span class="hljs-addition">+    &lt;Router history={api.history}&gt;</span>
+        &lt;&gt;
+            &lt;Route path=&quot;/&quot; exact={true} component={Home} /&gt;
+            &lt;Route path=&quot;/counter&quot; component={ConnectedCounter} /&gt;
+        &lt;/&gt;
+<span class="hljs-addition">+    &lt;/Router&gt;</span>
+));
+app.start(&apos;#root&apos;);
+
+function delay(ms) {
+    return new Promise((resolve) =&gt; {
+        setTimeout(function () {
+            resolve();
+        }, ms);
+    });
+}
+</code></pre>
+<h3 id="t327.2 &#x5B9E;&#x73B0;">7.2 &#x5B9E;&#x73B0; <a href="#t327.2 &#x5B9E;&#x73B0;"> # </a></h3>
+<h4 id="t337.2.1 dva\index.tsx">7.2.1 dva\index.tsx <a href="#t337.2.1 dva\index.tsx"> # </a></h4>
+<p>src\dva\index.tsx</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import ReactDOM from &apos;react-dom&apos;;
+import { createStore, combineReducers, applyMiddleware } from &apos;redux&apos;;
+import createSagaMiddleware from &apos;redux-saga&apos;;
+import * as sagaEffects from &apos;redux-saga/effects&apos;;
+import { NAMESPACE_SEP } from &apos;./constants&apos;;
+import { connect, Provider } from &apos;react-redux&apos;;
+import { DvaInstance, Router, Model } from &apos;./typings&apos;;
+import prefixNamespace from &apos;./prefixNamespace&apos;;
+import { createHashHistory } from &apos;history&apos;;
+<span class="hljs-addition">+import Plugin, { filterHooks } from &apos;./plugin&apos;;</span>
+import { routerMiddleware, connectRouter, ConnectedRouter } from &quot;connected-react-router&quot;;
+let history = createHashHistory();
+export { connect };
+
+<span class="hljs-addition">+export default function (opts = {}) {</span>
+    const app: DvaInstance = {
+        _models: [],
+        model,
+        router,
+        _router: null,
+        start
+    }
+    const initialReducers = { router: connectRouter(history) };
+    function model(model: Model) {
+        const prefixedModel = prefixNamespace(model);
+        app._models.push(prefixedModel);
+        return prefixedModel;
+    }
+    function router(router: Router) {
+        app._router = router;
+    }
+<span class="hljs-addition">+    const plugin = new Plugin();</span>
+<span class="hljs-addition">+    plugin.use(filterHooks(opts));</span>
+<span class="hljs-addition">+    app.use = plugin.use.bind(plugin);</span>
+    function start(root) {
+        for (const model of app._models) {
+            initialReducers[model.namespace] = getReducer(model);
+        }
+        let rootReducer = createReducer();
+        const sagas = getSagas(app);
+        const sagaMiddleware = createSagaMiddleware();
+        let store = createStore(rootReducer, applyMiddleware(routerMiddleware(history), sagaMiddleware));
+        sagas.forEach(saga =&gt; sagaMiddleware.run(saga));
+        ReactDOM.render(&lt;Provider store={store}&gt;{app._router({ history })}&lt;/Provider&gt;, document.querySelector(root));
+        function createReducer() {
+<span class="hljs-addition">+        const extraReducers = plugin.get(&apos;extraReducers&apos;);</span>
+<span class="hljs-addition">+        return combineReducers({</span>
+<span class="hljs-addition">+            ...initialReducers,</span>
+<span class="hljs-addition">+            ...extraReducers</span>
+<span class="hljs-addition">+        });</span>
+       }
+    }
+    function getSagas(app) {
+        let sagas: Array&lt;any&gt; = [];
+        for (const model of app._models) {
+<span class="hljs-addition">+            sagas.push(getSaga(model.effects, model, plugin.get(&apos;onEffect&apos;)));</span>
+        }
+        return sagas;
+    }
+
+    return app;
+}
+
+<span class="hljs-addition">+function getSaga(effects, model, onEffect) {</span>
+    return function* () {
+        for (const key in effects) {
+<span class="hljs-addition">+            const watcher = getWatcher(key, model.effects[key], model, onEffect);</span>
+            yield sagaEffects.fork(watcher);
+        }
+    };
+}
+<span class="hljs-addition">+function getWatcher(key, effect, model, onEffect) {</span>
+    return function* () {
+        yield sagaEffects.takeEvery(key, function* sagaWithCatch(...args) {
+<span class="hljs-addition">+            if (onEffect) {</span>
+<span class="hljs-addition">+                for (const fn of onEffect) {</span>
+<span class="hljs-addition">+                    effect = fn(effect, sagaEffects, model, key);</span>
+<span class="hljs-addition">+                }</span>
+<span class="hljs-addition">+            }</span>
+            yield effect(...args, { ...sagaEffects, put: action =&gt; sagaEffects.put({ ...action, type: prefixType(action.type, model) }) });
+        });
+    };
+}
+function prefixType(type, model) {
+    if (type.indexOf(&apos;/&apos;) <span class="hljs-comment">=== -1) {</span>
+        return `${model.namespace}${NAMESPACE_SEP}${type}`;
+    }
+    return type;
+}
+function getReducer(model) {
+    let { reducers, state: defaultState } = model;
+    let reducer = (state = defaultState, action) =&gt; {
+        let reducer = reducers[action.type];
+        if (reducer) {
+            return reducer(state, action);
+        }
+        return state;
+    }
+    return reducer;
+}
+export * from &apos;./typings&apos;;
+</code></pre>
+<h4 id="t347.2.2 dva-loading.tsx">7.2.2 dva-loading.tsx <a href="#t347.2.2 dva-loading.tsx"> # </a></h4>
+<p>src\dva-loading.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> SHOW = <span class="hljs-string">&apos;@@DVA_LOADING/SHOW&apos;</span>;
+<span class="hljs-keyword">const</span> HIDE = <span class="hljs-string">&apos;@@DVA_LOADING/HIDE&apos;</span>;
+<span class="hljs-keyword">const</span> NAMESPACE = <span class="hljs-string">&apos;loading&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createLoading</span>(<span class="hljs-params">opts: any = {}</span>) </span>{
+    <span class="hljs-keyword">const</span> initialState = {
+        <span class="hljs-attr">global</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">models</span>: {},
+        <span class="hljs-attr">effects</span>: {},
+    };
+
+    <span class="hljs-keyword">const</span> extraReducers = {
+        [NAMESPACE](state = initialState, { type, payload }) {
+            <span class="hljs-keyword">const</span> { namespace, actionType } = payload || {};
+            <span class="hljs-keyword">let</span> ret;
+            <span class="hljs-keyword">switch</span> (type) {
+                <span class="hljs-keyword">case</span> SHOW:
+                    ret = {
+                        ...state,
+                        <span class="hljs-attr">global</span>: <span class="hljs-literal">true</span>,
+                        <span class="hljs-attr">models</span>: { ...state.models, [namespace]: <span class="hljs-literal">true</span> },
+                        <span class="hljs-attr">effects</span>: { ...state.effects, [actionType]: <span class="hljs-literal">true</span> },
+                    };
+                    <span class="hljs-keyword">break</span>;
+                <span class="hljs-keyword">case</span> HIDE: {
+                    <span class="hljs-keyword">const</span> effects = { ...state.effects, [actionType]: <span class="hljs-literal">false</span> };
+                    <span class="hljs-keyword">const</span> models = {
+                        ...state.models,
+                        [namespace]: <span class="hljs-built_in">Object</span>.keys(effects).some(<span class="hljs-function"><span class="hljs-params">actionType</span> =&gt;</span> {
+                            <span class="hljs-keyword">const</span> _namespace = actionType.split(<span class="hljs-string">&apos;/&apos;</span>)[<span class="hljs-number">0</span>];
+                            <span class="hljs-keyword">if</span> (_namespace !== namespace) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+                            <span class="hljs-keyword">return</span> effects[actionType];
+                        }),
+                    };
+                    <span class="hljs-keyword">const</span> global = <span class="hljs-built_in">Object</span>.keys(models).some(<span class="hljs-function"><span class="hljs-params">namespace</span> =&gt;</span> {
+                        <span class="hljs-keyword">return</span> models[namespace];
+                    });
+                    ret = {
+                        ...state,
+                        global,
+                        models,
+                        effects,
+                    };
+                    <span class="hljs-keyword">break</span>;
+                }
+                <span class="hljs-attr">default</span>:
+                    ret = state;
+                    <span class="hljs-keyword">break</span>;
+            }
+            <span class="hljs-keyword">return</span> ret;
+        },
+    };
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onEffect</span>(<span class="hljs-params">effect, { put }, model, actionType</span>) </span>{
+        <span class="hljs-keyword">const</span> { namespace } = model;
+        <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span>* (<span class="hljs-params">...args</span>) </span>{
+            <span class="hljs-keyword">yield</span> put({ <span class="hljs-attr">type</span>: SHOW, <span class="hljs-attr">payload</span>: { namespace, actionType } });
+            <span class="hljs-keyword">try</span> {
+                <span class="hljs-keyword">yield</span> effect(...args);
+            } <span class="hljs-keyword">finally</span> {
+                <span class="hljs-keyword">yield</span> put({ <span class="hljs-attr">type</span>: HIDE, <span class="hljs-attr">payload</span>: { namespace, actionType } });
+            }
+        };
+    }
+
+    <span class="hljs-keyword">return</span> {
+        extraReducers,
+        onEffect,
+    };
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> createLoading;
+</code></pre>
+<h4 id="t357.2.3 plugin.tsx">7.2.3 plugin.tsx <a href="#t357.2.3 plugin.tsx"> # </a></h4>
+<p>src\dva\plugin.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> hooks = [
+    <span class="hljs-string">&apos;onEffect&apos;</span>,
+    <span class="hljs-string">&apos;extraReducers&apos;</span>
+];
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">filterHooks</span>(<span class="hljs-params">obj</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.keys(obj).reduce(<span class="hljs-function">(<span class="hljs-params">memo, key</span>) =&gt;</span> {
+        <span class="hljs-keyword">if</span> (hooks.indexOf(key) &gt; <span class="hljs-number">-1</span>) {
+            memo[key] = obj[key];
+        }
+        <span class="hljs-keyword">return</span> memo;
+    }, {});
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Plugin</span> </span>{
+    <span class="hljs-attr">hooks</span>: any
+    <span class="hljs-keyword">constructor</span>() {
+        <span class="hljs-keyword">this</span>.hooks = hooks.reduce(<span class="hljs-function">(<span class="hljs-params">memo, key</span>) =&gt;</span> {
+            memo[key] = [];
+            <span class="hljs-keyword">return</span> memo;
+        }, {});
+    }
+    use(plugin) {
+        <span class="hljs-keyword">const</span> { hooks } = <span class="hljs-keyword">this</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> key <span class="hljs-keyword">in</span> plugin) {
+            hooks[key].push(plugin[key]);
+        }
+    }
+    <span class="hljs-keyword">get</span>(key) {
+        <span class="hljs-keyword">const</span> { hooks } = <span class="hljs-keyword">this</span>;
+        <span class="hljs-keyword">if</span> (key === <span class="hljs-string">&apos;extraReducers&apos;</span>) {
+            <span class="hljs-keyword">return</span> getExtraReducers(hooks[key]);
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">return</span> hooks[key];
+        }
+
+    }
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getExtraReducers</span>(<span class="hljs-params">hook</span>) </span>{
+    <span class="hljs-keyword">let</span> ret = {};
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> reducerObj <span class="hljs-keyword">of</span> hook) {
+        ret = { ...ret, ...reducerObj };
+    }
+    <span class="hljs-keyword">return</span> ret;
+}
+</code></pre>
+<h2 id="t368. dynamic">8. dynamic <a href="#t368. dynamic"> # </a></h2>
+<ul>
+<li><code>dva/dynamic</code>&#x662F;&#x89E3;&#x51B3;&#x7EC4;&#x4EF6;&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x95EE;&#x9898;&#x7684;&#x65B9;&#x6CD5;&#x3002;<h3 id="t378.1 &#x4F7F;&#x7528;">8.1 &#x4F7F;&#x7528; <a href="#t378.1 &#x4F7F;&#x7528;"> # </a></h3>
+<h4 id="t388.1.1 index.tsx">8.1.1 index.tsx <a href="#t388.1.1 index.tsx"> # </a></h4>
+</li>
+</ul>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import dva, { connect } from &apos;./dva&apos;;
+<span class="hljs-addition">+import { Router, Route, routerRedux, Link } from &apos;./dva/router&apos;;</span>
+import { ConnectedRouter } from &apos;connected-react-router&apos;;
+import createLoading from &apos;./dva-loading&apos;;
+<span class="hljs-addition">+import dynamic from &apos;./dva/dynamic&apos;;</span>
+const app = dva();
+app.use(createLoading());
+app.model({
+    namespace: &apos;counter&apos;,
+    state: { number: 0 },
+    reducers: {
+        add(state) {
+            return { number: state.number + 1 };
+        }
+    },
+    effects: {
+        *asyncAdd(action, { call, put }) {
+            yield call(delay, 1000);
+            yield put({ type: &apos;counter/add&apos; });
+        },
+        *goto({ to }, { put }) {
+            yield put(routerRedux.push(to));
+        }
+    }
+});
+function Counter(props) {
+    return (
+        &lt;div&gt;
+            &lt;p&gt; {props.loading.models.counter ? &apos;loading&apos; : props.counter.number}&lt;/p&gt;
+            &lt;button onClick={() =&gt; props.dispatch({ type: &quot;counter/add&quot; })}&gt;&#x52A0;1&lt;/button&gt;
+            &lt;button onClick={() =&gt; props.dispatch({ type: &quot;counter/asyncAdd&quot; })}&gt;&#x5F02;&#x6B65;+&lt;/button&gt;
+            &lt;button onClick={() =&gt; props.dispatch({ type: &quot;counter/goto&quot;, to: &apos;/&apos; })}&gt;&#x8DF3;&#x8F6C;&#x5230;/&lt;/button&gt;
+        &lt;/div&gt;
+    )
+}
+const ConnectedCounter = connect(
+    (state) =&gt; state
+)(Counter);
+<span class="hljs-addition">+const Home = () =&gt; &lt;div&gt;Home&lt;/div&gt;;</span>
+<span class="hljs-addition">+const UserPageComponent = (dynamic as any)({</span>
+<span class="hljs-addition">+    app,</span>
+<span class="hljs-addition">+    models: () =&gt; [</span>
+<span class="hljs-addition">+        import(&apos;./models/users&apos;),</span>
+<span class="hljs-addition">+    ],</span>
+<span class="hljs-addition">+    component: () =&gt; import(&apos;./routes/UserPage&apos;),</span>
+<span class="hljs-addition">+});</span>
+app.router((api: any) =&gt; (
+    &lt;Router history={api.history}&gt;
+        &lt;&gt;
+<span class="hljs-addition">+            &lt;ul&gt;</span>
+<span class="hljs-addition">+                &lt;li&gt;&lt;Link to=&quot;/&quot;&gt;Home&lt;/Link&gt;&lt;/li&gt;</span>
+<span class="hljs-addition">+                &lt;li&gt;&lt;Link to=&quot;/counter&quot;&gt;counter&lt;/Link&gt;&lt;/li&gt;</span>
+<span class="hljs-addition">+                &lt;li&gt;&lt;Link to=&quot;/users&quot;&gt;users&lt;/Link&gt;&lt;/li&gt;</span>
+<span class="hljs-addition">+            &lt;/ul&gt;</span>
+            &lt;Route path=&quot;/&quot; exact={true} component={Home} /&gt;
+            &lt;Route path=&quot;/counter&quot; component={ConnectedCounter} /&gt;
+<span class="hljs-addition">+           &lt;Route path=&quot;/users&quot; component={UserPageComponent} /&gt;</span>
+        &lt;/&gt;
+    &lt;/Router&gt;
+));
+app.start(&apos;#root&apos;);
+
+function delay(ms) {
+    return new Promise((resolve) =&gt; {
+        setTimeout(function () {
+            resolve();
+        }, ms);
+    });
+}
+</code></pre>
+<h3 id="t398.2 &#x5B9E;&#x73B0;">8.2 &#x5B9E;&#x73B0; <a href="#t398.2 &#x5B9E;&#x73B0;"> # </a></h3>
+<h4 id="t408.2.1 dva\index.tsx">8.2.1 dva\index.tsx <a href="#t408.2.1 dva\index.tsx"> # </a></h4>
+<p>src\dva\index.tsx</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import ReactDOM from &apos;react-dom&apos;;
+import { createStore, combineReducers, applyMiddleware } from &apos;redux&apos;;
+import createSagaMiddleware from &apos;redux-saga&apos;;
+import * as sagaEffects from &apos;redux-saga/effects&apos;;
+import { NAMESPACE_SEP } from &apos;./constants&apos;;
+import { connect, Provider } from &apos;react-redux&apos;;
+import { DvaInstance, Router, Model } from &apos;./typings&apos;;
+import prefixNamespace from &apos;./prefixNamespace&apos;;
+import { createHashHistory } from &apos;history&apos;;
+import Plugin, { filterHooks } from &apos;./plugin&apos;;
+import { routerMiddleware, connectRouter, ConnectedRouter } from &quot;connected-react-router&quot;;
+let history = createHashHistory();
+export { connect };
+
+export default function (opts = {}) {
+    const app: DvaInstance = {
+        _models: [],
+        model,
+        router,
+        _router: null,
+        start
+    }
+    const initialReducers = { router: connectRouter(history) };
+    function model(model: Model) {
+        const prefixedModel = prefixNamespace(model);
+        app._models.push(prefixedModel);
+        return prefixedModel;
+    }
+
+    function router(router: Router) {
+        app._router = router;
+    }
+    const plugin = new Plugin();
+    plugin.use(filterHooks(opts));
+    app.use = plugin.use.bind(plugin);
+    function start(root) {
+        for (const model of app._models) {
+            initialReducers[model.namespace] = getReducer(model);
+        }
+        let rootReducer = createReducer();
+        const sagas = getSagas(app);
+        const sagaMiddleware = createSagaMiddleware();
+        let store = createStore(rootReducer, applyMiddleware(routerMiddleware(history), sagaMiddleware));
+        sagas.forEach(saga =&gt; sagaMiddleware.run(saga));
+        ReactDOM.render(&lt;Provider store={store}&gt;{app._router({ history })}&lt;/Provider&gt;, document.querySelector(root))
+<span class="hljs-addition">+        app.model = injectModel.bind(app);</span>
+<span class="hljs-addition">+        app._getSaga = getSaga;</span>
+<span class="hljs-addition">+        function injectModel(m) {</span>
+<span class="hljs-addition">+            m = model(m);</span>
+<span class="hljs-addition">+            initialReducers[m.namespace] = getReducer(m);</span>
+<span class="hljs-addition">+            store.replaceReducer(createReducer());</span>
+<span class="hljs-addition">+            if (m.effects) {</span>
+<span class="hljs-addition">+                sagaMiddleware.run(app._getSaga(m.effects, m));</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+            if (m.subscriptions) {</span>
+<span class="hljs-addition">+                runSubscription(m.subscriptions, m, app);</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+        function runSubscription(subscriptions, model, app) {</span>
+<span class="hljs-addition">+            for (const key in subscriptions) {</span>
+<span class="hljs-addition">+                subscriptions[key](</span>
+<span class="hljs-addition">+                    {</span>
+<span class="hljs-addition">+                        dispatch: prefixedDispatch(store.dispatch, model),</span>
+<span class="hljs-addition">+                        history: app._history,</span>
+<span class="hljs-addition">+                    }</span>
+<span class="hljs-addition">+                );</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+        function prefixedDispatch(dispatch, model) {</span>
+<span class="hljs-addition">+            return action =&gt; {</span>
+<span class="hljs-addition">+                const { type } = action;</span>
+<span class="hljs-addition">+                return dispatch({ ...action, type: prefixType(type, model) });</span>
+<span class="hljs-addition">+            };</span>
+<span class="hljs-addition">+        }</span>
+        function createReducer() {
+            const extraReducers = plugin.get(&apos;extraReducers&apos;);
+            return combineReducers({
+                ...initialReducers,
+                ...extraReducers
+            });
+        }
+<span class="hljs-addition">+    }</span>
+
+    function getSagas(app) {
+        let sagas: Array&lt;any&gt; = [];
+        for (const model of app._models) {
+            sagas.push(getSaga(model.effects, model, plugin.get(&apos;onEffect&apos;)));
+        }
+        return sagas;
+    }
+
+    return app;
+}
+
+function getSaga(effects, model, onEffect) {
+    return function* () {
+        for (const key in effects) {
+            const watcher = getWatcher(key, model.effects[key], model, onEffect);
+            yield sagaEffects.fork(watcher);
+        }
+    };
+}
+function getWatcher(key, effect, model, onEffect) {
+    return function* () {
+        yield sagaEffects.takeEvery(key, function* sagaWithCatch(...args) {
+            if (onEffect) {
+                for (const fn of onEffect) {
+                    effect = fn(effect, sagaEffects, model, key);
+                }
+            }
+            yield effect(...args, { ...sagaEffects, put: action =&gt; sagaEffects.put({ ...action, type: prefixType(action.type, model) }) });
+        });
+    };
+}
+function prefixType(type, model) {
+    if (type.indexOf(&apos;/&apos;) <span class="hljs-comment">=== -1) {</span>
+        return `${model.namespace}${NAMESPACE_SEP}${type}`;
+    }
+    return type;
+}
+function getReducer(model) {
+    let { reducers = {}, state: defaultState } = model;
+<span class="hljs-addition">+    return (state = defaultState, action) =&gt; {</span>
+        let reducer = reducers[action.type];
+        if (reducer) {
+            return reducer(state, action);
+        }
+        return state;
+    }
+}
+export * from &apos;./typings&apos;;
+</code></pre>
+<h4 id="t418.2.2 dynamic.tsx">8.2.2 dynamic.tsx <a href="#t418.2.2 dynamic.tsx"> # </a></h4>
+<p>src\dva\dynamic.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { Component, JSXElementConstructor } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">let</span> defaultLoadingComponent = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>loading<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">dynamic</span>(<span class="hljs-params">config</span>) </span>{
+    <span class="hljs-keyword">const</span> { app, models, component } = config;
+    <span class="hljs-keyword">return</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DynamicComponent</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span>&lt;<span class="hljs-title">any</span>, <span class="hljs-title">any</span>&gt; </span>{
+        <span class="hljs-attr">LoadingComponent</span>: any = <span class="hljs-literal">null</span>
+        <span class="hljs-keyword">constructor</span>(props) {
+            <span class="hljs-keyword">super</span>(props);
+            <span class="hljs-keyword">this</span>.LoadingComponent = config.LoadingComponent || defaultLoadingComponent;
+            <span class="hljs-keyword">let</span> AsyncComponent: JSXElementConstructor&lt;any&gt; | <span class="hljs-literal">null</span> = <span class="hljs-literal">null</span>;
+            <span class="hljs-keyword">this</span>.state = { AsyncComponent };
+        }
+        componentDidMount() {
+            <span class="hljs-built_in">Promise</span>.all([<span class="hljs-built_in">Promise</span>.all(models()), component()]).then(<span class="hljs-function">(<span class="hljs-params">[models, component]</span>) =&gt;</span> {
+                <span class="hljs-keyword">let</span> resolveModels = models.map(<span class="hljs-function">(<span class="hljs-params">model</span>) =&gt;</span> (model <span class="hljs-keyword">as</span> any).default);
+                resolveModels.forEach(<span class="hljs-function"><span class="hljs-params">model</span> =&gt;</span> {
+                    app.model(model);
+                });
+                <span class="hljs-keyword">let</span> AsyncComponent = component.default || component;
+                <span class="hljs-keyword">this</span>.setState({ AsyncComponent });
+            });
+        }
+
+        render() {
+            <span class="hljs-keyword">const</span> { AsyncComponent } = <span class="hljs-keyword">this</span>.state;
+            <span class="hljs-keyword">const</span> { LoadingComponent } = <span class="hljs-keyword">this</span>;
+            <span class="hljs-keyword">if</span> (AsyncComponent)
+                <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">AsyncComponent</span> {<span class="hljs-attr">...this.props</span>} /&gt;</span></span>;
+            <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">LoadingComponent</span> {<span class="hljs-attr">...this.props</span>} /&gt;</span></span>;
+        }
+    };
+}
+</code></pre>
+<h4 id="t428.2.3 src\models\users.tsx">8.2.3 src\models\users.tsx <a href="#t428.2.3 src\models\users.tsx"> # </a></h4>
+<p>src\models\users.tsx</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">delay</span>(<span class="hljs-params">ms</span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve</span>) =&gt;</span> {
+        setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            resolve();
+        }, ms);
+    });
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+    <span class="hljs-attr">namespace</span>: <span class="hljs-string">&apos;users&apos;</span>,
+    <span class="hljs-attr">state</span>: { <span class="hljs-attr">list</span>: [{ <span class="hljs-attr">id</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;&#x73E0;&#x5CF0;&apos;</span> }, { <span class="hljs-attr">id</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">&apos;&#x67B6;&#x6784;&apos;</span> }] },
+    <span class="hljs-attr">reducers</span>: {
+        add(state, action) {
+            <span class="hljs-keyword">return</span> { <span class="hljs-attr">list</span>: [...state.list, { <span class="hljs-attr">id</span>: <span class="hljs-built_in">Date</span>.now(), <span class="hljs-attr">name</span>: action.payload }] };
+        }
+    },
+    <span class="hljs-attr">effects</span>: {
+        *asyncAdd(action, { call, put }) {
+            <span class="hljs-keyword">yield</span> call(delay, <span class="hljs-number">1000</span>);
+            <span class="hljs-keyword">yield</span> put({ <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;add&apos;</span>, <span class="hljs-attr">payload</span>: <span class="hljs-string">&apos;&#x5B66;&#x9662;&apos;</span> });
+        }
+    }
+}
+</code></pre>
+<h4 id="t438.2.4 routes\UserPage.tsx">8.2.4 routes\UserPage.tsx <a href="#t438.2.4 routes\UserPage.tsx"> # </a></h4>
+<p>src\routes\UserPage.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { connect } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;../dva&quot;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">UserPage</span>(<span class="hljs-params">props</span>) </span>{
+    <span class="hljs-keyword">let</span> list = props.list || [];
+    <span class="hljs-keyword">return</span> (
+        <span class="xml"><span class="hljs-tag">&lt;&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> props.dispatch({ type: &apos;users/asyncAdd&apos; })}&gt;+<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+                {
+                    list.map(user =&gt; (
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{user.id}</span>&gt;</span>{user.name}<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    ))
+                }
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;/&gt;</span></span>
+    )
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> connect(<span class="hljs-function"><span class="hljs-params">state</span> =&gt;</span> state.users)(UserPage);
+</code></pre>
+<h2 id="t449. onAction&#x4E2D;&#x95F4;&#x4EF6;">9. onAction&#x4E2D;&#x95F4;&#x4EF6; <a href="#t449. onAction&#x4E2D;&#x95F4;&#x4EF6;"> # </a></h2>
+<pre><code class="lang-js">cnpm i redux-logger -S
+</code></pre>
+<h3 id="t459.1 &#x4F7F;&#x7528;">9.1 &#x4F7F;&#x7528; <a href="#t459.1 &#x4F7F;&#x7528;"> # </a></h3>
+<h4 id="t469.1.1 index.tsx">9.1.1 index.tsx <a href="#t469.1.1 index.tsx"> # </a></h4>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import dva, { connect } from &apos;./dva&apos;;
+import { Router, Route, routerRedux, Link } from &apos;./dva/router&apos;;
+import createLoading from &apos;./dva-loading&apos;;
+import dynamic from &apos;./dva/dynamic&apos;;
+<span class="hljs-addition">+import { createLogger } from &apos;./redux-logger&apos;;</span>
+
+const app = dva();
+<span class="hljs-addition">+app.use({ onAction: createLogger() });</span>
+app.use(createLoading());
+app.model({
+    namespace: &apos;counter&apos;,
+    state: { number: 0 },
+    reducers: {
+        add(state) {
+            return { number: state.number + 1 };
+        }
+    },
+    effects: {
+        *asyncAdd(action, { call, put }) {
+            yield call(delay, 1000);
+            yield put({ type: &apos;counter/add&apos; });
+        },
+        *goto({ to }, { put }) {
+            yield put(routerRedux.push(to));
+        }
+    }
+});
+function Counter(props) {
+    return (
+        &lt;div&gt;
+            &lt;p&gt; {props.loading.models.counter ? &apos;loading&apos; : props.counter.number}&lt;/p&gt;
+            &lt;button onClick={() =&gt; props.dispatch({ type: &quot;counter/add&quot; })}&gt;&#x52A0;1&lt;/button&gt;
+            &lt;button onClick={() =&gt; props.dispatch({ type: &quot;counter/asyncAdd&quot; })}&gt;&#x5F02;&#x6B65;+&lt;/button&gt;
+            &lt;button onClick={() =&gt; props.dispatch({ type: &quot;counter/goto&quot;, to: &apos;/&apos; })}&gt;&#x8DF3;&#x8F6C;&#x5230;/&lt;/button&gt;
+        &lt;/div&gt;
+    )
+}
+const ConnectedCounter = connect(
+    (state) =&gt; state
+)(Counter);
+const Home = () =&gt; &lt;div&gt;Home&lt;/div&gt;;
+const UserPageComponent = (dynamic as any)({
+    app,
+    models: () =&gt; [
+        import(&apos;./models/users&apos;),
+    ],
+    component: () =&gt; import(&apos;./routes/UserPage&apos;),
+});
+app.router((api: any) =&gt; (
+    &lt;Router history={api.history}&gt;
+        &lt;&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;Link to=&quot;/&quot;&gt;Home&lt;/Link&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;Link to=&quot;/counter&quot;&gt;counter&lt;/Link&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;Link to=&quot;/users&quot;&gt;users&lt;/Link&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;Route path=&quot;/&quot; exact={true} component={Home} /&gt;
+            &lt;Route path=&quot;/counter&quot; component={ConnectedCounter} /&gt;
+            &lt;Route path=&quot;/users&quot; component={UserPageComponent} /&gt;
+        &lt;/&gt;
+    &lt;/Router&gt;
+));
+app.start(&apos;#root&apos;);
+
+function delay(ms) {
+    return new Promise((resolve) =&gt; {
+        setTimeout(function () {
+            resolve();
+        }, ms);
+    });
+}
+</code></pre>
+<h3 id="t479.2 &#x5B9E;&#x73B0;">9.2 &#x5B9E;&#x73B0; <a href="#t479.2 &#x5B9E;&#x73B0;"> # </a></h3>
+<h4 id="t489.2.1 dva\index.tsx">9.2.1 dva\index.tsx <a href="#t489.2.1 dva\index.tsx"> # </a></h4>
+<p>src\dva\index.tsx</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import ReactDOM from &apos;react-dom&apos;;
+import { createStore, combineReducers, applyMiddleware } from &apos;redux&apos;;
+import createSagaMiddleware from &apos;redux-saga&apos;;
+import * as sagaEffects from &apos;redux-saga/effects&apos;;
+import { NAMESPACE_SEP } from &apos;./constants&apos;;
+import { connect, Provider } from &apos;react-redux&apos;;
+import { DvaInstance, Router, Model } from &apos;./typings&apos;;
+import prefixNamespace from &apos;./prefixNamespace&apos;;
+import { createHashHistory } from &apos;history&apos;;
+import Plugin, { filterHooks } from &apos;./plugin&apos;;
+import { routerMiddleware, connectRouter } from &quot;connected-react-router&quot;;
+let history = createHashHistory();
+export { connect };
+
+export default function (opts = {}) {
+    const app: DvaInstance = {
+        _models: [],
+        model,
+        router,
+        _router: null,
+        start
+    }
+    const initialReducers = { router: connectRouter(history) };
+    function model(model: Model) {
+        const prefixedModel = prefixNamespace(model);
+        app._models.push(prefixedModel);
+        return prefixedModel;
+    }
+
+    function router(router: Router) {
+        app._router = router;
+    }
+    const plugin = new Plugin();
+    plugin.use(filterHooks(opts));
+    app.use = plugin.use.bind(plugin);
+    function start(root) {
+        for (const model of app._models) {
+            initialReducers[model.namespace] = getReducer(model);
+        }
+        let rootReducer = createReducer();
+        const sagas = getSagas(app);
+        const sagaMiddleware = createSagaMiddleware();
+<span class="hljs-addition">+        const extraMiddlewares = plugin.get(&apos;onAction&apos;);</span>
+<span class="hljs-addition">+        let store = createStore(rootReducer, applyMiddleware(...extraMiddlewares, routerMiddleware(history), sagaMiddleware));</span>
+        sagas.forEach(saga =&gt; sagaMiddleware.run(saga));
+        ReactDOM.render(&lt;Provider store={store}&gt;{app._router({ history })}&lt;/Provider&gt;, document.querySelector(root))
+        app.model = injectModel.bind(app);
+        app._getSaga = getSaga;
+        function injectModel(m) {
+            m = model(m);
+            initialReducers[m.namespace] = getReducer(m);
+            store.replaceReducer(createReducer());
+            if (m.effects) {
+                sagaMiddleware.run(app._getSaga(m.effects, m));
+            }
+            if (m.subscriptions) {
+                runSubscription(m.subscriptions, m, app);
+            }
+        }
+        function runSubscription(subscriptions, model, app) {
+            for (const key in subscriptions) {
+                subscriptions[key](
+                    {
+                        dispatch: prefixedDispatch(store.dispatch, model),
+                        history: app._history,
+                    }
+                );
+            }
+        }
+        function prefixedDispatch(dispatch, model) {
+            return action =&gt; {
+                const { type } = action;
+                return dispatch({ ...action, type: prefixType(type, model) });
+            };
+        }
+        function createReducer() {
+            const extraReducers = plugin.get(&apos;extraReducers&apos;);
+            return combineReducers({
+                ...initialReducers,
+                ...extraReducers
+            });
+        }
+    }
+
+    function getSagas(app) {
+        let sagas: Array&lt;any&gt; = [];
+        for (const model of app._models) {
+            sagas.push(getSaga(model.effects, model, plugin.get(&apos;onEffect&apos;)));
+        }
+        return sagas;
+    }
+
+    return app;
+}
+
+function getSaga(effects, model, onEffect) {
+    return function* () {
+        for (const key in effects) {
+            const watcher = getWatcher(key, model.effects[key], model, onEffect);
+            yield sagaEffects.fork(watcher);
+        }
+    };
+}
+function getWatcher(key, effect, model, onEffect) {
+    return function* () {
+        yield sagaEffects.takeEvery(key, function* sagaWithCatch(...args) {
+            if (onEffect) {
+                for (const fn of onEffect) {
+                    effect = fn(effect, sagaEffects, model, key);
+                }
+            }
+            yield effect(...args, { ...sagaEffects, put: action =&gt; sagaEffects.put({ ...action, type: prefixType(action.type, model) }) });
+        });
+    };
+}
+function prefixType(type, model) {
+    if (type.indexOf(&apos;/&apos;) <span class="hljs-comment">=== -1) {</span>
+        return `${model.namespace}${NAMESPACE_SEP}${type}`;
+    }
+    return type;
+}
+function getReducer(model) {
+    let { reducers = {}, state: defaultState } = model;
+    return (state = defaultState, action) =&gt; {
+        let reducer = reducers[action.type];
+        if (reducer) {
+            return reducer(state, action);
+        }
+        return state;
+    }
+}
+export * from &apos;./typings&apos;;
+</code></pre>
+<h4 id="t499.2.2 src\dva\plugin.tsx">9.2.2 src\dva\plugin.tsx <a href="#t499.2.2 src\dva\plugin.tsx"> # </a></h4>
+<p>src\dva\plugin.tsx</p>
+<pre><code class="lang-diff">const hooks = [
+    &apos;onEffect&apos;,
+    &apos;extraReducers&apos;,
+<span class="hljs-addition">+    &apos;onAction&apos;</span>
+];
+export function filterHooks(obj) {
+    return Object.keys(obj).reduce((memo, key) =&gt; {
+        if (hooks.indexOf(key) &gt; -1) {
+            memo[key] = obj[key];
+        }
+        return memo;
+    }, {});
+}
+export default class Plugin {
+    hooks: any
+    constructor() {
+        this.hooks = hooks.reduce((memo, key) =&gt; {
+            memo[key] = [];
+            return memo;
+        }, {});
+    }
+    use(plugin) {
+        const { hooks } = this;
+        for (const key in plugin) {
+            hooks[key].push(plugin[key]);
+        }
+    }
+    get(key) {
+        const { hooks } = this;
+        if (key <span class="hljs-comment">=== &apos;extraReducers&apos;) {</span>
+            return getExtraReducers(hooks[key]);
+        } else {
+            return hooks[key];
+        }
+
+    }
+}
+function getExtraReducers(hook) {
+    let ret = {};
+    for (const reducerObj of hook) {
+        ret = { ...ret, ...reducerObj };
+    }
+    return ret;
+}
+</code></pre>
+<h4 id="t509.2.3 src\redux-logger.tsx">9.2.3 src\redux-logger.tsx <a href="#t509.2.3 src\redux-logger.tsx"> # </a></h4>
+<p>src\redux-logger.tsx</p>
+<pre><code class="lang-js"><span class="hljs-comment">//https://github.com/LogRocket/redux-logger/blob/5816a9fc8da9b417589380e381ed66f1114ebd9a/src/defaults.js#L12-L17</span>
+<span class="hljs-keyword">const</span> colors = {
+    <span class="hljs-attr">title</span>: <span class="hljs-string">&apos;inherit&apos;</span>,
+    <span class="hljs-attr">prevState</span>: <span class="hljs-string">&apos;#9E9E9E&apos;</span>,
+    <span class="hljs-attr">action</span>: <span class="hljs-string">&apos;#03A9F4&apos;</span>,
+    <span class="hljs-attr">nextState</span>: <span class="hljs-string">&apos;#4CAF50&apos;</span>
+}
+<span class="hljs-keyword">const</span> logger = <span class="hljs-function">(<span class="hljs-params">{ dispatch, getState }</span>) =&gt;</span> <span class="hljs-function"><span class="hljs-params">next</span> =&gt;</span> <span class="hljs-function">(<span class="hljs-params">action</span>) =&gt;</span> {
+    <span class="hljs-keyword">let</span> prevState = getState();
+    <span class="hljs-keyword">let</span> startedTime = <span class="hljs-built_in">Date</span>.now();
+    <span class="hljs-keyword">let</span> returnedValue = next(action);
+    <span class="hljs-keyword">let</span> took = <span class="hljs-built_in">Date</span>.now() - startedTime;
+    <span class="hljs-keyword">let</span> nextState = getState();
+    <span class="hljs-keyword">const</span> headerCSS: any[] = [];
+    headerCSS.push(<span class="hljs-string">&apos;color: gray; font-weight: lighter;&apos;</span>);
+    headerCSS.push(<span class="hljs-string">`color: <span class="hljs-subst">${colors.title}</span>;`</span>);
+    headerCSS.push(<span class="hljs-string">&apos;color: gray; font-weight: lighter;&apos;</span>);
+    headerCSS.push(<span class="hljs-string">&apos;color: gray; font-weight: lighter;&apos;</span>);
+    <span class="hljs-keyword">const</span> title = titleFormatter(action, startedTime, took);
+    <span class="hljs-comment">//action %c counter/add %c @ &#x4E0B;&#x5348;11:17:59 %c (in 2.00 ms)  console.log(`%cred%cgreen`, &apos;color:red&apos;, &apos;color:green&apos;);</span>
+    <span class="hljs-built_in">console</span>.groupCollapsed(<span class="hljs-string">`%c <span class="hljs-subst">${title}</span>`</span>, ...headerCSS);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;%c prev state&apos;</span>, <span class="hljs-string">`color: <span class="hljs-subst">${colors.prevState}</span>; font-weight: bold`</span>, prevState);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;%c action    &apos;</span>, <span class="hljs-string">`color: <span class="hljs-subst">${colors.action}</span>; font-weight: bold`</span>, action);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;%c next state&apos;</span>, <span class="hljs-string">`color: <span class="hljs-subst">${colors.nextState}</span>; font-weight: bold`</span>, nextState);
+    <span class="hljs-built_in">console</span>.groupEnd();
+    <span class="hljs-keyword">return</span> returnedValue;
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">titleFormatter</span>(<span class="hljs-params">action, time, took</span>) </span>{
+    <span class="hljs-keyword">const</span> parts = [<span class="hljs-string">&apos;action&apos;</span>];
+    parts.push(<span class="hljs-string">`%c<span class="hljs-subst">${<span class="hljs-built_in">String</span>(action.type)}</span>`</span>);
+    parts.push(<span class="hljs-string">`%c@ <span class="hljs-subst">${<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(time).toLocaleTimeString()}</span>`</span>);
+    parts.push(<span class="hljs-string">`%c(in <span class="hljs-subst">${took.toFixed(<span class="hljs-number">2</span>)}</span> ms)`</span>);
+    <span class="hljs-keyword">return</span> parts.join(<span class="hljs-string">&apos; &apos;</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createLogger</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> logger;
+}
+<span class="hljs-keyword">export</span> {
+    createLogger
+}
+</code></pre>
+<h2 id="t5110. stateChange">10. stateChange <a href="#t5110. stateChange"> # </a></h2>
+<h3 id="t5210.1 &#x4F7F;&#x7528;">10.1 &#x4F7F;&#x7528; <a href="#t5210.1 &#x4F7F;&#x7528;"> # </a></h3>
+<h4 id="t5310.1.1 index.tsx">10.1.1 index.tsx <a href="#t5310.1.1 index.tsx"> # </a></h4>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import dva, { connect } from &apos;./dva&apos;;
+import { Router, Route, routerRedux, Link } from &apos;./dva/router&apos;;
+import createLoading from &apos;./dva-loading&apos;;
+import dynamic from &apos;./dva/dynamic&apos;;
+import { createLogger } from &apos;./redux-logger&apos;;
+
+const app = dva({
+<span class="hljs-addition">+    initialState: localStorage.getItem(&apos;state&apos;) ? JSON.parse(localStorage.getItem(&apos;state&apos;)!) : {},</span>
+<span class="hljs-addition">+    onStateChange: function () {</span>
+<span class="hljs-addition">+        localStorage.setItem(&apos;state&apos;, JSON.stringify(arguments[0]));</span>
+<span class="hljs-addition">+    }</span>
+});
+app.use({ onAction: createLogger() });
+app.use(createLoading());
+app.model({
+    namespace: &apos;counter&apos;,
+    state: { number: 0 },
+    reducers: {
+        add(state) {
+            return { number: state.number + 1 };
+        }
+    },
+    effects: {
+        *asyncAdd(action, { call, put }) {
+            yield call(delay, 1000);
+            yield put({ type: &apos;counter/add&apos; });
+        },
+        *goto({ to }, { put }) {
+            yield put(routerRedux.push(to));
+        }
+    }
+});
+function Counter(props) {
+    return (
+        &lt;div&gt;
+            &lt;p&gt; {props.loading.models.counter ? &apos;loading&apos; : props.counter.number}&lt;/p&gt;
+            &lt;button onClick={() =&gt; props.dispatch({ type: &quot;counter/add&quot; })}&gt;&#x52A0;1&lt;/button&gt;
+            &lt;button onClick={() =&gt; props.dispatch({ type: &quot;counter/asyncAdd&quot; })}&gt;&#x5F02;&#x6B65;+&lt;/button&gt;
+            &lt;button onClick={() =&gt; props.dispatch({ type: &quot;counter/goto&quot;, to: &apos;/&apos; })}&gt;&#x8DF3;&#x8F6C;&#x5230;/&lt;/button&gt;
+        &lt;/div&gt;
+    )
+}
+const ConnectedCounter = connect(
+    (state) =&gt; state
+)(Counter);
+const Home = () =&gt; &lt;div&gt;Home&lt;/div&gt;;
+const UserPageComponent = (dynamic as any)({
+    app,
+    models: () =&gt; [
+        import(&apos;./models/users&apos;),
+    ],
+    component: () =&gt; import(&apos;./routes/UserPage&apos;),
+});
+app.router((api: any) =&gt; (
+    &lt;Router history={api.history}&gt;
+        &lt;&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;Link to=&quot;/&quot;&gt;Home&lt;/Link&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;Link to=&quot;/counter&quot;&gt;counter&lt;/Link&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;Link to=&quot;/users&quot;&gt;users&lt;/Link&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;Route path=&quot;/&quot; exact={true} component={Home} /&gt;
+            &lt;Route path=&quot;/counter&quot; component={ConnectedCounter} /&gt;
+            &lt;Route path=&quot;/users&quot; component={UserPageComponent} /&gt;
+        &lt;/&gt;
+    &lt;/Router&gt;
+));
+app.start(&apos;#root&apos;);
+
+function delay(ms) {
+    return new Promise((resolve) =&gt; {
+        setTimeout(function () {
+            resolve();
+        }, ms);
+    });
+}
+</code></pre>
+<h3 id="t5410.2 &#x5B9E;&#x73B0;">10.2 &#x5B9E;&#x73B0; <a href="#t5410.2 &#x5B9E;&#x73B0;"> # </a></h3>
+<h4 id="t5510.2.1 dva\index.tsx">10.2.1 dva\index.tsx <a href="#t5510.2.1 dva\index.tsx"> # </a></h4>
+<p>src\dva\index.tsx</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import ReactDOM from &apos;react-dom&apos;;
+import { createStore, combineReducers, applyMiddleware } from &apos;redux&apos;;
+import createSagaMiddleware from &apos;redux-saga&apos;;
+import * as sagaEffects from &apos;redux-saga/effects&apos;;
+import { NAMESPACE_SEP } from &apos;./constants&apos;;
+import { connect, Provider } from &apos;react-redux&apos;;
+import { DvaInstance, Router, Model } from &apos;./typings&apos;;
+import prefixNamespace from &apos;./prefixNamespace&apos;;
+import { createHashHistory } from &apos;history&apos;;
+import Plugin, { filterHooks } from &apos;./plugin&apos;;
+import { routerMiddleware, connectRouter } from &quot;connected-react-router&quot;;
+let history = createHashHistory();
+export { connect };
+
+export default function (opts: any = {}) {
+    const app: DvaInstance = {
+        _models: [],
+        model,
+        router,
+        _router: null,
+        start
+    }
+    const initialReducers = { router: connectRouter(history) };
+    function model(model: Model) {
+        const prefixedModel = prefixNamespace(model);
+        app._models.push(prefixedModel);
+        return prefixedModel;
+    }
+
+    function router(router: Router) {
+        app._router = router;
+    }
+    const plugin = new Plugin();
+    plugin.use(filterHooks(opts));
+    app.use = plugin.use.bind(plugin);
+    function start(root) {
+        for (const model of app._models) {
+            initialReducers[model.namespace] = getReducer(model);
+        }
+        let rootReducer = createReducer();
+        const sagas = getSagas(app);
+        const sagaMiddleware = createSagaMiddleware();
+        const extraMiddlewares = plugin.get(&apos;onAction&apos;);
+<span class="hljs-addition">+        let store = createStore(rootReducer, opts.initialState, applyMiddleware(...extraMiddlewares, routerMiddleware(history), sagaMiddleware));</span>
+<span class="hljs-addition">+        const listeners = plugin.get(&apos;onStateChange&apos;);</span>
+<span class="hljs-addition">+        for (const listener of listeners) {</span>
+<span class="hljs-addition">+            store.subscribe(() =&gt; {</span>
+<span class="hljs-addition">+                listener(store.getState());</span>
+<span class="hljs-addition">+            });</span>
+<span class="hljs-addition">+        }</span>
+        sagas.forEach(saga =&gt; sagaMiddleware.run(saga));
+        ReactDOM.render(&lt;Provider store={store}&gt;{app._router({ history })}&lt;/Provider&gt;, document.querySelector(root))
+        app.model = injectModel.bind(app);
+        app._getSaga = getSaga;
+        function injectModel(m) {
+            m = model(m);
+            initialReducers[m.namespace] = getReducer(m);
+            store.replaceReducer(createReducer());
+            if (m.effects) {
+                sagaMiddleware.run(app._getSaga(m.effects, m));
+            }
+            if (m.subscriptions) {
+                runSubscription(m.subscriptions, m, app);
+            }
+        }
+        function runSubscription(subscriptions, model, app) {
+            for (const key in subscriptions) {
+                subscriptions[key](
+                    {
+                        dispatch: prefixedDispatch(store.dispatch, model),
+                        history: app._history,
+                    }
+                );
+            }
+        }
+        function prefixedDispatch(dispatch, model) {
+            return action =&gt; {
+                const { type } = action;
+                return dispatch({ ...action, type: prefixType(type, model) });
+            };
+        }
+        function createReducer() {
+          const extraReducers = plugin.get(&apos;extraReducers&apos;);
+          return combineReducers({
+            ...initialReducers,
+            ...extraReducers
+          });
+       }
+    }
+
+    function getSagas(app) {
+        let sagas: Array&lt;any&gt; = [];
+        for (const model of app._models) {
+            sagas.push(getSaga(model.effects, model, plugin.get(&apos;onEffect&apos;)));
+        }
+        return sagas;
+    }
+
+    return app;
+}
+
+function getSaga(effects, model, onEffect) {
+    return function* () {
+        for (const key in effects) {
+            const watcher = getWatcher(key, model.effects[key], model, onEffect);
+            yield sagaEffects.fork(watcher);
+        }
+    };
+}
+function getWatcher(key, effect, model, onEffect) {
+    return function* () {
+        yield sagaEffects.takeEvery(key, function* sagaWithCatch(...args) {
+            if (onEffect) {
+                for (const fn of onEffect) {
+                    effect = fn(effect, sagaEffects, model, key);
+                }
+            }
+            yield effect(...args, { ...sagaEffects, put: action =&gt; sagaEffects.put({ ...action, type: prefixType(action.type, model) }) });
+        });
+    };
+}
+function prefixType(type, model) {
+    if (type.indexOf(&apos;/&apos;) <span class="hljs-comment">=== -1) {</span>
+        return `${model.namespace}${NAMESPACE_SEP}${type}`;
+    }
+    return type;
+}
+function getReducer(model) {
+    let { reducers = {}, state: defaultState } = model;
+    return (state = defaultState, action) =&gt; {
+        let reducer = reducers[action.type];
+        if (reducer) {
+            return reducer(state, action);
+        }
+        return state;
+    }
+}
+export * from &apos;./typings&apos;;
+</code></pre>
+<h4 id="t5610.2.2 src\dva\plugin.tsx">10.2.2 src\dva\plugin.tsx <a href="#t5610.2.2 src\dva\plugin.tsx"> # </a></h4>
+<p>src\dva\plugin.tsx</p>
+<pre><code class="lang-diff">const hooks = [
+    &apos;onEffect&apos;,
+    &apos;extraReducers&apos;,
+    &apos;onAction&apos;,
+<span class="hljs-addition">+    &apos;onStateChange&apos;</span>
+];
+export function filterHooks(obj) {
+    return Object.keys(obj).reduce((memo, key) =&gt; {
+        if (hooks.indexOf(key) &gt; -1) {
+            memo[key] = obj[key];
+        }
+        return memo;
+    }, {});
+}
+export default class Plugin {
+    hooks: any
+    constructor() {
+        this.hooks = hooks.reduce((memo, key) =&gt; {
+            memo[key] = [];
+            return memo;
+        }, {});
+    }
+    use(plugin) {
+        const { hooks } = this;
+        for (const key in plugin) {
+            hooks[key].push(plugin[key]);
+        }
+    }
+    get(key) {
+        const { hooks } = this;
+        if (key <span class="hljs-comment">=== &apos;extraReducers&apos;) {</span>
+            return getExtraReducers(hooks[key]);
+        } else {
+            return hooks[key];
+        }
+
+    }
+}
+function getExtraReducers(hook) {
+    let ret = {};
+    for (const reducerObj of hook) {
+        ret = { ...ret, ...reducerObj };
+    }
+    return ret;
+}
+</code></pre>
+<h2 id="t5711. onReducer">11. onReducer <a href="#t5711. onReducer"> # </a></h2>
+<ul>
+<li><a href="https://github.com/omnidan/redux-undo">redux-undo</a>&#x5229;&#x7528;&#x9AD8;&#x9636;reducer&#x6765;&#x589E;&#x5F3A;reducer&#x7684;&#x4F8B;&#x5B50;,&#x5B83;&#x4E3B;&#x8981;&#x4F5C;&#x7528;&#x662F;&#x4F7F;&#x4EFB;&#x610F;reducer&#x53D8;&#x6210;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x64A4;&#x9500;&#x548C;&#x91CD;&#x505A;&#x7684;&#x5168;&#x65B0;reducer</li>
+</ul>
+<h3 id="t5811.1 &#x4F7F;&#x7528;">11.1 &#x4F7F;&#x7528; <a href="#t5811.1 &#x4F7F;&#x7528;"> # </a></h3>
+<h4 id="t5911.1.1 index.tsx">11.1.1 index.tsx <a href="#t5911.1.1 index.tsx"> # </a></h4>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import dva, { connect } from &apos;./dva&apos;;
+import { Router, Route, routerRedux, Link } from &apos;./dva/router&apos;;
+import createLoading from &apos;./dva-loading&apos;;
+import dynamic from &apos;./dva/dynamic&apos;;
+import { createLogger } from &apos;./redux-logger&apos;;
+<span class="hljs-addition">+import undoable, { ActionCreators } from &apos;./redux-undo&apos;;</span>
+
+const app = dva({
+    initialState: localStorage.getItem(&apos;state&apos;) ? JSON.parse(localStorage.getItem(&apos;state&apos;)!) : undefined,
+    onStateChange: function () {
+        localStorage.setItem(&apos;state&apos;, JSON.stringify(arguments[0]));
+    },
+<span class="hljs-addition">+    onReducer: reducer =&gt; {</span>
+<span class="hljs-addition">+        let undoReducer = undoable(reducer);</span>
+<span class="hljs-addition">+        return (state, action) =&gt; {</span>
+<span class="hljs-addition">+            let newState: any = undoReducer(state, action);</span>
+<span class="hljs-addition">+            return { ...newState, router: newState.present.router };</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+    }</span>
+});
+app.use({ onAction: createLogger() });
+app.use(createLoading());
+app.model({
+    namespace: &apos;counter&apos;,
+    state: { number: 0 },
+    reducers: {
+        add(state) {
+            return { number: state.number + 1 };
+        }
+    },
+    effects: {
+        *asyncAdd(action, { call, put }) {
+            yield call(delay, 1000);
+            yield put({ type: &apos;counter/add&apos; });
+        },
+        *goto({ to }, { put }) {
+            yield put(routerRedux.push(to));
+        }
+    }
+});
+function Counter(props) {
+    return (
+        &lt;div&gt;
+            &lt;p&gt; {props.loading.models.counter ? &apos;loading&apos; : props.counter.number}&lt;/p&gt;
+            &lt;button onClick={() =&gt; props.dispatch({ type: &quot;counter/add&quot; })}&gt;&#x52A0;1&lt;/button&gt;
+            &lt;button onClick={() =&gt; props.dispatch({ type: &quot;counter/asyncAdd&quot; })}&gt;&#x5F02;&#x6B65;+&lt;/button&gt;
+            &lt;button onClick={() =&gt; props.dispatch({ type: &quot;counter/goto&quot;, to: &apos;/&apos; })}&gt;&#x8DF3;&#x8F6C;&#x5230;/&lt;/button&gt;
+<span class="hljs-addition">+            &lt;button onClick={() =&gt; props.dispatch(ActionCreators.undo())}&gt;undo&lt;/button&gt;</span>
+<span class="hljs-addition">+            &lt;button onClick={() =&gt; props.dispatch(ActionCreators.redo())}&gt;redo&lt;/button&gt;</span>
+        &lt;/div&gt;
+    )
+}
+const ConnectedCounter = connect(
+<span class="hljs-addition">+    (state) =&gt; state.present</span>
+)(Counter);
+const Home = () =&gt; &lt;div&gt;Home&lt;/div&gt;;
+const UserPageComponent = (dynamic as any)({
+    app,
+    models: () =&gt; [
+        import(&apos;./models/users&apos;),
+    ],
+    component: () =&gt; import(&apos;./routes/UserPage&apos;),
+});
+app.router((api: any) =&gt; (
+    &lt;Router history={api.history}&gt;
+        &lt;&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;Link to=&quot;/&quot;&gt;Home&lt;/Link&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;Link to=&quot;/counter&quot;&gt;counter&lt;/Link&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;Link to=&quot;/users&quot;&gt;users&lt;/Link&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;Route path=&quot;/&quot; exact={true} component={Home} /&gt;
+            &lt;Route path=&quot;/counter&quot; component={ConnectedCounter} /&gt;
+            &lt;Route path=&quot;/users&quot; component={UserPageComponent} /&gt;
+        &lt;/&gt;
+    &lt;/Router&gt;
+));
+app.start(&apos;#root&apos;);
+
+function delay(ms) {
+    return new Promise((resolve) =&gt; {
+        setTimeout(function () {
+            resolve();
+        }, ms);
+    });
+}
+</code></pre>
+<h3 id="t6011.2 &#x5B9E;&#x73B0;">11.2 &#x5B9E;&#x73B0; <a href="#t6011.2 &#x5B9E;&#x73B0;"> # </a></h3>
+<h4 id="t6111.2.1 dva\index.tsx">11.2.1 dva\index.tsx <a href="#t6111.2.1 dva\index.tsx"> # </a></h4>
+<p>src\dva\index.tsx</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import ReactDOM from &apos;react-dom&apos;;
+import { createStore, combineReducers, applyMiddleware } from &apos;redux&apos;;
+import createSagaMiddleware from &apos;redux-saga&apos;;
+import * as sagaEffects from &apos;redux-saga/effects&apos;;
+import { NAMESPACE_SEP } from &apos;./constants&apos;;
+import { connect, Provider } from &apos;react-redux&apos;;
+import { DvaInstance, Router, Model } from &apos;./typings&apos;;
+import prefixNamespace from &apos;./prefixNamespace&apos;;
+import { createHashHistory } from &apos;history&apos;;
+import Plugin, { filterHooks } from &apos;./plugin&apos;;
+import { routerMiddleware, connectRouter } from &quot;connected-react-router&quot;;
+let history = createHashHistory();
+export { connect };
+
+export default function (opts: any = {}) {
+    const app: DvaInstance = {
+        _models: [],
+        model,
+        router,
+        _router: null,
+        start
+    }
+    const initialReducers = { router: connectRouter(history) };
+    function model(model: Model) {
+        const prefixedModel = prefixNamespace(model);
+        app._models.push(prefixedModel);
+        return prefixedModel;
+    }
+
+    function router(router: Router) {
+        app._router = router;
+    }
+    const plugin = new Plugin();
+    plugin.use(filterHooks(opts));
+    app.use = plugin.use.bind(plugin);
+    function start(root) {
+        for (const model of app._models) {
+            initialReducers[model.namespace] = getReducer(model);
+        }
+<span class="hljs-addition">+        const reducerEnhancer = plugin.get(&apos;onReducer&apos;);</span>
+        let rootReducer = createReducer();
+        const sagas = getSagas(app);
+        const sagaMiddleware = createSagaMiddleware();
+        const extraMiddlewares = plugin.get(&apos;onAction&apos;);
+        let store = createStore(rootReducer, opts.initialState, applyMiddleware(...extraMiddlewares, routerMiddleware(history), sagaMiddleware));
+        const listeners = plugin.get(&apos;onStateChange&apos;);
+        for (const listener of listeners) {
+            store.subscribe(() =&gt; {
+                listener(store.getState());
+            });
+        }
+        sagas.forEach(saga =&gt; sagaMiddleware.run(saga));
+        ReactDOM.render(&lt;Provider store={store}&gt;{app._router({ history })}&lt;/Provider&gt;, document.querySelector(root))
+        app.model = injectModel.bind(app);
+        app._getSaga = getSaga;
+        function injectModel(m) {
+            m = model(m);
+            initialReducers[m.namespace] = getReducer(m);
+            store.replaceReducer(createReducer());
+            if (m.effects) {
+                sagaMiddleware.run(app._getSaga(m.effects, m));
+            }
+            if (m.subscriptions) {
+                runSubscription(m.subscriptions, m, app);
+            }
+        }
+        function runSubscription(subscriptions, model, app) {
+            for (const key in subscriptions) {
+                subscriptions[key](
+                    {
+                        dispatch: prefixedDispatch(store.dispatch, model),
+                        history: app._history,
+                    }
+                );
+            }
+        }
+        function prefixedDispatch(dispatch, model) {
+            return action =&gt; {
+                const { type } = action;
+                return dispatch({ ...action, type: prefixType(type, model) });
+            };
+        }
+        function createReducer() {
+            const extraReducers = plugin.get(&apos;extraReducers&apos;);
+<span class="hljs-addition">+            return reducerEnhancer(combineReducers({</span>
+                ...initialReducers,
+                ...extraReducers
+            }));
+        }
+    }
+
+    function getSagas(app) {
+        let sagas: Array&lt;any&gt; = [];
+        for (const model of app._models) {
+            sagas.push(getSaga(model.effects, model, plugin.get(&apos;onEffect&apos;)));
+        }
+        return sagas;
+    }
+
+    return app;
+}
+
+function getSaga(effects, model, onEffect) {
+    return function* () {
+        for (const key in effects) {
+            const watcher = getWatcher(key, model.effects[key], model, onEffect);
+            yield sagaEffects.fork(watcher);
+        }
+    };
+}
+function getWatcher(key, effect, model, onEffect) {
+    return function* () {
+        yield sagaEffects.takeEvery(key, function* sagaWithCatch(...args) {
+            if (onEffect) {
+                for (const fn of onEffect) {
+                    effect = fn(effect, sagaEffects, model, key);
+                }
+            }
+            yield effect(...args, { ...sagaEffects, put: action =&gt; sagaEffects.put({ ...action, type: prefixType(action.type, model) }) });
+        });
+    };
+}
+function prefixType(type, model) {
+    if (type.indexOf(&apos;/&apos;) <span class="hljs-comment">=== -1) {</span>
+        return `${model.namespace}${NAMESPACE_SEP}${type}`;
+    }
+    return type;
+}
+function getReducer(model) {
+    let { reducers = {}, state: defaultState } = model;
+    return (state = defaultState, action) =&gt; {
+        let reducer = reducers[action.type];
+        if (reducer) {
+            return reducer(state, action);
+        }
+        return state;
+    }
+}
+export * from &apos;./typings&apos;;
+</code></pre>
+<h4 id="t6211.2.2 src\dva\plugin.tsx">11.2.2 src\dva\plugin.tsx <a href="#t6211.2.2 src\dva\plugin.tsx"> # </a></h4>
+<p>src\dva\plugin.tsx</p>
+<pre><code class="lang-diff">const hooks = [
+    &apos;onEffect&apos;,
+    &apos;extraReducers&apos;,
+    &apos;onAction&apos;,
+    &apos;onStateChange&apos;,
+<span class="hljs-addition">+    &apos;onReducer&apos;</span>
+];
+export function filterHooks(obj) {
+    return Object.keys(obj).reduce((memo, key) =&gt; {
+        if (hooks.indexOf(key) &gt; -1) {
+            memo[key] = obj[key];
+        }
+        return memo;
+    }, {});
+}
+export default class Plugin {
+    hooks: any
+    constructor() {
+        this.hooks = hooks.reduce((memo, key) =&gt; {
+            memo[key] = [];
+            return memo;
+        }, {});
+    }
+    use(plugin) {
+        const { hooks } = this;
+        for (const key in plugin) {
+            hooks[key].push(plugin[key]);
+        }
+    }
+    get(key) {
+        const { hooks } = this;
+        if (key <span class="hljs-comment">=== &apos;extraReducers&apos;) {</span>
+            return getExtraReducers(hooks[key]);
+<span class="hljs-addition">+        } else if (key === &apos;onReducer&apos;) {</span>
+<span class="hljs-addition">+            return getOnReducer(hooks[key]);</span>
+<span class="hljs-addition">+        } else {</span>
+            return hooks[key];
+        }
+
+    }
+}
+<span class="hljs-addition">+function getOnReducer(hook) {</span>
+<span class="hljs-addition">+    return function (reducer) {</span>
+<span class="hljs-addition">+        for (const reducerEnhancer of hook) {</span>
+<span class="hljs-addition">+            reducer = reducerEnhancer(reducer);</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+        return reducer;</span>
+<span class="hljs-addition">+    };</span>
+<span class="hljs-addition">+}</span>
+function getExtraReducers(hook) {
+    let ret = {};
+    for (const reducerObj of hook) {
+        ret = { ...ret, ...reducerObj };
+    }
+    return ret;
+}
+</code></pre>
+<h4 id="t6311.2.3 src\routes\UserPage.tsx">11.2.3 src\routes\UserPage.tsx <a href="#t6311.2.3 src\routes\UserPage.tsx"> # </a></h4>
+<p>src\routes\UserPage.tsx</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import { connect } from &quot;../dva&quot;;
+
+function UserPage(props) {
+    let list = props.list || [];
+    return (
+        &lt;&gt;
+            &lt;button onClick={() =&gt; props.dispatch({ type: &apos;users/asyncAdd&apos; })}&gt;+&lt;/button&gt;
+            &lt;ul&gt;
+                {
+                    list.map(user =&gt; (
+                        &lt;li key={user.id}&gt;{user.name}&lt;/li&gt;
+                    ))
+                }
+            &lt;/ul&gt;
+        &lt;/&gt;
+    )
+}
+<span class="hljs-addition">+export default connect(state =&gt; state.present.users)(UserPage);</span>
+</code></pre>
+<h4 id="t6411.2.4 src\redux-undo.tsx">11.2.4 src\redux-undo.tsx <a href="#t6411.2.4 src\redux-undo.tsx"> # </a></h4>
+<p>src\redux-undo.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> UNDO_TYPE = <span class="hljs-string">&quot;@@redux-unto/UNDO&quot;</span>;
+<span class="hljs-keyword">const</span> REDO_TYPE = <span class="hljs-string">&quot;@@redux-unto/REDO&quot;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> ActionCreators = {
+    undo() {
+        <span class="hljs-keyword">return</span> { <span class="hljs-attr">type</span>: UNDO_TYPE }
+    },
+    redo() {
+        <span class="hljs-keyword">return</span> { <span class="hljs-attr">type</span>: REDO_TYPE };
+    }
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">undoable</span>(<span class="hljs-params">reducer</span>) </span>{
+    <span class="hljs-keyword">let</span> undoType = UNDO_TYPE, redoType = REDO_TYPE;
+    <span class="hljs-keyword">const</span> initialState = {
+        <span class="hljs-attr">past</span>: [],
+        <span class="hljs-attr">future</span>: [],
+        <span class="hljs-attr">present</span>: reducer(<span class="hljs-literal">undefined</span>, {})
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">state = initialState, action</span>) </span>{
+        <span class="hljs-keyword">const</span> { past, present, future } = state;
+        <span class="hljs-keyword">switch</span> (action.type) {
+            <span class="hljs-keyword">case</span> undoType:
+                <span class="hljs-keyword">const</span> previous = past[past.length - <span class="hljs-number">1</span>];
+                <span class="hljs-keyword">const</span> newPast = past.slice(<span class="hljs-number">0</span>, past.length - <span class="hljs-number">1</span>);
+                <span class="hljs-keyword">return</span> {
+                    <span class="hljs-attr">past</span>: newPast,
+                    <span class="hljs-attr">present</span>: previous,
+                    <span class="hljs-attr">future</span>: [present, ...future]
+                }
+            <span class="hljs-keyword">case</span> redoType:
+                <span class="hljs-keyword">const</span> next = future[<span class="hljs-number">0</span>];
+                <span class="hljs-keyword">const</span> newFuture = future.slice(<span class="hljs-number">1</span>);
+                <span class="hljs-keyword">return</span> {
+                    <span class="hljs-attr">past</span>: [...past, present],
+                    <span class="hljs-attr">present</span>: next,
+                    <span class="hljs-attr">future</span>: newFuture
+                }
+            <span class="hljs-attr">default</span>:
+                <span class="hljs-keyword">const</span> newPresent = reducer(present, action);
+                <span class="hljs-keyword">return</span> {
+                    <span class="hljs-attr">past</span>: [...past, present],
+                    <span class="hljs-attr">present</span>: newPresent,
+                    <span class="hljs-attr">future</span>: []
+                }
+        }
+    }
+}
+</code></pre>
+<h2 id="t6512. extraEnhancers">12. extraEnhancers <a href="#t6512. extraEnhancers"> # </a></h2>
+<ul>
+<li><a href="https://github.com/rt2zz/redux-persist">redux-persist</a>&#x4F1A;&#x5C06;redux&#x7684;store&#x4E2D;&#x7684;&#x6570;&#x636E;&#x7F13;&#x5B58;&#x5230;&#x6D4F;&#x89C8;&#x5668;&#x7684;localStorage&#x4E2D;</li>
+</ul>
+<h3 id="t6612.1 &#x4F7F;&#x7528;">12.1 &#x4F7F;&#x7528; <a href="#t6612.1 &#x4F7F;&#x7528;"> # </a></h3>
+<h4 id="t6712.1.1 index.tsx">12.1.1 index.tsx <a href="#t6712.1.1 index.tsx"> # </a></h4>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import dva, { connect } from &apos;./dva&apos;;
+import { Router, Route, routerRedux, Link } from &apos;./dva/router&apos;;
+import createLoading from &apos;./dva-loading&apos;;
+import dynamic from &apos;./dva/dynamic&apos;;
+import { createLogger } from &apos;./redux-logger&apos;;
+import undoable, { ActionCreators } from &apos;./redux-undo&apos;;
+<span class="hljs-addition">+import { persistStore, persistReducer } from &apos;./redux-persist&apos;;</span>
+<span class="hljs-addition">+import storage from &apos;./redux-persist/lib/storage&apos;;</span>
+<span class="hljs-addition">+import { PersistGate } from &apos;./redux-persist/lib/integration/react&apos;;</span>
+<span class="hljs-addition">+const persistConfig = {</span>
+<span class="hljs-addition">+    key: &apos;root&apos;,</span>
+<span class="hljs-addition">+    storage</span>
+<span class="hljs-addition">+}</span>
+const app = dva({
+<span class="hljs-addition">+    //initialState: localStorage.getItem(&apos;state&apos;) ? JSON.parse(localStorage.getItem(&apos;state&apos;)!) : undefined,</span>
+    onStateChange: function () {
+<span class="hljs-addition">+        //localStorage.setItem(&apos;state&apos;, JSON.stringify(arguments[0]));</span>
+<span class="hljs-addition">+        console.log(&apos;currentState&apos;, arguments[0]);</span>
+    },
+    onReducer: reducer =&gt; {
+        let undoReducer = undoable(reducer);
+<span class="hljs-addition">+        let rootReducer = persistReducer(persistConfig, undoReducer);</span>
+        return (state, action) =&gt; {
+<span class="hljs-addition">+            let newState: any = rootReducer(state, action);</span>
+            return { ...newState, router: newState.present.router };
+        }
+    },
+<span class="hljs-addition">+    extraEnhancers: [</span>
+<span class="hljs-addition">+        createStore =&gt; (...args) =&gt; {</span>
+<span class="hljs-addition">+            const store: any = createStore(...args);</span>
+<span class="hljs-addition">+            const persistor = persistStore(store);</span>
+<span class="hljs-addition">+            store.persistor = persistor;</span>
+<span class="hljs-addition">+            return store;</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+    ]</span>
+});
+app.use({ onAction: createLogger() });
+app.use(createLoading());
+app.model({
+    namespace: &apos;counter&apos;,
+    state: { number: 0 },
+    reducers: {
+        add(state) {
+            return { number: state.number + 1 };
+        }
+    },
+    effects: {
+        *asyncAdd(action, { call, put }) {
+            yield call(delay, 1000);
+            yield put({ type: &apos;counter/add&apos; });
+        },
+        *goto({ to }, { put }) {
+            yield put(routerRedux.push(to));
+        }
+    }
+});
+function Counter(props) {
+    return (
+        &lt;div&gt;
+            &lt;p&gt; {props.loading.models.counter ? &apos;loading&apos; : props.counter.number}&lt;/p&gt;
+            &lt;button onClick={() =&gt; props.dispatch({ type: &quot;counter/add&quot; })}&gt;&#x52A0;1&lt;/button&gt;
+            &lt;button onClick={() =&gt; props.dispatch({ type: &quot;counter/asyncAdd&quot; })}&gt;&#x5F02;&#x6B65;&#x52A0;1&lt;/button&gt;
+            &lt;button onClick={() =&gt; props.dispatch({ type: &quot;counter/goto&quot;, to: &apos;/&apos; })}&gt;&#x8DF3;&#x8F6C;&#x5230;/&lt;/button&gt;
+            &lt;button onClick={() =&gt; props.dispatch(ActionCreators.undo())}&gt;undo&lt;/button&gt;
+            &lt;button onClick={() =&gt; props.dispatch(ActionCreators.redo())}&gt;redo&lt;/button&gt;
+        &lt;/div&gt;
+    )
+}
+const ConnectedCounter = connect(
+    (state) =&gt; state.present
+)(Counter);
+const Home = () =&gt; &lt;div&gt;Home&lt;/div&gt;;
+const UserPageComponent = (dynamic as any)({
+    app,
+    models: () =&gt; [
+        import(&apos;./models/users&apos;),
+    ],
+    component: () =&gt; import(&apos;./routes/UserPage&apos;),
+});
+app.router((api: any) =&gt; (
+    &lt;PersistGate persistor={(app as any)._store.persistor}&gt;
+        &lt;Router history={api.history}&gt;
+            &lt;&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;Link to=&quot;/&quot;&gt;Home&lt;/Link&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;Link to=&quot;/counter&quot;&gt;counter&lt;/Link&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;Link to=&quot;/users&quot;&gt;users&lt;/Link&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;Route path=&quot;/&quot; exact={true} component={Home} /&gt;
+                &lt;Route path=&quot;/counter&quot; component={ConnectedCounter} /&gt;
+                &lt;Route path=&quot;/users&quot; component={UserPageComponent} /&gt;
+            &lt;/&gt;
+        &lt;/Router&gt;
+    &lt;/PersistGate&gt;
+));
+app.start(&apos;#root&apos;);
+
+function delay(ms) {
+    return new Promise((resolve) =&gt; {
+        setTimeout(function () {
+            resolve();
+        }, ms);
+    });
+}
+</code></pre>
+<h3 id="t6812.2 &#x5B9E;&#x73B0;">12.2 &#x5B9E;&#x73B0; <a href="#t6812.2 &#x5B9E;&#x73B0;"> # </a></h3>
+<h4 id="t6912.2.1 dva\index.tsx">12.2.1 dva\index.tsx <a href="#t6912.2.1 dva\index.tsx"> # </a></h4>
+<p>src\dva\index.tsx</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import ReactDOM from &apos;react-dom&apos;;
+<span class="hljs-addition">+import { createStore, combineReducers, applyMiddleware, compose } from &apos;redux&apos;;</span>
+import createSagaMiddleware from &apos;redux-saga&apos;;
+import * as sagaEffects from &apos;redux-saga/effects&apos;;
+import { NAMESPACE_SEP } from &apos;./constants&apos;;
+import { connect, Provider } from &apos;react-redux&apos;;
+import { DvaInstance, Router, Model } from &apos;./typings&apos;;
+import prefixNamespace from &apos;./prefixNamespace&apos;;
+import { createHashHistory } from &apos;history&apos;;
+import Plugin, { filterHooks } from &apos;./plugin&apos;;
+import { routerMiddleware, connectRouter } from &quot;connected-react-router&quot;;
+let history = createHashHistory();
+export { connect };
+
+export default function (opts: any = {}) {
+    const app: DvaInstance = {
+        _models: [],
+        model,
+        router,
+        _router: null,
+        start
+    }
+    const initialReducers = { router: connectRouter(history) };
+    function model(model: Model) {
+        const prefixedModel = prefixNamespace(model);
+        app._models.push(prefixedModel);
+        return prefixedModel;
+    }
+
+    function router(router: Router) {
+        app._router = router;
+    }
+    const plugin = new Plugin();
+    plugin.use(filterHooks(opts));
+    app.use = plugin.use.bind(plugin);
+    function start(root) {
+        for (const model of app._models) {
+            initialReducers[model.namespace] = getReducer(model);
+        }
+        const reducerEnhancer = plugin.get(&apos;onReducer&apos;);
+        let rootReducer = createReducer();
+        const sagas = getSagas(app);
+        const sagaMiddleware = createSagaMiddleware();
+        const extraMiddlewares = plugin.get(&apos;onAction&apos;);
+<span class="hljs-addition">+        const extraEnhancers = plugin.get(&apos;extraEnhancers&apos;);</span>
+<span class="hljs-addition">+        const enhancers = [...extraEnhancers, applyMiddleware(...extraMiddlewares, routerMiddleware(history), sagaMiddleware)];</span>
+<span class="hljs-addition">+        //let store = createStore(rootReducer, opts.initialState, applyMiddleware(...extraMiddlewares, routerMiddleware(history), sagaMiddleware));</span>
+<span class="hljs-addition">+        let store = createStore(rootReducer, opts.initialState, compose(...enhancers));</span>
+<span class="hljs-addition">+        app._store = store;</span>
+        const listeners = plugin.get(&apos;onStateChange&apos;);
+        for (const listener of listeners) {
+            store.subscribe(() =&gt; {
+                listener(store.getState());
+            });
+        }
+        sagas.forEach(saga =&gt; sagaMiddleware.run(saga));
+        ReactDOM.render(&lt;Provider store={store}&gt;{app._router({ history })}&lt;/Provider&gt;, document.querySelector(root))
+        app.model = injectModel.bind(app);
+        app._getSaga = getSaga;
+        function injectModel(m) {
+            m = model(m);
+            initialReducers[m.namespace] = getReducer(m);
+            store.replaceReducer(createReducer());
+            if (m.effects) {
+                sagaMiddleware.run(app._getSaga(m.effects, m));
+            }
+            if (m.subscriptions) {
+                runSubscription(m.subscriptions, m, app);
+            }
+        }
+        function runSubscription(subscriptions, model, app) {
+            for (const key in subscriptions) {
+                subscriptions[key](
+                    {
+                        dispatch: prefixedDispatch(store.dispatch, model),
+                        history: app._history,
+                    }
+                );
+            }
+        }
+        function prefixedDispatch(dispatch, model) {
+            return action =&gt; {
+                const { type } = action;
+                return dispatch({ ...action, type: prefixType(type, model) });
+            };
+        }
+        function createReducer() {
+            const extraReducers = plugin.get(&apos;extraReducers&apos;);
+            return reducerEnhancer(combineReducers({
+                ...initialReducers,
+                ...extraReducers
+            }));
+        }
+    }
+
+    function getSagas(app) {
+        let sagas: Array&lt;any&gt; = [];
+        for (const model of app._models) {
+            sagas.push(getSaga(model.effects, model, plugin.get(&apos;onEffect&apos;)));
+        }
+        return sagas;
+    }
+
+    return app;
+}
+
+function getSaga(effects, model, onEffect) {
+    return function* () {
+        for (const key in effects) {
+            const watcher = getWatcher(key, model.effects[key], model, onEffect);
+            yield sagaEffects.fork(watcher);
+        }
+    };
+}
+function getWatcher(key, effect, model, onEffect) {
+    return function* () {
+        yield sagaEffects.takeEvery(key, function* sagaWithCatch(...args) {
+            if (onEffect) {
+                for (const fn of onEffect) {
+                    effect = fn(effect, sagaEffects, model, key);
+                }
+            }
+            yield effect(...args, { ...sagaEffects, put: action =&gt; sagaEffects.put({ ...action, type: prefixType(action.type, model) }) });
+        });
+    };
+}
+function prefixType(type, model) {
+    if (type.indexOf(&apos;/&apos;) <span class="hljs-comment">=== -1) {</span>
+        return `${model.namespace}${NAMESPACE_SEP}${type}`;
+    }
+    return type;
+}
+function getReducer(model) {
+    let { reducers = {}, state: defaultState } = model;
+    return (state = defaultState, action) =&gt; {
+        let reducer = reducers[action.type];
+        if (reducer) {
+            return reducer(state, action);
+        }
+        return state;
+    }
+}
+export * from &apos;./typings&apos;;
+</code></pre>
+<h4 id="t7012.2.2 plugin.tsx">12.2.2 plugin.tsx <a href="#t7012.2.2 plugin.tsx"> # </a></h4>
+<p>src\dva\plugin.tsx</p>
+<pre><code class="lang-diff">const hooks = [
+    &apos;onEffect&apos;,
+    &apos;extraReducers&apos;,
+    &apos;onAction&apos;,
+    &apos;onStateChange&apos;,
+    &apos;onReducer&apos;,
+<span class="hljs-addition">+    &quot;extraEnhancers&quot;</span>
+];
+export function filterHooks(obj) {
+    return Object.keys(obj).reduce((memo, key) =&gt; {
+        if (hooks.indexOf(key) &gt; -1) {
+            memo[key] = obj[key];
+        }
+        return memo;
+    }, {});
+}
+export default class Plugin {
+    hooks: any
+    constructor() {
+        this.hooks = hooks.reduce((memo, key) =&gt; {
+            memo[key] = [];
+            return memo;
+        }, {});
+    }
+    use(plugin) {
+        const { hooks } = this;
+        for (const key in plugin) {
+<span class="hljs-addition">+            if (key === &apos;extraEnhancers&apos;) {</span>
+<span class="hljs-addition">+                hooks[key] = plugin[key];</span>
+<span class="hljs-addition">+            } else {</span>
+<span class="hljs-addition">+                hooks[key].push(plugin[key]);</span>
+<span class="hljs-addition">+            }</span>
+        }
+    }
+    get(key) {
+        const { hooks } = this;
+        if (key <span class="hljs-comment">=== &apos;extraReducers&apos;) {</span>
+            return getExtraReducers(hooks[key]);
+        } else if (key <span class="hljs-comment">=== &apos;onReducer&apos;) {</span>
+            return getOnReducer(hooks[key]);
+        } else {
+            return hooks[key];
+        }
+
+    }
+}
+function getOnReducer(hook) {
+    return function (reducer) {
+        for (const reducerEnhancer of hook) {
+            reducer = reducerEnhancer(reducer);
+        }
+        return reducer;
+    };
+}
+function getExtraReducers(hook) {
+    let ret = {};
+    for (const reducerObj of hook) {
+        ret = { ...ret, ...reducerObj };
+    }
+    return ret;
+}
+</code></pre>
+<h4 id="t7112.2.3 redux-persist\index.tsx">12.2.3 redux-persist\index.tsx <a href="#t7112.2.3 redux-persist\index.tsx"> # </a></h4>
+<p>src\redux-persist\index.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> persistReducer <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./persistReducer&apos;</span>;
+<span class="hljs-keyword">import</span> persistStore <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./persistStore&apos;</span>;
+
+<span class="hljs-keyword">export</span> {
+    persistReducer,
+    persistStore
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> REHYDRATE = <span class="hljs-string">&apos;REHYDRATE&apos;</span>;
+</code></pre>
+<h4 id="t7212.2.4 persistReducer.tsx">12.2.4 persistReducer.tsx <a href="#t7212.2.4 persistReducer.tsx"> # </a></h4>
+<p>src\redux-persist\persistReducer.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">persistConfig, reducer</span>) </span>{
+    <span class="hljs-keyword">let</span> isInited = <span class="hljs-literal">false</span>;
+    <span class="hljs-keyword">return</span> <span class="hljs-function">(<span class="hljs-params">state, action</span>) =&gt;</span> {
+        <span class="hljs-keyword">switch</span> (action.type) {
+            <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;PERSIST_INIT&apos;</span>:
+                isInited = <span class="hljs-literal">true</span>;
+                <span class="hljs-keyword">let</span> value = persistConfig.storage.getItem(<span class="hljs-string">&apos;persist:&apos;</span> + persistConfig.key);
+                state = value ? <span class="hljs-built_in">JSON</span>.parse(value) : <span class="hljs-literal">undefined</span>;
+                <span class="hljs-keyword">return</span> reducer(state, action);
+            <span class="hljs-keyword">default</span>:
+                <span class="hljs-keyword">if</span> (isInited) {
+                    state = reducer(state, action);
+                    persistConfig.storage.setItem(<span class="hljs-string">&apos;persist:&apos;</span> + persistConfig.key, <span class="hljs-built_in">JSON</span>.stringify(state));
+                    <span class="hljs-keyword">return</span> state;
+                }
+                <span class="hljs-keyword">return</span> reducer(state, action);
+        }
+
+    }
+}
+</code></pre>
+<h4 id="t7312.2.5 persistStore.tsx">12.2.5 persistStore.tsx <a href="#t7312.2.5 persistStore.tsx"> # </a></h4>
+<p>src\redux-persist\persistStore.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">store</span>) </span>{
+    <span class="hljs-keyword">let</span> persistor = {
+        ...store,
+        initState() {
+            persistor.dispatch({
+                <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;PERSIST_INIT&apos;</span>,
+            })
+        }
+    };
+    <span class="hljs-keyword">return</span> persistor;
+}
+</code></pre>
+<h4 id="t7412.2.6 redux-persist\lib\storage.tsx">12.2.6 redux-persist\lib\storage.tsx <a href="#t7412.2.6 redux-persist\lib\storage.tsx"> # </a></h4>
+<p>src\redux-persist\lib\storage.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> storage = {
+    setItem(key, val) {
+        localStorage.setItem(key, val);
+    },
+    getItem(key) {
+        <span class="hljs-keyword">return</span> localStorage.getItem(key);
+    }
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> storage;
+</code></pre>
+<h4 id="t7512.2.7 redux-persist\lib\integration\react.tsx">12.2.7 redux-persist\lib\integration\react.tsx <a href="#t7512.2.7 redux-persist\lib\integration\react.tsx"> # </a></h4>
+<p>src\redux-persist\lib\integration\react.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PersistGate</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span>&lt;<span class="hljs-title">any</span>&gt; </span>{
+    componentDidMount() {
+        <span class="hljs-keyword">this</span>.props.persistor.initState();
+    }
+    render() {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.props.children;
+    }
+}
+
+<span class="hljs-keyword">export</span> { PersistGate }
+</code></pre>
+<h2 id="t7613. dva-immer">13. dva-immer <a href="#t7613. dva-immer"> # </a></h2>
+<ul>
+<li><a href="https://immerjs.github.io/immer/docs/introduction">immer</a>&#x662F;<code>mobx</code>&#x7684;&#x4F5C;&#x8005;&#x5199;&#x7684;&#x4E00;&#x4E2A;<code>immutable</code> &#x5E93;&#xFF0C;&#x6838;&#x5FC3;&#x5B9E;&#x73B0;&#x662F;&#x5229;&#x7528; ES6 &#x7684; proxy&#xFF0C;&#x51E0;&#x4E4E;&#x4EE5;&#x6700;&#x5C0F;&#x7684;&#x6210;&#x672C;&#x5B9E;&#x73B0;&#x4E86; js &#x7684;&#x4E0D;&#x53EF;&#x53D8;&#x6570;&#x636E;&#x7ED3;&#x6784;</li>
+<li><a href="https://github.com/dvajs/dva/tree/master/packages/dva-immer">dva-immer</a><ul>
+<li><code>currentState</code> &#x88AB;&#x64CD;&#x4F5C;&#x5BF9;&#x8C61;&#x7684;&#x6700;&#x521D;&#x72B6;&#x6001;</li>
+<li><code>draftState</code> &#x6839;&#x636E; currentState &#x751F;&#x6210;&#x7684;&#x8349;&#x7A3F;&#x72B6;&#x6001;&#xFF0C;&#x5B83;&#x662F; currentState &#x7684;&#x4EE3;&#x7406;&#xFF0C;&#x5BF9; draftState &#x6240;&#x505A;&#x7684;&#x4EFB;&#x4F55;&#x4FEE;&#x6539;&#x90FD;&#x5C06;&#x88AB;&#x8BB0;&#x5F55;&#x5E76;&#x7528;&#x4E8E;&#x751F;&#x6210; nextState &#x3002;&#x5728;&#x6B64;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;currentState &#x5C06;&#x4E0D;&#x53D7;&#x5F71;&#x54CD;</li>
+<li><code>nextState</code> &#x6839;&#x636E; draftState &#x751F;&#x6210;&#x7684;&#x6700;&#x7EC8;&#x72B6;&#x6001;</li>
+<li><code>produce</code> &#x751F;&#x4EA7; &#x7528;&#x6765;&#x751F;&#x6210; nextState&#x7684;&#x51FD;&#x6570;</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-js">cnpm i dva-immer -S
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> produce <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;immer&quot;</span>
+<span class="hljs-keyword">const</span> baseState = [
+    {
+        <span class="hljs-attr">todo</span>: <span class="hljs-string">&quot;Learn typescript&quot;</span>,
+        <span class="hljs-attr">done</span>: <span class="hljs-literal">true</span>
+    },
+    {
+        <span class="hljs-attr">todo</span>: <span class="hljs-string">&quot;Try immer&quot;</span>,
+        <span class="hljs-attr">done</span>: <span class="hljs-literal">false</span>
+    }
+]
+<span class="hljs-keyword">const</span> nextState = produce(baseState, draftState =&gt; {
+    draftState.push({<span class="hljs-attr">todo</span>: <span class="hljs-string">&quot;Tweet about it&quot;</span>})
+    draftState[<span class="hljs-number">1</span>].done = <span class="hljs-literal">true</span>
+})
+</code></pre>
+<h3 id="t7713.1 &#x4F7F;&#x7528;">13.1 &#x4F7F;&#x7528; <a href="#t7713.1 &#x4F7F;&#x7528;"> # </a></h3>
+<h4 id="t7813.1.1 index.tsx">13.1.1 index.tsx <a href="#t7813.1.1 index.tsx"> # </a></h4>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import dva, { connect } from &apos;./dva&apos;;
+import { Router, Route, routerRedux, Link } from &apos;./dva/router&apos;;
+import createLoading from &apos;./dva-loading&apos;;
+import dynamic from &apos;./dva/dynamic&apos;;
+import { createLogger } from &apos;./redux-logger&apos;;
+import undoable, { ActionCreators } from &apos;./redux-undo&apos;;
+import { persistStore, persistReducer } from &apos;./redux-persist&apos;;
+import storage from &apos;./redux-persist/lib/storage&apos;;
+import { PersistGate } from &apos;./redux-persist/lib/integration/react&apos;;
+<span class="hljs-addition">+import immer from &apos;./dva-immer&apos;;</span>
+const persistConfig = {
+    key: &apos;root&apos;,
+    storage
+}
+const app = dva({
+    //initialState: localStorage.getItem(&apos;state&apos;) ? JSON.parse(localStorage.getItem(&apos;state&apos;)!) : undefined,
+    onStateChange: function () {
+        //localStorage.setItem(&apos;state&apos;, JSON.stringify(arguments[0]));
+        console.log(&apos;currentState&apos;, arguments[0]);
+    },
+    onReducer: reducer =&gt; {
+        let undoReducer = undoable(reducer);
+        let rootReducer = persistReducer(persistConfig, undoReducer);
+        return (state, action) =&gt; {
+            let newState: any = rootReducer(state, action);
+<span class="hljs-addition">+            return { ...newState, router: newState.present ? newState.present.router : null };</span>
+        }
+    },
+    extraEnhancers: [
+        createStore =&gt; (...args) =&gt; {
+            const store: any = createStore(...args);
+            const persistor = persistStore(store);
+            store.persistor = persistor;
+            return store;
+        }
+    ]
+});
+app.use({ onAction: createLogger() });
+app.use(createLoading());
+<span class="hljs-addition">+app.use(immer());</span>
+app.model({
+    namespace: &apos;counter&apos;,
+    state: { number: 0 },
+    reducers: {
+        add(state) {
+            return { number: state.number + 1 };
+        }
+    },
+    effects: {
+        *asyncAdd(action, { call, put }) {
+            yield call(delay, 1000);
+            yield put({ type: &apos;counter/add&apos; });
+        },
+        *goto({ to }, { put }) {
+            yield put(routerRedux.push(to));
+        }
+    }
+});
+function Counter(props) {
+    return (
+        &lt;div&gt;
+            &lt;p&gt; {props.loading.models.counter ? &apos;loading&apos; : props.counter.number}&lt;/p&gt;
+            &lt;button onClick={() =&gt; props.dispatch({ type: &quot;counter/add&quot; })}&gt;&#x52A0;1&lt;/button&gt;
+            &lt;button onClick={() =&gt; props.dispatch({ type: &quot;counter/asyncAdd&quot; })}&gt;&#x5F02;&#x6B65;&#x52A0;1&lt;/button&gt;
+            &lt;button onClick={() =&gt; props.dispatch({ type: &quot;counter/goto&quot;, to: &apos;/&apos; })}&gt;&#x8DF3;&#x8F6C;&#x5230;/&lt;/button&gt;
+            &lt;button onClick={() =&gt; props.dispatch(ActionCreators.undo())}&gt;undo&lt;/button&gt;
+            &lt;button onClick={() =&gt; props.dispatch(ActionCreators.redo())}&gt;redo&lt;/button&gt;
+        &lt;/div&gt;
+    )
+}
+const ConnectedCounter = connect(
+    (state) =&gt; state.present
+)(Counter);
+const Home = () =&gt; &lt;div&gt;Home&lt;/div&gt;;
+const UserPageComponent = (dynamic as any)({
+    app,
+    models: () =&gt; [
+        import(&apos;./models/users&apos;),
+    ],
+    component: () =&gt; import(&apos;./routes/UserPage&apos;),
+});
+app.router((api: any) =&gt; (
+    &lt;PersistGate persistor={(app as any)._store.persistor}&gt;
+        &lt;Router history={api.history}&gt;
+            &lt;&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;Link to=&quot;/&quot;&gt;Home&lt;/Link&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;Link to=&quot;/counter&quot;&gt;counter&lt;/Link&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;Link to=&quot;/users&quot;&gt;users&lt;/Link&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;Route path=&quot;/&quot; exact={true} component={Home} /&gt;
+                &lt;Route path=&quot;/counter&quot; component={ConnectedCounter} /&gt;
+                &lt;Route path=&quot;/users&quot; component={UserPageComponent} /&gt;
+            &lt;/&gt;
+        &lt;/Router&gt;
+    &lt;/PersistGate&gt;
+));
+app.start(&apos;#root&apos;);
+
+function delay(ms) {
+    return new Promise((resolve) =&gt; {
+        setTimeout(function () {
+            resolve();
+        }, ms);
+    });
+}
+</code></pre>
+<h3 id="t7913.2 &#x5B9E;&#x73B0;">13.2 &#x5B9E;&#x73B0; <a href="#t7913.2 &#x5B9E;&#x73B0;"> # </a></h3>
+<h4 id="t8013.2.1 dva\index.tsx">13.2.1 dva\index.tsx <a href="#t8013.2.1 dva\index.tsx"> # </a></h4>
+<p>src\dva\index.tsx</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import ReactDOM from &apos;react-dom&apos;;
+import { createStore, combineReducers, applyMiddleware, compose } from &apos;redux&apos;;
+import createSagaMiddleware from &apos;redux-saga&apos;;
+import * as sagaEffects from &apos;redux-saga/effects&apos;;
+import { NAMESPACE_SEP } from &apos;./constants&apos;;
+import { connect, Provider } from &apos;react-redux&apos;;
+import { DvaInstance, Router, Model } from &apos;./typings&apos;;
+import prefixNamespace from &apos;./prefixNamespace&apos;;
+import { createHashHistory } from &apos;history&apos;;
+import Plugin, { filterHooks } from &apos;./plugin&apos;;
+import { routerMiddleware, connectRouter } from &quot;connected-react-router&quot;;
+let history = createHashHistory();
+export { connect };
+
+export default function (opts: any = {}) {
+    const app: DvaInstance = {
+        _models: [],
+        model,
+        router,
+        _router: null,
+        start
+    }
+    const initialReducers = { router: connectRouter(history) };
+    function model(model: Model) {
+        const prefixedModel = prefixNamespace(model);
+        app._models.push(prefixedModel);
+        return prefixedModel;
+    }
+
+    function router(router: Router) {
+        app._router = router;
+    }
+    const plugin = new Plugin();
+    plugin.use(filterHooks(opts));
+    app.use = plugin.use.bind(plugin);
+    function start(root) {
+        for (const model of app._models) {
+<span class="hljs-addition">+            initialReducers[model.namespace] = getReducer(model, plugin._handleActions);</span>
+        }
+        const reducerEnhancer = plugin.get(&apos;onReducer&apos;);
+        let rootReducer = createReducer();
+        const sagas = getSagas(app);
+        const sagaMiddleware = createSagaMiddleware();
+        const extraMiddlewares = plugin.get(&apos;onAction&apos;);
+        const extraEnhancers = plugin.get(&apos;extraEnhancers&apos;);
+        const enhancers = [...extraEnhancers, applyMiddleware(...extraMiddlewares, routerMiddleware(history), sagaMiddleware)];
+        //let store = createStore(rootReducer, opts.initialState, applyMiddleware(...extraMiddlewares, routerMiddleware(history), sagaMiddleware));
+        let store = createStore(rootReducer, opts.initialState, compose(...enhancers));
+        app._store = store;
+        const listeners = plugin.get(&apos;onStateChange&apos;);
+        for (const listener of listeners) {
+            store.subscribe(() =&gt; {
+                listener(store.getState());
+            });
+        }
+        sagas.forEach(saga =&gt; sagaMiddleware.run(saga));
+        ReactDOM.render(&lt;Provider store={store}&gt;{app._router({ history })}&lt;/Provider&gt;, document.querySelector(root))
+        app.model = injectModel.bind(app);
+        app._getSaga = getSaga;
+        function injectModel(m) {
+            m = model(m);
+<span class="hljs-addition">+            initialReducers[m.namespace] = getReducer(m, plugin._handleActions);</span>
+            store.replaceReducer(createReducer());
+            if (m.effects) {
+                sagaMiddleware.run(app._getSaga(m.effects, m));
+            }
+            if (m.subscriptions) {
+                runSubscription(m.subscriptions, m, app);
+            }
+        }
+        function runSubscription(subscriptions, model, app) {
+            for (const key in subscriptions) {
+                subscriptions[key](
+                    {
+                        dispatch: prefixedDispatch(store.dispatch, model),
+                        history: app._history,
+                    }
+                );
+            }
+        }
+        function prefixedDispatch(dispatch, model) {
+            return action =&gt; {
+                const { type } = action;
+                return dispatch({ ...action, type: prefixType(type, model) });
+            };
+        }
+        function createReducer() {
+            const extraReducers = plugin.get(&apos;extraReducers&apos;);
+            return reducerEnhancer(combineReducers({
+                ...initialReducers,
+                ...extraReducers
+            }));
+        }
+    }
+
+    function getSagas(app) {
+        let sagas: Array&lt;any&gt; = [];
+        for (const model of app._models) {
+            sagas.push(getSaga(model.effects, model, plugin.get(&apos;onEffect&apos;)));
+        }
+        return sagas;
+    }
+
+    return app;
+}
+
+function getSaga(effects, model, onEffect) {
+    return function* () {
+        for (const key in effects) {
+            const watcher = getWatcher(key, model.effects[key], model, onEffect);
+            yield sagaEffects.fork(watcher);
+        }
+    };
+}
+function getWatcher(key, effect, model, onEffect) {
+    return function* () {
+        yield sagaEffects.takeEvery(key, function* sagaWithCatch(...args) {
+            if (onEffect) {
+                for (const fn of onEffect) {
+                    effect = fn(effect, sagaEffects, model, key);
+                }
+            }
+            yield effect(...args, { ...sagaEffects, put: action =&gt; sagaEffects.put({ ...action, type: prefixType(action.type, model) }) });
+        });
+    };
+}
+function prefixType(type, model) {
+    if (type.indexOf(&apos;/&apos;) <span class="hljs-comment">=== -1) {</span>
+        return `${model.namespace}${NAMESPACE_SEP}${type}`;
+    }
+    return type;
+}
+function getReducer(model, handleActions) {
+    let { reducers = {}, state: defaultState } = model;
+<span class="hljs-addition">+    let reducer = (state = defaultState, action) =&gt; {</span>
+        let reducer = reducers[action.type];
+        if (reducer) {
+            return reducer(state, action);
+        }
+        return state;
+    }
+<span class="hljs-addition">+    if (handleActions) {</span>
+<span class="hljs-addition">+        return handleActions(reducers || {}, defaultState);</span>
+<span class="hljs-addition">+    }</span>
+<span class="hljs-addition">+    return reducer;</span>
+}
+
+export * from &apos;./typings&apos;;
+</code></pre>
+<h4 id="t8113.2.2 dva\plugin.tsx">13.2.2 dva\plugin.tsx <a href="#t8113.2.2 dva\plugin.tsx"> # </a></h4>
+<p>src\dva\plugin.tsx</p>
+<pre><code class="lang-diff">const hooks = [
+    &apos;onEffect&apos;,
+    &apos;extraReducers&apos;,
+    &apos;onAction&apos;,
+    &apos;onStateChange&apos;,
+    &apos;onReducer&apos;,
+    &quot;extraEnhancers&quot;,
+<span class="hljs-addition">+    &apos;_handleActions&apos;</span>
+];
+export function filterHooks(obj) {
+    return Object.keys(obj).reduce((memo, key) =&gt; {
+        if (hooks.indexOf(key) &gt; -1) {
+            memo[key] = obj[key];
+        }
+        return memo;
+    }, {});
+}
+export default class Plugin {
+    hooks: any
+<span class="hljs-addition">+    _handleActions: any = null</span>
+    constructor() {
+        this.hooks = hooks.reduce((memo, key) =&gt; {
+            memo[key] = [];
+            return memo;
+        }, {});
+    }
+    use(plugin) {
+        const { hooks } = this;
+        for (const key in plugin) {
+<span class="hljs-addition">+            if (key === &apos;_handleActions&apos;) {</span>
+<span class="hljs-addition">+                this._handleActions = plugin[key];</span>
+            } else if (key <span class="hljs-comment">=== &apos;extraEnhancers&apos;) {</span>
+                hooks[key] = plugin[key];
+            } else {
+                hooks[key].push(plugin[key]);
+            }
+        }
+    }
+    get(key) {
+        const { hooks } = this;
+        if (key <span class="hljs-comment">=== &apos;extraReducers&apos;) {</span>
+            return getExtraReducers(hooks[key]);
+        } else if (key <span class="hljs-comment">=== &apos;onReducer&apos;) {</span>
+            return getOnReducer(hooks[key]);
+        } else {
+            return hooks[key];
+        }
+
+    }
+}
+function getOnReducer(hook) {
+    return function (reducer) {
+        for (const reducerEnhancer of hook) {
+            reducer = reducerEnhancer(reducer);
+        }
+        return reducer;
+    };
+}
+function getExtraReducers(hook) {
+    let ret = {};
+    for (const reducerObj of hook) {
+        ret = { ...ret, ...reducerObj };
+    }
+    return ret;
+}
+</code></pre>
+<h4 id="t8213.2.3 dva-immer.tsx">13.2.3 dva-immer.tsx <a href="#t8213.2.3 dva-immer.tsx"> # </a></h4>
+<p>src\dva-immer.tsx</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> produce <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;immer&apos;</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> {
+        _handleActions(handlers, defaultState) {
+            <span class="hljs-keyword">return</span> <span class="hljs-function">(<span class="hljs-params">state = defaultState, action</span>) =&gt;</span> {
+                <span class="hljs-keyword">const</span> { type } = action;
+                <span class="hljs-keyword">const</span> ret = produce(state, draft =&gt; {
+                    <span class="hljs-keyword">const</span> handler = handlers[type];
+                    <span class="hljs-keyword">if</span> (handler) {
+                        <span class="hljs-keyword">return</span> handler(draft, action);
+                    }
+                });
+                <span class="hljs-keyword">return</span> ret || {};
+            };
+        },
+    };
+}
+</code></pre>
+<h2 id="t8314. onError">14. onError <a href="#t8314. onError"> # </a></h2>
+<h3 id="t8414.1 &#x4F7F;&#x7528;">14.1 &#x4F7F;&#x7528; <a href="#t8414.1 &#x4F7F;&#x7528;"> # </a></h3>
+<h4 id="t8514.1.1 index.tsx">14.1.1 index.tsx <a href="#t8514.1.1 index.tsx"> # </a></h4>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import dva, { connect } from &apos;./dva&apos;;
+import { Router, Route, routerRedux, Link } from &apos;./dva/router&apos;;
+import createLoading from &apos;./dva-loading&apos;;
+import dynamic from &apos;./dva/dynamic&apos;;
+import { createLogger } from &apos;./redux-logger&apos;;
+import undoable, { ActionCreators } from &apos;./redux-undo&apos;;
+import { persistStore, persistReducer } from &apos;./redux-persist&apos;;
+import storage from &apos;./redux-persist/lib/storage&apos;;
+import { PersistGate } from &apos;./redux-persist/lib/integration/react&apos;;
+import immer from &apos;./dva-immer&apos;;
+const persistConfig = {
+    key: &apos;root&apos;,
+    storage
+}
+const app = dva({
+    //initialState: localStorage.getItem(&apos;state&apos;) ? JSON.parse(localStorage.getItem(&apos;state&apos;)!) : undefined,
+    onStateChange: function () {
+        //localStorage.setItem(&apos;state&apos;, JSON.stringify(arguments[0]));
+        console.log(&apos;currentState&apos;, arguments[0]);
+    },
+    onReducer: reducer =&gt; {
+        let undoReducer = undoable(reducer);
+        let rootReducer = persistReducer(persistConfig, undoReducer);
+        return (state, action) =&gt; {
+            let newState: any = rootReducer(state, action);
+            return { ...newState, router: newState.present ? newState.present.router : null };
+        }
+    },
+    extraEnhancers: [
+        createStore =&gt; (...args) =&gt; {
+            const store: any = createStore(...args);
+            const persistor = persistStore(store);
+            store.persistor = persistor;
+            return store;
+        }
+    ],
+<span class="hljs-addition">+    onError(err, dispatch) {</span>
+<span class="hljs-addition">+        console.error(&apos;onError&apos;, err);</span>
+<span class="hljs-addition">+    }</span>
+});
+app.use({ onAction: createLogger() });
+app.use(createLoading());
+app.use(immer());
+app.model({
+    namespace: &apos;counter&apos;,
+    state: { number: 0 },
+    reducers: {
+        add(state) {
+            return { number: state.number + 1 };
+        }
+    },
+    effects: {
+        *asyncAdd(action, { call, put }) {
+            yield call(delay, 1000);
+            yield put({ type: &apos;counter/add&apos; });
+<span class="hljs-addition">+            throw new Error(&apos;asyncAdd&apos;);</span>
+        },
+        *goto({ to }, { put }) {
+            yield put(routerRedux.push(to));
+        }
+    },
+<span class="hljs-addition">+    subscriptions: {</span>
+<span class="hljs-addition">+        changeTitle({ dispatch, history }, done) {</span>
+<span class="hljs-addition">+            console.log(&apos;changeTitle&apos;);</span>
+<span class="hljs-addition">+            done(&apos;&#x51FA;&#x9519;&#x5566;&apos;);</span>
+<span class="hljs-addition">+        }</span>
+<span class="hljs-addition">+    }</span>
+});
+function Counter(props) {
+    return (
+        &lt;div&gt;
+            &lt;p&gt; {props.loading.models.counter ? &apos;loading&apos; : props.counter.number}&lt;/p&gt;
+            &lt;button onClick={() =&gt; props.dispatch({ type: &quot;counter/add&quot; })}&gt;&#x52A0;1&lt;/button&gt;
+            &lt;button onClick={() =&gt; props.dispatch({ type: &quot;counter/asyncAdd&quot; })}&gt;&#x5F02;&#x6B65;&#x52A0;1&lt;/button&gt;
+            &lt;button onClick={() =&gt; props.dispatch({ type: &quot;counter/goto&quot;, to: &apos;/&apos; })}&gt;&#x8DF3;&#x8F6C;&#x5230;/&lt;/button&gt;
+            &lt;button onClick={() =&gt; props.dispatch(ActionCreators.undo())}&gt;undo&lt;/button&gt;
+            &lt;button onClick={() =&gt; props.dispatch(ActionCreators.redo())}&gt;redo&lt;/button&gt;
+        &lt;/div&gt;
+    )
+}
+const ConnectedCounter = connect(
+    (state) =&gt; state.present
+)(Counter);
+const Home = () =&gt; &lt;div&gt;Home&lt;/div&gt;;
+const UserPageComponent = (dynamic as any)({
+    app,
+    models: () =&gt; [
+        import(&apos;./models/users&apos;),
+    ],
+    component: () =&gt; import(&apos;./routes/UserPage&apos;),
+});
+app.router((api: any) =&gt; (
+    &lt;PersistGate persistor={(app as any)._store.persistor}&gt;
+        &lt;Router history={api.history}&gt;
+            &lt;&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;Link to=&quot;/&quot;&gt;Home&lt;/Link&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;Link to=&quot;/counter&quot;&gt;counter&lt;/Link&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;Link to=&quot;/users&quot;&gt;users&lt;/Link&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;Route path=&quot;/&quot; exact={true} component={Home} /&gt;
+                &lt;Route path=&quot;/counter&quot; component={ConnectedCounter} /&gt;
+                &lt;Route path=&quot;/users&quot; component={UserPageComponent} /&gt;
+            &lt;/&gt;
+        &lt;/Router&gt;
+    &lt;/PersistGate&gt;
+));
+app.start(&apos;#root&apos;);
+
+function delay(ms) {
+    return new Promise((resolve) =&gt; {
+        setTimeout(function () {
+            resolve();
+        }, ms);
+    });
+}
+</code></pre>
+<h3 id="t8614.2 &#x5B9E;&#x73B0;">14.2 &#x5B9E;&#x73B0; <a href="#t8614.2 &#x5B9E;&#x73B0;"> # </a></h3>
+<h4 id="t8714.2.1 src\dva\index.tsx">14.2.1 src\dva\index.tsx <a href="#t8714.2.1 src\dva\index.tsx"> # </a></h4>
+<p>src\dva\index.tsx</p>
+<pre><code class="lang-diff">import React from &apos;react&apos;;
+import ReactDOM from &apos;react-dom&apos;;
+import { createStore, combineReducers, applyMiddleware, compose } from &apos;redux&apos;;
+import createSagaMiddleware from &apos;redux-saga&apos;;
+import * as sagaEffects from &apos;redux-saga/effects&apos;;
+import { NAMESPACE_SEP } from &apos;./constants&apos;;
+import { connect, Provider } from &apos;react-redux&apos;;
+import { DvaInstance, Router, Model } from &apos;./typings&apos;;
+import prefixNamespace from &apos;./prefixNamespace&apos;;
+import { createHashHistory } from &apos;history&apos;;
+import Plugin, { filterHooks } from &apos;./plugin&apos;;
+import { routerMiddleware, connectRouter } from &quot;connected-react-router&quot;;
+let history = createHashHistory();
+export { connect };
+
+export default function (opts: any = {}) {
+    const app: DvaInstance = {
+        _models: [],
+        model,
+        router,
+        _router: null,
+        start
+    }
+    const initialReducers = { router: connectRouter(history) };
+    function model(model: Model) {
+        const prefixedModel = prefixNamespace(model);
+        app._models.push(prefixedModel);
+        return prefixedModel;
+    }
+
+    function router(router: Router) {
+        app._router = router;
+    }
+    const plugin = new Plugin();
+    plugin.use(filterHooks(opts));
+    app.use = plugin.use.bind(plugin);
+    function start(root) {
+        for (const model of app._models) {
+            initialReducers[model.namespace] = getReducer(model, plugin._handleActions);
+        }
+        const reducerEnhancer = plugin.get(&apos;onReducer&apos;);
+        let rootReducer = createReducer();
+        const sagas = getSagas(app);
+        const sagaMiddleware = createSagaMiddleware();
+        const extraMiddlewares = plugin.get(&apos;onAction&apos;);
+        const extraEnhancers = plugin.get(&apos;extraEnhancers&apos;);
+        const enhancers = [...extraEnhancers, applyMiddleware(...extraMiddlewares, routerMiddleware(history), sagaMiddleware)];
+        //let store = createStore(rootReducer, opts.initialState, applyMiddleware(...extraMiddlewares, routerMiddleware(history), sagaMiddleware));
+        let store = createStore(rootReducer, opts.initialState, compose(...enhancers));
+        app._store = store;
+        const listeners = plugin.get(&apos;onStateChange&apos;);
+        for (const listener of listeners) {
+            store.subscribe(() =&gt; {
+                listener(store.getState());
+            });
+        }
+        sagas.forEach(saga =&gt; sagaMiddleware.run(saga));
+        ReactDOM.render(&lt;Provider store={store}&gt;{app._router({ history })}&lt;/Provider&gt;, document.querySelector(root))
+        app.model = injectModel.bind(app);
+        app._getSaga = getSaga;
+<span class="hljs-addition">+        for (const model of app._models) {</span>
+<span class="hljs-addition">+            if (model.subscriptions) {</span>
+<span class="hljs-addition">+                runSubscription(model.subscriptions, model, app, plugin.get(&apos;onError&apos;));</span>
+<span class="hljs-addition">+            }</span>
+<span class="hljs-addition">+        }</span>
+        function injectModel(m) {
+            m = model(m);
+            initialReducers[m.namespace] = getReducer(m, plugin._handleActions);
+            store.replaceReducer(createReducer());
+            if (m.effects) {
+                sagaMiddleware.run(app._getSaga(m.effects, m));
+            }
+            if (m.subscriptions) {
+                runSubscription(m.subscriptions, m, app, plugin.get(&apos;onError&apos;));
+            }
+        }
+<span class="hljs-addition">+        function runSubscription(subscriptions, model, app, onError) {</span>
+            for (const key in subscriptions) {
+<span class="hljs-addition">+                let dispatch = prefixedDispatch(store.dispatch, model);</span>
+                subscriptions[key](
+                    {
+<span class="hljs-addition">+                        dispatch,</span>
+                        history: app._history,
+<span class="hljs-addition">+                    }, err =&gt; {</span>
+<span class="hljs-addition">+                        for (let fn of onError) {</span>
+<span class="hljs-addition">+                            fn(err, dispatch);</span>
+<span class="hljs-addition">+                        }</span>
+<span class="hljs-addition">+                    }</span>
+                );
+            }
+        }
+        function prefixedDispatch(dispatch, model) {
+            return action =&gt; {
+                const { type } = action;
+                return dispatch({ ...action, type: prefixType(type, model) });
+            };
+        }
+        function createReducer() {
+            const extraReducers = plugin.get(&apos;extraReducers&apos;);
+            return reducerEnhancer(combineReducers({
+                ...initialReducers,
+                ...extraReducers
+            }));
+        }
+    }
+
+    function getSagas(app) {
+        let sagas: Array&lt;any&gt; = [];
+        for (const model of app._models) {
+<span class="hljs-addition">+            sagas.push(getSaga(model.effects, model, plugin.get(&apos;onEffect&apos;), plugin.get(&apos;onError&apos;)));</span>
+        }
+        return sagas;
+    }
+
+    return app;
+}
+
+<span class="hljs-addition">+function getSaga(effects, model, onEffect, onError) {</span>
+    return function* () {
+        for (const key in effects) {
+<span class="hljs-addition">+            const watcher = getWatcher(key, model.effects[key], model, onEffect, onError);</span>
+            yield sagaEffects.fork(watcher);
+        }
+    };
+}
+<span class="hljs-addition">+function getWatcher(key, effect, model, onEffect, onError) {</span>
+    return function* () {
+        yield sagaEffects.takeEvery(key, function* sagaWithCatch(...args) {
+            if (onEffect) {
+                for (const fn of onEffect) {
+                    effect = fn(effect, sagaEffects, model, key);
+                }
+            }
+<span class="hljs-addition">+            try {</span>
+                yield effect(...args, { ...sagaEffects, put: action =&gt; sagaEffects.put({ ...action, type: prefixType(action.type, model) }) });
+<span class="hljs-addition">+            } catch (err) {</span>
+<span class="hljs-addition">+                for (const fn of onError) {</span>
+<span class="hljs-addition">+                    fn(err);</span>
+<span class="hljs-addition">+                }</span>
+<span class="hljs-addition">+            }</span>
+        });
+    };
+}
+function prefixType(type, model) {
+    if (type.indexOf(&apos;/&apos;) <span class="hljs-comment">=== -1) {</span>
+        return `${model.namespace}${NAMESPACE_SEP}${type}`;
+    }
+    return type;
+}
+function getReducer(model, handleActions) {
+    let { reducers = {}, state: defaultState } = model;
+    let reducer = (state = defaultState, action) =&gt; {
+        let reducer = reducers[action.type];
+        if (reducer) {
+            return reducer(state, action);
+        }
+        return state;
+    }
+    if (handleActions) {
+        return handleActions(reducers || {}, defaultState);
+    }
+    return reducer;
+}
+
+export * from &apos;./typings&apos;;
+</code></pre>
+<h4 id="t8814.2.2 src\dva\plugin.tsx">14.2.2 src\dva\plugin.tsx <a href="#t8814.2.2 src\dva\plugin.tsx"> # </a></h4>
+<p>src\dva\plugin.tsx</p>
+<pre><code class="lang-diff">const hooks = [
+    &apos;onEffect&apos;,
+    &apos;extraReducers&apos;,
+    &apos;onAction&apos;,
+    &apos;onStateChange&apos;,
+    &apos;onReducer&apos;,
+    &quot;extraEnhancers&quot;,
+    &apos;_handleActions&apos;,
+<span class="hljs-addition">+    &quot;onError&quot;</span>
+];
+export function filterHooks(obj) {
+    return Object.keys(obj).reduce((memo, key) =&gt; {
+        if (hooks.indexOf(key) &gt; -1) {
+            memo[key] = obj[key];
+        }
+        return memo;
+    }, {});
+}
+export default class Plugin {
+    hooks: any
+    _handleActions: any = null
+    constructor() {
+        this.hooks = hooks.reduce((memo, key) =&gt; {
+            memo[key] = [];
+            return memo;
+        }, {});
+    }
+    use(plugin) {
+        const { hooks } = this;
+        for (const key in plugin) {
+            if (key <span class="hljs-comment">=== &apos;_handleActions&apos;) {</span>
+                this._handleActions = plugin[key];
+            } else if (key <span class="hljs-comment">=== &apos;extraEnhancers&apos;) {</span>
+                hooks[key] = plugin[key];
+            } else {
+                hooks[key].push(plugin[key]);
+            }
+        }
+    }
+    get(key) {
+        const { hooks } = this;
+        if (key <span class="hljs-comment">=== &apos;extraReducers&apos;) {</span>
+            return getExtraReducers(hooks[key]);
+        } else if (key <span class="hljs-comment">=== &apos;onReducer&apos;) {</span>
+            return getOnReducer(hooks[key]);
+        } else {
+            return hooks[key];
+        }
+
+    }
+}
+function getOnReducer(hook) {
+    return function (reducer) {
+        for (const reducerEnhancer of hook) {
+            reducer = reducerEnhancer(reducer);
+        }
+        return reducer;
+    };
+}
+function getExtraReducers(hook) {
+    let ret = {};
+    for (const reducerObj of hook) {
+        ret = { ...ret, ...reducerObj };
+    }
+    return ret;
+}
+</code></pre>
+<p><a href="https://gitee.com/zhufengpeixun/zhufeng-dva-source-typescript2">dva-source</a></p>
+
+    </div>
+</div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+    aria-labelledby="loginModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="loginModalLabel">请登录</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="username" class="control-label">姓名:</label>
+                        <input type="text" class="form-control" id="username" placeholder="珠峰架构VIP会员系统用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">密码:</label>
+                        <input type="text" class="form-control" id="password" placeholder="珠峰架构VIP会员系统密码">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                    data-dismiss="modal">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

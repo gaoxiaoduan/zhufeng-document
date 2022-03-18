@@ -1,0 +1,1988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+   
+                     
+
+                        
+<div class="warpper">
+    <div class="page-toc">
+        <ul><li><a href="#t01. Linux">1. Linux</a></li><li><a href="#t12.版本">2.版本</a></li><li><a href="#t23. Linux与Windows的不同">3. Linux与Windows的不同</a></li><li><a href="#t34. Linux安装">4. Linux安装</a><ul><li><a href="#t44.1 什么是虚拟机">4.1 什么是虚拟机</a></li><li><a href="#t54.2 虚拟机的主要特点">4.2 虚拟机的主要特点</a></li></ul></li><li><a href="#t64.3 建议VMWare配置">4.3 建议VMWare配置</a><ul><li><a href="#t74.4 虚拟机的安装">4.4 虚拟机的安装</a></li><li><a href="#t84.5 虚拟机使用">4.5 虚拟机使用</a><ul><li><a href="#t94.5.1 新建虚拟机">4.5.1 新建虚拟机</a></li><li><a href="#t104.5.2 硬件管理">4.5.2 硬件管理</a></li><li><a href="#t114.5.3 网络链接">4.5.3 网络链接</a></li><li><a href="#t124.5.4 使用快照">4.5.4 使用快照</a></li><li><a href="#t134.5.4 克隆">4.5.4 克隆</a></li><li><a href="#t144.5.5 分区">4.5.5 分区</a></li><li><a href="#t154.5.6 扩展分区">4.5.6 扩展分区</a></li><li><a href="#t164.5.7 格式化">4.5.7 格式化</a></li><li><a href="#t174.5.8 给分区分配盘符">4.5.8 给分区分配盘符</a></li><li><a href="#t184.5.9 硬件设备文件名">4.5.9 硬件设备文件名</a></li><li><a href="#t194.5.10 分区设备文件名">4.5.10 分区设备文件名</a><ul><li><a href="#t204.5.10.1 IDE硬盘接口">4.5.10.1 IDE硬盘接口</a></li><li><a href="#t214.5.10.2 SCSI硬盘接口">4.5.10.2 SCSI硬盘接口</a></li><li><a href="#t224.5.10.3 SATA硬盘接口">4.5.10.3 SATA硬盘接口</a></li></ul></li><li><a href="#t234.5.10 挂载点">4.5.10 挂载点</a></li></ul></li><li><a href="#t244.6 linux系统安装">4.6 linux系统安装</a><ul><li><a href="#t254.6.1 安装类型">4.6.1 安装类型</a></li><li><a href="#t264.6.2 密码">4.6.2 密码</a></li><li><a href="#t274.6.3 安装类型">4.6.3 安装类型</a></li><li><a href="#t284.6.4 安装日志">4.6.4 安装日志</a></li><li><a href="#t294.6.5 配置IP地址">4.6.5 配置IP地址</a><ul><li><a href="#t304.6.5.1 setup">4.6.5.1 setup</a></li><li><a href="#t314.6.5.2 ifcfg-eth0">4.6.5.2 ifcfg-eth0</a></li><li><a href="#t324.6.5.2 网卡接口关闭与激活">4.6.5.2 网卡接口关闭与激活</a></li><li><a href="#t334.6.5.3 网络服务启动与关闭">4.6.5.3 网络服务启动与关闭</a></li></ul></li></ul></li></ul></li><li><a href="#t345.linux常用命令">5.linux常用命令</a><ul><li><a href="#t355.1 常见目录">5.1 常见目录</a></li><li><a href="#t365.2 命令基本格式">5.2 命令基本格式</a><ul><li><a href="#t375.2.1 命令提示符">5.2.1 命令提示符</a></li><li><a href="#t385.2.2 命令格式">5.2.2 命令格式</a></li><li><a href="#t395.2.3 ls">5.2.3 ls</a><ul><li><a href="#t405.2.3.1 -l">5.2.3.1 -l</a></li><li><a href="#t415.2.3.2 文件类型和权限">5.2.3.2 文件类型和权限</a></li></ul></li></ul></li><li><a href="#t425.3 文件处理命令">5.3 文件处理命令</a><ul><li><a href="#t435.3.1 mkdir">5.3.1 mkdir</a></li><li><a href="#t445.3.2 cd">5.3.2 cd</a></li><li><a href="#t455.3.3 pwd">5.3.3 pwd</a></li><li><a href="#t465.3.4 rmdir">5.3.4 rmdir</a></li><li><a href="#t475.3.5 rm">5.3.5 rm</a></li><li><a href="#t485.3.6 cp">5.3.6 cp</a></li><li><a href="#t495.3.7 mv">5.3.7 mv</a></li><li><a href="#t505.3.8 ln">5.3.8 ln</a><ul><li><a href="#t515.3.8.1  硬链接特征">5.3.8.1  硬链接特征</a></li><li><a href="#t525.3.8.2  软链接特征">5.3.8.2  软链接特征</a></li></ul></li></ul></li><li><a href="#t535.4 文件搜索命令">5.4 文件搜索命令</a><ul><li><a href="#t545.4.1 locate">5.4.1 locate</a></li><li><a href="#t555.4.2 whereis">5.4.2 whereis</a></li><li><a href="#t565.4.3 which">5.4.3 which</a></li><li><a href="#t575.4.4 环境变量">5.4.4 环境变量</a></li><li><a href="#t585.4.5 find">5.4.5 find</a><ul><li><a href="#t595.4.5.1 按名称搜索">5.4.5.1 按名称搜索</a></li><li><a href="#t605.4.5.2 通配符">5.4.5.2 通配符</a></li><li><a href="#t615.4.5.3 -i">5.4.5.3 -i</a></li><li><a href="#t625.4.5.4 -user">5.4.5.4 -user</a></li><li><a href="#t635.4.5.5 按时间搜索">5.4.5.5 按时间搜索</a></li><li><a href="#t645.4.5.6 按大小搜索">5.4.5.6 按大小搜索</a></li><li><a href="#t655.4.5.7 按i节点搜索">5.4.5.7 按i节点搜索</a></li><li><a href="#t665.4.5.8 综合应用">5.4.5.8 综合应用</a></li><li><a href="#t675.4.5.9 grep">5.4.5.9 grep</a></li></ul></li></ul></li><li><a href="#t685.5 帮助命令">5.5 帮助命令</a><ul><li><a href="#t695.5.1 基本用法">5.5.1 基本用法</a></li><li><a href="#t705.5.2 man的级别">5.5.2 man的级别</a></li><li><a href="#t715.5.3 查看命令级别">5.5.3 查看命令级别</a></li><li><a href="#t725.5.4 关键字搜索">5.5.4 关键字搜索</a></li><li><a href="#t735.5.5 shell 内部帮助">5.5.5 shell 内部帮助</a></li></ul></li><li><a href="#t745.6 压缩与解压缩命令">5.6 压缩与解压缩命令</a><ul><li><a href="#t755.6.1 zip格式">5.6.1 zip格式</a></li><li><a href="#t765.6.2 gzip">5.6.2 gzip</a></li><li><a href="#t775.6.3 .bz2格式压缩">5.6.3 .bz2格式压缩</a></li><li><a href="#t785.6.4 tar">5.6.4 tar</a></li><li><a href="#t795.6.4 tar.gz压缩格式">5.6.4 tar.gz压缩格式</a></li></ul></li><li><a href="#t805.7 关机和重启命令">5.7 关机和重启命令</a><ul><li><a href="#t815.7.1 shutdown">5.7.1 shutdown</a></li><li><a href="#t825.7.2 init">5.7.2 init</a></li><li><a href="#t835.7.3 logout">5.7.3 logout</a></li></ul></li><li><a href="#t845.8 挂载">5.8 挂载</a><ul><li><a href="#t855.8.1 挂载命令">5.8.1 挂载命令</a></li></ul></li><li><a href="#t865.8.2 挂载命令格式">5.8.2 挂载命令格式</a><ul><li><a href="#t875.8.3 挂载光驱">5.8.3 挂载光驱</a></li><li><a href="#t885.8.4 卸载光驱">5.8.4 卸载光驱</a></li><li><a href="#t895.8.4 挂载U盘">5.8.4 挂载U盘</a></li></ul></li><li><a href="#t905.9 查看登录用户信息">5.9 查看登录用户信息</a><ul><li><a href="#t915.9.1 w">5.9.1 w</a></li><li><a href="#t925.9.2 who">5.9.2 who</a></li><li><a href="#t935.9.3 last">5.9.3 last</a></li><li><a href="#t945.9.4 lastlog">5.9.4 lastlog</a></li></ul></li></ul></li><li><a href="#t956. shell">6. shell</a><ul><li><a href="#t966.1 查看支持的shell">6.1 查看支持的shell</a></li><li><a href="#t976.2 echo">6.2 echo</a></li><li><a href="#t986.3 编写执行shell">6.3 编写执行shell</a></li><li><a href="#t996.4 别名">6.4 别名</a></li><li><a href="#t1006.5 命令的生效顺序">6.5 命令的生效顺序</a></li><li><a href="#t1016.6 命令快捷键">6.6 命令快捷键</a></li><li><a href="#t1026.7 历史命令">6.7 历史命令</a></li><li><a href="#t1036.8 调用">6.8 调用</a></li><li><a href="#t1046.9 输出重定向">6.9 输出重定向</a><ul><li><a href="#t1056.9.1 标准输入输出">6.9.1 标准输入输出</a></li><li><a href="#t1066.9.2 输入重定向">6.9.2 输入重定向</a></li></ul></li><li><a href="#t1076.10 管道符号">6.10 管道符号</a><ul><li><a href="#t1086.10.1 多命令顺序执行">6.10.1 多命令顺序执行</a></li><li><a href="#t1096.10.2 管道符号">6.10.2 管道符号</a></li><li><a href="#t1106.10.3 通配符">6.10.3 通配符</a></li><li><a href="#t1116.10.4 其它符号">6.10.4 其它符号</a></li></ul></li></ul></li><li><a href="#t1127. vi编辑器">7. vi编辑器</a><ul><li><a href="#t1137.1 操作模式">7.1 操作模式</a></li><li><a href="#t1147.2 常用指令">7.2 常用指令</a><ul><li><a href="#t1157.2.1 底行模式">7.2.1 底行模式</a></li><li><a href="#t1167.2.2 命令模式">7.2.2 命令模式</a></li></ul></li></ul></li><li><a href="#t1178. 用户和用户组">8. 用户和用户组</a><ul><li><a href="#t1188.1 用户组">8.1 用户组</a><ul><li><a href="#t1198.1.1 /etc/group">8.1.1 /etc/group</a></li><li><a href="#t1208.1.2 /etc/gshadow">8.1.2 /etc/gshadow</a></li><li><a href="#t1218.1.3 /etc/passwd">8.1.3 /etc/passwd</a></li><li><a href="#t1228.1.4 /etc/shadow">8.1.4 /etc/shadow</a></li></ul></li></ul></li><li><a href="#t1238. 用户操作">8. 用户操作</a></li><li><a href="#t1249. 用户命令">9. 用户命令</a></li><li><a href="#t12510. 附录">10. 附录</a><ul><li><a href="#t12610.1 系统启动">10.1 系统启动</a><ul><li><a href="#t12710.1.1 BIOS">10.1.1 BIOS</a></li><li><a href="#t12810.1.2 硬件自检">10.1.2 硬件自检</a></li><li><a href="#t12910.1.3 启动顺序">10.1.3 启动顺序</a></li><li><a href="#t13010.1.4 主引导记录的结构">10.1.4 主引导记录的结构</a></li><li><a href="#t13110.1.5 分区表">10.1.5 分区表</a></li><li><a href="#t13210.1.6 硬盘启动">10.1.6 硬盘启动</a></li><li><a href="#t13310.1.7 操作系统">10.1.7 操作系统</a></li></ul></li></ul></li></ul>
+    </div>
+    <div class="content markdown-body">
+        <h2 id="t01. Linux">1. Linux <a href="#t01. Linux"> # </a></h2>
+<ul>
+<li>Linux&#x662F;&#x4E00;&#x5957;&#x514D;&#x8D39;&#x4F7F;&#x7528;&#x548C;&#x81EA;&#x7531;&#x4F20;&#x64AD;&#x7684;&#x7C7B;Unix&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;</li>
+<li>&#x5728;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x9886;&#x57DF;&#x548C;&#x5D4C;&#x5165;&#x5F0F;&#x9886;&#x57DF;&#x6709;&#x975E;&#x5E38;&#x5E7F;&#x6CDB;&#x7684;&#x5E94;&#x7528;</li>
+</ul>
+<h2 id="t12.&#x7248;&#x672C;">2.&#x7248;&#x672C; <a href="#t12.&#x7248;&#x672C;"> # </a></h2>
+<p>&#x5206;&#x4E3A;&#x5185;&#x6838;&#x7248;&#x672C;&#x548C;&#x53D1;&#x578B;&#x7248;&#x672C;</p>
+<ul>
+<li><a href="https://www.kernel.org/">kernel</a></li>
+<li>&#x5404;&#x4E2A;&#x5382;&#x5546;&#x4F1A;&#x5236;&#x4F5C;&#x81EA;&#x5DF1;&#x7684;&#x53D1;&#x884C;&#x7248;&#x672C;<ul>
+<li>redhat</li>
+<li>CentOS</li>
+<li>debian</li>
+<li>ubuntu</li>
+<li>fedora</li>
+</ul>
+</li>
+</ul>
+<h2 id="t23. Linux&#x4E0E;Windows&#x7684;&#x4E0D;&#x540C;">3. Linux&#x4E0E;Windows&#x7684;&#x4E0D;&#x540C; <a href="#t23. Linux&#x4E0E;Windows&#x7684;&#x4E0D;&#x540C;"> # </a></h2>
+<ul>
+<li>Linux&#x4E25;&#x683C;&#x533A;&#x5206;&#x5927;&#x5C0F;&#x5199;</li>
+<li>Linux&#x4E2D;&#x6240;&#x6709;&#x7684;&#x5185;&#x5BB9;&#x4EE5;&#x6587;&#x4EF6;&#x5F62;&#x5F0F;&#x4FDD;&#x5B58;&#xFF0C;&#x5305;&#x62EC;&#x786C;&#x4EF6;&#x3001;&#x7528;&#x6237;&#x548C;&#x6587;&#x4EF6;&#x3002;</li>
+<li>Linux&#x4E0D;&#x9760;&#x6269;&#x5C55;&#x540D;&#x533A;&#x5206;&#x6587;&#x4EF6;&#x7C7B;&#x578B;&#xFF0C;&#x662F;&#x9760;&#x6743;&#x9650;&#x6765;&#x533A;&#x5206;&#xFF0C;&#x4F46;&#x662F;&#x6709;&#x4E00;&#x4E9B;&#x7EA6;&#x5B9A;&#x7684;&#x6269;&#x5C55;&#x540D;&#xFF0C;&#x662F;&#x7ED9;&#x7BA1;&#x7406;&#x5458;&#x770B;&#x7684;<ul>
+<li>&#x538B;&#x7F29;&#x5305; <code>.gz</code> <code>.bz2</code> <code>.tar.bz2</code> <code>.tgz</code></li>
+<li>&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6; <code>.rpm</code></li>
+<li>&#x7F51;&#x9875;&#x6587;&#x4EF6; <code>.html .php</code></li>
+<li>&#x811A;&#x672C;&#x6587;&#x4EF6; <code>.sh</code></li>
+<li>&#x914D;&#x7F6E;&#x6587;&#x4EF6; <code>.conf</code></li>
+</ul>
+</li>
+<li>Windows&#x4E0B;&#x7684;&#x7A0B;&#x5E8F;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x5728;Linux&#x4E2D;&#x5B89;&#x88C5;&#x548C;&#x8FD0;&#x884C;</li>
+<li>Linux&#x66F4;&#x591A;&#x4F7F;&#x7528;&#x5B57;&#x7B26;&#x754C;&#x9762;<ul>
+<li>&#x5360;&#x7528;&#x7684;&#x7CFB;&#x7EDF;&#x8D44;&#x6E90;&#x66F4;&#x5C11;</li>
+<li>&#x51CF;&#x5C11;&#x4E86;&#x51FA;&#x9519;&#x548C;&#x88AB;&#x653B;&#x51FB;&#x7684;&#x53EF;&#x80FD;&#x6027;&#xFF0C;&#x4F1A;&#x8BA9;&#x7CFB;&#x7EDF;&#x66F4;&#x7A33;&#x5B9A;</li>
+</ul>
+</li>
+</ul>
+<h2 id="t34. Linux&#x5B89;&#x88C5;">4. Linux&#x5B89;&#x88C5; <a href="#t34. Linux&#x5B89;&#x88C5;"> # </a></h2>
+<h3 id="t44.1 &#x4EC0;&#x4E48;&#x662F;&#x865A;&#x62DF;&#x673A;">4.1 &#x4EC0;&#x4E48;&#x662F;&#x865A;&#x62DF;&#x673A; <a href="#t44.1 &#x4EC0;&#x4E48;&#x662F;&#x865A;&#x62DF;&#x673A;"> # </a></h3>
+<ul>
+<li>&#x662F;&#x4E00;&#x4E2A;&#x865A;&#x62DF;PC&#x7684;&#x8F6F;&#x4EF6;</li>
+<li>&#x53EF;&#x4EE5;&#x5728;&#x73B0;&#x6709;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E0A;&#x865A;&#x62DF;&#x51FA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x786C;&#x4EF6;&#x73AF;&#x5883;</li>
+<li>&#x76F8;&#x5F53;&#x4E8E;&#x6A21;&#x62DF;&#x51FA;&#x4E00;&#x53F0;&#x65B0;&#x7684;&#x4E2A;&#x4EBA;&#x7535;&#x8111;</li>
+<li>&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x5728;&#x4E00;&#x53F0;&#x673A;&#x5668;&#x4E0A;&#x771F;&#x6B63;&#x540C;&#x65F6;&#x8FD0;&#x884C;&#x4E24;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;</li>
+<li><a href="http://www.vmware.com">VMware</a> </li>
+<li><a href="VMware8">VMware8</a> </li>
+</ul>
+<h3 id="t54.2 &#x865A;&#x62DF;&#x673A;&#x7684;&#x4E3B;&#x8981;&#x7279;&#x70B9;">4.2 &#x865A;&#x62DF;&#x673A;&#x7684;&#x4E3B;&#x8981;&#x7279;&#x70B9; <a href="#t54.2 &#x865A;&#x62DF;&#x673A;&#x7684;&#x4E3B;&#x8981;&#x7279;&#x70B9;"> # </a></h3>
+<ul>
+<li>&#x4E0D;&#x9700;&#x8981;&#x5206;&#x533A;&#x6216;&#x91CD;&#x65B0;&#x5F00;&#x673A;&#x5C31;&#x80FD;&#x5728;&#x540C;&#x4E00;&#x53F0;PC&#x4E0A;&#x4F7F;&#x7528;&#x4E24;&#x79CD;&#x4EE5;&#x4E0A;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;</li>
+<li>&#x672C;&#x673A;&#x7CFB;&#x7EDF;&#x53EF;&#x4EE5;&#x4E0E;&#x865A;&#x62DF;&#x673A;&#x7CFB;&#x7EDF;&#x7F51;&#x7EDC;&#x901A;&#x4FE1;</li>
+<li>&#x53EF;&#x4EE5;&#x8BBE;&#x5B9A;&#x5E76;&#x4E14;&#x968F;&#x65F6;&#x4FEE;&#x6539;&#x865A;&#x62DF;&#x673A;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x786C;&#x4EF6;&#x73AF;&#x5883;</li>
+<li>&#x7CFB;&#x7EDF;&#x5FEB;&#x7167;&#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x5907;&#x4EFD;&#x548C;&#x56DE;&#x6EDA;</li>
+</ul>
+<h2 id="t64.3 &#x5EFA;&#x8BAE;VMWare&#x914D;&#x7F6E;">4.3 &#x5EFA;&#x8BAE;VMWare&#x914D;&#x7F6E; <a href="#t64.3 &#x5EFA;&#x8BAE;VMWare&#x914D;&#x7F6E;"> # </a></h2>
+<ul>
+<li>CPU &#x5EFA;&#x8BAE;&#x4E3B;&#x9891;1GHz&#x4EE5;&#x4E0A;</li>
+<li>&#x5185;&#x5B58; &#x5EFA;&#x8BAE;2GB&#x4EE5;&#x4E0A;</li>
+<li>&#x786C;&#x76D8; &#x5EFA;&#x8BAE;&#x5206;&#x533A;&#x7A7A;&#x95F2;&#x7A7A;&#x95F4;8GB&#x4EE5;&#x4E0A;</li>
+</ul>
+<h3 id="t74.4 &#x865A;&#x62DF;&#x673A;&#x7684;&#x5B89;&#x88C5;">4.4 &#x865A;&#x62DF;&#x673A;&#x7684;&#x5B89;&#x88C5; <a href="#t74.4 &#x865A;&#x62DF;&#x673A;&#x7684;&#x5B89;&#x88C5;"> # </a></h3>
+<ul>
+<li><a href="http://www.vmware.com">VMware8.0</a> </li>
+</ul>
+<h3 id="t84.5 &#x865A;&#x62DF;&#x673A;&#x4F7F;&#x7528;">4.5 &#x865A;&#x62DF;&#x673A;&#x4F7F;&#x7528; <a href="#t84.5 &#x865A;&#x62DF;&#x673A;&#x4F7F;&#x7528;"> # </a></h3>
+<h4 id="t94.5.1 &#x65B0;&#x5EFA;&#x865A;&#x62DF;&#x673A;">4.5.1 &#x65B0;&#x5EFA;&#x865A;&#x62DF;&#x673A; <a href="#t94.5.1 &#x65B0;&#x5EFA;&#x865A;&#x62DF;&#x673A;"> # </a></h4>
+<ul>
+<li><ol>
+<li>Create a New Virtual Machine&#x5F00;&#x59CB;&#x65B0;&#x5EFA;&#x865A;&#x62DF;&#x673A;&#x5411;&#x5BFC;</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>&#x6211;&#x4EE5;&#x540E;&#x518D;&#x5B89;&#x88C5;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>Linux  CentOS 32&#x4F4D;</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>20G&#x786C;&#x76D8;</li>
+</ol>
+</li>
+</ul>
+<h4 id="t104.5.2 &#x786C;&#x4EF6;&#x7BA1;&#x7406;">4.5.2 &#x786C;&#x4EF6;&#x7BA1;&#x7406; <a href="#t104.5.2 &#x786C;&#x4EF6;&#x7BA1;&#x7406;"> # </a></h4>
+<h4 id="t114.5.3 &#x7F51;&#x7EDC;&#x94FE;&#x63A5;">4.5.3 &#x7F51;&#x7EDC;&#x94FE;&#x63A5; <a href="#t114.5.3 &#x7F51;&#x7EDC;&#x94FE;&#x63A5;"> # </a></h4>
+<ul>
+<li>&#x865A;&#x62DF;&#x673A;&#x7F51;&#x5361;-&#x67E5;&#x770B;&#x7F51;&#x7EDC;&#x5C5E;&#x6027;<ul>
+<li>Vmware Virtual Ethernet Adapter For VMnet1</li>
+<li>Vmware Virtual Ethernet Adapter For VMnet8</li>
+</ul>
+</li>
+<li>&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;<ul>
+<li>&#x6865;&#x63A5; &#x76F4;&#x63A5;&#x8FDE;&#x63A5;&#x5230;&#x7269;&#x7406;&#x7F51;&#x7EDC;&#xFF0C;&#x4F1A;&#x5360;&#x7528;&#x4E00;&#x4E2A;&#x5C40;&#x57DF;&#x7F51;&#x5185;&#x7684;&#x771F;&#x5B9E;IP&#x5730;&#x5740;&#xFF0C;&#x4F18;&#x5148;&#x9009;&#x62E9;&#x6865;&#x63A5;</li>
+<li>NAT &#x4F7F;&#x7528;&#x5DF2;&#x5171;&#x4EAB;&#x7684;&#x4E3B;&#x673A;IP&#x5730;&#x5740;&#xFF0C;&#x53EF;&#x4EE5;&#x4E0A;&#x7F51;&#xFF0C;&#x5229;&#x7528;VMnet8&#x7F51;&#x5361;&#x901A;&#x4FE1;</li>
+<li>Host-Only &#x4E0E;&#x4E3B;&#x673A;&#x5171;&#x4EAB;&#x4E00;&#x4E2A;&#x79C1;&#x6709;&#x7F51;&#x7EDC;&#xFF0C;&#x53EA;&#x80FD;&#x672C;&#x673A;&#x4F7F;&#x7528;&#xFF0C;&#x5229;&#x7528;VMnet1&#x8FDB;&#x884C;&#x901A;&#x4FE1;&#xFF0C;&#x4E0D;&#x80FD;&#x4E0A;&#x7F51;&#xFF0C;</li>
+</ul>
+</li>
+</ul>
+<h4 id="t124.5.4 &#x4F7F;&#x7528;&#x5FEB;&#x7167;">4.5.4 &#x4F7F;&#x7528;&#x5FEB;&#x7167; <a href="#t124.5.4 &#x4F7F;&#x7528;&#x5FEB;&#x7167;"> # </a></h4>
+<ul>
+<li>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5FEB;&#x7167;</li>
+<li>&#x5728;&#x5408;&#x9002;&#x7684;&#x65F6;&#x95F4;&#x6062;&#x590D;&#x5FEB;&#x7167;</li>
+</ul>
+<h4 id="t134.5.4 &#x514B;&#x9686;">4.5.4 &#x514B;&#x9686; <a href="#t134.5.4 &#x514B;&#x9686;"> # </a></h4>
+<p>&#x4ECE;&#x5F53;&#x524D;&#x7684;&#x865A;&#x62DF;&#x673A;&#x514B;&#x9686;&#x51FA;&#x4E00;&#x4E2A;&#x865A;&#x62DF;&#x673A;</p>
+<ul>
+<li>&#x53EF;&#x4EE5;&#x514B;&#x9686;&#x5F53;&#x524D;&#x6216;&#x8005;&#x5FEB;&#x7167;</li>
+<li>&#x514B;&#x9686;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x94FE;&#x63A5;&#x514B;&#x9686;&#x6216;&#x8005;&#x5B8C;&#x6574;&#x514B;&#x9686;</li>
+</ul>
+<h4 id="t144.5.5 &#x5206;&#x533A;">4.5.5 &#x5206;&#x533A; <a href="#t144.5.5 &#x5206;&#x533A;"> # </a></h4>
+<p><img src="http://img.zhufengpeixun.cn/diskformat2.jpg" alt="diskformat2"></p>
+<ul>
+<li>&#x78C1;&#x76D8;&#x5206;&#x533A;&#x662F;&#x4F7F;&#x7528;&#x5206;&#x533A;&#x7F16;&#x8F91;&#x5668;&#x5728;&#x78C1;&#x76D8;&#x4E0A;&#x5212;&#x5206;&#x51E0;&#x4E2A;&#x903B;&#x8F91;&#x90E8;&#x5206;</li>
+<li>&#x78C1;&#x76D8;&#x4E00;&#x65E6;&#x5212;&#x5206;&#x6210;&#x591A;&#x4E2A;&#x5206;&#x533A;&#xFF0C;&#x4E0D;&#x540C;&#x7C7B;&#x7684;&#x76EE;&#x5F55;&#x4E0E;&#x6587;&#x4EF6;&#x53EF;&#x4EE5;&#x5B58;&#x50A8;&#x8FDB;&#x4E0D;&#x540C;&#x7684;&#x5206;&#x533A;&#x5185;</li>
+<li>&#x5206;&#x533A;&#x8868;&#x7684;&#x957F;&#x5EA6;&#x53EA;&#x6709;64&#x4E2A;&#x5B57;&#x8282;&#xFF0C;&#x91CC;&#x9762;&#x53C8;&#x5206;&#x6210;&#x56DB;&#x9879;&#xFF0C;&#x6BCF;&#x9879;16&#x4E2A;&#x5B57;&#x8282;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x4E00;&#x4E2A;&#x786C;&#x76D8;&#x6700;&#x591A;&#x53EA;&#x80FD;&#x5206;&#x56DB;&#x4E2A;&#x4E00;&#x7EA7;&#x5206;&#x533A;&#xFF0C;&#x53C8;&#x53EB;&#x505A;&quot;&#x4E3B;&#x5206;&#x533A;&quot;</li>
+</ul>
+<h4 id="t154.5.6 &#x6269;&#x5C55;&#x5206;&#x533A;">4.5.6 &#x6269;&#x5C55;&#x5206;&#x533A; <a href="#t154.5.6 &#x6269;&#x5C55;&#x5206;&#x533A;"> # </a></h4>
+<ul>
+<li>&#x4E3A;&#x4E86;&#x7A81;&#x7834;4&#x4E2A;&#x5206;&#x533A;&#x7684;&#x9650;&#x5236;&#xFF0C;&#x5C31;&#x53D6;&#x51FA;&#x4E00;&#x4E2A;&#x5206;&#x533A;&#x4F5C;&#x4E3A;&#x6269;&#x5C55;&#x5206;&#x533A;<ul>
+<li>&#x6269;&#x5C55;&#x5206;&#x533A;&#x6700;&#x591A;&#x53EA;&#x80FD;&#x6709;1&#x4E2A;</li>
+<li>&#x4E3B;&#x5206;&#x533A;&#x52A0;&#x6269;&#x5C55;&#x5206;&#x533A;&#x6700;&#x591A;&#x6709;4&#x4E2A;</li>
+<li>&#x4E0D;&#x80FD;&#x5199;&#x5165;&#x6570;&#x636E;&#xFF0C;&#x53EA;&#x80FD;&#x5305;&#x542B;&#x903B;&#x8F91;&#x5206;&#x533A;&#xFF0C;&#x903B;&#x8F91;&#x5206;&#x533A;&#x6700;&#x591A;&#x662F;23&#x4E2A;</li>
+</ul>
+</li>
+</ul>
+<h4 id="t164.5.7 &#x683C;&#x5F0F;&#x5316;">4.5.7 &#x683C;&#x5F0F;&#x5316; <a href="#t164.5.7 &#x683C;&#x5F0F;&#x5316;"> # </a></h4>
+<ul>
+<li>&#x683C;&#x5F0F;&#x5316;&#x662F;&#x6307;&#x6839;&#x636E;&#x7528;&#x6237;&#x9009;&#x5B9A;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;(&#x5982;FAT16(2G),FAT32(4G)&#x3001;NTFS&#x3001;EXT2&#x3001;EXT3&#x3001;EXT4)&#x5BF9;&#x5206;&#x533A;&#x8FDB;&#x884C;&#x5212;&#x5206;</li>
+<li>&#x76EE;&#x7684;&#x662F;&#x4E3A;&#x4E86;&#x66F4;&#x597D;&#x7684;&#x5199;&#x5165;&#x548C;&#x8BFB;&#x53D6;&#x6570;&#x636E;</li>
+<li>&#x4E3B;&#x8981;&#x662F;&#x628A;&#x6574;&#x4E2A;&#x5206;&#x533A;&#x5207;&#x5206;&#x6210;&#x7B49;&#x5927;&#x5C0F;&#x7684;&#x6570;&#x636E;&#x5757;&#xFF0C;&#x6BCF;&#x4E2A;&#x6570;&#x636E;&#x5757;&#x662F;4KB&#xFF0C;10K&#x9700;&#x8981;&#x4F7F;&#x7528;2&#x4E2A;&#x534A;&#x7684;&#x6570;&#x636E;&#x5757;&#x3002;&#x662F;&#x5B58;&#x653E;&#x6587;&#x4EF6;&#x7684;&#x6700;&#x5C0F;&#x7A7A;&#x95F4;&#x3002;</li>
+<li>&#x5728;&#x5206;&#x533A;&#x4E2D;&#x5212;&#x51FA;&#x4E00;&#x7247;&#x7528;&#x4E8E;&#x5B58;&#x653E;&#x6587;&#x4EF6;&#x5206;&#x914D;&#x8868;&#xFF0C;&#x76EE;&#x5F55;&#x8868;&#x7B49;&#x7528;&#x6237;&#x6587;&#x4EF6;&#x7BA1;&#x7406;&#x7684;&#x78C1;&#x76D8;&#x7A7A;&#x95F4;&#x3002;<ul>
+<li>ID</li>
+<li>&#x4FEE;&#x6539;&#x65F6;&#x95F4;</li>
+<li>&#x6743;&#x9650;</li>
+<li>&#x6570;&#x636E;&#x5757;&#x4F4D;&#x7F6E;</li>
+</ul>
+</li>
+<li>&#x683C;&#x5F0F;&#x5316;&#x4F1A;&#x6E05;&#x7A7A;&#x6570;&#x636E;</li>
+</ul>
+<h4 id="t174.5.8 &#x7ED9;&#x5206;&#x533A;&#x5206;&#x914D;&#x76D8;&#x7B26;">4.5.8 &#x7ED9;&#x5206;&#x533A;&#x5206;&#x914D;&#x76D8;&#x7B26; <a href="#t174.5.8 &#x7ED9;&#x5206;&#x533A;&#x5206;&#x914D;&#x76D8;&#x7B26;"> # </a></h4>
+<ul>
+<li>&#x5206;&#x533A;</li>
+<li>&#x683C;&#x5F0F;&#x5316;</li>
+<li>&#x7ED9;&#x5206;&#x533A;&#x5206;&#x914D;&#x8BBE;&#x5907;&#x6587;&#x4EF6;&#x540D;</li>
+<li>&#x5206;&#x914D;&#x76D8;&#x7B26;</li>
+</ul>
+<h4 id="t184.5.9 &#x786C;&#x4EF6;&#x8BBE;&#x5907;&#x6587;&#x4EF6;&#x540D;">4.5.9 &#x786C;&#x4EF6;&#x8BBE;&#x5907;&#x6587;&#x4EF6;&#x540D; <a href="#t184.5.9 &#x786C;&#x4EF6;&#x8BBE;&#x5907;&#x6587;&#x4EF6;&#x540D;"> # </a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x786C;&#x4EF6;</th>
+<th style="text-align:left">&#x8BBE;&#x5907;&#x6587;&#x4EF6;&#x540D;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">IDE&#x786C;&#x76D8;</td>
+<td style="text-align:left">/dev/hd[a-d]</td>
+</tr>
+<tr>
+<td style="text-align:left">SCSI/SATA/USB&#x786C;&#x76D8;</td>
+<td style="text-align:left">/dev/sd[a-p]</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x5149;&#x9A71;</td>
+<td style="text-align:left">/dev/cdrom&#x6216;/dev/hdc</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x8F6F;&#x76D8;</td>
+<td style="text-align:left">/dev/fd[0-1]</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x6253;&#x5370;&#x673A;(25&#x9488;)</td>
+<td style="text-align:left">/dev/lp[0-2]</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x6253;&#x5370;&#x673A;(USB)</td>
+<td style="text-align:left">/dev/usb/lp[0-15]</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x9F20;&#x6807;</td>
+<td style="text-align:left">/dev/mouse</td>
+</tr>
+</tbody>
+</table>
+<h4 id="t194.5.10 &#x5206;&#x533A;&#x8BBE;&#x5907;&#x6587;&#x4EF6;&#x540D;">4.5.10 &#x5206;&#x533A;&#x8BBE;&#x5907;&#x6587;&#x4EF6;&#x540D; <a href="#t194.5.10 &#x5206;&#x533A;&#x8BBE;&#x5907;&#x6587;&#x4EF6;&#x540D;"> # </a></h4>
+<ul>
+<li>&#x8BBE;&#x5907;&#x6587;&#x4EF6;&#x540D;&#x53EA;&#x8981;&#x63D2;&#x5165;&#x786C;&#x76D8;&#xFF0C;Linux&#x4F1A;&#x81EA;&#x52A8;&#x68C0;&#x6D4B;&#x548C;&#x5206;&#x914D;</li>
+<li>1-4&#x4E00;&#x5B9A;&#x7ED9;&#x4E3B;&#x5206;&#x533A;&#x548C;&#x6269;&#x5C55;&#x5206;&#x533A;&#x4F7F;&#x7528;</li>
+<li>&#x903B;&#x8F91;&#x5206;&#x533A;&#x4E00;&#x5B9A;&#x4ECE;5&#x5F00;&#x59CB;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x786C;&#x4EF6;</th>
+<th style="text-align:left">&#x8BBE;&#x5907;&#x6587;&#x4EF6;&#x540D;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">/dev/hda1</td>
+<td style="text-align:left">IDE&#x786C;&#x76D8;&#x63A5;&#x53E3;(133M/&#x79D2;)</td>
+</tr>
+<tr>
+<td style="text-align:left">/dev/sda1</td>
+<td style="text-align:left">SCSI&#x786C;&#x76D8;&#x63A5;&#x53E3;(200M/&#x79D2;)&#x3001;SATA&#x786C;&#x76D8;&#x63A5;&#x53E3;(500M/&#x79D2;)</td>
+</tr>
+</tbody>
+</table>
+<h5 id="t204.5.10.1 IDE&#x786C;&#x76D8;&#x63A5;&#x53E3;">4.5.10.1 IDE&#x786C;&#x76D8;&#x63A5;&#x53E3; <a href="#t204.5.10.1 IDE&#x786C;&#x76D8;&#x63A5;&#x53E3;"> # </a></h5>
+<p><img src="http://img.zhufengpeixun.cn/idedisk.jpg" alt="idedisk"></p>
+<h5 id="t214.5.10.2 SCSI&#x786C;&#x76D8;&#x63A5;&#x53E3;">4.5.10.2 SCSI&#x786C;&#x76D8;&#x63A5;&#x53E3; <a href="#t214.5.10.2 SCSI&#x786C;&#x76D8;&#x63A5;&#x53E3;"> # </a></h5>
+<p><img src="http://img.zhufengpeixun.cn/SCSIdisk.jpg" alt="SCSIdisk"></p>
+<h5 id="t224.5.10.3 SATA&#x786C;&#x76D8;&#x63A5;&#x53E3;">4.5.10.3 SATA&#x786C;&#x76D8;&#x63A5;&#x53E3; <a href="#t224.5.10.3 SATA&#x786C;&#x76D8;&#x63A5;&#x53E3;"> # </a></h5>
+<p><img src="http://img.zhufengpeixun.cn/satadisk.jpeg" alt="satadisk"></p>
+<h4 id="t234.5.10 &#x6302;&#x8F7D;&#x70B9;">4.5.10 &#x6302;&#x8F7D;&#x70B9; <a href="#t234.5.10 &#x6302;&#x8F7D;&#x70B9;"> # </a></h4>
+<ul>
+<li>&#x5728;Linux&#x4E2D;&#x662F;&#x4EE5;&#x76EE;&#x5F55;&#x4F5C;&#x4E3A;&#x76D8;&#x7B26;&#xFF0C;&#x79F0;&#x4E3A;&#x6302;&#x8F7D;&#x70B9;</li>
+<li>&#x628A;&#x76D8;&#x7B26;(&#x76EE;&#x5F55;)&#x548C;&#x5206;&#x533A;&#x94FE;&#x63A5;&#x5728;&#x4E00;&#x8D77;&#x7684;&#x8FC7;&#x7A0B;&#x6210;&#x4E3A;&#x6302;&#x8F7D;</li>
+<li>/&#x4E3A;&#x6839;&#x76EE;&#x5F55;&#xFF0C;&#x5FC5;&#x987B;&#x6302;&#x8F7D;&#x5230;&#x4E00;&#x4E2A;&#x5206;&#x533A;&#x4E0A;&#xFF0C;&#x9ED8;&#x8BA4;&#x6240;&#x6709;&#x5B50;&#x76EE;&#x5F55;&#x90FD;&#x4F1A;&#x5199;&#x5165;&#x8FD9;&#x4E2A;&#x5206;&#x533A;</li>
+<li>&#x540C;&#x4E00;&#x7EA7;&#x76EE;&#x5F55;&#x4E0B;&#x9762;&#x7684;&#x6240;&#x6709;&#x5B50;&#x76EE;&#x5F55;&#x53EF;&#x4EE5;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x72EC;&#x7ACB;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;</li>
+<li>&#x5FC5;&#x987B;&#x6709;&#x7684;&#x5206;&#x533A;<ul>
+<li>/ &#x6839;&#x5206;&#x533A;</li>
+<li>swap&#x5206;&#x533A;(&#x4EA4;&#x6362;&#x5206;&#x533A;&#xFF0C;&#x865A;&#x62DF;&#x5185;&#x5B58;&#xFF0C;&#x4E00;&#x822C;&#x4E3A;&#x5185;&#x5B58;&#x7684;2&#x500D;&#xFF0C;&#x4E0D;&#x8981;&#x8D85;&#x8FC7;2G)</li>
+</ul>
+</li>
+<li>&#x63A8;&#x8350;&#x5206;&#x533A;<ul>
+<li>/boot (&#x542F;&#x52A8;&#x5206;&#x533A;,200M) &#x5355;&#x72EC;&#x5206;&#x533A;&#xFF0C;&#x907F;&#x514D;&#x5206;&#x533A;&#x5199;&#x6EE1;&#x9020;&#x6210;&#x7CFB;&#x7EDF;&#x65E0;&#x6CD5;&#x542F;&#x52A8;</li>
+</ul>
+</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/mount.jpg" alt="mount"></p>
+<h3 id="t244.6 linux&#x7CFB;&#x7EDF;&#x5B89;&#x88C5;">4.6 linux&#x7CFB;&#x7EDF;&#x5B89;&#x88C5; <a href="#t244.6 linux&#x7CFB;&#x7EDF;&#x5B89;&#x88C5;"> # </a></h3>
+<ul>
+<li>&#x9009;&#x62E9;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;</li>
+<li>&#x9009;&#x62E9;&#x5149;&#x9A71;&#x542F;&#x52A8;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/centostype.png" alt="centostype"></p>
+<p><img src="http://img.zhufengpeixun.cn/manuldisk.png" alt="manuldisk"></p>
+<p><img src="http://img.zhufengpeixun.cn/dividedisk.png" alt="dividedisk"></p>
+<p><img src="http://img.zhufengpeixun.cn/storewarning.png" alt="storewarning"></p>
+<p><img src="http://img.zhufengpeixun.cn/network1.png" alt="network1"></p>
+<p><img src="http://img.zhufengpeixun.cn/network2.png" alt="network2"></p>
+<p><img src="http://img.zhufengpeixun.cn/network3.png" alt="network3"></p>
+<h4 id="t254.6.1 &#x5B89;&#x88C5;&#x7C7B;&#x578B;">4.6.1 &#x5B89;&#x88C5;&#x7C7B;&#x578B; <a href="#t254.6.1 &#x5B89;&#x88C5;&#x7C7B;&#x578B;"> # </a></h4>
+<ul>
+<li><code>Install or upgrade an existing system</code> &#x5B89;&#x88C5;&#x6216;&#x8005;&#x5347;&#x7EA7;&#x73B0;&#x6709;&#x7CFB;&#x7EDF;</li>
+<li><code>Install system with basic video driver</code> &#x5B89;&#x88C5;&#x8FC7;&#x7A0B;&#x91C7;&#x7528;&#x57FA;&#x672C;&#x7684;&#x663E;&#x5361;&#x9A71;&#x52A8;</li>
+<li><code>Rescue installed system</code> &#x8FDB;&#x5165;&#x7CFB;&#x7EDF;&#x4FEE;&#x590D;&#x6A21;&#x5F0F;</li>
+<li><code>Boot from local drive</code> &#x9000;&#x51FA;&#x5B89;&#x88C5;&#x4ECE;&#x786C;&#x76D8;&#x542F;&#x52A8;</li>
+<li><code>Memory test</code> &#x5B58;&#x50A8;&#x4ECB;&#x8D28;&#x68C0;&#x6D4B;</li>
+</ul>
+<h4 id="t264.6.2 &#x5BC6;&#x7801;">4.6.2 &#x5BC6;&#x7801; <a href="#t264.6.2 &#x5BC6;&#x7801;"> # </a></h4>
+<ul>
+<li>&#x590D;&#x6742;&#x6027;<ul>
+<li>&#x516B;&#x4F4D;&#x5B57;&#x7B26;&#x4EE5;&#x4E0A;&#x3001;&#x5927;&#x5C0F;&#x5199;&#x5B57;&#x6BCD;&#x3001;&#x6570;&#x5B57;&#x3001;&#x7B26;&#x53F7;</li>
+<li>&#x4E0D;&#x80FD;&#x662F;&#x82F1;&#x6587;&#x5355;&#x8BCD;</li>
+<li>&#x4E0D;&#x80FD;&#x662F;&#x548C;&#x7528;&#x6237;&#x76F8;&#x5173;&#x7684;&#x5185;&#x5BB9;</li>
+</ul>
+</li>
+<li>&#x6613;&#x8BB0;&#x5FC6;&#x6027;</li>
+<li>&#x5B9E;&#x6548;&#x6027;</li>
+</ul>
+<h4 id="t274.6.3 &#x5B89;&#x88C5;&#x7C7B;&#x578B;">4.6.3 &#x5B89;&#x88C5;&#x7C7B;&#x578B; <a href="#t274.6.3 &#x5B89;&#x88C5;&#x7C7B;&#x578B;"> # </a></h4>
+<ul>
+<li>Desktop (&#x684C;&#x9762;)</li>
+<li>Minimal Desktop (&#x6700;&#x5C0F;&#x5316;&#x684C;&#x9762;)</li>
+<li>Minimal (&#x6700;&#x5C0F;&#x5316;)</li>
+<li><code>Basic Server</code> (&#x57FA;&#x672C;&#x670D;&#x52A1;&#x5668;,&#x63A8;&#x8350;)</li>
+<li>Database Server (&#x6570;&#x636E;&#x5E93;&#x670D;&#x52A1;&#x5668;)</li>
+<li>Web Server (&#x7F51;&#x9875;&#x670D;&#x52A1;&#x5668;)</li>
+<li>Virutal Host (&#x865A;&#x62DF;&#x4E3B;&#x673A;)</li>
+<li>software development workstation(&#x8F6F;&#x4EF6;&#x5F00;&#x53D1;&#x5DE5;&#x4F5C;&#x7AD9;)</li>
+</ul>
+<h4 id="t284.6.4 &#x5B89;&#x88C5;&#x65E5;&#x5FD7;">4.6.4 &#x5B89;&#x88C5;&#x65E5;&#x5FD7; <a href="#t284.6.4 &#x5B89;&#x88C5;&#x65E5;&#x5FD7;"> # </a></h4>
+<ul>
+<li>/root/install.log &#x5B58;&#x50A8;&#x4E86;&#x5B89;&#x88C5;&#x5728;&#x7CFB;&#x7EDF;&#x4E2D;&#x7684;&#x8F6F;&#x4EF6;&#x5305;&#x53CA;&#x5176;&#x7248;&#x672C;&#x4FE1;&#x606F;</li>
+<li>/root/install.log.syslog &#x5B58;&#x50A8;&#x4E86;&#x5B89;&#x88C5;&#x8FC7;&#x7A0B;&#x4E2D;&#x7559;&#x4E0B;&#x7684;&#x4E8B;&#x4EF6;&#x8BB0;&#x5F55;</li>
+<li>/root/anaconda-ks.cfg &#x8BB0;&#x5F55;&#x4E86;&#x5B89;&#x88C5;&#x8FC7;&#x7A0B;&#x4E2D;&#x8BBE;&#x7F6E;&#x7684;&#x9009;&#x9879;&#x4FE1;&#x606F;&#xFF0C;&#x53EF;&#x4EE5;&#x505A;&#x4E3A;&#x5B89;&#x88C5;&#x7684;&#x6A21;&#x7248;&#x6587;&#x4EF6;</li>
+</ul>
+<h4 id="t294.6.5 &#x914D;&#x7F6E;IP&#x5730;&#x5740;">4.6.5 &#x914D;&#x7F6E;IP&#x5730;&#x5740; <a href="#t294.6.5 &#x914D;&#x7F6E;IP&#x5730;&#x5740;"> # </a></h4>
+<h5 id="t304.6.5.1 setup">4.6.5.1 setup <a href="#t304.6.5.1 setup"> # </a></h5>
+<ul>
+<li>&#x9632;&#x706B;&#x5899;&#x914D;&#x7F6E;</li>
+<li>&#x7F51;&#x7EDC;&#x914D;&#x7F6E;</li>
+<li>&#x7CFB;&#x7EDF;&#x670D;&#x52A1;</li>
+<li>&#x9A8C;&#x8BC1;&#x914D;&#x7F6E;</li>
+</ul>
+<h5 id="t314.6.5.2 ifcfg-eth0">4.6.5.2 ifcfg-eth0 <a href="#t314.6.5.2 ifcfg-eth0"> # </a></h5>
+<p>cat /etc/sysconfig/network-scripts/ifcfg-eth0</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x53C2;&#x6570;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">TYPE=Ethernet</td>
+<td style="text-align:left">#&#x7F51;&#x5361;&#x7C7B;&#x578B;</td>
+</tr>
+<tr>
+<td style="text-align:left">DEVICE=eth0</td>
+<td style="text-align:left">#&#x7F51;&#x5361;&#x63A5;&#x53E3;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td style="text-align:left">ONBOOT=yes</td>
+<td style="text-align:left">#&#x7CFB;&#x7EDF;&#x542F;&#x52A8;&#x65F6;&#x662F;&#x5426;&#x81EA;&#x52A8;&#x52A0;&#x8F7D;</td>
+</tr>
+<tr>
+<td style="text-align:left">BOOTPROTO=static</td>
+<td style="text-align:left">#&#x542F;&#x7528;&#x5730;&#x5740;&#x534F;&#x8BAE; --static:&#x9759;&#x6001;&#x534F;&#x8BAE; --bootp&#x534F;&#x8BAE; --dhcp&#x534F;&#x8BAE;</td>
+</tr>
+<tr>
+<td style="text-align:left">IPADDR=192.168.1.11</td>
+<td style="text-align:left">#&#x7F51;&#x5361;IP&#x5730;&#x5740;</td>
+</tr>
+<tr>
+<td style="text-align:left">NETMASK=255.255.255.0</td>
+<td style="text-align:left">#&#x7F51;&#x5361;&#x7F51;&#x7EDC;&#x5730;&#x5740;</td>
+</tr>
+<tr>
+<td style="text-align:left">GATEWAY=192.168.1.1</td>
+<td style="text-align:left">#&#x7F51;&#x5361;&#x7F51;&#x5173;&#x5730;&#x5740;</td>
+</tr>
+<tr>
+<td style="text-align:left">DNS1=10.203.104.41</td>
+<td style="text-align:left">#&#x7F51;&#x5361;DNS&#x5730;&#x5740;</td>
+</tr>
+<tr>
+<td style="text-align:left">HWADDR=00:0C:29:13:5D:74</td>
+<td style="text-align:left">#&#x7F51;&#x5361;&#x8BBE;&#x5907;MAC&#x5730;&#x5740;</td>
+</tr>
+<tr>
+<td style="text-align:left">BROADCAST=192.168.1.255</td>
+<td style="text-align:left">#&#x7F51;&#x5361;&#x5E7F;&#x64AD;&#x5730;&#x5740;</td>
+</tr>
+</tbody>
+</table>
+<h5 id="t324.6.5.2 &#x7F51;&#x5361;&#x63A5;&#x53E3;&#x5173;&#x95ED;&#x4E0E;&#x6FC0;&#x6D3B;">4.6.5.2 &#x7F51;&#x5361;&#x63A5;&#x53E3;&#x5173;&#x95ED;&#x4E0E;&#x6FC0;&#x6D3B; <a href="#t324.6.5.2 &#x7F51;&#x5361;&#x63A5;&#x53E3;&#x5173;&#x95ED;&#x4E0E;&#x6FC0;&#x6D3B;"> # </a></h5>
+<pre><code class="lang-js">ifdown eth0 #&#x5173;&#x95ED;&#x7F51;&#x7EDC;
+ifup eth0 #&#x542F;&#x52A8;&#x7F51;&#x7EDC;
+</code></pre>
+<h5 id="t334.6.5.3 &#x7F51;&#x7EDC;&#x670D;&#x52A1;&#x542F;&#x52A8;&#x4E0E;&#x5173;&#x95ED;">4.6.5.3 &#x7F51;&#x7EDC;&#x670D;&#x52A1;&#x542F;&#x52A8;&#x4E0E;&#x5173;&#x95ED; <a href="#t334.6.5.3 &#x7F51;&#x7EDC;&#x670D;&#x52A1;&#x542F;&#x52A8;&#x4E0E;&#x5173;&#x95ED;"> # </a></h5>
+<pre><code class="lang-js">service network restart #&#x91CD;&#x542F;&#x7F51;&#x7EDC;&#x670D;&#x52A1;
+</code></pre>
+<h2 id="t345.linux&#x5E38;&#x7528;&#x547D;&#x4EE4;">5.linux&#x5E38;&#x7528;&#x547D;&#x4EE4; <a href="#t345.linux&#x5E38;&#x7528;&#x547D;&#x4EE4;"> # </a></h2>
+<h3 id="t355.1 &#x5E38;&#x89C1;&#x76EE;&#x5F55;">5.1 &#x5E38;&#x89C1;&#x76EE;&#x5F55; <a href="#t355.1 &#x5E38;&#x89C1;&#x76EE;&#x5F55;"> # </a></h3>
+<ul>
+<li>/ &#x6839;&#x76EE;&#x5F55;</li>
+<li>/boot &#x542F;&#x52A8;&#x76EE;&#x5F55;&#xFF0C;&#x542F;&#x52A8;&#x76F8;&#x5173;&#x6587;&#x4EF6;</li>
+<li>/dev &#x8BBE;&#x5907;&#x6587;&#x4EF6;</li>
+<li>/etc &#x914D;&#x7F6E;&#x6587;&#x4EF6;</li>
+<li>/home &#x666E;&#x901A;&#x7528;&#x6237;&#x7684;&#x5BB6;&#x76EE;&#x5F55;,&#x53EF;&#x4EE5;&#x64CD;&#x4F5C;</li>
+<li>/lib &#x7CFB;&#x7EDF;&#x5E93;&#x4FDD;&#x5B58;&#x76EE;&#x5F55;</li>
+<li>/mnt &#x79FB;&#x52A8;&#x8BBE;&#x5907;&#x6302;&#x8F7D;&#x76EE;&#x5F55;</li>
+<li>/media &#x5149;&#x76D8;&#x6302;&#x8F7D;&#x76EE;&#x5F55;</li>
+<li>/misc &#x78C1;&#x5E26;&#x673A;&#x6302;&#x8F7D;&#x76EE;&#x5F55;</li>
+<li>/root &#x8D85;&#x7EA7;&#x7528;&#x6237;&#x7684;&#x5BB6;&#x76EE;&#x5F55;,&#x53EF;&#x4EE5;&#x64CD;&#x4F5C;</li>
+<li>/tmp &#x4E34;&#x65F6;&#x76EE;&#x5F55;,&#x53EF;&#x4EE5;&#x64CD;&#x4F5C;</li>
+<li>/proc &#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x64CD;&#x4F5C;&#xFF0C;&#x4FDD;&#x5B58;&#x7684;&#x662F;&#x5185;&#x5B58;&#x7684;&#x6302;&#x8F7D;&#x70B9;</li>
+<li>/sys &#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x64CD;&#x4F5C;&#xFF0C;&#x4FDD;&#x5B58;&#x7684;&#x662F;&#x5185;&#x5B58;&#x7684;&#x6302;&#x8F7D;&#x70B9;</li>
+<li>/var &#x53D8;&#x91CF;</li>
+<li>/bin &#x666E;&#x901A;&#x547D;&#x4EE4;</li>
+<li>/sbin &#x547D;&#x4EE4;&#x4FDD;&#x5B58;&#x76EE;&#x5F55;&#xFF0C;&#x7EA7;&#x7528;&#x6237;&#x624D;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x7684;&#x547D;&#x4EE4;</li>
+<li>/usr/bin &#x7CFB;&#x7EDF;&#x8F6F;&#x4EF6;&#x8D44;&#x6E90;&#x76EE;&#x5F55;  &#x9762;&#x5411;&#x666E;&#x901A;&#x7528;&#x6237;&#x7684;&#x7CFB;&#x7EDF;&#x547D;&#x4EE4;</li>
+<li>/usr/sbin &#x7CFB;&#x7EDF;&#x8F6F;&#x4EF6;&#x8D44;&#x6E90;&#x76EE;&#x5F55; &#x9762;&#x5411;&#x8D85;&#x7EA7;&#x7528;&#x6237;&#x7684;&#x7CFB;&#x7EDF;&#x547D;&#x4EE4;</li>
+</ul>
+<h3 id="t365.2 &#x547D;&#x4EE4;&#x57FA;&#x672C;&#x683C;&#x5F0F;">5.2 &#x547D;&#x4EE4;&#x57FA;&#x672C;&#x683C;&#x5F0F; <a href="#t365.2 &#x547D;&#x4EE4;&#x57FA;&#x672C;&#x683C;&#x5F0F;"> # </a></h3>
+<h4 id="t375.2.1 &#x547D;&#x4EE4;&#x63D0;&#x793A;&#x7B26;">5.2.1 &#x547D;&#x4EE4;&#x63D0;&#x793A;&#x7B26; <a href="#t375.2.1 &#x547D;&#x4EE4;&#x63D0;&#x793A;&#x7B26;"> # </a></h4>
+<pre><code class="lang-sh">[root@zhangrenyang ~]<span class="hljs-comment">#</span>
+</code></pre>
+<ul>
+<li>root &#x5F53;&#x524D;&#x767B;&#x5F55;&#x7528;&#x6237;</li>
+<li>localhost &#x4E3B;&#x673A;&#x540D;</li>
+<li>~ &#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;,&#x9ED8;&#x8BA4;&#x662F;&#x5F53;&#x524D;&#x7528;&#x6237;&#x7684;&#x5BB6;&#x76EE;&#x5F55;&#xFF0C;root&#x5C31;&#x662F;/root,&#x666E;&#x901A;&#x7528;&#x6237;&#x662F; /home/&#x7528;&#x6237;&#x540D;</li>
+<li>&#x63D0;&#x793A;&#x7B26; &#x8D85;&#x7EA7;&#x7528;&#x6237;&#x662F; #,&#x666E;&#x901A;&#x7528;&#x6237;&#x662F;$</li>
+</ul>
+<h4 id="t385.2.2 &#x547D;&#x4EE4;&#x683C;&#x5F0F;">5.2.2 &#x547D;&#x4EE4;&#x683C;&#x5F0F; <a href="#t385.2.2 &#x547D;&#x4EE4;&#x683C;&#x5F0F;"> # </a></h4>
+<ul>
+<li>&#x547D;&#x4EE4; [&#x9009;&#x9879;] [&#x53C2;&#x6570;]</li>
+<li>&#x5F53;&#x6709;&#x591A;&#x4E2A;&#x9009;&#x9879;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x5199;&#x5728;&#x4E00;&#x8D77;</li>
+<li>&#x4E00;&#x822C;&#x53C2;&#x6570;&#x6709;&#x7B80;&#x5316;&#x548C;&#x5B8C;&#x6574;&#x5199;&#x6CD5;&#x4E24;&#x79CD;   <code>-a</code> &#x4E0E; <code>--all</code>&#x7B49;&#x6548;</li>
+</ul>
+<h4 id="t395.2.3 ls">5.2.3 ls <a href="#t395.2.3 ls"> # </a></h4>
+<ul>
+<li>&#x67E5;&#x8BE2;&#x76EE;&#x5F55;&#x4E2D;&#x7684;&#x5185;&#x5BB9;</li>
+<li>ls [&#x9009;&#x9879;] [&#x6587;&#x4EF6;&#x6216;&#x8005;&#x76EE;&#x5F55;]</li>
+<li>&#x9009;&#x9879;<ul>
+<li>-a &#x663E;&#x793A;&#x6240;&#x6709;&#x6587;&#x4EF6;&#xFF0C;&#x5305;&#x62EC;&#x9690;&#x85CF;&#x6587;&#x4EF6;</li>
+<li>-l &#x663E;&#x793A;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;</li>
+<li>-d &#x67E5;&#x770B;&#x76EE;&#x5F55;&#x672C;&#x8EAB;&#x7684;&#x5C5E;&#x6027;&#x800C;&#x975E;&#x5B50;&#x6587;&#x4EF6; ls /etc/</li>
+<li>-h &#x4EBA;&#x6027;&#x5316;&#x7684;&#x65B9;&#x5F0F;&#x663E;&#x793A;&#x6587;&#x4EF6;&#x5927;&#x5C0F;</li>
+<li>-i &#x663E;&#x793A;inode,&#x4E5F;&#x5C31;&#x662F;i&#x8282;&#x70B9;&#xFF0C;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x90FD;&#x6709;ID&#x53F7;</li>
+</ul>
+</li>
+<li>&#x9ED8;&#x8BA4;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6587;&#x4EF6;&#x5217;&#x8868;</li>
+</ul>
+<h5 id="t405.2.3.1 -l">5.2.3.1 -l <a href="#t405.2.3.1 -l"> # </a></h5>
+<p>&#x663E;&#x793A;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;</p>
+<pre><code class="lang-sh">drwxr-xr-x .  1 root  root   800 Sep 16 00:19 logs
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">drwxr-xr-x</th>
+<th style="text-align:left">.</th>
+<th style="text-align:left">1</th>
+<th style="text-align:left">root</th>
+<th style="text-align:left">root</th>
+<th style="text-align:left">800</th>
+<th style="text-align:left">Sep 16 00:19</th>
+<th style="text-align:left">logs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x6587;&#x4EF6;&#x7C7B;&#x578B;&#x548C;&#x6743;&#x9650;</td>
+<td style="text-align:left">ACL&#x6743;&#x9650;</td>
+<td style="text-align:left">&#x786C;&#x94FE;&#x63A5;&#x5F15;&#x7528;&#x8BA1;&#x6570;</td>
+<td style="text-align:left">&#x6240;&#x6709;&#x8005;</td>
+<td style="text-align:left">&#x6240;&#x5C5E;&#x7EC4;</td>
+<td style="text-align:left">&#x6587;&#x4EF6;&#x5927;&#x5C0F;</td>
+<td style="text-align:left">&#x6700;&#x540E;&#x4FEE;&#x6539;&#x65F6;&#x95F4;</td>
+<td style="text-align:left">&#x6587;&#x4EF6;&#x540D;</td>
+</tr>
+</tbody>
+</table>
+<h5 id="t415.2.3.2 &#x6587;&#x4EF6;&#x7C7B;&#x578B;&#x548C;&#x6743;&#x9650;">5.2.3.2 &#x6587;&#x4EF6;&#x7C7B;&#x578B;&#x548C;&#x6743;&#x9650; <a href="#t415.2.3.2 &#x6587;&#x4EF6;&#x7C7B;&#x578B;&#x548C;&#x6743;&#x9650;"> # </a></h5>
+<pre><code class="lang-sh">-rw-r--r--
+</code></pre>
+<ul>
+<li>&#x6587;&#x4EF6;&#x7C7B;&#x578B;  - &#x6587;&#x4EF6;&#x3001;d &#x76EE;&#x5F55;&#x3001;l &#x8F6F;&#x94FE;&#x63A5;&#x6587;&#x4EF6;</li>
+<li>u(&#x6240;&#x6709;&#x8005;)&#x3001;g(&#x6240;&#x5C5E;&#x7EC4;)&#x3001;o(&#x5176;&#x4ED6;&#x4EBA;)</li>
+<li>r(read) &#x8BFB;&#x53D6;&#x3001;w(write) &#x5199;&#x5165;&#x3001;x(execute) &#x6267;&#x884C;</li>
+</ul>
+<h3 id="t425.3 &#x6587;&#x4EF6;&#x5904;&#x7406;&#x547D;&#x4EE4;">5.3 &#x6587;&#x4EF6;&#x5904;&#x7406;&#x547D;&#x4EE4; <a href="#t425.3 &#x6587;&#x4EF6;&#x5904;&#x7406;&#x547D;&#x4EE4;"> # </a></h3>
+<h4 id="t435.3.1 mkdir">5.3.1 mkdir <a href="#t435.3.1 mkdir"> # </a></h4>
+<ul>
+<li>&#x5EFA;&#x7ACB;&#x76EE;&#x5F55; make directory</li>
+<li>mkdir -p [&#x76EE;&#x5F55;&#x540D;]<ul>
+<li>-p &#x9012;&#x5F52;&#x521B;&#x5EFA;</li>
+</ul>
+</li>
+</ul>
+<h4 id="t445.3.2 cd">5.3.2 cd <a href="#t445.3.2 cd"> # </a></h4>
+<ul>
+<li>&#x5207;&#x6362;&#x6240;&#x5728;&#x76EE;&#x5F55; change directory</li>
+<li>cd [&#x76EE;&#x5F55;]<ul>
+<li>~ &#x5BB6;&#x76EE;&#x5F55;</li>
+<li>&#x5BB6;&#x76EE;&#x5F55;</li>
+<li><ul>
+<li>&#x4E0A;&#x6B21;&#x76EE;&#x5F55;</li>
+</ul>
+</li>
+<li>. &#x5F53;&#x524D;&#x76EE;&#x5F55;</li>
+<li>.. &#x4E0A;&#x7EA7;&#x76EE;&#x5F55;</li>
+</ul>
+</li>
+<li>&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#x662F;&#x53C2;&#x7167;&#x5F53;&#x524D;&#x6240;&#x5728;&#x76EE;&#x5F55;</li>
+<li>&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x662F;&#x4ECE;&#x6839;&#x76EE;&#x5F55;&#x5F00;&#x59CB;</li>
+<li>&#x6309;TAB&#x952E;&#x53EF;&#x4EE5;&#x8865;&#x5168;&#x547D;&#x4EE4;&#x548C;&#x76EE;&#x5F55;</li>
+</ul>
+<h4 id="t455.3.3 pwd">5.3.3 pwd <a href="#t455.3.3 pwd"> # </a></h4>
+<ul>
+<li>&#x663E;&#x793A;&#x5F53;&#x524D;&#x76EE;&#x5F55; pwd</li>
+</ul>
+<h4 id="t465.3.4 rmdir">5.3.4 rmdir <a href="#t465.3.4 rmdir"> # </a></h4>
+<ul>
+<li>&#x5220;&#x9664;&#x76EE;&#x5F55; remove empty  directory</li>
+<li>rmdir [&#x76EE;&#x5F55;&#x540D;]</li>
+</ul>
+<h4 id="t475.3.5 rm">5.3.5 rm <a href="#t475.3.5 rm"> # </a></h4>
+<ul>
+<li>&#x5220;&#x9664;&#x6587;&#x4EF6;&#x6216;&#x8005;&#x76EE;&#x5F55; remove</li>
+<li>rm [&#x6587;&#x4EF6;&#x6216;&#x8005;&#x76EE;&#x5F55;]<ul>
+<li>-r &#x5220;&#x9664;&#x76EE;&#x5F55;</li>
+<li>-f &#x5F3A;&#x5236;&#x5220;&#x9664;</li>
+</ul>
+</li>
+<li>rm -rf &#x6587;&#x4EF6;&#x6216;&#x8005;&#x76EE;&#x5F55;] &#x9012;&#x5F52;&#x5F3A;&#x5236;&#x5220;&#x9664;&#x6240;&#x6709;&#x76EE;&#x5F55;</li>
+</ul>
+<h4 id="t485.3.6 cp">5.3.6 cp <a href="#t485.3.6 cp"> # </a></h4>
+<ul>
+<li>copy &#x590D;&#x5236;&#x547D;&#x4EE4;</li>
+<li>copy [&#x6E90;&#x6587;&#x4EF6;&#x6216;&#x8005;&#x76EE;&#x5F55;] [&#x76EE;&#x6807;&#x6587;&#x4EF6;]<ul>
+<li>-r &#x590D;&#x5236;&#x76EE;&#x5F55;,&#x9ED8;&#x8BA4;&#x662F;&#x590D;&#x5236;&#x6587;&#x4EF6;</li>
+<li>-p &#x8FDE;&#x5E26;&#x6587;&#x4EF6;&#x5C5E;&#x6027;&#x590D;&#x5236;</li>
+<li>-d &#x82E5;&#x6E90;&#x6587;&#x4EF6;&#x662F;&#x94FE;&#x63A5;&#x6587;&#x4EF6;&#xFF0C;&#x5219;&#x590D;&#x5236;&#x8FDE;&#x63A5;&#x5C5E;&#x6027;</li>
+<li>-a &#x76F8;&#x5F53;&#x4E8E; -rpd</li>
+</ul>
+</li>
+</ul>
+<h4 id="t495.3.7 mv">5.3.7 mv <a href="#t495.3.7 mv"> # </a></h4>
+<ul>
+<li>&#x79FB;&#x52A8;&#x6587;&#x4EF6;&#x6216;&#x8005;&#x6539;&#x540D; move</li>
+<li>mv [&#x6E90;&#x6587;&#x4EF6;&#x6216;&#x8005;&#x76EE;&#x5F55;] [&#x76EE;&#x6807;&#x6587;&#x4EF6;]</li>
+</ul>
+<h4 id="t505.3.8 ln">5.3.8 ln <a href="#t505.3.8 ln"> # </a></h4>
+<ul>
+<li>&#x94FE;&#x63A5;&#x547D;&#x4EE4;,&#x751F;&#x6210;&#x94FE;&#x63A5;&#x6587;&#x4EF6; <code>link</code></li>
+</ul>
+<h5 id="t515.3.8.1  &#x786C;&#x94FE;&#x63A5;&#x7279;&#x5F81;">5.3.8.1  &#x786C;&#x94FE;&#x63A5;&#x7279;&#x5F81; <a href="#t515.3.8.1  &#x786C;&#x94FE;&#x63A5;&#x7279;&#x5F81;"> # </a></h5>
+<ul>
+<li>&#x62E5;&#x6709;&#x76F8;&#x540C;&#x7684;i&#x8282;&#x70B9;&#x548C;&#x5B58;&#x50A8;block&#x5757;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x4F5C;&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;</li>
+<li>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;i&#x8282;&#x70B9;&#x8BBF;&#x95EE;</li>
+<li>&#x4E0D;&#x80FD;&#x8DE8;&#x5206;&#x533A;</li>
+<li>&#x4E0D;&#x80FD;&#x9488;&#x5BF9;&#x76EE;&#x5F55;&#x4F7F;&#x7528;</li>
+<li>&#x4E00;&#x822C;&#x4E0D;&#x4F7F;&#x7528;</li>
+</ul>
+<h5 id="t525.3.8.2  &#x8F6F;&#x94FE;&#x63A5;&#x7279;&#x5F81;">5.3.8.2  &#x8F6F;&#x94FE;&#x63A5;&#x7279;&#x5F81; <a href="#t525.3.8.2  &#x8F6F;&#x94FE;&#x63A5;&#x7279;&#x5F81;"> # </a></h5>
+<ul>
+<li>ln -s [&#x6E90;&#x6587;&#x4EF6;] [&#x76EE;&#x6807;&#x6587;&#x4EF6;] <ul>
+<li>-s &#x521B;&#x5EFA;&#x8F6F;&#x94FE;&#x63A5;</li>
+</ul>
+</li>
+<li>&#x7C7B;&#x4F3C;Windows&#x5FEB;&#x6377;&#x65B9;&#x5F0F;</li>
+<li>&#x8F6F;&#x94FE;&#x63A5;&#x62E5;&#x6709;&#x81EA;&#x5DF1;&#x7684;i&#x8282;&#x70B9;&#x548C;Block&#x5757;&#xFF0C;&#x4F46;&#x662F;&#x6570;&#x636E;&#x5757;&#x4E2D;&#x53EA;&#x4FDD;&#x5B58;&#x6E90;&#x6587;&#x4EF6;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x548C;i&#x8282;&#x70B9;&#x53F7;&#xFF0C;&#x5E76;&#x6CA1;&#x6709;&#x5B9E;&#x9645;&#x7684;&#x6587;&#x4EF6;&#x6570;&#x636E;</li>
+<li>lrwxrwxrwx l &#x8F6F;&#x94FE;&#x63A5;  &#x8F6F;&#x94FE;&#x63A5;&#x7684;&#x6587;&#x4EF6;&#x6743;&#x9650;&#x90FD;&#x662F; 777</li>
+<li>&#x4FEE;&#x6539;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x53E6;&#x4E00;&#x4E2A;&#x90FD;&#x4F1A;&#x6539;&#x53D8;</li>
+<li>&#x5220;&#x9664;&#x6E90;&#x6587;&#x4EF6;&#xFF0C;&#x8F6F;&#x94FE;&#x63A5;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;</li>
+<li>&#x8F6F;&#x94FE;&#x63A5;&#x6E90;&#x6587;&#x4EF6;&#x5FC5;&#x987B;&#x5199;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;</li>
+</ul>
+<h3 id="t535.4 &#x6587;&#x4EF6;&#x641C;&#x7D22;&#x547D;&#x4EE4;">5.4 &#x6587;&#x4EF6;&#x641C;&#x7D22;&#x547D;&#x4EE4; <a href="#t535.4 &#x6587;&#x4EF6;&#x641C;&#x7D22;&#x547D;&#x4EE4;"> # </a></h3>
+<h4 id="t545.4.1 locate">5.4.1 locate <a href="#t545.4.1 locate"> # </a></h4>
+<ul>
+<li>&#x5728;&#x540E;&#x53F0;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x6309;&#x6587;&#x4EF6;&#x540D;&#x641C;&#x7D22;&#xFF0C;&#x901F;&#x5EA6;&#x6BD4;&#x8F83;&#x5FEB;</li>
+<li>&#x6570;&#x636E;&#x4FDD;&#x5B58;&#x5728;<code>/var/lib/mlocate</code>&#x540E;&#x53F0;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x6BCF;&#x5929;&#x66F4;&#x65B0;&#x4E00;&#x6B21;</li>
+<li>&#x53EF;&#x4EE5;<code>updatedb</code>&#x547D;&#x4EE4;&#x7ACB;&#x523B;&#x66F4;&#x65B0;&#x6570;&#x636E;&#x5E93;</li>
+<li>&#x53EA;&#x80FD;&#x641C;&#x7D22;&#x6587;&#x4EF6;&#x540D;</li>
+<li><code>/etc/updatedb.conf</code> &#x5EFA;&#x7ACB;&#x7D22;&#x5F15;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;<ul>
+<li>PRUNE_BIND_MOUNTS = &quot;yes&quot; &#x5168;&#x90E8;&#x751F;&#x6548;&#xFF0C;&#x5F00;&#x542F;&#x641C;&#x7D22;&#x9650;&#x5236;</li>
+<li>PRUNEFS &#x4E0D;&#x641C;&#x7D22;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;</li>
+<li>PRUNENAMES &#x5FFD;&#x7565;&#x7684;&#x6587;&#x4EF6;&#x7C7B;&#x578B;</li>
+<li>PRUNEPATHS &#x5FFD;&#x7565;&#x7684;&#x8DEF;&#x5F84; /tmp</li>
+</ul>
+</li>
+</ul>
+<h4 id="t555.4.2 whereis">5.4.2 whereis <a href="#t555.4.2 whereis"> # </a></h4>
+<ul>
+<li>&#x641C;&#x7D22;&#x547D;&#x4EE4;&#x6240;&#x5728;&#x8DEF;&#x5F84;&#x4EE5;&#x53CA;&#x5E2E;&#x52A9;&#x6587;&#x6863;&#x6240;&#x5728;&#x4F4D;&#x7F6E;</li>
+<li>whereis &#x547D;&#x4EE4;&#x540D; <code>whereis ls</code><ul>
+<li>-b &#x53EA;&#x67E5;&#x627E;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;</li>
+<li>-m &#x53EA;&#x67E5;&#x627E;&#x5E2E;&#x52A9;&#x6587;&#x4EF6;</li>
+</ul>
+</li>
+</ul>
+<h4 id="t565.4.3 which">5.4.3 which <a href="#t565.4.3 which"> # </a></h4>
+<ul>
+<li>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x522B;&#x540D; <code>which ls</code></li>
+<li>&#x80FD;&#x770B;&#x5230;&#x7684;&#x90FD;&#x662F;&#x5916;&#x90E8;&#x5B89;&#x88C5;&#x7684;&#x547D;&#x4EE4;</li>
+<li>&#x65E0;&#x6CD5;&#x67E5;&#x770B;Shell&#x81EA;&#x5E26;&#x7684;&#x547D;&#x4EE4;&#xFF0C;&#x5982; <code>which cd</code></li>
+</ul>
+<h4 id="t575.4.4 &#x73AF;&#x5883;&#x53D8;&#x91CF;">5.4.4 &#x73AF;&#x5883;&#x53D8;&#x91CF; <a href="#t575.4.4 &#x73AF;&#x5883;&#x53D8;&#x91CF;"> # </a></h4>
+<p><code>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</code></p>
+<ul>
+<li>&#x5B9A;&#x4E49;&#x7684;&#x662F;&#x7CFB;&#x7EDF;&#x641C;&#x7D22;&#x547D;&#x4EE4;&#x7684;&#x8DEF;&#x5F84;</li>
+<li>echo $PATH</li>
+</ul>
+<h4 id="t585.4.5 find">5.4.5 find <a href="#t585.4.5 find"> # </a></h4>
+<ul>
+<li>&#x6587;&#x4EF6;&#x641C;&#x7D22;&#x547D;&#x4EE4;</li>
+<li>find [&#x641C;&#x7D22;&#x8303;&#x56F4;] [&#x641C;&#x7D22;&#x6761;&#x4EF6;]</li>
+</ul>
+<h5 id="t595.4.5.1 &#x6309;&#x540D;&#x79F0;&#x641C;&#x7D22;">5.4.5.1 &#x6309;&#x540D;&#x79F0;&#x641C;&#x7D22; <a href="#t595.4.5.1 &#x6309;&#x540D;&#x79F0;&#x641C;&#x7D22;"> # </a></h5>
+<ul>
+<li>&#x907F;&#x514D;&#x5927;&#x8303;&#x56F4;&#x7684;&#x641C;&#x7D22;&#xFF0C;&#x4F1A;&#x975E;&#x5E38;&#x6D88;&#x8017;&#x7CFB;&#x7EDF;&#x8D44;&#x6E90;<pre><code class="lang-sh">find / -name aaa.log
+</code></pre>
+</li>
+</ul>
+<h5 id="t605.4.5.2 &#x901A;&#x914D;&#x7B26;">5.4.5.2 &#x901A;&#x914D;&#x7B26; <a href="#t605.4.5.2 &#x901A;&#x914D;&#x7B26;"> # </a></h5>
+<ul>
+<li>find&#x662F;&#x5728;&#x7CFB;&#x7EDF;&#x5F53;&#x4E2D;&#x641C;&#x7D22;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x5339;&#x914D;&#xFF0C;&#x4F7F;&#x7528;&#x901A;&#x914D;&#x7B26;&#x5339;&#x914D;&#xFF0C;&#x901A;&#x914D;&#x7B26;&#x662F;&#x5B8C;&#x5168;&#x5339;&#x914D;</li>
+<li>&#x901A;&#x914D;&#x7B26;<ul>
+<li><code>*</code>  &#x5339;&#x914D;&#x4EFB;&#x610F;&#x5185;&#x5BB9;</li>
+<li><code>?</code> &#x5339;&#x914D;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;</li>
+<li><code>[]</code> &#x5339;&#x914D;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x4E2D;&#x62EC;&#x53F7;&#x5185;&#x7684;&#x5B57;&#x7B26;</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-sh">find . -name <span class="hljs-string">&quot;ab[cdef]&quot;</span>
+</code></pre>
+<h5 id="t615.4.5.3 -i">5.4.5.3 -i <a href="#t615.4.5.3 -i"> # </a></h5>
+<p>&#x4E0D;&#x533A;&#x5206;&#x5927;&#x5C0F;&#x5199;</p>
+<pre><code class="lang-sh">find / -iname A.log
+</code></pre>
+<h5 id="t625.4.5.4 -user">5.4.5.4 -user <a href="#t625.4.5.4 -user"> # </a></h5>
+<p>&#x6309;&#x6240;&#x6709;&#x8005;&#x8FDB;&#x884C;&#x641C;&#x7D22;</p>
+<pre><code class="lang-sh">find /root -user root
+find /root -nouser
+</code></pre>
+<h5 id="t635.4.5.5 &#x6309;&#x65F6;&#x95F4;&#x641C;&#x7D22;">5.4.5.5 &#x6309;&#x65F6;&#x95F4;&#x641C;&#x7D22; <a href="#t635.4.5.5 &#x6309;&#x65F6;&#x95F4;&#x641C;&#x7D22;"> # </a></h5>
+<pre><code class="lang-sh">find /nginx/access.log -mtime +5
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x53C2;&#x6570;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">atime</td>
+<td style="text-align:left">&#x6587;&#x4EF6;&#x8BBF;&#x95EE;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td style="text-align:left">ctime</td>
+<td style="text-align:left">&#x6539;&#x53D8;&#x6587;&#x4EF6;&#x5C5E;&#x6027;</td>
+</tr>
+<tr>
+<td style="text-align:left">mtime</td>
+<td style="text-align:left">&#x4FEE;&#x6539;&#x6587;&#x4EF6;&#x5185;&#x5BB9;</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x53C2;&#x6570;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">-5</td>
+<td style="text-align:left">5&#x5929;&#x5185;&#x4FEE;&#x6539;&#x7684;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td style="text-align:left">5</td>
+<td style="text-align:left">5&#x5929;&#x524D;&#x5F53;&#x524D;&#x4FEE;&#x6539;&#x7684;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td style="text-align:left">+5</td>
+<td style="text-align:left">5&#x5929;&#x524D;&#x4FEE;&#x6539;&#x7684;&#x6587;&#x4EF6;</td>
+</tr>
+</tbody>
+</table>
+<h5 id="t645.4.5.6 &#x6309;&#x5927;&#x5C0F;&#x641C;&#x7D22;">5.4.5.6 &#x6309;&#x5927;&#x5C0F;&#x641C;&#x7D22; <a href="#t645.4.5.6 &#x6309;&#x5927;&#x5C0F;&#x641C;&#x7D22;"> # </a></h5>
+<ul>
+<li>k&#x5C0F;&#x5199;,M&#x5927;&#x5199;</li>
+</ul>
+<pre><code class="lang-sh">find . -size 100k
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x53C2;&#x6570;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">-8k</td>
+<td style="text-align:left">&#x5C0F;&#x4E8E;8K</td>
+</tr>
+<tr>
+<td style="text-align:left">8k</td>
+<td style="text-align:left">&#x7B49;&#x4E8E;8K</td>
+</tr>
+<tr>
+<td style="text-align:left">+8k</td>
+<td style="text-align:left">&#x5927;&#x4E8E;8K</td>
+</tr>
+<tr>
+<td style="text-align:left">+8M</td>
+<td style="text-align:left">&#x5C0F;&#x4E8E;8M</td>
+</tr>
+</tbody>
+</table>
+<h5 id="t655.4.5.7 &#x6309;i&#x8282;&#x70B9;&#x641C;&#x7D22;">5.4.5.7 &#x6309;i&#x8282;&#x70B9;&#x641C;&#x7D22; <a href="#t655.4.5.7 &#x6309;i&#x8282;&#x70B9;&#x641C;&#x7D22;"> # </a></h5>
+<pre><code class="lang-sh">find . -inum 123456
+</code></pre>
+<h5 id="t665.4.5.8 &#x7EFC;&#x5408;&#x5E94;&#x7528;">5.4.5.8 &#x7EFC;&#x5408;&#x5E94;&#x7528; <a href="#t665.4.5.8 &#x7EFC;&#x5408;&#x5E94;&#x7528;"> # </a></h5>
+<pre><code class="lang-sh">find /tmp -size +10k -a -size -20k
+</code></pre>
+<ul>
+<li>&#x67E5;&#x627E;/etc&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x5927;&#x4E8E;10KB&#x5E76;&#x4E14;&#x5C0F;&#x4E8E;20KB&#x7684;&#x6587;&#x4EF6;</li>
+<li>-a and &#x903B;&#x8F91;&#x4E0E;&#xFF0C;&#x4E24;&#x4E2A;&#x6761;&#x4EF6;&#x90FD;&#x6EE1;&#x8DB3;</li>
+<li>-o or &#x903B;&#x8F91;&#x6216;&#xFF0C;&#x4E24;&#x4E2A;&#x6761;&#x4EF6;&#x6EE1;&#x8DB3;&#x4E00;&#x4E2A;&#x5C31;&#x53EF;&#x4EE5;</li>
+</ul>
+<pre><code class="lang-sh">find /tmp -size +10k -a -size -20k -<span class="hljs-built_in">exec</span> ls -lh {} \;
+</code></pre>
+<ul>
+<li>exec  &#x5BF9;&#x4E0A;&#x4E2A;&#x547D;&#x4EE4;&#x7684;&#x7ED3;&#x679C;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;</li>
+</ul>
+<h5 id="t675.4.5.9 grep">5.4.5.9 grep <a href="#t675.4.5.9 grep"> # </a></h5>
+<ul>
+<li>&#x5728;&#x6587;&#x4EF6;&#x5F53;&#x4E2D;&#x5339;&#x914D;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x5B57;&#x7B26;&#x4E32;</li>
+<li>grep &quot;10&quot;  access.log<ul>
+<li><code>-i</code> &#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199; </li>
+<li><code>-v</code> &#x6392;&#x9664;&#x6307;&#x5B9A;&#x5B57;&#x7B26;&#x4E32;</li>
+</ul>
+</li>
+<li>find&#x547D;&#x4EE4;&#xFF0C;&#x5728;&#x7CFB;&#x7EDF;&#x5F53;&#x4E2D;&#x641C;&#x7D22;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x5339;&#x914D;&#xFF0C;&#x4F7F;&#x7528;&#x901A;&#x914D;&#x7B26;&#x5339;&#x914D;&#xFF0C;&#x901A;&#x914D;&#x7B26;&#x662F;&#x5B8C;&#x5168;&#x5339;&#x914D;</li>
+<li>grep&#x547D;&#x4EE4; &#x5728;&#x6587;&#x4EF6;&#x5F53;&#x4E2D;&#x641C;&#x7D22;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x5339;&#x914D;&#xFF0C;&#x4F7F;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x8FDB;&#x884C;&#x5339;&#x914D;&#xFF0C;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x65F6;&#x5305;&#x542B;&#x5339;&#x914D;</li>
+</ul>
+<h3 id="t685.5 &#x5E2E;&#x52A9;&#x547D;&#x4EE4;">5.5 &#x5E2E;&#x52A9;&#x547D;&#x4EE4; <a href="#t685.5 &#x5E2E;&#x52A9;&#x547D;&#x4EE4;"> # </a></h3>
+<h4 id="t695.5.1 &#x57FA;&#x672C;&#x7528;&#x6CD5;">5.5.1 &#x57FA;&#x672C;&#x7528;&#x6CD5; <a href="#t695.5.1 &#x57FA;&#x672C;&#x7528;&#x6CD5;"> # </a></h4>
+<ul>
+<li>man &#x547D;&#x4EE4; &#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x547D;&#x4EE4;&#x7684;&#x5E2E;&#x52A9;</li>
+<li><code>man ls</code>  &#x67E5;&#x770B;ls&#x7684;&#x5E2E;&#x52A9;</li>
+</ul>
+<h4 id="t705.5.2 man&#x7684;&#x7EA7;&#x522B;">5.5.2 man&#x7684;&#x7EA7;&#x522B; <a href="#t705.5.2 man&#x7684;&#x7EA7;&#x522B;"> # </a></h4>
+<ul>
+<li>1 &#x67E5;&#x770B;&#x547D;&#x4EE4;&#x7684;&#x5E2E;&#x52A9;</li>
+<li>2 &#x67E5;&#x770B;&#x53EF;&#x88AB;&#x5185;&#x6838;&#x8C03;&#x7528;&#x7684;&#x51FD;&#x6570;&#x7684;&#x5E2E;&#x52A9;</li>
+<li>3 &#x67E5;&#x770B;&#x51FD;&#x6570;&#x548C;&#x51FD;&#x6570;&#x5E93;&#x7684;&#x5E2E;&#x52A9;</li>
+<li>4 &#x67E5;&#x770B;&#x7279;&#x6B8A;&#x6587;&#x4EF6;&#x7684;&#x5E2E;&#x52A9;</li>
+<li>5 &#x67E5;&#x770B;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x5E2E;&#x52A9;</li>
+<li>6 &#x67E5;&#x770B;&#x6E38;&#x620F;&#x7684;&#x5E2E;&#x52A9;</li>
+<li>7 &#x67E5;&#x770B;&#x5176;&#x5B83;&#x7684;&#x5E2E;&#x52A9;</li>
+<li>8 &#x67E5;&#x770B;&#x7CFB;&#x7EDF;&#x7BA1;&#x7406;&#x5458;&#x53EF;&#x7528;&#x547D;&#x4EE4;&#x7684;&#x5E2E;&#x52A9;</li>
+<li>9 &#x67E5;&#x770B;&#x548C;&#x5185;&#x6838;&#x76F8;&#x5173;&#x6587;&#x4EF6;&#x7684;&#x5E2E;&#x52A9;</li>
+</ul>
+<h4 id="t715.5.3 &#x67E5;&#x770B;&#x547D;&#x4EE4;&#x7EA7;&#x522B;">5.5.3 &#x67E5;&#x770B;&#x547D;&#x4EE4;&#x7EA7;&#x522B; <a href="#t715.5.3 &#x67E5;&#x770B;&#x547D;&#x4EE4;&#x7EA7;&#x522B;"> # </a></h4>
+<ul>
+<li>&#x67E5;&#x770B;&#x547D;&#x4EE4;&#x7EA7;&#x522B;</li>
+<li>1p: POSIX utilities</li>
+<li>POSIX&#x8868;&#x793A;&#x53EF;&#x79FB;&#x690D;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x63A5;&#x53E3;&#xFF08;Portable Operating System Interface of UNIX&#xFF0C;&#x7F29;&#x5199;&#x4E3A; POSIX &#xFF09;&#xFF0C;POSIX&#x6807;&#x51C6;&#x5B9A;&#x4E49;&#x4E86;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5E94;&#x8BE5;&#x4E3A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x63D0;&#x4F9B;&#x7684;&#x63A5;&#x53E3;&#x6807;&#x51C6;.</li>
+</ul>
+<pre><code class="lang-js">man -f ls
+whatis ls
+man <span class="hljs-number">1</span> ls
+man <span class="hljs-number">1</span>p ls
+</code></pre>
+<h4 id="t725.5.4 &#x5173;&#x952E;&#x5B57;&#x641C;&#x7D22;">5.5.4 &#x5173;&#x952E;&#x5B57;&#x641C;&#x7D22; <a href="#t725.5.4 &#x5173;&#x952E;&#x5B57;&#x641C;&#x7D22;"> # </a></h4>
+<pre><code class="lang-js">- man -k passwd
+</code></pre>
+<h4 id="t735.5.5 shell &#x5185;&#x90E8;&#x5E2E;&#x52A9;">5.5.5 shell &#x5185;&#x90E8;&#x5E2E;&#x52A9; <a href="#t735.5.5 shell &#x5185;&#x90E8;&#x5E2E;&#x52A9;"> # </a></h4>
+<ul>
+<li><code>whereis</code>&#x627E;&#x5230;&#x5C31;&#x662F;&#x5916;&#x90E8;&#xFF0C;&#x627E;&#x4E0D;&#x5230;&#x5C31;&#x662F;&#x5185;&#x90E8;<pre><code class="lang-sh"><span class="hljs-built_in">help</span> <span class="hljs-built_in">cd</span>
+</code></pre>
+</li>
+</ul>
+<h3 id="t745.6 &#x538B;&#x7F29;&#x4E0E;&#x89E3;&#x538B;&#x7F29;&#x547D;&#x4EE4;">5.6 &#x538B;&#x7F29;&#x4E0E;&#x89E3;&#x538B;&#x7F29;&#x547D;&#x4EE4; <a href="#t745.6 &#x538B;&#x7F29;&#x4E0E;&#x89E3;&#x538B;&#x7F29;&#x547D;&#x4EE4;"> # </a></h3>
+<p><code>.zip</code> <code>.gz</code> <code>.bz2</code>  <code>.tar.gz</code> <code>.tar.bz2</code></p>
+<h4 id="t755.6.1 zip&#x683C;&#x5F0F;">5.6.1 zip&#x683C;&#x5F0F; <a href="#t755.6.1 zip&#x683C;&#x5F0F;"> # </a></h4>
+<ul>
+<li>&#x538B;&#x7F29;&#x6587;&#x4EF6;  zip &#x538B;&#x7F29;&#x6587;&#x4EF6;&#x540D; &#x6E90;&#x6587;&#x4EF6;</li>
+<li>&#x538B;&#x7F29;&#x76EE;&#x5F55;  zip -r &#x538B;&#x7F29;&#x6587;&#x4EF6;&#x540D; &#x6E90;&#x76EE;&#x5F55;</li>
+<li>&#x89E3;&#x538B;      unzip &#x538B;&#x7F29;&#x6587;&#x4EF6;&#x540D;<pre><code class="lang-js">mkdir book
+touch book/<span class="hljs-number">1.</span>txt
+touch book/<span class="hljs-number">2.</span>txt
+zip -r book.zip book
+unzip book.zip
+</code></pre>
+</li>
+</ul>
+<h4 id="t765.6.2 gzip">5.6.2 gzip <a href="#t765.6.2 gzip"> # </a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x547D;&#x4EE4;</th>
+<th style="text-align:left">&#x793A;&#x4F8B;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">gzip &#x6E90;&#x6587;&#x4EF6;</td>
+<td style="text-align:left">gzip a.txt</td>
+<td style="text-align:left">&#x538B;&#x7F29;&#x4E3A;.gz&#x683C;&#x5F0F;&#x7684;&#x538B;&#x7F29;&#x6587;&#x4EF6;&#xFF0C;&#x6E90;&#x6587;&#x4EF6;&#x4F1A;&#x6D88;&#x5931;</td>
+</tr>
+<tr>
+<td style="text-align:left">gzip -c &#x6E90;&#x6587;&#x4EF6; &gt; &#x538B;&#x7F29;&#x6587;&#x4EF6;</td>
+<td style="text-align:left">gzip -c yum.txt &gt; yum.txt.gz</td>
+<td style="text-align:left">&#x538B;&#x7F29;&#x4E3A;.gz&#x683C;&#x5F0F;&#x7684;&#x538B;&#x7F29;&#x6587;&#x4EF6;&#xFF0C;&#x6E90;&#x6587;&#x4EF6;&#x4E0D;&#x4F1A;&#x6D88;&#x5931;</td>
+</tr>
+<tr>
+<td style="text-align:left">gzip -r &#x76EE;&#x5F55;</td>
+<td style="text-align:left">gzip -r xx</td>
+<td style="text-align:left">&#x538B;&#x7F29;&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6240;&#x6709;&#x5B50;&#x6587;&#x4EF6;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x538B;&#x7F29;&#x76EE;&#x5F55;</td>
+</tr>
+<tr>
+<td style="text-align:left">gzip -d  &#x538B;&#x7F29;&#x6587;&#x4EF6;&#x540D;</td>
+<td style="text-align:left">gzip -d  yum.txt.gz</td>
+<td style="text-align:left">&#x89E3;&#x538B;&#x7F29;&#x6587;&#x4EF6;,&#x4E0D;&#x4FDD;&#x7559;&#x538B;&#x7F29;&#x5305;</td>
+</tr>
+<tr>
+<td style="text-align:left">gunzip &#x538B;&#x7F29;&#x6587;&#x4EF6;</td>
+<td style="text-align:left">gunzip  yum.txt.gz</td>
+<td style="text-align:left">&#x89E3;&#x538B;&#x7F29;&#x6587;&#x4EF6;,&#x4E0D;&#x4FDD;&#x7559;&#x538B;&#x7F29;&#x5305;</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>&#x538B;&#x7F29;&#x662F;&#x538B;&#x7F29;&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6587;&#x4EF6;</li>
+</ul>
+<h4 id="t775.6.3 .bz2&#x683C;&#x5F0F;&#x538B;&#x7F29;">5.6.3 .bz2&#x683C;&#x5F0F;&#x538B;&#x7F29; <a href="#t775.6.3 .bz2&#x683C;&#x5F0F;&#x538B;&#x7F29;"> # </a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x547D;&#x4EE4;</th>
+<th style="text-align:left">&#x793A;&#x4F8B;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">bzip2 &#x6E90;&#x6587;&#x4EF6;</td>
+<td style="text-align:left">bzip2 1.txt</td>
+<td style="text-align:left">&#x538B;&#x7F29;&#x4E3A;.bz2&#x683C;&#x5F0F;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x4E0D;&#x4FDD;&#x7559;&#x6E90;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td style="text-align:left">bzip2 -k &#x6E90;&#x6587;&#x4EF6;</td>
+<td style="text-align:left">zip2 -k 1.txt</td>
+<td style="text-align:left">&#x538B;&#x7F29;&#x4E3A;.bz2&#x683C;&#x5F0F;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x4FDD;&#x7559;&#x6E90;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td style="text-align:left">bzip2 -d &#x538B;&#x7F29;&#x6587;&#x4EF6;&#x540D;</td>
+<td style="text-align:left">bzip2 -d 1.txt.bz2</td>
+<td style="text-align:left">&#x89E3;&#x538B;&#x538B;&#x7F29;&#x5305;</td>
+</tr>
+<tr>
+<td style="text-align:left">bunzip2 &#x538B;&#x7F29;&#x6587;&#x4EF6;&#x540D;</td>
+<td style="text-align:left">bunzip2 1.txt.bz2</td>
+<td style="text-align:left">&#x89E3;&#x538B;&#x538B;&#x7F29;&#x5305;</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>bzip2 &#x4E0D;&#x80FD;&#x538B;&#x7F29;&#x76EE;&#x5F55;</li>
+</ul>
+<h4 id="t785.6.4 tar">5.6.4 tar <a href="#t785.6.4 tar"> # </a></h4>
+<ul>
+<li>&#x6253;&#x5305;&#x547D;&#x4EE4;</li>
+<li>tar -cvf &#x6253;&#x5305;&#x6587;&#x4EF6;&#x540D; &#x6E90;&#x6587;&#x4EF6;<ul>
+<li>-c &#x6253;&#x5305;</li>
+<li>-v &#x663E;&#x793A;&#x8FC7;&#x7A0B;</li>
+<li>-f &#x6307;&#x5B9A;&#x6253;&#x5305;&#x540E;&#x7684;&#x6587;&#x4EF6;&#x540D;</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-sh">tar -cvf book.tar book
+gzip book.tar
+bzip2 book.tar
+</code></pre>
+<ul>
+<li>x &#x89E3;&#x6253;&#x5305;<pre><code class="lang-sh">tar -xvf book.tar
+</code></pre>
+</li>
+</ul>
+<h4 id="t795.6.4 tar.gz&#x538B;&#x7F29;&#x683C;&#x5F0F;">5.6.4 tar.gz&#x538B;&#x7F29;&#x683C;&#x5F0F; <a href="#t795.6.4 tar.gz&#x538B;&#x7F29;&#x683C;&#x5F0F;"> # </a></h4>
+<p>&#x53EF;&#x4EE5;&#x5148;&#x6253;&#x5305;&#x4E3A;<code>.tar</code>&#x683C;&#x5F0F;&#xFF0C;&#x518D;&#x538B;&#x7F29;&#x4E3A;<code>.gz</code>&#x683C;&#x5F0F;
+  -z &#x538B;&#x7F29;&#x4E3A;.tar.gz&#x683C;&#x5F0F;
+  -x &#x89E3;&#x538B;&#x7F29;.tar.gz&#x683C;&#x5F0F;
+|&#x547D;&#x4EE4;|&#x793A;&#x4F8B;|&#x542B;&#x4E49;|
+|:----|:----|:----|
+|tar -zcvf &#x538B;&#x7F29;&#x5305;&#x540D; <code>.tar.gz</code>&#x6E90;&#x6587;&#x4EF6;|tar -zcvf book.gar.gz book|&#x53EF;&#x4EE5;&#x5148;&#x6253;&#x5305;&#x4E3A;<code>.tar</code>&#x683C;&#x5F0F;&#xFF0C;&#x518D;&#x538B;&#x7F29;&#x4E3A;<code>.gz</code>&#x683C;&#x5F0F;|
+|tar -zxvf &#x538B;&#x7F29;&#x5305;&#x540D;.tar.gz|tar -zxvf book.tar.gz|&#x89E3;&#x538B;tar.gz&#x538B;&#x7F29;&#x5305;|
+|tar -jcvf &#x538B;&#x7F29;&#x5305;&#x540D; <code>.tar.bz2</code>&#x6E90;&#x6587;&#x4EF6;|tar -zcvf .tar.bz2 book|&#x53EF;&#x4EE5;&#x5148;&#x6253;&#x5305;&#x4E3A;<code>.tar</code>&#x683C;&#x5F0F;&#xFF0C;&#x518D;&#x538B;&#x7F29;&#x4E3A;<code>.bz2</code>&#x683C;&#x5F0F;|
+|tar -jxvf &#x538B;&#x7F29;&#x5305;&#x540D;.tar.bz2|tar -zxvf book.tar.bz2|&#x89E3;&#x538B;tar.bz2&#x538B;&#x7F29;&#x5305;|</p>
+<h3 id="t805.7 &#x5173;&#x673A;&#x548C;&#x91CD;&#x542F;&#x547D;&#x4EE4;">5.7 &#x5173;&#x673A;&#x548C;&#x91CD;&#x542F;&#x547D;&#x4EE4; <a href="#t805.7 &#x5173;&#x673A;&#x548C;&#x91CD;&#x542F;&#x547D;&#x4EE4;"> # </a></h3>
+<h4 id="t815.7.1 shutdown">5.7.1 shutdown <a href="#t815.7.1 shutdown"> # </a></h4>
+<p>shutdown &#x5173;&#x673A;&#x547D;&#x4EE4;</p>
+<ul>
+<li>-c &#x53D6;&#x6D88;&#x524D;&#x4E00;&#x4E2A;&#x5173;&#x673A;&#x547D;&#x4EE4;</li>
+<li>-h &#x5173;&#x673A;</li>
+<li>-r &#x91CD;&#x542F;<pre><code class="lang-sh">shutdown -r 06:00
+shutdown -c
+</code></pre>
+</li>
+</ul>
+<h4 id="t825.7.2 init">5.7.2 init <a href="#t825.7.2 init"> # </a></h4>
+<p>&#x5173;&#x673A;</p>
+<pre><code class="lang-js">init <span class="hljs-number">0</span>
+</code></pre>
+<p>&#x91CD;&#x542F;</p>
+<pre><code class="lang-js">init <span class="hljs-number">6</span>
+</code></pre>
+<p>&#x7CFB;&#x7EDF;&#x7684;&#x8FD0;&#x884C;&#x7EA7;&#x522B;</p>
+<ul>
+<li>0 &#x5173;&#x673A;</li>
+<li>1 &#x4F46;&#x7528;&#x6237;</li>
+<li>2 &#x4E0D; &#x5B8C;&#x5168;&#x591A;&#x7528;&#x6237;&#xFF0C;&#x4E0D;&#x5305;&#x542B;NFS&#x670D;&#x52A1;</li>
+<li>3 &#x5B8C;&#x5168;&#x591A;&#x7528;&#x6237;</li>
+<li>4 &#x672A;&#x5206;&#x914D;</li>
+<li>5 &#x56FE;&#x5F62;&#x754C;&#x9762;</li>
+<li>6 &#x91CD;&#x542F;</li>
+</ul>
+<h4 id="t835.7.3 logout">5.7.3 logout <a href="#t835.7.3 logout"> # </a></h4>
+<p>&#x9000;&#x51FA;&#x767B;&#x5F55;</p>
+<pre><code class="lang-sh"><span class="hljs-built_in">logout</span>
+</code></pre>
+<h3 id="t845.8 &#x6302;&#x8F7D;">5.8 &#x6302;&#x8F7D; <a href="#t845.8 &#x6302;&#x8F7D;"> # </a></h3>
+<h4 id="t855.8.1 &#x6302;&#x8F7D;&#x547D;&#x4EE4;">5.8.1 &#x6302;&#x8F7D;&#x547D;&#x4EE4; <a href="#t855.8.1 &#x6302;&#x8F7D;&#x547D;&#x4EE4;"> # </a></h4>
+<ul>
+<li>mount &#x67E5;&#x770B;&#x7CFB;&#x7EDF;&#x4E2D;&#x5DF2;&#x7ECF;&#x6302;&#x8F7D;&#x7684;&#x8BBE;&#x5907;<pre><code class="lang-sh">mount 
+mount -a
+</code></pre>
+<h3 id="t865.8.2 &#x6302;&#x8F7D;&#x547D;&#x4EE4;&#x683C;&#x5F0F;">5.8.2 &#x6302;&#x8F7D;&#x547D;&#x4EE4;&#x683C;&#x5F0F; <a href="#t865.8.2 &#x6302;&#x8F7D;&#x547D;&#x4EE4;&#x683C;&#x5F0F;"> # </a></h3>
+</li>
+<li>mount [-t &#x6587;&#x4EF6;&#x7CFB;&#x7EDF;] [-o &#x7279;&#x6B8A;&#x9009;&#x9879;] &#x8BBE;&#x5907;&#x6587;&#x4EF6;&#x540D; &#x6302;&#x8F7D;&#x70B9;</li>
+<li>&#x9009;&#x9879;<ul>
+<li>-t &#x6587;&#x4EF6;&#x7CFB;&#x7EDF; ext4 iso9660</li>
+<li>-o &#x7279;&#x6B8A;&#x9009;&#x9879; </li>
+</ul>
+</li>
+</ul>
+<h4 id="t875.8.3 &#x6302;&#x8F7D;&#x5149;&#x9A71;">5.8.3 &#x6302;&#x8F7D;&#x5149;&#x9A71; <a href="#t875.8.3 &#x6302;&#x8F7D;&#x5149;&#x9A71;"> # </a></h4>
+<pre><code class="lang-sh">mkdir /mnt/<span class="hljs-built_in">cd</span>
+mount -t iso9660 /dev/sr0 /mnt/cdrom
+</code></pre>
+<h4 id="t885.8.4 &#x5378;&#x8F7D;&#x5149;&#x9A71;">5.8.4 &#x5378;&#x8F7D;&#x5149;&#x9A71; <a href="#t885.8.4 &#x5378;&#x8F7D;&#x5149;&#x9A71;"> # </a></h4>
+<pre><code class="lang-sh">umount /dev/sr0
+umount /mnt/cdrom
+</code></pre>
+<h4 id="t895.8.4 &#x6302;&#x8F7D;U&#x76D8;">5.8.4 &#x6302;&#x8F7D;U&#x76D8; <a href="#t895.8.4 &#x6302;&#x8F7D;U&#x76D8;"> # </a></h4>
+<pre><code class="lang-sh">fdisk -l
+mount -t vfat /dev/sdb1 /mnt/usb
+</code></pre>
+<ul>
+<li>linux&#x9ED8;&#x8BA4;&#x4E0D;&#x652F;&#x6301;NTFS&#x683C;&#x5F0F;</li>
+</ul>
+<h3 id="t905.9 &#x67E5;&#x770B;&#x767B;&#x5F55;&#x7528;&#x6237;&#x4FE1;&#x606F;">5.9 &#x67E5;&#x770B;&#x767B;&#x5F55;&#x7528;&#x6237;&#x4FE1;&#x606F; <a href="#t905.9 &#x67E5;&#x770B;&#x767B;&#x5F55;&#x7528;&#x6237;&#x4FE1;&#x606F;"> # </a></h3>
+<h4 id="t915.9.1 w">5.9.1 w <a href="#t915.9.1 w"> # </a></h4>
+<p>&#x67E5;&#x770B;&#x767B;&#x5F55;&#x7528;&#x6237;&#x4FE1;&#x606F;</p>
+<ul>
+<li>USER &#x767B;&#x5F55;&#x7684;&#x7528;&#x6237;&#x540D;</li>
+<li>TTY &#x767B;&#x5F55;&#x7684;&#x7EC8;&#x7AEF; tty1 &#x672C;&#x5730;&#x7EC8;&#x7AEF; pts/0&#x8FDC;&#x7A0B;&#x7EC8;&#x7AEF;</li>
+<li>FROM &#x767B;&#x5F55;&#x7684;IP</li>
+<li>LOGIN  &#x767B;&#x5F55;&#x65F6;&#x95F4;</li>
+<li>IDLE &#x7528;&#x6237;&#x95F2;&#x7F6E;&#x65F6;&#x95F4;</li>
+<li>JCPU &#x8BE5;&#x7EC8;&#x7AEF;&#x6240;&#x6709;&#x8FDB;&#x7A0B;&#x5360;&#x7528;&#x7684;&#x65F6;&#x95F4;</li>
+<li>PCPU &#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x6240;&#x5360;&#x7528;&#x7684;&#x65F6;&#x95F4;</li>
+<li>WHAT &#x6B63;&#x5728;&#x6267;&#x884C;&#x7684;&#x547D;&#x4EE4;</li>
+</ul>
+<h4 id="t925.9.2 who">5.9.2 who <a href="#t925.9.2 who"> # </a></h4>
+<p>&#x67E5;&#x770B;&#x767B;&#x5F55;&#x7528;&#x6237;&#x4FE1;&#x606F;</p>
+<ul>
+<li>USER &#x767B;&#x5F55;&#x7684;&#x7528;&#x6237;&#x540D;</li>
+<li>TTY &#x767B;&#x5F55;&#x7684;&#x7EC8;&#x7AEF; tty1 &#x672C;&#x5730;&#x7EC8;&#x7AEF; pts/0&#x8FDC;&#x7A0B;&#x7EC8;&#x7AEF;</li>
+<li>LOGIN  &#x767B;&#x5F55;&#x65F6;&#x95F4;&#xFF08;&#x767B;&#x5F55;&#x7684;IP&#xFF09;</li>
+</ul>
+<h4 id="t935.9.3 last">5.9.3 last <a href="#t935.9.3 last"> # </a></h4>
+<p>&#x67E5;&#x770B;&#x5F53;&#x524D;&#x767B;&#x5F55;&#x548C;&#x8FC7;&#x53BB;&#x767B;&#x5F55;&#x7684;&#x7528;&#x6237;&#x4FE1;&#x606F;
+&#x9ED8;&#x8BA4;&#x8BFB;&#x53D6; <code>/var/log/wtmp</code> &#x6587;&#x4EF6;</p>
+<ul>
+<li>&#x7528;&#x6237;&#x540D;</li>
+<li>&#x767B;&#x5F55;&#x7EC8;&#x7AEF;</li>
+<li>&#x767B;&#x5F55;IP</li>
+<li>&#x767B;&#x5F55;&#x65F6;&#x95F4;</li>
+<li>&#x9000;&#x51FA;&#x65F6;&#x95F4;(&#x5728;&#x7EBF;&#x65F6;&#x95F4;)</li>
+</ul>
+<h4 id="t945.9.4 lastlog">5.9.4 lastlog <a href="#t945.9.4 lastlog"> # </a></h4>
+<p>&#x67E5;&#x770B;&#x6240;&#x6709;&#x7528;&#x6237;&#x7684;&#x6700;&#x540E;&#x4E00;&#x6B21;&#x767B;&#x5F55;&#x65F6;&#x95F4;</p>
+<ul>
+<li>&#x7528;&#x6237;&#x540D;</li>
+<li>&#x767B;&#x5F55;&#x7EC8;&#x7AEF;</li>
+<li>&#x767B;&#x5F55;IP</li>
+<li>&#x6700;&#x540E;&#x4E00;&#x6B21;&#x767B;&#x5F55;&#x65F6;&#x95F4;</li>
+</ul>
+<h2 id="t956. shell">6. shell <a href="#t956. shell"> # </a></h2>
+<ul>
+<li>shell&#x662F;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x884C;&#x89E3;&#x91CA;&#x5668;&#xFF0C;&#x5B83;&#x4E3A;&#x7528;&#x6237;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x5411;Linux&#x5185;&#x6838;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x4EE5;&#x4FBF;&#x8FD0;&#x884C;&#x7A0B;&#x5E8F;&#x7684;&#x754C;&#x9762;&#x7CFB;&#x7EDF;&#x7EA7;&#x7A0B;&#x5E8F;</li>
+<li>&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x7528;Shell&#x6765;&#x542F;&#x52A8;&#x3001;&#x6302;&#x8D77;&#x3001;&#x505C;&#x6B62;&#x6216;&#x8005;&#x7F16;&#x5199;&#x4E00;&#x4E9B;&#x7A0B;&#x5E8F;</li>
+<li>Shell&#x8FD8;&#x662F;&#x4E00;&#x4E2A;&#x529F;&#x80FD;&#x76F8;&#x5F53;&#x5F3A;&#x5927;&#x7684;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#xFF0C;&#x6613;&#x7F16;&#x5199;&#xFF0C;&#x6613;&#x8C03;&#x8BD5;&#xFF0C;&#x7075;&#x6D3B;&#x6027;&#x8F83;&#x5F3A;&#x3002;</li>
+<li>Shell&#x662F;&#x89E3;&#x91CA;&#x6267;&#x884C;&#x7684;&#x811A;&#x672C;&#x8BED;&#x8A00;&#xFF0C;&#x5728;Shell&#x4E2D;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8C03;&#x7528;Linux&#x7CFB;&#x7EDF;&#x547D;&#x4EE4;&#x3002;</li>
+</ul>
+<h3 id="t966.1 &#x67E5;&#x770B;&#x652F;&#x6301;&#x7684;shell">6.1 &#x67E5;&#x770B;&#x652F;&#x6301;&#x7684;shell <a href="#t966.1 &#x67E5;&#x770B;&#x652F;&#x6301;&#x7684;shell"> # </a></h3>
+<ul>
+<li>/etc/shells</li>
+</ul>
+<h3 id="t976.2 echo">6.2 echo <a href="#t976.2 echo"> # </a></h3>
+<ul>
+<li>&#x8F93;&#x51FA;&#x547D;&#x4EE4;</li>
+<li>--e &#x652F;&#x6301;&#x53CD;&#x659C;&#x7EBF;&#x63A7;&#x5236;&#x7684;&#x5B57;&#x7B26;&#x8F6C;&#x6362;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x63A7;&#x5236;&#x5B57;&#x7B26;</th>
+<th style="text-align:left">&#x4F5C;&#x7528;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">\a</td>
+<td style="text-align:left">&#x8F93;&#x51FA;&#x8B66;&#x544A;&#x97F3;</td>
+</tr>
+<tr>
+<td style="text-align:left">\b</td>
+<td style="text-align:left">&#x9000;&#x683C;&#x952E;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5411;&#x5DE6;&#x5220;&#x9664;&#x952E;</td>
+</tr>
+<tr>
+<td style="text-align:left">\n</td>
+<td style="text-align:left">&#x6362;&#x884C;&#x7B26;</td>
+</tr>
+<tr>
+<td style="text-align:left">\r</td>
+<td style="text-align:left">&#x56DE;&#x8F66;&#x952E;</td>
+</tr>
+<tr>
+<td style="text-align:left">\t</td>
+<td style="text-align:left">&#x5236;&#x8868;&#x7B26;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;Tab&#x952E;</td>
+</tr>
+<tr>
+<td style="text-align:left">\v</td>
+<td style="text-align:left">&#x5782;&#x76F4;&#x5236;&#x8868;&#x7B26;</td>
+</tr>
+<tr>
+<td style="text-align:left">\onnn</td>
+<td style="text-align:left">&#x6309;&#x7167;&#x516B;&#x8FDB;&#x5236;ASCII&#x7801;&#x8868;&#x8F93;&#x51FA;&#x5B57;&#x7B26;&#xFF0C;&#x5176;&#x4E2D;0&#x4E3A;&#x6570;&#x5B57;&#x96F6;&#xFF0C;nnn&#x662F;&#x4E09;&#x4F4D;&#x516B;&#x8FDB;&#x5236;&#x6570;</td>
+</tr>
+<tr>
+<td style="text-align:left">\xhh</td>
+<td style="text-align:left">&#x6309;&#x7167;&#x5341;&#x516D;&#x8FDB;&#x5236;ASCII&#x7801;&#x8868;&#x8F93;&#x51FA;&#x5B57;&#x7B26;&#xFF0C;&#x5176;&#x4E2D;hh&#x662F;&#x4E24;&#x4F4D;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x6570;</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>30m-47m</li>
+<li>echo -e &quot;\e[1;31m warning \e[0m&quot;</li>
+</ul>
+<p>|&#x7B26;&#x53F7;|&#x989C;&#x8272;|
+|#30m|&#x9ED1;&#x8272;|
+|#31|&#x7EA2;&#x8272;|
+|#32|&#x7EFF;&#x8272;|
+|#33|&#x9EC4;&#x8272;|
+|##34|&#x84DD;&#x8272;|
+|##35|&#x6D0B;&#x7EA2;|
+|##36|&#x9752;&#x6DA9;|
+|##37|&#x767D;&#x8272;|</p>
+<h3 id="t986.3 &#x7F16;&#x5199;&#x6267;&#x884C;shell">6.3 &#x7F16;&#x5199;&#x6267;&#x884C;shell <a href="#t986.3 &#x7F16;&#x5199;&#x6267;&#x884C;shell"> # </a></h3>
+<pre><code class="lang-sh"><span class="hljs-meta">#!/bin/bash</span>
+<span class="hljs-built_in">echo</span> -e <span class="hljs-string">&quot;\e[1;34m hello world \e[0m&quot;</span>
+</code></pre>
+<p>&#x8D4B;&#x4E88;&#x6267;&#x884C;&#x6743;&#x9650;&#xFF0C;&#x76F4;&#x63A5;&#x8FD0;&#x884C;</p>
+<pre><code class="lang-sh">chmod 755 hello.sh
+./hello.sh
+</code></pre>
+<p>&#x901A;&#x8FC7;Bash&#x8C03;&#x7528;&#x6267;&#x884C;&#x811A;&#x672C;</p>
+<pre><code class="lang-sh">bash hello.sh
+</code></pre>
+<h3 id="t996.4 &#x522B;&#x540D;">6.4 &#x522B;&#x540D; <a href="#t996.4 &#x522B;&#x540D;"> # </a></h3>
+<ul>
+<li>&#x547D;&#x4EE4;&#x522B;&#x540D; == &#x5C0F;&#x540D;</li>
+<li>&#x4E34;&#x65F6;&#x751F;&#x6548;</li>
+<li>alias</li>
+<li>alias rm=&quot;rm -i&quot;</li>
+<li>&#x5199;&#x5165;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x914D;&#x7F6E;&#x6587;&#x4EF6; vi ~/.bashrc </li>
+<li>source ~/.bashrc</li>
+<li>unalias &#x522B;&#x540D; &#x5220;&#x9664;&#x522B;&#x540D;</li>
+</ul>
+<h3 id="t1006.5 &#x547D;&#x4EE4;&#x7684;&#x751F;&#x6548;&#x987A;&#x5E8F;">6.5 &#x547D;&#x4EE4;&#x7684;&#x751F;&#x6548;&#x987A;&#x5E8F; <a href="#t1006.5 &#x547D;&#x4EE4;&#x7684;&#x751F;&#x6548;&#x987A;&#x5E8F;"> # </a></h3>
+<ul>
+<li>&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x6216;&#x8005;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;</li>
+<li>&#x522B;&#x540D;</li>
+<li>bash&#x5185;&#x90E8;&#x547D;&#x4EE4;</li>
+<li>&#x6309;&#x7167;$PATH&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x5B9A;&#x4E49;&#x7684;&#x76EE;&#x5F55;&#x67E5;&#x627E;&#x987A;&#x5E8F;&#x627E;&#x5230;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;</li>
+</ul>
+<h3 id="t1016.6 &#x547D;&#x4EE4;&#x5FEB;&#x6377;&#x952E;">6.6 &#x547D;&#x4EE4;&#x5FEB;&#x6377;&#x952E; <a href="#t1016.6 &#x547D;&#x4EE4;&#x5FEB;&#x6377;&#x952E;"> # </a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x547D;&#x4EE4;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">ctrl+c</td>
+<td style="text-align:left">&#x5F3A;&#x5236;&#x7EC8;&#x6B62;&#x5F53;&#x524D;&#x547D;&#x4EE4;</td>
+</tr>
+<tr>
+<td style="text-align:left">ctrl+l</td>
+<td style="text-align:left">&#x6E05;&#x5C4F;</td>
+</tr>
+<tr>
+<td style="text-align:left">ctrl+a</td>
+<td style="text-align:left">&#x5149;&#x6807;&#x79FB;&#x52A8;&#x5230;&#x547D;&#x4EE4;&#x884C;&#x9996;</td>
+</tr>
+<tr>
+<td style="text-align:left">ctrl+e</td>
+<td style="text-align:left">&#x5149;&#x6807;&#x79FB;&#x52A8;&#x5230;&#x547D;&#x4EE4;&#x884C;&#x5C3E;</td>
+</tr>
+<tr>
+<td style="text-align:left">ctrl+u</td>
+<td style="text-align:left">&#x4ECE;&#x5149;&#x6807;&#x6240;&#x5728;&#x7684;&#x4F4D;&#x7F6E;&#x5220;&#x9664;&#x5230;&#x884C;&#x9996;</td>
+</tr>
+<tr>
+<td style="text-align:left">ctrl+z</td>
+<td style="text-align:left">&#x628A;&#x547D;&#x4EE4;&#x653E;&#x5165;&#x540E;&#x53F0;</td>
+</tr>
+<tr>
+<td style="text-align:left">ctrl+r</td>
+<td style="text-align:left">&#x5728;&#x5386;&#x53F2;&#x547D;&#x4EE4;&#x4E2D;&#x641C;&#x7D22;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t1026.7 &#x5386;&#x53F2;&#x547D;&#x4EE4;">6.7 &#x5386;&#x53F2;&#x547D;&#x4EE4; <a href="#t1026.7 &#x5386;&#x53F2;&#x547D;&#x4EE4;"> # </a></h3>
+<ul>
+<li>history [&#x9009;&#x9879;] [&#x5386;&#x53F2;&#x547D;&#x4EE4;&#x4FDD;&#x5B58;&#x6587;&#x4EF6;]</li>
+<li>&#x9009;&#x9879;<ul>
+<li>-c &#x6E05;&#x7A7A;&#x5386;&#x53F2;&#x547D;&#x4EE4;</li>
+<li>-w &#x628A;&#x7F13;&#x5B58;&#x4E2D;&#x7684;&#x5386;&#x53F2;&#x547D;&#x4EE4;&#x5199;&#x5165;&#x5386;&#x53F2;&#x547D;&#x4EE4;&#x4FDD;&#x5B58;&#x6587;&#x4EF6; ~/.bash_history</li>
+</ul>
+</li>
+<li>&#x9ED8;&#x8BA4;&#x4FDD;&#x5B58;1000&#x6761;   /etc/profile HISSIZE=10000</li>
+</ul>
+<h3 id="t1036.8 &#x8C03;&#x7528;">6.8 &#x8C03;&#x7528; <a href="#t1036.8 &#x8C03;&#x7528;"> # </a></h3>
+<ul>
+<li>&#x4F7F;&#x7528;&#x4E0A;&#x4E0B;&#x7BAD;&#x5934;&#x8C03;&#x7528;&#x4EE5;&#x524D;&#x7684;&#x5386;&#x53F2;&#x547D;&#x4EE4;</li>
+<li>&#x4F7F;&#x7528; !n &#x91CD;&#x590D;&#x6267;&#x884C;&#x7B2C;n&#x6761;&#x5386;&#x53F2;&#x547D;&#x4EE4;</li>
+<li>&#x4F7F;&#x7528; !! &#x91CD;&#x590D;&#x6267;&#x884C;&#x4E0A;&#x4E00;&#x6761;&#x547D;&#x4EE4;</li>
+<li>&#x4F7F;&#x7528;  !&#x5B57;&#x7B26;  &#x91CD;&#x590D;&#x6267;&#x884C;&#x6700;&#x540E;&#x4E00;&#x6761;&#x4EE5;&#x8BE5;&#x5B57;&#x7B26;&#x4E32;&#x5F00;&#x5934;&#x7684;&#x547D;&#x4EE4;</li>
+</ul>
+<h3 id="t1046.9 &#x8F93;&#x51FA;&#x91CD;&#x5B9A;&#x5411;">6.9 &#x8F93;&#x51FA;&#x91CD;&#x5B9A;&#x5411; <a href="#t1046.9 &#x8F93;&#x51FA;&#x91CD;&#x5B9A;&#x5411;"> # </a></h3>
+<h4 id="t1056.9.1 &#x6807;&#x51C6;&#x8F93;&#x5165;&#x8F93;&#x51FA;">6.9.1 &#x6807;&#x51C6;&#x8F93;&#x5165;&#x8F93;&#x51FA; <a href="#t1056.9.1 &#x6807;&#x51C6;&#x8F93;&#x5165;&#x8F93;&#x51FA;"> # </a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x8BBE;&#x5907;</th>
+<th style="text-align:left">&#x8BBE;&#x5907;&#x6587;&#x4EF6;&#x540D;</th>
+<th style="text-align:left">&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x952E;&#x76D8;</td>
+<td style="text-align:left">/dev/stdin</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">&#x6807;&#x51C6;&#x8F93;&#x5165;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x663E;&#x793A;&#x5668;</td>
+<td style="text-align:left">/dev/stdout</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">&#x6807;&#x51C6;&#x8F93;&#x51FA;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x663E;&#x793A;&#x5668;</td>
+<td style="text-align:left">/dev/stderr</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">&#x6807;&#x51C6;&#x9519;&#x8BEF;&#x8F93;&#x51FA;</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x7B26;&#x53F7;</th>
+<th style="text-align:left">&#x4F5C;&#x7528;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x6807;&#x51C6;&#x8F93;&#x51FA;&#x91CD;&#x5B9A;&#x5411;</td>
+<td style="text-align:left">&#x547D;&#x4EE4; &gt; &#x6587;&#x4EF6;</td>
+<td style="text-align:left">&#x4EE5;&#x8986;&#x76D6;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x628A;&#x547D;&#x4EE4;&#x7684;&#x6B63;&#x786E;&#x8F93;&#x51FA;&#x8F93;&#x51FA;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x6587;&#x4EF6;&#x6216;&#x8BBE;&#x5907;&#x5F53;&#x4E2D;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x6807;&#x51C6;&#x8F93;&#x51FA;&#x91CD;&#x5B9A;&#x5411;</td>
+<td style="text-align:left">&#x547D;&#x4EE4; &gt;&gt; &#x6587;&#x4EF6;</td>
+<td style="text-align:left">&#x4EE5;&#x8FFD;&#x52A0;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x628A;&#x547D;&#x4EE4;&#x7684;&#x6B63;&#x786E;&#x8F93;&#x51FA;&#x8F93;&#x51FA;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x6587;&#x4EF6;&#x6216;&#x8BBE;&#x5907;&#x5F53;&#x4E2D;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x9519;&#x8BEF;&#x8F93;&#x51FA;&#x91CD;&#x5B9A;&#x5411;</td>
+<td style="text-align:left">&#x547D;&#x4EE4;&gt;&#x6587;&#x4EF6;</td>
+<td style="text-align:left">&#x4EE5;&#x8986;&#x76D6;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x628A;&#x547D;&#x4EE4;&#x7684;&#x9519;&#x8BEF;&#x8F93;&#x51FA;&#x8F93;&#x51FA;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x6587;&#x4EF6;&#x6216;&#x8BBE;&#x5907;&#x5F53;&#x4E2D;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x9519;&#x8BEF;&#x8F93;&#x51FA;&#x91CD;&#x5B9A;&#x5411;</td>
+<td style="text-align:left">&#x547D;&#x4EE4;&gt;&gt;&#x6587;&#x4EF6;</td>
+<td style="text-align:left">&#x4EE5;&#x8FFD;&#x52A0;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x628A;&#x547D;&#x4EE4;&#x7684;&#x9519;&#x8BEF;&#x8F93;&#x51FA;&#x8F93;&#x51FA;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x6587;&#x4EF6;&#x6216;&#x8BBE;&#x5907;&#x5F53;&#x4E2D;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x6B63;&#x786E;&#x8F93;&#x51FA;&#x548C;&#x9519;&#x8BEF;&#x8F93;&#x51FA;&#x540C;&#x65F6;&#x4FDD;&#x5B58;</td>
+<td style="text-align:left">&#x547D;&#x4EE4;&gt;&#x6587;&#x4EF6; 2&gt;&amp;1</td>
+<td style="text-align:left">&#x4EE5;&#x8986;&#x76D6;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x628A;&#x6B63;&#x786E;&#x8F93;&#x51FA;&#x548C;&#x9519;&#x8BEF;&#x8F93;&#x51FA;&#x90FD;&#x4FDD;&#x5B58;&#x5230;&#x540C;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5F53;&#x4E2D;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x6B63;&#x786E;&#x8F93;&#x51FA;&#x548C;&#x9519;&#x8BEF;&#x8F93;&#x51FA;&#x540C;&#x65F6;&#x4FDD;&#x5B58;</td>
+<td style="text-align:left">&#x547D;&#x4EE4;&gt;&#x6587;&#x4EF6; 2&gt;&gt;&amp;1</td>
+<td style="text-align:left">&#x4EE5;&#x8FFD;&#x52A0;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x628A;&#x6B63;&#x786E;&#x8F93;&#x51FA;&#x548C;&#x9519;&#x8BEF;&#x8F93;&#x51FA;&#x90FD;&#x4FDD;&#x5B58;&#x5230;&#x540C;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5F53;&#x4E2D;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x6B63;&#x786E;&#x8F93;&#x51FA;&#x548C;&#x9519;&#x8BEF;&#x8F93;&#x51FA;&#x540C;&#x65F6;&#x4FDD;&#x5B58;</td>
+<td style="text-align:left">&#x547D;&#x4EE4;&amp;&gt;&#x6587;&#x4EF6;</td>
+<td style="text-align:left">&#x4EE5;&#x8986;&#x76D6;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x628A;&#x6B63;&#x786E;&#x8F93;&#x51FA;&#x548C;&#x9519;&#x8BEF;&#x8F93;&#x51FA;&#x90FD;&#x4FDD;&#x5B58;&#x5230;&#x540C;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5F53;&#x4E2D;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x6B63;&#x786E;&#x8F93;&#x51FA;&#x548C;&#x9519;&#x8BEF;&#x8F93;&#x51FA;&#x540C;&#x65F6;&#x4FDD;&#x5B58;</td>
+<td style="text-align:left">&#x547D;&#x4EE4;&amp;&gt;&gt;&#x6587;&#x4EF6;</td>
+<td style="text-align:left">&#x4EE5;&#x8FFD;&#x52A0;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x628A;&#x6B63;&#x786E;&#x8F93;&#x51FA;&#x548C;&#x9519;&#x8BEF;&#x8F93;&#x51FA;&#x90FD;&#x4FDD;&#x5B58;&#x5230;&#x540C;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5F53;&#x4E2D;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x6B63;&#x786E;&#x8F93;&#x51FA;&#x548C;&#x9519;&#x8BEF;&#x8F93;&#x51FA;&#x540C;&#x65F6;&#x4FDD;&#x5B58;</td>
+<td style="text-align:left">&#x547D;&#x4EE4;&gt;&gt;&#x6587;&#x4EF6;1 2&gt;&#x6587;&#x4EF6;2</td>
+<td style="text-align:left">&#x4EE5;&#x8986;&#x76D6;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x6B63;&#x786E;&#x7684;&#x8F93;&#x51FA;&#x8FFD;&#x52A0;&#x5230;&#x6587;&#x4EF6;1&#x4E2D;&#xFF0C;&#x628A;&#x9519;&#x8BEF;&#x8F93;&#x51FA;&#x8FFD;&#x52A0;&#x5230;&#x6587;&#x4EF6;2&#x4E2D;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="t1066.9.2 &#x8F93;&#x5165;&#x91CD;&#x5B9A;&#x5411;">6.9.2 &#x8F93;&#x5165;&#x91CD;&#x5B9A;&#x5411; <a href="#t1066.9.2 &#x8F93;&#x5165;&#x91CD;&#x5B9A;&#x5411;"> # </a></h4>
+<ul>
+<li>&#x547D;&#x4EE4; &lt; &#x6587;&#x4EF6;&#x628A;&#x6587;&#x4EF6;&#x505A;&#x4E3A;&#x547D;&#x4EE4;&#x7684;&#x8F93;&#x5165;</li>
+<li><p>&#x547D;&#x4EE4; &lt;&lt; &#x6807;&#x8BC6;&#x7B26;
+&#x6807;&#x8BC6;&#x7B26;&#x628A;&#x6807;&#x8BC6;&#x7B26;&#x4E4B;&#x95F4;&#x5185;&#x5BB9;&#x4F5C;&#x4E3A;&#x547D;&#x4EE4;&#x7684;&#x8F93;&#x5165;</p>
+</li>
+<li><p>wc &lt; access.log</p>
+</li>
+<li>wc &lt;<hello>&gt;</hello></li>
+</ul>
+<h3 id="t1076.10 &#x7BA1;&#x9053;&#x7B26;&#x53F7;">6.10 &#x7BA1;&#x9053;&#x7B26;&#x53F7; <a href="#t1076.10 &#x7BA1;&#x9053;&#x7B26;&#x53F7;"> # </a></h3>
+<h4 id="t1086.10.1 &#x591A;&#x547D;&#x4EE4;&#x987A;&#x5E8F;&#x6267;&#x884C;">6.10.1 &#x591A;&#x547D;&#x4EE4;&#x987A;&#x5E8F;&#x6267;&#x884C; <a href="#t1086.10.1 &#x591A;&#x547D;&#x4EE4;&#x987A;&#x5E8F;&#x6267;&#x884C;"> # </a></h4>
+<p>|&#x591A;&#x547D;&#x4EE4;&#x6267;&#x884C;&#x7B26;|&#x683C;&#x5F0F;|&#x4F5C;&#x7528;|
+|;|&#x547D;&#x4EE4;1;&#x547D;&#x4EE4;2|&#x591A;&#x4E2A;&#x547D;&#x4EE4;&#x6267;&#x884C;&#xFF0C;&#x547D;&#x4EE4;&#x4E4B;&#x95F4;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x903B;&#x8F91;&#x8054;&#x7CFB;|
+|&amp;&amp;|&#x547D;&#x4EE4;1&amp;&amp;&#x547D;&#x4EE4;2|&#x903B;&#x8F91;&#x4E0E;   &#x5F53;&#x547D;&#x4EE4;1&#x6B63;&#x786E;&#x6267;&#x884C;&#xFF0C;&#x5219;&#x547D;&#x4EE4;2&#x624D;&#x4F1A;&#x6267;&#x884C;  &#x5F53;&#x547D;&#x4EE4;1&#x6267;&#x884C;&#x4E0D;&#x6B63;&#x786E;&#xFF0C;&#x5219;&#x547D;&#x4EE4;2&#x4E0D;&#x4F1A;&#x6267;&#x884C;|
+||||&#x547D;&#x4EE4;1|| &#x547D;&#x4EE4;2|&#x903B;&#x8F91;&#x6216; &#x5F53;&#x547D;&#x4EE4;1&#x6267;&#x884C;&#x4E0D;&#x6B63;&#x786E;&#xFF0C;&#x5219;&#x547D;&#x4EE4;2&#x624D;&#x4F1A;&#x6267;&#x884C; &#x5F53;&#x547D;&#x4EE4;1&#x6B63;&#x786E;&#x6267;&#x884C;&#xFF0C;&#x5219;&#x547D;&#x4EE4;2&#x4E0D;&#x4F1A;&#x6267;&#x884C;|</p>
+<pre><code class="lang-sh">- date;ls;date;ls
+- ls &amp;&amp; <span class="hljs-built_in">echo</span> yes || <span class="hljs-built_in">echo</span> no
+</code></pre>
+<h4 id="t1096.10.2 &#x7BA1;&#x9053;&#x7B26;&#x53F7;">6.10.2 &#x7BA1;&#x9053;&#x7B26;&#x53F7; <a href="#t1096.10.2 &#x7BA1;&#x9053;&#x7B26;&#x53F7;"> # </a></h4>
+<ul>
+<li>&#x547D;&#x4EE4;1&#x7684;&#x6B63;&#x786E;&#x8F93;&#x51FA;&#x4F1A;&#x4F5C;&#x4E3A;&#x547D;&#x4EE4;2&#x7684;&#x64CD;&#x4F5C;&#x5BF9;&#x8C61;</li>
+<li>&#x547D;&#x4EE4;1|&#x547D;&#x4EE4;2<pre><code class="lang-sh">ls /etc/ | more
+netstat -an | grep ESTABLISHED | wc -l
+</code></pre>
+</li>
+</ul>
+<h4 id="t1106.10.3 &#x901A;&#x914D;&#x7B26;">6.10.3 &#x901A;&#x914D;&#x7B26; <a href="#t1106.10.3 &#x901A;&#x914D;&#x7B26;"> # </a></h4>
+<p>&#x5339;&#x914D;&#x6587;&#x4EF6;&#x540D;&#x548C;&#x76EE;&#x5F55;&#x540D;
+|&#x901A;&#x914D;&#x7B26;|&#x4F5C;&#x7528;|
+|:----|:----|
+|?|&#x5339;&#x914D;&#x4E00;&#x4E2A;&#x4EFB;&#x610F;&#x5B57;&#x7B26;|
+|*|&#x5339;&#x914D;0&#x4E2A;&#x6216;&#x4EFB;&#x610F;&#x5B57;&#x7B26;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x53EF;&#x4EE5;&#x5339;&#x914D;&#x4EFB;&#x610F;&#x5185;&#x5BB9;|
+|[]|&#x5339;&#x914D;&#x4E2D;&#x62EC;&#x53F7;&#x4E2D;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;|
+|[-]|&#x5339;&#x914D;&#x4E2D;&#x62EC;&#x53F7;&#x4E2D;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;,-&#x4EE3;&#x8868;&#x8303;&#x56F4;|
+|[^]|&#x5339;&#x914D;&#x4E0D;&#x662F;&#x4E2D;&#x62EC;&#x53F7;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;|</p>
+<h4 id="t1116.10.4 &#x5176;&#x5B83;&#x7B26;&#x53F7;">6.10.4 &#x5176;&#x5B83;&#x7B26;&#x53F7; <a href="#t1116.10.4 &#x5176;&#x5B83;&#x7B26;&#x53F7;"> # </a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x7B26;&#x53F7;</th>
+<th style="text-align:left">&#x4F5C;&#x7528;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&apos;&apos;</td>
+<td style="text-align:left">&#x5355;&#x5F15;&#x53F7;&#x3002;&#x5728;&#x5355;&#x5F15;&#x53F7;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x7279;&#x6B8A;&#x7B26;&#x53F7;&#xFF0C;&#x5982;$&#x548C;`&#x90FD;&#x6CA1;&#x6709;&#x7279;&#x6B8A;&#x542B;&#x4E49;</td>
+</tr>
+<tr>
+<td style="text-align:left">&quot;&quot;</td>
+<td style="text-align:left">&#x53CC;&#x5F15;&#x53F7;&#xFF0C;&#x5728;&#x53CC;&#x5F15;&#x53F7;&#x91CC;&#x7279;&#x6B8A;&#x7B26;&#x53F7;&#x90FD;&#x6CA1;&#x6709;&#x7279;&#x6B8A;&#x542B;&#x4E49;&#xFF0C;&#x4F46;&#x662F; $ ` \ &#x4F8B;&#x5916;&#xFF0C;&#x62E5;&#x6709;&#x8C03;&#x7528;&#x53D8;&#x91CF;&#x503C;&#xFF0C;&#x5F15;&#x7528;&#x547D;&#x4EE4;&#x548C;&#x8F6C;&#x4E49;&#x7684;&#x542B;&#x4E49;</td>
+</tr>
+<tr>
+<td style="text-align:left"><code></code></td>
+<td style="text-align:left">&#x53CD;&#x5F15;&#x53F7;&#xFF0C;&#x6269;&#x8D77;&#x6765;&#x7684;&#x662F;&#x7CFB;&#x7EDF;&#x547D;&#x4EE4;</td>
+</tr>
+<tr>
+<td style="text-align:left">$()</td>
+<td style="text-align:left">&#x548C;&#x53CD;&#x5F15;&#x53F7;&#x4E00;&#x6837;</td>
+</tr>
+<tr>
+<td style="text-align:left">#</td>
+<td style="text-align:left">&#x5728;shell&#x811A;&#x672C;&#x4E2D;&#xFF0C;#&#x5F00;&#x5934;&#x7684;&#x884C;&#x4EE3;&#x8868;&#x6CE8;&#x91CA;</td>
+</tr>
+<tr>
+<td style="text-align:left">$</td>
+<td style="text-align:left">&#x7528;&#x4E8E;&#x8C03;&#x7528;&#x53D8;&#x91CF;&#x7684;&#x503C;</td>
+</tr>
+<tr>
+<td style="text-align:left">\</td>
+<td style="text-align:left">&#x8F6C;&#x4E49;&#x7B26;&#x53F7;</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-sh">-  a=`ls`
+-  b=$(ls)
+</code></pre>
+<h2 id="t1127. vi&#x7F16;&#x8F91;&#x5668;">7. vi&#x7F16;&#x8F91;&#x5668; <a href="#t1127. vi&#x7F16;&#x8F91;&#x5668;"> # </a></h2>
+<ul>
+<li>VI visual interface</li>
+<li>&#x53EF;&#x89C6;&#x5316;&#x63A5;&#x53E3;</li>
+<li>&#x7C7B;&#x4F3C;&#x4E0E;windows&#x4E2D;&#x7684;&#x8BB0;&#x4E8B;&#x672C;</li>
+<li>vim&#x652F;&#x6301;&#x591A;&#x7EA7;&#x64A4;&#x9500;</li>
+<li>&#x8DE8;&#x5E73;&#x53F0;</li>
+<li>&#x8BED;&#x6CD5;&#x9AD8;&#x4EAE;</li>
+<li>&#x652F;&#x6301;&#x56FE;&#x5F62;&#x754C;&#x9762;</li>
+</ul>
+<p><img src="http://www.178linux.com/wp-content/uploads/2017/08/20170805144200_78923.png" alt="vi"></p>
+<h3 id="t1137.1 &#x64CD;&#x4F5C;&#x6A21;&#x5F0F;">7.1 &#x64CD;&#x4F5C;&#x6A21;&#x5F0F; <a href="#t1137.1 &#x64CD;&#x4F5C;&#x6A21;&#x5F0F;"> # </a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x6A21;&#x5F0F;&#x540D;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Command Mode &#x547D;&#x4EE4;&#x6A21;&#x5F0F;</td>
+<td style="text-align:left">&#x7B49;&#x5F85;&#x8F93;&#x5165;&#x7684;&#x6A21;&#x5F0F;</td>
+</tr>
+<tr>
+<td style="text-align:left">Insert Mode &#x8F93;&#x5165;&#x6A21;&#x5F0F;</td>
+<td style="text-align:left">&#x7F16;&#x8F91;&#x6A21;&#x5F0F;&#xFF0C;&#x7528;&#x4E8E;&#x8F93;&#x5165;&#x6587;&#x672C;</td>
+</tr>
+<tr>
+<td style="text-align:left">Last Line Mode &#x5E95;&#x884C;&#x6A21;&#x5F0F;(&#x5C3E;&#x884C;&#x3001;&#x672B;&#x884C;)</td>
+<td style="text-align:left">&#x53EF;&#x4EE5;&#x8F93;&#x5165;&#x6307;&#x4EE4;&#xFF0C;&#x641C;&#x7D22;&#xFF0C;&#x4FDD;&#x5B58;</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>vim + abc</li>
+<li>vim +3 abc</li>
+<li>vim +5 abc</li>
+<li>vim +/xxx abc</li>
+<li>vim a b c :n</li>
+</ul>
+<h3 id="t1147.2 &#x5E38;&#x7528;&#x6307;&#x4EE4;">7.2 &#x5E38;&#x7528;&#x6307;&#x4EE4; <a href="#t1147.2 &#x5E38;&#x7528;&#x6307;&#x4EE4;"> # </a></h3>
+<h4 id="t1157.2.1 &#x5E95;&#x884C;&#x6A21;&#x5F0F;">7.2.1 &#x5E95;&#x884C;&#x6A21;&#x5F0F; <a href="#t1157.2.1 &#x5E95;&#x884C;&#x6A21;&#x5F0F;"> # </a></h4>
+<ul>
+<li>:w &#x4FDD;&#x5B58;</li>
+<li>:q &#x9000;&#x51FA;</li>
+<li>:! &#x5F3A;&#x5236;&#x4FDD;&#x5B58;</li>
+<li>:ls &#x5217;&#x51FA;&#x6240;&#x6709;&#x7684;&#x6587;&#x4EF6;</li>
+<li>:n &#x4E0B;&#x4E00;&#x4E2A;</li>
+<li>:N &#x4E0A;&#x4E00;&#x4E2A;</li>
+<li>:15 &#x8DF3;&#x8F6C;&#x5230;&#x6307;&#x5B9A;&#x884C;</li>
+<li>/xxx &#x4ECE;&#x5149;&#x6807;&#x4F4D;&#x7F6E;&#x5F00;&#x59CB;&#x5411;&#x540E;&#x641C;&#x7D22; xxx &#x5B57;&#x7B26;&#x4E32;</li>
+<li>?xxx &#x4ECE;&#x5149;&#x6807;&#x4F4D;&#x7F6E;&#x5F00;&#x59CB;&#x5411;&#x524D;&#x641C;&#x7D22;</li>
+</ul>
+<h4 id="t1167.2.2 &#x547D;&#x4EE4;&#x6A21;&#x5F0F;">7.2.2 &#x547D;&#x4EE4;&#x6A21;&#x5F0F; <a href="#t1167.2.2 &#x547D;&#x4EE4;&#x6A21;&#x5F0F;"> # </a></h4>
+<ul>
+<li>h &#x5149;&#x6807;&#x5DE6;&#x79FB;</li>
+<li>j &#x5149;&#x6807;&#x4E0B;&#x79FB;</li>
+<li>k &#x5149;&#x6807;&#x4E0A;&#x79FB;</li>
+<li><p>l &#x5149;&#x6807;&#x53F3;&#x79FB;</p>
+</li>
+<li><p>ctrl+f &#x5411;&#x4E0B;&#x7FFB;&#x9875;(front)</p>
+</li>
+<li>ctrl+b &#x5411;&#x4E0A;&#x7FFB;&#x9875;</li>
+<li>ctrl+d &#x5411;&#x4E0B;&#x7FFB;&#x534A;&#x9875;</li>
+<li><p>ctrl+u &#x5411;&#x4E0A;&#x7FFB;&#x534A;&#x9875;</p>
+</li>
+<li><p>dd &#x5220;&#x9664;&#x5149;&#x6807;&#x6240;&#x5728;&#x884C;</p>
+</li>
+<li>o &#x5728;&#x5149;&#x6807;&#x6240;&#x5728;&#x884C;&#x7684;&#x4E0B;&#x65B9;&#x63D2;&#x5165;&#x4E00;&#x884C;&#x5E76;&#x5207;&#x6362;&#x5230;&#x8F93;&#x5165;&#x6A21;&#x5F0F;</li>
+<li>yy &#x590D;&#x5236;&#x5149;&#x6807;&#x6240;&#x5728;&#x7684;&#x884C;</li>
+<li>p &#x5728;&#x5149;&#x6807;&#x6240;&#x5728;&#x884C;&#x7684;&#x4E0B;&#x65B9;&#x7C98;&#x8D34;</li>
+<li>P &#x5728;&#x5149;&#x6807;&#x6240;&#x5728;&#x884C;&#x7684;&#x4E0A;&#x65B9;&#x7C98;&#x8D34;</li>
+</ul>
+<h2 id="t1178. &#x7528;&#x6237;&#x548C;&#x7528;&#x6237;&#x7EC4;">8. &#x7528;&#x6237;&#x548C;&#x7528;&#x6237;&#x7EC4; <a href="#t1178. &#x7528;&#x6237;&#x548C;&#x7528;&#x6237;&#x7EC4;"> # </a></h2>
+<ul>
+<li>&#x4F7F;&#x7528;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x4EBA;&#x90FD;&#x662F;&#x7528;&#x6237;</li>
+<li>&#x7528;&#x6237;&#x7EC4;&#x662F;&#x5177;&#x6709;&#x76F8;&#x540C;&#x7CFB;&#x7EDF;&#x6743;&#x9650;&#x7684;&#x4E00;&#x7EC4;&#x7528;&#x6237;</li>
+</ul>
+<h3 id="t1188.1 &#x7528;&#x6237;&#x7EC4;">8.1 &#x7528;&#x6237;&#x7EC4; <a href="#t1188.1 &#x7528;&#x6237;&#x7EC4;"> # </a></h3>
+<h4 id="t1198.1.1 /etc/group">8.1.1 /etc/group <a href="#t1198.1.1 /etc/group"> # </a></h4>
+<ul>
+<li>/etc/group &#x5B58;&#x50A8;&#x5F53;&#x524D;&#x7CFB;&#x7EDF;&#x4E2D;&#x6240;&#x6709;&#x7528;&#x6237;&#x7EC4;&#x4FE1;&#x606F;</li>
+<li>group:x:123:abc,def</li>
+<li>&#x7EC4;&#x540D;&#x79F0;:&#x7EC4;&#x5BC6;&#x7801;&#x5360;&#x4F4D;&#x7B26;:&#x7EC4;&#x7F16;&#x53F7;:&#x7EC4;&#x4E2D;&#x7528;&#x6237;&#x540D;&#x5217;&#x8868;</li>
+<li>root &#x7EC4;&#x7F16;&#x53F7;&#x4E3A;0</li>
+<li>1-499&#x7CFB;&#x7EDF;&#x9884;&#x7559;&#x7684;&#x7F16;&#x53F7; &#x9884;&#x7559;&#x7ED9;&#x5B89;&#x88C5;&#x7684;&#x8F6F;&#x4EF6;&#x548C;&#x670D;&#x52A1;&#x7684;</li>
+<li>&#x7528;&#x6237;&#x624B;&#x52A8;&#x521B;&#x5EFA;&#x7684;&#x7528;&#x6237;&#x7EC4;&#x4ECE;500&#x5F00;&#x59CB;</li>
+<li>&#x7EC4;&#x5BC6;&#x7801;&#x5360;&#x4F4D;&#x7B26;&#x90FD;&#x662F;x</li>
+</ul>
+<h4 id="t1208.1.2 /etc/gshadow">8.1.2 /etc/gshadow <a href="#t1208.1.2 /etc/gshadow"> # </a></h4>
+<ul>
+<li>&#x5B58;&#x653E;&#x5F53;&#x524D;&#x7CFB;&#x7EDF;&#x4E2D;&#x7528;&#x6237;&#x7EC4;&#x7684;&#x5BC6;&#x7801;&#x4FE1;&#x606F;</li>
+<li>&#x548C;group&#x4E2D;&#x7684;&#x8BB0;&#x5F55;&#x4E00;&#x4E00;&#x5BF9;&#x5E94;</li>
+<li>Group: * : :abc</li>
+<li>&#x7EC4;&#x540D;&#x79F0; &#x7EC4;&#x5BC6;&#x7801; &#x7EC4;&#x7BA1;&#x7406;&#x8005; &#x7EC4;&#x4E2D;&#x7528;&#x6237;&#x540D;</li>
+</ul>
+<h4 id="t1218.1.3 /etc/passwd">8.1.3 /etc/passwd <a href="#t1218.1.3 /etc/passwd"> # </a></h4>
+<ul>
+<li>&#x5B58;&#x50A8;&#x5F53;&#x524D;&#x7CFB;&#x7EDF;&#x4E2D;&#x6240;&#x6709;&#x7528;&#x6237;&#x7684;&#x4FE1;&#x606F;</li>
+<li>user:x:123:456:xxxxx:/home/user:/bin/bash</li>
+<li>&#x7528;&#x6237;&#x540D;:&#x5BC6;&#x7801;&#x5360;&#x4F4D;&#x7B26;:&#x7528;&#x6237;&#x7F16;&#x53F7;: &#x7528;&#x6237;&#x6CE8;&#x91CA;&#x4FE1;&#x606F;:&#x7528;&#x6237;&#x4E3B;&#x76EE;&#x5F55;:shell&#x7C7B;&#x578B;</li>
+</ul>
+<h4 id="t1228.1.4 /etc/shadow">8.1.4 /etc/shadow <a href="#t1228.1.4 /etc/shadow"> # </a></h4>
+<ul>
+<li>&#x5B58;&#x653E;&#x5F53;&#x524D;&#x7CFB;&#x7EDF;&#x4E2D;&#x6240;&#x6709;&#x7528;&#x6237;&#x7684;&#x5BC6;&#x7801;&#x4FE1;&#x606F;</li>
+<li>user:xxx:::::::</li>
+<li>&#x7528;&#x6237;&#x540D;:&#x5BC6;&#x7801;:</li>
+</ul>
+<h2 id="t1238. &#x7528;&#x6237;&#x64CD;&#x4F5C;">8. &#x7528;&#x6237;&#x64CD;&#x4F5C; <a href="#t1238. &#x7528;&#x6237;&#x64CD;&#x4F5C;"> # </a></h2>
+<p>&#x6DFB;&#x52A0;&#x7EC4;</p>
+<pre><code class="lang-sh">groupadd student
+</code></pre>
+<p>&#x4FEE;&#x6539;&#x7EC4;&#x540D;&#x79F0;</p>
+<pre><code class="lang-sh">groupmod -n stu student 
+</code></pre>
+<p>&#x4FEE;&#x6539;&#x7EC4;&#x7F16;&#x53F7;</p>
+<pre><code class="lang-sh">groupmod -g 111 stu 
+</code></pre>
+<p>&#x6DFB;&#x52A0;&#x5206;&#x7EC4;&#x5E76;&#x6307;&#x5B9A;&#x7F16;&#x53F7;</p>
+<pre><code class="lang-sh">groupadd -g 222 teacher 
+</code></pre>
+<p>&#x5220;&#x9664;&#x5206;&#x7EC4;</p>
+<pre><code class="lang-sh">groupdel 222 
+</code></pre>
+<p>&#x6DFB;&#x52A0;&#x5206;&#x7EC4;</p>
+<pre><code class="lang-sh">groupadd teacher 
+</code></pre>
+<p>&#x4E3A;&#x7528;&#x6237;&#x6307;&#x5B9A;&#x6240;&#x5C5E;&#x7EC4;</p>
+<pre><code class="lang-sh">useradd -g teacher zhangsan 
+</code></pre>
+<p>&#x4E3A;&#x7528;&#x6237;&#x6307;&#x5B9A;&#x6240;&#x5C5E;&#x7EC4;</p>
+<pre><code class="lang-sh">useradd -g teacher lisi 
+</code></pre>
+<p>&#x4E3A;&#x7528;&#x6237;&#x6307;&#x5B9A;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;</p>
+<pre><code class="lang-sh">useradd -d /home/zhangsan zhangsan 
+</code></pre>
+<p>&#x6307;&#x5B9A;&#x6CE8;&#x91CA;</p>
+<pre><code class="lang-sh">usermod -c iamateacher zhangsan 
+</code></pre>
+<p>&#x4FEE;&#x6539;&#x7528;&#x6237;&#x540D;</p>
+<pre><code class="lang-sh">usermod -l zhangsan zhangsan2
+</code></pre>
+<p>&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x5939;</p>
+<pre><code class="lang-js">usermod -d /home/zhangsan2 zhangsan2 
+</code></pre>
+<p>&#x4FEE;&#x6539;&#x7528;&#x6237;&#x6240;&#x5C5E;&#x7EC4;</p>
+<pre><code class="lang-sh">usermod -g stu zhangsan2 
+</code></pre>
+<p>&#x5220;&#x9664;&#x7528;&#x6237;</p>
+<pre><code class="lang-js">userdel zhangsan2 
+</code></pre>
+<p>&#x5220;&#x9664;&#x6240;&#x5C5E;&#x6587;&#x4EF6;&#x5939;</p>
+<pre><code class="lang-sh">userdel -r lisi 
+</code></pre>
+<h2 id="t1249. &#x7528;&#x6237;&#x547D;&#x4EE4;">9. &#x7528;&#x6237;&#x547D;&#x4EE4; <a href="#t1249. &#x7528;&#x6237;&#x547D;&#x4EE4;"> # </a></h2>
+<p>&#x663E;&#x793A;&#x767B;&#x5F55;&#x7684;&#x7528;&#x6237;&#x540D;</p>
+<pre><code class="lang-sh">whoami
+</code></pre>
+<p>&#x663E;&#x793A;&#x6307;&#x5B9A;&#x7528;&#x6237;&#x4FE1;&#x606F;&#xFF0C;&#x5305;&#x62EC;&#x7528;&#x6237;&#x7F16;&#x53F7;&#xFF0C;&#x7528;&#x6237;&#x540D; &#x4E3B;&#x8981;&#x7EC4;&#x7684;&#x7F16;&#x53F7;&#x53CA;&#x540D;&#x79F0;&#xFF0C;&#x9644;&#x5C5E;&#x7EC4;&#x5217;&#x8868;</p>
+<pre><code class="lang-sh">id zhangsan  
+</code></pre>
+<p>&#x663E;&#x793A;zhangsan&#x7528;&#x6237;&#x6240;&#x5728;&#x7684;&#x6240;&#x6709;&#x7EC4;</p>
+<pre><code class="lang-sh">groups zhangsan 
+</code></pre>
+<p>&#x663E;&#x793A;&#x7528;&#x6237;&#x8BE6;&#x7EC6;&#x8D44;&#x6599;</p>
+<pre><code class="lang-sh">finger zhangsan  
+</code></pre>
+<h2 id="t12510. &#x9644;&#x5F55;">10. &#x9644;&#x5F55; <a href="#t12510. &#x9644;&#x5F55;"> # </a></h2>
+<h3 id="t12610.1 &#x7CFB;&#x7EDF;&#x542F;&#x52A8;">10.1 &#x7CFB;&#x7EDF;&#x542F;&#x52A8; <a href="#t12610.1 &#x7CFB;&#x7EDF;&#x542F;&#x52A8;"> # </a></h3>
+<h4 id="t12710.1.1 BIOS">10.1.1 BIOS <a href="#t12710.1.1 BIOS"> # </a></h4>
+<ul>
+<li>&#x8BA1;&#x7B97;&#x673A;&#x901A;&#x7535;&#x540E;&#xFF0C;&#x7B2C;&#x4E00;&#x4EF6;&#x4E8B;&#x5C31;&#x662F;&#x8BFB;&#x53D6;&#x5237;&#x5165;ROM&#x82AF;&#x7247;&#x7684;&#x5F00;&#x673A;&#x7A0B;&#x5E8F;&#xFF0C;&#x8FD9;&#x4E2A;&#x7A0B;&#x5E8F;&#x53EB;&#x505A;(Basic Input/Output System)</li>
+</ul>
+<h4 id="t12810.1.2 &#x786C;&#x4EF6;&#x81EA;&#x68C0;">10.1.2 &#x786C;&#x4EF6;&#x81EA;&#x68C0; <a href="#t12810.1.2 &#x786C;&#x4EF6;&#x81EA;&#x68C0;"> # </a></h4>
+<ul>
+<li>BIOS&#x7A0B;&#x5E8F;&#x9996;&#x5148;&#x68C0;&#x67E5;&#xFF0C;&#x8BA1;&#x7B97;&#x673A;&#x786C;&#x4EF6;&#x80FD;&#x5426;&#x6EE1;&#x8DB3;&#x8FD0;&#x884C;&#x7684;&#x57FA;&#x672C;&#x6761;&#x4EF6;&#xFF0C;&#x8FD9;&#x53EB;&#x505A;&quot;&#x786C;&#x4EF6;&#x81EA;&#x68C0;&quot;&#xFF08;Power-On Self-Test)</li>
+<li>&#x5982;&#x679C;&#x786C;&#x4EF6;&#x51FA;&#x73B0;&#x95EE;&#x9898;&#xFF0C;&#x4E3B;&#x677F;&#x4F1A;&#x53D1;&#x51FA;&#x4E0D;&#x540C;&#x542B;&#x4E49;&#x7684;&#x8702;&#x9E23;&#xFF0C;&#x542F;&#x52A8;&#x4E2D;&#x6B62;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x95EE;&#x9898;&#xFF0C;&#x5C4F;&#x5E55;&#x5C31;&#x4F1A;&#x663E;&#x793A;&#x51FA;CPU&#x3001;&#x5185;&#x5B58;&#x3001;&#x786C;&#x76D8;&#x7B49;&#x4FE1;&#x606F;&#x3002;</li>
+</ul>
+<h4 id="t12910.1.3 &#x542F;&#x52A8;&#x987A;&#x5E8F;">10.1.3 &#x542F;&#x52A8;&#x987A;&#x5E8F; <a href="#t12910.1.3 &#x542F;&#x52A8;&#x987A;&#x5E8F;"> # </a></h4>
+<ul>
+<li>&#x786C;&#x4EF6;&#x81EA;&#x68C0;&#x5B8C;&#x6210;&#x540E;&#xFF0C;BIOS&#x628A;&#x63A7;&#x5236;&#x6743;&#x8F6C;&#x4EA4;&#x7ED9;&#x4E0B;&#x4E00;&#x9636;&#x6BB5;&#x7684;&#x542F;&#x52A8;&#x7A0B;&#x5E8F;&#x3002;</li>
+<li>&#x8FD9;&#x65F6;&#xFF0C;BIOS&#x9700;&#x8981;&#x77E5;&#x9053;&#xFF0C;&quot;&#x4E0B;&#x4E00;&#x9636;&#x6BB5;&#x7684;&#x542F;&#x52A8;&#x7A0B;&#x5E8F;&quot;&#x5177;&#x4F53;&#x5B58;&#x653E;&#x5728;&#x54EA;&#x4E00;&#x4E2A;&#x8BBE;&#x5907;</li>
+<li>BIOS&#x9700;&#x8981;&#x6709;&#x4E00;&#x4E2A;&#x5916;&#x90E8;&#x50A8;&#x5B58;&#x8BBE;&#x5907;&#x7684;&#x6392;&#x5E8F;&#xFF0C;&#x6392;&#x5728;&#x524D;&#x9762;&#x7684;&#x8BBE;&#x5907;&#x5C31;&#x662F;&#x4F18;&#x5148;&#x8F6C;&#x4EA4;&#x63A7;&#x5236;&#x6743;&#x7684;&#x8BBE;&#x5907;&#x3002;&#x8FD9;&#x79CD;&#x6392;&#x5E8F;&#x53EB;&#x505A;&quot;&#x542F;&#x52A8;&#x987A;&#x5E8F;&quot;&#xFF08;Boot Sequence&#xFF09;</li>
+<li>BIOS&#x6309;&#x7167;&quot;&#x542F;&#x52A8;&#x987A;&#x5E8F;&quot;&#xFF0C;&#x628A;&#x63A7;&#x5236;&#x6743;&#x8F6C;&#x4EA4;&#x7ED9;&#x6392;&#x5728;&#x7B2C;&#x4E00;&#x4F4D;&#x7684;&#x50A8;&#x5B58;&#x8BBE;&#x5907;&#x3002;</li>
+<li>&#x8FD9;&#x65F6;&#xFF0C;&#x8BA1;&#x7B97;&#x673A;&#x8BFB;&#x53D6;&#x8BE5;&#x8BBE;&#x5907;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x6247;&#x533A;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BFB;&#x53D6;&#x6700;&#x524D;&#x9762;&#x7684;512&#x4E2A;&#x5B57;&#x8282;&#x3002;&#x5982;&#x679C;&#x8FD9;512&#x4E2A;&#x5B57;&#x8282;&#x7684;&#x6700;&#x540E;&#x4E24;&#x4E2A;&#x5B57;&#x8282;&#x662F;0x55&#x548C;0xAA&#xFF0C;&#x8868;&#x660E;&#x8FD9;&#x4E2A;&#x8BBE;&#x5907;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x542F;&#x52A8;&#xFF1B;&#x5982;&#x679C;&#x4E0D;&#x662F;&#xFF0C;&#x8868;&#x660E;&#x8BBE;&#x5907;&#x4E0D;&#x80FD;&#x7528;&#x4E8E;&#x542F;&#x52A8;&#xFF0C;&#x63A7;&#x5236;&#x6743;&#x4E8E;&#x662F;&#x88AB;&#x8F6C;&#x4EA4;&#x7ED9;&quot;&#x542F;&#x52A8;&#x987A;&#x5E8F;&quot;&#x4E2D;&#x7684;&#x4E0B;&#x4E00;&#x4E2A;&#x8BBE;&#x5907;&#x3002;</li>
+<li>&#x8FD9;&#x6700;&#x524D;&#x9762;&#x7684;512&#x4E2A;&#x5B57;&#x8282;&#xFF0C;&#x5C31;&#x53EB;&#x505A;&quot;&#x4E3B;&#x5F15;&#x5BFC;&#x8BB0;&#x5F55;&quot;&#xFF08;Master boot record&#xFF0C;&#x7F29;&#x5199;&#x4E3A;MBR&#xFF09;</li>
+</ul>
+<h4 id="t13010.1.4 &#x4E3B;&#x5F15;&#x5BFC;&#x8BB0;&#x5F55;&#x7684;&#x7ED3;&#x6784;">10.1.4 &#x4E3B;&#x5F15;&#x5BFC;&#x8BB0;&#x5F55;&#x7684;&#x7ED3;&#x6784; <a href="#t13010.1.4 &#x4E3B;&#x5F15;&#x5BFC;&#x8BB0;&#x5F55;&#x7684;&#x7ED3;&#x6784;"> # </a></h4>
+<ul>
+<li>&quot;&#x4E3B;&#x5F15;&#x5BFC;&#x8BB0;&#x5F55;&quot;&#x53EA;&#x6709;512&#x4E2A;&#x5B57;&#x8282;&#xFF0C;&#x653E;&#x4E0D;&#x4E86;&#x592A;&#x591A;&#x4E1C;&#x897F;&#x3002;&#x5B83;&#x7684;&#x4E3B;&#x8981;&#x4F5C;&#x7528;&#x662F;&#xFF0C;&#x544A;&#x8BC9;&#x8BA1;&#x7B97;&#x673A;&#x5230;&#x786C;&#x76D8;&#x7684;&#x54EA;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#x53BB;&#x627E;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x3002;<ul>
+<li>&#xFF08;1&#xFF09; &#x7B2C;1-446&#x5B57;&#x8282;&#xFF1A;&#x662F;&#x7528;&#x6765;&#x8BB0;&#x5F55;&#x7CFB;&#x7EDF;&#x7684;&#x542F;&#x52A8;&#x4FE1;&#x606F;&#x7684;,&#x8C03;&#x7528;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x673A;&#x5668;&#x7801;</li>
+<li>&#xFF08;2&#xFF09; &#x7B2C;447-510&#x5B57;&#x8282;(64&#x4E2A;&#x5B57;&#x8282;)&#xFF1A;&#x5206;&#x533A;&#x8868;&#xFF08;Partition table&#xFF09;&#xFF0C;&#x5206;&#x533A;&#x8868;&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x662F;&#x5C06;&#x786C;&#x76D8;&#x5206;&#x6210;&#x82E5;&#x5E72;&#x4E2A;&#x533A;</li>
+<li>&#xFF08;3&#xFF09; &#x7B2C;511-512&#x5B57;&#x8282;&#xFF1A;&#x4E3B;&#x5F15;&#x5BFC;&#x8BB0;&#x5F55;&#x7B7E;&#x540D;&#xFF08;0x55&#x548C;0xAA&#xFF09;</li>
+</ul>
+</li>
+</ul>
+<h4 id="t13110.1.5 &#x5206;&#x533A;&#x8868;">10.1.5 &#x5206;&#x533A;&#x8868; <a href="#t13110.1.5 &#x5206;&#x533A;&#x8868;"> # </a></h4>
+<ul>
+<li>&#x78C1;&#x76D8;&#x5206;&#x533A;&#x662F;&#x4F7F;&#x7528;&#x5206;&#x533A;&#x7F16;&#x8F91;&#x5668;&#x5728;&#x78C1;&#x76D8;&#x4E0A;&#x5212;&#x5206;&#x51E0;&#x4E2A;&#x903B;&#x8F91;&#x90E8;&#x5206;</li>
+<li>&#x78C1;&#x76D8;&#x4E00;&#x65E6;&#x5212;&#x5206;&#x6210;&#x591A;&#x4E2A;&#x5206;&#x533A;&#xFF0C;&#x4E0D;&#x540C;&#x7C7B;&#x7684;&#x76EE;&#x5F55;&#x4E0E;&#x6587;&#x4EF6;&#x53EF;&#x4EE5;&#x5B58;&#x50A8;&#x8FDB;&#x4E0D;&#x540C;&#x7684;&#x5206;&#x533A;&#x5185;</li>
+<li>&quot;&#x4E3B;&#x5F15;&#x5BFC;&#x8BB0;&#x5F55;&quot;&#x56E0;&#x6B64;&#x5FC5;&#x987B;&#x77E5;&#x9053;&#x5C06;&#x63A7;&#x5236;&#x6743;&#x8F6C;&#x4EA4;&#x7ED9;&#x54EA;&#x4E2A;&#x533A;</li>
+<li>&#x5206;&#x533A;&#x8868;&#x7684;&#x957F;&#x5EA6;&#x53EA;&#x6709;64&#x4E2A;&#x5B57;&#x8282;&#xFF0C;&#x91CC;&#x9762;&#x53C8;&#x5206;&#x6210;&#x56DB;&#x9879;&#xFF0C;&#x6BCF;&#x9879;16&#x4E2A;&#x5B57;&#x8282;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x4E00;&#x4E2A;&#x786C;&#x76D8;&#x6700;&#x591A;&#x53EA;&#x80FD;&#x5206;&#x56DB;&#x4E2A;&#x4E00;&#x7EA7;&#x5206;&#x533A;&#xFF0C;&#x53C8;&#x53EB;&#x505A;&quot;&#x4E3B;&#x5206;&#x533A;&quot;<ul>
+<li>&#xFF08;1&#xFF09; &#x7B2C;1&#x4E2A;&#x5B57;&#x8282;&#xFF1A;&#x5982;&#x679C;&#x4E3A;0x80&#xFF0C;&#x5C31;&#x8868;&#x793A;&#x8BE5;&#x4E3B;&#x5206;&#x533A;&#x662F;&#x6FC0;&#x6D3B;&#x5206;&#x533A;&#xFF0C;&#x63A7;&#x5236;&#x6743;&#x8981;&#x8F6C;&#x4EA4;&#x7ED9;&#x8FD9;&#x4E2A;&#x5206;&#x533A;&#x3002;&#x56DB;&#x4E2A;&#x4E3B;&#x5206;&#x533A;&#x91CC;&#x9762;&#x53EA;&#x80FD;&#x6709;&#x4E00;&#x4E2A;&#x662F;&#x6FC0;&#x6D3B;&#x7684;&#x3002;</li>
+<li>&#xFF08;2&#xFF09; &#x7B2C;2-4&#x4E2A;&#x5B57;&#x8282;&#xFF1A;&#x4E3B;&#x5206;&#x533A;&#x7B2C;&#x4E00;&#x4E2A;&#x6247;&#x533A;&#x7684;&#x7269;&#x7406;&#x4F4D;&#x7F6E;&#xFF08;&#x67F1;&#x9762;&#x3001;&#x78C1;&#x5934;&#x3001;&#x6247;&#x533A;&#x53F7;&#x7B49;&#x7B49;&#xFF09;&#x3002;</li>
+<li>&#xFF08;3&#xFF09; &#x7B2C;5&#x4E2A;&#x5B57;&#x8282;&#xFF1A;&#x4E3B;&#x5206;&#x533A;&#x7C7B;&#x578B;&#xFF0C;&#x6BD4;&#x5982;FAT32&#x3001;NTFS&#x7B49;&#x3002;</li>
+<li>&#xFF08;4&#xFF09; &#x7B2C;6-8&#x4E2A;&#x5B57;&#x8282;&#xFF1A;&#x4E3B;&#x5206;&#x533A;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x6247;&#x533A;&#x7684;&#x7269;&#x7406;&#x4F4D;&#x7F6E;&#x3002;</li>
+<li>&#xFF08;5&#xFF09; &#x7B2C;9-12&#x5B57;&#x8282;&#xFF1A;&#x8BE5;&#x4E3B;&#x5206;&#x533A;&#x7B2C;&#x4E00;&#x4E2A;&#x6247;&#x533A;&#x7684;&#x903B;&#x8F91;&#x5730;&#x5740;&#x3002;</li>
+<li>&#xFF08;6&#xFF09; &#x7B2C;13-16&#x5B57;&#x8282;&#xFF1A;&#x4E3B;&#x5206;&#x533A;&#x7684;&#x6247;&#x533A;&#x603B;&#x6570;&#x3002;</li>
+</ul>
+</li>
+</ul>
+<h4 id="t13210.1.6 &#x786C;&#x76D8;&#x542F;&#x52A8;">10.1.6 &#x786C;&#x76D8;&#x542F;&#x52A8; <a href="#t13210.1.6 &#x786C;&#x76D8;&#x542F;&#x52A8;"> # </a></h4>
+<ul>
+<li>&#x8BA1;&#x7B97;&#x673A;&#x7684;&#x63A7;&#x5236;&#x6743;&#x5C31;&#x8981;&#x8F6C;&#x4EA4;&#x7ED9;&#x786C;&#x76D8;&#x7684;&#x67D0;&#x4E2A;&#x5206;&#x533A;&#x4E86;</li>
+<li>&#x56DB;&#x4E2A;&#x4E3B;&#x5206;&#x533A;&#x91CC;&#x9762;&#xFF0C;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x662F;&#x6FC0;&#x6D3B;&#x7684;&#x3002;&#x8BA1;&#x7B97;&#x673A;&#x4F1A;&#x8BFB;&#x53D6;&#x6FC0;&#x6D3B;&#x5206;&#x533A;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x6247;&#x533A;&#xFF0C;&#x53EB;&#x505A;&quot;&#x5377;&#x5F15;&#x5BFC;&#x8BB0;&#x5F55;&quot;&#xFF08;Volume boot record&#xFF0C;&#x7F29;&#x5199;&#x4E3A;VBR&#xFF09;</li>
+</ul>
+<h4 id="t13310.1.7 &#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;">10.1.7 &#x64CD;&#x4F5C;&#x7CFB;&#x7EDF; <a href="#t13310.1.7 &#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;"> # </a></h4>
+<ul>
+<li>&#x63A7;&#x5236;&#x6743;&#x8F6C;&#x4EA4;&#x7ED9;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x540E;&#xFF0C;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x5185;&#x6838;&#x9996;&#x5148;&#x88AB;&#x8F7D;&#x5165;&#x5185;&#x5B58;&#x3002;</li>
+<li>&#x4EE5;Linux&#x7CFB;&#x7EDF;&#x4E3A;&#x4F8B;&#xFF0C;&#x5148;&#x8F7D;&#x5165;<code>/boot</code>&#x76EE;&#x5F55;&#x4E0B;&#x9762;&#x7684;<code>kernel</code>&#x3002;&#x5185;&#x6838;&#x52A0;&#x8F7D;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x8FD0;&#x884C;&#x7684;&#x7A0B;&#x5E8F;&#x662F;<code>/sbin/init</code>&#x3002;&#x5B83;&#x6839;&#x636E;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF08;Debian&#x7CFB;&#x7EDF;&#x662F;/etc/initab&#xFF09;&#x4EA7;&#x751F;init&#x8FDB;&#x7A0B;&#x3002;&#x8FD9;&#x662F;Linux&#x542F;&#x52A8;&#x540E;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#xFF0C;pid&#x8FDB;&#x7A0B;&#x7F16;&#x53F7;&#x4E3A;1&#xFF0C;&#x5176;&#x4ED6;&#x8FDB;&#x7A0B;&#x90FD;&#x662F;&#x5B83;&#x7684;&#x540E;&#x4EE3;</li>
+<li>&#x7136;&#x540E;&#xFF0C;<code>init</code>&#x7EBF;&#x7A0B;&#x52A0;&#x8F7D;&#x7CFB;&#x7EDF;&#x7684;&#x5404;&#x4E2A;&#x6A21;&#x5757;&#xFF0C;&#x6BD4;&#x5982;&#x7A97;&#x53E3;&#x7A0B;&#x5E8F;&#x548C;&#x7F51;&#x7EDC;&#x7A0B;&#x5E8F;&#xFF0C;&#x76F4;&#x81F3;&#x6267;&#x884C;<code>/bin/login</code>&#x7A0B;&#x5E8F;&#xFF0C;&#x8DF3;&#x51FA;&#x767B;&#x5F55;&#x754C;&#x9762;&#xFF0C;&#x7B49;&#x5F85;&#x7528;&#x6237;&#x8F93;&#x5165;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;&#x3002;</li>
+</ul>
+
+    </div>
+</div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+    aria-labelledby="loginModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="loginModalLabel">请登录</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="username" class="control-label">姓名:</label>
+                        <input type="text" class="form-control" id="username" placeholder="珠峰架构VIP会员系统用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">密码:</label>
+                        <input type="text" class="form-control" id="password" placeholder="珠峰架构VIP会员系统密码">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                    data-dismiss="modal">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

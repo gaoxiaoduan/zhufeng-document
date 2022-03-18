@@ -1,0 +1,1841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+   
+                      
+
+                        
+<div class="warpper">
+    <div class="page-toc">
+        <ul><li><a href="#t01. 准备工作">1. 准备工作</a></li><li><a href="#t12. 配置ECS服务器">2. 配置ECS服务器</a></li><li><a href="#t23. 登录服务器">3. 登录服务器</a><ul><li><a href="#t33.1 命令行登录">3.1 命令行登录</a></li><li><a href="#t43.2 SSH登录">3.2 SSH登录</a><ul><li><a href="#t53.2.1  新建用户">3.2.1  新建用户</a></li><li><a href="#t63.2.1  授与sudo权限">3.2.1  授与sudo权限</a></li></ul></li><li><a href="#t73.3 配置无密码登录">3.3 配置无密码登录</a><ul><li><a href="#t83.3.1 客户端">3.3.1 客户端</a></li><li><a href="#t93.3.2 服务器端">3.3.2 服务器端</a></li></ul></li><li><a href="#t103.4  修改SSH端口">3.4  修改SSH端口</a></li></ul></li><li><a href="#t114. docker">4. docker</a><ul><li><a href="#t124.1 为什么使用docker?">4.1 为什么使用docker?</a></li><li><a href="#t134.2 docker中的概念">4.2 docker中的概念</a></li><li><a href="#t144.3 常见docker命令">4.3 常见docker命令</a></li><li><a href="#t154.4 安装docker">4.4 安装docker</a></li><li><a href="#t164.5 启动docker">4.5 启动docker</a></li><li><a href="#t174.6 查看docker版本">4.6 查看docker版本</a></li><li><a href="#t184.7 docker-compose">4.7 docker-compose</a></li><li><a href="#t194.8 阿里云加速">4.8 阿里云加速</a></li></ul></li><li><a href="#t205.整体架构">5.整体架构</a><ul><li><a href="#t215.1 前端架构">5.1 前端架构</a></li><li><a href="#t225.2 后端架构">5.2 后端架构</a></li><li><a href="#t235.3 mysql数据库集群">5.3 mysql数据库集群</a></li><li><a href="#t245.4 mongodb数据库集群">5.4 mongodb数据库集群</a><ul><li><a href="#t255.4.1 主从复制">5.4.1 主从复制</a></li><li><a href="#t265.4.2 副本集">5.4.2 副本集</a></li><li><a href="#t275.4.3 分片">5.4.3 分片</a></li></ul></li><li><a href="#t285.5 redis数据库集群">5.5 redis数据库集群</a></li></ul></li><li><a href="#t296.mysql集群">6.mysql集群</a><ul><li><a href="#t306.1 安装集群">6.1 安装集群</a><ul><li><a href="#t316.1.1 下载镜像">6.1.1 下载镜像</a></li><li><a href="#t326.1.2 创建内部网络">6.1.2 创建内部网络</a></li><li><a href="#t336.1.3 创建docker卷">6.1.3 创建docker卷</a></li><li><a href="#t346.1.4 创建pxc容器">6.1.4 创建pxc容器</a></li></ul></li><li><a href="#t356.2 负载均衡">6.2 负载均衡</a><ul><li><a href="#t366.2.1 安装haproxy镜像">6.2.1 安装haproxy镜像</a></li><li><a href="#t376.2.2 创建配置文件">6.2.2 创建配置文件</a></li><li><a href="#t386.2.3 创建haproxy容器">6.2.3 创建haproxy容器</a></li></ul></li><li><a href="#t396.3 keepalived双机热备">6.3 keepalived双机热备</a></li><li><a href="#t406.3.1 安装keepalived">6.3.1 安装keepalived</a></li><li><a href="#t416.3.2 haproxy2">6.3.2 haproxy2</a></li></ul></li><li><a href="#t427. 布署Egg.js">7. 布署Egg.js</a><ul><li><a href="#t437.1 编写项目">7.1 编写项目</a></li><li><a href="#t447.2 部署项目">7.2 部署项目</a><ul><li><a href="#t457.2.1 package.json">7.2.1 package.json</a></li><li><a href="#t467.2.2 Dockerfile">7.2.2 Dockerfile</a></li><li><a href="#t477.2.3 上传服务器">7.2.3 上传服务器</a></li><li><a href="#t487.2.4 编译docker镜像">7.2.4 编译docker镜像</a></li><li><a href="#t497.2.4 启动docker容器">7.2.4 启动docker容器</a></li></ul></li></ul></li><li><a href="#t508. 布署nginx">8. 布署nginx</a><ul><li><a href="#t518.1 拉取官方的镜像">8.1 拉取官方的镜像</a></li><li><a href="#t528.2 启动nginx">8.2 启动nginx</a></li><li><a href="#t538.3 创建目录">8.3 创建目录</a></li><li><a href="#t548.4 拷贝配置文件">8.4 拷贝配置文件</a></li><li><a href="#t558.5 部署">8.5 部署</a></li></ul></li><li><a href="#t569. Ant Design Pro">9. Ant Design Pro</a></li><li><a href="#t5710.mongodb集群">10.mongodb集群</a><ul><li><a href="#t5810.1 容器">10.1 容器</a></li><li><a href="#t5910.2 拉取镜像">10.2 拉取镜像</a></li><li><a href="#t6010.2 集群配置文件">10.2 集群配置文件</a><ul><li><a href="#t6110.2.1 Config-Server 配置文件">10.2.1 Config-Server 配置文件</a></li><li><a href="#t6210.2.3 Shard-Server 配置文件">10.2.3 Shard-Server 配置文件</a></li><li><a href="#t6310.2.4 Mongos 配置文件">10.2.4 Mongos 配置文件</a></li></ul></li><li><a href="#t6410.3 启动Docker容器">10.3 启动Docker容器</a><ul><li><a href="#t6510.3.1 启动3个Config-Server容器">10.3.1 启动3个Config-Server容器</a></li><li><a href="#t6610.3.2 启动3*3个Shard-Server容器">10.3.2 启动3*3个Shard-Server容器</a><ul><li><a href="#t6710.3.2.1 启动第一个分片 - shard1">10.3.2.1 启动第一个分片 - shard1</a></li><li><a href="#t6810.3.2.2 启动第二个分片 - shard2">10.3.2.2 启动第二个分片 - shard2</a></li><li><a href="#t6910.3.2.3 启动第三个分片 - shard3">10.3.2.3 启动第三个分片 - shard3</a></li><li><a href="#t7010.3.2.4 启动3个mongos服务器">10.3.2.4 启动3个mongos服务器</a></li></ul></li></ul></li><li><a href="#t7110.4 写入数据">10.4 写入数据</a></li></ul></li><li><a href="#t7211. redis集群">11. redis集群</a><ul><li><a href="#t7311.1 RedisCluster">11.1 RedisCluster</a></li><li><a href="#t7411.2 主从同步">11.2 主从同步</a></li><li><a href="#t7511.3 实操">11.3 实操</a><ul><li><a href="#t7611.3.1 安装Redis镜像">11.3.1 安装Redis镜像</a></li><li><a href="#t7711.3.2 启动容器">11.3.2 启动容器</a></li><li><a href="#t7811.3.3 配置文件">11.3.3 配置文件</a></li><li><a href="#t7911.3.4 配置集群">11.3.4 配置集群</a></li></ul></li></ul></li><li><a href="#t8012.数据库备份">12.数据库备份</a><ul><li><a href="#t8112.1 mysql">12.1 mysql</a></li><li><a href="#t8212.2 mongodb备份">12.2 mongodb备份</a></li></ul></li><li><a href="#t8313.监控主机状态">13.监控主机状态</a><ul><li><a href="#t8413.1 定义一个颜色输出字符串函数">13.1 定义一个颜色输出字符串函数</a></li><li><a href="#t8513.2. 批量创建用户">13.2. 批量创建用户</a></li><li><a href="#t8613.3. 检查主机存活状态">13.3. 检查主机存活状态</a><ul><li><a href="#t8713.3.1 将错误IP放到数组中里面判断是否ping失败三次">13.3.1 将错误IP放到数组中里面判断是否ping失败三次</a></li><li><a href="#t8813.4 获得CPU利用率">13.4 获得CPU利用率</a></li><li><a href="#t8913.5 监控网络流量">13.5 监控网络流量</a></li><li><a href="#t9013.6 监控网站状态">13.6 监控网站状态</a></li><li><a href="#t9113.7 监控nginx状态">13.7 监控nginx状态</a></li><li><a href="#t9213.8 监控mysql状态">13.8 监控mysql状态</a></li></ul></li></ul></li><li><a href="#t9312.参考">12.参考</a><ul><li><a href="#t9412. 网址">12. 网址</a></li><li><a href="#t9512.配置node.js">12.配置node.js</a><ul><li><a href="#t9612.1 安装nvm">12.1 安装nvm</a></li></ul></li></ul></li></ul>
+    </div>
+    <div class="content markdown-body">
+        <h2 id="t01. &#x51C6;&#x5907;&#x5DE5;&#x4F5C;">1. &#x51C6;&#x5907;&#x5DE5;&#x4F5C; <a href="#t01. &#x51C6;&#x5907;&#x5DE5;&#x4F5C;"> # </a></h2>
+<ul>
+<li>&#x5EFA;&#x8BAE;&#x4ECE;<a href="https://dc.console.aliyun.com/next/index">&#x963F;&#x91CC;&#x4E91;</a>&#x8D2D;&#x4E70;&#x57DF;&#x540D;</li>
+<li>&#x5EFA;&#x8BAE;&#x4ECE;<a href="https://ecs.console.aliyun.com">&#x963F;&#x91CC;&#x4E91;</a>&#x8D2D;&#x4E70;ECS&#x670D;&#x52A1;&#x5668;</li>
+<li>&#x5EFA;&#x8BAE;&#x4ECE;<a href="https://bsn.console.aliyun.com">&#x963F;&#x91CC;&#x4E91;</a>&#x8FDB;&#x884C;&#x5907;&#x6848;</li>
+</ul>
+<h2 id="t12. &#x914D;&#x7F6E;ECS&#x670D;&#x52A1;&#x5668;">2. &#x914D;&#x7F6E;ECS&#x670D;&#x52A1;&#x5668; <a href="#t12. &#x914D;&#x7F6E;ECS&#x670D;&#x52A1;&#x5668;"> # </a></h2>
+<ul>
+<li>&#x914D;&#x7F6E;root&#x5BC6;&#x7801;</li>
+<li>&#x914D;&#x7F6E;&#x5B89;&#x5168;&#x89C4;&#x5219;</li>
+</ul>
+<h2 id="t23. &#x767B;&#x5F55;&#x670D;&#x52A1;&#x5668;">3. &#x767B;&#x5F55;&#x670D;&#x52A1;&#x5668; <a href="#t23. &#x767B;&#x5F55;&#x670D;&#x52A1;&#x5668;"> # </a></h2>
+<h3 id="t33.1 &#x547D;&#x4EE4;&#x884C;&#x767B;&#x5F55;">3.1 &#x547D;&#x4EE4;&#x884C;&#x767B;&#x5F55; <a href="#t33.1 &#x547D;&#x4EE4;&#x884C;&#x767B;&#x5F55;"> # </a></h3>
+<pre><code class="lang-js">ssh root@<span class="hljs-number">47.104</span><span class="hljs-number">.191</span><span class="hljs-number">.1</span>
+</code></pre>
+<ul>
+<li>&#x5F53;&#x672C;&#x673A;&#x83B7;&#x5F97;&#x670D;&#x52A1;&#x5668;&#x516C;&#x94A5;&#x6307;&#x7EB9;&#xFF0C;&#x4F46;&#x662F;&#x65E0;&#x6CD5;&#x786E;&#x8BA4;&#x670D;&#x52A1;&#x5668;&#x5B89;&#x5168;&#x6027;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x63D0;&#x793A;&#x4F60;&#x662F;&#x5426;&#x8981;&#x7EE7;&#x7EED;&#x8FDE;&#x63A5;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/2.ssh.png" alt="2.ssh.png"></p>
+<h3 id="t43.2 SSH&#x767B;&#x5F55;">3.2 SSH&#x767B;&#x5F55; <a href="#t43.2 SSH&#x767B;&#x5F55;"> # </a></h3>
+<h4 id="t53.2.1  &#x65B0;&#x5EFA;&#x7528;&#x6237;">3.2.1  &#x65B0;&#x5EFA;&#x7528;&#x6237; <a href="#t53.2.1  &#x65B0;&#x5EFA;&#x7528;&#x6237;"> # </a></h4>
+<pre><code class="lang-js">adduser devops
+</code></pre>
+<h4 id="t63.2.1  &#x6388;&#x4E0E;sudo&#x6743;&#x9650;">3.2.1  &#x6388;&#x4E0E;sudo&#x6743;&#x9650; <a href="#t63.2.1  &#x6388;&#x4E0E;sudo&#x6743;&#x9650;"> # </a></h4>
+<pre><code class="lang-js">visudo
+devops ALL=(ALL:ALL) ALL  
+</code></pre>
+<ul>
+<li>1 ALL &#x4E3A;&#x5141;&#x8BB8;&#x4F7F;&#x7528;<code>sudo</code>&#x547D;&#x4EE4;&#x7684;&#x4E3B;&#x673A;</li>
+<li>2 ALL devops&#x53EF;&#x4EE5;&#x4EE5;&#x4EFB;&#x610F;&#x7528;&#x6237;&#x8EAB;&#x4EFD;&#x6765;&#x6267;&#x884C;&#x547D;&#x4EE4;</li>
+<li>3 ALL devops&#x53EF;&#x4EE5;&#x4EE5;&#x4EFB;&#x610F;&#x7EC4;&#x8EAB;&#x4EFD;&#x6765;&#x6267;&#x884C;&#x547D;&#x4EE4;</li>
+<li>4 ALL devops&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x4EFB;&#x610F;&#x547D;&#x4EE4;</li>
+</ul>
+<p>&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x8868;&#x793A;&#x5141;&#x8BB8;test&#x7528;&#x6237;&#x4ECE;&#x4EFB;&#x4F55;&#x4E3B;&#x673A;&#x767B;&#x5F55;&#xFF0C;&#x4EE5;root&#x7684;&#x8EAB;&#x4EFD;&#x6267;&#x884C;<code>/usr/sbin/useradd</code>&#x547D;&#x4EE4;</p>
+<pre><code class="lang-js">test ALL=(root) /usr/sbin/useradd
+</code></pre>
+<h3 id="t73.3 &#x914D;&#x7F6E;&#x65E0;&#x5BC6;&#x7801;&#x767B;&#x5F55;">3.3 &#x914D;&#x7F6E;&#x65E0;&#x5BC6;&#x7801;&#x767B;&#x5F55; <a href="#t73.3 &#x914D;&#x7F6E;&#x65E0;&#x5BC6;&#x7801;&#x767B;&#x5F55;"> # </a></h3>
+<h4 id="t83.3.1 &#x5BA2;&#x6237;&#x7AEF;">3.3.1 &#x5BA2;&#x6237;&#x7AEF; <a href="#t83.3.1 &#x5BA2;&#x6237;&#x7AEF;"> # </a></h4>
+<pre><code class="lang-js">ssh-keygen -t rsa -b <span class="hljs-number">4096</span> -C <span class="hljs-string">&quot;83687401@qq.com&quot;</span>
+cat .ssh/id_rsa.pub
+</code></pre>
+<h4 id="t93.3.2 &#x670D;&#x52A1;&#x5668;&#x7AEF;">3.3.2 &#x670D;&#x52A1;&#x5668;&#x7AEF; <a href="#t93.3.2 &#x670D;&#x52A1;&#x5668;&#x7AEF;"> # </a></h4>
+<pre><code class="lang-js">ssh-keygen -t rsa -b 4096 -C &quot;83687401@qq.com&quot;
+vi ~/.ssh/authorized_keys
+chmod 644 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+</code></pre>
+<h3 id="t103.4  &#x4FEE;&#x6539;SSH&#x7AEF;&#x53E3;">3.4  &#x4FEE;&#x6539;SSH&#x7AEF;&#x53E3; <a href="#t103.4  &#x4FEE;&#x6539;SSH&#x7AEF;&#x53E3;"> # </a></h3>
+<p>/etc/ssh/sshd_config</p>
+<pre><code class="lang-js">Port <span class="hljs-number">22222</span>
+</code></pre>
+<pre><code class="lang-js">systemctl restart sshd.service
+</code></pre>
+<p><img src="http://img.zhufengpeixun.cn/outaddress.png" alt="outaddress"></p>
+<ul>
+<li>&#x51FA;&#x65B9;&#x5411;: &#x662F;&#x6307;ECS&#x5B9E;&#x4F8B;&#x8BBF;&#x95EE;&#x5185;&#x7F51;&#x4E2D;&#x5176;&#x5B83;&#x5B9E;&#x4F8B;&#x6216;&#x8005;&#x516C;&#x7F51;&#x7684;&#x8D44;&#x6E90;</li>
+<li>&#x5165;&#x65B9;&#x5411;: &#x662F;&#x6307;&#x5185;&#x7F51;&#x4E2D;&#x7684;&#x5176;&#x5B83;ECS&#x5B9E;&#x4F8B; &#x6216;&#x516C;&#x7F51;&#x4E0A;&#x7684;&#x8D44;&#x6E90;&#x8BBF;&#x95EE;ECS&#x5B9E;&#x4F8B;</li>
+</ul>
+<h2 id="t114. docker">4. docker <a href="#t114. docker"> # </a></h2>
+<h3 id="t124.1 &#x4E3A;&#x4EC0;&#x4E48;&#x4F7F;&#x7528;docker?">4.1 &#x4E3A;&#x4EC0;&#x4E48;&#x4F7F;&#x7528;docker? <a href="#t124.1 &#x4E3A;&#x4EC0;&#x4E48;&#x4F7F;&#x7528;docker?"> # </a></h3>
+<ul>
+<li>&#x5883;&#x90E8;&#x7F72;&#x662F;&#x6240;&#x6709;&#x56E2;&#x961F;&#x90FD;&#x5FC5;&#x987B;&#x9762;&#x5BF9;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x968F;&#x7740;&#x7CFB;&#x7EDF;&#x8D8A;&#x6765;&#x8D8A;&#x5927;&#xFF0C;&#x4F9D;&#x8D56;&#x7684;&#x670D;&#x52A1;&#x4E5F;&#x8D8A;&#x6765;&#x8D8A;&#x591A;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;Web&#x670D;&#x52A1;&#x5668; + MySql&#x6570;&#x636E;&#x5E93; + Redis&#x7F13;&#x5B58;&#x7B49;</li>
+<li>&#x4F9D;&#x8D56;&#x670D;&#x52A1;&#x5F88;&#x591A;&#xFF0C;&#x672C;&#x5730;&#x642D;&#x5EFA;&#x4E00;&#x5957;&#x73AF;&#x5883;&#x6210;&#x672C;&#x8D8A;&#x6765;&#x8D8A;&#x9AD8;&#xFF0C;&#x521D;&#x7EA7;&#x4EBA;&#x5458;&#x5F88;&#x96BE;&#x89E3;&#x51B3;&#x73AF;&#x5883;&#x90E8;&#x7F72;&#x4E2D;&#x7684;&#x4E00;&#x4E9B;&#x95EE;&#x9898;</li>
+<li>&#x670D;&#x52A1;&#x7684;&#x7248;&#x672C;&#x5DEE;&#x5F02;&#x53CA;OS&#x7684;&#x5DEE;&#x5F02;&#x90FD;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x7EBF;&#x4E0A;&#x73AF;&#x5883;BUG&#xFF0C;&#x9879;&#x76EE;&#x5F15;&#x5165;&#x65B0;&#x7684;&#x670D;&#x52A1;&#x65F6;&#x6240;&#x6709;&#x4EBA;&#x7684;&#x73AF;&#x5883;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x914D;&#x7F6E;</li>
+<li>&#x4EFB;&#x4F55;&#x5B89;&#x88C5;&#x8FC7;Docker&#x7684;&#x673A;&#x5668;&#x90FD;&#x53EF;&#x4EE5;&#x8FD0;&#x884C;&#x8FD9;&#x4E2A;&#x5BB9;&#x5668;&#x53EF;&#x4EE5;&#x83B7;&#x5F97;&#x540C;&#x6837;&#x7684;&#x7ED3;&#x679C;,&#x4ECE;&#x800C;&#x5B8C;&#x5168;&#x6D88;&#x9664;&#x4E86;&#x4E0D;&#x540C;&#x73AF;&#x5883;&#xFF0C;&#x4E0D;&#x540C;&#x7248;&#x672C;&#x53EF;&#x80FD;&#x5F15;&#x8D77;&#x7684;&#x5404;&#x79CD;&#x95EE;&#x9898;</li>
+</ul>
+<h3 id="t134.2 docker&#x4E2D;&#x7684;&#x6982;&#x5FF5;">4.2 docker&#x4E2D;&#x7684;&#x6982;&#x5FF5; <a href="#t134.2 docker&#x4E2D;&#x7684;&#x6982;&#x5FF5;"> # </a></h3>
+<ul>
+<li>Docker&#x6709;&#x4E09;&#x4E2A;&#x57FA;&#x672C;&#x6982;&#x5FF5;&#xFF1A;&#x955C;&#x50CF;(image),&#x5BB9;&#x5668;(container),&#x4ED3;&#x5E93;(repository)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x6982;&#x5FF5;</th>
+<th style="text-align:left">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x955C;&#x50CF;(image)</td>
+<td style="text-align:left">&#x955C;&#x50CF;&#x4E2D;&#x5305;&#x542B;&#x6709;&#x9700;&#x8981;&#x8FD0;&#x884C;&#x7684;&#x6587;&#x4EF6;&#x3002;&#x955C;&#x50CF;&#x7528;&#x6765;&#x521B;&#x5EFA;container&#xFF0C;&#x4E00;&#x4E2A;&#x955C;&#x50CF;&#x53EF;&#x4EE5;&#x8FD0;&#x884C;&#x591A;&#x4E2A;container&#xFF1B;&#x955C;&#x50CF;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;Dockerfile&#x521B;&#x5EFA;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4ECE;Docker hub/registry&#x4E0A;&#x4E0B;&#x8F7D;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x5BB9;&#x5668;(container)</td>
+<td style="text-align:left">&#x5BB9;&#x5668;&#x662F;Docker&#x7684;&#x8FD0;&#x884C;&#x7EC4;&#x4EF6;&#xFF0C;&#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x955C;&#x50CF;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#xFF0C;&#x5BB9;&#x5668;&#x662F;&#x4E00;&#x4E2A;&#x9694;&#x79BB;&#x73AF;&#x5883;&#xFF0C;&#x591A;&#x4E2A;&#x5BB9;&#x5668;&#x4E4B;&#x95F4;&#x4E0D;&#x4F1A;&#x76F8;&#x4E92;&#x5F71;&#x54CD;&#xFF0C;&#x4FDD;&#x8BC1;&#x5BB9;&#x5668;&#x4E2D;&#x7684;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x5728;&#x4E00;&#x4E2A;&#x76F8;&#x5BF9;&#x5B89;&#x5168;&#x7684;&#x73AF;&#x5883;&#x4E2D;</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x4ED3;&#x5E93;(repository)</td>
+<td style="text-align:left">&#x5171;&#x4EAB;&#x548C;&#x7BA1;&#x7406;Docker&#x955C;&#x50CF;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x4E0A;&#x4F20;&#x6216;&#x8005;&#x4E0B;&#x8F7D;&#x4E0A;&#x9762;&#x7684;&#x955C;&#x50CF;&#xFF0C;&#x5B98;&#x65B9;&#x5730;&#x5740;&#x4E3A; registry.hub.docker.com/ &#xFF08;&#x7C7B;&#x4F3C;&#x4E8E;github&#x5BF9;&#x6E90;&#x4EE3;&#x7801;&#x7684;&#x7BA1;&#x7406;&#xFF09;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x642D;&#x5EFA;&#x81EA;&#x5DF1;&#x79C1;&#x6709;&#x7684;Docker registry</td>
+</tr>
+</tbody>
+</table>
+<p><img src="http://img.zhufengpeixun.cn/docker-arch.jpg" alt="docker-arch"></p>
+<h3 id="t144.3 &#x5E38;&#x89C1;docker&#x547D;&#x4EE4;">4.3 &#x5E38;&#x89C1;docker&#x547D;&#x4EE4; <a href="#t144.3 &#x5E38;&#x89C1;docker&#x547D;&#x4EE4;"> # </a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x6982;&#x5FF5;</th>
+<th style="text-align:left">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x62C9;&#x53D6;&#x955C;&#x50CF;</td>
+<td style="text-align:left">docker pull centos</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x521B;&#x5EFA;&#x65B0;&#x5BB9;&#x5668;&#x5E76;&#x8FD0;&#x884C;</td>
+<td style="text-align:left">docker run --name mynginx -d nginx:latest</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x542F;&#x52A8;&#x5BB9;&#x5668;</td>
+<td style="text-align:left">docker start container_name/container_id</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x505C;&#x6B62;&#x5BB9;&#x5668;</td>
+<td style="text-align:left">docker stop container_name/container_id</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x91CD;&#x542F;&#x5BB9;&#x5668;</td>
+<td style="text-align:left">docker restart container_name/container_id</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x5728;&#x5BB9;&#x5668;&#x4E2D;&#x5F00;&#x542F;&#x4EA4;&#x4E92;&#x7EC8;&#x7AEF;</td>
+<td style="text-align:left">docker exec -i -t container_id /bin/bash</td>
+</tr>
+<tr>
+<td style="text-align:left">&#x4F7F;&#x7528;&#x5F53;&#x524D;&#x76EE;&#x5F55;Dockerfile&#x521B;&#x5EFA;&#x955C;&#x50CF;,&#x6807;&#x7B7E;&#x4E3A;xxx:v1</td>
+<td style="text-align:left">docker build -t xxx:v1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t154.4 &#x5B89;&#x88C5;docker">4.4 &#x5B89;&#x88C5;docker <a href="#t154.4 &#x5B89;&#x88C5;docker"> # </a></h3>
+<ul>
+<li>docker&#x5206;&#x4E3A;&#x4F01;&#x4E1A;&#x7248;(EE)&#x548C;&#x793E;&#x533A;&#x7248;(CE)</li>
+</ul>
+<pre><code class="lang-js">$ yum install -y yum-utils   device-mapper-persistent-data   lvm2
+$ yum-config-manager     --add-repo     https:<span class="hljs-comment">//download.docker.com/linux/centos/docker-ce.repo</span>
+$ yum install -y docker-ce docker-ce-cli containerd.io
+</code></pre>
+<h3 id="t164.5 &#x542F;&#x52A8;docker">4.5 &#x542F;&#x52A8;docker <a href="#t164.5 &#x542F;&#x52A8;docker"> # </a></h3>
+<pre><code class="lang-js">$ systemctl start docker
+</code></pre>
+<h3 id="t174.6 &#x67E5;&#x770B;docker&#x7248;&#x672C;">4.6 &#x67E5;&#x770B;docker&#x7248;&#x672C; <a href="#t174.6 &#x67E5;&#x770B;docker&#x7248;&#x672C;"> # </a></h3>
+<pre><code class="lang-js">$ docker version
+$ docker info
+</code></pre>
+<h3 id="t184.7 docker-compose">4.7 docker-compose <a href="#t184.7 docker-compose"> # </a></h3>
+<ul>
+<li>&#x5B9E;&#x9645;&#x9879;&#x76EE;&#x4E0D;&#x53EF;&#x80FD;&#x53EA;&#x5355;&#x5355;&#x4F9D;&#x8D56;&#x4E8E;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#xFF0C;&#x4F8B;&#x5982;&#x4E00;&#x4E2A;&#x5E38;&#x89C1;&#x7684;Web&#x9879;&#x76EE;&#x53EF;&#x80FD;&#x4F9D;&#x8D56;&#x4E8E;: &#x9759;&#x6001;&#x6587;&#x4EF6;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5E94;&#x7528;&#x670D;&#x52A1;&#x5668;&#xFF0C;Mysql&#x6570;&#x636E;&#x5E93;&#x7B49;</li>
+<li>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5206;&#x522B;&#x542F;&#x52A8;&#x5355;&#x4E2A;&#x955C;&#x50CF;&#xFF0C;&#x5E76;&#x628A;&#x955C;&#x50CF;&#x7ED1;&#x5B9A;&#x5230;&#x672C;&#x5730;&#x5BF9;&#x5E94;&#x7AEF;&#x53E3;&#x7684;&#x5F62;&#x5F0F;&#x8FDB;&#x884C;&#x90E8;&#x7F72;&#xFF0C;&#x8FBE;&#x5230;&#x5BB9;&#x5668;&#x53EF;&#x901A;&#x4FE1;&#x7684;&#x76EE;&#x7684;</li>
+<li>&#x4F46;&#x662F;&#x4E3A;&#x4E86;&#x66F4;&#x65B9;&#x4FBF;&#x7684;&#x7BA1;&#x7406;&#x591A;&#x5BB9;&#x5668;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x5B98;&#x65B9;&#x63D0;&#x4F9B;&#x4E86;docker-compose&#x7684;&#x65B9;&#x5F0F;</li>
+<li>docker-compose&#x662F;Docker&#x7684;&#x4E00;&#x79CD;&#x7F16;&#x6392;&#x670D;&#x52A1;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x5728; Docker &#x4E0A;&#x5B9A;&#x4E49;&#x5E76;&#x8FD0;&#x884C;&#x590D;&#x6742;&#x5E94;&#x7528;&#x7684;&#x5DE5;&#x5177;&#xFF0C;&#x53EF;&#x4EE5;&#x8BA9;&#x7528;&#x6237;&#x5728;&#x96C6;&#x7FA4;&#x4E2D;&#x90E8;&#x7F72;&#x5206;&#x5E03;&#x5F0F;&#x5E94;&#x7528;</li>
+<li>&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#x53EF;&#x4EE5;&#x7531;&#x591A;&#x4E2A;&#x670D;&#x52A1;&#xFF08;&#x5BB9;&#x5668;&#xFF09;&#x5173;&#x8054;&#x800C;&#x6210;&#xFF0C;compose &#x9762;&#x5411;&#x9879;&#x76EE;&#x8FDB;&#x884C;&#x7BA1;&#x7406;&#xFF0C;&#x901A;&#x8FC7;&#x5B50;&#x547D;&#x4EE4;&#x5BF9;&#x9879;&#x76EE;&#x4E2D;&#x7684;&#x4E00;&#x7EC4;&#x5BB9;&#x5668;&#x8FDB;&#x884C;&#x4FBF;&#x6377;&#x5730;&#x751F;&#x547D;&#x5468;&#x671F;&#x7BA1;&#x7406;</li>
+<li>compose&#x4E2D;&#x6709;&#x4E24;&#x4E2A;&#x91CD;&#x8981;&#x7684;&#x6982;&#x5FF5;<ul>
+<li>&#x670D;&#x52A1; (service)&#xFF1A;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x7684;&#x5BB9;&#x5668;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x53EF;&#x4EE5;&#x5305;&#x62EC;&#x82E5;&#x5E72;&#x8FD0;&#x884C;&#x76F8;&#x540C;&#x955C;&#x50CF;&#x7684;&#x5BB9;&#x5668;&#x5B9E;&#x4F8B;</li>
+<li>&#x9879;&#x76EE; (project)&#xFF1A;&#x7531;&#x4E00;&#x7EC4;&#x5173;&#x8054;&#x7684;&#x5E94;&#x7528;&#x5BB9;&#x5668;&#x7EC4;&#x6210;&#x7684;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x4E1A;&#x52A1;&#x5355;&#x5143;&#xFF0C;&#x5728;docker-compose.yml &#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-js">curl -L <span class="hljs-string">&quot;https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)&quot;</span> -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+docker-compose --version
+</code></pre>
+<h3 id="t194.8 &#x963F;&#x91CC;&#x4E91;&#x52A0;&#x901F;">4.8 &#x963F;&#x91CC;&#x4E91;&#x52A0;&#x901F; <a href="#t194.8 &#x963F;&#x91CC;&#x4E91;&#x52A0;&#x901F;"> # </a></h3>
+<pre><code class="lang-js">sudo mkdir -p /etc/docker
+sudo tee /etc/docker/daemon.json &lt;&lt;-&apos;EOF&apos;
+{
+  &quot;registry-mirrors&quot;: [&quot;https://fwvjnv59.mirror.aliyuncs.com&quot;]
+}
+EOF
+# &#x91CD;&#x8F7D;&#x6240;&#x6709;&#x4FEE;&#x6539;&#x8FC7;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+</code></pre>
+<h2 id="t205.&#x6574;&#x4F53;&#x67B6;&#x6784;">5.&#x6574;&#x4F53;&#x67B6;&#x6784; <a href="#t205.&#x6574;&#x4F53;&#x67B6;&#x6784;"> # </a></h2>
+<h3 id="t215.1 &#x524D;&#x7AEF;&#x67B6;&#x6784;">5.1 &#x524D;&#x7AEF;&#x67B6;&#x6784; <a href="#t215.1 &#x524D;&#x7AEF;&#x67B6;&#x6784;"> # </a></h3>
+<ul>
+<li>&#x7528;&#x6237;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x91CC;&#x8F93;&#x5165;&#x524D;&#x7AEF;&#x9879;&#x76EE;&#x7684;&#x865A;&#x62DF;IP&#x5730;&#x5740;</li>
+<li>&#x8FD9;&#x4E2A;&#x865A;&#x62DF;IP&#x53EF;&#x80FD;&#x4F1A;&#x88AB;&#x67D0;&#x4E2A;keepalived&#x5BB9;&#x5668;&#x62A2;&#x5360;</li>
+<li>&#x8FD9;&#x4E2A;keepalived&#x5BB9;&#x5668;&#x4F1A;&#x8BA9;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x7684;nginx&#x670D;&#x52A1;&#x5668;&#x8BF7;&#x6C42;&#x524D;&#x7AEF;&#x9879;&#x76EE;&#x7684;nginx&#x96C6;&#x7FA4;</li>
+<li>&#x524D;&#x7AEF;&#x9879;&#x76EE;&#x8C03;&#x7528;&#x7684;&#x63A5;&#x53E3;&#x662F;&#x540E;&#x7AEF;&#x9879;&#x76EE;&#x7684;&#x865A;&#x62DF;IP</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/frontdeploy.jpg" alt="frontdeploy"></p>
+<h3 id="t225.2 &#x540E;&#x7AEF;&#x67B6;&#x6784;">5.2 &#x540E;&#x7AEF;&#x67B6;&#x6784; <a href="#t225.2 &#x540E;&#x7AEF;&#x67B6;&#x6784;"> # </a></h3>
+<ul>
+<li>&#x524D;&#x7AEF;&#x9879;&#x76EE;&#x4F1A;&#x8BBF;&#x95EE;&#x8FD9;&#x4E2A;&#x540E;&#x7AEF;&#x7684;&#x865A;&#x62DF;IP</li>
+<li>&#x8FD9;&#x4E2A;&#x865A;&#x62DF;IP&#x53EF;&#x80FD;&#x4F1A;&#x88AB;&#x67D0;&#x4E2A;keepalived&#x5BB9;&#x5668;&#x62A2;&#x5360;</li>
+<li>&#x8FD9;&#x4E2A;&#x8BF7;&#x6C42;&#x4F1A;&#x8F6C;&#x53D1;&#x5230;keepalived&#x5BB9;&#x5668;&#x4E0A;&#x7684;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x8282;&#x70B9;&#x4E0A;</li>
+<li>&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x8282;&#x70B9;&#x4F1A;&#x628A;&#x8BF7;&#x6C42;&#x8F6C;&#x53D1;&#x7684;node&#x96C6;&#x7FA4;&#x7684;&#x67D0;&#x4E2A;&#x8282;&#x70B9;&#x4E0A;</li>
+<li>node&#x670D;&#x52A1;&#x5668;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x8BBF;&#x95EE;mysql&#x3001;mongodb&#x3001;redis&#x670D;&#x52A1;&#x5668;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/backdeployee.jpg" alt="backdeployee"></p>
+<h3 id="t235.3 mysql&#x6570;&#x636E;&#x5E93;&#x96C6;&#x7FA4;">5.3 mysql&#x6570;&#x636E;&#x5E93;&#x96C6;&#x7FA4; <a href="#t235.3 mysql&#x6570;&#x636E;&#x5E93;&#x96C6;&#x7FA4;"> # </a></h3>
+<ul>
+<li>&#x6570;&#x636E;&#x5E93;&#x7684;&#x865A;&#x62DF;IP&#x662F;192.168.100.200,web&#x670D;&#x52A1;&#x5668;&#x5982;&#x679C;&#x60F3;&#x8BBF;&#x95EE;&#x6570;&#x636E;&#x5E93;&#x9700;&#x8981;&#x8FDE;&#x63A5;&#x8FD9;&#x4E2A;IP</li>
+<li>&#x865A;&#x62DF;IP&#x6536;&#x5230;&#x8BF7;&#x6C42;&#x540E;&#x4F1A;&#x628A;&#x8BF7;&#x6C42;&#x8F6C;&#x4EA4;&#x7ED9;docker&#x5BB9;&#x5668;&#x5185;&#x7684;&#x4E00;&#x4E2A;&#x865A;&#x62DF;IP192.168.200.200&#x4E0A;</li>
+<li>Docker&#x5185;&#x7684;&#x865A;&#x62DF;IP&#x4E0D;&#x80FD;&#x88AB;&#x5916;&#x7F51;&#x4F7F;&#x7528;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x501F;&#x52A9;&#x5BBF;&#x4E3B;&#x673A;keepalived&#x6620;&#x5C04;&#x6210;&#x5916;&#x7F51;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x7684;&#x865A;&#x62DF;IP</li>
+<li>&#x6B64;&#x5904;&#x914D;&#x7F6E;&#x4E86;&#x53CC;&#x673A;&#x70ED;&#x5907;&#x65B9;&#x6848;&#xFF0C;&#x5982;&#x679C;&#x7B2C;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#x62A2;&#x5360;&#x4E86;&#x8FD9;&#x4E2A;&#x865A;&#x62DF;IP192.168.100.200</li>
+<li>&#x8FD9;&#x4E2A;&#x865A;&#x62DF;IP&#x4F1A;&#x628A;&#x8BF7;&#x6C42;&#x8F6C;&#x53D1;&#x7ED9;&#x6B64;&#x5BB9;&#x5668;&#x5185;&#x7684;haproxy&#x8282;&#x70B9;&#x4E0A;</li>
+<li>haproxy&#x8282;&#x70B9;&#x4F1A;&#x628A;&#x8BF7;&#x6C42;&#x8F6C;&#x53D1;&#x7ED9;MYSQL&#x6570;&#x636E;&#x5E93;&#x96C6;&#x7FA4;&#x4E2D;&#x7684;&#x67D0;&#x4E2A;&#x8282;&#x70B9;&#x4E0A;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/mysqlcluster3.jpg" alt="mysqlcluster2"></p>
+<h3 id="t245.4 mongodb&#x6570;&#x636E;&#x5E93;&#x96C6;&#x7FA4;">5.4 mongodb&#x6570;&#x636E;&#x5E93;&#x96C6;&#x7FA4; <a href="#t245.4 mongodb&#x6570;&#x636E;&#x5E93;&#x96C6;&#x7FA4;"> # </a></h3>
+<h4 id="t255.4.1 &#x4E3B;&#x4ECE;&#x590D;&#x5236;">5.4.1 &#x4E3B;&#x4ECE;&#x590D;&#x5236; <a href="#t255.4.1 &#x4E3B;&#x4ECE;&#x590D;&#x5236;"> # </a></h4>
+<ul>
+<li>&#x4E3B;&#x4ECE;&#x590D;&#x5236;&#x662F;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x6570;&#x636E;&#x5E93;&#x540C;&#x6B65;&#x5907;&#x4EFD;&#x7684;&#x96C6;&#x7FA4;&#x6280;&#x672F;</li>
+<li>&#x5728;&#x6570;&#x636E;&#x5E93;&#x96C6;&#x7FA4;&#x4E2D;&#x8981;&#x660E;&#x786E;&#x77E5;&#x9053;&#x8C01;&#x662F;&#x4E3B;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x4E3B;&#x670D;&#x52A1;&#x5668;&#x53EA;&#x6709;&#x4E00;&#x53F0;</li>
+<li>&#x4ECE;&#x670D;&#x52A1;&#x5668;&#x8981;&#x77E5;&#x9053;&#x81EA;&#x5DF1;&#x7684;&#x6570;&#x636E;&#x6E90;&#x4E5F;&#x5C31;&#x662F;&#x77E5;&#x9053;&#x81EA;&#x5DF1;&#x7684;&#x4E3B;&#x670D;&#x52A1;&#x5668;&#x662F;&#x8C01;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/masterslave.jpg" alt="masterslave"></p>
+<h4 id="t265.4.2 &#x526F;&#x672C;&#x96C6;">5.4.2 &#x526F;&#x672C;&#x96C6; <a href="#t265.4.2 &#x526F;&#x672C;&#x96C6;"> # </a></h4>
+<ul>
+<li>MongoDB&#x590D;&#x5236;&#x662F;&#x5C06;&#x6570;&#x636E;&#x540C;&#x6B65;&#x5728;&#x591A;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#x7684;&#x8FC7;&#x7A0B;&#x3002;</li>
+<li>&#x590D;&#x5236;&#x63D0;&#x4F9B;&#x4E86;&#x6570;&#x636E;&#x7684;&#x5197;&#x4F59;&#x5907;&#x4EFD;&#xFF0C;&#x5E76;&#x5728;&#x591A;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x526F;&#x672C;&#xFF0C;&#x63D0;&#x9AD8;&#x4E86;&#x6570;&#x636E;&#x7684;&#x53EF;&#x7528;&#x6027;&#xFF0C; &#x5E76;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x6570;&#x636E;&#x7684;&#x5B89;&#x5168;&#x6027;&#x3002;</li>
+<li>&#x590D;&#x5236;&#x8FD8;&#x5141;&#x8BB8;&#x60A8;&#x4ECE;&#x786C;&#x4EF6;&#x6545;&#x969C;&#x548C;&#x670D;&#x52A1;&#x4E2D;&#x65AD;&#x4E2D;&#x6062;&#x590D;&#x6570;&#x636E;&#x3002;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/replication.png" alt="replication"></p>
+<h4 id="t275.4.3 &#x5206;&#x7247;">5.4.3 &#x5206;&#x7247; <a href="#t275.4.3 &#x5206;&#x7247;"> # </a></h4>
+<ul>
+<li>&#x5728;Mongodb&#x91CC;&#x9762;&#x5B58;&#x5728;&#x53E6;&#x4E00;&#x79CD;&#x96C6;&#x7FA4;&#xFF0C;&#x5C31;&#x662F;&#x5206;&#x7247;&#x6280;&#x672F;,&#x53EF;&#x4EE5;&#x6EE1;&#x8DB3;MongoDB&#x6570;&#x636E;&#x91CF;&#x5927;&#x91CF;&#x589E;&#x957F;&#x7684;&#x9700;&#x6C42;</li>
+<li>&#x5F53;MongoDB&#x5B58;&#x50A8;&#x6D77;&#x91CF;&#x7684;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x4E00;&#x53F0;&#x673A;&#x5668;&#x53EF;&#x80FD;&#x4E0D;&#x8DB3;&#x4EE5;&#x5B58;&#x50A8;&#x6570;&#x636E;&#xFF0C;&#x4E5F;&#x53EF;&#x80FD;&#x4E0D;&#x8DB3;&#x4EE5;&#x63D0;&#x4F9B;&#x53EF;&#x63A5;&#x53D7;&#x7684;&#x8BFB;&#x5199;&#x541E;&#x5410;&#x91CF;&#x3002;&#x8FD9;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5728;&#x591A;&#x53F0;&#x673A;&#x5668;&#x4E0A;&#x5206;&#x5272;&#x6570;&#x636E;&#xFF0C;&#x4F7F;&#x5F97;&#x6570;&#x636E;&#x5E93;&#x7CFB;&#x7EDF;&#x80FD;&#x5B58;&#x50A8;&#x548C;&#x5904;&#x7406;&#x66F4;&#x591A;&#x7684;&#x6570;&#x636E;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/sharding.png" alt="sharding"></p>
+<h3 id="t285.5 redis&#x6570;&#x636E;&#x5E93;&#x96C6;&#x7FA4;">5.5 redis&#x6570;&#x636E;&#x5E93;&#x96C6;&#x7FA4; <a href="#t285.5 redis&#x6570;&#x636E;&#x5E93;&#x96C6;&#x7FA4;"> # </a></h3>
+<ul>
+<li>Redis-Cluster&#x91C7;&#x7528;&#x65E0;&#x4E2D;&#x5FC3;&#x7ED3;&#x6784;&#xFF0C;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x4FDD;&#x5B58;&#x6570;&#x636E;&#x548C;&#x6574;&#x4E2A;&#x96C6;&#x7FA4;&#x72B6;&#x6001;,&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x90FD;&#x548C;&#x5176;&#x4ED6;&#x6240;&#x6709;&#x8282;&#x70B9;&#x8FDE;&#x63A5;</li>
+<li>&#x6240;&#x6709;&#x7684;redis&#x8282;&#x70B9;&#x5F7C;&#x6B64;&#x4E92;&#x8054;(PING-PONG&#x673A;&#x5236;),&#x5185;&#x90E8;&#x4F7F;&#x7528;&#x4E8C;&#x8FDB;&#x5236;&#x534F;&#x8BAE;&#x4F18;&#x5316;&#x4F20;&#x8F93;&#x901F;&#x5EA6;&#x548C;&#x5E26;&#x5BBD;</li>
+<li>&#x5BA2;&#x6237;&#x7AEF;&#x4E0E;redis&#x8282;&#x70B9;&#x76F4;&#x8FDE;,&#x4E0D;&#x9700;&#x8981;&#x4E2D;&#x95F4;proxy&#x5C42;.&#x5BA2;&#x6237;&#x7AEF;&#x4E0D;&#x9700;&#x8981;&#x8FDE;&#x63A5;&#x96C6;&#x7FA4;&#x6240;&#x6709;&#x8282;&#x70B9;,&#x8FDE;&#x63A5;&#x96C6;&#x7FA4;&#x4E2D;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#x53EF;&#x7528;&#x8282;&#x70B9;&#x5373;&#x53EF;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/redisconfig.jpg" alt="redisconfig"></p>
+<h2 id="t296.mysql&#x96C6;&#x7FA4;">6.mysql&#x96C6;&#x7FA4; <a href="#t296.mysql&#x96C6;&#x7FA4;"> # </a></h2>
+<ul>
+<li><a href="https://hub.docker.com/r/percona/percona-xtradb-cluster/">percona-xtradb-cluster</a></li>
+<li><a href="https://www.percona.com/doc/percona-xtradb-cluster/LATEST/install/docker.html">percona-xtradb-cluster&#x5B98;&#x65B9;&#x6587;&#x6863;</a></li>
+<li>PXC&#x7684;&#x6570;&#x636E;&#x662F;&#x5F3A;&#x4E00;&#x81F4;&#x6027;&#x7684;&#xFF0C;&#x8981;&#x4E48;&#x6240;&#x6709;&#x8282;&#x70B9;&#x90FD;&#x63D0;&#x4EA4;&#xFF0C;&#x8981;&#x4E48;&#x90FD;&#x4E0D;&#x63D0;&#x4EA4;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/pxccluster.jpg" alt="pxccluster"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x7AEF;&#x53E3;</th>
+<th style="text-align:left">&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">3306</td>
+<td style="text-align:left">MYSQL&#x670D;&#x52A1;&#x7AEF;&#x53E3;</td>
+</tr>
+<tr>
+<td style="text-align:left">4444</td>
+<td style="text-align:left">&#x8BF7;&#x6C42;&#x5168;&#x91CF;&#x540C;&#x6B65;(SST)&#x63A5;&#x53E3;</td>
+</tr>
+<tr>
+<td style="text-align:left">4567</td>
+<td style="text-align:left">&#x6570;&#x636E;&#x5E93;&#x8282;&#x70B9;&#x4E4B;&#x95F4;&#x7684;&#x901A;&#x4FE1;&#x63A5;&#x53E3;</td>
+</tr>
+<tr>
+<td style="text-align:left">4568</td>
+<td style="text-align:left">&#x8BF7;&#x6C42;&#x589E;&#x91CF;&#x540C;&#x6B65;(IST)&#x7AEF;&#x53E3;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t306.1 &#x5B89;&#x88C5;&#x96C6;&#x7FA4;">6.1 &#x5B89;&#x88C5;&#x96C6;&#x7FA4; <a href="#t306.1 &#x5B89;&#x88C5;&#x96C6;&#x7FA4;"> # </a></h3>
+<h4 id="t316.1.1 &#x4E0B;&#x8F7D;&#x955C;&#x50CF;">6.1.1 &#x4E0B;&#x8F7D;&#x955C;&#x50CF; <a href="#t316.1.1 &#x4E0B;&#x8F7D;&#x955C;&#x50CF;"> # </a></h4>
+<pre><code class="lang-js">docker pull percona/percona-xtradb-cluster:<span class="hljs-number">5.6</span>
+docker tag percona/percona-xtradb-cluster:<span class="hljs-number">5.6</span> pxc
+docker image rm percona/percona-xtradb-cluster:<span class="hljs-number">5.6</span>
+</code></pre>
+<h4 id="t326.1.2 &#x521B;&#x5EFA;&#x5185;&#x90E8;&#x7F51;&#x7EDC;">6.1.2 &#x521B;&#x5EFA;&#x5185;&#x90E8;&#x7F51;&#x7EDC; <a href="#t326.1.2 &#x521B;&#x5EFA;&#x5185;&#x90E8;&#x7F51;&#x7EDC;"> # </a></h4>
+<pre><code class="lang-js">docker network create --subnet=<span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.0</span>/<span class="hljs-number">24</span> znet 
+docker network inspect znet
+docker network rm znet
+</code></pre>
+<h4 id="t336.1.3 &#x521B;&#x5EFA;docker&#x5377;">6.1.3 &#x521B;&#x5EFA;docker&#x5377; <a href="#t336.1.3 &#x521B;&#x5EFA;docker&#x5377;"> # </a></h4>
+<pre><code class="lang-js">docker volume create --name v1
+docker volume create --name v2
+docker volume create --name v3
+</code></pre>
+<h4 id="t346.1.4 &#x521B;&#x5EFA;pxc&#x5BB9;&#x5668;">6.1.4 &#x521B;&#x5EFA;pxc&#x5BB9;&#x5668; <a href="#t346.1.4 &#x521B;&#x5EFA;pxc&#x5BB9;&#x5668;"> # </a></h4>
+<pre><code class="lang-js">docker run -d \
+-p <span class="hljs-number">3306</span>:<span class="hljs-number">3306</span> \
+-e MYSQL_ROOT_PASSWORD=<span class="hljs-number">123456</span> \
+-e CLUSTER_NAME=PXC \
+-e XTRABACKUP_PASSWORD=<span class="hljs-number">123456</span> \
+-v v1:<span class="hljs-regexp">/var/</span>lib/mysql \
+--privileged \
+--name=mysql1 \
+--net=znet \
+--ip <span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.2</span> \
+pxc
+
+docker exec -it mysql1 bash
+docker logs mysql1
+
+
+docker run -d \
+-p <span class="hljs-number">3307</span>:<span class="hljs-number">3306</span> \
+-e MYSQL_ROOT_PASSWORD=<span class="hljs-number">123456</span> \
+-e CLUSTER_NAME=PXC \
+-e XTRABACKUP_PASSWORD=<span class="hljs-number">123456</span> \
+-e CLUSTER_JOIN=mysql1 \
+-v v2:<span class="hljs-regexp">/var/</span>lib/mysql \
+--privileged \
+--name=mysql2 \
+--net=znet \
+--ip <span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.3</span> \
+pxc
+
+docker run -d \
+-p <span class="hljs-number">3308</span>:<span class="hljs-number">3306</span> \
+-e MYSQL_ROOT_PASSWORD=<span class="hljs-number">123456</span> \
+-e CLUSTER_NAME=PXC \
+-e XTRABACKUP_PASSWORD=<span class="hljs-number">123456</span> \
+-e CLUSTER_JOIN=mysql1 \
+-v v3:<span class="hljs-regexp">/var/</span>lib/mysql \
+--privileged \
+--name=mysql3 \
+--net=znet \
+--ip <span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.4</span> \
+pxc
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x53C2;&#x6570;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">-d</td>
+<td style="text-align:left">&#x670D;&#x52A1;&#x540E;&#x53F0;&#x8FD0;&#x884C;</td>
+</tr>
+<tr>
+<td style="text-align:left">-p</td>
+<td style="text-align:left">&#x6620;&#x5C04;&#x7AEF;&#x53E3;&#x53F7;</td>
+</tr>
+<tr>
+<td style="text-align:left">-e MYSQL_ROOT_PASSWORD=123456</td>
+<td style="text-align:left">&#x6307;&#x5B9A;&#x5BB9;&#x5668;&#x5185;&#x7684;&#x6570;&#x636E;&#x5E93;&#x7684;root&#x5BC6;&#x7801;</td>
+</tr>
+<tr>
+<td style="text-align:left">-e CLUSTER_NAME=PXC</td>
+<td style="text-align:left">&#x96C6;&#x7FA4;&#x7684;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td style="text-align:left">-e XTRABACKUP_PASSWORD=123456</td>
+<td style="text-align:left">&#x5907;&#x4EFD;&#x5BC6;&#x7801;</td>
+</tr>
+<tr>
+<td style="text-align:left">-v v1:/var/lib/mysql</td>
+<td style="text-align:left">&#x628A;&#x5BB9;&#x5668;&#x5185;&#x7684;/var/lib/mysql&#x76EE;&#x5F55;&#x6620;&#x5C04;&#x4E3A;&#x5BBF;&#x4E3B;&#x673A;&#x7684;&#x6570;&#x636E;&#x5377;</td>
+</tr>
+<tr>
+<td style="text-align:left">--privileged</td>
+<td style="text-align:left">&#x81EA;&#x52A8;&#x83B7;&#x53D6;&#x6743;&#x9650;</td>
+</tr>
+<tr>
+<td style="text-align:left">--name</td>
+<td style="text-align:left">&#x6307;&#x5B9A;&#x5BB9;&#x5668;&#x7684;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td style="text-align:left">--net</td>
+<td style="text-align:left">&#x6307;&#x5B9A;&#x52A0;&#x5165;&#x7684;&#x7F51;&#x7EDC;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t356.2 &#x8D1F;&#x8F7D;&#x5747;&#x8861;">6.2 &#x8D1F;&#x8F7D;&#x5747;&#x8861; <a href="#t356.2 &#x8D1F;&#x8F7D;&#x5747;&#x8861;"> # </a></h3>
+<ul>
+<li>&#x5355;&#x8282;&#x70B9;&#x5904;&#x7406;&#x6240;&#x6709;&#x8BF7;&#x6C42;&#x8D1F;&#x8F7D;&#x9AD8;&#xFF0C;&#x6027;&#x80FD;&#x5DEE;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x8981;&#x4F7F;&#x7528;&#x8D1F;&#x8F7D;&#x5747;&#x8861;</li>
+<li>&#x4F7F;&#x7528;Haproxy&#x505A;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#xFF0C;&#x8BF7;&#x6C42;&#x88AB;&#x5747;&#x5300;&#x5206;&#x53D1;&#x7ED9;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x5355;&#x8282;&#x70B9;&#x8D1F;&#x8F7D;&#x4F4E;&#xFF0C;&#x6027;&#x80FD;&#x597D;</li>
+<li><a href="https://zhangge/5125.html">Haproxy</a>&#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x8F6C;&#x53D1;&#x5668;</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/haproxymysql.jpg" alt="haproxymysql"></p>
+<h4 id="t366.2.1 &#x5B89;&#x88C5;haproxy&#x955C;&#x50CF;">6.2.1 &#x5B89;&#x88C5;haproxy&#x955C;&#x50CF; <a href="#t366.2.1 &#x5B89;&#x88C5;haproxy&#x955C;&#x50CF;"> # </a></h4>
+<pre><code class="lang-js">docker pull haproxy
+</code></pre>
+<h4 id="t376.2.2 &#x521B;&#x5EFA;&#x914D;&#x7F6E;&#x6587;&#x4EF6;">6.2.2 &#x521B;&#x5EFA;&#x914D;&#x7F6E;&#x6587;&#x4EF6; <a href="#t376.2.2 &#x521B;&#x5EFA;&#x914D;&#x7F6E;&#x6587;&#x4EF6;"> # </a></h4>
+<p>touch /home/devops/haproxy/haproxy.cfg</p>
+<pre><code class="lang-js">global
+    #&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;
+    chroot /usr/local/etc/haproxy
+    #&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#xFF0C;&#x4F7F;&#x7528;rsyslog&#x670D;&#x52A1;&#x4E2D;local5&#x65E5;&#x5FD7;&#x8BBE;&#x5907;&#xFF08;/var/log/local5&#xFF09;&#xFF0C;&#x7B49;&#x7EA7;info
+    log 127.0.0.1 local5 info
+    #&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;&#x8FD0;&#x884C;
+    daemon
+defaults
+    log    global
+    mode    http
+    #&#x65E5;&#x5FD7;&#x683C;&#x5F0F;
+    option    httplog
+    #&#x65E5;&#x5FD7;&#x4E2D;&#x4E0D;&#x8BB0;&#x5F55;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x7684;&#x5FC3;&#x8DF3;&#x68C0;&#x6D4B;&#x8BB0;&#x5F55;
+    option    dontlognull
+    #&#x8FDE;&#x63A5;&#x8D85;&#x65F6;&#xFF08;&#x6BEB;&#x79D2;&#xFF09;
+    timeout connect 5000
+    #&#x5BA2;&#x6237;&#x7AEF;&#x8D85;&#x65F6;&#xFF08;&#x6BEB;&#x79D2;&#xFF09;
+    timeout client  50000
+    #&#x670D;&#x52A1;&#x5668;&#x8D85;&#x65F6;&#xFF08;&#x6BEB;&#x79D2;&#xFF09;
+    timeout server  50000
+
+#&#x76D1;&#x63A7;&#x754C;&#x9762;    
+listen  admin_stats
+    #&#x76D1;&#x63A7;&#x754C;&#x9762;&#x7684;&#x8BBF;&#x95EE;&#x7684;IP&#x548C;&#x7AEF;&#x53E3;
+    bind  0.0.0.0:8888
+    #&#x8BBF;&#x95EE;&#x534F;&#x8BAE;
+    mode        http
+    #URI&#x76F8;&#x5BF9;&#x5730;&#x5740;
+    stats uri   /dbs
+    #&#x7EDF;&#x8BA1;&#x62A5;&#x544A;&#x683C;&#x5F0F;
+    stats realm     Global\ statistics
+    #&#x767B;&#x9646;&#x5E10;&#x6237;&#x4FE1;&#x606F;
+    stats auth  admin:123456
+#&#x6570;&#x636E;&#x5E93;&#x8D1F;&#x8F7D;&#x5747;&#x8861;
+listen  proxy-mysql
+    #&#x8BBF;&#x95EE;&#x7684;IP&#x548C;&#x7AEF;&#x53E3;
+    bind  0.0.0.0:3306  
+    #&#x7F51;&#x7EDC;&#x534F;&#x8BAE;
+    mode  tcp
+    #&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x7B97;&#x6CD5;&#xFF08;&#x8F6E;&#x8BE2;&#x7B97;&#x6CD5;&#xFF09;
+    #&#x8F6E;&#x8BE2;&#x7B97;&#x6CD5;&#xFF1A;roundrobin
+    #&#x6743;&#x91CD;&#x7B97;&#x6CD5;&#xFF1A;static-rr
+    #&#x6700;&#x5C11;&#x8FDE;&#x63A5;&#x7B97;&#x6CD5;&#xFF1A;leastconn
+    #&#x8BF7;&#x6C42;&#x6E90;IP&#x7B97;&#x6CD5;&#xFF1A;source 
+    balance  roundrobin
+    #&#x65E5;&#x5FD7;&#x683C;&#x5F0F;
+    option  tcplog
+    #&#x5728;MySQL&#x4E2D;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6CA1;&#x6709;&#x6743;&#x9650;&#x7684;haproxy&#x7528;&#x6237;&#xFF0C;&#x5BC6;&#x7801;&#x4E3A;&#x7A7A;&#x3002;Haproxy&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x8D26;&#x6237;&#x5BF9;MySQL&#x6570;&#x636E;&#x5E93;&#x5FC3;&#x8DF3;&#x68C0;&#x6D4B;
+    option  mysql-check user haproxy
+    server  MySQL_1 172.18.0.2:3306 check weight 1 maxconn 2000  
+    server  MySQL_2 172.18.0.3:3306 check weight 1 maxconn 2000  
+    server  MySQL_3 172.18.0.4:3306 check weight 1 maxconn 2000 
+    #&#x4F7F;&#x7528;keepalive&#x68C0;&#x6D4B;&#x6B7B;&#x94FE;
+    option  tcpka  
+</code></pre>
+<h4 id="t386.2.3 &#x521B;&#x5EFA;haproxy&#x5BB9;&#x5668;">6.2.3 &#x521B;&#x5EFA;haproxy&#x5BB9;&#x5668; <a href="#t386.2.3 &#x521B;&#x5EFA;haproxy&#x5BB9;&#x5668;"> # </a></h4>
+<pre><code class="lang-js">docker run -it -d -p <span class="hljs-number">4001</span>:<span class="hljs-number">8888</span> -p <span class="hljs-number">4002</span>:<span class="hljs-number">3306</span> -v /home/devops/haproxy:<span class="hljs-regexp">/usr/</span>local/etc/haproxy --name haproxy1 --privileged --net=znet --ip <span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.5</span> haproxy:<span class="hljs-number">2.0</span>
+
+haproxy -f /usr/local/etc/haproxy/haproxy.cfg
+
+<span class="hljs-attr">http</span>:<span class="hljs-comment">//47.104.191.1:4001/dbs</span>
+admin <span class="hljs-number">123456</span>
+</code></pre>
+<h3 id="t396.3 keepalived&#x53CC;&#x673A;&#x70ED;&#x5907;">6.3 keepalived&#x53CC;&#x673A;&#x70ED;&#x5907; <a href="#t396.3 keepalived&#x53CC;&#x673A;&#x70ED;&#x5907;"> # </a></h3>
+<ul>
+<li>&#x865A;&#x62DF;IP&#x5728;linux&#x7CFB;&#x7EDF;&#x4E2D;&#x4E00;&#x4E2A;&#x7F51;&#x5361;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x591A;&#x4E2A;IP&#x5730;&#x5740;&#xFF0C;&#x7136;&#x540E;&#x628A;&#x8FD9;&#x4E9B;IP&#x5730;&#x5740;&#x5206;&#x914D;&#x7ED9;&#x5BF9;&#x5E94;&#x7684;&#x7A0B;&#x5E8F;</li>
+<li>keepalived&#x662F;&#x7528;&#x6765;&#x5F3A;&#x5360;&#x865A;&#x62DF;IP&#x7684;&#xFF0C;&#x5728;&#x5404;&#x81EA;&#x7684;haproxy&#x5BB9;&#x5668;&#x4E2D;&#x5B89;&#x88C5;keepalived,&#x7528;&#x6765;&#x5F3A;&#x5360;&#x865A;&#x62DF;IP</li>
+<li>&#x62A2;&#x5230;&#x865A;&#x62DF;IP&#x7684;&#x670D;&#x52A1;&#x5668;&#x53EB;&#x505A;&#x4E3B;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x6CA1;&#x62A2;&#x5230;&#x7684;&#x53EB;&#x505A;&#x5907;&#x670D;&#x52A1;&#x5668;</li>
+<li>&#x6CA1;&#x62A2;&#x5230;&#x7684;&#x5C31;&#x4F1A;&#x5904;&#x4E8E;&#x7B49;&#x5F85;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;&#x5FC3;&#x8DF3;&#x68C0;&#x6D4B;&#x6765;&#x68C0;&#x6D4B;&#x4E3B;&#x670D;&#x52A1;&#x5668;&#x662F;&#x5426;&#x6B63;&#x5E38;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x6B63;&#x5E38;&#x5219;&#x7ACB;&#x523B;&#x62A2;&#x5360;&#x865A;&#x62DF;IP</li>
+</ul>
+<h3 id="t406.3.1 &#x5B89;&#x88C5;keepalived">6.3.1 &#x5B89;&#x88C5;keepalived <a href="#t406.3.1 &#x5B89;&#x88C5;keepalived"> # </a></h3>
+<ul>
+<li>&#x5B89;&#x88C5;keepalived&#x5FC5;&#x987B;&#x8981;&#x5B89;&#x88C5;&#x5728;haproxy&#x6240;&#x5728;&#x7684;&#x5BB9;&#x5668;&#x5185;</li>
+</ul>
+<pre><code class="lang-js">apt-<span class="hljs-keyword">get</span> update
+apt-<span class="hljs-keyword">get</span> install -y keepalived
+/etc/keepalived/keepalived.conf
+rm /var/cache/apt/archives/lock
+rm /var/lib/dpkg/lock
+apt-<span class="hljs-keyword">get</span> -y install vim
+vim /etc/keepalived/keepalived.conf
+</code></pre>
+<p>docker cp keepalived.conf haproxy1:/etc/keepalived</p>
+<pre><code class="lang-js">vrrp_instance VI_1 {
+    state MASTER
+    interface eth0
+    virtual_router_id <span class="hljs-number">100</span>
+    priority <span class="hljs-number">100</span>
+    advert_int <span class="hljs-number">1</span>
+    authentication {
+        auth_type PASS
+        auth_pass <span class="hljs-number">123456</span>
+    }
+    virtual_ipaddress {
+        <span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.201</span>
+    }
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B57;&#x6BB5;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">state</td>
+<td style="text-align:left">keepalived&#x8282;&#x70B9;&#x8EAB;&#x4EFD;&#xFF0C;master&#x662F;&#x4E3B;&#x670D;&#x52A1;&#x5668;&#xFF0C;backup&#x662F;&#x5907;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x4E3B;&#x670D;&#x52A1;&#x5668;&#x8981;&#x62A2;&#x70B9;&#x865A;&#x62DF;IP&#xFF0C;&#x5907;&#x7528;&#x670D;&#x52A1;&#x5668;&#x4E0D;&#x62A2;&#x5360;&#x865A;&#x62DF;IP</td>
+</tr>
+<tr>
+<td style="text-align:left">interface</td>
+<td style="text-align:left">&#x7F51;&#x5361;&#x8BBE;&#x5907;,docker &#x7F51;&#x5361;&#x5728;&#x5BBF;&#x4E3B;&#x673A;&#x4E0A;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#xFF0C;&#x4F46;&#x5176;&#x5B83;&#x5730;&#x65B9;&#x8BBF;&#x95EE;&#x4E0D;&#x5230;,&#x6240;&#x4EE5;&#x9700;&#x8981;&#x6620;&#x5C04;&#x5230;&#x5C40;&#x57DF;&#x7F51;&#x7684;&#x865A;&#x62DF;IP&#x4E0A;</td>
+</tr>
+<tr>
+<td style="text-align:left">virtual_router_id</td>
+<td style="text-align:left">&#x865A;&#x62DF;&#x8DEF;&#x7531;&#x6807;&#x8BC6;&#xFF0C;master&#x548C;backup&#x7684;&#x865A;&#x62DF;&#x8DEF;&#x7531;&#x6807;&#x8BC6;&#x5FC5;&#x987B;&#x4E00;&#x6837;&#xFF0C;&#x53EF;&#x4EE5;&#x662F;0~255</td>
+</tr>
+<tr>
+<td style="text-align:left">priority</td>
+<td style="text-align:left">master&#x6743;&#x91CD;&#xFF0C;&#x6743;&#x91CD;&#x8D8A;&#x9AD8;&#x8D8A;&#x5BB9;&#x6613;&#x62A2;&#x5230;&#x865A;&#x62DF;IP</td>
+</tr>
+<tr>
+<td style="text-align:left">authentication</td>
+<td style="text-align:left">&#x4E3B;&#x4ECE;&#x670D;&#x52A1;&#x5668;&#x9A8C;&#x8BC1;&#x65B9;&#x5F0F;&#xFF0C;&#x4E3B;&#x52A1;&#x5FC5;&#x987B;&#x4F7F;&#x7528;&#x76F8;&#x540C;&#x7684;&#x5BC6;&#x7801;&#x624D;&#x80FD;&#x6B63;&#x5E38;&#x901A;&#x4FE1;</td>
+</tr>
+<tr>
+<td style="text-align:left">virual_ipaddress</td>
+<td style="text-align:left">&#x865A;&#x62DF;IP&#xFF0C;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x591A;&#x4E2A;&#x865A;&#x62DF;IP</td>
+</tr>
+</tbody>
+</table>
+<p>&#x542F;&#x52A8;keepalive&#x540E;&#xFF0C;&#x5BBF;&#x4E3B;&#x673A;&#x5C31;&#x53EF;&#x4EE5;ping&#x901A;&#x865A;&#x62DF;IP</p>
+<pre><code class="lang-js">service keepalived start
+apt-<span class="hljs-keyword">get</span> install -y inetutils-ping
+apt-<span class="hljs-keyword">get</span> install net-tools -y  
+ping 172.18.0.201
+</code></pre>
+<h3 id="t416.3.2 haproxy2">6.3.2 haproxy2 <a href="#t416.3.2 haproxy2"> # </a></h3>
+<pre><code class="lang-js">docker run -it -d -p <span class="hljs-number">4003</span>:<span class="hljs-number">8888</span> -p <span class="hljs-number">4004</span>:<span class="hljs-number">3306</span> -v /home/devops/haproxy:<span class="hljs-regexp">/usr/</span>local/etc/haproxy --name haproxy2 --privileged --net=znet --ip <span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.6</span> haproxy:<span class="hljs-number">2.0</span>
+</code></pre>
+<h2 id="t427. &#x5E03;&#x7F72;Egg.js">7. &#x5E03;&#x7F72;Egg.js <a href="#t427. &#x5E03;&#x7F72;Egg.js"> # </a></h2>
+<ul>
+<li><a href="https://eggjs.org/zh-cn/intro/quickstart.html">eggjs</a></li>
+</ul>
+<h3 id="t437.1 &#x7F16;&#x5199;&#x9879;&#x76EE;">7.1 &#x7F16;&#x5199;&#x9879;&#x76EE; <a href="#t437.1 &#x7F16;&#x5199;&#x9879;&#x76EE;"> # </a></h3>
+<pre><code class="lang-js">mkdir zhufeng_egg.js
+cnpm init egg --type=simple
+cnpm install
+cnpm start / npm run dev / npm test
+</code></pre>
+<h3 id="t447.2 &#x90E8;&#x7F72;&#x9879;&#x76EE;">7.2 &#x90E8;&#x7F72;&#x9879;&#x76EE; <a href="#t447.2 &#x90E8;&#x7F72;&#x9879;&#x76EE;"> # </a></h3>
+<h4 id="t457.2.1 package.json">7.2.1 package.json <a href="#t457.2.1 package.json"> # </a></h4>
+<ul>
+<li>&#x628A;package.json&#x4E2D;start&#x8FD9;&#x884C;&#x91CC;&#x547D;&#x4EE4;&#x91CC;&#x7684;<code>--daemon</code>&#x53BB;&#x6389;,&#x5728;Docker&#x91CC;eggjs&#x5E94;&#x7528;&#x8981;&#x5728;&#x524D;&#x53F0;&#x8FD0;&#x884C;</li>
+</ul>
+<h4 id="t467.2.2 Dockerfile">7.2.2 Dockerfile <a href="#t467.2.2 Dockerfile"> # </a></h4>
+<ul>
+<li>&#x5728;&#x672C;&#x5730;&#x5E94;&#x7528;&#x7684;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x5EFA;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;Dockerfile&#x7684;&#x6587;&#x4EF6;</li>
+</ul>
+<pre><code class="lang-js"># &#x8BBE;&#x7F6E;&#x57FA;&#x7840;&#x955C;&#x50CF;,&#x5982;&#x679C;&#x672C;&#x5730;&#x6CA1;&#x6709;&#x8BE5;&#x955C;&#x50CF;&#xFF0C;&#x4F1A;&#x4ECE;Docker.io&#x670D;&#x52A1;&#x5668;pull&#x955C;&#x50CF;
+FROM node:12
+# &#x521B;&#x5EFA;app&#x76EE;&#x5F55;
+RUN mkdir -p /usr/src/egg_server
+# &#x8BBE;&#x7F6E;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;
+WORKDIR /usr/src/egg_server
+# &#x62F7;&#x8D1D;package.json&#x6587;&#x4EF6;&#x5230;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;
+COPY package.json /usr/src/egg_server/package.json
+# &#x5B89;&#x88C5;npm&#x4F9D;&#x8D56;(&#x4F7F;&#x7528;&#x6DD8;&#x5B9D;&#x7684;&#x955C;&#x50CF;&#x6E90;)
+RUN npm install --registry=https://registry.npm.taobao.org
+# &#x62F7;&#x8D1D;&#x6240;&#x6709;&#x6E90;&#x4EE3;&#x7801;&#x5230;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;
+COPY . /usr/src/egg_server
+# &#x66B4;&#x9732;&#x5BB9;&#x5668;&#x7AEF;&#x53E3;
+EXPOSE 7001
+# &#x542F;&#x52A8;node&#x5E94;&#x7528;
+CMD npm start
+</code></pre>
+<ul>
+<li>1.&#x62C9;&#x53D6;docker&#x955C;&#x50CF;</li>
+<li>2.&#x521B;&#x5EFA;docker&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#xFF0C;&#x5E76;&#x5C06;package.json&#x62F7;&#x8D1D;&#x5230;docker&#x91CC;</li>
+<li>3.&#x5B89;&#x88C5;npm&#x4F9D;&#x8D56;</li>
+<li>4.&#x5C06;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x7684;&#x5E94;&#x7528;&#x62F7;&#x8D1D;&#x5230;docker&#x91CC;</li>
+<li>5.&#x66B4;&#x9732;docker&#x5BB9;&#x5668;&#x7684;&#x7AEF;&#x53E3;&#xFF0C;&#x7136;&#x540E;&#x542F;&#x52A8;node&#x5E94;&#x7528;</li>
+</ul>
+<h4 id="t477.2.3 &#x4E0A;&#x4F20;&#x670D;&#x52A1;&#x5668;">7.2.3 &#x4E0A;&#x4F20;&#x670D;&#x52A1;&#x5668; <a href="#t477.2.3 &#x4E0A;&#x4F20;&#x670D;&#x52A1;&#x5668;"> # </a></h4>
+<ul>
+<li>&#x4F7F;&#x7528;ftp&#x5DE5;&#x5177;&#x6216;git&#x5DE5;&#x5177;&#x5C06;&#x6574;&#x4E2A;&#x5E94;&#x7528;&#x4E0A;&#x4F20;&#x5230;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x670D;&#x52A1;&#x5668;</li>
+<li>&#x5E76;&#x4F7F;&#x7528;&#x7EC8;&#x7AEF;&#x8FDE;&#x63A5;&#x5230;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x8FDB;&#x5165;&#x5230;&#x670D;&#x52A1;&#x5668;&#x5E94;&#x7528;&#x7684;&#x76EE;&#x5F55;&#x4E0B;</li>
+</ul>
+<h4 id="t487.2.4 &#x7F16;&#x8BD1;docker&#x955C;&#x50CF;">7.2.4 &#x7F16;&#x8BD1;docker&#x955C;&#x50CF; <a href="#t487.2.4 &#x7F16;&#x8BD1;docker&#x955C;&#x50CF;"> # </a></h4>
+<pre><code class="lang-js">docker build -t egg_server .
+</code></pre>
+<h4 id="t497.2.4 &#x542F;&#x52A8;docker&#x5BB9;&#x5668;">7.2.4 &#x542F;&#x52A8;docker&#x5BB9;&#x5668; <a href="#t497.2.4 &#x542F;&#x52A8;docker&#x5BB9;&#x5668;"> # </a></h4>
+<pre><code class="lang-js">docker run -d --name egg_server1 -p <span class="hljs-number">7001</span>:<span class="hljs-number">7001</span> --net=znet --ip <span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.7</span> egg_server 
+docker run -d --name egg_server2 -p <span class="hljs-number">7002</span>:<span class="hljs-number">7001</span> --net=znet --ip <span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.8</span> egg_server 
+docker run -d --name egg_server3 -p <span class="hljs-number">7003</span>:<span class="hljs-number">7001</span> --net=znet --ip <span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.9</span> egg_server 
+docker ps
+curl -i localhost:<span class="hljs-number">7001</span>
+curl -i localhost:<span class="hljs-number">7002</span>
+curl -i localhost:<span class="hljs-number">7003</span>
+</code></pre>
+<h2 id="t508. &#x5E03;&#x7F72;nginx">8. &#x5E03;&#x7F72;nginx <a href="#t508. &#x5E03;&#x7F72;nginx"> # </a></h2>
+<h3 id="t518.1 &#x62C9;&#x53D6;&#x5B98;&#x65B9;&#x7684;&#x955C;&#x50CF;">8.1 &#x62C9;&#x53D6;&#x5B98;&#x65B9;&#x7684;&#x955C;&#x50CF; <a href="#t518.1 &#x62C9;&#x53D6;&#x5B98;&#x65B9;&#x7684;&#x955C;&#x50CF;"> # </a></h3>
+<pre><code class="lang-js">docker pull nginx
+</code></pre>
+<h3 id="t528.2 &#x542F;&#x52A8;nginx">8.2 &#x542F;&#x52A8;nginx <a href="#t528.2 &#x542F;&#x52A8;nginx"> # </a></h3>
+<pre><code class="lang-js">docker run -d --name nginx1 -p <span class="hljs-number">80</span>:<span class="hljs-number">80</span>  nginx
+docker ps
+</code></pre>
+<h3 id="t538.3 &#x521B;&#x5EFA;&#x76EE;&#x5F55;">8.3 &#x521B;&#x5EFA;&#x76EE;&#x5F55; <a href="#t538.3 &#x521B;&#x5EFA;&#x76EE;&#x5F55;"> # </a></h3>
+<pre><code class="lang-js">$ mkdir -p ~<span class="hljs-regexp">/nginx/</span>www ~<span class="hljs-regexp">/nginx/</span>logs ~<span class="hljs-regexp">/nginx/</span>conf
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x76EE;&#x5F55;&#x540D;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">www</td>
+<td style="text-align:left">&#x76EE;&#x5F55;&#x5C06;&#x6620;&#x5C04;&#x4E3A; nginx &#x5BB9;&#x5668;&#x914D;&#x7F6E;&#x7684;&#x865A;&#x62DF;&#x76EE;&#x5F55;</td>
+</tr>
+<tr>
+<td style="text-align:left">logs</td>
+<td style="text-align:left">&#x76EE;&#x5F55;&#x5C06;&#x6620;&#x5C04;&#x4E3A; nginx &#x5BB9;&#x5668;&#x7684;&#x65E5;&#x5FD7;&#x76EE;&#x5F55;</td>
+</tr>
+<tr>
+<td style="text-align:left">conf</td>
+<td style="text-align:left">&#x76EE;&#x5F55;&#x91CC;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5C06;&#x6620;&#x5C04;&#x4E3A; nginx &#x5BB9;&#x5668;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t548.4 &#x62F7;&#x8D1D;&#x914D;&#x7F6E;&#x6587;&#x4EF6;">8.4 &#x62F7;&#x8D1D;&#x914D;&#x7F6E;&#x6587;&#x4EF6; <a href="#t548.4 &#x62F7;&#x8D1D;&#x914D;&#x7F6E;&#x6587;&#x4EF6;"> # </a></h3>
+<pre><code class="lang-js">$ docker cp <span class="hljs-number">09</span>ffe6a26871:<span class="hljs-regexp">/etc/</span>nginx/nginx.conf ~<span class="hljs-regexp">/nginx/</span>conf
+</code></pre>
+<h3 id="t558.5 &#x90E8;&#x7F72;">8.5 &#x90E8;&#x7F72; <a href="#t558.5 &#x90E8;&#x7F72;"> # </a></h3>
+<pre><code class="lang-js">docker run -d -p <span class="hljs-number">80</span>:<span class="hljs-number">80</span> --name nginx1 -v ~<span class="hljs-regexp">/nginx/</span>www:<span class="hljs-regexp">/usr/</span>share/nginx/html -v ~<span class="hljs-regexp">/nginx/</span>conf/nginx.conf:<span class="hljs-regexp">/etc/</span>nginx/nginx.conf -v ~<span class="hljs-regexp">/nginx/</span>conf/conf.d:<span class="hljs-regexp">/etc/</span>nginx/conf.d  -v ~<span class="hljs-regexp">/nginx/</span>logs:<span class="hljs-regexp">/var/</span>log/nginx --net=znet --ip <span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.10</span> nginx
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x76EE;&#x5F55;&#x540D;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">-p 80:80</td>
+<td style="text-align:left">&#x5C06;&#x5BB9;&#x5668;&#x7684; 80 &#x7AEF;&#x53E3;&#x6620;&#x5C04;&#x5230;&#x4E3B;&#x673A;&#x7684; 80 &#x7AEF;&#x53E3;</td>
+</tr>
+<tr>
+<td style="text-align:left">--name nginx1</td>
+<td style="text-align:left">&#x5C06;&#x5BB9;&#x5668;&#x547D;&#x540D;&#x4E3A;nginx1</td>
+</tr>
+<tr>
+<td style="text-align:left">-v ~/nginx/www:/usr/share/nginx/html</td>
+<td style="text-align:left">&#x5C06;&#x6211;&#x4EEC;&#x81EA;&#x5DF1;&#x521B;&#x5EFA;&#x7684; www &#x76EE;&#x5F55;&#x6302;&#x8F7D;&#x5230;&#x5BB9;&#x5668;&#x7684; /usr/share/nginx/html</td>
+</tr>
+<tr>
+<td style="text-align:left">-v ~/nginx/conf/nginx.conf:/etc/nginx/nginx.conf</td>
+<td style="text-align:left">&#x5C06;&#x6211;&#x4EEC;&#x81EA;&#x5DF1;&#x521B;&#x5EFA;&#x7684; nginx.conf &#x6302;&#x8F7D;&#x5230;&#x5BB9;&#x5668;&#x7684; /etc/nginx/nginx.conf</td>
+</tr>
+<tr>
+<td style="text-align:left">-v ~/nginx/logs:/var/log/nginx</td>
+<td style="text-align:left">&#x5C06;&#x6211;&#x4EEC;&#x81EA;&#x5DF1;&#x521B;&#x5EFA;&#x7684; logs &#x6302;&#x8F7D;&#x5230;&#x5BB9;&#x5668;&#x7684; /var/log/nginx</td>
+</tr>
+</tbody>
+</table>
+<p>/root/nginx/conf/conf.d/default.conf</p>
+<pre><code class="lang-js">upstream nodeservers {  
+     server <span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.7</span>:<span class="hljs-number">7001</span>;  
+     server <span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.8</span>:<span class="hljs-number">7001</span>;  
+     server <span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.9</span>:<span class="hljs-number">7001</span>;  
+}   
+
+server {  
+        listen       <span class="hljs-number">80</span>;  
+        server_name  <span class="hljs-number">47.104</span><span class="hljs-number">.191</span><span class="hljs-number">.1</span>; 
+        location / {  
+            root /usr/share/nginx/html;
+            index  index.html index.htm;  
+        }   
+        location /api {  
+            proxy_pass   http:<span class="hljs-comment">//nodeservers;</span>
+        }  
+}
+</code></pre>
+<pre><code class="lang-js">$ cd ~<span class="hljs-regexp">/nginx/</span>www
+$ docker kill -s HUP nginx1
+$ docker restart nginx1
+</code></pre>
+<pre><code class="lang-js">curl http:<span class="hljs-comment">//47.104.191.1/api/login</span>
+curl http:<span class="hljs-comment">//47.104.191.1/</span>
+</code></pre>
+<h2 id="t569. Ant Design Pro">9. Ant Design Pro <a href="#t569. Ant Design Pro"> # </a></h2>
+<ul>
+<li>[)Ant Design Pro](<a href="https://github.com/ant-design/ant-design-pro&#x662F;&#x4E00;&#x4E2A;&#x4F01;&#x4E1A;&#x7EA7;&#x4E2D;&#x540E;&#x53F0;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF0C;&#x5728;Ant">https://github.com/ant-design/ant-design-pro&#x662F;&#x4E00;&#x4E2A;&#x4F01;&#x4E1A;&#x7EA7;&#x4E2D;&#x540E;&#x53F0;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF0C;&#x5728;Ant</a> Design&#x7EC4;&#x4EF6;&#x5E93;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#xFF0C;&#x63D0;&#x70BC;&#x51FA;&#x5178;&#x578B;&#x6A21;&#x677F;/&#x4E1A;&#x52A1;&#x7EC4;&#x4EF6;/&#x901A;&#x7528;&#x9875;&#x7B49;&#xFF0C;&#x5728;&#x6B64;&#x57FA;&#x7840;&#x4E0A;&#x80FD;&#x591F;&#x4F7F;&#x5F00;&#x53D1;&#x8005;&#x5FEB;&#x901F;&#x7684;&#x5B8C;&#x6210;&#x4E2D;&#x540E;&#x53F0;&#x5E94;&#x7528;&#x7684;&#x5F00;&#x53D1;</li>
+</ul>
+<pre><code class="lang-js">git clone https:<span class="hljs-comment">//github.com/ant-design/ant-design-pro.git --depth=1</span>
+cd ant-design-pro
+cnpm i 
+cnpm run docker-prod:dev
+</code></pre>
+<h2 id="t5710.mongodb&#x96C6;&#x7FA4;">10.mongodb&#x96C6;&#x7FA4; <a href="#t5710.mongodb&#x96C6;&#x7FA4;"> # </a></h2>
+<ul>
+<li>&#x5728;Docker&#x73AF;&#x5883;&#x4E0A;&#x642D;&#x5EFA;&#x4E00;&#x4E2A;MongoDB&#x96C6;&#x7FA4;</li>
+</ul>
+<h3 id="t5810.1 &#x5BB9;&#x5668;">10.1 &#x5BB9;&#x5668; <a href="#t5810.1 &#x5BB9;&#x5668;"> # </a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x96C6;&#x7FA4;&#x89D2;&#x8272;</th>
+<th style="text-align:left">ContainerName</th>
+<th style="text-align:left">IP:port</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Config Server</td>
+<td style="text-align:left">cfg_1</td>
+<td style="text-align:left">172.18.0.11:27019</td>
+</tr>
+<tr>
+<td style="text-align:left">Config Server</td>
+<td style="text-align:left">cfg_2</td>
+<td style="text-align:left">172.18.0.12:27019</td>
+</tr>
+<tr>
+<td style="text-align:left">Config Server</td>
+<td style="text-align:left">cfg_3</td>
+<td style="text-align:left">172.18.0.13:27019</td>
+</tr>
+<tr>
+<td style="text-align:left">Shard Server</td>
+<td style="text-align:left">shard1_1</td>
+<td style="text-align:left">172.18.0.14:27018</td>
+</tr>
+<tr>
+<td style="text-align:left">Shard Server</td>
+<td style="text-align:left">shard1_2</td>
+<td style="text-align:left">172.18.0.15:27018</td>
+</tr>
+<tr>
+<td style="text-align:left">Shard Server</td>
+<td style="text-align:left">shard1_3</td>
+<td style="text-align:left">172.18.0.16:27018</td>
+</tr>
+<tr>
+<td style="text-align:left">Shard Server</td>
+<td style="text-align:left">shard2_1</td>
+<td style="text-align:left">172.18.0.17:27018</td>
+</tr>
+<tr>
+<td style="text-align:left">Shard Server</td>
+<td style="text-align:left">shard2_2</td>
+<td style="text-align:left">172.18.0.18:27018</td>
+</tr>
+<tr>
+<td style="text-align:left">Shard Server</td>
+<td style="text-align:left">shard2_3</td>
+<td style="text-align:left">172.18.0.19:27018</td>
+</tr>
+<tr>
+<td style="text-align:left">Shard Server</td>
+<td style="text-align:left">shard3_1</td>
+<td style="text-align:left">172.18.0.20:27018</td>
+</tr>
+<tr>
+<td style="text-align:left">Shard Server</td>
+<td style="text-align:left">shard3_2</td>
+<td style="text-align:left">172.18.0.21:27018</td>
+</tr>
+<tr>
+<td style="text-align:left">Shard Server</td>
+<td style="text-align:left">shard3_3</td>
+<td style="text-align:left">172.18.0.22:27018</td>
+</tr>
+<tr>
+<td style="text-align:left">Mongos    mongos_1</td>
+<td style="text-align:left">172.18.0.23:27020</td>
+</tr>
+<tr>
+<td style="text-align:left">Mongos    mongos_2</td>
+<td style="text-align:left">172.18.0.24:27020</td>
+</tr>
+<tr>
+<td style="text-align:left">Mongos    mongos_3</td>
+<td style="text-align:left">172.18.0.25:27020</td>
+</tr>
+</tbody>
+</table>
+<h3 id="t5910.2 &#x62C9;&#x53D6;&#x955C;&#x50CF;">10.2 &#x62C9;&#x53D6;&#x955C;&#x50CF; <a href="#t5910.2 &#x62C9;&#x53D6;&#x955C;&#x50CF;"> # </a></h3>
+<pre><code class="lang-js">docker pull mongo:<span class="hljs-number">4.0</span><span class="hljs-number">.0</span>
+</code></pre>
+<h3 id="t6010.2 &#x96C6;&#x7FA4;&#x914D;&#x7F6E;&#x6587;&#x4EF6;">10.2 &#x96C6;&#x7FA4;&#x914D;&#x7F6E;&#x6587;&#x4EF6; <a href="#t6010.2 &#x96C6;&#x7FA4;&#x914D;&#x7F6E;&#x6587;&#x4EF6;"> # </a></h3>
+<pre><code class="lang-js">mkdir -p /home/devops/configsvr
+mkdir -p /home/devops/shard1
+mkdir -p /home/devops/shard2
+mkdir -p /home/devops/shard3
+mkdir -p /home/devops/mongos
+</code></pre>
+<h4 id="t6110.2.1 Config-Server &#x914D;&#x7F6E;&#x6587;&#x4EF6;">10.2.1 Config-Server &#x914D;&#x7F6E;&#x6587;&#x4EF6; <a href="#t6110.2.1 Config-Server &#x914D;&#x7F6E;&#x6587;&#x4EF6;"> # </a></h4>
+<ul>
+<li>&#x8DEF;&#x5F84;&#xFF1A;/home/devops/configsvr/mongod.conf </li>
+<li>&#x8BF4;&#x660E;&#xFF1A;MongoDB v3.4 &#x4E4B;&#x540E;&#x8981;&#x6C42;Config-Server&#x4E5F;&#x9700;&#x8981;&#x7EC4;&#x6210;&#x526F;&#x672C;&#x96C6;&#x5F62;&#x5F0F;<pre><code class="lang-js">storage:
+dbPath: <span class="hljs-regexp">/data/</span>db
+<span class="hljs-attr">journal</span>:
+  enabled: <span class="hljs-literal">true</span>
+<span class="hljs-attr">systemLog</span>:
+destination: file
+<span class="hljs-attr">logAppend</span>: <span class="hljs-literal">true</span>
+<span class="hljs-attr">path</span>: <span class="hljs-regexp">/var/</span>log/mongodb/mongod.log
+<span class="hljs-attr">net</span>:
+bindIp: <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>
+<span class="hljs-attr">processManagement</span>:
+timeZoneInfo: <span class="hljs-regexp">/usr/</span>share/zoneinfo
+<span class="hljs-attr">replication</span>:
+replSetName: cfg
+<span class="hljs-attr">sharding</span>:
+clusterRole: configsvr
+</code></pre>
+</li>
+</ul>
+<h4 id="t6210.2.3 Shard-Server &#x914D;&#x7F6E;&#x6587;&#x4EF6;">10.2.3 Shard-Server &#x914D;&#x7F6E;&#x6587;&#x4EF6; <a href="#t6210.2.3 Shard-Server &#x914D;&#x7F6E;&#x6587;&#x4EF6;"> # </a></h4>
+<ul>
+<li>&#x8DEF;&#x5F84;&#xFF1A;/home/devops/shard1/mongod.conf </li>
+<li>&#x8BF4;&#x660E;&#xFF1A;&#x6B64;&#x5904;&#x914D;&#x7F6E;3&#x4E2A;&#x5206;&#x7247;&#x4E3A;shard1,shard2,shard3;&#x6BCF;&#x4E2A;&#x5206;&#x7247;&#x90FD;&#x9700;&#x8981;&#x7EC4;&#x6210;&#x526F;&#x672C;&#x96C6;&#x3002;</li>
+<li>shard2,shard3&#x76EE;&#x5F55;&#x4E0B;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x540C;&#x540D;&#xFF0C;&#x4FEE;&#x6539;replSetName&#x5B57;&#x6BB5;&#x7684;&#x503C;&#x5206;&#x522B;&#x4E3A;&#x2019;shard2&#x2019;&#x548C;&#x2019;shard3&#x2019;</li>
+</ul>
+<pre><code class="lang-js">storage:
+  dbPath: <span class="hljs-regexp">/data/</span>db
+  <span class="hljs-attr">journal</span>:
+    enabled: <span class="hljs-literal">true</span>
+<span class="hljs-attr">systemLog</span>:
+  destination: file
+  <span class="hljs-attr">logAppend</span>: <span class="hljs-literal">true</span>
+  <span class="hljs-attr">path</span>: <span class="hljs-regexp">/var/</span>log/mongodb/mongod.log
+<span class="hljs-attr">net</span>:
+  bindIp: <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>
+<span class="hljs-attr">processManagement</span>:
+  timeZoneInfo: <span class="hljs-regexp">/usr/</span>share/zoneinfo
+<span class="hljs-attr">replication</span>:
+  replSetName: shard1
+<span class="hljs-attr">sharding</span>:
+  clusterRole: shardsvr
+</code></pre>
+<h4 id="t6310.2.4 Mongos &#x914D;&#x7F6E;&#x6587;&#x4EF6;">10.2.4 Mongos &#x914D;&#x7F6E;&#x6587;&#x4EF6; <a href="#t6310.2.4 Mongos &#x914D;&#x7F6E;&#x6587;&#x4EF6;"> # </a></h4>
+<ul>
+<li>&#x8DEF;&#x5F84;&#xFF1A;/home/dmc/mongos/mongos.conf </li>
+<li>&#x8BF4;&#x660E;&#xFF1A;mongos&#x4E0D;&#x9700;&#x8981;&#x5B58;&#x50A8;&#x56E0;&#x6B64;&#x53BB;&#x6389;storage&#x5B57;&#x6BB5;&#xFF1B;&#x53EF;&#x4EFB;&#x610F;&#x914D;&#x7F6E;net.port&#x5B57;&#x6BB5;&#xFF0C;&#x9700;&#x8981;&#x6307;&#x5B9A;processManagement.fork&#x4E3A;true&#x4EE5;&#x2013;fork&#x65B9;&#x5F0F;&#x542F;&#x52A8;</li>
+<li>sharding.configDB&#x5B57;&#x6BB5;&#x7528;&#x4E8E;&#x6307;&#x5B9A;Config-Server&#x96C6;&#x7FA4;&#x5730;&#x5740;&#xFF0C;&#x683C;&#x5F0F;&#x4E3A;[replSetName]/[config-server1:port],[config-server2:port]</li>
+</ul>
+<pre><code class="lang-js">systemLog:
+  destination: file
+  <span class="hljs-attr">logAppend</span>: <span class="hljs-literal">true</span>
+  <span class="hljs-attr">path</span>: <span class="hljs-regexp">/var/</span>log/mongodb/mongos.log
+<span class="hljs-attr">net</span>:
+  port: <span class="hljs-number">27020</span>
+  <span class="hljs-attr">bindIp</span>: <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>
+<span class="hljs-attr">processManagement</span>:
+  fork: <span class="hljs-literal">true</span>
+  <span class="hljs-attr">timeZoneInfo</span>: <span class="hljs-regexp">/usr/</span>share/zoneinfo
+<span class="hljs-attr">sharding</span>:
+  configDB: cfg/<span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.11</span>:<span class="hljs-number">27019</span>,<span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.12</span>:<span class="hljs-number">27019</span>,<span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.13</span>:<span class="hljs-number">27019</span>
+</code></pre>
+<h3 id="t6410.3 &#x542F;&#x52A8;Docker&#x5BB9;&#x5668;">10.3 &#x542F;&#x52A8;Docker&#x5BB9;&#x5668; <a href="#t6410.3 &#x542F;&#x52A8;Docker&#x5BB9;&#x5668;"> # </a></h3>
+<h4 id="t6510.3.1 &#x542F;&#x52A8;3&#x4E2A;Config-Server&#x5BB9;&#x5668;">10.3.1 &#x542F;&#x52A8;3&#x4E2A;Config-Server&#x5BB9;&#x5668; <a href="#t6510.3.1 &#x542F;&#x52A8;3&#x4E2A;Config-Server&#x5BB9;&#x5668;"> # </a></h4>
+<pre><code class="lang-js">docker run -d --name=cfg_1 --network=znet --ip=<span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.11</span> -v /home/devops/configsvr:<span class="hljs-regexp">/etc/m</span>ongodb mongo:<span class="hljs-number">4.0</span><span class="hljs-number">.0</span> -f /etc/mongodb/mongod.conf
+docker run -d --name=cfg_2 --network=znet --ip=<span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.12</span> -v /home/devops/configsvr:<span class="hljs-regexp">/etc/m</span>ongodb mongo:<span class="hljs-number">4.0</span><span class="hljs-number">.0</span> -f /etc/mongodb/mongod.conf
+docker run -d --name=cfg_3 --network=znet --ip=<span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.13</span> -v /home/devops/configsvr:<span class="hljs-regexp">/etc/m</span>ongodb mongo:<span class="hljs-number">4.0</span><span class="hljs-number">.0</span> -f /etc/mongodb/mongod.conf
+</code></pre>
+<p>&#x8FDB;&#x5165;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#x914D;&#x7F6E;Config-Server&#x526F;&#x672C;&#x96C6;</p>
+<pre><code class="lang-js"># &#x5BBF;&#x4E3B;&#x673A;
+docker exec -it cfg_1 bash
+# &#x5BB9;&#x5668;&#x4E2D;
+mongo --port 27019
+# Mongo Shell&#x4E2D;
+rs.initiate({
+    &quot;_id&quot;:&quot;cfg&quot;,
+    &quot;members&quot;:[
+        {
+            &quot;_id&quot;:0,
+            &quot;host&quot;:&quot;172.18.0.11:27019&quot;
+        },
+        {
+            &quot;_id&quot;:1,
+            &quot;host&quot;:&quot;172.18.0.12:27019&quot;
+        },
+        {
+            &quot;_id&quot;:2,
+            &quot;host&quot;:&quot;172.18.0.13:27019&quot;
+        }
+    ]
+})
+</code></pre>
+<h4 id="t6610.3.2 &#x542F;&#x52A8;3*3&#x4E2A;Shard-Server&#x5BB9;&#x5668;">10.3.2 &#x542F;&#x52A8;3*3&#x4E2A;Shard-Server&#x5BB9;&#x5668; <a href="#t6610.3.2 &#x542F;&#x52A8;3*3&#x4E2A;Shard-Server&#x5BB9;&#x5668;"> # </a></h4>
+<ul>
+<li>&#x8BF4;&#x660E;&#xFF1A;&#x5206;&#x7247;&#x670D;&#x52A1;&#x5668;&#x542F;&#x52A8;&#x540E;&#x9ED8;&#x8BA4;&#x662F;&#x4EE5;27018&#x4F5C;&#x4E3A;&#x7AEF;&#x53E3;</li>
+</ul>
+<h5 id="t6710.3.2.1 &#x542F;&#x52A8;&#x7B2C;&#x4E00;&#x4E2A;&#x5206;&#x7247; - shard1">10.3.2.1 &#x542F;&#x52A8;&#x7B2C;&#x4E00;&#x4E2A;&#x5206;&#x7247; - shard1 <a href="#t6710.3.2.1 &#x542F;&#x52A8;&#x7B2C;&#x4E00;&#x4E2A;&#x5206;&#x7247; - shard1"> # </a></h5>
+<pre><code class="lang-js">docker run -d --name=shard1_1 --network=znet --ip=<span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.14</span> -v /home/devops/shard1:<span class="hljs-regexp">/etc/m</span>ongodb mongo:<span class="hljs-number">4.0</span><span class="hljs-number">.0</span> -f /etc/mongodb/mongod.conf
+docker run -d --name=shard1_2 --network=znet --ip=<span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.15</span> -v /home/devops/shard1:<span class="hljs-regexp">/etc/m</span>ongodb mongo:<span class="hljs-number">4.0</span><span class="hljs-number">.0</span> -f /etc/mongodb/mongod.conf
+docker run -d --name=shard1_3 --network=znet --ip=<span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.16</span> -v /home/devops/shard1:<span class="hljs-regexp">/etc/m</span>ongodb mongo:<span class="hljs-number">4.0</span><span class="hljs-number">.0</span> -f /etc/mongodb/mongod.conf
+</code></pre>
+<p>&#x8FDB;&#x5165;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#x914D;&#x7F6E;Shard-Server&#x526F;&#x672C;&#x96C6;</p>
+<pre><code class="lang-js"># &#x5BBF;&#x4E3B;&#x673A;
+docker exec -it shard1_1 bash
+# &#x5BB9;&#x5668;&#x4E2D;
+mongo --port 27018
+# Mongo Shell&#x4E2D;
+rs.initiate({
+    &quot;_id&quot;:&quot;shard1&quot;,
+    &quot;members&quot;:[
+        {
+            &quot;_id&quot;:0,
+            &quot;host&quot;:&quot;172.18.0.14:27018&quot;
+        },
+        {
+            &quot;_id&quot;:1,
+            &quot;host&quot;:&quot;172.18.0.15:27018&quot;
+        },
+        {
+            &quot;_id&quot;:2,
+            &quot;host&quot;:&quot;172.18.0.16:27018&quot;
+        }
+    ]
+})
+</code></pre>
+<h5 id="t6810.3.2.2 &#x542F;&#x52A8;&#x7B2C;&#x4E8C;&#x4E2A;&#x5206;&#x7247; - shard2">10.3.2.2 &#x542F;&#x52A8;&#x7B2C;&#x4E8C;&#x4E2A;&#x5206;&#x7247; - shard2 <a href="#t6810.3.2.2 &#x542F;&#x52A8;&#x7B2C;&#x4E8C;&#x4E2A;&#x5206;&#x7247; - shard2"> # </a></h5>
+<pre><code class="lang-js">docker run -d --name=shard2_1 --network=znet --ip=<span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.17</span> -v /home/devops/shard2:<span class="hljs-regexp">/etc/m</span>ongodb mongo:<span class="hljs-number">4.0</span><span class="hljs-number">.0</span> -f /etc/mongodb/mongod.conf
+docker run -d --name=shard2_2 --network=znet --ip=<span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.18</span> -v /home/devops/shard2:<span class="hljs-regexp">/etc/m</span>ongodb mongo:<span class="hljs-number">4.0</span><span class="hljs-number">.0</span> -f /etc/mongodb/mongod.conf
+docker run -d --name=shard2_3 --network=znet --ip=<span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.19</span> -v /home/devops/shard2:<span class="hljs-regexp">/etc/m</span>ongodb mongo:<span class="hljs-number">4.0</span><span class="hljs-number">.0</span> -f /etc/mongodb/mongod.conf
+</code></pre>
+<p>&#x8FDB;&#x5165;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#x914D;&#x7F6E;Shard-Server&#x526F;&#x672C;&#x96C6;</p>
+<pre><code class="lang-js"># &#x5BBF;&#x4E3B;&#x673A;
+docker exec -it shard2_1 bash
+# &#x5BB9;&#x5668;&#x4E2D;
+mongo --port 27018
+# Mongo Shell&#x4E2D;
+rs.initiate({
+    &quot;_id&quot;:&quot;shard2&quot;,
+    &quot;members&quot;:[
+        {
+            &quot;_id&quot;:0,
+            &quot;host&quot;:&quot;172.18.0.17:27018&quot;
+        },
+        {
+            &quot;_id&quot;:1,
+            &quot;host&quot;:&quot;172.18.0.18:27018&quot;
+        },
+        {
+            &quot;_id&quot;:2,
+            &quot;host&quot;:&quot;172.18.0.19:27018&quot;
+        }
+    ]
+})
+</code></pre>
+<h5 id="t6910.3.2.3 &#x542F;&#x52A8;&#x7B2C;&#x4E09;&#x4E2A;&#x5206;&#x7247; - shard3">10.3.2.3 &#x542F;&#x52A8;&#x7B2C;&#x4E09;&#x4E2A;&#x5206;&#x7247; - shard3 <a href="#t6910.3.2.3 &#x542F;&#x52A8;&#x7B2C;&#x4E09;&#x4E2A;&#x5206;&#x7247; - shard3"> # </a></h5>
+<pre><code class="lang-js">docker run -d --name=shard3_1 --network=znet --ip=<span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.20</span> -v /home/devops/shard3:<span class="hljs-regexp">/etc/m</span>ongodb mongo:<span class="hljs-number">4.0</span><span class="hljs-number">.0</span> -f /etc/mongodb/mongod.conf
+docker run -d --name=shard3_2 --network=znet --ip=<span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.21</span> -v /home/devops/shard3:<span class="hljs-regexp">/etc/m</span>ongodb mongo:<span class="hljs-number">4.0</span><span class="hljs-number">.0</span> -f /etc/mongodb/mongod.conf
+docker run -d --name=shard3_3 --network=znet --ip=<span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.22</span> -v /home/devops/shard3:<span class="hljs-regexp">/etc/m</span>ongodb mongo:<span class="hljs-number">4.0</span><span class="hljs-number">.0</span> -f /etc/mongodb/mongod.conf
+</code></pre>
+<p>&#x8FDB;&#x5165;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#x914D;&#x7F6E;Shard-Server&#x526F;&#x672C;&#x96C6;</p>
+<pre><code class="lang-js"># &#x5BBF;&#x4E3B;&#x673A;
+docker exec -it shard3_1 bash
+# &#x5BB9;&#x5668;&#x4E2D;
+mongo --port 27018
+# Mongo Shell&#x4E2D;
+rs.initiate({
+    &quot;_id&quot;:&quot;shard3&quot;,
+    &quot;members&quot;:[
+        {
+            &quot;_id&quot;:0,
+            &quot;host&quot;:&quot;172.18.0.20:27018&quot;
+        },
+        {
+            &quot;_id&quot;:1,
+            &quot;host&quot;:&quot;172.18.0.21:27018&quot;
+        },
+        {
+            &quot;_id&quot;:2,
+            &quot;host&quot;:&quot;172.18.0.22:27018&quot;
+        }
+    ]
+})
+</code></pre>
+<h5 id="t7010.3.2.4 &#x542F;&#x52A8;3&#x4E2A;mongos&#x670D;&#x52A1;&#x5668;">10.3.2.4 &#x542F;&#x52A8;3&#x4E2A;mongos&#x670D;&#x52A1;&#x5668; <a href="#t7010.3.2.4 &#x542F;&#x52A8;3&#x4E2A;mongos&#x670D;&#x52A1;&#x5668;"> # </a></h5>
+<ul>
+<li>&#x8BF4;&#x660E;&#xFF1A;&#x8FD9;&#x91CC;&#x4E5F;&#x4F7F;&#x7528;&#x4E86;mongo&#x955C;&#x50CF;&#xFF0C;&#x4F46;&#x662F;&#x9700;&#x8981;&#x5F00;&#x542F;mongos&#x8FDB;&#x7A0B;&#xFF0C;mongod&#x8FDB;&#x7A0B;&#x5E76;&#x4E0D;&#x9700;&#x8981;&#x7528;&#x5230;&#x3002;</li>
+</ul>
+<pre><code class="lang-js">docker run -d --name=mongos_1 --network=znet --ip=<span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.23</span> -v /home/devops/mongos:<span class="hljs-regexp">/etc/m</span>ongodb mongo:<span class="hljs-number">4.0</span><span class="hljs-number">.0</span>
+docker run -d --name=mongos_2 --network=znet --ip=<span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.24</span> -v /home/devops/mongos:<span class="hljs-regexp">/etc/m</span>ongodb mongo:<span class="hljs-number">4.0</span><span class="hljs-number">.0</span>
+docker run -d --name=mongos_3 --network=znet --ip=<span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.25</span> -v /home/devops/mongos:<span class="hljs-regexp">/etc/m</span>ongodb mongo:<span class="hljs-number">4.0</span><span class="hljs-number">.0</span>
+</code></pre>
+<p>&#x8FDB;&#x5165;&#x6BCF;&#x4E2A;&#x5BB9;&#x5668;&#x4E2D;&#xFF0C;&#x542F;&#x52A8;mongos&#x8FDB;&#x7A0B;</p>
+<pre><code class="lang-js"># &#x5BBF;&#x4E3B;&#x673A;
+docker exec -it mongos_1 bash
+# &#x5BB9;&#x5668;&#x4E2D;
+mongos -f /etc/mongodb/mongos.conf
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x5C31;&#x5728;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;mongos&#x5BB9;&#x5668;&#x4E2D;&#x4F7F;&#x7528;mongo shell&#x8FDE;&#x63A5;mongos&#x8FDB;&#x7A0B;&#x914D;&#x7F6E;&#x5206;&#x7247;&#x96C6;&#x7FA4;</p>
+<pre><code class="lang-js"># &#x8FDE;&#x63A5;mongos&#xFF0C;&#x7AEF;&#x53E3;&#x53F7;&#x4E0E;mongos&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x8BBE;&#x5B9A;&#x4E00;&#x81F4;
+mongo -port 27020
+# &#x5C06;&#x5206;&#x7247;&#x52A0;&#x5165;&#x96C6;&#x7FA4;
+sh.addShard(&quot;shard1/172.18.0.14:27018,172.18.0.15:27018,172.18.0.16:27018&quot;)
+sh.addShard(&quot;shard2/172.18.0.17:27018,172.18.0.18:27018,172.18.0.19:27018&quot;)
+sh.addShard(&quot;shard3/172.18.0.20:27018,172.18.0.21:27018,172.18.0.22:27018&quot;)
+
+# &#x5BF9;&#x6570;&#x636E;&#x5E93;&#x5F00;&#x542F;&#x5206;&#x7247;&#x529F;&#x80FD;
+sh.enableSharding(&quot;cms&quot;)
+# &#x5BF9;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x96C6;&#x5408;&#x5F00;&#x542F;&#x5206;&#x7247;&#xFF0C;&#x5E76;&#x6307;&#x5B9A;&#x7247;&#x952E;
+sh.shardCollection(&quot;cms.user&quot;,{&quot;name&quot;:1})
+</code></pre>
+<h3 id="t7110.4 &#x5199;&#x5165;&#x6570;&#x636E;">10.4 &#x5199;&#x5165;&#x6570;&#x636E; <a href="#t7110.4 &#x5199;&#x5165;&#x6570;&#x636E;"> # </a></h3>
+<pre><code class="lang-js">use cms;
+for(var i=1;i&lt;=1000000;i++){
+    db.user.insert({name:i,age:i});
+}
+
+# &#x67E5;&#x770B;&#x5206;&#x7247;&#x72B6;&#x6001;
+sh.status()
+</code></pre>
+<h2 id="t7211. redis&#x96C6;&#x7FA4;">11. redis&#x96C6;&#x7FA4; <a href="#t7211. redis&#x96C6;&#x7FA4;"> # </a></h2>
+<ul>
+<li>&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#x5229;&#x7528;&#x5185;&#x5B58;&#x4FDD;&#x5B58;&#x6570;&#x636E;&#xFF0C;&#x8BFB;&#x5199;&#x901F;&#x5EA6;&#x8FDC;&#x8D85;&#x786C;&#x76D8;</li>
+<li>&#x9AD8;&#x901F;&#x7F13;&#x5B58;&#x53EF;&#x4EE5;&#x51CF;&#x5C11;I/O&#x64CD;&#x4F5C;&#xFF0C;&#x964D;&#x4F4E;I/O&#x538B;&#x529B; </li>
+<li>Redis&#x662F;VMware&#x5F00;&#x53D1;&#x7684;&#x5F00;&#x6E90;&#x514D;&#x8D39;&#x7684;KV&#x578B;NoSQL&#x7F13;&#x5B58;&#x4EA7;&#x54C1;</li>
+<li>Redis&#x5177;&#x6709;&#x5F88;&#x597D;&#x7684;&#x6027;&#x80FD;&#xFF0C;&#x6700;&#x591A;&#x53EF;&#x4EE5;&#x63D0;&#x4F9B;10&#x4E07;&#x6B21;/&#x79D2;&#x7684;&#x8BFB;&#x5199;</li>
+</ul>
+<h3 id="t7311.1 RedisCluster">11.1 RedisCluster <a href="#t7311.1 RedisCluster"> # </a></h3>
+<ul>
+<li>RedisCluster&#x662F;&#x5B98;&#x65B9;&#x63A8;&#x8350;&#x7684;&#xFF0C;&#x6CA1;&#x6709;&#x4E2D;&#x5FC3;&#x8282;&#x70B9;</li>
+<li>&#x65E0;&#x4E2D;&#x5FC3;&#x8282;&#x70B9;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x4E0E;redis&#x8282;&#x70B9;&#x76F4;&#x8FDE;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x4E2D;&#x95F4;&#x4EE3;&#x7406;&#x5C42;</li>
+<li>&#x6570;&#x636E;&#x53EF;&#x4EE5;&#x88AB;&#x5206;&#x7247;&#x5B58;&#x50A8;&#xFF0C;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x5B58;&#x50A8;&#x7684;&#x6570;&#x636E;&#x662F;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x9700;&#x8981;&#x63D0;&#x4F9B;&#x5197;&#x4F59;&#x8282;&#x70B9;</li>
+<li>Redis&#x7BA1;&#x7406;&#x65B9;&#x4FBF;&#xFF0C;&#x53EF;&#x4EE5;&#x968F;&#x65F6;&#x81EA;&#x884C;&#x589E;&#x52A0;&#x548C;&#x6458;&#x9664;&#x8282;&#x70B9;</li>
+</ul>
+<h3 id="t7411.2 &#x4E3B;&#x4ECE;&#x540C;&#x6B65;">11.2 &#x4E3B;&#x4ECE;&#x540C;&#x6B65; <a href="#t7411.2 &#x4E3B;&#x4ECE;&#x540C;&#x6B65;"> # </a></h3>
+<ul>
+<li>Redis&#x96C6;&#x7FA4;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x5E93;&#x590D;&#x5236;&#x662F;&#x901A;&#x8FC7;&#x4E3B;&#x4ECE;&#x540C;&#x6B65;&#x6765;&#x5B9E;&#x73B0;&#x7684;</li>
+<li>&#x4E3B;&#x8282;&#x70B9;(Master)&#x628A;&#x6570;&#x636E;&#x5206;&#x53D1;&#x7ED9;&#x4ECE;&#x8282;&#x70B9;(Slave)</li>
+<li>&#x4E3B;&#x4ECE;&#x540C;&#x6B65;&#x7684;&#x597D;&#x5904;&#x5728;&#x4E8E;&#x9AD8;&#x53EF;&#x7528;&#xFF0C;Redis&#x8282;&#x70B9;&#x6709;&#x5197;&#x4F59;&#x8BBE;&#x8BA1;</li>
+<li>Redis&#x96C6;&#x7FA4;&#x4E2D;&#x5E94;&#x8BE5;&#x5305;&#x542B;&#x5947;&#x6570;&#x4E2A;Master,&#x81F3;&#x5C11;&#x5E94;&#x8BE5;&#x6709;3&#x4E2A;Master</li>
+<li>Redis&#x96C6;&#x7FA4;&#x4E2D;&#x6BCF;&#x4E2A;Master&#x90FD;&#x5E94;&#x8BE5;&#x6709;Slave</li>
+</ul>
+<p><img src="http://img.zhufengpeixun.cn/redisconfig.jpg" alt="redisconfig"></p>
+<h3 id="t7511.3 &#x5B9E;&#x64CD;">11.3 &#x5B9E;&#x64CD; <a href="#t7511.3 &#x5B9E;&#x64CD;"> # </a></h3>
+<h4 id="t7611.3.1 &#x5B89;&#x88C5;Redis&#x955C;&#x50CF;">11.3.1 &#x5B89;&#x88C5;Redis&#x955C;&#x50CF; <a href="#t7611.3.1 &#x5B89;&#x88C5;Redis&#x955C;&#x50CF;"> # </a></h4>
+<ul>
+<li>&#x5BFC;&#x5165;&#x672C;&#x5730;Redis&#x955C;&#x50CF;&#x6587;&#x4EF6;&#xFF0C;&#x8FD0;&#x884C;Redis&#x5BB9;&#x5668;<pre><code class="lang-js">docker pull zhangrenyang/redis:latest
+docker tag zhangrenyang/redis:latest zredis
+</code></pre>
+<h4 id="t7711.3.2 &#x542F;&#x52A8;&#x5BB9;&#x5668;">11.3.2 &#x542F;&#x52A8;&#x5BB9;&#x5668; <a href="#t7711.3.2 &#x542F;&#x52A8;&#x5BB9;&#x5668;"> # </a></h4>
+<pre><code class="lang-js">docker run -it -d --name redis1 -p <span class="hljs-number">5001</span>:<span class="hljs-number">6379</span> --net=znet --ip <span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.23</span> zredis bash
+docker run -it -d --name redis2 -p <span class="hljs-number">5002</span>:<span class="hljs-number">6379</span> --net=znet --ip <span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.24</span> zredis bash
+docker run -it -d --name redis3 -p <span class="hljs-number">5003</span>:<span class="hljs-number">6379</span> --net=znet --ip <span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.25</span> zredis bash
+docker run -it -d --name redis4 -p <span class="hljs-number">5004</span>:<span class="hljs-number">6379</span> --net=znet --ip <span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.26</span> zredis bash
+docker run -it -d --name redis5 -p <span class="hljs-number">5005</span>:<span class="hljs-number">6379</span> --net=znet --ip <span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.27</span> zredis bash
+docker run -it -d --name redis6 -p <span class="hljs-number">5006</span>:<span class="hljs-number">6379</span> --net=znet --ip <span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.28</span> zredis bash
+</code></pre>
+</li>
+</ul>
+<h4 id="t7811.3.3 &#x914D;&#x7F6E;&#x6587;&#x4EF6;">11.3.3 &#x914D;&#x7F6E;&#x6587;&#x4EF6; <a href="#t7811.3.3 &#x914D;&#x7F6E;&#x6587;&#x4EF6;"> # </a></h4>
+<p>/user/redis/redis.conf</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x53C2;&#x6570;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">daemonize yes</td>
+<td style="text-align:left">&#x4EE5;&#x540E;&#x53F0;&#x6A21;&#x5F0F;&#x8FD0;&#x884C;</td>
+</tr>
+<tr>
+<td style="text-align:left">cluster-enabled yes</td>
+<td style="text-align:left">&#x5F00;&#x542F;&#x96C6;&#x7FA4;</td>
+</tr>
+<tr>
+<td style="text-align:left">cluster-config-filter nodes.conf</td>
+<td style="text-align:left">&#x96C6;&#x7FA4;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td style="text-align:left">cluster-node-timeout 15000</td>
+<td style="text-align:left">&#x8D85;&#x65F6;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td style="text-align:left">appendonly yes</td>
+<td style="text-align:left">&#x5F00;&#x542F;AOF&#x6A21;&#x5F0F;&#xFF0C;&#x5B9E;&#x73B0;&#x65E5;&#x5FD7;&#x6062;&#x590D;&#x6570;&#x636E;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="t7911.3.4 &#x914D;&#x7F6E;&#x96C6;&#x7FA4;">11.3.4 &#x914D;&#x7F6E;&#x96C6;&#x7FA4; <a href="#t7911.3.4 &#x914D;&#x7F6E;&#x96C6;&#x7FA4;"> # </a></h4>
+<pre><code class="lang-js">cp /usr/redis/src/redis-trib.rb /usr/redis/cluster
+cd /usr/redis/cluster
+apt-<span class="hljs-keyword">get</span> install ruby
+apt-<span class="hljs-keyword">get</span> install rubygems
+gem install redis
+
+./redis-trib.rb create --replicas 1 172.18.0.23:6379 172.18.0.24:6379 172.18.0.25:6379 172.18.0.26:6379 172.18.0.27:6379 172.18.0.28:6379 
+</code></pre>
+<p>--replicas 1 &#x53C2;&#x6570;&#x8868;&#x793A;&#x4E3A;&#x6BCF;&#x4E2A;&#x4E3B;&#x8282;&#x70B9;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4ECE;&#x8282;&#x70B9;</p>
+<h2 id="t8012.&#x6570;&#x636E;&#x5E93;&#x5907;&#x4EFD;">12.&#x6570;&#x636E;&#x5E93;&#x5907;&#x4EFD; <a href="#t8012.&#x6570;&#x636E;&#x5E93;&#x5907;&#x4EFD;"> # </a></h2>
+<h3 id="t8112.1 mysql">12.1 mysql <a href="#t8112.1 mysql"> # </a></h3>
+<pre><code class="lang-js">wget -i -c http:<span class="hljs-comment">//dev.mysql.com/get/mysql57-community-release-el7-10.noarch.rpm</span>
+yum -y install mysql57-community-release-el7<span class="hljs-number">-10.n</span>oarch.rpm
+yum -y install mysql-community-server
+systemctl start  mysqld.service
+systemctl status mysqld.service
+ mysql -uroot -p
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-meta">#!/bin/bash</span>
+DATE=$(date +%F_%H-%M-%S)
+HOST=<span class="hljs-number">192.168</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>
+DB=test
+USER=root
+PASS=<span class="hljs-number">123456</span>
+MAIL=<span class="hljs-string">&quot;83687401@qq.com&quot;</span>
+BACKUP_DIR=<span class="hljs-regexp">/data/</span>db_backup
+SQL_FILE=${DB}_FULL_${DATE}.sql
+cd $BACKUP_DIR
+mysqldump -h$HOST -u$USER -p$PASS &gt;  $SQL_FILE
+echo <span class="hljs-string">&quot;$DATE &#x5907;&#x4EFD;&#x6210;&#x529F;&quot;</span> | mail -s <span class="hljs-string">&quot;&#x5907;&#x4EFD;&#x6210;&#x529F;&#x901A;&#x77E5;&quot;</span> $MAIL
+</code></pre>
+<h3 id="t8212.2 mongodb&#x5907;&#x4EFD;">12.2 mongodb&#x5907;&#x4EFD; <a href="#t8212.2 mongodb&#x5907;&#x4EFD;"> # </a></h3>
+<pre><code class="lang-js">dump=<span class="hljs-regexp">/usr/</span>local/mongodb/bin/mongodump
+out_dir=<span class="hljs-regexp">/media/</span>sf_mongobak/dump_bak
+tar_dir=<span class="hljs-regexp">/media/</span>sf_mongobak/tar_bak
+mkdir -p $out_dir/$sysdate
+$dump -h <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span> -d masterdata -o $out_dir/$sysdate
+exit
+</code></pre>
+<h2 id="t8313.&#x76D1;&#x63A7;&#x4E3B;&#x673A;&#x72B6;&#x6001;">13.&#x76D1;&#x63A7;&#x4E3B;&#x673A;&#x72B6;&#x6001; <a href="#t8313.&#x76D1;&#x63A7;&#x4E3B;&#x673A;&#x72B6;&#x6001;"> # </a></h2>
+<h3 id="t8413.1 &#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x989C;&#x8272;&#x8F93;&#x51FA;&#x5B57;&#x7B26;&#x4E32;&#x51FD;&#x6570;">13.1 &#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x989C;&#x8272;&#x8F93;&#x51FA;&#x5B57;&#x7B26;&#x4E32;&#x51FD;&#x6570; <a href="#t8413.1 &#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x989C;&#x8272;&#x8F93;&#x51FA;&#x5B57;&#x7B26;&#x4E32;&#x51FD;&#x6570;"> # </a></h3>
+<pre><code class="lang-js">#!/bin/bash
+#description: test
+function echo_color(){
+  if [ $1 == &quot;green&quot; ]; then
+     echo -e &quot;\033[32;40m$2\033[0m&quot;
+  elif [ $1 == &quot;red&quot; ]; then
+     echo -e &quot;\033[31;40m$2\033[0m&quot;  
+  fi    
+}
+
+function echo_color2(){
+  case $1 in 
+     green)
+        echo -e &quot;\033[32;40m$2\033[0m&quot;
+        ;;
+     red)
+        echo -e &quot;\033[31;40m$2\033[0m&quot;
+        ;;   
+       *) 
+         echo &quot;echo_color2 {green|red} string&quot;
+  esac           
+}
+
+echo -e &quot;\033[32;40mshell\033[0m&quot;
+echo -e &quot;\033[33;40mshell\033[0m&quot;
+
+echo_color green hello
+echo_color red world
+
+</code></pre>
+<h3 id="t8513.2. &#x6279;&#x91CF;&#x521B;&#x5EFA;&#x7528;&#x6237;">13.2. &#x6279;&#x91CF;&#x521B;&#x5EFA;&#x7528;&#x6237; <a href="#t8513.2. &#x6279;&#x91CF;&#x521B;&#x5EFA;&#x7528;&#x6237;"> # </a></h3>
+<pre><code class="lang-sh"><span class="hljs-meta">#!/bin/bash</span>
+<span class="hljs-keyword">function</span> <span class="hljs-function"><span class="hljs-title">echo_color</span></span>(){
+  <span class="hljs-keyword">if</span> [ <span class="hljs-variable">$1</span> == <span class="hljs-string">&quot;green&quot;</span> ]; <span class="hljs-keyword">then</span>
+     <span class="hljs-built_in">echo</span> -e <span class="hljs-string">&quot;\033[32;40m<span class="hljs-variable">$2</span>\033[0m&quot;</span>
+  <span class="hljs-keyword">elif</span> [ <span class="hljs-variable">$1</span> == <span class="hljs-string">&quot;red&quot;</span> ]; <span class="hljs-keyword">then</span>
+     <span class="hljs-built_in">echo</span> -e <span class="hljs-string">&quot;\033[31;40m<span class="hljs-variable">$2</span>\033[0m&quot;</span>  
+  <span class="hljs-keyword">fi</span>    
+}
+
+<span class="hljs-keyword">for</span> USER <span class="hljs-keyword">in</span> user{1..5}; <span class="hljs-keyword">do</span>
+  <span class="hljs-keyword">if</span> ! id <span class="hljs-variable">$USER</span> &amp;&gt;/dev/null; <span class="hljs-keyword">then</span>
+    PASS=$(<span class="hljs-built_in">echo</span> <span class="hljs-variable">$RANDOM</span> | md5sum | cut -c 1-8)
+    useradd <span class="hljs-variable">$USER</span>
+    <span class="hljs-built_in">echo</span> <span class="hljs-variable">$PASS</span> | passwd --stdin <span class="hljs-variable">$USER</span> &amp;&gt; /dev/null
+    <span class="hljs-built_in">echo</span> -e <span class="hljs-string">&quot;<span class="hljs-variable">$USER</span>\t<span class="hljs-variable">$PASS</span>&quot;</span> &gt;&gt;user_file
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$USER</span> user create successfully.&quot;</span>
+  <span class="hljs-keyword">else</span>
+    echo_color red <span class="hljs-string">&quot;<span class="hljs-variable">$USER</span> already exists.&quot;</span>;  
+  <span class="hljs-keyword">fi</span>
+<span class="hljs-keyword">done</span>
+</code></pre>
+<h3 id="t8613.3. &#x68C0;&#x67E5;&#x4E3B;&#x673A;&#x5B58;&#x6D3B;&#x72B6;&#x6001;">13.3. &#x68C0;&#x67E5;&#x4E3B;&#x673A;&#x5B58;&#x6D3B;&#x72B6;&#x6001; <a href="#t8613.3. &#x68C0;&#x67E5;&#x4E3B;&#x673A;&#x5B58;&#x6D3B;&#x72B6;&#x6001;"> # </a></h3>
+<h4 id="t8713.3.1 &#x5C06;&#x9519;&#x8BEF;IP&#x653E;&#x5230;&#x6570;&#x7EC4;&#x4E2D;&#x91CC;&#x9762;&#x5224;&#x65AD;&#x662F;&#x5426;ping&#x5931;&#x8D25;&#x4E09;&#x6B21;">13.3.1 &#x5C06;&#x9519;&#x8BEF;IP&#x653E;&#x5230;&#x6570;&#x7EC4;&#x4E2D;&#x91CC;&#x9762;&#x5224;&#x65AD;&#x662F;&#x5426;ping&#x5931;&#x8D25;&#x4E09;&#x6B21; <a href="#t8713.3.1 &#x5C06;&#x9519;&#x8BEF;IP&#x653E;&#x5230;&#x6570;&#x7EC4;&#x4E2D;&#x91CC;&#x9762;&#x5224;&#x65AD;&#x662F;&#x5426;ping&#x5931;&#x8D25;&#x4E09;&#x6B21;"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-meta">#!/bin/bash</span>
+IP_LIST=<span class="hljs-string">&quot;192.168.0.1 192.168.0.2&quot;</span>
+<span class="hljs-keyword">for</span> IP <span class="hljs-keyword">in</span> $IP_LIST; <span class="hljs-keyword">do</span>
+  <span class="hljs-keyword">if</span> ping -c <span class="hljs-number">1</span> $IP &amp;&gt;<span class="hljs-regexp">/dev/</span><span class="hljs-literal">null</span>; then
+     echo <span class="hljs-string">&quot;$IP is ok.&quot;</span>
+  <span class="hljs-keyword">else</span>
+     echo <span class="hljs-string">&quot;$IP is wrong!&quot;</span>
+  fi
+done       
+</code></pre>
+<pre><code class="lang-js">#!/bin/bash
+IP_LIST=&quot;192.168.0.1 192.168.0.222&quot;
+for IP in $IP_LIST; do
+  NUM=1
+  while [ $NUM -le 3 ]; do
+      if ping -c 1 $IP &amp;&gt;/dev/null; then
+        echo &quot;$IP is ok.&quot;
+        break
+      else
+        echo $NUM
+        FAIL_COUNT[$NUM]=$IP
+      fi
+      let NUM++
+  done
+  echo ${#FAIL_COUNT[*]}
+  if [ ${#FAIL_COUNT[*]} -eq 3 ]; then
+    echo &quot;$IP is unreachable.&quot; 
+  fi
+  unset FAIL_COUNT[*]
+done      
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-meta">#!/bin/bash</span>
+IP_LIST=<span class="hljs-string">&quot;192.168.0.1 192.168.0.222&quot;</span>
+<span class="hljs-keyword">for</span> IP <span class="hljs-keyword">in</span> $IP_LIST; <span class="hljs-keyword">do</span>
+  FAIL_COUNT=<span class="hljs-number">1</span>
+  <span class="hljs-keyword">for</span> ((i=<span class="hljs-number">1</span>;i&lt;=<span class="hljs-number">3</span>;i++)) <span class="hljs-keyword">do</span>
+    <span class="hljs-keyword">if</span> ping -c <span class="hljs-number">1</span> $IP &amp;&gt;<span class="hljs-regexp">/dev/</span><span class="hljs-literal">null</span>; then
+        echo <span class="hljs-string">&quot;$IP is ok.&quot;</span>
+        <span class="hljs-keyword">break</span>
+    <span class="hljs-keyword">else</span>
+        echo $NUM
+        <span class="hljs-keyword">let</span> FAIL_COUNT++
+    fi
+  done
+  <span class="hljs-keyword">if</span> [ $FAIL_COUNT -eq <span class="hljs-number">3</span> ]; then
+    echo <span class="hljs-string">&quot;$IP is unreachable.&quot;</span> 
+  fi
+done      
+</code></pre>
+<h4 id="t8813.4 &#x83B7;&#x5F97;CPU&#x5229;&#x7528;&#x7387;">13.4 &#x83B7;&#x5F97;CPU&#x5229;&#x7528;&#x7387; <a href="#t8813.4 &#x83B7;&#x5F97;CPU&#x5229;&#x7528;&#x7387;"> # </a></h4>
+<ul>
+<li>&#x501F;&#x52A9;<code>vmstat</code>&#x5DE5;&#x5177;&#x6765;&#x5206;&#x6790;CPU&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-meta">#!/bin/bash</span>
+cpu(){
+    local user system idle cwait
+    user=$(vmstat | awk <span class="hljs-string">&apos;NR==3{print $13}&apos;</span>)
+    system=$(vmstat | awk <span class="hljs-string">&apos;NR==3{print $14}&apos;</span>)
+    idea=$(vmstat | awk <span class="hljs-string">&apos;NR==3{print $15}&apos;</span>)
+    cwait=$(vmstat | awk <span class="hljs-string">&apos;NR==3{print $16}&apos;</span>)
+    echo <span class="hljs-string">&quot;user cpu: $user%&quot;</span>
+    echo <span class="hljs-string">&quot;system cpu: $system%&quot;</span>
+    echo <span class="hljs-string">&quot;idle cpu: $idea%&quot;</span>
+    echo <span class="hljs-string">&quot;wait: $cwait%&quot;</span>
+}
+cpu
+memory(){
+  local total used free
+  used=$(free -m | awk <span class="hljs-string">&apos;NR==3{print $3}&apos;</span>)
+  free=$(free -m | awak <span class="hljs-string">&apos;NR==3{print $4}&apos;</span>)
+  total=$(($used+$free))
+  echo <span class="hljs-string">&quot;&#x5185;&#x5B58;&#x603B;&#x8BA1;: $(total)M&quot;</span>
+  echo <span class="hljs-string">&quot;&#x5185;&#x5B58;&#x4F7F;&#x7528;: $(used)M&quot;</span>
+  echo <span class="hljs-string">&quot;&#x5185;&#x5B58;&#x5269;&#x4F59;: $(free)M&quot;</span>
+}
+memory
+
+disk(){
+  local mount total used used_percent free
+  part=$(df -h|awk <span class="hljs-string">&apos;BEGIN{OFS=&quot;=&quot;}/^\/dev/{print $6,$2,$3,$4,$5}&apos;</span>)
+  echo $p
+  <span class="hljs-keyword">for</span> p <span class="hljs-keyword">in</span>  $part; <span class="hljs-keyword">do</span>
+    mount=$(echo $p | cut -d<span class="hljs-string">&quot;=&quot;</span> -f1)
+    total=$(echo $p | cut -d<span class="hljs-string">&quot;=&quot;</span> -f2)
+    used=$(echo $p | cut -d<span class="hljs-string">&quot;=&quot;</span> -f3)
+    free=$(echo $p | cut -d<span class="hljs-string">&quot;=&quot;</span> -f4)
+    used_percent=$(echo $p | cut -d<span class="hljs-string">&quot;=&quot;</span> -f5|cut -d<span class="hljs-string">&quot;%&quot;</span> -f1)
+    <span class="hljs-keyword">if</span> [ $used_percent -ge <span class="hljs-number">5</span> ]; then
+      echo <span class="hljs-string">&quot;&#x6302;&#x8F7D;&#x70B9;: $mount&quot;</span>
+      echo <span class="hljs-string">&quot;&#x603B;&#x5927;&#x5C0F;: $total&quot;</span>
+      echo <span class="hljs-string">&quot;&#x4F7F;&#x7528;&#x5927;&#x5C0F;: $used&quot;</span>
+      echo <span class="hljs-string">&quot;&#x7A7A;&#x95F2;&#x5927;&#x5C0F;: $free&quot;</span>
+      echo <span class="hljs-string">&quot;&#x4F7F;&#x7528;&#x767E;&#x5206;&#x6BD4;: $used_percent%&quot;</span>
+    fi  
+  done
+}
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-keyword">while</span> <span class="hljs-literal">true</span>; <span class="hljs-keyword">do</span> bash system.sh; sleep <span class="hljs-number">1</span>s;done
+</code></pre>
+<h4 id="t8913.5 &#x76D1;&#x63A7;&#x7F51;&#x7EDC;&#x6D41;&#x91CF;">13.5 &#x76D1;&#x63A7;&#x7F51;&#x7EDC;&#x6D41;&#x91CF; <a href="#t8913.5 &#x76D1;&#x63A7;&#x7F51;&#x7EDC;&#x6D41;&#x91CF;"> # </a></h4>
+<pre><code class="lang-js">
+
+traffic(){
+    local old_in old_out new_in new_out
+    old_in=$(ifconfig eth0 | awk <span class="hljs-string">&apos;/RX/&amp;&amp;/bytes/{print $2}&apos;</span> |cut -d<span class="hljs-string">&quot;:&quot;</span> -f2)
+    old_out=$(ifconfig eth0 | awk <span class="hljs-string">&apos;/TX/&amp;&amp;/bytes/{print $2}&apos;</span> |cut -d<span class="hljs-string">&quot;:&quot;</span> -f2)
+    sleep <span class="hljs-number">1</span>s
+    new_in=$(ifconfig eth0 | awk <span class="hljs-string">&apos;/RX/&amp;&amp;/bytes/{print $2}&apos;</span> |cut -d<span class="hljs-string">&quot;:&quot;</span> -f2)
+    new_out=$(ifconfig eth0 | awk <span class="hljs-string">&apos;/TX/&amp;&amp;/bytes/{print $2}&apos;</span> |cut -d<span class="hljs-string">&quot;:&quot;</span> -f2)
+    <span class="hljs-keyword">in</span>=$(($new_in-$old_in))
+    out=$(($new_out-$old_out))
+    echo <span class="hljs-string">&quot;${in}B/s ${out}B/s&quot;</span>
+}
+</code></pre>
+<h4 id="t9013.6 &#x76D1;&#x63A7;&#x7F51;&#x7AD9;&#x72B6;&#x6001;">13.6 &#x76D1;&#x63A7;&#x7F51;&#x7AD9;&#x72B6;&#x6001; <a href="#t9013.6 &#x76D1;&#x63A7;&#x7F51;&#x7AD9;&#x72B6;&#x6001;"> # </a></h4>
+<pre><code class="lang-js">curl -o /dev/<span class="hljs-literal">null</span> -s -w <span class="hljs-string">&quot;%{http_code}&quot;</span> http:<span class="hljs-comment">//www.baidu.com</span>
+
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">check_url</span>(<span class="hljs-params"></span>)</span>{
+    HTTP_CODE=$(curl -o /dev/<span class="hljs-literal">null</span> -s -w <span class="hljs-string">&quot;%{http_code}&quot;</span> $<span class="hljs-number">1</span>)
+    <span class="hljs-keyword">if</span> [ $HTTP_CODE -ne <span class="hljs-number">200</span> ]; then
+      echo <span class="hljs-string">&quot;$1&#x4E0D;&#x53EF;&#x8FBE;&quot;</span>
+    <span class="hljs-keyword">else</span>
+      echo <span class="hljs-string">&quot;$1&#x72B6;&#x6001;&#x6B63;&#x5E38;&quot;</span>  
+    fi
+}
+
+URL_LIST=<span class="hljs-string">&quot;http://www.baidu.com http://www.baidu2222.com&quot;</span>
+
+<span class="hljs-keyword">for</span> URL <span class="hljs-keyword">in</span> $URL_LIST; <span class="hljs-keyword">do</span>
+  check_url $URL
+done
+</code></pre>
+<h4 id="t9113.7 &#x76D1;&#x63A7;nginx&#x72B6;&#x6001;">13.7 &#x76D1;&#x63A7;nginx&#x72B6;&#x6001; <a href="#t9113.7 &#x76D1;&#x63A7;nginx&#x72B6;&#x6001;"> # </a></h4>
+<pre><code class="lang-js"> #!<span class="hljs-regexp">/bin/</span>bash
+Web=<span class="hljs-string">`ps -ef |grep nginx|grep -v grep|wc -l`</span>
+ <span class="hljs-keyword">if</span> [ $Web -eq <span class="hljs-number">2</span> ];then
+    echo <span class="hljs-string">&quot;your nginx is running&quot;</span>
+      exit <span class="hljs-number">0</span>
+     <span class="hljs-keyword">else</span>
+       service nginx start
+        exit <span class="hljs-number">1</span>
+fi
+</code></pre>
+<h4 id="t9213.8 &#x76D1;&#x63A7;mysql&#x72B6;&#x6001;">13.8 &#x76D1;&#x63A7;mysql&#x72B6;&#x6001; <a href="#t9213.8 &#x76D1;&#x63A7;mysql&#x72B6;&#x6001;"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-meta">#!/bin/sh</span>
+PortNum=<span class="hljs-string">`netstat -lnt|grep 3306|wc -l`</span>
+<span class="hljs-keyword">if</span> [ $PortNum -eq <span class="hljs-number">1</span> ]
+then
+ echo <span class="hljs-string">&quot;mysqld is running.&quot;</span>
+<span class="hljs-keyword">else</span>
+ echo <span class="hljs-string">&quot;mysqld is stoped.&quot;</span>
+fi
+</code></pre>
+<h2 id="t9312.&#x53C2;&#x8003;">12.&#x53C2;&#x8003; <a href="#t9312.&#x53C2;&#x8003;"> # </a></h2>
+<h3 id="t9412. &#x7F51;&#x5740;">12. &#x7F51;&#x5740; <a href="#t9412. &#x7F51;&#x5740;"> # </a></h3>
+<ul>
+<li><a href="https://www.linux.org/">linux</a></li>
+<li><a href="https://www.docker.com/">docker</a></li>
+<li><a href="http://nginx.org/">nginx</a></li>
+<li><a href="https://www.mysql.com/">mysql</a></li>
+<li><a href="https://www.mongodb.com/">mongodb</a></li>
+<li><a href="https://xshell.en.softonic.com/">xshell</a></li>
+<li><a href="https://www.netsarang.com/zh/xftp/">xftp</a></li>
+<li><a href="https://robomongo.org/">robomongo</a></li>
+<li><a href="https://www.navicat.com.cn/products/">navicat</a></li>
+<li><a href="https://redis.io/">redis</a></li>
+</ul>
+<h3 id="t9512.&#x914D;&#x7F6E;node.js">12.&#x914D;&#x7F6E;node.js <a href="#t9512.&#x914D;&#x7F6E;node.js"> # </a></h3>
+<h4 id="t9612.1 &#x5B89;&#x88C5;nvm">12.1 &#x5B89;&#x88C5;nvm <a href="#t9612.1 &#x5B89;&#x88C5;nvm"> # </a></h4>
+<ul>
+<li><a href="https://github.com/nvm-sh/nvm">nvm</a></li>
+</ul>
+<pre><code class="lang-js">curl -o- https:<span class="hljs-comment">//raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash</span>
+source /root/.bashrc
+nvm install stable
+npm i cnpm -g
+cnpm i nrm -g
+cnpm i pm2 -g
+</code></pre>
+
+    </div>
+</div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+    aria-labelledby="loginModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="loginModalLabel">请登录</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="username" class="control-label">姓名:</label>
+                        <input type="text" class="form-control" id="username" placeholder="珠峰架构VIP会员系统用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">密码:</label>
+                        <input type="text" class="form-control" id="password" placeholder="珠峰架构VIP会员系统密码">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                    data-dismiss="modal">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

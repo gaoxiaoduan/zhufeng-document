@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+
+
+
+
+<div class="warpper">
+
+    <div class="page-toc">
+        <ul><li><a href="#t01.loader运行的总体流程">1.loader运行的总体流程</a></li><li><a href="#t12. loader配置">2. loader配置</a><ul><li><a href="#t22.1 匹配(test)单个 loader">2.1 匹配(test)单个 loader</a></li><li><a href="#t32.2 匹配(test)多个 loaders">2.2 匹配(test)多个 loaders</a></li><li><a href="#t42.3 npm link">2.3 npm link</a></li><li><a href="#t52.4 alias">2.4 alias</a></li></ul></li><li><a href="#t63. loader用法">3. loader用法</a><ul><li><a href="#t73.1 单个loader用法">3.1 单个loader用法</a></li><li><a href="#t83.2 多个loader">3.2 多个loader</a></li></ul></li><li><a href="#t94 用法准则">4 用法准则</a><ul><li><a href="#t104.1 简单">4.1 简单</a></li><li><a href="#t114.2 链式(Chaining)">4.2 链式(Chaining)</a></li><li><a href="#t124.3 模块化(Modular)">4.3 模块化(Modular)</a></li><li><a href="#t134.4 无状态(Stateless)">4.4 无状态(Stateless)</a></li><li><a href="#t144.5 loader工具库">4.5 loader工具库</a></li><li><a href="#t154.6 loader依赖">4.6 loader依赖</a></li><li><a href="#t164.7 模块依赖">4.7 模块依赖</a></li><li><a href="#t174.8 绝对路径">4.8 绝对路径</a></li><li><a href="#t184.9 同等依赖">4.9 同等依赖</a></li></ul></li><li><a href="#t195. API">5. API</a><ul><li><a href="#t205.1  缓存结果">5.1  缓存结果</a></li><li><a href="#t215.2 异步">5.2 异步</a></li><li><a href="#t225.3  返回其它结果">5.3  返回其它结果</a></li><li><a href="#t235.4 raw loader">5.4 raw loader</a></li><li><a href="#t245.5 获得options">5.5 获得options</a></li><li><a href="#t255.6 其它 Loader API">5.6 其它 Loader API</a></li></ul></li><li><a href="#t266.loader实战">6.loader实战</a><ul><li><a href="#t276.1 项目准备">6.1 项目准备</a><ul><li><a href="#t286.1.1 webpack.config.js">6.1.1 webpack.config.js</a></li><li><a href="#t296.1.2 src\index.js">6.1.2 src\index.js</a></li><li><a href="#t306.1.3 src\index.html">6.1.3 src\index.html</a></li></ul></li><li><a href="#t316.2 babel-loader">6.2 babel-loader</a></li><li><a href="#t326.3 banner-loader">6.3 banner-loader</a><ul><li><a href="#t336.3.1 banner-loader.js">6.3.1 banner-loader.js</a></li><li><a href="#t346.3.2 banner.js">6.3.2 banner.js</a></li><li><a href="#t356.3.3 webpack.config.js">6.3.3 webpack.config.js</a></li></ul></li><li><a href="#t366.4 file">6.4 file</a><ul><li><a href="#t376.4.1 file-loader">6.4.1 file-loader</a></li><li><a href="#t386.4.2 url-loader">6.4.2 url-loader</a></li></ul></li><li><a href="#t396.5 pitch">6.5 pitch</a><ul><li><a href="#t406.5.1 loaders\loader1.js">6.5.1 loaders\loader1.js</a></li><li><a href="#t416.5.2 loaders\loader2.js">6.5.2 loaders\loader2.js</a></li><li><a href="#t426.5.3 loaders\loader3.js">6.5.3 loaders\loader3.js</a></li><li><a href="#t436.5.4 webpack.config.js">6.5.4 webpack.config.js</a></li></ul></li><li><a href="#t446.6 run-loader">6.6 run-loader</a></li><li><a href="#t456.7 样式处理">6.7 样式处理</a><ul><li><a href="#t466.7.1 loader类型">6.7.1 loader类型</a></li><li><a href="#t476.7.2 使用less-loader">6.7.2 使用less-loader</a><ul><li><a href="#t486.7.2.1 index.js">6.7.2.1 index.js</a></li><li><a href="#t496.7.2.2 src\index.less">6.7.2.2 src\index.less</a></li><li><a href="#t506.7.2.3 src\index.html">6.7.2.3 src\index.html</a></li><li><a href="#t516.7.2.4 webpack.config.js">6.7.2.4 webpack.config.js</a></li></ul></li><li><a href="#t526.7.3 less-loader.js">6.7.3 less-loader.js</a></li><li><a href="#t536.7.4 style-loader">6.7.4 style-loader</a></li><li><a href="#t546.7.5 两个左侧模块连用">6.7.5 两个左侧模块连用</a><ul><li><a href="#t556.7.5.1 less-loader.js">6.7.5.1 less-loader.js</a></li><li><a href="#t566.7.5.2 style-loader.js">6.7.5.2 style-loader.js</a></li></ul></li><li><a href="#t576.7.6 css-loader.js">6.7.6 css-loader.js</a><ul><li><a href="#t586.7.6.1 src\index.js">6.7.6.1 src\index.js</a></li><li><a href="#t596.7.6.2 src\style.css">6.7.6.2 src\style.css</a></li><li><a href="#t606.7.6.3 src\global.css">6.7.6.3 src\global.css</a></li><li><a href="#t616.7.6.4 webpack.config.js">6.7.6.4 webpack.config.js</a></li><li><a href="#t626.7.6.5 css-loader.js">6.7.6.5 css-loader.js</a></li></ul></li></ul></li></ul></li><li><a href="#t63参考">参考</a><ul><li><a href="#t641. PostCSS">1. PostCSS</a></li><li><a href="#t652. 文档">2. 文档</a></li><li><a href="#t663. 类型">3. 类型</a></li><li><a href="#t674.AST节点">4.AST节点</a></li><li><a href="#t685.操作方法">5.操作方法</a><ul><li><a href="#t695.1 遍历">5.1 遍历</a></li><li><a href="#t705.2 处理">5.2 处理</a></li><li><a href="#t715.3 postcss plugin">5.3 postcss plugin</a></li></ul></li><li><a href="#t725.4 直接调用postcss命名空间下的方法">5.4 直接调用postcss命名空间下的方法</a></li></ul></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <h2 id="t01.loader&#x8FD0;&#x884C;&#x7684;&#x603B;&#x4F53;&#x6D41;&#x7A0B;">1.loader&#x8FD0;&#x884C;&#x7684;&#x603B;&#x4F53;&#x6D41;&#x7A0B; <a href="#t01.loader&#x8FD0;&#x884C;&#x7684;&#x603B;&#x4F53;&#x6D41;&#x7A0B;"> # </a></h2>
+<ol>
+<li>Compiler.js&#x4E2D;&#x4F1A;&#x5C06;&#x7528;&#x6237;&#x914D;&#x7F6E;&#x4E0E;&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;&#x5408;&#x5E76;&#xFF0C;&#x5176;&#x4E2D;&#x5C31;&#x5305;&#x62EC;&#x4E86;loader&#x90E8;&#x5206;</li>
+<li>webpack&#x5C31;&#x4F1A;&#x6839;&#x636E;&#x914D;&#x7F6E;&#x521B;&#x5EFA;&#x4E24;&#x4E2A;&#x5173;&#x952E;&#x7684;&#x5BF9;&#x8C61;&#x2014;&#x2014;<code>NormalModuleFactory</code>&#x548C;<code>ContextModuleFactory</code>&#x3002;&#x5B83;&#x4EEC;&#x76F8;&#x5F53;&#x4E8E;&#x662F;&#x4E24;&#x4E2A;&#x7C7B;&#x5DE5;&#x5382;&#xFF0C;&#x901A;&#x8FC7;&#x5176;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x76F8;&#x5E94;&#x7684;<code>NormalModule</code>&#x548C;<code>ContextModule</code></li>
+<li>&#x5728;&#x5DE5;&#x5382;&#x521B;&#x5EFA;NormalModule&#x5B9E;&#x4F8B;&#x4E4B;&#x524D;&#x8FD8;&#x8981;&#x901A;&#x8FC7;loader&#x7684;resolver&#x6765;&#x89E3;&#x6790;loader&#x8DEF;&#x5F84;</li>
+<li>&#x5728;NormalModule&#x5B9E;&#x4F8B;&#x521B;&#x5EFA;&#x4E4B;&#x540E;&#xFF0C;&#x5219;&#x4F1A;&#x901A;&#x8FC7;&#x5176;.build()&#x65B9;&#x6CD5;&#x6765;&#x8FDB;&#x884C;&#x6A21;&#x5757;&#x7684;&#x6784;&#x5EFA;&#x3002;&#x6784;&#x5EFA;&#x6A21;&#x5757;&#x7684;&#x7B2C;&#x4E00;&#x6B65;&#x5C31;&#x662F;&#x4F7F;&#x7528;loader&#x6765;&#x52A0;&#x8F7D;&#x5E76;&#x5904;&#x7406;&#x6A21;&#x5757;&#x5185;&#x5BB9;&#x3002;&#x800C;loader-runner&#x8FD9;&#x4E2A;&#x5E93;&#x5C31;&#x662F;webpack&#x4E2D;loader&#x7684;&#x8FD0;&#x884C;&#x5668;</li>
+<li>&#x6700;&#x540E;&#xFF0C;&#x5C06;loader&#x5904;&#x7406;&#x5B8C;&#x7684;&#x6A21;&#x5757;&#x5185;&#x5BB9;&#x8F93;&#x51FA;&#xFF0C;&#x8FDB;&#x5165;&#x540E;&#x7EED;&#x7684;&#x7F16;&#x8BD1;&#x6D41;&#x7A0B;</li>
+</ol>
+<p><img src="http://img.zhufengpeixun.cn/loader.jpg" alt="loader"></p>
+<h2 id="t12. loader&#x914D;&#x7F6E;">2. loader&#x914D;&#x7F6E; <a href="#t12. loader&#x914D;&#x7F6E;"> # </a></h2>
+<p><code>loader</code>&#x662F;&#x5BFC;&#x51FA;&#x4E3A;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x7684;<code>node</code>&#x6A21;&#x5757;&#x3002;&#x8BE5;&#x51FD;&#x6570;&#x5728;<code>loader</code>&#x8F6C;&#x6362;&#x8D44;&#x6E90;&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528;&#x3002;&#x7ED9;&#x5B9A;&#x7684;&#x51FD;&#x6570;&#x5C06;&#x8C03;&#x7528;<code>loader API</code>&#xFF0C;&#x5E76;&#x901A;&#x8FC7;<code>this</code>&#x4E0A;&#x4E0B;&#x6587;&#x8BBF;&#x95EE;&#x3002;</p>
+<h3 id="t22.1 &#x5339;&#x914D;(test)&#x5355;&#x4E2A; loader">2.1 &#x5339;&#x914D;(test)&#x5355;&#x4E2A; loader <a href="#t22.1 &#x5339;&#x914D;(test)&#x5355;&#x4E2A; loader"> # </a></h3>
+<p>&#x5339;&#x914D;(test)&#x5355;&#x4E2A; loader&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x7B80;&#x5355;&#x901A;&#x8FC7;&#x5728; rule &#x5BF9;&#x8C61;&#x8BBE;&#x7F6E; path.resolve &#x6307;&#x5411;&#x8FD9;&#x4E2A;&#x672C;&#x5730;&#x6587;&#x4EF6;</p>
+<pre><code class="lang-js">{
+  <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.js$/</span>
+  use: [
+    {
+      <span class="hljs-attr">loader</span>: path.resolve(<span class="hljs-string">&apos;path/to/loader.js&apos;</span>),
+      <span class="hljs-attr">options</span>: {<span class="hljs-comment">/* ... */</span>}
+    }
+  ]
+}
+</code></pre>
+<h3 id="t32.2 &#x5339;&#x914D;(test)&#x591A;&#x4E2A; loaders">2.2 &#x5339;&#x914D;(test)&#x591A;&#x4E2A; loaders <a href="#t32.2 &#x5339;&#x914D;(test)&#x591A;&#x4E2A; loaders"> # </a></h3>
+<p>&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; resolveLoader.modules &#x914D;&#x7F6E;&#xFF0C;webpack &#x5C06;&#x4F1A;&#x4ECE;&#x8FD9;&#x4E9B;&#x76EE;&#x5F55;&#x4E2D;&#x641C;&#x7D22;&#x8FD9;&#x4E9B; loaders&#x3002;</p>
+<pre><code class="lang-js">resolveLoader: {
+   <span class="hljs-attr">modules</span>: [path.resolve(<span class="hljs-string">&apos;node_modules&apos;</span>), path.resolve(__dirname, <span class="hljs-string">&apos;src&apos;</span>, <span class="hljs-string">&apos;loaders&apos;</span>)]
+},
+</code></pre>
+<h3 id="t42.3 npm link">2.3 npm link <a href="#t42.3 npm link"> # </a></h3>
+<ul>
+<li>&#x7B2C;1&#x6B65;: &#x786E;&#x4FDD;&#x6B63;&#x5728;&#x5F00;&#x53D1;&#x7684;&#x672C;&#x5730; Npm &#x6A21;&#x5757;&#xFF08;&#x4E5F;&#x5C31;&#x662F;&#x6B63;&#x5728;&#x5F00;&#x53D1;&#x7684; Loader&#xFF09;&#x7684; package.json &#x5DF2;&#x7ECF;&#x6B63;&#x786E;&#x914D;&#x7F6E;&#x597D;</li>
+<li>&#x7B2C;2&#x6B65;: &#x5728;&#x672C;&#x5730;<code>npm</code>&#x6A21;&#x5757;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x6267;&#x884C;<code>npm link</code>,&#x628A;&#x672C;&#x5730;&#x6A21;&#x5757;&#x6CE8;&#x518C;&#x5230;&#x5168;&#x5C40;</li>
+<li>&#x7B2C;3&#x6B65;: &#x5728;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x6267;&#x884C; <code>npm link loader-name</code>,&#x628A;&#x7B2C;2&#x6B65;&#x6CE8;&#x518C;&#x5230;&#x5168;&#x5C40;&#x7684;&#x672C;&#x5730; <code>npm</code> &#x6A21;&#x5757;&#x94FE;&#x63A5;&#x5230;&#x9879;&#x76EE;&#x7684; <code>node_modules</code>&#x76EE;&#x5F55; &#x4E0B;&#xFF0C;&#x5176;&#x4E2D;&#x7684;<code>loader-name</code>&#x662F;&#x6307;&#x5728;&#x7B2C;1&#x6B65;&#x4E2D;&#x7684; <code>package.json</code> &#x6587;&#x4EF6;&#x4E2D;&#x914D;&#x7F6E;&#x7684;&#x6A21;&#x5757;&#x540D;&#x79F0;</li>
+</ul>
+<pre><code class="lang-js">npm link
+</code></pre>
+<h3 id="t52.4 alias">2.4 alias <a href="#t52.4 alias"> # </a></h3>
+<pre><code class="lang-js">resolveLoader: {
+        <span class="hljs-attr">alias</span>: {
+            <span class="hljs-string">&quot;babel-loader&quot;</span>: resolve(<span class="hljs-string">&apos;./loaders/babel-loader.js&apos;</span>),
+            <span class="hljs-string">&quot;css-loader&quot;</span>: resolve(<span class="hljs-string">&apos;./loaders/css-loader.js&apos;</span>),
+            <span class="hljs-string">&quot;style-loader&quot;</span>: resolve(<span class="hljs-string">&apos;./loaders/style-loader.js&apos;</span>),
+            <span class="hljs-string">&quot;file-loader&quot;</span>: resolve(<span class="hljs-string">&apos;./loaders/file-loader.js&apos;</span>),
+            <span class="hljs-string">&quot;url-loader&quot;</span>: resolve(<span class="hljs-string">&apos;./loaders/url-loader.js&apos;</span>)
+        }
+    },
+</code></pre>
+<h2 id="t63. loader&#x7528;&#x6CD5;">3. loader&#x7528;&#x6CD5; <a href="#t63. loader&#x7528;&#x6CD5;"> # </a></h2>
+<h3 id="t73.1 &#x5355;&#x4E2A;loader&#x7528;&#x6CD5;">3.1 &#x5355;&#x4E2A;loader&#x7528;&#x6CD5; <a href="#t73.1 &#x5355;&#x4E2A;loader&#x7528;&#x6CD5;"> # </a></h3>
+<ul>
+<li>loader&#x53EA;&#x80FD;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x5305;&#x542B;&#x8D44;&#x6E90;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x7684;&#x5B57;&#x7B26;&#x4E32;</li>
+<li>&#x540C;&#x6B65; loader &#x53EF;&#x4EE5;&#x7B80;&#x5355;&#x7684;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x4EE3;&#x8868;&#x6A21;&#x5757;&#x8F6C;&#x5316;&#x540E;&#x7684;&#x503C;</li>
+<li>loader &#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4F7F;&#x7528; <code>this.callback(err, values...)</code> &#x51FD;&#x6570;&#xFF0C;&#x8FD4;&#x56DE;&#x4EFB;&#x610F;&#x6570;&#x91CF;&#x7684;&#x503C;</li>
+<li>loader &#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6216;&#x8005;&#x4E24;&#x4E2A;&#x503C;&#x3002;&#x7B2C;&#x4E00;&#x4E2A;&#x503C;&#x7684;&#x7C7B;&#x578B;&#x662F; <code>JavaScript &#x4EE3;&#x7801;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x6216;&#x8005; buffer</code>&#x3002;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x503C;&#x662F; <code>SourceMap</code>,&#x5B83;&#x662F;&#x4E2A; JavaScript &#x5BF9;&#x8C61;</li>
+</ul>
+<h3 id="t83.2 &#x591A;&#x4E2A;loader">3.2 &#x591A;&#x4E2A;loader <a href="#t83.2 &#x591A;&#x4E2A;loader"> # </a></h3>
+<ul>
+<li>&#x5F53;&#x94FE;&#x5F0F;&#x8C03;&#x7528;&#x591A;&#x4E2A; <code>loader</code> &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8BF7;&#x8BB0;&#x4F4F;&#x5B83;&#x4EEC;&#x4F1A;&#x4EE5;&#x76F8;&#x53CD;&#x7684;&#x987A;&#x5E8F;&#x6267;&#x884C;&#x3002;&#x53D6;&#x51B3;&#x4E8E;&#x6570;&#x7EC4;&#x5199;&#x6CD5;&#x683C;&#x5F0F;&#xFF0C;&#x4ECE;&#x53F3;&#x5411;&#x5DE6;&#x6216;&#x8005;&#x4ECE;&#x4E0B;&#x5411;&#x4E0A;&#x6267;&#x884C;&#x3002;</li>
+<li>&#x6700;&#x540E;&#x7684; loader &#x6700;&#x65E9;&#x8C03;&#x7528;&#xFF0C;&#x5C06;&#x4F1A;&#x4F20;&#x5165;&#x539F;&#x59CB;&#x8D44;&#x6E90;&#x5185;&#x5BB9;&#x3002;</li>
+<li>&#x7B2C;&#x4E00;&#x4E2A; loader &#x6700;&#x540E;&#x8C03;&#x7528;&#xFF0C;&#x671F;&#x671B;&#x503C;&#x662F;&#x4F20;&#x51FA; JavaScript &#x548C; source map(&#x53EF;&#x9009;)</li>
+<li>&#x4E2D;&#x95F4;&#x7684; loader &#x6267;&#x884C;&#x65F6;&#xFF0C;&#x4F1A;&#x4F20;&#x5165;&#x524D;&#x4E00;&#x4E2A; loader &#x4F20;&#x51FA;&#x7684;&#x7ED3;&#x679C;&#x3002;</li>
+</ul>
+<h2 id="t94 &#x7528;&#x6CD5;&#x51C6;&#x5219;">4 &#x7528;&#x6CD5;&#x51C6;&#x5219; <a href="#t94 &#x7528;&#x6CD5;&#x51C6;&#x5219;"> # </a></h2>
+<h3 id="t104.1 &#x7B80;&#x5355;">4.1 &#x7B80;&#x5355; <a href="#t104.1 &#x7B80;&#x5355;"> # </a></h3>
+<ul>
+<li>loaders &#x5E94;&#x8BE5;&#x53EA;&#x505A;&#x5355;&#x4E00;&#x4EFB;&#x52A1;&#x3002;&#x8FD9;&#x4E0D;&#x4EC5;&#x4F7F;&#x6BCF;&#x4E2A; loader &#x6613;&#x7EF4;&#x62A4;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x66F4;&#x591A;&#x573A;&#x666F;&#x94FE;&#x5F0F;&#x8C03;&#x7528;&#x3002;</li>
+</ul>
+<h3 id="t114.2 &#x94FE;&#x5F0F;(Chaining)">4.2 &#x94FE;&#x5F0F;(Chaining) <a href="#t114.2 &#x94FE;&#x5F0F;(Chaining)"> # </a></h3>
+<ul>
+<li>&#x5229;&#x7528; loader &#x53EF;&#x4EE5;&#x94FE;&#x5F0F;&#x8C03;&#x7528;&#x7684;&#x4F18;&#x52BF;&#x3002;&#x5199;&#x4E94;&#x4E2A;&#x7B80;&#x5355;&#x7684; loader &#x5B9E;&#x73B0;&#x4E94;&#x9879;&#x4EFB;&#x52A1;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4E00;&#x4E2A; loader &#x5B9E;&#x73B0;&#x4E94;&#x9879;&#x4EFB;&#x52A1;</li>
+</ul>
+<h3 id="t124.3 &#x6A21;&#x5757;&#x5316;(Modular)">4.3 &#x6A21;&#x5757;&#x5316;(Modular) <a href="#t124.3 &#x6A21;&#x5757;&#x5316;(Modular)"> # </a></h3>
+<p>&#x4FDD;&#x8BC1;&#x8F93;&#x51FA;&#x6A21;&#x5757;&#x5316;&#x3002;loader &#x751F;&#x6210;&#x7684;&#x6A21;&#x5757;&#x4E0E;&#x666E;&#x901A;&#x6A21;&#x5757;&#x9075;&#x5FAA;&#x76F8;&#x540C;&#x7684;&#x8BBE;&#x8BA1;&#x539F;&#x5219;&#x3002;</p>
+<h3 id="t134.4 &#x65E0;&#x72B6;&#x6001;(Stateless)">4.4 &#x65E0;&#x72B6;&#x6001;(Stateless) <a href="#t134.4 &#x65E0;&#x72B6;&#x6001;(Stateless)"> # </a></h3>
+<p>&#x786E;&#x4FDD; loader &#x5728;&#x4E0D;&#x540C;&#x6A21;&#x5757;&#x8F6C;&#x6362;&#x4E4B;&#x95F4;&#x4E0D;&#x4FDD;&#x5B58;&#x72B6;&#x6001;&#x3002;&#x6BCF;&#x6B21;&#x8FD0;&#x884C;&#x90FD;&#x5E94;&#x8BE5;&#x72EC;&#x7ACB;&#x4E8E;&#x5176;&#x4ED6;&#x7F16;&#x8BD1;&#x6A21;&#x5757;&#x4EE5;&#x53CA;&#x76F8;&#x540C;&#x6A21;&#x5757;&#x4E4B;&#x524D;&#x7684;&#x7F16;&#x8BD1;&#x7ED3;&#x679C;&#x3002;</p>
+<h3 id="t144.5 loader&#x5DE5;&#x5177;&#x5E93;">4.5 loader&#x5DE5;&#x5177;&#x5E93; <a href="#t144.5 loader&#x5DE5;&#x5177;&#x5E93;"> # </a></h3>
+<ul>
+<li><p><a href="https://github.com/webpack/loader-utils">loader-utils</a> &#x5305;&#x3002;&#x5B83;&#x63D0;&#x4F9B;&#x4E86;&#x8BB8;&#x591A;&#x6709;&#x7528;&#x7684;&#x5DE5;&#x5177;&#xFF0C;&#x4F46;&#x6700;&#x5E38;&#x7528;&#x7684;&#x4E00;&#x79CD;&#x5DE5;&#x5177;&#x662F;&#x83B7;&#x53D6;&#x4F20;&#x9012;&#x7ED9; loader &#x7684;&#x9009;&#x9879;</p>
+</li>
+<li><p><a href="https://github.com/webpack-contrib/schema-utils">schema-utils</a> &#x5305;&#x914D;&#x5408; loader-utils&#xFF0C;&#x7528;&#x4E8E;&#x4FDD;&#x8BC1; loader &#x9009;&#x9879;&#xFF0C;&#x8FDB;&#x884C;&#x4E0E; JSON Schema &#x7ED3;&#x6784;&#x4E00;&#x81F4;&#x7684;&#x6821;&#x9A8C;</p>
+</li>
+</ul>
+<h3 id="t154.6 loader&#x4F9D;&#x8D56;">4.6 loader&#x4F9D;&#x8D56; <a href="#t154.6 loader&#x4F9D;&#x8D56;"> # </a></h3>
+<p>&#x5982;&#x679C;&#x4E00;&#x4E2A; loader &#x4F7F;&#x7528;&#x5916;&#x90E8;&#x8D44;&#x6E90;&#xFF08;&#x4F8B;&#x5982;&#xFF0C;&#x4ECE;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x8BFB;&#x53D6;&#xFF09;&#xFF0C;&#x5FC5;&#x987B;&#x58F0;&#x660E;&#x5B83;&#x3002;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#x7528;&#x4E8E;&#x4F7F;&#x7F13;&#x5B58; loaders &#x65E0;&#x6548;&#xFF0C;&#x4EE5;&#x53CA;&#x5728;&#x89C2;&#x5BDF;&#x6A21;&#x5F0F;(watch mode)&#x4E0B;&#x91CD;&#x7F16;&#x8BD1;&#x3002;</p>
+<h3 id="t164.7 &#x6A21;&#x5757;&#x4F9D;&#x8D56;">4.7 &#x6A21;&#x5757;&#x4F9D;&#x8D56; <a href="#t164.7 &#x6A21;&#x5757;&#x4F9D;&#x8D56;"> # </a></h3>
+<p>&#x6839;&#x636E;&#x6A21;&#x5757;&#x7C7B;&#x578B;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x6A21;&#x5F0F;&#x6307;&#x5B9A;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x3002;&#x4F8B;&#x5982;&#x5728; CSS &#x4E2D;&#xFF0C;&#x4F7F;&#x7528; @import &#x548C; url(...) &#x8BED;&#x53E5;&#x6765;&#x58F0;&#x660E;&#x4F9D;&#x8D56;&#x3002;&#x8FD9;&#x4E9B;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x5E94;&#x8BE5;&#x7531;&#x6A21;&#x5757;&#x7CFB;&#x7EDF;&#x89E3;&#x6790;&#x3002;</p>
+<h3 id="t174.8 &#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;">4.8 &#x7EDD;&#x5BF9;&#x8DEF;&#x5F84; <a href="#t174.8 &#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;"> # </a></h3>
+<ul>
+<li>&#x4E0D;&#x8981;&#x5728;&#x6A21;&#x5757;&#x4EE3;&#x7801;&#x4E2D;&#x63D2;&#x5165;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#xFF0C;&#x56E0;&#x4E3A;&#x5F53;&#x9879;&#x76EE;&#x6839;&#x8DEF;&#x5F84;&#x53D8;&#x5316;&#x65F6;&#xFF0C;&#x6587;&#x4EF6;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x4E5F;&#x4F1A;&#x53D8;&#x5316;&#x3002;</li>
+<li><code>loader-utils</code> &#x4E2D;&#x7684; <code>stringifyRequest</code> &#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x8F6C;&#x5316;&#x4E3A;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#x3002;</li>
+</ul>
+<h3 id="t184.9 &#x540C;&#x7B49;&#x4F9D;&#x8D56;">4.9 &#x540C;&#x7B49;&#x4F9D;&#x8D56; <a href="#t184.9 &#x540C;&#x7B49;&#x4F9D;&#x8D56;"> # </a></h3>
+<ul>
+<li>&#x5982;&#x679C;&#x4F60;&#x7684; loader &#x7B80;&#x5355;&#x5305;&#x88F9;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x5305;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x628A;&#x8FD9;&#x4E2A;&#x5305;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A; <code>peerDependency</code> &#x5F15;&#x5165;&#x3002;</li>
+<li>&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x5141;&#x8BB8;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5F00;&#x53D1;&#x8005;&#x5728;&#x5FC5;&#x8981;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5728;<code>package.json</code> &#x4E2D;&#x6307;&#x5B9A;&#x6240;&#x9700;&#x7684;&#x786E;&#x5B9A;&#x7248;&#x672C;&#x3002;</li>
+</ul>
+<h2 id="t195. API">5. API <a href="#t195. API"> # </a></h2>
+<h3 id="t205.1  &#x7F13;&#x5B58;&#x7ED3;&#x679C;">5.1  &#x7F13;&#x5B58;&#x7ED3;&#x679C; <a href="#t205.1  &#x7F13;&#x5B58;&#x7ED3;&#x679C;"> # </a></h3>
+<ul>
+<li>&#x5728;&#x6709;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6709;&#x4E9B;&#x8F6C;&#x6362;&#x64CD;&#x4F5C;&#x9700;&#x8981;&#x5927;&#x91CF;&#x8BA1;&#x7B97;&#x975E;&#x5E38;&#x8017;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x6BCF;&#x6B21;&#x6784;&#x5EFA;&#x90FD;&#x91CD;&#x65B0;&#x6267;&#x884C;&#x91CD;&#x590D;&#x7684;&#x8F6C;&#x6362;&#x64CD;&#x4F5C;&#xFF0C;&#x6784;&#x5EFA;&#x5C06;&#x4F1A;&#x53D8;&#x5F97;&#x975E;&#x5E38;&#x7F13;&#x6162;&#x3002;
+&#x4E3A;&#x6B64;&#xFF0C;Webpack &#x4F1A;&#x9ED8;&#x8BA4;&#x7F13;&#x5B58;&#x6240;&#x6709; Loader &#x7684;&#x5904;&#x7406;&#x7ED3;&#x679C;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x5728;&#x9700;&#x8981;&#x88AB;&#x5904;&#x7406;&#x7684;&#x6587;&#x4EF6;&#x6216;&#x8005;&#x5176;&#x4F9D;&#x8D56;&#x7684;&#x6587;&#x4EF6;&#x6CA1;&#x6709;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x65F6;&#xFF0C;
+&#x662F;&#x4E0D;&#x4F1A;&#x91CD;&#x65B0;&#x8C03;&#x7528;&#x5BF9;&#x5E94;&#x7684; Loader &#x53BB;&#x6267;&#x884C;&#x8F6C;&#x6362;&#x64CD;&#x4F5C;&#x7684;&#x3002;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">source</span>) </span>{
+  <span class="hljs-comment">// &#x5173;&#x95ED;&#x8BE5; Loader &#x7684;&#x7F13;&#x5B58;&#x529F;&#x80FD;</span>
+  <span class="hljs-keyword">this</span>.cacheable(<span class="hljs-literal">false</span>);
+  <span class="hljs-keyword">return</span> source;
+};
+</code></pre>
+<h3 id="t215.2 &#x5F02;&#x6B65;">5.2 &#x5F02;&#x6B65; <a href="#t215.2 &#x5F02;&#x6B65;"> # </a></h3>
+<ul>
+<li>Loader &#x6709;&#x540C;&#x6B65;&#x548C;&#x5F02;&#x6B65;&#x4E4B;&#x5206;,&#x4E0A;&#x9762;&#x4ECB;&#x7ECD;&#x7684; Loader &#x90FD;&#x662F;&#x540C;&#x6B65;&#x7684; Loader&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4EEC;&#x7684;&#x8F6C;&#x6362;&#x6D41;&#x7A0B;&#x90FD;&#x662F;&#x540C;&#x6B65;&#x7684;&#xFF0C;&#x8F6C;&#x6362;&#x5B8C;&#x6210;&#x540E;&#x518D;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x3002;</li>
+<li>&#x4F46;&#x5728;&#x6709;&#x4E9B;&#x573A;&#x666F;&#x4E0B;&#x8F6C;&#x6362;&#x7684;&#x6B65;&#x9AA4;&#x53EA;&#x80FD;&#x662F;&#x5F02;&#x6B65;&#x5B8C;&#x6210;&#x7684;&#xFF0C;&#x4F8B;&#x5982;&#x4F60;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x624D;&#x80FD;&#x5F97;&#x51FA;&#x7ED3;&#x679C;&#xFF0C;&#x5982;&#x679C;&#x91C7;&#x7528;&#x540C;&#x6B65;&#x7684;&#x65B9;&#x5F0F;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x5C31;&#x4F1A;&#x963B;&#x585E;&#x6574;&#x4E2A;&#x6784;&#x5EFA;&#xFF0C;&#x5BFC;&#x81F4;&#x6784;&#x5EFA;&#x975E;&#x5E38;&#x7F13;&#x6162;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">source</span>) </span>{
+    <span class="hljs-comment">// &#x544A;&#x8BC9; Webpack &#x672C;&#x6B21;&#x8F6C;&#x6362;&#x662F;&#x5F02;&#x6B65;&#x7684;&#xFF0C;Loader &#x4F1A;&#x5728; callback &#x4E2D;&#x56DE;&#x8C03;&#x7ED3;&#x679C;</span>
+    <span class="hljs-keyword">var</span> callback = <span class="hljs-keyword">this</span>.async();
+    someAsyncOperation(source, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, result, sourceMaps, ast</span>) </span>{
+        <span class="hljs-comment">// &#x901A;&#x8FC7; callback &#x8FD4;&#x56DE;&#x5F02;&#x6B65;&#x6267;&#x884C;&#x540E;&#x7684;&#x7ED3;&#x679C;</span>
+        callback(err, result, sourceMaps, ast);
+    });
+};
+</code></pre>
+<h3 id="t225.3  &#x8FD4;&#x56DE;&#x5176;&#x5B83;&#x7ED3;&#x679C;">5.3  &#x8FD4;&#x56DE;&#x5176;&#x5B83;&#x7ED3;&#x679C; <a href="#t225.3  &#x8FD4;&#x56DE;&#x5176;&#x5B83;&#x7ED3;&#x679C;"> # </a></h3>
+<p>Loader&#x6709;&#x4E9B;&#x573A;&#x666F;&#x4E0B;&#x8FD8;&#x9700;&#x8981;&#x8FD4;&#x56DE;&#x9664;&#x4E86;&#x5185;&#x5BB9;&#x4E4B;&#x5916;&#x7684;&#x4E1C;&#x897F;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">source</span>) </span>{
+  <span class="hljs-comment">// &#x901A;&#x8FC7; this.callback &#x544A;&#x8BC9; Webpack &#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;</span>
+  <span class="hljs-keyword">this</span>.callback(<span class="hljs-literal">null</span>, source, sourceMaps);
+  <span class="hljs-comment">// &#x5F53;&#x4F60;&#x4F7F;&#x7528; this.callback &#x8FD4;&#x56DE;&#x5185;&#x5BB9;&#x65F6;&#xFF0C;&#x8BE5; Loader &#x5FC5;&#x987B;&#x8FD4;&#x56DE; undefined&#xFF0C;</span>
+  <span class="hljs-comment">// &#x4EE5;&#x8BA9; Webpack &#x77E5;&#x9053;&#x8BE5; Loader &#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;&#x5728; this.callback &#x4E2D;&#xFF0C;&#x800C;&#x4E0D;&#x662F; return &#x4E2D; </span>
+  <span class="hljs-keyword">return</span>;
+};
+</code></pre>
+<p>&#x5B8C;&#x6574;&#x683C;&#x5F0F;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">this</span>.callback(
+    <span class="hljs-comment">// &#x5F53;&#x65E0;&#x6CD5;&#x8F6C;&#x6362;&#x539F;&#x5185;&#x5BB9;&#x65F6;&#xFF0C;&#x7ED9; Webpack &#x8FD4;&#x56DE;&#x4E00;&#x4E2A; Error</span>
+    err: <span class="hljs-built_in">Error</span> | <span class="hljs-literal">null</span>,
+    <span class="hljs-comment">// &#x539F;&#x5185;&#x5BB9;&#x8F6C;&#x6362;&#x540E;&#x7684;&#x5185;&#x5BB9;</span>
+    <span class="hljs-attr">content</span>: string | Buffer,
+    <span class="hljs-comment">// &#x7528;&#x4E8E;&#x628A;&#x8F6C;&#x6362;&#x540E;&#x7684;&#x5185;&#x5BB9;&#x5F97;&#x51FA;&#x539F;&#x5185;&#x5BB9;&#x7684; Source Map&#xFF0C;&#x65B9;&#x4FBF;&#x8C03;&#x8BD5;</span>
+    sourceMap?: SourceMap,
+    <span class="hljs-comment">// &#x5982;&#x679C;&#x672C;&#x6B21;&#x8F6C;&#x6362;&#x4E3A;&#x539F;&#x5185;&#x5BB9;&#x751F;&#x6210;&#x4E86; AST &#x8BED;&#x6CD5;&#x6811;&#xFF0C;&#x53EF;&#x4EE5;&#x628A;&#x8FD9;&#x4E2A; AST &#x8FD4;&#x56DE;&#xFF0C;</span>
+    <span class="hljs-comment">// &#x4EE5;&#x65B9;&#x4FBF;&#x4E4B;&#x540E;&#x9700;&#x8981; AST &#x7684; Loader &#x590D;&#x7528;&#x8BE5; AST&#xFF0C;&#x4EE5;&#x907F;&#x514D;&#x91CD;&#x590D;&#x751F;&#x6210; AST&#xFF0C;&#x63D0;&#x5347;&#x6027;&#x80FD;</span>
+    abstractSyntaxTree?: AST
+);
+</code></pre>
+<h3 id="t235.4 raw loader">5.4 raw loader <a href="#t235.4 raw loader"> # </a></h3>
+<ul>
+<li>&#x5728;&#x9ED8;&#x8BA4;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;Webpack &#x4F20;&#x7ED9; Loader &#x7684;&#x539F;&#x5185;&#x5BB9;&#x90FD;&#x662F;<code>UTF-8</code>&#x683C;&#x5F0F;&#x7F16;&#x7801;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;</li>
+<li>&#x4F46;&#x6709;&#x4E9B;&#x573A;&#x666F;&#x4E0B; Loader &#x4E0D;&#x662F;&#x5904;&#x7406;&#x6587;&#x672C;&#x6587;&#x4EF6;&#xFF0C;&#x800C;&#x662F;&#x5904;&#x7406;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#xFF0C;&#x4F8B;&#x5982; <code>file-loader</code>,&#x5C31;&#x9700;&#x8981; Webpack &#x7ED9; Loader &#x4F20;&#x5165;&#x4E8C;&#x8FDB;&#x5236;&#x683C;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x3002;
+&#x4E3A;&#x6B64;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x8FD9;&#x6837;&#x7F16;&#x5199; Loader<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">source</span>) </span>{
+  <span class="hljs-comment">// &#x5728; exports.raw === true &#x65F6;&#xFF0C;Webpack &#x4F20;&#x7ED9; Loader &#x7684; source &#x662F; Buffer &#x7C7B;&#x578B;&#x7684;</span>
+  source <span class="hljs-keyword">instanceof</span> Buffer === <span class="hljs-literal">true</span>;
+  <span class="hljs-comment">// Loader &#x8FD4;&#x56DE;&#x7684;&#x7C7B;&#x578B;&#x4E5F;&#x53EF;&#x4EE5;&#x662F; Buffer &#x7C7B;&#x578B;&#x7684;</span>
+  <span class="hljs-comment">// &#x5728; exports.raw !== true &#x65F6;&#xFF0C;Loader &#x4E5F;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE; Buffer &#x7C7B;&#x578B;&#x7684;&#x7ED3;&#x679C;</span>
+  <span class="hljs-keyword">return</span> source;
+};
+<span class="hljs-comment">// &#x901A;&#x8FC7; exports.raw &#x5C5E;&#x6027;&#x544A;&#x8BC9; Webpack &#x8BE5; Loader &#x662F;&#x5426;&#x9700;&#x8981;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E; </span>
+<span class="hljs-built_in">module</span>.exports.raw = <span class="hljs-literal">true</span>;
+</code></pre>
+</li>
+</ul>
+<h3 id="t245.5 &#x83B7;&#x5F97;options">5.5 &#x83B7;&#x5F97;options <a href="#t245.5 &#x83B7;&#x5F97;options"> # </a></h3>
+<ul>
+<li>&#x53EF;&#x4EE5;&#x83B7;&#x5F97;&#x7ED9;<code>Loader</code>&#x914D;&#x7F6E;&#x7684;<code>options</code></li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> loaderUtils = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;loader-utils&apos;</span>);
+<span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">source</span>) </span>{
+  <span class="hljs-comment">// &#x83B7;&#x53D6;&#x5230;&#x7528;&#x6237;&#x7ED9;&#x5F53;&#x524D; Loader &#x4F20;&#x5165;&#x7684; options</span>
+  <span class="hljs-keyword">const</span> options = loaderUtils.getOptions(<span class="hljs-keyword">this</span>);
+  <span class="hljs-keyword">return</span> source;
+};
+</code></pre>
+<h3 id="t255.6 &#x5176;&#x5B83; Loader API">5.6 &#x5176;&#x5B83; Loader API <a href="#t255.6 &#x5176;&#x5B83; Loader API"> # </a></h3>
+<ul>
+<li><a href="https://webpack.js.org/api/loaders/">&#x5B8C;&#x6574;API</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x65B9;&#x6CD5;&#x540D;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>this.context</code></td>
+<td style="text-align:left">&#x5F53;&#x524D;&#x5904;&#x7406;&#x6587;&#x4EF6;&#x7684;&#x6240;&#x5728;&#x76EE;&#x5F55;&#xFF0C;&#x5047;&#x5982;&#x5F53;&#x524D; Loader &#x5904;&#x7406;&#x7684;&#x6587;&#x4EF6;&#x662F; /src/main.js&#xFF0C;&#x5219; this.context &#x5C31;&#x7B49;&#x4E8E; /src</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>this.resource</code></td>
+<td style="text-align:left">&#x5F53;&#x524D;&#x5904;&#x7406;&#x6587;&#x4EF6;&#x7684;&#x5B8C;&#x6574;&#x8BF7;&#x6C42;&#x8DEF;&#x5F84;&#xFF0C;&#x5305;&#x62EC; querystring&#xFF0C;&#x4F8B;&#x5982; /src/main.js?name=1&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>this.resourcePath</code></td>
+<td style="text-align:left">&#x5F53;&#x524D;&#x5904;&#x7406;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#xFF0C;&#x4F8B;&#x5982; /src/main.js</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>this.resourceQuery</code></td>
+<td style="text-align:left">&#x5F53;&#x524D;&#x5904;&#x7406;&#x6587;&#x4EF6;&#x7684; querystring</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>this.target</code></td>
+<td style="text-align:left">&#x7B49;&#x4E8E; Webpack &#x914D;&#x7F6E;&#x4E2D;&#x7684; Target</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>this.loadModule</code></td>
+<td style="text-align:left">&#x4F46; Loader &#x5728;&#x5904;&#x7406;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x4F9D;&#x8D56;&#x5176;&#x5B83;&#x6587;&#x4EF6;&#x7684;&#x5904;&#x7406;&#x7ED3;&#x679C;&#x624D;&#x80FD;&#x5F97;&#x51FA;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x7684;&#x7ED3;&#x679C;&#x65F6;,&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; this.loadModule(request: string, callback: function(err, source, sourceMap, module)) &#x53BB;&#x83B7;&#x5F97; request &#x5BF9;&#x5E94;&#x6587;&#x4EF6;&#x7684;&#x5904;&#x7406;&#x7ED3;&#x679C;</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>this.resolve</code></td>
+<td style="text-align:left">&#x50CF; require &#x8BED;&#x53E5;&#x4E00;&#x6837;&#x83B7;&#x5F97;&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x7684;&#x5B8C;&#x6574;&#x8DEF;&#x5F84;&#xFF0C;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x4E3A; resolve(context: string, request: string, callback: function(err, result: string))</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>this.addDependency</code></td>
+<td style="text-align:left">&#x7ED9;&#x5F53;&#x524D;&#x5904;&#x7406;&#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x5176;&#x4F9D;&#x8D56;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x4EE5;&#x4FBF;&#x518D;&#x5176;&#x4F9D;&#x8D56;&#x7684;&#x6587;&#x4EF6;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x65F6;&#xFF0C;&#x4F1A;&#x91CD;&#x65B0;&#x8C03;&#x7528; Loader &#x5904;&#x7406;&#x8BE5;&#x6587;&#x4EF6;&#x3002;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x4E3A; addDependency(file: string)</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>this.addContextDependency</code></td>
+<td style="text-align:left">&#x548C; addDependency &#x7C7B;&#x4F3C;&#xFF0C;&#x4F46; addContextDependency &#x662F;&#x628A;&#x6574;&#x4E2A;&#x76EE;&#x5F55;&#x52A0;&#x5165;&#x5230;&#x5F53;&#x524D;&#x6B63;&#x5728;&#x5904;&#x7406;&#x6587;&#x4EF6;&#x7684;&#x4F9D;&#x8D56;&#x4E2D;&#x3002;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x4E3A; addContextDependency(directory: string)</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>this.clearDependencies</code></td>
+<td style="text-align:left">&#x6E05;&#x9664;&#x5F53;&#x524D;&#x6B63;&#x5728;&#x5904;&#x7406;&#x6587;&#x4EF6;&#x7684;&#x6240;&#x6709;&#x4F9D;&#x8D56;&#xFF0C;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x4E3A; clearDependencies()</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>this.emitFile</code></td>
+<td style="text-align:left">&#x8F93;&#x51FA;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x4E3A; emitFile(name: string, content: Buffer/string, sourceMap: {...})</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>loader-utils.stringifyRequest</code></td>
+<td style="text-align:left">Turns a request into a string that can be used inside require() or import while avoiding absolute paths. Use it instead of JSON.stringify(...) if you&apos;re generating code inside a loader  &#x628A;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6210;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4EE5;&#x4FBF;&#x80FD;&#x5728;require&#x6216;&#x8005;import&#x4E2D;&#x4F7F;&#x7528;&#x4EE5;&#x907F;&#x514D;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x3002;&#x5982;&#x679C;&#x4F60;&#x5728;&#x4E00;&#x4E2A;loader&#x4E2D;&#x751F;&#x6210;&#x4EE3;&#x7801;&#x7684;&#x8BDD;&#x8BF7;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x800C;&#x4E0D;&#x8981;&#x7528;JSON.stringify()</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>loader-utils.interpolateName</code></td>
+<td style="text-align:left">Interpolates a filename template using multiple placeholders and/or a regular expression. The template and regular expression are set as query params called name and regExp on the current loader&apos;s context. &#x4F7F;&#x7528;&#x591A;&#x4E2A;&#x5360;&#x4F4D;&#x7B26;&#x6216;&#x4E00;&#x4E2A;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x8F6C;&#x6362;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x540D;&#x7684;&#x6A21;&#x5757;&#x3002;&#x8FD9;&#x4E2A;&#x6A21;&#x677F;&#x548C;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x88AB;&#x8BBE;&#x7F6E;&#x4E3A;&#x67E5;&#x8BE2;&#x53C2;&#x6570;&#xFF0C;&#x5728;&#x5F53;&#x524D;loader&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x88AB;&#x79F0;&#x4E3A;name&#x6216;&#x8005;regExp</td>
+</tr>
+</tbody>
+</table>
+<h2 id="t266.loader&#x5B9E;&#x6218;">6.loader&#x5B9E;&#x6218; <a href="#t266.loader&#x5B9E;&#x6218;"> # </a></h2>
+<h3 id="t276.1 &#x9879;&#x76EE;&#x51C6;&#x5907;">6.1 &#x9879;&#x76EE;&#x51C6;&#x5907; <a href="#t276.1 &#x9879;&#x76EE;&#x51C6;&#x5907;"> # </a></h3>
+<pre><code class="lang-js">cnpm i webpack webpack-cli webpack-dev-server html-webpack-plugin @babel/core @babel/preset-env  babel-loader css-loader file-loader less less-loader style-loader url-loader -D
+</code></pre>
+<h4 id="t286.1.1 webpack.config.js">6.1.1 webpack.config.js <a href="#t286.1.1 webpack.config.js"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
+<span class="hljs-keyword">const</span> HtmlWebpackPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;html-webpack-plugin&apos;</span>);
+<span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-attr">mode</span>: <span class="hljs-string">&apos;development&apos;</span>,
+  <span class="hljs-attr">context</span>: process.cwd(),
+  <span class="hljs-attr">devtool</span>: <span class="hljs-string">&apos;source-map&apos;</span>,
+  <span class="hljs-attr">entry</span>: <span class="hljs-string">&quot;./src/index.js&quot;</span>,
+  <span class="hljs-attr">output</span>: {
+    <span class="hljs-attr">path</span>: path.resolve(__dirname, <span class="hljs-string">&quot;dist&quot;</span>),
+    <span class="hljs-attr">filename</span>: <span class="hljs-string">&quot;bundle.js&quot;</span>
+  },
+  <span class="hljs-attr">resolveLoader</span>: {
+    <span class="hljs-attr">modules</span>: [path.resolve(<span class="hljs-string">&apos;./loaders&apos;</span>), <span class="hljs-string">&apos;node_modules&apos;</span>]
+  },
+  <span class="hljs-attr">devServer</span>: {
+    <span class="hljs-attr">contentBase</span>: path.resolve(__dirname, <span class="hljs-string">&apos;dist&apos;</span>)
+  },
+  <span class="hljs-attr">module</span>: {
+    <span class="hljs-attr">rules</span>: [
+      {
+        <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.jsx?$/</span>,
+        <span class="hljs-attr">use</span>: {
+          <span class="hljs-attr">loader</span>: <span class="hljs-string">&quot;babel-loader&quot;</span>
+        },
+        <span class="hljs-attr">include</span>: path.join(__dirname, <span class="hljs-string">&quot;src&quot;</span>),
+        <span class="hljs-attr">exclude</span>: <span class="hljs-regexp">/node_modules/</span>
+      }
+    ]
+  },
+  <span class="hljs-attr">plugins</span>: [
+    <span class="hljs-keyword">new</span> HtmlWebpackPlugin({
+      <span class="hljs-attr">template</span>: <span class="hljs-string">&apos;./src/index.html&apos;</span>
+    })
+  ]
+};
+</code></pre>
+<h4 id="t296.1.2 src\index.js">6.1.2 src\index.js <a href="#t296.1.2 src\index.js"> # </a></h4>
+<p>src\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> sum = <span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> {
+    <span class="hljs-keyword">return</span> a + b;
+}
+<span class="hljs-built_in">console</span>.log(sum(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>));
+</code></pre>
+<h4 id="t306.1.3 src\index.html">6.1.3 src\index.html <a href="#t306.1.3 src\index.html"> # </a></h4>
+<p>src\index.html</p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">&quot;X-UA-Compatible&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;ie=edge&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Document<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;root&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h3 id="t316.2 babel-loader">6.2 babel-loader <a href="#t316.2 babel-loader"> # </a></h3>
+<ul>
+<li><a href="https://github.com/babel/babel-loader/blob/master/src/index.js">babel-loader</a></li>
+<li><a href="https://babeljs.io/docs/en/next/babel-core.html">@babel/core</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5C5E;&#x6027;</th>
+<th style="text-align:left">&#x503C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">this.request</td>
+<td style="text-align:left">/loaders/babel-loader.js!/src/index.js&apos;</td>
+</tr>
+<tr>
+<td style="text-align:left">this.userRequest</td>
+<td style="text-align:left">/src/index.js</td>
+</tr>
+<tr>
+<td style="text-align:left">this.rawRequest</td>
+<td style="text-align:left">./src/index.js</td>
+</tr>
+<tr>
+<td style="text-align:left">this.resourcePath</td>
+<td style="text-align:left">/src/index.js</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> babel = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;@babel/core&quot;</span>);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loader</span>(<span class="hljs-params">source</span>) </span>{
+    <span class="hljs-comment">//C:\vipdata\prepare6\zhufeng_loader\loaders\babel-loader.js!C:\vipdata\prepare6\zhufeng_loader\src\index.js</span>
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;this.request&apos;</span>, <span class="hljs-keyword">this</span>.request);
+    <span class="hljs-keyword">const</span> options = {
+        <span class="hljs-attr">presets</span>: [<span class="hljs-string">&apos;@babel/preset-env&apos;</span>],
+        <span class="hljs-comment">//sourceMaps: true &#x5982;&#x679C;&#x6CA1;&#x6709;&#x6B64;&#x53C2;&#x6570;&#xFF0C;&#x5219;&#x4E0D;&#x4F1A;&#x751F;&#x6210;sourcemap&#x6587;&#x4EF6;</span>
+        <span class="hljs-comment">//&#x6CE8;&#x610F;&#x6B64;&#x5904;&#x7684;sourceMap&#x662F;&#x4ECE;&#x8F6C;&#x8BD1;&#x524D;&#x7684;&#x4EE3;&#x7801;&#x5230;&#x8F6C;&#x8BD1;&#x540E;&#x7684;&#x4EE3;&#x7801;&#x7684;map&#x6620;&#x5C04;,&#x5982;&#x679C;&#x6B64;&#x5904;&#x4E0D;&#x751F;&#x6210;&#x65E0;&#x6CD5;&#x8C03;&#x8BD5;&#x771F;&#x6B63;&#x7684;&#x6E90;&#x7801;&#x4E86;</span>
+        <span class="hljs-attr">sourceMaps</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-comment">//&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6B64;&#x53C2;&#x6570;&#x5219;&#x751F;&#x6210;&#x7684;map&#x6587;&#x4EF6;&#x91CC;&#x6587;&#x4EF6;&#x4E2D;unknown</span>
+        <span class="hljs-attr">filename</span>: <span class="hljs-keyword">this</span>.request.split(<span class="hljs-string">&apos;!&apos;</span>)[<span class="hljs-number">1</span>].split(<span class="hljs-string">&apos;/&apos;</span>).pop()
+    }
+    <span class="hljs-comment">//&#x5728;webpack.config.js&#x4E2D; &#x589E;&#x52A0;devtool: &apos;source-map&apos;,&#x8FD9;&#x4E2A;source-map&#x662F;&#x4ECE;&#x8F6C;&#x8BD1;&#x540E;&#x7684;&#x6E90;&#x7801;&#x5230;bundle.js&#x4E4B;&#x95F4;&#x7684;map&#x6620;&#x5C04;</span>
+    <span class="hljs-keyword">let</span> { code, map, ast } = babel.transform(source, options);
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.callback(<span class="hljs-literal">null</span>, code, map, ast);
+}
+
+<span class="hljs-built_in">module</span>.exports = loader;
+</code></pre>
+<blockquote>
+<p>&#x672C;&#x6848;&#x4F8B;&#x662F;&#x662F;&#x5B66;&#x4E60;&#x5982;&#x4F55;&#x7F16;&#x5199;loader&#x4EE5;&#x53CA;&#x5982;&#x4F55;&#x901A;&#x8FC7;<code>this.callback</code>&#x8FD4;&#x56DE;&#x591A;&#x4E2A;&#x503C;</p>
+</blockquote>
+<h3 id="t326.3 banner-loader">6.3 banner-loader <a href="#t326.3 banner-loader"> # </a></h3>
+<ul>
+<li>&#x672C;&#x6848;&#x4F8B;&#x5B66;&#x4E60;&#x5982;&#x4F55;&#x83B7;&#x53D6;&#x53C2;&#x6570;&#xFF0C;&#x9A8C;&#x8BC1;&#x53C2;&#x6570;&#xFF0C;&#x5B9E;&#x73B0;&#x5F02;&#x6B65;loader&#x4EE5;&#x53CA;&#x4F7F;&#x7528;&#x7F13;&#x5B58;</li>
+</ul>
+<h4 id="t336.3.1 banner-loader.js">6.3.1 banner-loader.js <a href="#t336.3.1 banner-loader.js"> # </a></h4>
+<p>loaders\banner-loader.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> loaderUtils = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;loader-utils&apos;</span>);
+<span class="hljs-keyword">const</span> validateOptions = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;schema-utils&apos;</span>);
+<span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs&apos;</span>);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loader</span>(<span class="hljs-params">source</span>) </span>{
+    <span class="hljs-comment">//&#x628A;loader&#x6539;&#x4E3A;&#x5F02;&#x6B65;,&#x4EFB;&#x52A1;&#x5B8C;&#x6210;&#x540E;&#x9700;&#x8981;&#x624B;&#x5DE5;&#x6267;&#x884C;callback</span>
+    <span class="hljs-keyword">let</span> cb = <span class="hljs-keyword">this</span>.async();
+    <span class="hljs-comment">//&#x542F;&#x7528;loader&#x7F13;&#x5B58;</span>
+    <span class="hljs-keyword">this</span>.cacheable &amp;&amp; <span class="hljs-keyword">this</span>.cacheable();
+    <span class="hljs-comment">//&#x7528;&#x6765;&#x9A8C;&#x8BC1;options&#x7684;&#x5408;&#x6CD5;&#x6027;</span>
+    <span class="hljs-keyword">let</span> schema = { 
+        <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;object&apos;</span>,
+        <span class="hljs-attr">properties</span>: {
+            <span class="hljs-attr">filename</span>: {
+                <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;string&apos;</span>
+            },
+            <span class="hljs-attr">text</span>: {
+                <span class="hljs-attr">type</span>: <span class="hljs-string">&apos;string&apos;</span>
+            }
+        }
+    }
+    <span class="hljs-comment">//&#x901A;&#x8FC7;&#x5DE5;&#x5177;&#x65B9;&#x6CD5;&#x83B7;&#x53D6;options</span>
+    <span class="hljs-keyword">let</span> options = loaderUtils.getOptions(<span class="hljs-keyword">this</span>);
+    <span class="hljs-comment">//&#x7528;&#x6765;&#x9A8C;&#x8BC1;options&#x7684;&#x5408;&#x6CD5;&#x6027;</span>
+    validateOptions(schema, options);
+    <span class="hljs-keyword">let</span> {filename } = options;
+    fs.readFile(filename, <span class="hljs-string">&apos;utf8&apos;</span>, (err, text) =&gt; {
+        cb(err, text + source);
+    });
+}
+
+<span class="hljs-built_in">module</span>.exports = loader;
+</code></pre>
+<h4 id="t346.3.2 banner.js">6.3.2 banner.js <a href="#t346.3.2 banner.js"> # </a></h4>
+<p>loaders\banner.js</p>
+<pre><code class="lang-js"><span class="hljs-comment">/**copyright: zhufengjiagu*/</span>
+</code></pre>
+<h4 id="t356.3.3 webpack.config.js">6.3.3 webpack.config.js <a href="#t356.3.3 webpack.config.js"> # </a></h4>
+<p>webpack.config.js</p>
+<pre><code class="lang-diff">  module: {
+    rules: [
+      {
+        test: /\.jsx?$/,
+<span class="hljs-addition">+        use: [{</span>
+<span class="hljs-addition">+          loader: &apos;banner-loader&apos;,</span>
+<span class="hljs-addition">+          options: { filename: path.resolve(__dirname, &apos;loaders/banner.js&apos;) }</span>
+<span class="hljs-addition">+        }, {</span>
+          loader: &quot;babel-loader&quot;
+        }],
+        include: path.join(__dirname, &quot;src&quot;),
+        exclude: /node_modules/
+      }
+    ]
+  },
+</code></pre>
+<h3 id="t366.4 file">6.4 file <a href="#t366.4 file"> # </a></h3>
+<ul>
+<li><code>file-loader</code> &#x5E76;&#x4E0D;&#x4F1A;&#x5BF9;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x8FDB;&#x884C;&#x4EFB;&#x4F55;&#x8F6C;&#x6362;&#xFF0C;&#x53EA;&#x662F;&#x590D;&#x5236;&#x4E00;&#x4EFD;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#xFF0C;&#x5E76;&#x6839;&#x636E;&#x914D;&#x7F6E;&#x4E3A;&#x4ED6;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x552F;&#x4E00;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x3002;</li>
+<li>&#x4E3B;&#x6848;&#x4F8B;&#x4E3B;&#x8981;&#x662F;&#x5B66;&#x4E60;<code>loader-utils</code>&#x7528;&#x6CD5; </li>
+</ul>
+<h4 id="t376.4.1 file-loader">6.4.1 file-loader <a href="#t376.4.1 file-loader"> # </a></h4>
+<ul>
+<li><a href="https://github.com/webpack/loader-utils">loader-utils</a></li>
+<li><a href="https://github.com/webpack-contrib/file-loader/blob/master/src/index.js">file-loader</a></li>
+<li><a href="https://webpack.js.org/guides/public-path/#on-the-fly">public-path</a></li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> { getOptions, interpolateName } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;loader-utils&apos;</span>);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loader</span>(<span class="hljs-params">content</span>) </span>{
+  <span class="hljs-keyword">let</span> options=getOptions(<span class="hljs-keyword">this</span>)||{};
+  <span class="hljs-keyword">let</span> url = interpolateName(<span class="hljs-keyword">this</span>, options.filename || <span class="hljs-string">&quot;[hash].[ext]&quot;</span>, {content});
+  <span class="hljs-keyword">this</span>.emitFile(url, content);
+  <span class="hljs-keyword">return</span> <span class="hljs-string">`module.exports = <span class="hljs-subst">${<span class="hljs-built_in">JSON</span>.stringify(url)}</span>`</span>;
+}
+loader.raw = <span class="hljs-literal">true</span>;
+<span class="hljs-built_in">module</span>.exports = loader;
+</code></pre>
+<ul>
+<li>&#x901A;&#x8FC7; <code>loaderUtils.interpolateName</code> &#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x6839;&#x636E; options.name &#x4EE5;&#x53CA;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x552F;&#x4E00;&#x7684;&#x6587;&#x4EF6;&#x540D; url&#xFF08;&#x4E00;&#x822C;&#x914D;&#x7F6E;&#x90FD;&#x4F1A;&#x5E26;&#x4E0A;hash&#xFF0C;&#x5426;&#x5219;&#x5F88;&#x53EF;&#x80FD;&#x7531;&#x4E8E;&#x6587;&#x4EF6;&#x91CD;&#x540D;&#x800C;&#x51B2;&#x7A81;&#xFF09;</li>
+<li>&#x901A;&#x8FC7; <code>this.emitFile(url, content)</code> &#x544A;&#x8BC9; webpack &#x6211;&#x9700;&#x8981;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;webpack&#x4F1A;&#x6839;&#x636E;&#x53C2;&#x6570;&#x521B;&#x5EFA;&#x5BF9;&#x5E94;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x653E;&#x5728; <code>public path</code> &#x76EE;&#x5F55;&#x4E0B;</li>
+<li>&#x8FD4;&#x56DE; <code>module.exports = ${JSON.stringify(url)}</code>,&#x8FD9;&#x6837;&#x5C31;&#x4F1A;&#x628A;&#x539F;&#x6765;&#x7684;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x66FF;&#x6362;&#x4E3A;&#x7F16;&#x8BD1;&#x540E;&#x7684;&#x8DEF;&#x5F84;</li>
+</ul>
+<h4 id="t386.4.2 url-loader">6.4.2 url-loader <a href="#t386.4.2 url-loader"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> { getOptions } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;loader-utils&apos;</span>);
+<span class="hljs-keyword">var</span> mime = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;mime&apos;</span>);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loader</span>(<span class="hljs-params">source</span>) </span>{
+    <span class="hljs-keyword">let</span> options=getOptions(<span class="hljs-keyword">this</span>)||{};
+    <span class="hljs-keyword">let</span> { limit, fallback=<span class="hljs-string">&apos;file-loader&apos;</span> } = options;
+    <span class="hljs-keyword">if</span> (limit) {
+      limit = <span class="hljs-built_in">parseInt</span>(limit, <span class="hljs-number">10</span>);
+    }
+    <span class="hljs-keyword">const</span> mimeType=mime.getType(<span class="hljs-keyword">this</span>.resourcePath);
+    <span class="hljs-keyword">if</span> (!limit || source.length &lt; limit) {
+        <span class="hljs-keyword">let</span> base64 = <span class="hljs-string">`data:<span class="hljs-subst">${mimeType}</span>;base64,<span class="hljs-subst">${source.toString(<span class="hljs-string">&apos;base64&apos;</span>)}</span>`</span>;
+        <span class="hljs-keyword">return</span> <span class="hljs-string">`module.exports = <span class="hljs-subst">${<span class="hljs-built_in">JSON</span>.stringify(base64)}</span>`</span>;
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">let</span> fileLoader = <span class="hljs-built_in">require</span>(fallback || <span class="hljs-string">&apos;file-loader&apos;</span>);
+        <span class="hljs-keyword">return</span> fileLoader.call(<span class="hljs-keyword">this</span>, source);
+    }
+}
+loader.raw = <span class="hljs-literal">true</span>;
+<span class="hljs-built_in">module</span>.exports = loader;
+</code></pre>
+<h3 id="t396.5 pitch">6.5 pitch <a href="#t396.5 pitch"> # </a></h3>
+<ul>
+<li>&#x4EE5;<code>a!b!c!module</code>&#x4E3A;&#x4F8B;,&#x6B63;&#x5E38;&#x8C03;&#x7528;&#x987A;&#x5E8F;&#x5E94;&#x8BE5;&#x662F;<code>c=&gt;b=&gt;a</code>,&#x4F46;&#x662F;&#x771F;&#x6B63;&#x8C03;&#x7528;&#x987A;&#x5E8F;&#x662F; <code>a(pitch)=&gt;b(pitch)=&gt;c(pitch)=&gt;c=&gt;b=&gt;a</code>,&#x5982;&#x679C;&#x5176;&#x4E2D;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;<code>pitching loader</code>&#x8FD4;&#x56DE;&#x4E86;&#x503C;&#x5C31;&#x76F8;&#x5F53;&#x4E8E;&#x5728;&#x5B83;&#x4EE5;&#x53CA;&#x5B83;&#x53F3;&#x8FB9;&#x7684;loader&#x5DF2;&#x7ECF;&#x6267;&#x884C;&#x5B8C;&#x6BD5;</li>
+<li>&#x6BD4;&#x5982;&#x5982;&#x679C;<code>b</code>&#x8FD4;&#x56DE;&#x4E86;&#x5B57;&#x7B26;&#x4E32;<code>result_b</code>, &#x63A5;&#x4E0B;&#x6765;&#x53EA;&#x6709;<code>a</code>&#x4F1A;&#x88AB;&#x7CFB;&#x7EDF;&#x6267;&#x884C;&#xFF0C;&#x4E14;<code>a</code>&#x7684;<code>loader</code>&#x6536;&#x5230;&#x7684;&#x53C2;&#x6570;&#x662F;<code>result_b</code></li>
+<li>loader&#x6839;&#x636E;&#x8FD4;&#x56DE;&#x503C;&#x5206;&#x4E3A;&#x4E24;&#x79CD;&#xFF0C;&#x4E00;&#x79CD;&#x662F;&#x8FD4;&#x56DE;<code>js</code>&#x4EE3;&#x7801;(&#x4E00;&#x4E2A;module&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x542B;&#x6709;&#x7C7B;&#x4F3C;module.export&#x8BED;&#x53E5;)&#x7684;loader,&#x53E6;&#x4E00;&#x79CD;&#x662F;&#x4E0D;&#x80FD;&#x4F5C;&#x4E3A;&#x6700;&#x5DE6;&#x8FB9;<code>loader</code>&#x7684;&#x5176;&#x4ED6;<code>loader</code></li>
+<li>&#x6709;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x60F3;&#x628A;&#x4E24;&#x4E2A;&#x7B2C;&#x4E00;&#x79CD;<code>loader</code> &#x8FDE;&#x63A5;&#x8D77;&#x6765;&#xFF0C;&#x6BD4;&#x5982;<code>style-loader!css-loader!</code>
+&#x95EE;&#x9898;&#x662F;<code>css-loader</code>&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x662F;&#x4E00;&#x4E32;js&#x4EE3;&#x7801;&#xFF0C;&#x5982;&#x679C;&#x6309;&#x6B63;&#x5E38;&#x65B9;&#x5F0F;&#x5199;<code>style-loader</code>&#x7684;&#x53C2;&#x6570;&#x5C31;&#x662F;&#x4E00;&#x4E32;&#x4EE3;&#x7801;&#x5B57;&#x7B26;&#x4E32;</li>
+<li>&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x8FD9;&#x79CD;&#x95EE;&#x9898;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5728;<code>style-loader</code>&#x91CC;&#x6267;&#x884C;<code>require(css-loader!resources)</code></li>
+</ul>
+<p>pitch&#x4E0E;loader&#x672C;&#x8EAB;&#x65B9;&#x6CD5;&#x7684;&#x6267;&#x884C;&#x987A;&#x5E8F;&#x56FE;</p>
+<pre><code class="lang-js">|- a-loader <span class="hljs-string">`pitch`</span>
+  |- b-loader <span class="hljs-string">`pitch`</span>
+    |- c-loader <span class="hljs-string">`pitch`</span>
+      |- requested <span class="hljs-built_in">module</span> is picked up <span class="hljs-keyword">as</span> a dependency
+    |- c-loader normal execution
+  |- b-loader normal execution
+|- a-loader normal execution
+</code></pre>
+<h4 id="t406.5.1 loaders\loader1.js">6.5.1 loaders\loader1.js <a href="#t406.5.1 loaders\loader1.js"> # </a></h4>
+<p>loaders\loader1.js</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loader</span>(<span class="hljs-params">source</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;loader1&apos;</span>,<span class="hljs-keyword">this</span>.data);
+    <span class="hljs-keyword">return</span> source+<span class="hljs-string">&quot;//loader1&quot;</span>;
+}
+loader.pitch = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">remainingRequest,previousRequest,data</span>) </span>{
+    data.name = <span class="hljs-string">&apos;pitch1&apos;</span>;
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;pitch1&apos;</span>);
+}
+<span class="hljs-built_in">module</span>.exports = loader;
+</code></pre>
+<h4 id="t416.5.2 loaders\loader2.js">6.5.2 loaders\loader2.js <a href="#t416.5.2 loaders\loader2.js"> # </a></h4>
+<p>loaders\loader2.js</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loader</span>(<span class="hljs-params">source</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;loader2&apos;</span>);
+    <span class="hljs-keyword">return</span> source+<span class="hljs-string">&quot;//loader2&quot;</span>;
+}
+loader.pitch = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">remainingRequest,previousRequest,data</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;remainingRequest=&apos;</span>,remainingRequest);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;previousRequest=&apos;</span>,previousRequest);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;pitch2&apos;</span>);
+    <span class="hljs-comment">//return &apos;console.log(&quot;pitch2&quot;)&apos;;</span>
+}
+<span class="hljs-built_in">module</span>.exports = loader;
+</code></pre>
+<h4 id="t426.5.3 loaders\loader3.js">6.5.3 loaders\loader3.js <a href="#t426.5.3 loaders\loader3.js"> # </a></h4>
+<p>loaders\loader3.js</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loader</span>(<span class="hljs-params">source</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;loader3&apos;</span>);
+    <span class="hljs-keyword">return</span> source+<span class="hljs-string">&quot;//loader3&quot;</span>;
+}
+loader.pitch = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;pitch3&apos;</span>);
+}
+<span class="hljs-built_in">module</span>.exports = loader;
+</code></pre>
+<h4 id="t436.5.4 webpack.config.js">6.5.4 webpack.config.js <a href="#t436.5.4 webpack.config.js"> # </a></h4>
+<pre><code class="lang-js"> {
+    <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.js$/</span>,
+    <span class="hljs-attr">use</span>: [<span class="hljs-string">&apos;loader1&apos;</span>, <span class="hljs-string">&apos;loader2&apos;</span>, <span class="hljs-string">&apos;loader3&apos;</span>]
+ }
+</code></pre>
+<h3 id="t446.6 run-loader">6.6 run-loader <a href="#t446.6 run-loader"> # </a></h3>
+<ul>
+<li><a href="https://github.com/webpack/loader-runner/blob/v2.4.0/lib/LoaderRunner.js">LoaderRunner</a></li>
+<li><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/NormalModuleFactory.js#L180">NormalModuleFactory-noPreAutoLoaders</a></li>
+<li><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/NormalModule.js#L292">NormalModule-runLoaders</a></li>
+</ul>
+<p>run-loader.js</p>
+<pre><code class="lang-js"><span class="hljs-comment">//@ts-check</span>
+<span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
+<span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs&apos;</span>);
+<span class="hljs-keyword">const</span> readFile = fs.readFileSync;
+<span class="hljs-comment">//&#x5165;&#x53E3;&#x6587;&#x4EF6;</span>
+<span class="hljs-keyword">let</span> entry = <span class="hljs-string">&apos;./src/title.js&apos;</span>;
+<span class="hljs-keyword">let</span> options = {
+    <span class="hljs-attr">resource</span>: path.join(__dirname, entry),<span class="hljs-comment">//&#x8981;&#x52A0;&#x8F7D;&#x7684;&#x8D44;&#x6E90;,&#x5B83;&#x662F;&#x4E2A;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;</span>
+    <span class="hljs-attr">loaders</span>: [
+        path.join(__dirname, <span class="hljs-string">&apos;loaders/a-loader.js&apos;</span>),<span class="hljs-comment">//C:\vipdata\lesson\201911projects\7.loader\loaders\a-loader.js</span>
+        path.join(__dirname, <span class="hljs-string">&apos;loaders/b-loader.js&apos;</span>),<span class="hljs-comment">//C:\vipdata\lesson\201911projects\7.loader\loaders\b-loader.js</span>
+        path.join(__dirname, <span class="hljs-string">&apos;loaders/c-loader.js&apos;</span>)<span class="hljs-comment">//C:\vipdata\lesson\201911projects\7.loader\loaders\c-loader.js</span>
+    ]
+}
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createLoaderObject</span>(<span class="hljs-params">loaderPath</span>) </span>{
+    <span class="hljs-keyword">let</span> loaderObject = { <span class="hljs-attr">data</span>: {} };
+    loaderObject.path = loaderPath;<span class="hljs-comment">// &#x5B58;&#x653E;&#x6B64;loader&#x7684;&#x7EDD;&#x5730;&#x8DEF;&#x5F84;</span>
+    loaderObject.normal = <span class="hljs-built_in">require</span>(loaderPath);
+    loaderObject.pitch = loaderObject.normal.pitch;
+    <span class="hljs-keyword">return</span> loaderObject;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">runLoaders</span>(<span class="hljs-params">options, finalCallback</span>) </span>{
+    <span class="hljs-keyword">let</span> loaderContext = {};<span class="hljs-comment">//&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x5C06;&#x4F1A;&#x6210;&#x4E3A;webpack loader&#x4E2D;&#x7684;this</span>
+    <span class="hljs-keyword">let</span> resource = options.resource;<span class="hljs-comment">//&#x83B7;&#x53D6;&#x8981;&#x52A0;&#x8F7D;&#x7684;&#x8D44;&#x6E90; C:\vipdata\lesson\201911projects\7.loader\src\title.js</span>
+    <span class="hljs-keyword">let</span> loaders = options.loaders;
+    loaders = loaders.map(createLoaderObject);
+    loaderContext.loaderIndex = <span class="hljs-number">0</span>;<span class="hljs-comment">//&#x5F53;&#x524D;&#x6B63;&#x5728;&#x6267;&#x884C;&#x7684;loader&#x7684;&#x7D22;&#x5F15;</span>
+    loaderContext.readResource = readFile;<span class="hljs-comment">//&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x7684;&#x65B9;&#x6CD5; readFile</span>
+    loaderContext.resource = resource;<span class="hljs-comment">//resource&#x653E;&#x7F6E;&#x7740;&#x8981;&#x8BFB;&#x53D6;&#x7684;&#x8D44;&#x6E90;</span>
+    loaderContext.loaders = loaders;<span class="hljs-comment">//&#x7F13;&#x5B58;&#x4E86;loaderObject&#x7684;&#x6570;&#x7EC4;</span>
+
+    <span class="hljs-built_in">Object</span>.defineProperty(loaderContext, <span class="hljs-string">&apos;request&apos;</span>, {
+        <span class="hljs-keyword">get</span>() {
+            <span class="hljs-keyword">return</span> loaderContext.loaders.map(<span class="hljs-function"><span class="hljs-params">loaderObject</span> =&gt;</span> loaderObject.path)
+                .concat(loaderContext.resource).join(<span class="hljs-string">&apos;!&apos;</span>)
+        }
+    });
+    <span class="hljs-built_in">Object</span>.defineProperty(loaderContext, <span class="hljs-string">&apos;previousRequest&apos;</span>, {
+        <span class="hljs-keyword">get</span>() {
+            <span class="hljs-keyword">return</span> loaderContext.loaders.slice(<span class="hljs-number">0</span>, loaderContext.loaderIndex).map(<span class="hljs-function"><span class="hljs-params">loaderObject</span> =&gt;</span> loaderObject.path)
+                .join(<span class="hljs-string">&apos;!&apos;</span>)
+        }
+    });
+    <span class="hljs-built_in">Object</span>.defineProperty(loaderContext, <span class="hljs-string">&apos;remainingRequest&apos;</span>, {
+        <span class="hljs-keyword">get</span>() {
+            <span class="hljs-keyword">return</span> loaderContext.loaders.slice(loaderContext.loaderIndex + <span class="hljs-number">1</span>).map(<span class="hljs-function"><span class="hljs-params">loaderObject</span> =&gt;</span> loaderObject.path)
+                .concat(loaderContext.resource).join(<span class="hljs-string">&apos;!&apos;</span>)
+        }
+    });
+    <span class="hljs-built_in">Object</span>.defineProperty(loaderContext, <span class="hljs-string">&apos;data&apos;</span>, {
+        <span class="hljs-keyword">get</span>() {
+            <span class="hljs-keyword">return</span> loaderContext.loaders[loaderContext.loaderIndex].data;
+        }
+    });
+    iteratePitchingLoaders(loaderContext, finalCallback);
+    <span class="hljs-comment">//&#x5728;&#x8FD9;&#x91CC;&#x8981;&#x8BFB;&#x53D6;&#x8981;&#x52A0;&#x8F7D;&#x7684;&#x6A21;&#x5757;&#x7684;&#x5185;&#x5BB9;</span>
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">processResource</span>(<span class="hljs-params">loaderContext, finalCallback</span>) </span>{
+        <span class="hljs-keyword">let</span> buffer = loaderContext.readResource(loaderContext.resource);<span class="hljs-comment">// &#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x7684;&#x5185;&#x5BB9; </span>
+        iterateNormalLoaders(loaderContext, buffer, finalCallback);<span class="hljs-comment">//&#x8FDB;&#x884C;&#x6B63;&#x638C;&#x4E2D;&#x7684;loader&#x6267;&#x884C;</span>
+    }
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">convertArgs</span>(<span class="hljs-params">args, raw</span>) </span>{
+        <span class="hljs-keyword">if</span> (!raw &amp;&amp; Buffer.isBuffer(args))
+            args = args.toString(<span class="hljs-string">&quot;utf8&quot;</span>);
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (raw &amp;&amp; <span class="hljs-keyword">typeof</span> args === <span class="hljs-string">&quot;string&quot;</span>)
+            args = <span class="hljs-keyword">new</span> Buffer(args, <span class="hljs-string">&quot;utf8&quot;</span>); <span class="hljs-comment">// eslint-disable-line</span>
+    }
+    <span class="hljs-comment">//&#x6267;&#x884C;&#x6B63;&#x5E38;&#x7684; </span>
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">iterateNormalLoaders</span>(<span class="hljs-params">loaderContext, args, finalCallback</span>) </span>{
+        <span class="hljs-keyword">if</span> (loaderContext.loaderIndex &lt; <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">return</span> finalCallback(<span class="hljs-literal">null</span>, args);
+        }
+        <span class="hljs-keyword">let</span> currentLoaderObject = loaderContext.loaders[loaderContext.loaderIndex];
+        <span class="hljs-keyword">let</span> normalFn = currentLoaderObject.normal;<span class="hljs-comment">//&#x62FF;&#x5230;&#x5F53;&#x524D;&#x7684;normal&#x51FD;&#x6570;</span>
+        <span class="hljs-keyword">let</span> isSync = <span class="hljs-literal">true</span>;<span class="hljs-comment">//&#x9ED8;&#x8BA4;&#x5F53;&#x524D;&#x7684;&#x6267;&#x884C;&#x6A21;&#x5F0F;&#x662F;&#x540C;&#x6B65;&#x6A21;&#x5F0F;</span>
+        <span class="hljs-keyword">const</span> innerCallback = loaderContext.callback = <span class="hljs-function">(<span class="hljs-params">err, args</span>) =&gt;</span> {
+            loaderContext.loaderIndex--;
+            iterateNormalLoaders(loaderContext, args, finalCallback)
+        }
+        loaderContext.async = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {<span class="hljs-comment">//&#x5982;&#x679C;&#x8C03;&#x4E86;&#x5B83;&#xFF0C;&#x4F1A;&#x628A;&#x540C;&#x6B65;&#x53D8;&#x6210;&#x5F02;&#x6B65;</span>
+            isSync = <span class="hljs-literal">false</span>;
+            <span class="hljs-keyword">return</span> innerCallback;
+        }
+        args = convertArgs(args, normalFn.raw)
+        args = normalFn.call(loaderContext, args);
+        <span class="hljs-keyword">if</span> (isSync) {<span class="hljs-comment">//&#x5982;&#x679C;&#x662F;&#x540C;&#x6B65;&#x7684;&#x8BDD;&#x3002;</span>
+            loaderContext.loaderIndex--;
+            iterateNormalLoaders(loaderContext, args, finalCallback);
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-comment">//&#x5982;&#x679C;&#x662F;&#x5F02;&#x6B65;&#xFF0C;&#x5C31;&#x4E0D;&#x4F1A;&#x518D;&#x9012;&#x5F52;&#x8FED;&#x4EE3;&#x4E86;</span>
+        }
+    }
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">iteratePitchingLoaders</span>(<span class="hljs-params">loaderContext, finalCallback</span>) </span>{
+        <span class="hljs-keyword">if</span> (loaderContext.loaderIndex &gt;= loaderContext.loaders.length) {
+            loaderContext.loaderIndex--;<span class="hljs-comment">//&#x56E0;&#x4E3A;&#x5DF2;&#x7ECF;&#x8D8A;&#x754C;&#x4E86;,&#x6240;&#x4EE5;&#x8BA9;&#x7D22;&#x5F15;&#x51CF;1 </span>
+            <span class="hljs-keyword">return</span> processResource(loaderContext, finalCallback);
+        }
+        <span class="hljs-keyword">let</span> currentLoaderObject = loaderContext.loaders[loaderContext.loaderIndex];<span class="hljs-comment">//0 &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x7684;loaderObject</span>
+        <span class="hljs-keyword">let</span> pitchFn = currentLoaderObject.pitch;
+        <span class="hljs-keyword">if</span> (!pitchFn) {<span class="hljs-comment">//&#x5982;&#x679C;&#x6CA1;&#x6709;pitch&#x51FD;&#x6570;&#xFF0C;&#x5219;&#x76F4;&#x63A5; &#x8DF3;&#x8FC7;&#x5F53;&#x524D;loader,&#x6267;&#x884C;&#x4E0B;&#x4E00;&#x4E2A;loader</span>
+            loaderContext.loaderIndex++;
+            <span class="hljs-keyword">return</span> iteratePitchingLoaders(loaderContext, finalCallback);
+        }
+        <span class="hljs-keyword">let</span> args = pitchFn.call(loaderContext, loaderContext.remainingRequest, loaderContext.previousRequest, loaderContext.data);
+        <span class="hljs-keyword">if</span> (args) {<span class="hljs-comment">//&#x5982;&#x679C;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x5219;&#x8DF3;&#x8FC7;&#x5F53;&#x524D;&#x548C;&#x540E;&#x9762;&#x7684;normal&#x51FD;&#x6570;&#x4EE5;&#x53CA;&#x8BFB;&#x53D6;&#x6A21;&#x5757;&#x6587;&#x4EF6;&#x7684;&#x903B;&#x8F91; &#xFF0C;&#x76F4;&#x63A5;&#x628A;&#x7ED3;&#x679C;&#x8FD4;&#x56DE;&#x7ED9;&#x524D;&#x4E00;&#x4E2A;loader&#x7684;normal&#x53C2;&#x6570;</span>
+            loaderContext.loaderIndex--;
+            <span class="hljs-keyword">return</span> iterateNormalLoaders(loaderContext, args, finalCallback);
+        } <span class="hljs-keyword">else</span> {
+            loaderContext.loaderIndex++;
+            <span class="hljs-keyword">return</span> iteratePitchingLoaders(loaderContext, finalCallback);
+        }
+    }
+
+}
+<span class="hljs-built_in">console</span>.time(<span class="hljs-string">&apos;cost&apos;</span>);
+runLoaders(options, (err, result) =&gt; {
+    <span class="hljs-comment">//   title//c-loader//b-loader//a-loader</span>
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x7ECF;&#x8FC7;loader&#x7F16;&#x8BD1;&#x540E;&#x7684;&#x7ED3;&#x679C;&apos;</span>, result);
+    <span class="hljs-built_in">console</span>.timeEnd(<span class="hljs-string">&apos;cost&apos;</span>);
+});
+</code></pre>
+<h3 id="t456.7 &#x6837;&#x5F0F;&#x5904;&#x7406;">6.7 &#x6837;&#x5F0F;&#x5904;&#x7406; <a href="#t456.7 &#x6837;&#x5F0F;&#x5904;&#x7406;"> # </a></h3>
+<ul>
+<li><a href="https://github.com/webpack-contrib/css-loader/blob/master/lib/loader.js">css-loader</a> &#x7684;&#x4F5C;&#x7528;&#x662F;&#x5904;&#x7406;css&#x4E2D;&#x7684; @import &#x548C; url &#x8FD9;&#x6837;&#x7684;&#x5916;&#x90E8;&#x8D44;&#x6E90;</li>
+<li><a href="https://github.com/webpack-contrib/style-loader/blob/master/index.js">style-loader</a> &#x7684;&#x4F5C;&#x7528;&#x662F;&#x628A;&#x6837;&#x5F0F;&#x63D2;&#x5165;&#x5230; DOM&#x4E2D;&#xFF0C;&#x65B9;&#x6CD5;&#x662F;&#x5728;head&#x4E2D;&#x63D2;&#x5165;&#x4E00;&#x4E2A;style&#x6807;&#x7B7E;&#xFF0C;&#x5E76;&#x628A;&#x6837;&#x5F0F;&#x5199;&#x5165;&#x5230;&#x8FD9;&#x4E2A;&#x6807;&#x7B7E;&#x7684; innerHTML&#x91CC;</li>
+<li><a href="https://github.com/webpack-contrib/less-loader">less-loader</a> &#x628A;less&#x7F16;&#x8BD1;&#x6210;css</li>
+<li><a href="https://webpack.js.org/api/loaders/#pitching-loader">pitching-loader</a></li>
+<li><a href="https://github.com/webpack/loader-utils">loader-utils</a></li>
+<li><a href="https://webpack.js.org/concepts/loaders/#configuration">!!</a></li>
+</ul>
+<h4 id="t466.7.1 loader&#x7C7B;&#x578B;">6.7.1 loader&#x7C7B;&#x578B; <a href="#t466.7.1 loader&#x7C7B;&#x578B;"> # </a></h4>
+<ul>
+<li><a href="https://github.com/webpack/webpack/blob/v4.39.3/lib/NormalModuleFactory.js#L339">loader&#x7684;&#x53E0;&#x52A0;&#x987A;&#x5E8F;</a> = post(&#x540E;&#x7F6E;)+inline(&#x5185;&#x8054;)+normal(&#x6B63;&#x5E38;)+pre(&#x524D;&#x7F6E;)</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> result = [useLoadersPost,useLoaders,useLoadersPre];
+loaders = results[<span class="hljs-number">0</span>].concat(loaders, results[<span class="hljs-number">1</span>], results[<span class="hljs-number">2</span>]);
+useLoadersPost+inlineLoader+useLoaders(normal loader)+useLoadersPre
+</code></pre>
+<p><a href="https://webpack.js.org/concepts/loaders/#configuration">Configuration</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x7B26;&#x53F7;</th>
+<th style="text-align:left">&#x53D8;&#x91CF;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+<th style="text-align:left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>-!</code></td>
+<td style="text-align:left">noPreAutoLoaders</td>
+<td style="text-align:left">&#x4E0D;&#x8981;&#x524D;&#x7F6E;&#x548C;&#x666E;&#x901A;loader</td>
+<td style="text-align:left">Prefixing with -! will disable all configured preLoaders and loaders but not postLoaders</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>!</code></td>
+<td style="text-align:left">noAutoLoaders</td>
+<td style="text-align:left">&#x4E0D;&#x8981;&#x666E;&#x901A;loader</td>
+<td style="text-align:left">Prefixing with ! will disable all configured normal loaders</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>!!</code></td>
+<td style="text-align:left">noPrePostAutoLoaders</td>
+<td style="text-align:left">&#x4E0D;&#x8981;&#x524D;&#x540E;&#x7F6E;&#x548C;&#x666E;&#x901A;loader,&#x53EA;&#x8981;&#x5185;&#x8054;loader</td>
+<td style="text-align:left">Prefixing with !! will disable all configured loaders (preLoaders, loaders, postLoaders)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="t476.7.2 &#x4F7F;&#x7528;less-loader">6.7.2 &#x4F7F;&#x7528;less-loader <a href="#t476.7.2 &#x4F7F;&#x7528;less-loader"> # </a></h4>
+<h5 id="t486.7.2.1 index.js">6.7.2.1 index.js <a href="#t486.7.2.1 index.js"> # </a></h5>
+<p>src\index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> <span class="hljs-string">&apos;./index.less&apos;</span>;
+</code></pre>
+<h5 id="t496.7.2.2 src\index.less">6.7.2.2 src\index.less <a href="#t496.7.2.2 src\index.less"> # </a></h5>
+<p>src\index.less</p>
+<pre><code class="lang-less"><span class="hljs-variable">@color:</span>red;
+<span class="hljs-selector-id">#root</span>{
+    <span class="hljs-attribute">color</span>:<span class="hljs-variable">@color</span>;
+}
+</code></pre>
+<h5 id="t506.7.2.3 src\index.html">6.7.2.3 src\index.html <a href="#t506.7.2.3 src\index.html"> # </a></h5>
+<p>src\index.html</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;root&quot;</span>&gt;</span>hello<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<h5 id="t516.7.2.4 webpack.config.js">6.7.2.4 webpack.config.js <a href="#t516.7.2.4 webpack.config.js"> # </a></h5>
+<p>webpack.config.js</p>
+<pre><code class="lang-js">{
+  <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.less$/</span>,
+  <span class="hljs-attr">use</span>: [
+    <span class="hljs-string">&apos;style-loader&apos;</span>,
+    <span class="hljs-string">&apos;less-loader&apos;</span>
+  ]
+}
+</code></pre>
+<h4 id="t526.7.3 less-loader.js">6.7.3 less-loader.js <a href="#t526.7.3 less-loader.js"> # </a></h4>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> less = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;less&apos;</span>);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loader</span>(<span class="hljs-params">source</span>) </span>{
+    <span class="hljs-keyword">let</span> callback = <span class="hljs-keyword">this</span>.async();
+    less.render(source, { <span class="hljs-attr">filename</span>: <span class="hljs-keyword">this</span>.resource }, (err, output) =&gt; {
+        callback(err, output.css);
+    });
+}
+<span class="hljs-built_in">module</span>.exports = loader;
+</code></pre>
+<h4 id="t536.7.4 style-loader">6.7.4 style-loader <a href="#t536.7.4 style-loader"> # </a></h4>
+<pre><code class="lang-js"> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loader</span>(<span class="hljs-params">source</span>) </span>{
+    <span class="hljs-keyword">let</span> script=(<span class="hljs-string">`
+      let style = document.createElement(&quot;style&quot;);
+      style.innerHTML = <span class="hljs-subst">${<span class="hljs-built_in">JSON</span>.stringify(source)}</span>;
+    document.head.appendChild(style);
+    module.exports = &quot;&quot;;
+    `</span>);
+    <span class="hljs-keyword">return</span> script;
+} 
+<span class="hljs-built_in">module</span>.exports = loader;
+</code></pre>
+<h4 id="t546.7.5 &#x4E24;&#x4E2A;&#x5DE6;&#x4FA7;&#x6A21;&#x5757;&#x8FDE;&#x7528;">6.7.5 &#x4E24;&#x4E2A;&#x5DE6;&#x4FA7;&#x6A21;&#x5757;&#x8FDE;&#x7528; <a href="#t546.7.5 &#x4E24;&#x4E2A;&#x5DE6;&#x4FA7;&#x6A21;&#x5757;&#x8FDE;&#x7528;"> # </a></h4>
+<h5 id="t556.7.5.1 less-loader.js">6.7.5.1 less-loader.js <a href="#t556.7.5.1 less-loader.js"> # </a></h5>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> less = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;less&apos;</span>);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loader</span>(<span class="hljs-params">source</span>) </span>{
+    <span class="hljs-keyword">let</span> callback = <span class="hljs-keyword">this</span>.async();
+    less.render(source, { <span class="hljs-attr">filename</span>: <span class="hljs-keyword">this</span>.resource }, (err, output) =&gt; {
+        callback(err, <span class="hljs-string">`module.exports = <span class="hljs-subst">${<span class="hljs-built_in">JSON</span>.stringify(output.css)}</span>`</span>);
+    });
+}
+<span class="hljs-built_in">module</span>.exports = loader;
+</code></pre>
+<h5 id="t566.7.5.2 style-loader.js">6.7.5.2 style-loader.js <a href="#t566.7.5.2 style-loader.js"> # </a></h5>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> loaderUtils = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;loader-utils&quot;</span>);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loader</span>(<span class="hljs-params">source</span>) </span>{
+
+}
+<span class="hljs-comment">//https://github.com/webpack/webpack/blob/v4.39.3/lib/NormalModuleFactory.js#L339</span>
+loader.pitch = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">remainingRequest, previousRequest, data</span>) </span>{
+  <span class="hljs-comment">//C:\webpack-analysis2\loaders\less-loader.js!C:\webpack-analysis2\src\index.less</span>
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;previousRequest&apos;</span>, previousRequest);<span class="hljs-comment">//&#x4E4B;&#x524D;&#x7684;&#x8DEF;&#x5F84;</span>
+  <span class="hljs-comment">//console.log(&apos;currentRequest&apos;, currentRequest);//&#x5F53;&#x524D;&#x7684;&#x8DEF;&#x5F84;</span>
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;remainingRequest&apos;</span>, remainingRequest);<span class="hljs-comment">//&#x5269;&#x4E0B;&#x7684;&#x8DEF;&#x5F84;</span>
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;data&apos;</span>, data);
+  <span class="hljs-comment">// !! noPrePostAutoLoaders &#x4E0D;&#x8981;&#x524D;&#x540E;&#x7F6E;&#x548C;&#x666E;&#x901A;loader</span>
+  <span class="hljs-comment">//__webpack_require__(/*! !../loaders/less-loader.js!./index.less */ &quot;./loaders/less-loader.js!./src/index.less&quot;);</span>
+  <span class="hljs-keyword">let</span> style = <span class="hljs-string">`
+    var style = document.createElement(&quot;style&quot;);
+    style.innerHTML = require(<span class="hljs-subst">${loaderUtils.stringifyRequest(<span class="hljs-keyword">this</span>, <span class="hljs-string">&quot;!!&quot;</span> + remainingRequest)}</span>);
+    document.head.appendChild(style);
+ `</span>;
+  <span class="hljs-keyword">return</span> style;
+}
+<span class="hljs-built_in">module</span>.exports = loader;
+</code></pre>
+<h4 id="t576.7.6 css-loader.js">6.7.6 css-loader.js <a href="#t576.7.6 css-loader.js"> # </a></h4>
+<ul>
+<li><code>css-loader</code> &#x7684;&#x4F5C;&#x7528;&#x662F;&#x5904;&#x7406;css&#x4E2D;&#x7684; <code>@import</code> &#x548C; <code>url</code> &#x8FD9;&#x6837;&#x7684;&#x5916;&#x90E8;&#x8D44;&#x6E90;</li>
+<li><a href="https://github.com/postcss/postcss#usage">postcss</a></li>
+<li>Avoid CSS @import CSS @importallows stylesheets to import other stylesheets. When CSS @import isused from an external stylesheet, the browser is unable to downloadthe stylesheets in parallel, which adds additional round-trip timesto the overall page load.</li>
+</ul>
+<h5 id="t586.7.6.1 src\index.js">6.7.6.1 src\index.js <a href="#t586.7.6.1 src\index.js"> # </a></h5>
+<p>src\index.js</p>
+<pre><code class="lang-js"><span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./style.css&apos;</span>);
+</code></pre>
+<h5 id="t596.7.6.2 src\style.css">6.7.6.2 src\style.css <a href="#t596.7.6.2 src\style.css"> # </a></h5>
+<pre><code class="lang-css"><span class="hljs-keyword">@import</span> <span class="hljs-string">&apos;./global.css&apos;</span>;
+<span class="hljs-selector-class">.avatar</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+  <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">&apos;./baidu.png&apos;</span>);
+  <span class="hljs-attribute">background-size</span>: cover;
+}
+<span class="hljs-selector-tag">div</span>{
+  <span class="hljs-attribute">color</span>:red;
+}
+</code></pre>
+<h5 id="t606.7.6.3 src\global.css">6.7.6.3 src\global.css <a href="#t606.7.6.3 src\global.css"> # </a></h5>
+<pre><code class="lang-css"><span class="hljs-selector-tag">body</span> {
+    <span class="hljs-attribute">background-color</span>: green;
+}
+</code></pre>
+<h5 id="t616.7.6.4 webpack.config.js">6.7.6.4 webpack.config.js <a href="#t616.7.6.4 webpack.config.js"> # </a></h5>
+<pre><code class="lang-diff"><span class="hljs-addition">+      {</span>
+<span class="hljs-addition">+        test: /\.css$/,</span>
+<span class="hljs-addition">+        use: [</span>
+<span class="hljs-addition">+          &apos;style-loader&apos;,</span>
+<span class="hljs-addition">+          &apos;css-loader&apos;</span>
+<span class="hljs-addition">+        ]</span>
+<span class="hljs-addition">+      },</span>
+<span class="hljs-addition">+      {</span>
+<span class="hljs-addition">+        test: /\.png$/,</span>
+<span class="hljs-addition">+        use: [</span>
+<span class="hljs-addition">+          &apos;file-loader&apos;</span>
+<span class="hljs-addition">+        ]</span>
+<span class="hljs-addition">+      }</span>
+</code></pre>
+<h5 id="t626.7.6.5 css-loader.js">6.7.6.5 css-loader.js <a href="#t626.7.6.5 css-loader.js"> # </a></h5>
+<p>loaders\css-loader.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> postcss = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;postcss&quot;</span>);
+<span class="hljs-keyword">var</span> loaderUtils = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;loader-utils&quot;</span>);
+<span class="hljs-keyword">var</span> Tokenizer = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;css-selector-tokenizer&quot;</span>);
+
+<span class="hljs-keyword">const</span> cssLoader = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">inputSource</span>) </span>{
+    <span class="hljs-keyword">const</span> cssPlugin = <span class="hljs-function">(<span class="hljs-params">options</span>) =&gt;</span> {
+        <span class="hljs-keyword">return</span> <span class="hljs-function">(<span class="hljs-params">root</span>) =&gt;</span> {
+            root.walkAtRules(<span class="hljs-regexp">/^import$/i</span>, (rule) =&gt; {
+                rule.remove();
+                options.imports.push(rule.params.slice(<span class="hljs-number">1</span>, <span class="hljs-number">-1</span>));
+            });
+            root.walkDecls(<span class="hljs-function">(<span class="hljs-params">decl</span>) =&gt;</span> {
+                <span class="hljs-keyword">var</span> values = Tokenizer.parseValues(decl.value);
+                values.nodes.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">value</span>) </span>{
+                    value.nodes.forEach(<span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> {
+                        <span class="hljs-keyword">if</span> (item.type === <span class="hljs-string">&quot;url&quot;</span>) {
+                            item.url = <span class="hljs-string">&quot;`+require(&quot;</span> + loaderUtils.stringifyRequest(<span class="hljs-keyword">this</span>, <span class="hljs-string">&quot;!!&quot;</span> + item.url) + <span class="hljs-string">&quot;)+`&quot;</span>;
+                        }
+                    });
+                });
+                decl.value = Tokenizer.stringifyValues(values);
+            });
+        };
+    }
+
+    <span class="hljs-keyword">let</span> callback = <span class="hljs-keyword">this</span>.async();
+    <span class="hljs-keyword">let</span> options = { <span class="hljs-attr">imports</span>: [] };
+    <span class="hljs-keyword">let</span> pipeline = postcss([cssPlugin(options)]);
+    pipeline.process(inputSource).then(<span class="hljs-function">(<span class="hljs-params">result</span>) =&gt;</span> {
+        <span class="hljs-keyword">let</span> importCss = options.imports.map(<span class="hljs-function"><span class="hljs-params">url</span> =&gt;</span> <span class="hljs-string">&quot;`+require(&quot;</span> + loaderUtils.stringifyRequest(<span class="hljs-keyword">this</span>, <span class="hljs-string">&quot;!!css-loader!&quot;</span> + url) + <span class="hljs-string">&quot;)+`&quot;</span>).join(<span class="hljs-string">&apos;\r\n&apos;</span>);
+        callback(
+            <span class="hljs-literal">null</span>,
+            <span class="hljs-string">&apos;module.exports=`&apos;</span> + importCss + <span class="hljs-string">&apos;\r\n&apos;</span> + result.css + <span class="hljs-string">&apos;`&apos;</span>
+        );
+    });
+};
+
+<span class="hljs-built_in">module</span>.exports = cssLoader;
+</code></pre>
+<h2 id="t63&#x53C2;&#x8003;">&#x53C2;&#x8003; <a href="#t63&#x53C2;&#x8003;"> # </a></h2>
+<h3 id="t641. PostCSS">1. PostCSS <a href="#t641. PostCSS"> # </a></h3>
+<ul>
+<li><a href="https://www.postcss.com.cn/">PostCSS</a>&#x662F;&#x4E00;&#x4E2A;&#x7528; JavaScript &#x5DE5;&#x5177;&#x548C;&#x63D2;&#x4EF6;&#x8F6C;&#x6362; CSS &#x4EE3;&#x7801;&#x7684;&#x5DE5;&#x5177;</li>
+<li>&#x589E;&#x5F3A;&#x4EE3;&#x7801;&#x7684;&#x53EF;&#x8BFB;&#x6027;</li>
+<li>&#x5C06;&#x672A;&#x6765;&#x7684; CSS &#x7279;&#x6027;&#x5E26;&#x5230;&#x4ECA;&#x5929;&#xFF01;</li>
+<li>&#x7EC8;&#x7ED3;&#x5168;&#x5C40;  CSS</li>
+<li>&#x907F;&#x514D;  CSS &#x4EE3;&#x7801;&#x4E2D;&#x7684;&#x9519;&#x8BEF;</li>
+<li>&#x5F3A;&#x5927;&#x7684;&#x7F51;&#x683C;&#x7CFB;&#x7EDF;</li>
+</ul>
+<h3 id="t652. &#x6587;&#x6863;">2. &#x6587;&#x6863; <a href="#t652. &#x6587;&#x6863;"> # </a></h3>
+<ul>
+<li><a href="http://api.postcss.org">api</a></li>
+<li><a href="https://astexplorer.net/#/2uBU1BLuJ1">astexplorer</a> postcss&#x4F1A;&#x5E2E;&#x6211;&#x4EEC;&#x5206;&#x6790;&#x51FA;css&#x7684;&#x62BD;&#x8C61;&#x8BED;&#x6CD5;&#x6811;</li>
+</ul>
+<h3 id="t663. &#x7C7B;&#x578B;">3. &#x7C7B;&#x578B; <a href="#t663. &#x7C7B;&#x578B;"> # </a></h3>
+<ul>
+<li>CSS AST&#x4E3B;&#x8981;&#x6709;3&#x79CD;&#x7236;&#x7C7B;&#x578B;<ul>
+<li><code>AtRule</code> @xxx&#x7684;&#x8FD9;&#x79CD;&#x7C7B;&#x578B;&#xFF0C;&#x5982;@screen</li>
+<li><code>Comment</code> &#x6CE8;&#x91CA;</li>
+<li><code>Rule</code> &#x666E;&#x901A;&#x7684;css&#x89C4;&#x5219;</li>
+</ul>
+</li>
+<li>&#x5B50;&#x7C7B;&#x578B;<ul>
+<li><code>decl</code> &#x6307;&#x7684;&#x662F;&#x6BCF;&#x6761;&#x5177;&#x4F53;&#x7684;css&#x89C4;&#x5219;</li>
+<li><code>rule</code> &#x4F5C;&#x7528;&#x4E8E;&#x67D0;&#x4E2A;&#x9009;&#x62E9;&#x5668;&#x4E0A;&#x7684;css&#x89C4;&#x5219;&#x96C6;&#x5408;</li>
+</ul>
+</li>
+</ul>
+<h3 id="t674.AST&#x8282;&#x70B9;">4.AST&#x8282;&#x70B9; <a href="#t674.AST&#x8282;&#x70B9;"> # </a></h3>
+<ul>
+<li>nodes: CSS&#x89C4;&#x5219;&#x7684;&#x8282;&#x70B9;&#x4FE1;&#x606F;&#x96C6;&#x5408;<ul>
+<li>decl: &#x6BCF;&#x6761;css&#x89C4;&#x5219;&#x7684;&#x8282;&#x70B9;&#x4FE1;&#x606F;</li>
+<li>prop: &#x6837;&#x5F0F;&#x540D;,&#x5982;width</li>
+<li>value: &#x6837;&#x5F0F;&#x503C;,&#x5982;10px</li>
+</ul>
+</li>
+<li>type: &#x7C7B;&#x578B;</li>
+<li>source: &#x5305;&#x62EC;start&#x548C;end&#x7684;&#x4F4D;&#x7F6E;&#x4FE1;&#x606F;&#xFF0C;start&#x548C;end&#x91CC;&#x90FD;&#x6709;line&#x548C;column&#x8868;&#x793A;&#x884C;&#x548C;&#x5217;</li>
+<li>selector: type&#x4E3A;rule&#x65F6;&#x7684;&#x9009;&#x62E9;&#x5668;</li>
+<li>name: type&#x4E3A;atRule&#x65F6;@&#x7D27;&#x63A5;rule&#x540D;&#xFF0C;&#x8B6C;&#x5982;@import &apos;xxx.css&apos;&#x4E2D;&#x7684;import</li>
+<li>params: type&#x4E3A;atRule&#x65F6;@&#x7D27;&#x63A5;rule&#x540D;&#x540E;&#x7684;&#x503C;&#xFF0C;&#x8B6C;&#x5982;@import &apos;xxx.css&apos;&#x4E2D;&#x7684;xxx.css</li>
+<li>text: type&#x4E3A;comment&#x65F6;&#x7684;&#x6CE8;&#x91CA;&#x5185;&#x5BB9;</li>
+</ul>
+<h3 id="t685.&#x64CD;&#x4F5C;&#x65B9;&#x6CD5;">5.&#x64CD;&#x4F5C;&#x65B9;&#x6CD5; <a href="#t685.&#x64CD;&#x4F5C;&#x65B9;&#x6CD5;"> # </a></h3>
+<h4 id="t695.1 &#x904D;&#x5386;">5.1 &#x904D;&#x5386; <a href="#t695.1 &#x904D;&#x5386;"> # </a></h4>
+<ul>
+<li>walk: &#x904D;&#x5386;&#x6240;&#x6709;&#x8282;&#x70B9;&#x4FE1;&#x606F;&#xFF0C;&#x65E0;&#x8BBA;&#x662F;atRule&#x3001;rule&#x3001;comment&#x7684;&#x7236;&#x7C7B;&#x578B;&#xFF0C;&#x8FD8;&#x662F;rule&#x3001; decl&#x7684;&#x5B50;&#x7C7B;&#x578B;</li>
+<li>walkAtRules&#xFF1A;&#x904D;&#x5386;&#x6240;&#x6709;&#x7684;AtRules</li>
+<li>walkComments &#x904D;&#x5386;&#x6240;&#x6709;&#x7684;Comments</li>
+<li>walkDecls &#x904D;&#x5386;&#x6240;&#x6709;&#x7684;Decls </li>
+<li>walkRules &#x904D;&#x5386;&#x6240;&#x6709;&#x7684;Rules</li>
+</ul>
+<pre><code class="lang-js">root.walkDecls(<span class="hljs-function"><span class="hljs-params">decl</span> =&gt;</span> {
+    decl.prop = decl.prop.split(<span class="hljs-string">&apos;&apos;</span>).reverse().join(<span class="hljs-string">&apos;&apos;</span>);
+});
+</code></pre>
+<h4 id="t705.2 &#x5904;&#x7406;">5.2 &#x5904;&#x7406; <a href="#t705.2 &#x5904;&#x7406;"> # </a></h4>
+<ul>
+<li>postCss&#x7ED9;&#x51FA;&#x4E86;&#x5F88;&#x591A;&#x64CD;&#x4F5C;css&#x89C4;&#x5219;&#x7684;&#x65B9;&#x6CD5;</li>
+<li><a href="http://api.postcss.org/AtRule.html">api</a></li>
+<li>&#x5904;&#x7406;css&#x7684;&#x65B9;&#x5F0F;&#x5176;&#x5B9E;&#x6709;2&#x79CD;&#xFF1A;&#x7F16;&#x5199;postcss plugin&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x7684;&#x64CD;&#x4F5C;&#x975E;&#x5E38;&#x7B80;&#x5355;&#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5229;&#x7528;<code>postcss.parse</code>&#x65B9;&#x6CD5;&#x62FF;&#x5230;<code>css ast</code>&#x540E;&#x5206;&#x6790;&#x5904;&#x7406;</li>
+</ul>
+<h4 id="t715.3 postcss plugin">5.3 postcss plugin <a href="#t715.3 postcss plugin"> # </a></h4>
+<ul>
+<li>postcss&#x63D2;&#x4EF6;&#x5982;&#x540C;babel&#x63D2;&#x4EF6;&#x4E00;&#x6837;&#xFF0C;&#x6709;&#x56FA;&#x5B9A;&#x7684;&#x683C;&#x5F0F;</li>
+<li>&#x6CE8;&#x518C;&#x4E2A;&#x63D2;&#x4EF6;&#x540D;&#xFF0C;&#x5E76;&#x83B7;&#x53D6;&#x63D2;&#x4EF6;&#x914D;&#x7F6E;&#x53C2;&#x6570;<code>opts</code></li>
+<li>&#x8FD4;&#x56DE;&#x503C;&#x662F;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x4E3B;&#x4F53;&#x662F;&#x4F60;&#x7684;&#x5904;&#x7406;&#x903B;&#x8F91;&#xFF0C;&#x6709;2&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;root,AST&#x7684;&#x6839;&#x8282;&#x70B9;&#x3002;&#x53E6;&#x4E00;&#x4E2A;&#x662F;result&#xFF0C;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x5BF9;&#x8C61;&#xFF0C;&#x8B6C;&#x5982;<code>result.css</code>&#xFF0C;&#x83B7;&#x5F97;&#x5904;&#x7406;&#x7ED3;&#x679C;&#x7684;css&#x5B57;&#x7B26;&#x4E32;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> postcss.plugin(<span class="hljs-string">&apos;postcss-plugin-name&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">opts</span>) </span>{
+  opts = opts || {};
+  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">root, result</span>) </span>{
+    <span class="hljs-comment">// &#x5904;&#x7406;&#x903B;&#x8F91;</span>
+  };
+});
+</code></pre>
+<h3 id="t725.4 &#x76F4;&#x63A5;&#x8C03;&#x7528;postcss&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x4E0B;&#x7684;&#x65B9;&#x6CD5;">5.4 &#x76F4;&#x63A5;&#x8C03;&#x7528;postcss&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x4E0B;&#x7684;&#x65B9;&#x6CD5; <a href="#t725.4 &#x76F4;&#x63A5;&#x8C03;&#x7528;postcss&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x4E0B;&#x7684;&#x65B9;&#x6CD5;"> # </a></h3>
+<ul>
+<li>&#x53EF;&#x4EE5;&#x7528;postcss.parse&#x6765;&#x5904;&#x7406;&#x4E00;&#x6BB5;css&#x6587;&#x672C;&#xFF0C;&#x62FF;&#x5230;css ast&#xFF0C;&#x7136;&#x540E;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x518D;&#x901A;&#x8FC7;&#x8C03;&#x7528;toResult().css&#x62FF;&#x5230;&#x5904;&#x7406;&#x540E;&#x7684;css&#x8F93;&#x51FA;</li>
+</ul>
+
+        <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
+    </div>
+    
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>

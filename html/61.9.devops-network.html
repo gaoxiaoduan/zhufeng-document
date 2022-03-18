@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>珠峰架构师成长计划</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <style>
+        .page-toc > ul .red {
+            background: #f3f3f3;
+            z-index: 1;
+            border-left: 3px solid #009a61;
+            -webkit-transition: all .2s ease;
+            transition: all .2s ease;
+            color: #000
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+  <div class="logo">珠峰架构师成长计划</div>
+  <ul>
+    <li><a href="../index.html">0.api</a></li>
+    <li><a href="../html/0.Async.html">0.Async</a></li>
+    <li><a href="../html/0.module.html">0.module</a></li>
+    <li><a href="../html/1.ES2015.html">1.ES2015</a></li>
+    <li><a href="../html/2.Promise.html">2.Promise</a></li>
+    <li><a href="../html/3.Node.html">3.Node</a></li>
+    <li><a href="../html/4.NodeInstall.html">4.NodeInstall</a></li>
+    <li><a href="../html/5.REPL.html">5.REPL</a></li>
+    <li><a href="../html/6.NodeCore.html">6.NodeCore</a></li>
+    <li><a href="../html/7.module&NPM.html">7.module&NPM</a></li>
+    <li><a href="../html/8.Encoding.html">8.Encoding</a></li>
+    <li><a href="../html/9.Buffer.html">9.Buffer</a></li>
+    <li><a href="../html/10.fs.html">10.fs</a></li>
+    <li><a href="../html/11.Stream-1.html">11.Stream-1</a></li>
+    <li><a href="../html/11.Stream-2.html">11.Stream-2</a></li>
+    <li><a href="../html/11.Stream-3.html">11.Stream-3</a></li>
+    <li><a href="../html/11.Stream-4.html">11.Stream-4</a></li>
+    <li><a href="../html/12-Network-2.html">12-Network-2</a></li>
+    <li><a href="../html/12.NetWork-3.html">12.NetWork-3</a></li>
+    <li><a href="../html/12.Network-1.html">12.Network-1</a></li>
+    <li><a href="../html/13.tcp.html">13.tcp</a></li>
+    <li><a href="../html/14.http-1.html">14.http-1</a></li>
+    <li><a href="../html/14.http-2.html">14.http-2</a></li>
+    <li><a href="../html/15.compress.html">15.compress</a></li>
+    <li><a href="../html/16.crypto.html">16.crypto</a></li>
+    <li><a href="../html/17.process.html">17.process</a></li>
+    <li><a href="../html/18.yargs.html">18.yargs</a></li>
+    <li><a href="../html/19.cache.html">19.cache</a></li>
+    <li><a href="../html/20.action.html">20.action</a></li>
+    <li><a href="../html/21.https.html">21.https</a></li>
+    <li><a href="../html/22.cookie.html">22.cookie</a></li>
+    <li><a href="../html/23.session.html">23.session</a></li>
+    <li><a href="../html/24.express-1.html">24.express-1</a></li>
+    <li><a href="../html/24.express-2.html">24.express-2</a></li>
+    <li><a href="../html/24.express-3.html">24.express-3</a></li>
+    <li><a href="../html/24.express-4.html">24.express-4</a></li>
+    <li><a href="../html/25.koa-1.html">25.koa-1</a></li>
+    <li><a href="../html/26.webpack-1-basic.html">26.webpack-1-basic</a></li>
+    <li>
+      <a href="../html/26.webpack-2-optimize.html">26.webpack-2-optimize</a>
+    </li>
+    <li><a href="../html/26.webpack-3-file.html">26.webpack-3-file</a></li>
+    <li>
+      <a href="../html/26.webpack-4.tapable.html">26.webpack-4.tapable</a>
+    </li>
+    <li><a href="../html/26.webpack-5-AST.html">26.webpack-5-AST</a></li>
+    <li>
+      <a href="../html/26.webpack-6-sources.html">26.webpack-6-sources</a>
+    </li>
+    <li><a href="../html/26.webpack-7-loader.html">26.webpack-7-loader</a></li>
+    <li><a href="../html/26.webpack-8-plugin.html">26.webpack-8-plugin</a></li>
+    <li><a href="../html/26.webpack-9-hand.html">26.webpack-9-hand</a></li>
+    <li>
+      <a href="../html/26.webpack-10-prepare.html">26.webpack-10-prepare</a>
+    </li>
+    <li><a href="../html/28.redux.html">28.redux</a></li>
+    <li><a href="../html/28.redux-jwt-back.html">28.redux-jwt-back</a></li>
+    <li><a href="../html/28.redux-jwt-front.html">28.redux-jwt-front</a></li>
+    <li><a href="../html/29.mongodb-1.html">29.mongodb-1</a></li>
+    <li><a href="../html/29.mongodb-2.html">29.mongodb-2</a></li>
+    <li><a href="../html/29.mongodb-3.html">29.mongodb-3</a></li>
+    <li><a href="../html/29.mongodb-4.html">29.mongodb-4</a></li>
+    <li><a href="../html/29.mongodb-5.html">29.mongodb-5</a></li>
+    <li><a href="../html/29.mongodb-6.html">29.mongodb-6</a></li>
+    <li><a href="../html/30.cms-1-mysql.html">30.cms-1-mysql</a></li>
+    <li><a href="../html/30.cms-2-mysql.html">30.cms-2-mysql</a></li>
+    <li><a href="../html/30.cms-3-mysql.html">30.cms-3-mysql</a></li>
+    <li><a href="../html/30.cms-4-nunjucks.html">30.cms-4-nunjucks</a></li>
+    <li><a href="../html/30.cms-5-mock.html">30.cms-5-mock</a></li>
+    <li><a href="../html/30.cms-6-egg.html">30.cms-6-egg</a></li>
+    <li><a href="../html/30.cms-7-api.html">30.cms-7-api</a></li>
+    <li><a href="../html/30.cms-8-roadhog.html">30.cms-8-roadhog</a></li>
+    <li><a href="../html/30.cms-9-yaml.html">30.cms-9-yaml</a></li>
+    <li><a href="../html/30.cms-10-umi.html">30.cms-10-umi</a></li>
+    <li><a href="../html/30.cms-12-dva.html">30.cms-12-dva</a></li>
+    <li><a href="../html/30.cms-13-dva-ant.html">30.cms-13-dva-ant</a></li>
+    <li><a href="../html/30.cms-14-front.html">30.cms-14-front</a></li>
+    <li><a href="../html/30.cms-15-deploy.html">30.cms-15-deploy</a></li>
+    <li><a href="../html/31.dva.html">31.dva</a></li>
+    <li>
+      <a href="../html/31.cms-13-dva-antdesign.html">31.cms-13-dva-antdesign</a>
+    </li>
+    <li><a href="../html/33.redis.html">33.redis</a></li>
+    <li><a href="../html/34.unittest.html">34.unittest</a></li>
+    <li><a href="../html/35.jwt.html">35.jwt</a></li>
+    <li><a href="../html/36.websocket-1.html">36.websocket-1</a></li>
+    <li><a href="../html/36.websocket-2.html">36.websocket-2</a></li>
+    <li><a href="../html/38.chat-api-1.html">38.chat-api-1</a></li>
+    <li><a href="../html/38.chat-api-2.html">38.chat-api-2</a></li>
+    <li><a href="../html/38.chat-3.html">38.chat-3</a></li>
+    <li><a href="../html/38.chat-api-3.html">38.chat-api-3</a></li>
+    <li><a href="../html/38.chat.html">38.chat</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/38.chat2.html">38.chat2</a></li>
+    <li><a href="../html/39.crawl-0.html">39.crawl-0</a></li>
+    <li><a href="../html/39.crawl-1.html">39.crawl-1</a></li>
+    <li><a href="../html/39.crawl-2.html">39.crawl-2</a></li>
+    <li><a href="../html/40.deploy.html">40.deploy</a></li>
+    <li><a href="../html/41.safe.html">41.safe</a></li>
+    <li><a href="../html/42.test.html">42.test</a></li>
+    <li><a href="../html/43.nginx.html">43.nginx</a></li>
+    <li><a href="../html/44.enzyme.html">44.enzyme</a></li>
+    <li><a href="../html/45.docker.html">45.docker</a></li>
+    <li><a href="../html/46.elastic.html">46.elastic</a></li>
+    <li><a href="../html/47.oauth.html">47.oauth</a></li>
+    <li><a href="../html/48.wxpay.html">48.wxpay</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/52.UML.html">52.UML</a></li>
+    <li><a href="../html/53.design.html">53.design</a></li>
+    <li><a href="../html/index.html">index</a></li>
+    <li><a href="../html/54.linux.html">54.linux</a></li>
+    <li><a href="../html/57.ts.html">57.ts</a></li>
+    <li><a href="../html/56.react-ssr.html">56.react-ssr</a></li>
+    <li><a href="../html/58.ts_react.html">58.ts_react</a></li>
+    <li><a href="../html/59.ketang.html">59.ketang</a></li>
+    <li><a href="../html/59.ketang2.html">59.ketang2</a></li>
+    <li><a href="../html/61.1.devops-linux.html">61.1.devops-linux</a></li>
+    <li><a href="../html/61.2.devops-vi.html">61.2.devops-vi</a></li>
+    <li><a href="../html/61.3.devops-user.html">61.3.devops-user</a></li>
+    <li><a href="../html/61.4.devops-auth.html">61.4.devops-auth</a></li>
+    <li><a href="../html/61.5.devops-shell.html">61.5.devops-shell</a></li>
+    <li><a href="../html/61.6.devops-install.html">61.6.devops-install</a></li>
+    <li><a href="../html/61.7.devops-system.html">61.7.devops-system</a></li>
+    <li><a href="../html/61.8.devops-service.html">61.8.devops-service</a></li>
+    <li><a href="../html/61.9.devops-network.html">61.9.devops-network</a></li>
+    <li><a href="../html/61.10.devops-nginx.html">61.10.devops-nginx</a></li>
+    <li><a href="../html/61.11.devops-docker.html">61.11.devops-docker</a></li>
+    <li><a href="../html/61.12.devops-jekins.html">61.12.devops-jekins</a></li>
+    <li><a href="../html/61.13.devops-groovy.html">61.13.devops-groovy</a></li>
+    <li><a href="../html/61.14.devops-php.html">61.14.devops-php</a></li>
+    <li><a href="../html/61.15.devops-java.html">61.15.devops-java</a></li>
+    <li><a href="../html/61.16.devops-node.html">61.16.devops-node</a></li>
+    <li><a href="../html/61.17.devops-k8s.html">61.17.devops-k8s</a></li>
+    <li><a href="../html/62.1.react-basic.html">62.1.react-basic</a></li>
+    <li><a href="../html/62.2.react-state.html">62.2.react-state</a></li>
+    <li><a href="../html/62.3.react-high.html">62.3.react-high</a></li>
+    <li><a href="../html/62.4.react-optimize.html">62.4.react-optimize</a></li>
+    <li><a href="../html/62.5.react-hooks.html">62.5.react-hooks</a></li>
+    <li>
+      <a href="../html/62.6.react-immutable.html">62.6.react-immutable</a>
+    </li>
+    <li><a href="../html/62.7.react-mobx.html">62.7.react-mobx</a></li>
+    <li><a href="../html/62.8.react-source.html">62.8.react-source</a></li>
+    <li><a href="../html/63.1.redux.html">63.1.redux</a></li>
+    <li>
+      <a href="../html/63.2.redux-middleware.html">63.2.redux-middleware</a>
+    </li>
+    <li><a href="../html/63.3.redux-hooks.html">63.3.redux-hooks</a></li>
+    <li><a href="../html/63.4.redux-saga.html">63.4.redux-saga</a></li>
+    <li>
+      <a href="../html/63.5.redux-saga-hand.html">63.5.redux-saga-hand</a>
+    </li>
+    <li><a href="../html/64.1.router.html">64.1.router</a></li>
+    <li>
+      <a href="../html/64.2.router-connected.html">64.2.router-connected</a>
+    </li>
+    <li><a href="../html/65.1.typescript.html">65.1.typescript</a></li>
+    <li><a href="../html/65.2.typescript.html">65.2.typescript</a></li>
+    <li><a href="../html/65.3.typescript.html">65.3.typescript</a></li>
+    <li><a href="../html/65.4.antd.html">65.4.antd</a></li>
+    <li><a href="../html/65.4.definition.html">65.4.definition</a></li>
+    <li><a href="../html/66-1.vue-base.html">66-1.vue-base</a></li>
+    <li><a href="../html/66-2.vue-component.html">66-2.vue-component</a></li>
+    <li><a href="../html/66-3.vue-cli3.0.html">66-3.vue-cli3.0</a></li>
+    <li><a href="../html/66-4.$message组件.html">66-4.$message组件</a></li>
+    <li><a href="../html/66-5.Form组件.html">66-5.Form组件</a></li>
+    <li><a href="../html/66-6.tree.html">66-6.tree</a></li>
+    <li>
+      <a href="../html/66-7.vue-router-apply.html">66-7.vue-router-apply</a>
+    </li>
+    <li><a href="../html/66-8.axios-apply.html">66-8.axios-apply</a></li>
+    <li><a href="../html/66-9.vuex-apply.html">66-9.vuex-apply</a></li>
+    <li><a href="../html/66-10.jwt-vue.html">66-10.jwt-vue</a></li>
+    <li><a href="../html/66-11.vue-ssr.html">66-11.vue-ssr</a></li>
+    <li><a href="../html/66-12.nuxt-apply.html">66-12.nuxt-apply</a></li>
+    <li><a href="../html/66-13.pwa.html">66-13.pwa</a></li>
+    <li><a href="../html/66-14.vue单元测试.html">66-14.vue单元测试</a></li>
+    <li><a href="../html/66-15.权限校验.html">66-15.权限校验</a></li>
+    <li><a href="../html/67-1-network.html">67-1-network</a></li>
+    <li><a href="../html/68-2-wireshark.html">68-2-wireshark</a></li>
+    <li><a href="../html/7.npm2.html">7.npm2</a></li>
+    <li><a href="../html/69-hooks.html">69-hooks</a></li>
+    <li><a href="../html/70-deploy.html">70-deploy</a></li>
+    <li><a href="../html/71-hmr.html">71-hmr</a></li>
+    <li><a href="../html/72.deploy.html">72.deploy</a></li>
+    <li><a href="../html/73.import.html">73.import</a></li>
+    <li><a href="../html/74.mobile.html">74.mobile</a></li>
+    <li>
+      <a href="../html/75.webpack-1.文件分析.html">75.webpack-1.文件分析</a>
+    </li>
+    <li><a href="../html/75.webpack-2.loader.html">75.webpack-2.loader</a></li>
+    <li>
+      <a href="../html/75.webpack-3.源码流程.html">75.webpack-3.源码流程</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-4.tapable.html">75.webpack-4.tapable</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-5.prepare.html">75.webpack-5.prepare</a>
+    </li>
+    <li>
+      <a href="../html/75.webpack-6.resolve.html">75.webpack-6.resolve</a>
+    </li>
+    <li><a href="../html/75.webpack-7.loader.html">75.webpack-7.loader</a></li>
+    <li><a href="../html/75.webpack-8.module.html">75.webpack-8.module</a></li>
+    <li><a href="../html/75.webpack-9.chunk.html">75.webpack-9.chunk</a></li>
+    <li><a href="../html/75.webpack-10.asset.html">75.webpack-10.asset</a></li>
+    <li><a href="../html/75.webpack-11.实现.html">75.webpack-11.实现</a></li>
+    <li><a href="../html/76.react_optimize.html">76.react_optimize</a></li>
+    <li><a href="../html/77.ts_ketang_back.html">77.ts_ketang_back</a></li>
+    <li><a href="../html/77.ts_ketang_front.html">77.ts_ketang_front</a></li>
+    <li><a href="../html/78.vue-domdiff.html">78.vue-domdiff</a></li>
+    <li><a href="../html/79.grammar.html">79.grammar</a></li>
+    <li><a href="../html/80.tree.html">80.tree</a></li>
+    <li><a href="../html/81.axios.html">81.axios</a></li>
+    <li><a href="../html/82.1.react.html">82.1.react</a></li>
+    <li><a href="../html/82.2.react-high.html">82.2.react-high</a></li>
+    <li><a href="../html/82.3.react-router.html">82.3.react-router</a></li>
+    <li><a href="../html/82.4.redux.html">82.4.redux</a></li>
+    <li>
+      <a href="../html/82.5.redux_middleware.html">82.5.redux_middleware</a>
+    </li>
+    <li><a href="../html/82.6.connected.html">82.6.connected</a></li>
+    <li><a href="../html/82.7.saga.html">82.7.saga</a></li>
+    <li><a href="../html/82.8.dva.html">82.8.dva</a></li>
+    <li><a href="../html/82.8.dva-source.html">82.8.dva-source</a></li>
+    <li><a href="../html/82.9.roadhog.html">82.9.roadhog</a></li>
+    <li><a href="../html/82.10.umi.html">82.10.umi</a></li>
+    <li><a href="../html/82.11.antdesign.html">82.11.antdesign</a></li>
+    <li><a href="../html/82.12.ketang-front.html">82.12.ketang-front</a></li>
+    <li><a href="../html/82.12.ketang-back.html">82.12.ketang-back</a></li>
+    <li><a href="../html/83.upload.html">83.upload</a></li>
+    <li><a href="../html/84.graphql.html">84.graphql</a></li>
+    <li><a href="../html/85.antpro.html">85.antpro</a></li>
+    <li><a href="../html/86.1.uml.html">86.1.uml</a></li>
+    <li><a href="../html/86.2.design.html">86.2.design</a></li>
+    <li><a href="../html/87.postcss.html">87.postcss</a></li>
+    <li><a href="../html/88.react16-1.html">88.react16-1</a></li>
+    <li><a href="../html/89.nextjs.html">89.nextjs</a></li>
+    <li><a href="../html/90.react-test.html">90.react-test</a></li>
+    <li><a href="../html/91.react-ts.html">91.react-ts</a></li>
+    <li><a href="../html/92.rbac.html">92.rbac</a></li>
+    <li><a href="../html/93.tsnode.html">93.tsnode</a></li>
+    <li><a href="../html/94.1.JavaScript.html">94.1.JavaScript</a></li>
+    <li><a href="../html/94.2.JavaScript.html">94.2.JavaScript</a></li>
+    <li><a href="../html/94.3.MODULE.html">94.3.MODULE</a></li>
+    <li><a href="../html/94.4.EventLoop.html">94.4.EventLoop</a></li>
+    <li><a href="../html/94.5.文件上传.html">94.5.文件上传</a></li>
+    <li><a href="../html/94.6.https.html">94.6.https</a></li>
+    <li><a href="../html/94.7. nginx.html">94.7. nginx</a></li>
+    <li><a href="../html/95.1. react.html">95.1. react</a></li>
+    <li><a href="../html/95.2.react.html">95.2.react</a></li>
+    <li><a href="../html/96.1.react16.html">96.1.react16</a></li>
+    <li><a href="../html/96.2.fiber.html">96.2.fiber</a></li>
+    <li><a href="../html/96.3.fiber.html">96.3.fiber</a></li>
+    <li><a href="../html/97.serverless.html">97.serverless</a></li>
+    <li><a href="../html/98.websocket.html">98.websocket</a></li>
+    <li><a href="../html/100.1.react-basic.html">100.1.react-basic</a></li>
+    <li><a href="../html/101.1.monitor.html">101.1.monitor</a></li>
+    <li><a href="../html/101.2.monitor.html">101.2.monitor</a></li>
+    <li><a href="../html/102.java.html">102.java</a></li>
+    <li><a href="../html/103.1.webpack-usage.html">103.1.webpack-usage</a></li>
+    <li>
+      <a href="../html/103.2.webpack-bundle.html">103.2.webpack-bundle</a>
+    </li>
+    <li><a href="../html/103.3.webpack-ast.html">103.3.webpack-ast</a></li>
+    <li><a href="../html/103.4.webpack-flow.html">103.4.webpack-flow</a></li>
+    <li>
+      <a href="../html/103.5.webpack-loader.html">103.5.webpack-loader</a>
+    </li>
+    <li>
+      <a href="../html/103.6.webpack-tapable.html">103.6.webpack-tapable</a>
+    </li>
+    <li>
+      <a href="../html/103.7.webpack-plugin.html">103.7.webpack-plugin</a>
+    </li>
+    <li>
+      <a href="../html/103.8.webpack-optimize1.html">103.8.webpack-optimize1</a>
+    </li>
+    <li>
+      <a href="../html/103.9.webpack-optimize2.html">103.9.webpack-optimize2</a>
+    </li>
+    <li><a href="../html/103.10.webpack-hand.html">103.10.webpack-hand</a></li>
+    <li><a href="../html/103.11.webpack-hmr.html">103.11.webpack-hmr</a></li>
+    <li><a href="../html/103.13.splitChunks.html">103.13.splitChunks</a></li>
+    <li>
+      <a href="../html/103.14.webpack-sourcemap.html"
+        >103.14.webpack-sourcemap</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler1.html"
+        >103.15.webpack-compiler1</a
+      >
+    </li>
+    <li>
+      <a href="../html/103.15.webpack-compiler2.html"
+        >103.15.webpack-compiler2</a
+      >
+    </li>
+    <li><a href="../html/103.16.vite.basic.html">103.16.vite.basic</a></li>
+    <li><a href="../html/103.16.vite.source.html">103.16.vite.source</a></li>
+    <li><a href="../html/103.17.polyfill.html">103.17.polyfill</a></li>
+    <li><a href="../html/104.1.binary.html">104.1.binary</a></li>
+    <li><a href="../html/104.2.binary.html">104.2.binary</a></li>
+    <li><a href="../html/105.skeleton.html">105.skeleton</a></li>
+    <li><a href="../html/106.1.react.html">106.1.react</a></li>
+    <li><a href="../html/106.2.react_hooks.html">106.2.react_hooks</a></li>
+    <li><a href="../html/106.3.react_router.html">106.3.react_router</a></li>
+    <li><a href="../html/106.4.redux.html">106.4.redux</a></li>
+    <li>
+      <a href="../html/106.5.redux_middleware.html">106.5.redux_middleware</a>
+    </li>
+    <li>
+      <a href="../html/106.6.connected-react-router.html"
+        >106.6.connected-react-router</a
+      >
+    </li>
+    <li>
+      <a href="../html/106.6.redux-first-history.html">106.6.redux-first-history</a>
+    </li>
+    <li><a href="../html/106.7.redux-saga.html">106.7.redux-saga</a></li>
+    <li><a href="../html/106.8.dva.html">106.8.dva</a></li>
+    <li><a href="../html/106.9.umi.html">106.9.umi</a></li>
+    <li><a href="../html/106.10.ketang.html">106.10.ketang</a></li>
+    <li><a href="../html/106.11.antdesign.html">106.11.antdesign</a></li>
+    <li><a href="../html/106.12.antpro.html">106.12.antpro</a></li>
+    <li><a href="../html/106.13.router-6.html">106.13.router-6</a></li>
+    <li><a href="../html/107.fiber.html">107.fiber</a></li>
+    <li><a href="../html/108.http.html">108.http</a></li>
+    <li><a href="../html/109.1.webpack_usage.html">109.1.webpack_usage</a></li>
+    <li>
+      <a href="../html/109.2.webpack_source.html">109.2.webpack_source</a>
+    </li>
+    <li><a href="../html/109.3.dll.html">109.3.dll</a></li>
+    <li><a href="../html/110.nest.js.html">110.nest.js</a></li>
+    <li><a href="../html/111.xstate.html">111.xstate</a></li>
+    <li><a href="../html/112.Form.html">112.Form</a></li>
+    <li><a href="../html/113.redux-saga.html">113.redux-saga</a></li>
+    <li>
+      <a href="../html/114.react+typescript.html">114.react+typescript</a>
+    </li>
+    <li><a href="../html/115.immer.html">115.immer</a></li>
+    <li><a href="../html/116.pro5.html">116.pro5</a></li>
+    <li><a href="../html/117.css-loader.html">117.css-loader</a></li>
+    <li><a href="../html/118.1.umi-core.html">118.1.umi-core</a></li>
+    <li>
+      <a href="../html/119.2.module-federation.html">119.2.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/119.1.module-federation.html">119.1.module-federation</a>
+    </li>
+    <li>
+      <a href="../html/120.create-react-app.html">120.create-react-app</a>
+    </li>
+    <li><a href="../html/121.react-scripts.html">121.react-scripts</a></li>
+    <li><a href="../html/122.react-optimize.html">122.react-optimize</a></li>
+    <li><a href="../html/123.jsx-runtime.html">123.jsx-runtime</a></li>
+    <li><a href="../html/124.next.js.html">124.next.js</a></li>
+    <li><a href="../html/125.1.linux.html">125.1.linux</a></li>
+    <li><a href="../html/125.2.linux-vi.html">125.2.linux-vi</a></li>
+    <li><a href="../html/125.3.linux-user.html">125.3.linux-user</a></li>
+    <li><a href="../html/125.4.linux-auth.html">125.4.linux-auth</a></li>
+    <li><a href="../html/125.5.linux-shell.html">125.5.linux-shell</a></li>
+    <li><a href="../html/125.6.linux-install.html">125.6.linux-install</a></li>
+    <li><a href="../html/125.7.linux-system.html">125.7.linux-system</a></li>
+    <li><a href="../html/125.8.linux-service.html">125.8.linux-service</a></li>
+    <li><a href="../html/125.9.linux-network.html">125.9.linux-network</a></li>
+    <li><a href="../html/125.10.nginx.html">125.10.nginx</a></li>
+    <li><a href="../html/125.11.docker.html">125.11.docker</a></li>
+    <li><a href="../html/125.12.ci.html">125.12.ci</a></li>
+    <li><a href="../html/125.13.k8s.html">125.13.k8s</a></li>
+    <li><a href="../html/125.14.k8s.html">125.14.k8s</a></li>
+    <li><a href="../html/125.15.k8s.html">125.15.k8s</a></li>
+    <li><a href="../html/125.16.k8s.html">125.16.k8s</a></li>
+    <li><a href="../html/126.11.react-1.html">126.11.react-1</a></li>
+    <li><a href="../html/126.12.react-2.html">126.12.react-2</a></li>
+    <li><a href="../html/126.12.react-3.html">126.12.react-3</a></li>
+    <li><a href="../html/126.12.react-4.html">126.12.react-4</a></li>
+    <li><a href="../html/126.12.react-5.html">126.12.react-5</a></li>
+    <li><a href="../html/127.frontend.html">127.frontend</a></li>
+    <li><a href="../html/128.rollup.html">128.rollup</a></li>
+    <li><a href="../html/129.px2rem-loader.html">129.px2rem-loader</a></li>
+    <li><a href="../html/130.health.html">130.health</a></li>
+    <li><a href="../html/131.hooks.html">131.hooks</a></li>
+    <li><a href="../html/132.keepalive.html">132.keepalive</a></li>
+    <li><a href="../html/133.vue-cli.html">133.vue-cli</a></li>
+    <li><a href="../html/134.react18.html">134.react18</a></li>
+    <li><a href="../html/135.function.html">135.function</a></li>
+    <li><a href="../html/136.toolkit.html">136.toolkit</a></li>
+    <li><a href="../html/137.lerna.html">137.lerna</a></li>
+    <li><a href="../html/138.create-vite.html">138.create-vite</a></li>
+    <li><a href="../html/139.cli.html">139.cli</a></li>
+    <li><a href="../html/140.antd.html">140.antd</a></li>
+    <li><a href="../html/141.react-dnd.html">141.react-dnd</a></li>
+    <li><a href="../html/142.1.link.html">142.1.link</a></li>
+    <li><a href="../html/143.1.gulp.html">143.1.gulp</a></li>
+    <li><a href="../html/143.2.stream.html">143.2.stream</a></li>
+    <li><a href="../html/143.3.gulp.html">143.3.gulp</a></li>
+    <li><a href="../html/144.1.closure.html">144.1.closure</a></li>
+    <li><a href="../html/144.2.v8.html">144.2.v8</a></li>
+    <li><a href="../html/144.3.gc.html">144.3.gc</a></li>
+    <li class="active"><a href="../html/145.react-router-v6.html">145.react-router-v6</a></li>
+  </ul>
+</div>
+
+   
+                     
+
+                        
+<div class="warpper">
+    <div class="page-toc">
+        <ul><li><a href="#t01. 配置IP地址">1. 配置IP地址</a><ul><li><a href="#t11.1 ifconifg临时配置IP">1.1 ifconifg临时配置IP</a></li><li><a href="#t21.2 setup永久配置IP">1.2 setup永久配置IP</a></li></ul></li><li><a href="#t32. 网络配置文件">2. 网络配置文件</a><ul><li><a href="#t42.1 网卡配置">2.1 网卡配置</a></li><li><a href="#t52.2 主机名">2.2 主机名</a></li><li><a href="#t62.3 DNS配置文件">2.3 DNS配置文件</a></li></ul></li><li><a href="#t73. 查看网络环境">3. 查看网络环境</a><ul><li><a href="#t83.1 ifconifg">3.1 ifconifg</a></li><li><a href="#t93.2 关闭和启动网卡">3.2 关闭和启动网卡</a></li><li><a href="#t103.3 查询网络状态">3.3 查询网络状态</a></li><li><a href="#t113.4 netstat -rn">3.4 netstat -rn</a></li><li><a href="#t123.5 域名解析命令">3.5 域名解析命令</a></li></ul></li><li><a href="#t134. 网络测试命令">4. 网络测试命令</a><ul><li><a href="#t144.1 ping">4.1 ping</a></li><li><a href="#t154.2 traceroute [选项] IP或域名">4.2 traceroute [选项] IP或域名</a></li><li><a href="#t164.3 wget">4.3 wget</a></li><li><a href="#t174.4 tcpdump命令">4.4 tcpdump命令</a></li></ul></li><li><a href="#t185.远程登录">5.远程登录</a><ul><li><a href="#t195.1 SSH协议原理">5.1 SSH协议原理</a><ul><li><a href="#t205.1.1 对称加密算法">5.1.1 对称加密算法</a></li><li><a href="#t215.1.2 SSH 安全外壳协议">5.1.2 SSH 安全外壳协议</a></li><li><a href="#t225.1.3 scp">5.1.3 scp</a><ul><li><a href="#t235.1.3.1 从本地服务器复制到远程服务器">5.1.3.1 从本地服务器复制到远程服务器</a></li><li><a href="#t245.1.3.2 从远程服务器复制到本地服务器">5.1.3.2 从远程服务器复制到本地服务器</a></li></ul></li></ul></li></ul></li><li><a href="#t256. 附录">6. 附录</a><ul><li><a href="#t266.1 搭建FTP服务器">6.1 搭建FTP服务器</a><ul><li><a href="#t276.1.1 查询是否安装了vsftpd服务">6.1.1 查询是否安装了vsftpd服务</a></li><li><a href="#t286.1.2 安装vsftpd">6.1.2 安装vsftpd</a></li><li><a href="#t296.1.3 修改vsftpd配置文件">6.1.3 修改vsftpd配置文件</a></li><li><a href="#t306.1.4 设置用户可以访问home文件夹">6.1.4 设置用户可以访问home文件夹</a></li><li><a href="#t316.1.5 启动服务">6.1.5 启动服务</a></li><li><a href="#t326.1.6 创建用户">6.1.6 创建用户</a></li><li><a href="#t336.1.7 CMD中的FTP命令">6.1.7 CMD中的FTP命令</a></li></ul></li></ul></li></ul>
+    </div>
+    <div class="content markdown-body">
+        <h2 id="t01. &#x914D;&#x7F6E;IP&#x5730;&#x5740;">1. &#x914D;&#x7F6E;IP&#x5730;&#x5740; <a href="#t01. &#x914D;&#x7F6E;IP&#x5730;&#x5740;"> # </a></h2>
+<h3 id="t11.1 ifconifg&#x4E34;&#x65F6;&#x914D;&#x7F6E;IP">1.1 ifconifg&#x4E34;&#x65F6;&#x914D;&#x7F6E;IP <a href="#t11.1 ifconifg&#x4E34;&#x65F6;&#x914D;&#x7F6E;IP"> # </a></h3>
+<ul>
+<li>&#x67E5;&#x770B;&#x4E0E;&#x914D;&#x7F6E;&#x7F51;&#x7EDC;&#x72B6;&#x6001;</li>
+<li>&#x4E34;&#x65F6;&#x8BBE;&#x7F6E;eth0&#x7F51;&#x5361;&#x7684;IP&#x5730;&#x5740;&#x4E0E;&#x5B50;&#x7F51;&#x63A9;&#x7801;</li>
+</ul>
+<pre><code class="lang-js">[root@localhost cron.daily]# ifconfig
+eth0      Link encap:Ethernet  HWaddr 00:0C:29:E5:3C:11  
+          inet addr:172.18.0.252  Bcast:172.18.3.255  Mask:255.255.252.0
+</code></pre>
+<pre><code class="lang-js">ifconfig eth0 <span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.254</span> netmask <span class="hljs-number">255.355</span><span class="hljs-number">.255</span><span class="hljs-number">.0</span>
+
+</code></pre>
+<h3 id="t21.2 setup&#x6C38;&#x4E45;&#x914D;&#x7F6E;IP">1.2 setup&#x6C38;&#x4E45;&#x914D;&#x7F6E;IP <a href="#t21.2 setup&#x6C38;&#x4E45;&#x914D;&#x7F6E;IP"> # </a></h3>
+<pre><code class="lang-js">setup 
+service network restart
+</code></pre>
+<h2 id="t32. &#x7F51;&#x7EDC;&#x914D;&#x7F6E;&#x6587;&#x4EF6;">2. &#x7F51;&#x7EDC;&#x914D;&#x7F6E;&#x6587;&#x4EF6; <a href="#t32. &#x7F51;&#x7EDC;&#x914D;&#x7F6E;&#x6587;&#x4EF6;"> # </a></h2>
+<h3 id="t42.1 &#x7F51;&#x5361;&#x914D;&#x7F6E;">2.1 &#x7F51;&#x5361;&#x914D;&#x7F6E; <a href="#t42.1 &#x7F51;&#x5361;&#x914D;&#x7F6E;"> # </a></h3>
+<p>/etc/sysconfig/network-scripts/ifcfg-eth0</p>
+<pre><code class="lang-js">vi /etc/sysconfig/network-scripts/ifcfg-eth0
+
+DEVICE=eth0 &#x7F51;&#x5361;&#x8BBE;&#x5907;&#x53F7;
+BOOTPROTO=none  &#x662F;&#x5426;&#x81EA;&#x52A8;&#x83B7;&#x53D6;IP&#x5730;&#x5740;(none&#x3001;<span class="hljs-keyword">static</span>&#x3001;dhcp)
+HWADDR=<span class="hljs-number">00</span>:<span class="hljs-number">0</span>c:<span class="hljs-number">29</span>:e5:<span class="hljs-number">3</span>c:<span class="hljs-number">11</span> MAC&#x5730;&#x5740;
+ONBOOT=yes &#x662F;&#x5426;&#x968F;&#x7F51;&#x7EDC;&#x670D;&#x52A1;&#x542F;&#x52A8;&#xFF0C;eth0&#x751F;&#x6548;
+TYPE=Ethernet &#x7C7B;&#x578B;&#x4E3A;&#x4EE5;&#x592A;&#x7F51;
+ NM_CONTROLLED=yes &#x662F;&#x5426;&#x53EF;&#x4EE5;&#x7531;Network Manager&#x56FE;&#x5F62;&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#x6258;&#x7BA1;
+ UUID=<span class="hljs-string">&quot;825f66ab-edd7-4076-a256-7a68fb94bf43&quot;</span> &#x552F;&#x4E00;&#x8BC6;&#x522B;&#x7801;
+ USERCTL=no &#x4E0D;&#x5141;&#x8BB8;&#x975E;root&#x7528;&#x6237;&#x63A7;&#x5236;&#x6B64;&#x7F51;&#x5361;
+ IPV6INIT=no &#x4E0D;&#x542F;&#x7528;IPV6
+ IPADDR=<span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.240</span> IP&#x5730;&#x5740;
+ NETMASK=<span class="hljs-number">255.255</span><span class="hljs-number">.252</span><span class="hljs-number">.0</span> &#x5B50;&#x7F51;&#x63A9;&#x7801;
+ DNS2=<span class="hljs-number">8.8</span><span class="hljs-number">.8</span><span class="hljs-number">.8</span> DNS&#x670D;&#x52A1;&#x5668;
+ GATEWAY=<span class="hljs-number">172.18</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span> &#x7F51;&#x5173;
+ DNS1=<span class="hljs-number">8.8</span><span class="hljs-number">.8</span><span class="hljs-number">.8</span> DNS1&#x670D;&#x52A1;&#x5668;
+</code></pre>
+<ul>
+<li>&#x590D;&#x5236;&#x7684;&#x865A;&#x62DF;&#x673A;&#x80FD;&#x5171;&#x5B58;&#x4E8E;&#x540C;&#x4E00;&#x4E2A;&#x5C40;&#x57DF;&#x7F51;&#xFF1F;Mac&#x5730;&#x5740;&#x662F;&#x5426;&#x4F1A;&#x76F8;&#x540C;&#xFF1F;IP&#x5730;&#x5740;&#x4F1A;&#x76F8;&#x540C;&#xFF1F;<ul>
+<li>&#x80FD;&#x5171;&#x5B58;&#x4E8E;&#x540C;&#x4E00;&#x5C40;&#x57DF;&#x7F51;&#xFF0C;Mac&#x5730;&#x5740;&#x4E0D;&#x540C;&#xFF0C;IP&#x5730;&#x5740;&#x4E0D;&#x540C;&#x3002;</li>
+<li>&#x5BF9;&#x4E8E;&#x590D;&#x5236;&#x7684;&#x865A;&#x62DF;&#x673A;&#xFF0C;&#x5728;&#x5F00;&#x673A;&#x65F6;&#xFF0C;VMware&#x81EA;&#x52A8;&#x4E3A;&#x5176;&#x5206;&#x914D;&#x4E86;&#x4E0D;&#x540C;&#x7684;Mac&#x5730;&#x5740;&#x4EE5;&#x53CA;IP&#x5730;&#x5740;&#x3002;</li>
+</ul>
+</li>
+<li>&#x4E3A;&#x4EC0;&#x4E48;&#x62F7;&#x8D1D;&#x7684;CentOS&#x7CFB;&#x7EDF;&#x7F51;&#x7EDC;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x7684;UUID&#x4E0E;&#x539F;&#x7CFB;&#x7EDF;&#x76F8;&#x540C;&#xFF1F;<ul>
+<li>UUID&#xFF08;Universally Unique Identifier&#xFF09;&#x662F;&#x7CFB;&#x7EDF;&#x5C42;&#x9762;&#x7684;&#x5168;&#x5C40;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#x7B26;&#x53F7;&#xFF0C;Mac&#x5730;&#x5740;&#x4EE5;&#x53CA;IP&#x5730;&#x5740;&#x662F;&#x7F51;&#x7EDC;&#x5C42;&#x9762;&#x7684;&#x6807;&#x8BC6;&#x53F7;&#xFF1B;</li>
+<li>&#x4E24;&#x53F0;&#x4E0D;&#x540C;&#x7684;Linux&#x7CFB;&#x7EDF;&#x62E5;&#x6709;&#x76F8;&#x540C;&#x7684;UUID&#x5E76;&#x4E0D;&#x5F71;&#x54CD;&#x7CFB;&#x7EDF;&#x7684;&#x4F7F;&#x7528;&#x4EE5;&#x53CA;&#x7CFB;&#x7EDF;&#x4E4B;&#x95F4;&#x7684;&#x901A;&#x4FE1;</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-js">&#x53EF;&#x8F93;&#x5165;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#x83B7;&#x5F97;&#x65B0;UUID&#x53F7;
+# uuidgen ens33
+</code></pre>
+<h3 id="t52.2 &#x4E3B;&#x673A;&#x540D;">2.2 &#x4E3B;&#x673A;&#x540D; <a href="#t52.2 &#x4E3B;&#x673A;&#x540D;"> # </a></h3>
+<p>/etc/sysconfig/network</p>
+<pre><code class="lang-js">NETWORKING=yes &#x7F51;&#x7EDC;&#x529F;&#x80FD;&#x662F;&#x5426;&#x8D77;&#x4F5C;&#x7528;
+HOSTNAME=localhost.localdomain &#x4E3B;&#x673A;&#x540D;
+
+hostname zhufengjiagou
+service network restart
+</code></pre>
+<h3 id="t62.3 DNS&#x914D;&#x7F6E;&#x6587;&#x4EF6;">2.3 DNS&#x914D;&#x7F6E;&#x6587;&#x4EF6; <a href="#t62.3 DNS&#x914D;&#x7F6E;&#x6587;&#x4EF6;"> # </a></h3>
+<pre><code class="lang-js"># cat /etc/resolv.conf
+nameserver 8.8.8.8  DNS&#x670D;&#x52A1;&#x5668;
+search localhost
+nameserver 8.8.8.8
+</code></pre>
+<h2 id="t73. &#x67E5;&#x770B;&#x7F51;&#x7EDC;&#x73AF;&#x5883;">3. &#x67E5;&#x770B;&#x7F51;&#x7EDC;&#x73AF;&#x5883; <a href="#t73. &#x67E5;&#x770B;&#x7F51;&#x7EDC;&#x73AF;&#x5883;"> # </a></h2>
+<h3 id="t83.1 ifconifg">3.1 ifconifg <a href="#t83.1 ifconifg"> # </a></h3>
+<ul>
+<li>&#x67E5;&#x770B;&#x4E0E;&#x914D;&#x7F6E;&#x7F51;&#x7EDC;&#x72B6;&#x6001;&#x547D;&#x4EE4;</li>
+<li>ifconifg&#x770B;&#x4E0D;&#x5230;&#x7F51;&#x5173;&#x548C;DNS <code>ipconfig /all</code></li>
+</ul>
+<pre><code class="lang-js">   &#x7269;&#x7406;&#x5730;&#x5740;. . . . . . . . . . . . . : <span class="hljs-number">14</span><span class="hljs-number">-4</span>F<span class="hljs-number">-8</span>A<span class="hljs-number">-98</span>-F2-EC
+   IPv4 &#x5730;&#x5740; . . . . . . . . . . . . : <span class="hljs-number">192.171</span><span class="hljs-number">.207</span><span class="hljs-number">.104</span>(&#x9996;&#x9009;)
+   &#x5B50;&#x7F51;&#x63A9;&#x7801;  . . . . . . . . . . . . : <span class="hljs-number">255.255</span><span class="hljs-number">.255</span><span class="hljs-number">.0</span>
+   &#x9ED8;&#x8BA4;&#x7F51;&#x5173;. . . . . . . . . . . . . : <span class="hljs-number">192.171</span><span class="hljs-number">.207</span><span class="hljs-number">.1</span>
+   DHCP &#x670D;&#x52A1;&#x5668; . . . . . . . . . . . : <span class="hljs-number">192.171</span><span class="hljs-number">.207</span><span class="hljs-number">.1</span>
+   DNS &#x670D;&#x52A1;&#x5668;  . . . . . . . . . . . : <span class="hljs-number">192.171</span><span class="hljs-number">.207</span><span class="hljs-number">.1</span>
+</code></pre>
+<h3 id="t93.2 &#x5173;&#x95ED;&#x548C;&#x542F;&#x52A8;&#x7F51;&#x5361;">3.2 &#x5173;&#x95ED;&#x548C;&#x542F;&#x52A8;&#x7F51;&#x5361; <a href="#t93.2 &#x5173;&#x95ED;&#x548C;&#x542F;&#x52A8;&#x7F51;&#x5361;"> # </a></h3>
+<ul>
+<li>&#x7981;&#x7528;&#x8BE5;&#x7F51;&#x5361;&#x8BBE;&#x5907;  <code>ifdown &#x7F51;&#x5361;&#x8BBE;&#x5907;&#x540D;</code></li>
+<li>&#x542F;&#x7528;&#x8BE5;&#x7F51;&#x5361;&#x8BBE;&#x5907; <code>ifup &#x7F51;&#x5361;&#x8BBE;&#x5907;&#x540D;</code></li>
+</ul>
+<h3 id="t103.3 &#x67E5;&#x8BE2;&#x7F51;&#x7EDC;&#x72B6;&#x6001;">3.3 &#x67E5;&#x8BE2;&#x7F51;&#x7EDC;&#x72B6;&#x6001; <a href="#t103.3 &#x67E5;&#x8BE2;&#x7F51;&#x7EDC;&#x72B6;&#x6001;"> # </a></h3>
+<ul>
+<li>netstat &#x9009;&#x9879;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x9009;&#x9879;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">-t</td>
+<td style="text-align:left">&#x5217;&#x51FA;TCP&#x534F;&#x8BAE;&#x7AEF;&#x53E3;</td>
+</tr>
+<tr>
+<td style="text-align:left">-u</td>
+<td style="text-align:left">&#x5217;&#x51FA;UDP&#x534F;&#x8BAE;&#x7AEF;&#x53E3;</td>
+</tr>
+<tr>
+<td style="text-align:left">-n</td>
+<td style="text-align:left">&#x4E0D;&#x4F7F;&#x7528;&#x57DF;&#x540D;&#x4E0E;&#x670D;&#x52A1;&#x540D;&#xFF0C;&#x800C;&#x4F7F;&#x7528;IP&#x5730;&#x5740;&#x548C;&#x7AEF;&#x53E3;&#x53F7;</td>
+</tr>
+<tr>
+<td style="text-align:left">-l</td>
+<td style="text-align:left">&#x4EC5;&#x5217;&#x51FA;&#x5728;&#x76D1;&#x542C;&#x72B6;&#x6001;&#x7F51;&#x7EDC;&#x670D;&#x52A1;</td>
+</tr>
+<tr>
+<td style="text-align:left">-a</td>
+<td style="text-align:left">&#x5217;&#x51FA;&#x6240;&#x6709;&#x7684;&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-js">netstat -tlun
+netstat -an | more
+netstat -unt | grep  ESTABLISHED
+</code></pre>
+<h3 id="t113.4 netstat -rn">3.4 netstat -rn <a href="#t113.4 netstat -rn"> # </a></h3>
+<ul>
+<li>-r: &#x5217;&#x51FA;&#x8DEF;&#x7531;&#x5217;&#x8868;&#xFF0C;&#x529F;&#x80FD;&#x548C;<code>route</code>&#x547D;&#x4EE4;&#x4E00;&#x81F4;</li>
+</ul>
+<pre><code class="lang-js"># netstat -rn
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
+192.171.207.0   0.0.0.0         255.255.255.0   U         0 0          0 eth0
+169.254.0.0     0.0.0.0         255.255.0.0     U         0 0          0 eth0
+0.0.0.0         192.171.207.1   0.0.0.0         UG        0 0          0 eth0
+
+# route -n
+&#x7ED9;&#x8DEF;&#x7531;&#x6DFB;&#x52A0;&#x9ED8;&#x8BA4;&#x7F51;&#x5173;&#x5730;&#x5740; 192.171.207.1
+route add default gw 192.171.207.2
+route del default gw 192.171.207.2
+</code></pre>
+<h3 id="t123.5 &#x57DF;&#x540D;&#x89E3;&#x6790;&#x547D;&#x4EE4;">3.5 &#x57DF;&#x540D;&#x89E3;&#x6790;&#x547D;&#x4EE4; <a href="#t123.5 &#x57DF;&#x540D;&#x89E3;&#x6790;&#x547D;&#x4EE4;"> # </a></h3>
+<ul>
+<li>nslookup [&#x4E3B;&#x673A;&#x540D;&#x6216;IP]</li>
+<li>&#x8FDB;&#x884C;&#x57DF;&#x540D;&#x4E0E;IP&#x5730;&#x5740;&#x89E3;&#x6790;</li>
+<li>&#x67E5;&#x770B;&#x672C;&#x673A;&#x7684;DNS&#x670D;&#x52A1;&#x5668;</li>
+</ul>
+<pre><code class="lang-js"># nslookup www.baidu.com
+Server:        192.171.207.1
+Address:    192.171.207.1#53
+
+Name:    www.baidu.com
+Address: 61.135.169.125
+</code></pre>
+<p>&#x67E5;&#x770B;&#x5F53;&#x524D;&#x7684;DNS&#x670D;&#x52A1;&#x5668;</p>
+<pre><code class="lang-js">[root@192-171-207-101-static ~]# nslookup
+&gt; server
+Default server: 192.171.207.1
+Address: 192.171.207.1#53
+</code></pre>
+<h2 id="t134. &#x7F51;&#x7EDC;&#x6D4B;&#x8BD5;&#x547D;&#x4EE4;">4. &#x7F51;&#x7EDC;&#x6D4B;&#x8BD5;&#x547D;&#x4EE4; <a href="#t134. &#x7F51;&#x7EDC;&#x6D4B;&#x8BD5;&#x547D;&#x4EE4;"> # </a></h2>
+<h3 id="t144.1 ping">4.1 ping <a href="#t144.1 ping"> # </a></h3>
+<ul>
+<li>ping [&#x9009;&#x9879;] ip&#x6216;&#x57DF;&#x540D;</li>
+<li>&#x6D4B;&#x8BD5;&#x6307;&#x5B9A;IP&#x6216;&#x57DF;&#x540D;&#x7684;&#x7F51;&#x7EDC;&#x72B6;&#x51B5;</li>
+<li>&#x9009;&#x9879;<ul>
+<li>-c  &#x6B21;&#x6570;&#x6307;&#x5B9A;ping&#x5305;&#x7684;&#x6B21;&#x6570;</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-js">ping www.baidu.com -c <span class="hljs-number">3</span>
+</code></pre>
+<h3 id="t154.2 traceroute [&#x9009;&#x9879;] IP&#x6216;&#x57DF;&#x540D;">4.2 traceroute [&#x9009;&#x9879;] IP&#x6216;&#x57DF;&#x540D; <a href="#t154.2 traceroute [&#x9009;&#x9879;] IP&#x6216;&#x57DF;&#x540D;"> # </a></h3>
+<ul>
+<li>&#x8DEF;&#x7531;&#x8DDF;&#x8E2A;&#x547D;&#x4EE4;</li>
+<li>&#x9009;&#x9879;<ul>
+<li>-n &#x4F7F;&#x7528;IP&#xFF0C;&#x4E0D;&#x4F7F;&#x7528;&#x57DF;&#x540D;&#xFF0C;&#x901F;&#x5EA6;&#x66F4;&#x5FEB;</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-js">root@192-171-207-101-static ~]# traceroute www.baidu.com
+traceroute to www.baidu.com (61.135.169.125), 30 hops max, 60 byte packets
+ 1  192-171-207-1-static.bbn.ken-tennwireless.com (192.171.207.1)  0.434 ms  0.323 ms  0.359 ms
+ 2  localhost (192.168.0.1)  0.948 ms  0.922 ms  1.023 ms
+ 3  111.196.181.1 (111.196.181.1)  6.849 ms  6.829 ms  9.585 ms
+ 4  123.126.25.209 (123.126.25.209)  12.284 ms  12.405 ms  12.471 ms
+ 5  125.33.185.165 (125.33.185.165)  11.276 ms  11.253 ms  11.384 ms
+ 6  bt-227-030.bta.net.cn (202.106.227.30)  11.580 ms  15.564 ms  15.909 ms
+ 7  123.125.248.106 (123.125.248.106)  57.920 ms * 123.125.248.110 (123.125.248.110)  13.546 ms
+</code></pre>
+<h3 id="t164.3 wget">4.3 wget <a href="#t164.3 wget"> # </a></h3>
+<ul>
+<li>&#x4E0B;&#x8F7D;&#x547D;&#x4EE4;</li>
+</ul>
+<pre><code class="lang-js">wget http:<span class="hljs-comment">//www.baidu.com</span>
+</code></pre>
+<h3 id="t174.4 tcpdump&#x547D;&#x4EE4;">4.4 tcpdump&#x547D;&#x4EE4; <a href="#t174.4 tcpdump&#x547D;&#x4EE4;"> # </a></h3>
+<ul>
+<li><p><code>tcpdump -i eth0 -nnX port 21</code></p>
+</li>
+<li><p>&#x9009;&#x9879;</p>
+<ul>
+<li>-i &#x6307;&#x5B9A;&#x7F51;&#x5361;&#x63A5;&#x53E3;</li>
+<li>-nn &#x5C06;&#x6570;&#x636E;&#x5305;&#x4E2D;&#x7684;&#x57DF;&#x540D;&#x4E0E;&#x670D;&#x52A1;&#x8F6C;&#x4E3A;IP&#x548C;&#x7AEF;&#x53E3;</li>
+<li>-X &#x4EE5;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x548C;ASCII&#x7801;&#x663E;&#x793A;&#x6570;&#x636E;&#x5305;&#x5185;&#x5BB9;</li>
+<li>port &#x6307;&#x5B9A;&#x76D1;&#x542C;&#x7684;&#x7AEF;&#x53E3;</li>
+</ul>
+</li>
+</ul>
+<h2 id="t185.&#x8FDC;&#x7A0B;&#x767B;&#x5F55;">5.&#x8FDC;&#x7A0B;&#x767B;&#x5F55; <a href="#t185.&#x8FDC;&#x7A0B;&#x767B;&#x5F55;"> # </a></h2>
+<h3 id="t195.1 SSH&#x534F;&#x8BAE;&#x539F;&#x7406;">5.1 SSH&#x534F;&#x8BAE;&#x539F;&#x7406; <a href="#t195.1 SSH&#x534F;&#x8BAE;&#x539F;&#x7406;"> # </a></h3>
+<h4 id="t205.1.1 &#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;">5.1.1 &#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#x7B97;&#x6CD5; <a href="#t205.1.1 &#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;"> # </a></h4>
+<ul>
+<li>&#x91C7;&#x7528;&#x5355;&#x5BC6;&#x94A5;&#x7CFB;&#x7EDF;&#x7684;&#x52A0;&#x5BC6;&#x65B9;&#x6CD5;&#xFF0C;&#x540C;&#x4E00;&#x4E2A;&#x5BC6;&#x94A5;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x7528;&#x4F5C;&#x4FE1;&#x606F;&#x7684;&#x52A0;&#x5BC6;&#x548C;&#x89E3;&#x5BC6;&#xFF0C;&#x8FD9;&#x79CD;&#x52A0;&#x5BC6;&#x88AB;&#x79F0;&#x4E3A;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#x3002;</li>
+<li>&#x975E;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#x7B97;&#x6CD5; &#x9700;&#x8981;&#x516C;&#x94A5;&#x548C;&#x79C1;&#x94A5;</li>
+</ul>
+<h4 id="t215.1.2 SSH &#x5B89;&#x5168;&#x5916;&#x58F3;&#x534F;&#x8BAE;">5.1.2 SSH &#x5B89;&#x5168;&#x5916;&#x58F3;&#x534F;&#x8BAE; <a href="#t215.1.2 SSH &#x5B89;&#x5168;&#x5916;&#x58F3;&#x534F;&#x8BAE;"> # </a></h4>
+<ul>
+<li>ssh &#x7528;&#x6237;&#x540D;@ip</li>
+<li>&#x8FDC;&#x7A0B;&#x7BA1;&#x7406;&#x6307;&#x5B9A;Linux&#x670D;&#x52A1;&#x5668;</li>
+</ul>
+<pre><code class="lang-js">[root@192-171-207-101-static ~]# ssh root@192.171.207.101
+The authenticity of host &apos;192.171.207.101 (192.171.207.101)&apos; can&apos;t be established.
+RSA key fingerprint is a4:97:52:eb:0a:0b:35:a0:98:7d:4f:c8:3b:dc:f9:0a.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added &apos;192.171.207.101&apos; (RSA) to the list of known hosts.
+</code></pre>
+<p>/root/.ssh/known_hosts</p>
+<pre><code class="lang-js"><span class="hljs-number">192.171</span><span class="hljs-number">.207</span><span class="hljs-number">.101</span> ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAomDpQxV3RmjJyKkf7elMTInbdm+<span class="hljs-regexp">/ZLnFpfbAryi5PSb2ewfYbwRaBcVl1lBta6yjFuz0J12p9qy90DBhadvoBsfwTB8lQhmlT8B2eCcHr0bfLa1IdKMcjImxRJiD4v0emCGFquHnHIr41vs8uxQ2Ek28mH/</span><span class="hljs-number">1</span>JC0e/+VPEvylBB4+Kk2789ACdAlmhGTtlu7zgeUoLaWQSl1/<span class="hljs-number">6</span>g7zfSLIz+<span class="hljs-regexp">/U8qGiRSPaGT+M40oqx/</span>PZdoGOMTRhHgNIR5qgvcNaJXhlZGYT42fLFSmtzUHJ030hP7JGZ99oXS20/mnc8qvonC9itp0+K/nCj5g6uR/gPFb5B0NmTZCM2/gcLkHumw==
+</code></pre>
+<h4 id="t225.1.3 scp">5.1.3 scp <a href="#t225.1.3 scp"> # </a></h4>
+<ul>
+<li>scp&#x662F; secure copy&#x7684;&#x7F29;&#x5199;, scp&#x662F;linux&#x7CFB;&#x7EDF;&#x4E0B;&#x57FA;&#x4E8E;ssh&#x767B;&#x9646;&#x8FDB;&#x884C;&#x5B89;&#x5168;&#x7684;&#x8FDC;&#x7A0B;&#x6587;&#x4EF6;&#x62F7;&#x8D1D;&#x547D;&#x4EE4;</li>
+<li>linux&#x7684;scp&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x5728;linux&#x670D;&#x52A1;&#x5668;&#x4E4B;&#x95F4;&#x590D;&#x5236;&#x6587;&#x4EF6;&#x548C;&#x76EE;&#x5F55;</li>
+<li>&#x547D;&#x4EE4;&#x683C;&#x5F0F; scp [&#x53C2;&#x6570;] [&#x539F;&#x8DEF;&#x5F84;] [&#x76EE;&#x6807;&#x8DEF;&#x5F84;]</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x53C2;&#x6570;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">-r</td>
+<td style="text-align:left">&#x9012;&#x5F52;&#x590D;&#x5236;&#x6574;&#x4E2A;&#x76EE;&#x5F55;</td>
+</tr>
+<tr>
+<td style="text-align:left">-v</td>
+<td style="text-align:left">&#x8BE6;&#x7EC6;&#x65B9;&#x5F0F;&#x663E;&#x793A;&#x8F93;&#x51FA;</td>
+</tr>
+</tbody>
+</table>
+<h5 id="t235.1.3.1 &#x4ECE;&#x672C;&#x5730;&#x670D;&#x52A1;&#x5668;&#x590D;&#x5236;&#x5230;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;">5.1.3.1 &#x4ECE;&#x672C;&#x5730;&#x670D;&#x52A1;&#x5668;&#x590D;&#x5236;&#x5230;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668; <a href="#t235.1.3.1 &#x4ECE;&#x672C;&#x5730;&#x670D;&#x52A1;&#x5668;&#x590D;&#x5236;&#x5230;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;"> # </a></h5>
+<pre><code class="lang-js">scp local_file remote_username@remote_ip:remote_folder  
+scp -r local_folder remote_username@remote_ip:remote_folder  
+</code></pre>
+<h5 id="t245.1.3.2 &#x4ECE;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;&#x590D;&#x5236;&#x5230;&#x672C;&#x5730;&#x670D;&#x52A1;&#x5668;">5.1.3.2 &#x4ECE;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;&#x590D;&#x5236;&#x5230;&#x672C;&#x5730;&#x670D;&#x52A1;&#x5668; <a href="#t245.1.3.2 &#x4ECE;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;&#x590D;&#x5236;&#x5230;&#x672C;&#x5730;&#x670D;&#x52A1;&#x5668;"> # </a></h5>
+<pre><code class="lang-js">scp  remote_username@remote_ip:remote_folder  local_file
+scp -r  remote_username@remote_ip:remote_folder local_folder
+</code></pre>
+<h2 id="t256. &#x9644;&#x5F55;">6. &#x9644;&#x5F55; <a href="#t256. &#x9644;&#x5F55;"> # </a></h2>
+<h3 id="t266.1 &#x642D;&#x5EFA;FTP&#x670D;&#x52A1;&#x5668;">6.1 &#x642D;&#x5EFA;FTP&#x670D;&#x52A1;&#x5668; <a href="#t266.1 &#x642D;&#x5EFA;FTP&#x670D;&#x52A1;&#x5668;"> # </a></h3>
+<h4 id="t276.1.1 &#x67E5;&#x8BE2;&#x662F;&#x5426;&#x5B89;&#x88C5;&#x4E86;vsftpd&#x670D;&#x52A1;">6.1.1 &#x67E5;&#x8BE2;&#x662F;&#x5426;&#x5B89;&#x88C5;&#x4E86;vsftpd&#x670D;&#x52A1; <a href="#t276.1.1 &#x67E5;&#x8BE2;&#x662F;&#x5426;&#x5B89;&#x88C5;&#x4E86;vsftpd&#x670D;&#x52A1;"> # </a></h4>
+<pre><code class="lang-js">rpm -q vsftpd
+</code></pre>
+<h4 id="t286.1.2 &#x5B89;&#x88C5;vsftpd">6.1.2 &#x5B89;&#x88C5;vsftpd <a href="#t286.1.2 &#x5B89;&#x88C5;vsftpd"> # </a></h4>
+<pre><code class="lang-js">yum install -y vsftpd 
+</code></pre>
+<h4 id="t296.1.3 &#x4FEE;&#x6539;vsftpd&#x914D;&#x7F6E;&#x6587;&#x4EF6;">6.1.3 &#x4FEE;&#x6539;vsftpd&#x914D;&#x7F6E;&#x6587;&#x4EF6; <a href="#t296.1.3 &#x4FEE;&#x6539;vsftpd&#x914D;&#x7F6E;&#x6587;&#x4EF6;"> # </a></h4>
+<ul>
+<li><code>vi /etc/vsftpd/vsftpd.conf</code> &#x4FEE;&#x6539;vsftpd&#x914D;&#x7F6E;&#x6587;&#x4EF6;</li>
+</ul>
+<pre><code class="lang-js">anonymous_enable=NO  &#x662F;&#x5426;&#x5141;&#x8BB8;&#x533F;&#x540D;&#x7528;&#x6237;&#x767B;&#x5F55;
+local_enable=YES &#x5141;&#x8BB8;&#x672C;&#x5730;&#x7528;&#x6237;&#x767B;&#x5F55;
+Write_enable=YES     &#x662F;&#x5426;&#x53EF;&#x4EE5;&#x5199;&#x5165;
+chroot_local_user=YES #&#x662F;&#x5426;&#x5C06;&#x6240;&#x6709;&#x7528;&#x6237;&#x9650;&#x5236;&#x5728;&#x4E3B;&#x76EE;&#x5F55;,YES&#x4E3A;&#x542F;&#x7528; NO&#x7981;&#x7528;
+chroot_list_enable=YES #&#x662F;&#x5426;&#x542F;&#x52A8;&#x9650;&#x5236;&#x7528;&#x6237;&#x7684;&#x540D;&#x5355;
+chroot_list_file=/etc/vsftpd/chroot_list  #&#x662F;&#x5426;&#x9650;&#x5236;&#x5728;&#x4E3B;&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x7528;&#x6237;&#x540D;&#x5355;
+</code></pre>
+<h4 id="t306.1.4 &#x8BBE;&#x7F6E;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;home&#x6587;&#x4EF6;&#x5939;">6.1.4 &#x8BBE;&#x7F6E;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;home&#x6587;&#x4EF6;&#x5939; <a href="#t306.1.4 &#x8BBE;&#x7F6E;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;home&#x6587;&#x4EF6;&#x5939;"> # </a></h4>
+<pre><code class="lang-js">getsebool -a|grep ftp  #&#x67E5;&#x770B;selinux&#x914D;&#x7F6E;
+setsebool -P ftp_home_dir 1 #&#x66F4;&#x6539;&#x8BBE;&#x7F6E;(-P &#x662F;&#x5F00;&#x673A;&#x81EA;&#x52A8;&#x4F7F;&#x7528;&#xFF0C;&#x65E0;&#x9700;&#x6BCF;&#x6B21;&#x5F00;&#x673A;&#x90FD;&#x8F93;&#x5165;&#x8BE5;&#x547D;&#x4EE4;)
+service vsftpd restart &#x91CD;&#x542F;vsftpd
+</code></pre>
+<pre><code class="lang-js">vi /etc/selinux/config
+SELINUX=disabled
+</code></pre>
+<h4 id="t316.1.5 &#x542F;&#x52A8;&#x670D;&#x52A1;">6.1.5 &#x542F;&#x52A8;&#x670D;&#x52A1; <a href="#t316.1.5 &#x542F;&#x52A8;&#x670D;&#x52A1;"> # </a></h4>
+<pre><code class="lang-js">chmod -R <span class="hljs-number">777</span> /home/zhangsan2
+chkconfig vsftpd on
+service iptables stop
+service vsftpd restart
+</code></pre>
+<h4 id="t326.1.6 &#x521B;&#x5EFA;&#x7528;&#x6237;">6.1.6 &#x521B;&#x5EFA;&#x7528;&#x6237; <a href="#t326.1.6 &#x521B;&#x5EFA;&#x7528;&#x6237;"> # </a></h4>
+<pre><code class="lang-js">adduser lisi 
+passwd zhaoliu &#x8BBE;&#x7F6E;&#x5BC6;&#x7801; zhaoliu
+</code></pre>
+<h4 id="t336.1.7 CMD&#x4E2D;&#x7684;FTP&#x547D;&#x4EE4;">6.1.7 CMD&#x4E2D;&#x7684;FTP&#x547D;&#x4EE4; <a href="#t336.1.7 CMD&#x4E2D;&#x7684;FTP&#x547D;&#x4EE4;"> # </a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x547D;&#x4EE4;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">ftp 192.168.1.3</td>
+<td style="text-align:left">&#x767B;&#x9646;ftp</td>
+</tr>
+<tr>
+<td style="text-align:left">dir</td>
+<td style="text-align:left">&#x663E;&#x793A;&#x8FDC;&#x7A0B;&#x4E3B;&#x673A;&#x76EE;&#x5F55;</td>
+</tr>
+<tr>
+<td style="text-align:left">help[cmd]</td>
+<td style="text-align:left">&#x663E;&#x793A;ftp&#x5185;&#x90E8;&#x547D;&#x4EE4;cmd&#x7684;&#x5E2E;&#x52A9;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td style="text-align:left">get remote-file[local-file]</td>
+<td style="text-align:left">&#x5C06;&#x8FDC;&#x7A0B;&#x4E3B;&#x673A;&#x7684;&#x6587;&#x4EF6;remote-file&#x4F20;&#x81F3;&#x672C;&#x5730;&#x786C;&#x76D8;&#x7684;local-file(&#x672C;&#x5730;&#x6587;&#x4EF6;&#x5939;)</td>
+</tr>
+<tr>
+<td style="text-align:left">put local-file[remote-file]</td>
+<td style="text-align:left">&#x5C06;&#x672C;&#x5730;&#x6587;&#x4EF6;local-file&#x4F20;&#x9001;&#x81F3;&#x8FDC;&#x7A0B;&#x4E3B;&#x673A;</td>
+</tr>
+<tr>
+<td style="text-align:left">quit</td>
+<td style="text-align:left">&#x540C;bye,&#x9000;&#x51FA;ftp&#x4F1A;&#x8BDD;</td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+</div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+    aria-labelledby="loginModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                    aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="loginModalLabel">请登录</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="username" class="control-label">姓名:</label>
+                        <input type="text" class="form-control" id="username" placeholder="珠峰架构VIP会员系统用户名">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="control-label">密码:</label>
+                        <input type="text" class="form-control" id="password" placeholder="珠峰架构VIP会员系统密码">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                    data-dismiss="modal">登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+$('.warpper .page-toc ul ul li a').on('click',function(){
+  $('.warpper .page-toc ul ul li a').removeClass('my-active')
+  $(this).addClass('my-active')
+})
+$('.logo').on('mouseenter',function(){
+  $('.nav').height('450px');
+})
+$('.nav').on('mouseleave',function(){
+  $('.nav').height('80px');
+})
+$('.logo').on('click',function(){
+  $('.nav').css('display','none');
+ $('.warpper').css('padding','0px');
+})
+</script>
+</body>
+</html>
